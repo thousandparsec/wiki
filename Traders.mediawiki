@@ -1,0 +1,59 @@
+== Traders ==
+
+Traders is based around 2 settings, Elite and Traveller.
+
+=== Elite & Traveller ===
+
+Originally the idea was inspired from Elite, but as time has progressed I've
+moved more towards traveller for the core ideas.  There are a number of
+reasons for this.  Elite is fun, but at the end of the day it is heavily based
+around blowing stuff up.  Pirates are found in nearly all systems, and you can
+expect to have blast your way through at least some of the time.  
+
+Traveller also has a number of big pluses to my mind.  The speed of
+information travel being slow is the first big plus.  Making trade decisions
+based only on your current information, no matter how old is a good game
+design idea.  Also traveller's range of ship sizes - from 100 ton (or
+smaller!?) to up to 3 million tons.  This allows a vast gulf for potential
+ship improvement.
+
+=== Basic Ideas ===
+
+
+* Faster then Light Travel:
+	FTL is only possible through Jumps.  A Jump takes 1 week (turn), and
+	can pass a maximum distance of 6 parsecs (most ships are much less).
+	Communication between systems is done via ships.
+
+* Goods are produced and Consumed
+* Trade, contracts, speculation
+* Messages
+* Secrets
+	Like traveller there are secrets in the universe.  And it is possible
+	to find some of them out.  There will be no direct reward for these
+	(normally), but it hopefully inspire people to play a little more.
+	Secrets are discussed in a different document
+
+=== Game Design ===
+
+
+Most trade in the modern world is not done by speculation.  Instead freight
+carrying ships take other peoples goods from A -> B for them.  However speculation
+is still useful for smaller traders.
+
+=== Rumours & Messages ===
+
+
+Certain events in the game will generate rumours.  Rumours can then travel
+with ships (or more accurately with their crew) all over the galaxy to various
+ports. 
+
+Rumour algorithm:
+* Port generates any new rumours as necesary
+* For all ships in port, copy in RumourShipToPort% to port
+ 	(Removing duplicates as necessary)
+* For all ships in port, delete RemourShipDelete%
+* For all ships
+** Select RumourPortToShip rumours
+** Transfer that many to the ship
+** Make RumourShipVisible% rumours visible to owner
