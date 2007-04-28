@@ -1,7 +1,7 @@
 == Thousand Parsec wiki for highly dynamic pages. ==
 
 
-= [[RuleSets]] =  
+= RuleSets =  
 
 Links to ruleset designs in progress.
    - [[EliteSec]]
