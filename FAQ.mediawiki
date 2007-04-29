@@ -28,6 +28,6 @@ The best place to start looking is the [http://metaserver.thousandparsec.net/ me
 You can also try [http://www.thousandparsec.net/tp/downloads.php/#tpserver-cpp downloading] and running your own server.
 
 === How can I contact you? ===
-You have a choice of 3 options, you can email us on the mailing lists. You can post to the forums or you can join us on IRC.
+You have a choice of 3 options, you can email us on the [http://www.thousandparsec.net/tp/mailman.php/listinfo/ mailing lists]. You can post to the forums or you can join us on [irc://irc.freenode.org/#tp IRC].
 
-If you want to contract the founders, email Tim or Lee.
+If you want to contract the founders, email [mailto:tim@thousandparsec.net Tim] or [mailto:lee@thousandparsec.net Lee].
