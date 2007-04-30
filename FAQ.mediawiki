@@ -10,7 +10,7 @@ No. They are completely different games.
 This depends on the client you are using to play the game. Thousand Parsec is a free and open source project so clients can be made for any operating system. Currently the most usable client is wxPython based client (tpclient-pywx). It is known to run on GNU/Linux, Mac OS X and Windows.
 
 === Can I only make/build/play turn based space strategy games? ===
-While this is was we are primarily working on, other genre of turn based games might be possible. Have a look at the protocol document to see if it would capture your design. Note that there is still a lot of procotol development, and we are still adding concepts.
+While this is what we are primarily working on, other genre of turn based games might be possible. Have a look at the protocol document to see if it would capture your design. Note that there is still a lot of protocol development, and we are still adding concepts.
 
 == Problems? ==
 
