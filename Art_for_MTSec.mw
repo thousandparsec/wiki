@@ -96,4 +96,7 @@ Torps should have a distinct style to missiles, for instance a lack of fins in c
 ; Colonization Module
 :A clearly large unit containing everything necessary to set up civilization.
 
+; Hull
+: 10 types of hull, one for each ship type (defining the ship type?).
+
 [[Category:Art]]
