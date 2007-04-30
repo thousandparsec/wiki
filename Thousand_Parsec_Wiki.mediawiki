@@ -6,3 +6,9 @@ Thousand Parsec wiki for highly dynamic pages.
 
 Links to ruleset designs in progress.
 * [[Traders]]
+
+= Artwork pages =
+
+Pages describing needed artwork for projects/rulesets.
+
+* [[Art for MTSec]]
