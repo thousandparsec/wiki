@@ -1,0 +1,10 @@
+'''Lee Begg''' (also known as '''llnz''') is one of the founders of Thousand Parsec. He works on:
+* tpserver-cpp
+* libtprl
+* libtpproto-cpp
+* tpclient-cpptext
+* on the website and elsewhere.
+
+Email: [mailto:llnz@paradise.net.nz direct], [mailto:lee@thousandparsec.net via TP]
+
+I don't have a lot else to say, yet.
