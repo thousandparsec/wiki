@@ -1,4 +1,4 @@
-A consistent and unique set of art is useful for many games.  Multiple sets are even more useful.  This is a quick list of artwork for MTSec.  Here a few ideas for basic concepts for a lot of the art.  Note this is purely a suggestion, however a consistent style allows users to quickly identify the different visual elements.
+A consistent and unique set of art is useful for many games.  Multiple sets are even more useful.  This is a quick list of artwork for MTSec.  Here are a few ideas for basic concepts for a lot of the art.  Note this is purely a suggestion, however a consistent style allows users to quickly identify the different visual elements.
 
 == Resources ==
 
