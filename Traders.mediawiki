@@ -38,7 +38,7 @@ with ships (or more accurately with their crew) all over the galaxy to various
 ports. 
 
 '''Rumour algorithm''':
-* Port generates any new rumours as necesary
+* Port generates any new rumours as necessary
 * For all ships in port, copy in RumourShipToPort% to port (Removing duplicates as necessary)
 * For all ships in port, delete RemourShipDelete%
 * For all ships
