@@ -2,27 +2,39 @@ A consistent and unique set of art is useful for many games.  Multiple sets are 
 
 == Resources ==
 
-; Uranium
+; Uranium [[images/Tp_mtsec_resources_uranium.png]]
 : Dull Grey metal (when oxidizes). ([http://en.wikipedia.org/wiki/Uranium Wikipedia])
 : Could also be a glowing green for the cheezy look.
 
-; Thorium
+; Thorium [[images/Tp_mtsec_resources_thorium.png]]
 :Silvery white metal. ([http://en.wikipedia.org/wiki/Thorium Wikipedia])
 
-; Cerium 
+; Cerium [[images/Tp_mtsec_resources_cerium.png]]
 :Silvery Metal. ([http://en.wikipedia.org/wiki/Cerium Wikipedia])
 
-; Enriched Uranium
+; Enriched Uranium [[images/Tp_mtsec_resources_euranium.png]]
 :Yellow (think yellowcake - it is really dull gray in it's pure form). ([http://en.wikipedia.org/wiki/Yellowcake Wikipedia])
 
-; Massivium
+; Massivium [[images/Tp_mtsec_resources_massivium.png]]
 :(Fictional) Blue.
 
-; Antiparticle
+; Antiparticle [[images/Tp_mtsec_resources_antiparticle.png]]
 :Green (probably in containment field)
 
-; Antimatter
+; Antimatter [[images/Tp_mtsec_resources_antimatter.png]]
 :Purple (also in some containment field).
+
+=== [[Epyon]]'s set ===
+
+<gallery>
+Image:Tp_mtsec_resources_uranium.png|Uranium
+Image:Tp_mtsec_resources_thorium.png|Thorium
+Image:Tp_mtsec_resources_cerium.png|Cerium
+Image:Tp_mtsec_resources_massivium.png|Massivium
+Image:Tp_mtsec_resources_euranium.png|Enriched Uranium
+Image:Tp_mtsec_resources_antimatter.png|Antimatter
+Image:Tp_mtsec_resources_antiparticle.png|Antiparticle
+</gallery>
 
 == Ships ==
 
