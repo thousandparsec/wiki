@@ -12,3 +12,8 @@ Links to ruleset designs in progress.
 Pages describing needed artwork for projects/rulesets.
 
 * [[Art for MTSec]]
+
+= Other page =
+
+Until they get sorted, other pages can be linked from here:
+* [[Game Publications]]
