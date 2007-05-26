@@ -1,0 +1,32 @@
+media.gz is a file which the client can download from a media server to get details about what is available. It will always be found off the base url of the server.
+
+The file is a gziped plain text file with the format as specified below,
+<pre>
+<filename> <size> <last modtime> <checksum type>:<checksum>"
+</pre>
+
+* The size is in bytes.
+* The last modtime is in the format <year>-<month>-<day>T<hour><minute>, all should have leading zeros.
+* Checksum type can be, md5 or sha1, other hash formats may be supported in the future.
+* Checksum is a hexdump of the checksum for the file (IE How we normally view MD5 sums, 6afb6b9187f5aa5d4168ae71fb3f27b0).
+
+The filename for every media file type on the server should be included. An example media.gz is included below,
+
+<pre>
+planets/planet1.gif 253123 2007-01-02T2053 md5:6afb6b9187f5aa5d4168ae71fb3f27b0
+planets/planet1.png 42527 2007-03-05T2116 md5:d41d8cd98f00b204e9800998ecf8427e
+planets/planet1.mng 128345 2007-03-05T1549 md5:363336bbeb78f404e6926572caed7f49
+</pre>
+
+Thousand Servers will not give full URLs, instead it will give a URL leaving out the media extension. It is up to the client to choose the file type that is requires.
+
+For example,
+<pre>
+Server's base url:  http://media.thousandparsec.net/media/
+Object's media url: planets/planet1
+</pre>
+
+If the client supported mng, it could download the 
+<pre>
+http://media.thousandparsec.net/media/planets/planet1.mng
+</pre>
