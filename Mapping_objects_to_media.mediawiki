@@ -1,0 +1,21 @@
+This page is working toward how to '''map from objects to media''' in the servers to produce relevant media for the client to fetch.
+
+== The problem ==
+
+The server has no way of knowing what each piece of media looks like, and what it should be associated with in game. Therefore client's can not rely on the media being an accurate reflection of the object.
+
+For example: The colour and size of a planet has a bearing on if the player perceives it as having a breathable for his colonists and how much land area there is. If the server tells the player the wrong media, with the wrong size and colour, then the player might mistake "quality" of the planet, bypassing it or colonising it despite its bad qualities.
+
+== Obvious suggestions ==
+
+The first thing would be to allow each ruleset to set the media, but this has two draw backs.
+1. Difficult to program, many parameters to single media.
+2. Fixed media layout and names, can not add more types of planets for example.
+
+The next suggestion also runs into number 1 above. The use of a file to map from a collection of parameters to media.
+
+Having the media describe itself (in a file for example) is limiting as it would restrict the media to a single game/ruleset.
+
+Any of these methods could be used. Is there a better one? Is one significantly better than any other?
+
+For tpserver-cpp [[User:Lee Begg|Lee]] was thinking of using the first obvious suggestion. Different servers could use different approaches.
