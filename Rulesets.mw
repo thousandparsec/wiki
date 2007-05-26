@@ -1,0 +1,14 @@
+= Rulesets =  
+
+A ruleset is a description of the rules which make up a game.
+
+Links to ruleset designs in progress.
+* [[Traders]]
+* [[RFTS Clone]]
+
+=== Milestone rulesets ===
+
+Milestone rulesets are special rulesets designed to exercise certain features of Thousand Parsec.
+
+* [http://www.thousandparsec.net/tp/dev/documents/minisec.php MiniSec], the first milestone game. Simple test of being able to issue orders and perform simple combat.
+* [http://www.thousandparsec.net/tp/dev/documents/mtsec.php MTSec], the second milestone game. It is designed to both be a fun game and to exercise the object design capabilities of the framework.
