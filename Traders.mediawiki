@@ -17,7 +17,7 @@ ship improvement.
 
 == Basic Ideas ==
 
-; Faster then Light Travel:
+; Faster than Light Travel:
 : FTL is only possible through Jumps.  A Jump takes 1 week (turn), and can pass a maximum distance of 6 parsecs (most ships are much less). Communication between systems is done via ships.
 ; Goods are produced and Consumed
 ; Trade, contracts, speculation
