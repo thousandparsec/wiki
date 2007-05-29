@@ -21,3 +21,7 @@ Below is a list of links to searches for 4X games related blog posts. We should 
 ! thousand parsec
 | [http://technorati.com/search/%22thousand+parsec%22 link] - [http://feeds.technorati.com/search/%22thousand+parsec%22 feed] || [http://blogsearch.google.com/blogsearch?hl=en&q=%22thousand+parsec%22&ie=UTF-8&scoring=d link] - [http://blogsearch.google.com/blogsearch_feeds?hl=en&scoring=d&q=%22thousand+parsec%22&ie=utf-8&num=10&output=atom feed]
 |}
+
+== Interesting posts ==
+
+(2007-05-08) [http://selfdeprecatingjournalism.blogspot.com/2007/05/galactic-civilisation-2-war-report-and.html Galactic Civilisation 2 War Report and 4X Game Issues] - Talks about problems with managing large empires and how AI has advantage here. It has a nice idea about how user could build fleets more easily and it tells a bit how Galactic Civilisation II has build queues sorted out. At the end there are some videos embedded, which show how Galactic Civilisations II team was debugging AI.
