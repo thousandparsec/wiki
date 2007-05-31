@@ -11,3 +11,5 @@ Milestone rulesets are special rulesets designed to exercise certain features of
 
 * [http://www.thousandparsec.net/tp/dev/documents/minisec.php MiniSec], the first milestone game. Simple test of being able to issue orders and perform simple combat.
 * [http://www.thousandparsec.net/tp/dev/documents/mtsec.php MTSec], the second milestone game. It is designed to both be a fun game and to exercise the object design capabilities of the framework.
+
+[[Category:Game Design]]
