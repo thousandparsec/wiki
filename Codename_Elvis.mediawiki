@@ -1,0 +1,5 @@
+'''Codename Elvis''' is the temporary name for a Game primarily designed by [[User:Lee Begg|Lee Begg]], with help from everyone who reads and edits this page.  It is a game that will use every aspect of the Thousand Parsec framework, and hopefully be expansive and fun.
+
+This is currently a stub until Lee gets some time to flesh this out some more.
+
+[[Category:Game Design]]
