@@ -2,4 +2,11 @@
 
 This is currently a stub until Lee gets some time to flesh this out some more.
 
+== Key Goals ==
+* Fun
+* Huge universe (multiple galaxies)
+* Huge Tech tree
+* Support cooperative play (Planetry governors, area commanders, fleet admirals)
+* Many paths to victory
+
 [[Category:Game Design]]
