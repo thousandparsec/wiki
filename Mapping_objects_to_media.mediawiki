@@ -1,5 +1,7 @@
 This page is working toward how to '''map from objects to media''' in the servers to produce relevant media for the client to fetch.
 
+For the background on this, such as where does the media come from, see [[Media.gz]].
+
 == The problem ==
 
 The server has no way of knowing what each piece of media looks like, and what it should be associated with in game. Therefore client's can not rely on the media being an accurate reflection of the object.
