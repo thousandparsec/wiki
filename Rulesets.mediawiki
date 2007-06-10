@@ -2,7 +2,7 @@ A ruleset is a description of the rules which make up a game.
 
 Links to ruleset designs in progress.
 * [[Traders]]
-* [[RFTS Clone]]
+* [[TP RFTS|RFTS Clone]]
 * [[Codename Elvis]]
 
 === Milestone rulesets ===
