@@ -1,0 +1,23 @@
+== Work at Thousand Parsec ==
+
+* Working on a KDE 4 client written in C++. The client is called [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git Parsek].
+
+== About me ==
+
+; Full name
+: Jure Repinc
+; Nicknames
+: JLP, JRepin
+; Location
+: Bohinjska Bistrica, Slovenia, Europe
+; Timezone
+: Central European Time (UTC+1), Central European Summer Time (UTC+2)
+; Blog
+: [http://jlp.holodeck1.com/blog/ JLP's Blog]
+
+== Contact ==
+
+; E-mail
+: jlp@holodeck1.com
+; Jabber
+: jlp@jabber.org
