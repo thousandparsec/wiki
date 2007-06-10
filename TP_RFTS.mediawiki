@@ -1,0 +1,8 @@
+== TP RFTS ==
+TP RFTS is the current name for the Reach for the Stars clone being developed this summer (of '07), by Google Summer of Code student Tyler Shaub / [[User:Xdotx|xdotx]]. A new name is being sought (RFTP anyone?), and suggestions are highly encouraged.
+
+== To-Add ==
+* Basic Mechanics
+* Explanation of RPs and production
+* (Potential) Differences between RFTS and TP RFTS
+* End Game
