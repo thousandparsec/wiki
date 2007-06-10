@@ -32,3 +32,17 @@
 
 ; Frame Type Versions
 : Support for changing frames (in a backward compatible way) separately. This will allow better updates of the protocol without having to do a complete new version.
+
+== Where to get TP04 ==
+
+The TP04 protocol specification is available in [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=documents.git Git repository].
+
+== Comments and suggestions ==
+
+If you have a comment about any existing feature or a suggestion about a new feature you can add it here for consideration. You are also encouraged to discuss anything about TP04 on [http://www.thousandparsec.net/tp/mailman.php/listinfo/tp-devel Development Mailing List].
+
+=== Ruleset information support ===
+
+'''Usecase''': A user opens the client and opens the list of servers that user can connect to. User sees different servers with different rulesets. Which one is the right one? User would like to see various information about rulesets: name, difficulty level, short description, story behind it, all rules with object descriptions and data...
+
+'''Suggestion''': The protocol should enable sending the above information and the ruleset modules should be required to provide this information to server. Maybe the longer parts (story, rules, objects data) could be provided in the form of an URL pointing to location with the information. Clients could then open these URLs in external browser or using an integrated internal browser.
