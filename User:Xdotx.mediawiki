@@ -1,1 +1,5 @@
 Fancy user page action!
+
+== Contact Info ==
+IRC: xdotx
+electronic mail: fr33.em4il - at that google mail
