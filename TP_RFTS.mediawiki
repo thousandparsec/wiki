@@ -1,8 +1,47 @@
 == TP RFTS ==
-TP RFTS is the current name for the Reach for the Stars clone being developed this summer (of '07), by Google Summer of Code student Tyler Shaub / [[User:Xdotx|xdotx]]. A new name is being sought (RFTP anyone?), and suggestions are highly encouraged.
+TP RFTS is the current name for the Reach for the Stars clone being developed this summer (of '07), by Google Summer of Code student Tyler Shaub / [[User:Xdotx|xdotx]]. A new name is currently being sought (RFTP anyone?), and suggestions are highly encouraged.
+
+
+== Basics ==
+* Every turn is a movement turn, every even turn is also a production turn.
+* There is a single, constant universe with a static number of planets. each player is assigned a single planet at the start of game
+* Unlike many other games in the genre, RFTS does not have the concept of different races. Thusly, all players have the same stats and technologies.
+
+
+== Resource Points and Production == 
+Resource points are, appropriately enough, points that can be spent in planetary resources. Each turn, each (populated) planet is allocated a center number of RPs based upon that planet's stats. The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
+
+The resources are:
+
+Stats:
+* Industry -  determines the max number of ships you can order
+
+* Social Env. - determines population growth. if less than 40 the population decreases, greater, it increases. uninhabited planets have a social env. of zero. the social env will be effected by the planetary env. as well as any possible riots, natural disasters, and warfare.
+
+* Planetary Env. - strongly influences social env, and thus indirectly production and population growth. building up planetary env should be considered of greater value in the long run than continual investment in social env. planetary env is also effected by riots, natural disasters, and warfare.
+
+* Pop. Maint. - represents the amount of consumer goods and services for the population. each unit of population costs 1 RP to service. providing less than a 1:1 ratio puts you at risk for riots and unrest manifested in the form of low birth-rate, industrial sabotage and environmental pollution.
+
+* Colonists/Transports - represents the part of the population available to be transported to another planet to be colonists or invading troops. each turn up to 25% of the population along with any population in addition to planet's capacity is available for emigration. (note when producing colonists, transport units are produced to support them and are treated as the same object. alone these transports have no defenses, but when escorted with a warship, they take on the highest defense of any escorting warship.)
+
+Ships & PDBs:
+* Scouts - unarmed, exploratory ships
+* Mark I through Mark IV - warships, progressively stronger and faster.
+
+* PDB New - orders the construction new Planetary Defense Bases. a maximum of 4 constructed per turn, and 50 total constructed. (dependent current Ship Tech)
+* PDB Maint. - maintenance cost of PDBs (also dependent current Ship Tech)
+
+* Ship Tech. - represents the investment into ship technology, manifested in the level of Mark ships available and the power (and cost) of PDBs. all planets start out with Mark I. note this is per player, not planet; although of course each planet may contribute to the global ship tech.
+
+
+== Differences ==
+RFTS, being an older game only supported multiplayer though hot-seat and play-by-email. Inevitably, TP RFTS is going to contain some appropriate differences.
+
+* 4 player min/max - no promises on AI implementation, and thusly on a hard 4 for number of players/AI
+* wrapping map - this is not currently supported by TP, although a fix / work around may be implemented
+
 
 == To-Add ==
-* Basic Mechanics
-* Explanation of RPs and production
-* (Potential) Differences between RFTS and TP RFTS
-* End Game
+* Cost tables (production, ship tech., movement)
+* Combat
+* End Game and Victory Points
