@@ -3,7 +3,7 @@ TP RFTS is the current name for the Reach for the Stars clone being developed th
 
 
 == Basics ==
-* Every turn is a movement turn, every even turn is also a production turn.
+* Every turn is a movement turn, every odd turn is also a production turn.
 * There is a single, constant universe with a static number of planets. each player is assigned a single planet at the start of game
 * Unlike many other games in the genre, RFTS does not have the concept of different races. Thusly, all players have the same stats and technologies.
 
@@ -80,15 +80,18 @@ The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
 (*) PDB cost depends on Ship Tech. Level
 
 
+== Combat ==
+Combat takes place at the end of a turn whenever two player ships are in the same star system, or an enemy ship is in place to attack a planet. Combat is done is battles, which continue until one party is defeated or withdraws. Planetary defenses cannot withdraw from combat. When a fleet attacks a planet with no defenses, it is called "bombarding", and may only be done once. Bombarding a planet potentially damages it's industry, population, and planetary env, in addition to increasing the chance of rioting.
+
+
 == Differences ==
 RFTS, being an older game only supported multiplayer though hot-seat and play-by-email. Inevitably, TP RFTS is going to contain some appropriate differences.
 
 * 4 player min/max - no promises on AI implementation, and thusly on a hard 4 for number of players/AI
 * wrapping map - this is not currently supported by TP, although a fix / work around may be implemented
-
+* withdraws - RFTS supports withdrawing ships from combat after a battle; TP RFTS current lacks support for this, and implementation is pending
 
 
 == To-Add ==
 * Movement
-* Combat
 * End Game and Victory Points
