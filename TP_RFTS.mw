@@ -13,7 +13,7 @@ Resource points are, appropriately enough, points that can be spent in planetary
 
 The resources are:
 
-Stats:
+'''Stats''':
 * Industry -  determines the max number of ships you can order
 
 * Social Env. - determines population growth. if less than 40 the population decreases, greater, it increases. uninhabited planets have a social env. of zero. the social env will be effected by the planetary env. as well as any possible riots, natural disasters, and warfare.
@@ -24,7 +24,7 @@ Stats:
 
 * Colonists/Transports - represents the part of the population available to be transported to another planet to be colonists or invading troops. each turn up to 25% of the population along with any population in addition to planet's capacity is available for emigration. (note when producing colonists, transport units are produced to support them and are treated as the same object. alone these transports have no defenses, but when escorted with a warship, they take on the highest defense of any escorting warship.)
 
-Ships & PDBs:
+'''Ships & PDBs''':
 * Scouts - unarmed, exploratory ships
 * Mark I through Mark IV - warships, progressively stronger and faster.
 
