@@ -14,63 +14,63 @@ Resource points are, appropriately enough, points that can be spent in planetary
 The resources are:
 
 '''Stats''':
-* Industry -  determines the max number of ships you can order
+* <u>Industry</u> -  determines the max number of ships you can order
 
-* Social Env. - determines population growth. if less than 40 the population decreases, greater, it increases. uninhabited planets have a social env. of zero. the social env will be effected by the planetary env. as well as any possible riots, natural disasters, and warfare.
+* <u>Social Env.</u> - determines population growth. if less than 40 the population decreases, greater, it increases. uninhabited planets have a social env. of zero. the social env will be effected by the planetary env. as well as any possible riots, natural disasters, and warfare.
 
-* Planetary Env. - strongly influences social env, and thus indirectly production and population growth. building up planetary env should be considered of greater value in the long run than continual investment in social env. planetary env is also effected by riots, natural disasters, and warfare.
+* <u>Planetary Env.</u> - strongly influences social env, and thus indirectly production and population growth. building up planetary env should be considered of greater value in the long run than continual investment in social env. planetary env is also effected by riots, natural disasters, and warfare.
 
-* Pop. Maint. - represents the amount of consumer goods and services for the population. each unit of population costs 1 RP to service. providing less than a 1:1 ratio puts you at risk for riots and unrest manifested in the form of low birth-rate, industrial sabotage and environmental pollution.
+* <u>Pop. Maint.</u> - represents the amount of consumer goods and services for the population. each unit of population costs 1 RP to service. providing less than a 1:1 ratio puts you at risk for riots and unrest manifested in the form of low birth-rate, industrial sabotage and environmental pollution.
 
-* Colonists/Transports - represents the part of the population available to be transported to another planet to be colonists or invading troops. each turn up to 25% of the population along with any population in addition to planet's capacity is available for emigration. (note when producing colonists, transport units are produced to support them and are treated as the same object. alone these transports have no defenses, but when escorted with a warship, they take on the highest defense of any escorting warship.)
+* <u>Colonists/Transports</u> - represents the part of the population available to be transported to another planet to be colonists or invading troops. each turn up to 25% of the population along with any population in addition to planet's capacity is available for emigration. (note when producing colonists, transport units are produced to support them and are treated as the same object. alone these transports have no defenses, but when escorted with a warship, they take on the highest defense of any escorting warship.)
 
 '''Ships & PDBs''':
-* Scouts - unarmed, exploratory ships
-* Mark I through Mark IV - warships, progressively stronger and faster.
+* <u>Scouts</u> - unarmed, exploratory ships
+* <u>Mark I</u> through <u>Mark IV</u> - warships, progressively stronger and faster.
 
-* PDB New - orders the construction new Planetary Defense Bases. a maximum of 4 constructed per turn, and 50 total constructed. (dependent current Ship Tech)
-* PDB Maint. - maintenance cost of PDBs (also dependent current Ship Tech)
+* <u>New PDB</u> - orders the construction new Planetary Defense Bases. a maximum of 4 constructed per turn, and 50 total constructed. (dependent current Ship Tech)
+* <u>PDB Maint.</u> - maintenance cost of PDBs (also dependent current Ship Tech)
 
-* Ship Tech. - represents the investment into ship technology, manifested in the level of Mark ships available and the power (and cost) of PDBs. all planets start out with Mark I. note this is per player, not planet; although of course each planet may contribute to the global ship tech.
+* <u>Ship Tech.</u> - represents the investment into ship technology, manifested in the level of Mark ships available and the power (and cost) of PDBs. all planets start out with Mark I. note this is per player, not planet; although of course each planet may contribute to the global ship tech.
 
 
 {| border="1" cellpadding="2" 
 |-----
-! Item ||  RP Cost
+! Item || RP Cost
 |-----
 ! Ship Tech.
 |-----
-| Mark I || 0 (comes standard)
+| Mark I || align=center |  0 (comes standard)
 |-----
-| Mark II || 400
+| Mark II || align=center | 400
 |-----
-| Mark III || 1,000
+| Mark III || align=center | 1,000
 |-----
-| Mark IV || 2,000
+| Mark IV || align=center | 2,000
 |-----
 ! Production
 |-----
-| Industry || 10
+| Industry || align=center | 10
 |-----
-| Social Env. || 4
+| Social Env. || align=center | 4
 |-----
-| Planetary Env. || 8
+| Planetary Env. || align=center | 8
 |-----
-| Scouts || 3
+| Scouts || align=center | 3
 |-----
-| Colonists || 5
+| Colonists || align=center | 5
 |-----
-| Mark I || 14
+| Mark I || align=center | 14
 |-----
-| Mark II || 30
+| Mark II || align=center | 30
 |-----
-| Mark III || 80
+| Mark III || align=center | 80
 |-----
-| Mark IV || 120
+| Mark IV || align=center | 120
 |-----
-| PDB || 4/8/16 *
+| PDB || align=center | 4/8/16 *
 |-----
-| PDB Maint. || 1/2/2 *
+| PDB Maint. || align=center | 1/2/2 *
 |}
 (*) PDB cost depends on Ship Tech. Level
 
