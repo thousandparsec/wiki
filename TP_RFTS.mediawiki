@@ -100,4 +100,3 @@ RFTS, being an older game only supported multiplayer though hot-seat and play-by
 
 == To-Add ==
 * Movement (costs)
-* End Game and Victory Points
