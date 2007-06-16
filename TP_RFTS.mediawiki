@@ -13,7 +13,8 @@ Resource points are, appropriately enough, points that can be spent in planetary
 The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
 
 
-===== Stats: =====
+===== Stats =====
+
 * <u>Industry</u> -  determines the max number of ships you can order
 
 * <u>Social Env.</u> - determines population growth. If less than 40 the population decreases, greater, it increases. uninhabited planets have a social env of zero. The social env will be effected by the planetary env. as well as any possible riots, natural disasters, and warfare.
@@ -22,7 +23,7 @@ The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
 
 * <u>Pop. Maint.</u> - represents the amount of consumer goods and services for the population. Each unit of population costs 1 RP to service. Providing less than a 1:1 ratio puts you at risk for riots and unrest manifested in the form of low birth-rate, industrial sabotage and environmental pollution.
 
-===== Ships & PDBs: =====
+===== Ships & PDBs =====
 
 * <u>Colonists/Transports</u> - represents the part of the population available to be transported to another planet to be colonists or invading troops. Each turn up to 25% of the population along with any population in addition to planet's capacity is available for emigration. (Note when producing colonists, transport units are produced to support them and are treated as the same object. Alone these transports have no defenses, but when escorted with a warship, they take on the highest defense of any escorting warship.)
 
@@ -81,7 +82,11 @@ The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
 
 
 == Combat ==
-Combat takes place at the end of a turn whenever two player ships are in the same star system, or an enemy ship is in place to attack a planet. Combat is done is battles, which continue until one party is defeated or withdraws. Planetary defenses cannot withdraw from combat. When a fleet attacks a planet with no defenses, it is called "bombarding", and may only be done once. Bombarding a planet potentially damages it's industry, population, and planetary env, in addition to increasing the chance of rioting.
+Combat takes place at the end of a turn whenever two player ships are in the same star system, or an enemy ship is in place to attack a planet. Combat is done is battles, which continue until one party is defeated or withdraws. Planetary defenses cannot withdraw from combat. When a fleet attacks a planet with no defenses, it is called "bombarding", and may only be done once. Bombarding a planet potentially damages it's industry, population, and planetary env, in addition to increasing the chance of rioting. If a transport ship is present, and the planet has no defenses, it may choose to invade and attempt to colonize the enemy planet. You must maintain a 2:1 ratio between the enemy populace and your colonists to hold the planet.
+
+
+== End Game & Victory Points ==
+At the start of the game, a max number of turns is selected between 40 and 160. During the game, players gain Victory Points in the follow sections: Development (ship and PDB production), Battles (how well your ships do in combat), Conquest (invading/taking over planets) and Destruction (bombarding enemy planets). The total Victory Points are simply the sum of these sections. If, during the game, any player gets above approximately 2.5 times the next closest player in Victory Points, an overwhelming victory may be declared, making that player the winner. Otherwise, the player with the most Victory Points on the last turn wins the game.
 
 
 == Differences ==
@@ -90,8 +95,9 @@ RFTS, being an older game only supported multiplayer though hot-seat and play-by
 * 4 player min/max - no promises on AI implementation, and thusly on a hard 4 for number of players/AI
 * wrapping map - this is not currently supported by TP, although a fix / work around may be implemented
 * withdraws - RFTS supports withdrawing ships from combat after a battle; TP RFTS current lacks support for this, and implementation is pending
+* RFTS has many advanced rules, it is likely that TP RFTS will simplify some of these and incorporate some of the advanced rules into a standard game
 
 
 == To-Add ==
-* Movement
+* Movement (costs)
 * End Game and Victory Points
