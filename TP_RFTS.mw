@@ -34,7 +34,7 @@ Ships & PDBs:
 * Ship Tech. - represents the investment into ship technology, manifested in the level of Mark ships available and the power (and cost) of PDBs. all planets start out with Mark I. note this is per player, not planet; although of course each planet may contribute to the global ship tech.
 
 
-{| border="1" cellpadding="1"
+{| border="1" cellpadding="2" 
 |-----
 ! Item ||  RP Cost
 |-----
@@ -68,8 +68,11 @@ Ships & PDBs:
 |-----
 | Mark IV || 120
 |-----
-| PDB || 4 / 8 / 16
+| PDB || 4/8/16 *
+|-----
+| PDB Maint. || 1/2/2 *
 |}
+(*) PDB cost depends on Ship Tech. Level
 
 
 == Differences ==
