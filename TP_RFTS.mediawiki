@@ -34,6 +34,44 @@ Ships & PDBs:
 * Ship Tech. - represents the investment into ship technology, manifested in the level of Mark ships available and the power (and cost) of PDBs. all planets start out with Mark I. note this is per player, not planet; although of course each planet may contribute to the global ship tech.
 
 
+{| border="1" cellpadding="1"
+|-----
+! Item ||  RP Cost
+|-----
+! Ship Tech.
+|-----
+| Mark I || 0 (comes standard)
+|-----
+| Mark II || 400
+|-----
+| Mark III || 1,000
+|-----
+| Mark IV || 2,000
+|-----
+! Production
+|-----
+| Industry || 10
+|-----
+| Social Env. || 4
+|-----
+| Planetary Env. || 8
+|-----
+| Scouts || 3
+|-----
+| Colonists || 5
+|-----
+| Mark I || 14
+|-----
+| Mark II || 30
+|-----
+| Mark III || 80
+|-----
+| Mark IV || 120
+|-----
+| PDB || 4 / 8 / 16
+|}
+
+
 == Differences ==
 RFTS, being an older game only supported multiplayer though hot-seat and play-by-email. Inevitably, TP RFTS is going to contain some appropriate differences.
 
