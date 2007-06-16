@@ -9,31 +9,34 @@ TP RFTS is the current name for the Reach for the Stars clone being developed th
 
 
 == Resource Points and Production == 
-Resource points are, appropriately enough, points that can be spent in planetary resources. Each turn, each (populated) planet is allocated a center number of RPs based upon that planet's stats. The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
+Resource points are, appropriately enough, points that can be spent in planetary resources. Each turn, each (populated) planet is allocated a center number of RPs based upon that planet's stats. 
+The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
 
-The resources are:
 
-'''Stats''':
+===== Stats: =====
 * <u>Industry</u> -  determines the max number of ships you can order
 
-* <u>Social Env.</u> - determines population growth. if less than 40 the population decreases, greater, it increases. uninhabited planets have a social env. of zero. the social env will be effected by the planetary env. as well as any possible riots, natural disasters, and warfare.
+* <u>Social Env.</u> - determines population growth. If less than 40 the population decreases, greater, it increases. uninhabited planets have a social env of zero. The social env will be effected by the planetary env. as well as any possible riots, natural disasters, and warfare.
 
-* <u>Planetary Env.</u> - strongly influences social env, and thus indirectly production and population growth. building up planetary env should be considered of greater value in the long run than continual investment in social env. planetary env is also effected by riots, natural disasters, and warfare.
+* <u>Planetary Env.</u> - strongly influences social env, and thus indirectly production and population growth. Building up planetary env should be considered of greater value in the long run than continual investment in social env. Planetary env is also effected by riots, natural disasters, and warfare.
 
-* <u>Pop. Maint.</u> - represents the amount of consumer goods and services for the population. each unit of population costs 1 RP to service. providing less than a 1:1 ratio puts you at risk for riots and unrest manifested in the form of low birth-rate, industrial sabotage and environmental pollution.
+* <u>Pop. Maint.</u> - represents the amount of consumer goods and services for the population. Each unit of population costs 1 RP to service. Providing less than a 1:1 ratio puts you at risk for riots and unrest manifested in the form of low birth-rate, industrial sabotage and environmental pollution.
 
-* <u>Colonists/Transports</u> - represents the part of the population available to be transported to another planet to be colonists or invading troops. each turn up to 25% of the population along with any population in addition to planet's capacity is available for emigration. (note when producing colonists, transport units are produced to support them and are treated as the same object. alone these transports have no defenses, but when escorted with a warship, they take on the highest defense of any escorting warship.)
+===== Ships & PDBs: =====
 
-'''Ships & PDBs''':
+* <u>Colonists/Transports</u> - represents the part of the population available to be transported to another planet to be colonists or invading troops. Each turn up to 25% of the population along with any population in addition to planet's capacity is available for emigration. (Note when producing colonists, transport units are produced to support them and are treated as the same object. Alone these transports have no defenses, but when escorted with a warship, they take on the highest defense of any escorting warship.)
+
 * <u>Scouts</u> - unarmed, exploratory ships
+
 * <u>Mark I</u> through <u>Mark IV</u> - warships, progressively stronger and faster.
 
 * <u>New PDB</u> - orders the construction new Planetary Defense Bases. a maximum of 4 constructed per turn, and 50 total constructed. (dependent current Ship Tech)
 * <u>PDB Maint.</u> - maintenance cost of PDBs (also dependent current Ship Tech)
 
-* <u>Ship Tech.</u> - represents the investment into ship technology, manifested in the level of Mark ships available and the power (and cost) of PDBs. all planets start out with Mark I. note this is per player, not planet; although of course each planet may contribute to the global ship tech.
+* <u>Ship Tech.</u> - represents the investment into ship technology, manifested in the level of Mark ships available and the power (and cost) of PDBs. All planets start out with Mark I. Note this is per player, not planet; although of course each planet may contribute to the global ship tech.
 
 
+===== Production Costs =====
 {| border="1" cellpadding="2" 
 |-----
 ! Item || RP Cost
@@ -56,9 +59,11 @@ The resources are:
 |-----
 | Planetary Env. || align=center | 8
 |-----
-| Scouts || align=center | 3
+| Pop. Maint || align=center | 1
 |-----
 | Colonists || align=center | 5
+|-----
+| Scouts || align=center | 3
 |-----
 | Mark I || align=center | 14
 |-----
@@ -82,7 +87,8 @@ RFTS, being an older game only supported multiplayer though hot-seat and play-by
 * wrapping map - this is not currently supported by TP, although a fix / work around may be implemented
 
 
+
 == To-Add ==
-* Cost tables (production, ship tech., movement)
+* Movement
 * Combat
 * End Game and Victory Points
