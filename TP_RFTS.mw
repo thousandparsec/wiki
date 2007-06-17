@@ -4,7 +4,7 @@ TP RFTS is the current name for the Reach for the Stars clone being developed th
 
 == Basics ==
 * Every turn is a movement turn, every odd turn is also a production turn.
-* There is a single, constant universe with a static number of planets. each player is assigned a single planet at the start of game
+* There is a single, constant universe with a static number of planets. Each player is assigned a single planet at the start of game.
 * Unlike many other games in the genre, RFTS does not have the concept of different races. Thusly, all players have the same stats and technologies.
 
 
@@ -15,9 +15,9 @@ The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
 
 ===== Stats =====
 
-* <u>Industry</u> -  determines the max number of ships you can order
+* <u>Industry</u> -  determines the max number of ships you can order.
 
-* <u>Social Env.</u> - determines population growth. If less than 40 the population decreases, greater, it increases. uninhabited planets have a social env of zero. The social env will be effected by the planetary env. as well as any possible riots, natural disasters, and warfare.
+* <u>Social Env.</u> - determines population growth. If less than 40 the population decreases, greater, it increases. Uninhabited planets have a social env of zero. The social env will be effected by the planetary env. as well as any possible riots, natural disasters, and warfare.
 
 * <u>Planetary Env.</u> - strongly influences social env, and thus indirectly production and population growth. Building up planetary env should be considered of greater value in the long run than continual investment in social env. Planetary env is also effected by riots, natural disasters, and warfare.
 
@@ -32,7 +32,7 @@ The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
 * <u>Mark I</u> through <u>Mark IV</u> - warships, progressively stronger and faster.
 
 * <u>New PDB</u> - orders the construction new Planetary Defense Bases. a maximum of 4 constructed per turn, and 50 total constructed. (dependent current Ship Tech)
-* <u>PDB Maint.</u> - maintenance cost of PDBs (also dependent current Ship Tech)
+* <u>PDB Maint.</u> - maintenance cost of PDBs. (also dependent current Ship Tech)
 
 * <u>Ship Tech.</u> - represents the investment into ship technology, manifested in the level of Mark ships available and the power (and cost) of PDBs. All planets start out with Mark I. Note this is per player, not planet; although of course each planet may contribute to the global ship tech.
 
