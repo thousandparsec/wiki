@@ -38,6 +38,20 @@ The price at each planet in a system is based on the global price plus a modifie
 Having goods an excess of goods will drive the price on that planet down.
 Not having goods will drive drive the price on that planet up.
 
+=== Excessive Differences ===
+
+==== Independent Traders ====
+
+If sufficent price differences between two close systems exists, "Independent Traders" will spring up. They will transport goods between systems thus reducing the difference.
+
+"Independent Traders" can be deterred in a number of ways,
+* Transporting the goods yourself.
+* Attacked them.
+
+==== Pirates Traders ====
+
+Given a huge price difference between two close system, "Pirate Traders" will spring up. They will transport goods between systems.
+
 == Random Events ==
 * Fire,     Destroys X factories on a planet
 * Disease,  Destroys X animals/crops on a planet
