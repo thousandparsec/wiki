@@ -18,6 +18,26 @@ with any resources, it will reopen on a new random planet.
 
 You need to be careful that you don't cause a planet to depopulate it's raw resources. Some sources such as fishing will get their resources from the planet's population of fish, depleting the number.
 
+Planets in a system may take resources from other planets in the same system.
+
+== Pricing ==
+
+The pricing of things determine how much money you will get for each item. Each system has a local price which is effected by the demand/supply for objects in that system.
+
+=== Global Pricing ===
+
+If there is more demand for goods then supply, the global price of items will slowly go up.
+If there is less demand for goods then supply, the global price of items will slowly go down.
+
+The price is also effected by the number of goods available. The more goods available, the more price fluctations are reduced.
+
+=== Planet Pricing ===
+
+The price at each planet in a system is based on the global price plus a modifier.
+
+Having goods an excess of goods will drive the price on that planet down.
+Not having goods will drive drive the price on that planet up.
+
 == Random Events ==
 * Fire,     Destroys X factories on a planet
 * Disease,  Destroys X animals/crops on a planet
