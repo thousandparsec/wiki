@@ -100,3 +100,13 @@ Second phase of loading, allows loading of goods which were produced that turn.
 
 === Cost calculations ===
 The new cost of each item at each planet is calculated.
+
+= Strategy =
+
+== Blockades ==
+
+Attacking all ships which enter a system and only allowing your own ships drives prices up.
+
+== Building Complete Trade Routes ==
+
+By supply industries with goods you can then transport the more lucrative output goods.
