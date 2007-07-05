@@ -1,41 +1,87 @@
 This is a proposal for the new layout for the Thousand Parsec website. Thousand Parsec has grown significantly since the initial time the website was designed.
 
+----
 * Getting Started
+*: Section covers similar to http://www.thousandparsec.net/tp/gettingstarted.php included from the subsections.
 ** FAQ
+*: Included via the wiki.
+----
 * News
-* Clients
-** Screenshots (included from various subsections)
-** Download (include from various subsections)
-**
+*: Same as the current news page.
+----
+* Playing Games (Clients)
+*: Top page has a quick description of each client.
+*: Includes the feature matrix.
+*:
+** Screenshots
+**: Included from various subsections.
+** Download 
+**: Included from various subsections.
 ** tpclient-pywx
+*** Getting Started
 *** Screenshots
 *** Download
 ** galaxie
+*** Getting Started
 *** Screenshots
 *** Download
 ** parsek
+*** Getting Started
 *** Screenshots
 *** Download
 ** tpclient-pyweb
+*** Getting Started
 *** Screenshots
 *** Download
-* Servers
+----
+* Running Games (Servers)
+*: Top page has a quick description of each server.
+*: Includes the feature matrix.
+*:
 ** tpserver-py
+*** Getting Started
+*** Download
 ** tpserver-cpp
+*** Getting Started
+*** Download
+----
+* Rulesets
+** MiniSec
+** MTSec
+** RFTS Clone
+** TIM Trader
+** Creating your own
 * Utilities
 ** tpsai-py
 ** tpruledev
-
+----
 * Communicate (can you think of a better name?)
 ** IRC
 *** 
 *** Logs
 ** Mailing List
 *** Archives
+----
 * Links
+----
 * Developing
 ** Code Access
 *** Git Access
 *** CVS gateway
 *** Nightly Tarballs
 *** GitWeb
+** Support Libraries
+*** Protocol Libraries
+**** Python
+**** Python (version 2)
+**** C++
+**** Ruby
+**** PHP
+*** Other Libraries
+**** Python
+** Specifications
+*** Protocol
+*** File Formats
+***: Describes various file formats used by Thousand Parsec
+**** Media.gz
+**** BattleXML
