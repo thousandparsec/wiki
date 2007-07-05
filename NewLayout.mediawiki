@@ -1,7 +1,6 @@
 This is a proposal for the new layout for the Thousand Parsec website. Thousand Parsec has grown significantly since the initial time the website was designed.
 
 * Getting Started
-Section covers what to download and where to get it.
 ** FAQ
 * News
 * Clients
