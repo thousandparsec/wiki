@@ -1,6 +1,8 @@
 This is a proposal for the new layout for the Thousand Parsec website. Thousand Parsec has grown significantly since the initial time the website was designed.
 
 ----
+----
+----
 * Getting Started
 *: Section covers similar to http://www.thousandparsec.net/tp/gettingstarted.php included from the subsections.
 ** FAQ
