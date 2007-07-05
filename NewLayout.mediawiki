@@ -1,5 +1,6 @@
 This is a proposal for the new layout for the Thousand Parsec website. Thousand Parsec has grown significantly since the initial time the website was designed.
 
+The website will use fly out menu's for the section but will be still be able to get to all pages without using them (just a few more clicks).
 ----
 ----
 ----
@@ -47,15 +48,16 @@ This is a proposal for the new layout for the Thousand Parsec website. Thousand 
 *** Getting Started
 *** Download
 ----
-* Rulesets
+* Utilities
+** tpsai-py
+** tpruledev
+----
+* Different Games (Rulesets)
 ** MiniSec
 ** MTSec
 ** RFTS Clone
 ** TIM Trader
 ** Creating your own
-* Utilities
-** tpsai-py
-** tpruledev
 ----
 * Communicate (can you think of a better name?)
 ** IRC
@@ -65,6 +67,7 @@ This is a proposal for the new layout for the Thousand Parsec website. Thousand 
 *** Archives
 ----
 * Links
+*: Links to various other projects.
 ----
 * Developing
 ** Code Access
