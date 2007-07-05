@@ -1,0 +1,42 @@
+This is a proposal for the new layout for the Thousand Parsec website. Thousand Parsec has grown significantly since the initial time the website was designed.
+
+* Getting Started
+Section covers what to download and where to get it.
+** FAQ
+* News
+* Clients
+** Screenshots (included from various subsections)
+** Download (include from various subsections)
+**
+** tpclient-pywx
+*** Screenshots
+*** Download
+** galaxie
+*** Screenshots
+*** Download
+** parsek
+*** Screenshots
+*** Download
+** tpclient-pyweb
+*** Screenshots
+*** Download
+* Servers
+** tpserver-py
+** tpserver-cpp
+* Utilities
+** tpsai-py
+** tpruledev
+
+* Communicate (can you think of a better name?)
+** IRC
+*** 
+*** Logs
+** Mailing List
+*** Archives
+* Links
+* Developing
+** Code Access
+*** Git Access
+*** CVS gateway
+*** Nightly Tarballs
+*** GitWeb
