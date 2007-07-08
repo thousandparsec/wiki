@@ -1,9 +1,24 @@
 This is a proposal for the new layout for the Thousand Parsec website. Thousand Parsec has grown significantly since the initial time the website was designed.
 
 The website will use fly out menu's for the section but will be still be able to get to all pages without using them (just a few more clicks).
-----
-----
-----
+
+So the buttons across the top would be:
+* Getting Started
+* News
+* Playing Games
+* Running Games
+* Utilities
+* Different Games
+* Communicate
+* Links
+* Developing
+
+:''(Correct? --[[User:Lee Begg|Lee Begg]] 07:45, 8 July 2007 (EDT))''
+
+:''(Which page will be the default? Can we have one that actually says what TP is? --[[User:Lee Begg|Lee Begg]] 07:45, 8 July 2007 (EDT))''
+
+== Full Site Map ==
+
 * Getting Started
 *: Section covers similar to http://www.thousandparsec.net/tp/gettingstarted.php included from the subsections.
 ** FAQ
