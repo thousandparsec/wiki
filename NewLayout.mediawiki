@@ -18,6 +18,7 @@ Initial starting page would be the News page, it would have a similar banner acr
 
 :''(Which page will be the default? Can we have one that actually says what TP is? --[[User:Lee Begg|Lee Begg]] 07:45, 8 July 2007 (EDT))''
 :''(The screenshot page is the page people go to first, maybe we need to put it up at top too? --[[User:Mithro|Mithro]])''
+:''(I think we need more than that on the default page, at least getting the main points (4x, framework, open source, etc). That banner would be fine for the screenshots page though. --[[User:Lee Begg|Lee Begg]] 08:39, 8 July 2007 (EDT))''
 
 == Full Site Map ==
 
