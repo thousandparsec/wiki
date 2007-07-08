@@ -4,9 +4,11 @@ For the background on this, such as where does the media come from, see [[Media.
 
 == The problem ==
 
-The server has no way of knowing what each piece of media looks like, and what it should be associated with in game. Therefore client's can not rely on the media being an accurate reflection of the object.
+The server has no way of knowing what each piece of media looks like, and what it should be associated with in game. Therefore ''currently'' users cannot rely on the media being an accurate reflection of the object.
 
-For example: The colour and size of a planet has a bearing on if the player perceives it as having a breathable for his colonists and how much land area there is. If the server tells the player the wrong media, with the wrong size and colour, then the player might mistake "quality" of the planet, bypassing it or colonising it despite its bad qualities.
+''' This is a server side issue. ''' ''The client will always fetch and use media as told by the server.''
+
+''For example:'' The colour and size of a planet has a bearing on if the player perceives it as having a breathable for his colonists and how much land area there is. If the server tells the player the wrong media, with the wrong size and colour, then the player might mistake "quality" of the planet, bypassing it or colonising it despite its bad qualities.
 
 == Obvious suggestions ==
 
