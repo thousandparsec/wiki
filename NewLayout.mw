@@ -6,20 +6,23 @@ So the buttons across the top would be:
 * Getting Started
 * News
 * Playing Games
-* Running Games
+* Running Games (maybe Hosting Games?)
 * Utilities
 * Different Games
 * Communicate
 * Links
-* Developing
+* Developing (maybe Contributing?)
 
 Initial starting page would be the News page, it would have a similar banner across the top to the current one,
  Don't know what Thousand Parsec is or want more information? Start Here
 
 :''(Which page will be the default? Can we have one that actually says what TP is? --[[User:Lee Begg|Lee Begg]] 07:45, 8 July 2007 (EDT))''
-:''(The screenshot page is the page people go to first, maybe we need to put it up at top too? --[[User:Mithro|Mithro]])''
-:''(I think we need more than that on the default page, at least getting the main points (4x, framework, open source, etc). That banner would be fine for the screenshots page though. --[[User:Lee Begg|Lee Begg]] 08:39, 8 July 2007 (EDT))''
-:''(There are two types of people entering the website, new users and current users. New users only need to read the 'About' once. Hence the 'default' page should target current users. The default page needs to keep people interested and show new users that the project is active. --[[User:Mithro|Mithro]])''
+::''(The screenshot page is the page people go to first, maybe we need to put it up at top too? --[[User:Mithro|Mithro]])''
+::''(I think we need more than that on the default page, at least getting the main points (4x, framework, open source, etc). That banner would be fine for the screenshots page though. --[[User:Lee Begg|Lee Begg]] 08:39, 8 July 2007 (EDT))''
+::''(There are two types of people entering the website, new users and current users. New users only need to read the 'About' once. Hence the 'default' page should target current users. The default page needs to keep people interested and show new users that the project is active. --[[User:Mithro|Mithro]])''
+::''(I think the news page should be the default, but there should be a short (one sentence or two) mission statement, description at the very top, right above news --[[User:JLP|JLP]] 13:28, 8 July 2007 (EDT))''
+
+:''(Why Contributor instead of Developer: I think that the word developer for many people directly means programmer. But there are more ways in which you can contribute - making artwork, translations, bug reports, user support... And I think that the word contributor better represents different stuff you can do. --[[User:JLP|JLP]] 13:28, 8 July 2007 (EDT))''
 
 
 == Full Site Map ==
@@ -88,6 +91,7 @@ Initial starting page would be the News page, it would have a similar banner acr
 *** Logs
 ** Mailing List
 *** Archives
+** Forums (some, mostly younger, people prefer forums over mailing lists)
 ----
 * Links
 *: Links to various other projects.
