@@ -62,7 +62,7 @@ The website will use fly out menu's for the section but will be still be able to
 ----
 * Communicate (can you think of a better name?)
 ** IRC
-*** 
+*** Connection details?
 *** Logs
 ** Mailing List
 *** Archives
@@ -85,9 +85,11 @@ The website will use fly out menu's for the section but will be still be able to
 **** PHP
 *** Other Libraries
 **** Python
+**** libtprl
 ** Specifications
 *** Protocol
 *** File Formats
 ***: Describes various file formats used by Thousand Parsec
+**** Protocol XML
 **** Media.gz
 **** BattleXML
