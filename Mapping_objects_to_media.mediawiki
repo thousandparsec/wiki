@@ -11,8 +11,8 @@ For example: The colour and size of a planet has a bearing on if the player perc
 == Obvious suggestions ==
 
 The first thing would be to allow each ruleset to set the media, but this has two draw backs.
-1. Difficult to program, many parameters to single media.
-2. Fixed media layout and names, can not add more types of planets for example.
+# Difficult to program, many parameters to single media.
+# Fixed media layout and names, can not add more types of planets for example.
 
 The next suggestion also runs into number 1 above. The use of a file to map from a collection of parameters to media.
 
