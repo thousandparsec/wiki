@@ -1,4 +1,4 @@
-A ruleset is a description of the rules which make up a game.
+At the beginning of each turn a server has to execute orders from players and compute the new status of objects. Rulesets define, inside boundaries of the protocol, what are the properties of the universe and objects in it, how do they behave and interact. Victory conditions are also part of the ruleset.
 
 Links to ruleset designs in progress.
 * [[Traders]]
