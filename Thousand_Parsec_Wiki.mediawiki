@@ -1,9 +1,5 @@
-Thousand Parsec wiki for highly dynamic pages.
-
-[[FAQ]] - Where the FAQ will end up.
-
-= [[Rulesets]] =
-{{:Rulesets}}
+= [[Overview]] =
+{{:Overview}}
 
 = Artwork pages =
 
@@ -23,3 +19,4 @@ Until they get sorted, other pages can be linked from here:
 * [[4X on Blogs]]
 * [[Protocol]]
 * [[NewLayout]] of website
+* [[FAQ]] - Where the FAQ will end up.
