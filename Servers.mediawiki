@@ -1,0 +1,1 @@
+Games that people play are hosted on computers which are running special programs which are called game servers. To be able to provide various types of game-play each server can load separate modules, each containing different set of rules.
