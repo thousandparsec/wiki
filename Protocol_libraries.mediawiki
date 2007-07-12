@@ -1,0 +1,1 @@
+Once you have a protocol defined you need some code, which implements various objects from the protocol. You also need some functions to handle these objects and various information. For example how to get planet properties and how to pack data for transmission over the internet. This code is usually contained in a protocol library, which can then be used by clients and servers.
