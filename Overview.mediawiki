@@ -1,4 +1,4 @@
-Thousand Parsec project could be divided into several parts. This is a quick overview of them, to help you find a way around the project and see how it all fits together.
+[http://www.thousandparsec.net/tp/ Thousand Parsec] project could be divided into several parts. This is a quick overview of them, to help you find a way around the project and see how it all fits together.
 
 == [[Protocol]] ==
 
