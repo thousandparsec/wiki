@@ -1,1 +1,12 @@
 Games that people play are hosted on computers which are running special programs which are called game servers. To be able to provide various types of game-play each server can load separate modules, each containing different set of rules.
+
+== Available servers ==
+
+{| border="1"
+|-
+! Name !! Maintainer !! Language !! Code !! Status
+|-
+| [[tpserver-cpp]] || Lee Begg (llnz) || C++ || [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpserver-cpp.git;a=summary Git] ||
+|-
+| [[tpserver-py]] || Tim Ansell (mithro) || Python || [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpserver-cpp.git;a=summary Git] ||
+|}
