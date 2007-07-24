@@ -1,0 +1,21 @@
+[http://www.thousandparsec.net/tp/ Thousand Parsec] is a project which consists of several components. See the [[Overview]] document, to see which ones are there and how do they fit together. You can work on any one of the components, whichever interests you the most. Of course you can also work on several components.
+
+== Source code ==
+
+Access to source code of Thousand Parsec components is available through [http://git.or.cz/ Git] version control system. It enables a developer to download a copy of the source code to his own hard drive, modify the code and upload the changes back to central repository. Git keeps track of all the changes to the source code. For details see [[Working with Git]].
+
+== Bug tracking ==
+
+Every project has bugs. When we say bugs we don't mean only defects in software. Requests for new features are also tracked as bugs. So are errors on web pages and suggestions for improvements. Thousand Parsec uses the [http://sourceforge.net/tracker/?group_id=132078&atid=723099 Bugs Tracker] service from [http://sourceforge.net/ SourceForge.net] to handle bugs. To let us know what needs fixing, what we could improve or add first read the [[Reporting bugs]] page and then start filing bug reports.
+
+== Submitting patches ==
+
+Maybe you have seen some bug report in our bug tracker and fixed the problem or added a new feature. Of course you would like the new code to be added to Thousand Parsec and available to everyone. Before you [[Becoming a regular developer|become a regular Thousand Parsec developer]] the best way is to [[Sending patches by e-mail|send patches by e-mail]]. When you become a regular developer you will be [[Working with Git|using Git]] to submit patches directly to Thousand Parsec source code repository.
+
+== Communication ==
+
+Developers come from all over the world, so we use the internet to talk to each other. For a quick chat we use IRC. You can join us in the channel [irc://chat.freenode.net/#tp #tp on Freenode.net]. We keep a [http://www.thousandparsec.net/~irc/logs/ log of IRC conversations], so we can refer to it if we need to refresh our memory. For longer and more structured discussions we use [http://www.thousandparsec.net/tp/mailman.php/listinfo/ mailing lists] or forums. They are connected so it is enough to only post in one of them.
+
+== Wiki ==
+
+Development documentation often changes frequently so we have set up a Wiki to help us work more efficiently with dynamic content like this. We are using the standard [http://www.mediawiki.org/ MediaWiki] software to run our Wiki. This means that you can edit our Wiki in the same way as you can edit Wikipedia. If you have never done this before you are encouraged to read more about [http://meta.wikimedia.org/wiki/Help:Editing editing Wiki pages].
