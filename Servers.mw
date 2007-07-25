@@ -4,7 +4,7 @@ Games that people play are hosted on computers which are running special program
 
 {| border="1"
 |-
-! Name !! Maintainer !! Language !! Code !! Status
+! Name !! Maintainer !! Language !! Code !! Notes
 |-
 | [[tpserver-cpp]] || Lee Begg (llnz) || C++ || [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpserver-cpp.git;a=summary Git] ||
 |-
