@@ -97,7 +97,7 @@ Initial starting page would be the News page, it would have a similar banner acr
 * Links
 *: Links to various other projects.
 ----
-* Developing
+* Developing (an example [[Getting started with development]] page)
 ** Code Access
 *** Git Access
 *** CVS gateway
