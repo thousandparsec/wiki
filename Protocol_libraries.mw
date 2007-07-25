@@ -3,7 +3,6 @@ Once you have a protocol defined you need some code, which implements various ob
 == Available libraries ==
 
 {| border="1"
-|+ 2D clients
 |-
 ! Name !! Maintainer !! Language !! Code !! Notes
 |-
