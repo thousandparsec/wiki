@@ -25,3 +25,6 @@ Below is a list of links to searches for 4X games related blog posts. We should 
 == Interesting posts ==
 
 (2007-05-08) [http://selfdeprecatingjournalism.blogspot.com/2007/05/galactic-civilisation-2-war-report-and.html Galactic Civilisation 2 War Report and 4X Game Issues] - Talks about problems with managing large empires and how AI has advantage here. It has a nice idea about how user could build fleets more easily and it tells a bit how Galactic Civilisation II has build queues sorted out. At the end there are some videos embedded, which show how Galactic Civilisations II team was debugging AI.
+
+(2007-07-27)
+[http://www.gamasutra.com/view/feature/1535/designing_ai_algorithms_for_.php Designing AI Algorithms For Turn-Based Strategy Games] - How to make the AI's attack and defense strategy to appear intelligent and thought out, providing a challenge but letting the player win in the end. Examples are based on a 4X game.
