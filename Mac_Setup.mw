@@ -60,4 +60,14 @@ pythonw requirements.py
 pythonw tpclient-pywx
 </pre>
 
-** WARNING: Make sure the pythonw you are running is the one you installed above (you may need to modify your path). **
+'''WARNING: Make sure the pythonw you are running is the one you installed above (you may need to modify your path). '''
+
+To check you are running the correct python do something like this
+<pre>
+# You are looking for the version 2.5 and not 2.4 or 2.3
+pythonw
+Python 2.5.1 (r251:54863, Jul 17 2007, 15:55:37) 
+[GCC 4.1.3 20070629 (prerelease) (Ubuntu 4.1.2-13ubuntu2)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+</pre>
