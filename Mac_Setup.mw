@@ -2,7 +2,7 @@ These instructions are to setup your development environment. Things which are r
         
 You need the following binaries which can be found at [http://pythonmac.org/packages/py25-fat/index.html here]
 
-== Packages need by both versions ==
+= Packages needed =
         
 * '''Python''' (the Python which ships with Mac OS X is horribly broken) - [http://pythonmac.org/packages/py25-fat/dmg/python-2.5-macosx.dmg here]
         
@@ -10,11 +10,11 @@ You need the following binaries which can be found at [http://pythonmac.org/pack
         
 * '''wxPython''' - [http://pythonmac.org/packages/py25-fat/dmg/wxPython2.8-osx-unicode-2.8.3.0-universal10.4-py2.5.dmg here]
 
-== Packages needed only by the stable version ==
+=== Packages needed only by the stable version ===
 
 * '''Numeric''' - [http://pythonmac.org/packages/py25-fat/dmg/Numeric-24.2-py2.5-macosx10.4.dmg here]
 
-== Packages needed only by the development version ==
+=== Packages needed only by the development version ===
         
 * '''numpy''' - [http://pythonmac.org/packages/py25-fat/mpkg/numpy-1.0.3-py2.5-macosx10.4.mpkg.zip here]
         
@@ -24,11 +24,11 @@ You need the following binaries which can be found at [http://pythonmac.org/pack
 
 * py2app (for creating packages) - [http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html here]
 
-== Getting the code ==
+= Getting the code =
 
 You will then need to install "cogito" ([http://www.dpompa.com/git-1.5.2.2.dmg here]) and run the following
 
-(For stable)
+== For stable version ==
 <pre>
 cg-clone git://git.thousandparsec.net/git/scratchpad.git
 cg-clone git://git.thousandparsec.net/git/libtpproto-py.git
@@ -48,7 +48,7 @@ pythonw requirements.py
 pythonw tpclient-pywx
 </pre>
 
-(For development)
+== For development version ==
 <pre>
 cg-clone git://git.thousandparsec.net/git/scratchpad.git
 cg-clone git://git.thousandparsec.net/git/libtpproto-py.git
@@ -67,6 +67,8 @@ pythonw requirements.py
 # Now run the client!
 pythonw tpclient-pywx
 </pre>
+
+== WARNING ==
 
 '''WARNING: Make sure the pythonw you are running is the one you installed above (you may need to modify your path). '''
 
