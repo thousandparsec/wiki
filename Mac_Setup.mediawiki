@@ -1,22 +1,30 @@
 These instructions are to setup your development environment. Things which are required to be downloaded are in '''BOLD'''.
         
 You need the following binaries which can be found at [http://pythonmac.org/packages/py25-fat/index.html here]
+
+== Packages need by both versions ==
         
 * '''Python''' (the Python which ships with Mac OS X is horribly broken) - [http://pythonmac.org/packages/py25-fat/dmg/python-2.5-macosx.dmg here]
-        
-* '''Numeric''' (for stable tpclient-pywx version) - [http://pythonmac.org/packages/py25-fat/dmg/Numeric-24.2-py2.5-macosx10.4.dmg here]
-        
-* '''numpy''' (for development tpclient-pywx version) - [http://pythonmac.org/packages/py25-fat/mpkg/numpy-1.0.3-py2.5-macosx10.4.mpkg.zip here]
         
 * '''PIL''' - [http://pythonmac.org/packages/py25-fat/dmg/PIL-1.1.6-py2.5-macosx10.4-2007-05-18.dmg here]
         
 * '''wxPython''' - [http://pythonmac.org/packages/py25-fat/dmg/wxPython2.8-osx-unicode-2.8.3.0-universal10.4-py2.5.dmg here]
 
-* PyGame (for development tpclient-pywx version) - [http://???/ none known]
+== Packages needed only by the stable version ==
 
-* pybonjour (for development tpclient-pywx version) - [http://o2s.csail.mit.edu/o2s-wiki/pybonjour here]
+* '''Numeric''' - [http://pythonmac.org/packages/py25-fat/dmg/Numeric-24.2-py2.5-macosx10.4.dmg here]
 
-* py2app (for creating packages)  - [http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html here]
+== Packages needed only by the development version ==
+        
+* '''numpy''' - [http://pythonmac.org/packages/py25-fat/mpkg/numpy-1.0.3-py2.5-macosx10.4.mpkg.zip here]
+        
+* PyGame - [http://???/ none known]
+
+* pybonjour - [http://o2s.csail.mit.edu/o2s-wiki/pybonjour here]
+
+* py2app (for creating packages) - [http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html here]
+
+== Getting the code ==
 
 You will then need to install "cogito" ([http://www.dpompa.com/git-1.5.2.2.dmg here]) and run the following
 
