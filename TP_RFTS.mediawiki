@@ -17,6 +17,8 @@ The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
 
 * <u>Industry</u> -  determines the max number of ships you can order.
 
+* <u>Population</u> - the population of the planet.
+
 * <u>Social Env.</u> - determines population growth. If less than 40 the population decreases, greater, it increases. Uninhabited planets have a social env of zero. The social env will be effected by the planetary env. as well as any possible riots, natural disasters, and warfare.
 
 * <u>Planetary Env.</u> - strongly influences social env, and thus indirectly production and population growth. Building up planetary env should be considered of greater value in the long run than continual investment in social env. Planetary env is also effected by riots, natural disasters, and warfare.
