@@ -16,8 +16,9 @@ Pages describing aspects surrounding media.
 
 Pages which describe how to do something specific.
 
+* [[Ubuntu Setup|Setting up tpclient-pywx development environment on Ubuntu]] 
 * [[Mac Setup|Setting up tpclient-pywx development environment on Mac OS X]] 
-* [[Win Setup|Setting up tpclient-pywx development environment on Windows]] 
+* [[Win Setup|Setting up tpclient-pywx development environment on Windows]]
 
 = Other pages =
 
