@@ -22,6 +22,9 @@ You need the following binaries which can be found at various places on the Inte
 
 * py2exe (for creating packages) - [http://downloads.sourceforge.net/py2exe/py2exe-0.6.6.win32-py2.5.exe here]
 
+
+Non-Python packages which are needed:
+
 * NSIS (for creating installable packages) - [http://downloads.sourceforge.net/nsis/nsis-2.29-setup.exe here]
 
 * upx (for compressing the packages to a decent size) - [http://upx.sourceforge.net/download/upx301w.zip here]
