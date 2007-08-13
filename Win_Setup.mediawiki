@@ -1,0 +1,75 @@
+These instructions are to setup your development environment. Things which are required to be downloaded are in '''BOLD'''.
+        
+You need the following binaries which can be found at various places on the Internet. Make sure that if you always get the a version of packages which matches your Python version.
+
+= Packages needed =
+        
+* '''Python''' - [http://www.python.org/ftp/python/2.5.1/python-2.5.1.msi here]
+        
+* '''PIL''' - [ here]
+        
+* '''wxPython''' - [http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.4.2-py25.exe here] (you probably want the [http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-docs-demos-2.8.4.2.exe doco] too).
+
+=== Packages needed only by the stable version ===
+
+* '''Numeric''' - [http://rene.f0o.com/%7Erene/stuff/Numeric-24.2.win32-py2.5.exe here]
+
+=== Packages needed only by the development version ===
+        
+* '''numpy''' - [http://downloads.sourceforge.net/numpy/numpy-1.0.3.win32-py2.5.exe here]
+
+* PyGame - [http://www.pygame.org/ftp/pygame-1.7.1release.win32-py2.5.exe here]
+
+* py2exe (for creating packages) - [http://downloads.sourceforge.net/py2exe/py2exe-0.6.6.win32-py2.5.exe here]
+
+* NSIS (for creating installable packages) - [http://downloads.sourceforge.net/nsis/nsis-2.29-setup.exe here]
+
+* upx (for compressing the packages to a decent size) - [http://upx.sourceforge.net/download/upx301w.zip here]
+
+= Getting the code =
+
+You will then need to install a CVS client, I suggest "[http://downloads.sourceforge.net/tortoisecvs/TortoiseCVS-1.8.31.exe Tortoise CVS]".
+
+== For stable version ==
+Use our CVS client to clone the following code repositories,
+<pre>
+cvs://:pserver:anonymous@git.thousandparsec.net:/git/scratchpad.git
+cvs://:pserver:anonymous@git.thousandparsec.net:/git/libtpproto-py.git
+cvs://:pserver:anonymous@git.thousandparsec.net:/git/libtpclient-py.git
+cvs://:pserver:anonymous@git.thousandparsec.net:/git/tpclient-pywx.git
+</pre>
+
+Start up a command line and run the following
+<pre>
+rem Installing ez setup
+cd scratchpad
+python ez_setup.py
+cd ..
+
+rem Installing libtpproto-py in develop mode
+cd libtpproto-py
+python setup.py develop
+cd ..
+
+rem Installing libtpclient-py in develop mode
+cd libtpclient-py
+python setup.py develop
+cd ..
+
+rem Check all the requirements are satisified
+cd tpclient-pywx
+pythonw requirements.py
+
+rem Now run the client!
+pythonw tpclient-pywx
+</pre>
+
+== For development version ==
+<pre>
+cvs://:pserver:anonymous@git.thousandparsec.net:/git/scratchpad.git
+cvs://:pserver:anonymous@git.thousandparsec.net:/git/libtpproto-py.git
+cvs://:pserver:anonymous@git.thousandparsec.net:/git/libtpclient-py.git#development
+cvs://:pserver:anonymous@git.thousandparsec.net:/git/tpclient-pywx.git#development
+</pre>
+
+Then follow the instructions for installing the stable version.
