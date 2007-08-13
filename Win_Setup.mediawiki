@@ -6,7 +6,7 @@ You need the following binaries which can be found at various places on the Inte
         
 * '''Python''' - [http://www.python.org/ftp/python/2.5.1/python-2.5.1.msi here]
         
-* '''PIL''' - [ here]
+* '''PIL''' - [http://effbot.org/downloads/PIL-1.1.6.win32-py2.5.exe here]
         
 * '''wxPython''' - [http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.4.2-py25.exe here] (you probably want the [http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-docs-demos-2.8.4.2.exe doco] too).
 
