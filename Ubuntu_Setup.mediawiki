@@ -3,21 +3,21 @@ These instructions are to setup your development environment.
 = Packages needed =
 
 <pre>
-apt-get install python python-wxgtk2.8 python-imaging python-psyco python-pyopenssl python-gconf
+apt-get install <b>python python-wxgtk2.8 python-imaging</b> python-psyco python-pyopenssl python-gconf
 </pre>
 
 === Packages needed only by the stable version ===
 
 <pre>
-apt-get install python-numeric python-numeric-ext 
+apt-get install <b>python-numeric python-numeric-ext</b>
 </pre>
 
 === Packages needed only by the development version ===
 
 <pre>
-apt-get install python-numpy python-numpy-ext python-pygame python-avahi avahi-daemon
+apt-get install <b>python-numpy python-numpy-ext</b> python-pygame python-avahi avahi-daemon
 </pre>
-        
+
 = Getting the code =
 
 You will then need to install "cogito" (<tt>apt-get install cogito</tt>) and run the following
