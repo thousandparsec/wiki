@@ -12,6 +12,13 @@ Pages describing aspects surrounding media.
 * [[Media.gz]]
 * Thoughts on [[Mapping objects to media]] in the server
 
+= How To pages =
+
+Pages which describe how to do something specific.
+
+* [[Mac Setup|Setting up tpclient-pywx development environment on Mac OS X]] 
+* [[Win Setup|Setting up tpclient-pywx development environment on Windows]] 
+
 = Other pages =
 
 Until they get sorted, other pages can be linked from here:
