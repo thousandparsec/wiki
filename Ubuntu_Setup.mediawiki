@@ -1,0 +1,63 @@
+These instructions are to setup your development environment. 
+
+= Packages needed =
+
+<pre>
+apt-get install python python-wxgtk2.8 python-imaging python-psyco python-pyopenssl python-gconf
+</pre>
+
+=== Packages needed only by the stable version ===
+
+<pre>
+apt-get install python-numeric python-numeric-ext 
+</pre>
+
+=== Packages needed only by the development version ===
+
+<pre>
+apt-get install python-numpy python-numpy-ext python-pygame python-avahi avahi-daemon
+</pre>
+        
+= Getting the code =
+
+You will then need to install "cogito" (<tt>apt-get install cogito</tt>) and run the following
+
+== For stable version ==
+<pre>
+cg-clone git://git.thousandparsec.net/git/scratchpad.git
+cg-clone git://git.thousandparsec.net/git/libtpproto-py.git
+cg-clone git://git.thousandparsec.net/git/libtpclient-py.git
+cg-clone git://git.thousandparsec.net/git/tpclient-pywx.git
+
+# Setup various links
+cd scratchpad
+./setup.sh
+cd ..
+
+# Check all the requirements are satisified
+cd tpclient-pywx
+pythonw requirements.py
+
+# Now run the client!
+pythonw tpclient-pywx
+</pre>
+
+== For development version ==
+<pre>
+cg-clone git://git.thousandparsec.net/git/scratchpad.git
+cg-clone git://git.thousandparsec.net/git/libtpproto-py.git
+cg-clone git://git.thousandparsec.net/git/libtpclient-py.git#development libtpclient-py-dev
+cg-clone git://git.thousandparsec.net/git/tpclient-pywx.git#development tpclient-pywx-dev
+
+# Setup various links
+cd scratchpad
+./setup.sh
+cd ..
+
+# Check all the requirements are satisified
+cd tpclient-pywx
+pythonw requirements.py
+
+# Now run the client!
+pythonw tpclient-pywx
+</pre>
