@@ -100,9 +100,9 @@ If you only have git installed,
 git clone git://git.thousandparsec.net/git/scratchpad.git
 git clone git://git.thousandparsec.net/git/libtpproto-py.git
 git clone git://git.thousandparsec.net/git/libtpclient-py.git libtpclient-py-dev
-cd libtpclient-py-dev; git checkout -b master origin/development; cd ..
+cd libtpclient-py-dev; git checkout -b development origin/development; cd ..
 git clone git://git.thousandparsec.net/git/tpclient-pywx.git tpclient-pywx-dev
-cd tpclient-pywx-dev; git checkout -b master origin/development; cd ..
+cd tpclient-pywx-dev; git checkout -b development origin/development; cd ..
 
 # Setup various links
 cd scratchpad
