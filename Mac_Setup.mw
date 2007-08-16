@@ -91,7 +91,7 @@ cd tpclient-pywx
 pythonw requirements.py
 
 # Now run the client!
-pythonw tpclient-pywx
+pythonw tpclient-pywx-dev
 </pre>
 
 If you only have git installed,
