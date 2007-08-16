@@ -108,7 +108,7 @@ cd scratchpad
 cd ..
 
 # Check all the requirements are satisified
-cd tpclient-pywx
+cd tpclient-pywx-dev
 pythonw requirements.py
 
 # Now run the client!
