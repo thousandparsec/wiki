@@ -87,11 +87,11 @@ cd scratchpad
 cd ..
 
 # Check all the requirements are satisified
-cd tpclient-pywx
+cd tpclient-pywx-dev
 pythonw requirements.py
 
 # Now run the client!
-pythonw tpclient-pywx-dev
+pythonw tpclient-pywx
 </pre>
 
 If you only have git installed,
