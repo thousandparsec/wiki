@@ -97,7 +97,3 @@ RFTS, being an older game only supported multiplayer though hot-seat and play-by
 * wrapping map - this is not currently supported by TP, although a fix / work around may be implemented
 * withdraws - RFTS supports withdrawing ships from combat after a battle; TP RFTS current lacks support for this, and implementation is pending
 * RFTS has many advanced rules, it is likely that TP RFTS will simplify some of these and incorporate some of the advanced rules into a standard game
-
-
-== To-Add ==
-* Movement (costs)
