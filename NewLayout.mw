@@ -116,3 +116,10 @@ Initial starting page would be the News page, it would have a similar banner acr
 **** Protocol XML
 **** Media.gz
 **** BattleXML
+
+
+== Where is the code ==
+The code for the new page is in the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=web.git;a=shortlog;h=reorg web#reorg] branch in the Git.
+
+== Where is the test page ==
+Until the reorganistion is complete you can see the page at [http://test.thousandparsec.net/tp/ test.thousandparsec.net]
