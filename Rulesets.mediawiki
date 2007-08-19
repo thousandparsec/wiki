@@ -6,7 +6,7 @@ Links to ruleset designs in progress.
 * [[TP RFTS|RFTS Clone]]
 * [[Codename Elvis]]
 
-=== Milestone rulesets ===
+==== Milestone rulesets ====
 
 Milestone rulesets are special rulesets designed to exercise certain features of Thousand Parsec.
 
