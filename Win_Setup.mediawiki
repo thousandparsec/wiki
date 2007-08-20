@@ -34,7 +34,7 @@ Non-Python packages which are needed:
 You will then need to install a CVS client, I suggest "[http://downloads.sourceforge.net/tortoisecvs/TortoiseCVS-1.8.31.exe Tortoise CVS]".
 
 == For stable version ==
-Use our CVS client to clone the following code repositories,
+Use your CVS client to clone the following code repositories,
 <pre>
 cvs://:pserver:anonymous@git.thousandparsec.net:/git/scratchpad.git
 cvs://:pserver:anonymous@git.thousandparsec.net:/git/libtpproto-py.git
