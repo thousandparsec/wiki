@@ -1,6 +1,8 @@
 <pre>
 [ ] - Tag GIT tree
 [ ] - Create source tarball
+     [ ] - Remove debian directory
+
 [ ] - Create binary packages
      [ ] - Create Windows .exe installer
      [ ] - Create Mac OS X DMG
