@@ -2,7 +2,7 @@ media.gz is a file which the client can download from a media server to get deta
 
 The file is a gziped plain text file with the format as specified below,
 <pre>
-<filename> <last modtime> <size> <checksum type>-<checksum>"
+<filename> <last modtime> <size> <checksum type>-<checksum>
 </pre>
 
 * The size is in bytes.
