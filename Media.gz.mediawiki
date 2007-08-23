@@ -1,4 +1,4 @@
-media.gz is a file which the client can download from a media server to get details about what is available. It will always be found off the base url of the server.
+Media.gz is a file which the client can download from a media server to get details about what is available. It will always be found off the base url of the server.
 
 The file is a gziped plain text file with the format as specified below,
 <pre>
@@ -11,7 +11,7 @@ The file is a gziped plain text file with the format as specified below,
 * Checksum type can be, md5 or sha1, other hash formats may be supported in the future.
 * Checksum is a hexdump of the checksum for the file (IE How we normally view MD5 sums, 6afb6b9187f5aa5d4168ae71fb3f27b0).
 
-The filename for every media file type on the server should be included. An example media.gz is included below,
+The filename for every media file type on the server should be included. An example Media.gz is included below,
 
 <pre>
 planets/planet1.gif 20070102T2053 253123 md5:6afb6b9187f5aa5d4168ae71fb3f27b0
@@ -37,7 +37,7 @@ http://media.thousandparsec.net/media/planets/planet1.mng
 <pre>
 Format for media repositories are the following,
 
-media-new.gz
+Media-new.gz
 directory1/mediafile.png
 directory1/mediafile.mesh
 
@@ -45,7 +45,7 @@ All media which is the same but in a different format must have the same
 basename. See the above example where the file "mediafile" is avaliable in 
 both png and mesh format.
 
-The MEDIA is a compressed text file which describes all the media 
+The Media-new.gz is a compressed text file which describes all the media 
 avaliable on the server and some metadata about it.
 It has the following format
 <media file> <last modtime YYYYMMddThhmm> <filesize bytes> <checksumtype>:<checksum>
@@ -82,18 +82,17 @@ In package B might have,
 
 The media.gz can then be generated with a script kind of like,
 
-echo > media-new.gz
+echo > Media-new.gz
 for $i in `find -name *.meta`; do
- echo `basename $i .meta` `cat $i` >> media-new.gz
+ echo `basename $i .meta` `cat $i` >> Media-new.gz
 done
 
 When a new media is avaliable it will be downloaded to the local 
 users home directory.
 
-~/.tp/media/http---media.thousandparsec.net-80-client/media-new.gz
+~/.tp/media/http---media.thousandparsec.net-80-client/Media-new.gz
 ~/.tp/media/http---media.thousandparsec.net-80-client/directory1/mediafile.png
-~/.tp/media/http---media.thousandparsec.net-80-client/directory1/mediafile.png.meta
-~/.tp/media/ftp---someotherplace.net-21-pub/media-new.gz
+~/.tp/media/ftp---someotherplace.net-21-pub/Media-new.gz
 
 If a media file is found in the distribution search locations that is the 
 same or newer then the users version. The users version should be removed.
