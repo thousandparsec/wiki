@@ -1,6 +1,34 @@
-Media.gz is a file which the client can download from a media server to get details about what is available. It will always be found off the base url of the server.
+'''Media.gz''' is a file which the client can download from a media server to get details about what is available. It will always be found off the base url of the server. This page also deals with media caching and use issues.
 
-The file is a gziped plain text file with the format as specified below,
+Features of this specification include:
+* Compressed media collection metadata file
+* Individual media metadata files
+* Clients able to choose from multiple types of media when available
+* Method for client independent downloaded media caching
+* Method for system wide media packaging
+* Multiple hash types
+* Last modtime in metadata files
+
+== How to Use ==
+The server gives a base URL for the media. When this URL is appended with "Media.gz", the Media.gz file will be present. Clients download this file and it describes the media available on the media server (ie, at the URL). If the base URL is http://media.thousandparsec.net/media/, then the Media.gz file will be at http://media.thousandparsec.net/media/Media.gz.
+
+Thousand Servers will not give full URLs for the media to be used, instead it will give a URL leaving out the media extension. It is up to the client to choose the file type that is requires.
+
+For example,
+<pre>
+Server's base url:  http://media.thousandparsec.net/media/
+Object's media url: planets/planet1
+</pre>
+
+If the client supported mng and the file is present in the Media.gz file, it could download
+<pre>
+http://media.thousandparsec.net/media/planets/planet1.mng
+</pre>
+
+The different types of media will be present in the Media.gz file, so the client can choose from them.
+
+== Media.gz Format ==
+The Media.gz file is a gziped compressed plain text (UTF-8) file. Each line has the format of one of the two lines below,
 <pre>
 <filename> <last modtime> <size> <checksum type>:<checksum>
 <filename> <last modtime> <size> <checksum type 1>:<checksum 1>,<checksum type 2>:<checksum 2>
@@ -19,81 +47,95 @@ planets/planet1.png 20070305T2116 42527 md5:d41d8cd98f00b204e9800998ecf8427e
 planets/planet1.mng 20070305T1549 128345 md5:363336bbeb78f404e6926572caed7f49
 </pre>
 
-Thousand Servers will not give full URLs, instead it will give a URL leaving out the media extension. It is up to the client to choose the file type that is requires.
+=== Media.gz and Media-new.gz ===
 
-For example,
+The current stable graphical client expects an older type of Media.gz. Therefore, as of August 2007, the Media.gz file format specified above is for the Media-new.gz. It is hoped that this is a temporary measure and at some point Media.gz will have the documented format. Media-new.gz might have to be a symbolic link until clients have converted back to the Media.gz file.
+
+Everywhere in this document (except for some examples) where Media.gz is used, read it as Media-new.gz.
+
+== Meta file format ==
+When media is downloaded locally (or distributed via packages) a meta file
+is created for each file. This file allows the client to check if the
+graphic is up to date. The line format is the same as for the Media.gz file, but without the path and filename.
+
+The meta file contains,
+
 <pre>
-Server's base url:  http://media.thousandparsec.net/media/
-Object's media url: planets/planet1
+<last modtime YYYYMMddThhmm> <filesize bytes> <checksumtype>:<checksum>
 </pre>
 
-If the client supported mng, it could download the 
+For example:
 <pre>
-http://media.thousandparsec.net/media/planets/planet1.mng
+20060614T0923 1789345 md5:318424ccbd97c644d6baa594284fefe3
 </pre>
 
+The metafile has the same filename as the file it is for with ".meta" added on the end. For example, mediafile.png has a metafile called mediafile.png.meta.
 
-
-<pre>
+== Repository Format ==
 Format for media repositories are the following,
 
-Media-new.gz
+<pre>
+Media.gz
 directory1/mediafile.png
 directory1/mediafile.mesh
+</pre>
 
 All media which is the same but in a different format must have the same 
 basename. See the above example where the file "mediafile" is avaliable in 
 both png and mesh format.
 
-The Media-new.gz is a compressed text file which describes all the media 
-avaliable on the server and some metadata about it.
-It has the following format
-<media file> <last modtime YYYYMMddThhmm> <filesize bytes> <checksumtype>:<checksum>
-directory1/mediafile.png 	20060614T0923 1789345 md5:318424ccbd97c644d6baa594284fefe3
-directory1/mediafile.mesh 	20060614T0923 7623748 md5:1505b14a78c9e5858edd0f044c4e0062
-
+== Local caching and packaging ==
 URLs of media locations are escaped locally using the following system
-re.sub('[^a-zA-Z0-9_]', '-', url)
+<pre>re.sub('[^a-zA-Z0-9_]', '-', url)</pre>
 This means that the url "http://media.thousandparsec.net:80/client"
-would be escape as      "http---media.thousandparsec.net-80-client"
+would be escape as      "http---media.thousandparsec.net-80-client".
 The URL should always be in full format including the port.
 
-When media is downloaded locally (or distributed via packages) a meta file
-is created for each file. This file allows the client to check if the
-graphic is up to date. The meta file contains,
-<last modtime YYYYMMddThhmm> <filesize bytes> <checksumtype>:<checksum>
-20060614T0923 1789345 md5:318424ccbd97c644d6baa594284fefe3
+The client should search for the newest media, starting with the user's cache, then packages on the system.
 
-Media can also be distributed via packages. This should be installed in
-a shared location such as /usr/share/games/tp, a "media-new.gz" should be 
-generated from the .meta files installed in the packages.
+=== User's cache ===
 
-This allows spliting the media from a single URL (say 
-http://media.thousandparsec.net) to be distributed into seperate packages,
-say the 3d and 2d data.
-
-In package A might have,
-/usr/share/games/tp/http---media.thousandparsec.net-80-client/directory1/mediafile.png
-/usr/share/games/tp/http---media.thousandparsec.net-80-client/directory1/mediafile.png.meta
-
-In package B might have,
-/usr/share/games/tp/http---media.thousandparsec.net-80-client/directory2/mediafile.png
-/usr/share/games/tp/http---media.thousandparsec.net-80-client/directory2/mediafile.png.meta
-
-The media.gz can then be generated with a script kind of like,
-
-echo > Media-new.gz
-for $i in `find -name *.meta`; do
- echo `basename $i .meta` `cat $i` >> Media-new.gz
-done
-
-When a new media is avaliable it will be downloaded to the local 
+When a new media is available it will be downloaded to the local 
 users home directory.
 
+<pre>
 ~/.tp/media/http---media.thousandparsec.net-80-client/Media-new.gz
 ~/.tp/media/http---media.thousandparsec.net-80-client/directory1/mediafile.png
 ~/.tp/media/ftp---someotherplace.net-21-pub/Media-new.gz
+</pre>
 
 If a media file is found in the distribution search locations that is the 
 same or newer then the users version. The users version should be removed.
+
+=== Packaging ===
+
+Media can also be distributed via packages. This should be installed in
+a shared location such as /usr/share/games/tp, a "media.gz" should be 
+generated from the .meta files installed in the packages.
+
+This allows splitting the media from a single URL (say 
+http://media.thousandparsec.net) to be distributed into separate packages,
+say the 3d and 2d data.
+
+In package A might have,
+<pre>
+/usr/share/games/tp/http---media.thousandparsec.net-80-client/directory1/mediafile.png
+/usr/share/games/tp/http---media.thousandparsec.net-80-client/directory1/mediafile.png.meta
 </pre>
+
+In package B might have,
+<pre>
+/usr/share/games/tp/http---media.thousandparsec.net-80-client/directory2/mediafile.png
+/usr/share/games/tp/http---media.thousandparsec.net-80-client/directory2/mediafile.png.meta
+</pre>
+
+The media.gz can then be generated with a script kind of like,
+
+<pre>
+echo > Media.gz
+for $i in `find -name *.meta`; do
+ echo `basename $i .meta` `cat $i` >> Media.gz
+done
+</pre>
+
+[[Category:Specifications]]
