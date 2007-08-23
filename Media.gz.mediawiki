@@ -1,13 +1,12 @@
 '''Media.gz''' is a file which the client can download from a media server to get details about what is available. It will always be found off the base url of the server. This page also deals with media caching and use issues.
 
 Features of this specification include:
-* Compressed media collection metadata file
-* Individual media metadata files
-* Clients able to choose from multiple types of media when available
+* How servers and clients choose the correct media
+* A compressed media collection metadata file
+* An individual media metadata files
 * Method for client independent downloaded media caching
 * Method for system wide media packaging
-* Multiple hash types
-* Last modtime in metadata files
+
 
 == How to Use ==
 The server gives a base URL for the media. When this URL is appended with "Media.gz", the Media.gz file will be present. Clients download this file and it describes the media available on the media server (ie, at the URL). If the base URL is http://media.thousandparsec.net/media/, then the Media.gz file will be at http://media.thousandparsec.net/media/Media.gz.
