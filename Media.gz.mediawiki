@@ -48,9 +48,9 @@ both png and mesh format.
 The MEDIA is a compressed text file which describes all the media 
 avaliable on the server and some metadata about it.
 It has the following format
-<media file> <last modtime YYYYMMddThhmm> <filesize bytes> <checksumtype>-<checksum>
-directory1/mediafile.png 	20060614T0923 1789345 md5-318424ccbd97c644d6baa594284fefe3
-directory1/mediafile.mesh 	20060614T0923 7623748 md5-1505b14a78c9e5858edd0f044c4e0062
+<media file> <last modtime YYYYMMddThhmm> <filesize bytes> <checksumtype>:<checksum>
+directory1/mediafile.png 	20060614T0923 1789345 md5:318424ccbd97c644d6baa594284fefe3
+directory1/mediafile.mesh 	20060614T0923 7623748 md5:1505b14a78c9e5858edd0f044c4e0062
 
 URLs of media locations are escaped locally using the following system
 re.sub('[^a-zA-Z0-9_]', '-', url)
