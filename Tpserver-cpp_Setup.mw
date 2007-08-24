@@ -13,4 +13,9 @@ cd tpserver-cpp
 PKG_CONFIG_PATH=/opt/tpserver-cpp/lib/pkg_config ./configure --prefix=/opt/tpserver-cpp
 make
 sudo make install
+
+mkdir /opt/tpserver-cpp/etc
+cp quickstart-* /opt/tpserver-cpp/etc
+cd /opt/tpserver-cpp/bin
+./tpserver-cpp -C ../etc/quickstart-<gametype>
 </pre>
