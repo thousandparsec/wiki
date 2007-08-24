@@ -1,0 +1,16 @@
+<pre>
+cg-clone git://git.thousandparsec.net/git/libtprl.git
+cd libtprl
+./autogen.sh
+./configure --prefix=/opt/tpserver-cpp
+make
+sudo make install
+
+cd ..
+cg-clone git://git.thousandparsec.net/git/tpserver-cpp.git#rfts
+cd tpserver-cpp
+./autogen.sh
+PKG_CONFIG_PATH=/opt/tpserver-cpp/lib/pkg_config ./configure --prefix=/opt/tpserver-cpp
+make
+sudo make install
+</pre>
