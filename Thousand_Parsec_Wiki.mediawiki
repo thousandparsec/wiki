@@ -16,6 +16,7 @@ Pages describing aspects surrounding media.
 
 Pages which describe how to do something specific.
 
+* [[tpserver-cpp Setup|Compiling tpserver-cpp]]
 * [[Ubuntu Setup|Setting up tpclient-pywx development environment on Ubuntu]] 
 * [[Mac Setup|Setting up tpclient-pywx development environment on Mac OS X]] 
 * [[Win Setup|Setting up tpclient-pywx development environment on Windows]]
