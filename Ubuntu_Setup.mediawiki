@@ -39,7 +39,7 @@ cd tpclient-pywx
 pythonw requirements.py
 
 # Now run the client!
-pythonw tpclient-pywx
+python tpclient-pywx
 </pre>
 
 == For development version ==
