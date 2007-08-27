@@ -1,3 +1,5 @@
+The follow is how mithro sets up his server, YMMV.
+
 <pre>
 cg-clone git://git.thousandparsec.net/git/libtprl.git
 cd libtprl
