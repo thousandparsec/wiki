@@ -56,7 +56,7 @@ cd ..
 
 # Check all the requirements are satisified
 cd tpclient-pywx
-pythonw requirements.py
+python requirements.py
 
 # Now run the client!
 python tpclient-pywx
