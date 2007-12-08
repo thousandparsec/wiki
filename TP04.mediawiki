@@ -37,9 +37,9 @@
 
 The TP04 protocol specification is available in [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=documents.git Git repository].
 
-The protocol is available in [http://www.thousandparsec.net/tp/dev/protocolxml.php HTML] (incomplete).
+The protocol is available in [http://www.thousandparsec.net/tp/dev/documents/protocolxml.php HTML] (incomplete).
 
-Some details which have not made it here yet are at [http://www.thousandparsec.net/tp/dev/protocol4.php the TP04 protocol page].
+Some details which have not made it here yet are at [http://www.thousandparsec.net/tp/dev/documents/protocol4.php the TP04 protocol page].
 
 == Comments and suggestions ==
 
