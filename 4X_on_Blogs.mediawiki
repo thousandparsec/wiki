@@ -28,3 +28,5 @@ Below is a list of links to searches for 4X games related blog posts. We should 
 
 (2007-07-27)
 [http://www.gamasutra.com/view/feature/1535/designing_ai_algorithms_for_.php Designing AI Algorithms For Turn-Based Strategy Games] - How to make the AI's attack and defense strategy to appear intelligent and thought out, providing a challenge but letting the player win in the end. Examples are based on a 4X game.
+
+(2007-12-11) [http://www.escapistmagazine.com/forums/read/18.51990#359048 Multiple research fields at once] - In _Master of Orion_ (the original) you didn't just research one technology at a time like in other 4X games. Instead, you set your general science slider, then you set sliders in each of six sub-categories (like Computers, Planet Ecology, Ship Drives, etc.)
