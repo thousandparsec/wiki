@@ -1,0 +1,29 @@
+When Thousand Parsec community releases a new version of software or wants to tell something to the whole wide world a news article is written. The article is published on the front page of Thousand Parsec. To reach more people, who would potentially be interested in the news, we also publush it on other sites.
+
+This page lists some of the sites where you can, and should, publish the news.
+
+{| cellpadding="5" cellspacing="0" border="1"
+! Site !! Linux !! Mac OS !! Windows
+|-
+| [http://www.happypenguin.org/ The Linux Game Tome] || √ || ||
+|-
+| [http://www.linuxgames.com/ LinuxGames] || √ || ||
+|-
+| [http://www.linux-gamers.net/ linuX-gamers] || √ || ||
+|-
+| [http://games.linux.sk/ Games for Linux] || √ || ||
+|-
+| [http://www.linuxsoft.cz/en/ Linux Software] || √ || ||
+|-
+| [http://www.macupdate.com/ MacUpdate] || || √ ||
+|-
+| [http://sourceforge.net/ SourceForge.net] || √ || √ || √
+|-
+| [http://freshmeat.net/ FreshMeat.net] || √ || √ || √
+|-
+| [http://www.softpedia.com/ Softpedia] || √ || √ || √
+|-
+| [http://forum.freegamedev.net/ FreeGameDev Forum] || √ || √ || √
+|-
+| [http://starsautohost.org/sahforum/ Home World Forum] || √ || √ || √
+|}
