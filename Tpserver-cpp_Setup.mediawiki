@@ -21,3 +21,24 @@ cp quickstart-* /opt/tpserver-cpp/etc
 cd /opt/tpserver-cpp/bin
 ./tpserver-cpp -C ../etc/quickstart-<gametype>
 </pre>
+
+
+== Building on Mac OS X with Fink ==
+
+Guile 1.6 or 1.8 must be installed before configuring.
+
+<pre>
+fink install guile16 guile16-dev
+</pre>
+
+Then use the following option to show the configure script where guile-config is located.
+
+<pre>
+--with-guile=/sw/share/guile/1.6/scripts/binoverride
+</pre>
+
+Since Guile depends on readline, that package will automatically be installed by Fink. The makefile will use the built-in BSD version, which is incompatible, by default.  Change the correct line in libtprl/tprl/Makefile to match the following:
+
+<pre>
+CPPFLAGS = -I/sw/include
+</pre>
