@@ -25,20 +25,20 @@ cd /opt/tpserver-cpp/bin
 
 == Building on Mac OS X with Fink ==
 
-Guile 1.6 or 1.8 must be installed before configuring.
+Guile 1.6 or 1.8 must be installed before configuring.  Instructions for using version 1.8 are shown here.
 
 <pre>
-fink install guile16 guile16-dev
+fink install guile18 guile18-dev
 </pre>
 
-Then use the following option to show the configure script where guile-config is located.
+Since Guile depends on readline, that package will automatically be installed by Fink.  By default, the makefile will use the built-in BSD version, which is incompatible.  Setting the following environment will tell the configure scripts of both tpserver-cpp and libtprl where to look for the correct headers.
 
 <pre>
---with-guile=/sw/share/guile/1.6/scripts/binoverride
+export CPPFLAGS=/sw/include
 </pre>
 
-Since Guile depends on readline, that package will automatically be installed by Fink. The makefile will use the built-in BSD version, which is incompatible, by default.  Change the correct line in libtprl/tprl/Makefile to match the following:
+Now use the following option for the tpserver-cpp configure script to show it where guile-config is located.
 
 <pre>
-CPPFLAGS = -I/sw/include
+--with-guile=/sw/share/guile/1.8/scripts/binoverride
 </pre>
