@@ -34,7 +34,7 @@ fink install guile18 guile18-dev
 Since Guile depends on readline, that package will automatically be installed by Fink.  By default, the makefile will use the built-in BSD version, which is incompatible.  Setting the following environment will tell the configure scripts of both tpserver-cpp and libtprl where to look for the correct headers.
 
 <pre>
-export CPPFLAGS=/sw/include
+export CPPFLAGS=-I/sw/include
 </pre>
 
 Now use the following option for the tpserver-cpp configure script to show it where guile-config is located.
