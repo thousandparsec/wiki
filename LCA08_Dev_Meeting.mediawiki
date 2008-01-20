@@ -10,6 +10,17 @@ Writing a good AI is hard. The processing power needed is not trivial, and log f
 = Research frames =
 When, what, how?
 
+Although it is generally referred to as a research "tree", most games with unlockable technology actually implement a directed acyclic graph.  A technology that can be researched is represented by a node in this graph and dependencies on other technology is represented by the edges.
+
+A frame describing a research node should probably contain the following:
+
+* name
+* long name
+* description (flavor text)
+* list of technologies that must be available before this one is researched
+* list of resources required to research this technology
+* list of universal references of things made available once this technology is researched (components, other technologies, etc...)
+
 = Diplomacy frames =
 When, what, how?
 
