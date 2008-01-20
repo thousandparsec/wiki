@@ -29,3 +29,4 @@ Until they get sorted, other pages can be linked from here:
 * [[4X on Blogs]]
 * [[NewLayout]] of website
 * [[FAQ]] - Where the FAQ will end up.
+* [[LCA08 Dev Meeting]] - Discussions at LCA08 about various TP things.
