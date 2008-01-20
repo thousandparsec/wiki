@@ -1,0 +1,30 @@
+Several developers are going to be/are/were at '''LCA08''' in Melbourne. This page is about the topics of the '''developments meeting(s)''' help there. Feel free to add things we should discuss. It is likely that not everything will be discussed.
+
+= Vision, Goals, Games and AI =
+Vision and goals are fairly straight forward. Just need to be articulated.
+
+The protocol and tpserver-cpp (and others) now supports a lot more features than Minisec or MTSec will use. Are we doing the right thing?
+
+Writing a good AI is hard. The processing power needed is not trivial, and log files are huge. Do we need more AI development/framework/etc, or do we need to "eat our own dogfood" and play the games more?
+
+= Research frames =
+When, what, how?
+
+= Diplomacy frames =
+When, what, how?
+
+= TP04 implementation =
+When is everything going to talk it?
+
+= Website re-org and change to wiki =
+Are we going to change it? When? Who?
+
+= General reference selection list order parameter =
+Finish discussion from mailing list and get it added to the order parameters.
+
+= SSL filters vs SSL port =
+AKA features vs filters...
+
+We now have two ways to create a secure connection between client and server, first is the ssl port, and new in TP04 is the ssl filter. Do we need both? Do we need a way for the server to force security in some form on a client before the login frame?
+
+In general, some of the feature Ids could be removed, or made into filters. What do we do?
