@@ -7,7 +7,11 @@ The protocol and tpserver-cpp (and others) now supports a lot more features than
 
 Writing a good AI is hard. The processing power needed is not trivial, and log files are huge. Do we need more AI development/framework/etc, or do we need to "eat our own dogfood" and play the games more?
 
-= Research frames =
+= TP Protocol Version 4 =
+
+This page http://blog.mithis.net/archives/tp/15-tp-protocol-overview is still quite relavent - will do an updated version.
+
+== Research frames ==
 When, what, how?
 
 Although it is generally referred to as a research "tree", most games with unlockable technology actually implement a directed acyclic graph.  A technology that can be researched is represented by a node in this graph and dependencies on other technology is represented by the edges.
@@ -21,28 +25,29 @@ A frame describing a research node should probably contain the following:
 * list of resources required to research this technology
 * list of universal references of things made available once this technology is researched (components, other technologies, etc...)
 
-= Diplomacy frames =
+== Diplomacy frames ==
 When, what, how?
 
 Leave for TP05.
 
-= TP04 implementation =
+== Implementation ==
 When is everything going to talk it?
 
-= Website re-org and change to wiki =
-Are we going to change it? When? Who?
-
-Also update to metaserver-lite-rewrite?
-
-= General reference selection list order parameter =
+== General reference selection list order parameter ==
 Finish discussion from mailing list and get it added to the order parameters.
 
-= SSL filters vs SSL port =
+== SSL filters vs SSL port ==
 AKA features vs filters...
 
 We now have two ways to create a secure connection between client and server, first is the ssl port, and new in TP04 is the ssl filter. Do we need both? Do we need a way for the server to force security in some form on a client before the login frame?
 
 In general, some of the feature Ids could be removed, or made into filters. What do we do?
+
+
+= Website re-org and change to wiki =
+Are we going to change it? When? Who?
+
+Also update to metaserver-lite-rewrite?
 
 = Packaging =
 (Suggested by pschulz01)
