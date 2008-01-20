@@ -28,3 +28,6 @@ AKA features vs filters...
 We now have two ways to create a secure connection between client and server, first is the ssl port, and new in TP04 is the ssl filter. Do we need both? Do we need a way for the server to force security in some form on a client before the login frame?
 
 In general, some of the feature Ids could be removed, or made into filters. What do we do?
+
+= Packaging =
+(Suggested by pschulz01)
