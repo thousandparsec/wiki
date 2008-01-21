@@ -27,6 +27,29 @@ A frame describing a research node should probably contain the following:
 
 : But it can be very different from that. Some games support research only one technology at time, some support multiple, some don't even let the player choose. Some don't have specific technologies, just "areas" and at random intervals give a component, ability, etc. So it isn't quite as cut and dried as you have made it sound. We (mithro and I) talked about it last year and I guess we need a bit more. --[[User:Lee Begg|Lee Begg]] 00:48, 21 January 2008 (EST)
 
+A research node doesn't necessarily describe a specific technology.  It could represent a broad "area".  A research tree made of areas would look something like this:
+
+* Biology I <- Biology II <- Biology III <- ...
+* Energy I <- Energy II <- Energy III <- ...
+* Construction I <- Construction II <- Construction III <- ...
+* ...
+
+A research tree could be arranged linearly if the client is to be given no choice in what to study.  In such cases the only reason to send these frames would be to allow the client to choose what resources to allocate to research.  A simplified, linear "tree" might look like this on a client:
+
+* Tech Level 1 <- Tech Level 2 <- Tech Level 3 <- ... 
+
+As each node is researched it could bear fruit after, for example, the amount of "research points" allocated to it are spent.  Alternately, the server may not tell the client how long this research will take to complete.  In such cases the time needed to complete a node may be predetermined, but hidden or simply randomized.  Similarly, the results of completing a research node may be randomized or hidden from the client.  
+
+Research nodes describe to the client what can be researched, but not how that research is accomplished.  I propose a system with minimal changes to the protocol and maximum flexibility.  In addition to a "research node" frame described above and a universal reference ID for referencing research nodes (or perhaps they should be called "technology descriptions" to be more consistent with other universally referenced objects), no changes to the protocol are required.
+
+Clients will tell the server which tech to research by sending an order that references a technology node.  The object that the order is sent to may differ depending on the game, but will most likely be the first object belonging to the player with the name "Research" (or something similar).  In this common setup, each player has a single "research queue".  The server may allow research on more than one technology depending on the resources allocated to each order in the queue, or research may be limited to a single item at a time.
+
+Having a default object (i.e. named "Research") allows the client to have a dedicated research menu or screen as many games do, but allows flexibility to implement research in different ways.  If a client cannot find the default object, the research screen would be unavailable.
+
+Other implementations within this framework are possible.  Since each object can have their own research queue, research could be managed at the level of individual planets, buildings, "science vessels", etc...  Perhaps each object researching a technology has a certain chance of completing it on each turn.  The more planets, buildings, science vessels, etc. that are researching that tech, the faster it would be completed.  Such systems would not need to be implemented on the client.  The standard order system would be enough.
+
+: I believe this addresses all the specific situations mentioned by Lee.  It certainly covers all requirements to emulate the games I've played, but my experience is limited.  I welcome any further criticism. --[[User:MidoriKid|MidoriKid]] 17:03, 21 January 2008 (EST)
+
 == Diplomacy frames ==
 When, what, how?
 
