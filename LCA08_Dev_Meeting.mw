@@ -25,6 +25,8 @@ A frame describing a research node should probably contain the following:
 * list of resources required to research this technology
 * list of universal references of things made available once this technology is researched (components, other technologies, etc...)
 
+: But it can be very different from that. Some games support research only one technology at time, some support multiple, some don't even let the player choose. Some don't have specific technologies, just "areas" and at random intervals give a component, ability, etc. So it isn't quite as cut and dried as you have made it sound. We (mithro and I) talked about it last year and I guess we need a bit more. --[[User:Lee Begg|Lee Begg]] 00:48, 21 January 2008 (EST)
+
 == Diplomacy frames ==
 When, what, how?
 
