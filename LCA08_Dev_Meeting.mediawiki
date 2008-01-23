@@ -59,7 +59,10 @@ Leave for TP05.
 
 From the protocol3.php
 <pre>
-Formatted Strings are exactly like normal strings but use the structured text method for formatting their contents. For a complete description of structured text please see the following document. This allows display of color, underline, super/subscript and much more. It is also easy to convert to plain text or HTML.
+Formatted Strings are exactly like normal strings but use the structured text
+method for formatting their contents. For a complete description of structured
+text please see the following document. This allows display of color, underline,
+super/subscript and much more. It is also easy to convert to plain text or HTML.
 </pre>
 
 Except there is no "following document".
