@@ -55,6 +55,15 @@ When, what, how?
 
 Leave for TP05.
 
+== Formatted Strings? ==
+
+From the protocol3.php
+<pre>
+Formatted Strings are exactly like normal strings but use the structured text method for formatting their contents. For a complete description of structured text please see the following document. This allows display of color, underline, super/subscript and much more. It is also easy to convert to plain text or HTML.
+</pre>
+
+Except there is no "following document".
+
 == Implementation ==
 When is everything going to talk it?
 
@@ -67,7 +76,6 @@ AKA features vs filters...
 We now have two ways to create a secure connection between client and server, first is the ssl port, and new in TP04 is the ssl filter. Do we need both? Do we need a way for the server to force security in some form on a client before the login frame?
 
 In general, some of the feature Ids could be removed, or made into filters. What do we do?
-
 
 = Website re-org and change to wiki =
 Are we going to change it? When? Who?
