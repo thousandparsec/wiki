@@ -7,6 +7,10 @@ The protocol and tpserver-cpp (and others) now supports a lot more features than
 
 Writing a good AI is hard. The processing power needed is not trivial, and log files are huge. Do we need more AI development/framework/etc, or do we need to "eat our own dogfood" and play the games more?
 
+= Please don't discuss things on this page =
+
+All discussion should go on the mailing lists. This page is for documenting things which need discussion and their results.
+
 = TP Protocol Version 4 =
 
 This page http://blog.mithis.net/archives/tp/15-tp-protocol-overview is still quite relavent - will do an updated version.
