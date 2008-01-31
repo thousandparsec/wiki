@@ -4,17 +4,6 @@ These instructions are to setup your development environment.
 
 <tt>
 apt-get install <b>python python-wxgtk2.8 python-imaging</b> python-psyco python-pyopenssl python-gconf
-</tt>
-
-=== Packages needed only by the stable version ===
-
-<tt>
-apt-get install <b>python-numeric python-numeric-ext</b>
-</tt>
-
-=== Packages needed only by the development version ===
-
-<tt>
 apt-get install <b>python-numpy python-numpy-ext</b> python-pygame python-avahi avahi-daemon
 </tt>
 
