@@ -3,8 +3,7 @@ These instructions are to setup your development environment.
 = Packages needed =
 
 <tt>
-apt-get install <b>python python-wxgtk2.8 python-imaging</b> python-psyco python-pyopenssl python-gconf
-apt-get install <b>python-numpy python-numpy-ext</b> python-pygame python-avahi avahi-daemon
+apt-get install <b>python python-wxgtk2.8 python-imaging</b> python-psyco python-pyopenssl python-gconf <b>python-numpy python-numpy-ext</b> python-pygame python-avahi avahi-daemon
 </tt>
 
 = Getting the code =
