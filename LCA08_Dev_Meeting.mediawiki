@@ -71,6 +71,8 @@ We now have two ways to create a secure connection between client and server, fi
 
 In general, some of the feature Ids could be removed, or made into filters. What do we do?
 
+'''Result:''' Keep both currently. At TP05 look again. No way for server to force client to use security before login if only have filters.
+
 == Media protocol ==
 
 Need to figure this out.
