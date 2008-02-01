@@ -44,6 +44,14 @@ super/subscript and much more. It is also easy to convert to plain text or HTML.
 
 Except there is no "following document".
 
+<b>Result:</b> The tags we are going to allow at this time are:
+<ul>
+    <li>&lt;p&gt; --- Begin an end a paragraph.</li>
+    <li>&lt;em&gt; --- Emphas ised text, generally represented as <em>italic</em>.</li>
+    <li>&lt;strong&gt; --- Strong text, generally represented as <strong>bold</strong>.</li>
+    <li>&lt;h1&gt;--&lt;h3&gt; --- Headings, 3 levels.</li>
+</ul>
+
 == Time is deranged ==
 
 https://sourceforge.net/tracker/index.php?func=detail&aid=1826443&group_id=132078&atid=723099
