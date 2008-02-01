@@ -48,6 +48,8 @@ Except there is no "following document".
 
 https://sourceforge.net/tracker/index.php?func=detail&aid=1826443&group_id=132078&atid=723099
 
+'''Result:''' Reference to mod times being in seconds will be removed. Mod times will be global (to game/server) serial numbers. Significant work in tpserver-cpp will be required to support this.
+
 == Implementation ==
 When is everything going to talk it?
 
