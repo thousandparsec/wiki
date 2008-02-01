@@ -88,6 +88,8 @@ Also update to metaserver-lite-rewrite?
 
 ikiwiki - Combinding website and wiki into one.
 
+'''Result:''' Not a high priority. Need someone to take the lead. Lee will look at updating to metaserver-lite-rewrite (sometime). ikiwiki seems the most likely wiki to be used.
+
 = Packaging =
 (Suggested by pschulz01)
 
