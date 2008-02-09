@@ -103,6 +103,8 @@ ikiwiki - Combinding website and wiki into one.
 = Packaging =
 (Suggested by pschulz01)
 
+'''Result:''' Lee talked with pschulz01 at the conference. Should leave the debian directory out of the tarballs. Slightly different packaging between Ubuntu and Debian (namely version numbering). We need someone who would like to be involved in packaging for Ubuntu/Debian.
+
 = GSoC Money =
 
 What to do with it? What about money from swag,
