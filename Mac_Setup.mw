@@ -10,15 +10,11 @@ You need the following binaries which can be found at [http://pythonmac.org/pack
         
 * '''wxPython''' - [http://pythonmac.org/packages/py25-fat/dmg/wxPython2.8-osx-unicode-2.8.3.0-universal10.4-py2.5.dmg here]
 
-=== Packages needed only by the stable version ===
-
-* '''Numeric''' - [http://pythonmac.org/packages/py25-fat/dmg/Numeric-24.2-py2.5-macosx10.4.dmg here]
-
 === Packages needed only by the development version ===
         
 * '''numpy''' - [http://pythonmac.org/packages/py25-fat/mpkg/numpy-1.0.3-py2.5-macosx10.4.mpkg.zip here]
         
-* PyGame - [http://???/ none known]
+* PyGame - [http://http://rene.f0o.com/~rene/stuff/macosx/pygame-1.8.0rc3-py2.5-macosx10.4.mpkg.zip/ here] - Pygame needs [http://pythonmac.org/packages/py25-fat/mpkg/pyobjc-1.4-py2.5-macosx10.4.mpkg.zip pyObjC too]
 
 * pybonjour - [http://o2s.csail.mit.edu/o2s-wiki/pybonjour here]
 
@@ -28,7 +24,7 @@ You need the following binaries which can be found at [http://pythonmac.org/pack
 
 You will then need to install "cogito" ([http://www.dpompa.com/git-1.5.2.2.dmg here]) and run the following
 
-== For stable version ==
+== Downloading and setting up the code ==
 
 If you have cogito installed (recommended),
 
@@ -65,52 +61,6 @@ cd ..
 
 # Check all the requirements are satisified
 cd tpclient-pywx
-pythonw requirements.py
-
-# Now run the client!
-pythonw tpclient-pywx
-</pre>
-
-== For development version ==
-
-If you have cogito installed (recommended),
-
-<pre>
-cg-clone git://git.thousandparsec.net/git/scratchpad.git
-cg-clone git://git.thousandparsec.net/git/libtpproto-py.git
-cg-clone git://git.thousandparsec.net/git/libtpclient-py.git#development libtpclient-py-dev
-cg-clone git://git.thousandparsec.net/git/tpclient-pywx.git#development tpclient-pywx-dev
-
-# Setup various links
-cd scratchpad
-./setup.sh
-cd ..
-
-# Check all the requirements are satisified
-cd tpclient-pywx-dev
-pythonw requirements.py
-
-# Now run the client!
-pythonw tpclient-pywx
-</pre>
-
-If you only have git installed,
-
-<pre>
-git clone git://git.thousandparsec.net/git/scratchpad.git
-git clone git://git.thousandparsec.net/git/libtpproto-py.git
-git clone git://git.thousandparsec.net/git/libtpclient-py.git libtpclient-py-dev
-cd libtpclient-py-dev; git checkout -b development origin/development; cd ..
-git clone git://git.thousandparsec.net/git/tpclient-pywx.git tpclient-pywx-dev
-cd tpclient-pywx-dev; git checkout -b development origin/development; cd ..
-
-# Setup various links
-cd scratchpad
-./setup.sh
-cd ..
-
-# Check all the requirements are satisified
-cd tpclient-pywx-dev
 pythonw requirements.py
 
 # Now run the client!
