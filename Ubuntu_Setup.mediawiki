@@ -10,7 +10,7 @@ apt-get install <b>python python-wxgtk2.8 python-imaging</b> python-psyco python
 
 You will then need to install "cogito" (<tt>apt-get install cogito</tt>) and run the following
 
-== For stable version ==
+== Downloading and setting up the code ==
 <pre>
 git clone git://git.thousandparsec.net/git/scratchpad.git
 git clone git://git.thousandparsec.net/git/libtpproto-py.git
@@ -28,36 +28,4 @@ python requirements.py
 
 # Now run the client!
 python tpclient-pywx
-</pre>
-
-== For development version ==
-<pre>
-cg-clone git://git.thousandparsec.net/git/scratchpad.git
-cg-clone git://git.thousandparsec.net/git/libtpproto-py.git
-cg-clone git://git.thousandparsec.net/git/libtpclient-py.git#development libtpclient-py-dev
-cg-clone git://git.thousandparsec.net/git/tpclient-pywx.git#development tpclient-pywx-dev
-
-# Setup various links
-cd scratchpad
-./setup.sh
-cd ..
-
-# Check all the requirements are satisified
-cd tpclient-pywx-dev
-python requirements.py
-
-# Now run the client!
-python tpclient-pywx
-</pre>
-
-Or for git users:
-<pre>
-git-clone git://git.thousandparsec.net/git/scratchpad.git
-git-clone git://git.thousandparsec.net/git/libtpproto-py.git
-git-clone git://git.thousandparsec.net/git/libtpclient-py.git
-git-clone git://git.thousandparsec.net/git/tpclient-pywx.git
-cd libtpclient-py ; git checkout -b dev origin/development ; cd ..
-cd tpclient-pywx ; git checkout -b dev origin/development ; cd ..
-
-Then the scratchpad and steps above
 </pre>
