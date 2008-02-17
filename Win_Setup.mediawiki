@@ -14,7 +14,7 @@ You need the following binaries which can be found at various places on the Inte
         
 * '''numpy''' - [http://downloads.sourceforge.net/numpy/numpy-1.0.3.win32-py2.5.exe here]
 
-* PyGame - [http://www3.telus.net/len_l/pygame-1.8.0rc3.win32-py2.5.exe here]
+* PyGame - [http://www3.telus.net/len_l/pygame-1.8rev1110.win32-py2.5.exe here]
 
 * py2exe (for creating packages) - [http://downloads.sourceforge.net/py2exe/py2exe-0.6.6.win32-py2.5.exe here]
 
