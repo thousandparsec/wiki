@@ -46,6 +46,9 @@ More Information
 Required Skills
 	Some 3D development skills
 
+=== AI Clients ===
+The AI in TP games connects to the game as a normal client and has exactly the same information as a normal player would have. tpsai-py implements a some-what simple AI for Minisec. Galaxie also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
+
 == Servers ==
 
 tpserver-cpp is one of the main servers in Thousand Parsec. These project ideas deal with improving it in various ways.
