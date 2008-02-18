@@ -193,6 +193,8 @@ More Information
 Required Skills
 	Good Python or C++ Skills
 
+'''Update:''' xdotx in SoC 2007 wrote a RFTS clone for tpserver-cpp. Some of the more advanced rules have not yet been implemented. Also, some changes to the core of tpserver-cpp could make the ruleset code a little simpler.
+
 === Diplomancy... In Space ===
 
 One of the greatest board (and later computer) games is Avalon Hills Diplomacy game. Focusing on diplomacy between the players, forcing them to ally, lie, cheat, support and often backstab each other the game was (and is) a classic. Without the diplomacy aspect it becomes a fairly average war game - with the diplomacy aspect, it's simple support-based combat system, secret orders and general tight confines make for an engaging and deep gaming experience.
