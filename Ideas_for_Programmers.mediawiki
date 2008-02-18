@@ -116,6 +116,8 @@ More Information
 Required Skills
 	Some PHP skills (or other Web development skills).
 
+'''Update:''' metaserver-lite-rewrite has most of the features above, but needs a little polish.
+
 == Thousand Parsec Protocol ==
 
 These projects are about improving a core part of Thousand Parsec. They may require a smaller amount of code then other projects, but the code will have to be of a much higher quality.
