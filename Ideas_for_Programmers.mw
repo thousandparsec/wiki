@@ -132,18 +132,6 @@ More Information
 Required Skills
 	Some experience with testing is a must
 
-=== Research Framework ===
-
-A general research framework is not designed yet. Design it...
-
-You need to be able to support a wide variety of research rules, technology items and similar. Some rulesets feature randomly generated technology, others have a fixed list. Different trees for different races/players is also a common feature. Variable tech levels (Weapons vs Construction) must be supported as well technology with different requirements.
-
-Obviously this requires extensions to the TP protocol - it's the main feature. Also you will need to expand a client and server to support it, along with an example in a ruleset. Once again this may be good to do in a group with someone else implementing the core rules why you focus on this aspect.
-More Information
-	Discussion of the next Thousand Parsec protocol.
-Required Skills
-	Good Python or C++ Skills
-
 == Python Stuff==
 
 Thousand Parsec uses a lot of python. These projects are generally to do with improve some python part of Thousand Parsec.
