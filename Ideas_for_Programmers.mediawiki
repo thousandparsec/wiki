@@ -57,22 +57,29 @@ You will need some C++ skills before you start any of these projects (but not as
 Tpserver-cpp (C++ Thousand Parsec server) has an abstract persistence interface that allows different methods of saving the game data. Currently, only a basic MySQL module has been written.
 
 The interface it fairly straight forward, but there is likely to be changes to the interface as the new game features are created and the internal architecture changes.
+
 More Information
-	PostgresSQL
-SF Todo Tracker Item.
-Required Skills
+* [http://www.postgresql.org/ PostgresSQL]
+* [http://sourceforge.net/tracker/index.php?func=detail&aid=1681326&group_id=132078&atid=829724 SF Todo Tracker Item].
+Required Skills:
 	SQL (preferably PostgreSQL and or MySQL) experience, C++ experience
 
-=== SQLlite persistence ===
+=== SQLite persistence ===
 
 Tpserver-cpp (C++ Thousand Parsec server) has an abstract persistence interface that allows different methods of saving the game data. Currently, only a basic MySQL module has been written.
 
 The interface it fairly straight forward, but there is likely to be changes to the interface as the new game features are created and the internal architecture changes.
+
 More Information
-	SQLlite
-SF Todo Tracker Item.
-Required Skills
-	SQL (preferably SQLlite or MySQL) experience, C++ experience
+* [http://www.sqlite.org/ SQLite]
+* [http://sourceforge.net/tracker/index.php?func=detail&aid=1681330&group_id=132078&atid=829724 SF Todo Tracker Item].
+Required Skills:
+	SQL (preferably SQLite or MySQL) experience, C++ experience
+
+=== Generic SQL persistence ===
+
+It shouldn't be too hard to abstract a generic SQL persistence module for tpserver-cpp from the current MySQL persistence module that could be used with just about any SQL database. It would also mean less work in future to keep the persistence modules in sync with the core data models.
+Required Skills: SQL experience, C++ experience
 
 == Development Tools ==
 
