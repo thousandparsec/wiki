@@ -84,13 +84,7 @@ Some of these projects might require you to extend the Thousand Parsec protocol 
 
 Scheme is quite a hard language to write. tpcl the language which is used for communicating between server and client the details about Designs, components and properties is based on Scheme.
 
-Your job is to create an IDE which makes it easy to create new components and properties (and develop the scheme code to go with it).
-More Information
-	[1586115] - Create a component editor.
-Thousand Parsec Component Language
-Required Skills
-	Scheme or Lisp programming skills a good advantage but not required. Experience with a GUI toolkit (GTK, Qt, wxWindows) would also be a bonus.
-
+For SoC 2007, DystopicFro wrote a Ruleset Development Environment called tpruledev. It is written in python, and works well for Designs, components and properties. But since then, there have been changes to tpserver-cpp that require reflecting in tpruledev, and some new features in TP04 are close to being useful and so could now be done inside tpruledev (namely Object Descriptions). So there are few improvements that could be made, and more are coming soon.
 
 === Race Designer ===
 
