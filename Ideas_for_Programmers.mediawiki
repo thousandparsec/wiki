@@ -1,0 +1,222 @@
+Are you a developer who wishes to get started helping with Thousand Parsec? Perhaps you are a computer science student looking for a project that will help you improve your practical programming and teamwork skills? In any case, you have come to the right place.
+
+Below are some of the ideas and suggestions for people who would like to join in the fun of creating video games. The list is not definitive and anyone is encouraged to come up with their own idea to work on. Initiative and imagination rate highly when working on any project.
+
+For additional ideas you can also take a look at [http://sourceforge.net/tracker/?group_id=132078&atid=829724 Thousand Parsec TODO list].
+
+== Clients ==
+
+Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the main client is written in Python. There is also a C++ client for KDE being developed.
+
+We want you to write a new client for Thousand Parsec. This client will service people who are not in a situation to use tpclient-pywx.
+
+These tasks are a reasonable amount of work, depending on which language you choose you may need to improve (or implement from scratch) a protocol library. You will need to be a reasonable coder before you start any of these projects if you hope to succeed.
+
+=== Web based client ===
+
+A web based client enables players to join Thousand Parsec games easily from any computer with a web browser and internet connection. This makes web based client the fastest and easiest way to start playing the game.
+
+Any language could be used for the client. Some suggestions are PHP, Python or Ruby. It might be a good idea to use AJAX or something similar.
+
+It is expected that you would produce a client which has the following functionality,
+
+    * Support for displaying the Starmap
+    * Support for displaying all information about objects
+    * Support for issuing orders
+    * Support for creating designs
+
+More Information
+	libtpproto-php, libtpproto-rb, libtpproto-py
+Required Skills
+	Strong Web development skill.
+
+=== 3D Client ===
+
+A cool 3d client for Thousand Parsec is needed. A pyOgre client was started but is in need of quite a bit of love. You could choose to use that as a base or start a new client from scratch.
+
+It is expected that you would produce a client which has the following functionality,
+
+    * Support for displaying the Starmap
+    * Support for displaying all information about objects
+    * Support for issuing orders
+    * Support for creating designs
+
+More Information
+	pyOgre
+Required Skills
+	Some 3D development skills
+
+== Servers ==
+
+tpserver-cpp is one of the main servers in Thousand Parsec. These project ideas deal with improving it in various ways.
+
+You will need some C++ skills before you start any of these projects (but not as much as if you where implementing a ruleset for this server).
+
+=== PostgreSQL persistence ===
+
+Tpserver-cpp (C++ Thousand Parsec server) has an abstract persistence interface that allows different methods of saving the game data. Currently, only a basic MySQL module has been written.
+
+The interface it fairly straight forward, but there is likely to be changes to the interface as the new game features are created and the internal architecture changes.
+More Information
+	PostgresSQL
+SF Todo Tracker Item.
+Required Skills
+	SQL (preferably PostgreSQL and or MySQL) experience, C++ experience
+
+=== SQLlite persistence ===
+
+Tpserver-cpp (C++ Thousand Parsec server) has an abstract persistence interface that allows different methods of saving the game data. Currently, only a basic MySQL module has been written.
+
+The interface it fairly straight forward, but there is likely to be changes to the interface as the new game features are created and the internal architecture changes.
+More Information
+	SQLlite
+SF Todo Tracker Item.
+Required Skills
+	SQL (preferably SQLlite or MySQL) experience, C++ experience
+
+== Development Tools ==
+
+These projects are about improving or creating standalone tools for Thousand Parsec. They are the mostly self contain projects, however it is still expected that you be involved with the rest of the project.
+
+Some of these projects might require you to extend the Thousand Parsec protocol or specify out new features. These will need to be public discussed on the mailing lists.
+
+=== Ruleset Development Environment ===
+
+Scheme is quite a hard language to write. tpcl the language which is used for communicating between server and client the details about Designs, components and properties is based on Scheme.
+
+Your job is to create an IDE which makes it easy to create new components and properties (and develop the scheme code to go with it).
+More Information
+	[1586115] - Create a component editor.
+Thousand Parsec Component Language
+Required Skills
+	Scheme or Lisp programming skills a good advantage but not required. Experience with a GUI toolkit (GTK, Qt, wxWindows) would also be a bonus.
+
+
+=== Race Designer ===
+
+Meet strange and interesting races... and kill them. One of the core tenants of the modern 4X game. Race design for Stars! is an art form, with few major race strategies (HP, HG, -F...), and dozens of minor variations. Other games feature fixed races - do you play the strange robotic machines, or the orange giant insects of Epsilon Persei III.
+
+The goal for this project is to design and implement a protocol for player races. Protocol and server support are a necessity, as is a (portable) client that can create races in some way. Race files will need to be saved and distributed.. Take into account both fixed races (ala Master of Orion) or races built using another ruleset (ala Stars!). Also you will need to have at least one implementation of a game that uses the races in some way - easiest is Minisec, but if others are working on another project building a ruleset, you may work with them. Race files need to be verified in some manner on the server, so take into account how to do this easily.
+More Information
+	
+Required Skills
+	
+== MetaServer ==
+
+The metaserver was written in about 5 hours. It works but requires a lot of work before it's a "good" piece of software. It could also be rewritten in another language.
+
+Some features would include:
+
+    * Implementing the full specification found in the discussion document
+    * Make it portable across databases
+    * Add RSS output support
+    * Produce statistics and some type of graphing
+    * "Back Connect" support for verification of details
+    * Some type of "match making" support
+
+More Information
+	[1652210] - Add long term stats to Metaserver
+[1652205] - Add match making service to the Metaserver.
+[1652204] - Add RSS Feeds to the Metaserver.
+[1652209] - Clean up Metaserver code.
+Required Skills
+	Some PHP skills (or other Web development skills).
+
+== Thousand Parsec Protocol ==
+
+These projects are about improving a core part of Thousand Parsec. They may require a smaller amount of code then other projects, but the code will have to be of a much higher quality.
+
+Any changes to the core protocol will need to be vetted by other Thousand Parsec members and approved. This means that these projects may be slower to progress and more frustrating. They will generally be more rewarding as you will know that you have helped with a fundamental part of Thousand Parsec and every one else is doing work based on yours.
+
+=== Protocol compliance test suite ===
+
+Currently protocol libraries have no way of testing their compliance with the protocol specification. Your job would be to write a suite which runs a protocol library through a bunch of tests and report on it's compliance.
+More Information
+	Protocol 3
+Required Skills
+	Some experience with testing is a must
+
+=== Research Framework ===
+
+A general research framework is not designed yet. Design it...
+
+You need to be able to support a wide variety of research rules, technology items and similar. Some rulesets feature randomly generated technology, others have a fixed list. Different trees for different races/players is also a common feature. Variable tech levels (Weapons vs Construction) must be supported as well technology with different requirements.
+
+Obviously this requires extensions to the TP protocol - it's the main feature. Also you will need to expand a client and server to support it, along with an example in a ruleset. Once again this may be good to do in a group with someone else implementing the core rules why you focus on this aspect.
+More Information
+	Discussion of the next Thousand Parsec protocol.
+Required Skills
+	Good Python or C++ Skills
+
+== Python Stuff==
+
+Thousand Parsec uses a lot of python. These projects are generally to do with improve some python part of Thousand Parsec.
+
+=== Add testing to libtpproto-py ===
+
+The python library currently as no testing. It's your job to write enough tests that at least 60% of the code has proper testing.
+More Information
+	libtpproto-py
+Required Skills
+	Some experience with unit testing and Python is a must
+
+=== Improve wxWidget's pyAUI ===
+
+The next version of tpclient-pywx, the primary Thousand Parsec client is heavily dependent on pyAUI. There are a bunch of improvements which could be added to make pyAUI even better. Some examples are,
+
+    * Minimise button support
+    * Add better way to align the windows initially
+    * Add better support for using floating MDI children under Windows
+    * Add support for "fly out" windows (IE Windows which only show themselves when moused over)
+    * Tab-based MDI classes (see C++ AUI)
+    * Vertical Title bars
+
+Feel free to add more ideas, a good place to look is wxAUI Forums.
+More Information
+	PyAUI
+tpclient-pywx Development Branch
+Required Skills
+	Good Python skills is a must
+
+== Rulesets ==
+
+Thousand Parsec's greatest strength is that it is a protocol for describing games, not a single game ruleset. Obviously then the more (complete) rulesets the better.
+
+You can choose to implement the rulesets in either the Python Server or in the C++ Server. Both servers currently only implement MiniSec but have been designed to support a wide variety of other rulesets.
+
+All these tasks will require C++ skills (if developing for the C++ Server) or Python (if developing for the Python Server). You may need to do some work on the core of the server if you are doing more advanced stuff too.
+
+=== MTSec ===
+
+MTSec (short for Missile and Torpedo Wars) is a simple game designed to flex the ship and weapon design capabilities of Thousand Parsec. It is the first ruleset to have a simple economy and should be more interesting then the first prototype game MiniSec.
+More Information
+	MTSec Documentation
+SF Todo Tracker Item
+Required Skills
+	C++ skills or Python skill.
+
+=== Reach for the Stars ===
+
+In 1981 SSI released "Reach for the Stars", a classic in the 4X genre. The rules for the game itself were fairly simple - in the mechanics for everything except combat were in the rule book. It allowed up to 4 players, although it lacked decent network play (not a surprise -- the internet as we know it was quite a few years in the future).
+
+TP is currently at a stage were most, if not all, of RFTS can be implemented in the current protocol. The game itself was balanced (by virtue of identical races) but had more then enough depth to keep players coming back.
+
+The goal of this project is to implement RFTS as a TP ruleset in any server. Additionally you may need to make adjustments to a client to support it. The RFTS AI's are a challenge for the truly adventurous.
+
+A new version of RFTS was released some years later. It also could be used as a ruleset, however it is a much more ambitous project, and would require a lot of work to expand the TP protocol.
+More Information
+	Wikipedia Page
+Required Skills
+	Good Python or C++ Skills
+
+=== Diplomancy... In Space ===
+
+One of the greatest board (and later computer) games is Avalon Hills Diplomacy game. Focusing on diplomacy between the players, forcing them to ally, lie, cheat, support and often backstab each other the game was (and is) a classic. Without the diplomacy aspect it becomes a fairly average war game - with the diplomacy aspect, it's simple support-based combat system, secret orders and general tight confines make for an engaging and deep gaming experience.
+
+TP itself is missing some basic in turn messaging, but otherwise a ruleset using some of the ideas from Diplomacy to create fairly simple diplomatic game - in space could be done. Some work on how to turn adjacent countries/territories into space fleets need to done.
+
+The goal of this project is to implement a Diplomacy style game - one focused on shifting alliances and political manoeuvring, rather then pure military might. Messaging between players will need to implemented in a server and client, and minor protocol adjustments will need to be made to allow messaging between players.
+More Information
+	Wikipedia Page
+Required Skills
+	Good Python or C++ Skills
