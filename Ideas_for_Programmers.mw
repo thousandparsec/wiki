@@ -53,7 +53,7 @@ The AI in TP games connects to the game as a normal client and has exactly the s
 
 tpserver-cpp is one of the main servers in Thousand Parsec. These project ideas deal with improving it in various ways.
 
-You will need some C++ skills before you start any of these projects (but not as much as if you where implementing a ruleset for this server).
+You will need some C++ skills before you start any of these projects (but not as much as if you where implementing a ruleset for this server). [[User:Lee Begg|Lee]] (llnz) is happy to mentor anyone working in these areas.
 
 === PostgreSQL persistence ===
 
@@ -83,6 +83,19 @@ Required Skills:
 
 It shouldn't be too hard to abstract a generic SQL persistence module for tpserver-cpp from the current MySQL persistence module that could be used with just about any SQL database. It would also mean less work in future to keep the persistence modules in sync with the core data models.
 Required Skills: SQL experience, C++ experience
+
+=== Calendar Timer ===
+tpserver-cpp supports plug-able methods for triggering the end of turn processing. The current TurnTimer supports threshold finished changing of the timer, which is set in seconds.
+
+A new timer, called CalendarTimer could be developed that starts the EOT processing at the same calendar time (IE, everyday at 12:03am or similar).
+
+=== Rework Module System ===
+tpserver-cpp module system works ok, but could be better. It could be just a matter of adding a layer of indirection in.
+
+Some things that would be nice to have:
+* Modules dependencies
+* New types of modules (advertising methods, universe builders, etc)
+* Load all modules, list their names on the console (on command), use some modules, unload rest.
 
 == Development Tools ==
 
