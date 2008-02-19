@@ -20,10 +20,10 @@ Any language could be used for the client. Some suggestions are PHP, Python or R
 
 It is expected that you would produce a client which has the following functionality,
 
-    * Support for displaying the Starmap
-    * Support for displaying all information about objects
-    * Support for issuing orders
-    * Support for creating designs
+* Support for displaying the Starmap
+* Support for displaying all information about objects
+* Support for issuing orders
+* Support for creating designs
 
 More Information
 	libtpproto-php, libtpproto-rb, libtpproto-py
@@ -36,17 +36,19 @@ A cool 3d client for Thousand Parsec is needed. A pyOgre client was started but 
 
 It is expected that you would produce a client which has the following functionality,
 
-    * Support for displaying the Starmap
-    * Support for displaying all information about objects
-    * Support for issuing orders
-    * Support for creating designs
+* Support for displaying the Starmap
+* Support for displaying all information about objects
+* Support for issuing orders
+* Support for creating designs
 
-More Information
+==== More Information ====
 	pyOgre
-Required Skills
+
+==== Required Skills ====
 	Some 3D development skills
 
 === AI Clients ===
+
 The AI in TP games connects to the game as a normal client and has exactly the same information as a normal player would have. tpsai-py implements a some-what simple AI for Minisec. Galaxie also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
 
 == Servers ==
@@ -162,9 +164,10 @@ Thousand Parsec uses a lot of python. These projects are generally to do with im
 === Add testing to libtpproto-py ===
 
 The python library currently as no testing. It's your job to write enough tests that at least 60% of the code has proper testing.
-More Information
+
+==== More Information ====
 	libtpproto-py
-Required Skills
+==== Required Skills ====
 	Some experience with unit testing and Python is a must
 
 === Improve wxWidget's pyAUI ===
@@ -196,10 +199,12 @@ All these tasks will require C++ skills (if developing for the C++ Server) or Py
 === MTSec ===
 
 MTSec (short for Missile and Torpedo Wars) is a simple game designed to flex the ship and weapon design capabilities of Thousand Parsec. It is the first ruleset to have a simple economy and should be more interesting then the first prototype game MiniSec.
-More Information
+
+==== More Information ====
 	MTSec Documentation
-SF Todo Tracker Item
-Required Skills
+        SF Todo Tracker Item
+
+==== Required Skills ====
 	C++ skills or Python skill.
 
 === Reach for the Stars ===
@@ -211,9 +216,11 @@ TP is currently at a stage were most, if not all, of RFTS can be implemented in 
 The goal of this project is to implement RFTS as a TP ruleset in any server. Additionally you may need to make adjustments to a client to support it. The RFTS AI's are a challenge for the truly adventurous.
 
 A new version of RFTS was released some years later. It also could be used as a ruleset, however it is a much more ambitous project, and would require a lot of work to expand the TP protocol.
-More Information
+
+==== More Information ====
 	Wikipedia Page
-Required Skills
+
+==== Required Skills ====
 	Good Python or C++ Skills
 
 '''Update:''' xdotx in SoC 2007 wrote a RFTS clone for tpserver-cpp. Some of the more advanced rules have not yet been implemented. Also, some changes to the core of tpserver-cpp could make the ruleset code a little simpler.
@@ -225,9 +232,10 @@ One of the greatest board (and later computer) games is Avalon Hills Diplomacy g
 TP itself is missing some basic in turn messaging, but otherwise a ruleset using some of the ideas from Diplomacy to create fairly simple diplomatic game - in space could be done. Some work on how to turn adjacent countries/territories into space fleets need to done.
 
 The goal of this project is to implement a Diplomacy style game - one focused on shifting alliances and political manoeuvring, rather then pure military might. Messaging between players will need to implemented in a server and client, and minor protocol adjustments will need to be made to allow messaging between players.
-More Information
+
+==== More Information ====
 	Wikipedia Page
-Required Skills
+==== Required Skills ====
 	Good Python or C++ Skills
 
 === New Rulesets ===
