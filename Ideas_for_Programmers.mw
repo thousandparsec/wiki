@@ -25,9 +25,10 @@ It is expected that you would produce a client which has the following functiona
 * Support for issuing orders
 * Support for creating designs
 
-More Information
+==== More Information ====
 	libtpproto-php, libtpproto-rb, libtpproto-py
-Required Skills
+
+==== Required Skills ====
 	Strong Web development skill.
 
 === 3D Client ===
@@ -63,10 +64,11 @@ Tpserver-cpp (C++ Thousand Parsec server) has an abstract persistence interface 
 
 The interface it fairly straight forward, but there is likely to be changes to the interface as the new game features are created and the internal architecture changes.
 
-More Information
+==== More Information ====
 * [http://www.postgresql.org/ PostgresSQL]
 * [http://sourceforge.net/tracker/index.php?func=detail&aid=1681326&group_id=132078&atid=829724 SF Todo Tracker Item].
-Required Skills:
+
+==== Required Skills ====
 	SQL (preferably PostgreSQL and or MySQL) experience, C++ experience
 
 === SQLite persistence ===
@@ -75,16 +77,19 @@ Tpserver-cpp (C++ Thousand Parsec server) has an abstract persistence interface 
 
 The interface it fairly straight forward, but there is likely to be changes to the interface as the new game features are created and the internal architecture changes.
 
-More Information
+==== More Information ====
 * [http://www.sqlite.org/ SQLite]
 * [http://sourceforge.net/tracker/index.php?func=detail&aid=1681330&group_id=132078&atid=829724 SF Todo Tracker Item].
-Required Skills:
+
+==== Required Skills ====
 	SQL (preferably SQLite or MySQL) experience, C++ experience
 
 === Generic SQL persistence ===
 
 It shouldn't be too hard to abstract a generic SQL persistence module for tpserver-cpp from the current MySQL persistence module that could be used with just about any SQL database. It would also mean less work in future to keep the persistence modules in sync with the core data models.
-Required Skills: SQL experience, C++ experience
+
+==== Required Skills ====
+ SQL experience, C++ experience
 
 === Calendar Timer ===
 tpserver-cpp supports plug-able methods for triggering the end of turn processing. The current TurnTimer supports threshold finished changing of the timer, which is set in seconds.
@@ -118,8 +123,9 @@ Meet strange and interesting races... and kill them. One of the core tenants of 
 The goal for this project is to design and implement a protocol for player races. Protocol and server support are a necessity, as is a (portable) client that can create races in some way. Race files will need to be saved and distributed.. Take into account both fixed races (ala Master of Orion) or races built using another ruleset (ala Stars!). Also you will need to have at least one implementation of a game that uses the races in some way - easiest is Minisec, but if others are working on another project building a ruleset, you may work with them. Race files need to be verified in some manner on the server, so take into account how to do this easily.
 More Information
 	
-Required Skills
-	
+==== Required Skills ====
+
+
 == MetaServer ==
 
 The metaserver was written in about 5 hours. It works but requires a lot of work before it's a "good" piece of software. It could also be rewritten in another language.
@@ -133,12 +139,13 @@ Some features would include:
     * "Back Connect" support for verification of details
     * Some type of "match making" support
 
-More Information
+==== More Information ====
 	[1652210] - Add long term stats to Metaserver
 [1652205] - Add match making service to the Metaserver.
 [1652204] - Add RSS Feeds to the Metaserver.
 [1652209] - Clean up Metaserver code.
-Required Skills
+
+==== Required Skills ====
 	Some PHP skills (or other Web development skills).
 
 '''Update:''' metaserver-lite-rewrite has most of the features above, but needs a little polish. It would be nice to have the rewrite as the active metaserver.
@@ -152,9 +159,11 @@ Any changes to the core protocol will need to be vetted by other Thousand Parsec
 === Protocol compliance test suite ===
 
 Currently protocol libraries have no way of testing their compliance with the protocol specification. Your job would be to write a suite which runs a protocol library through a bunch of tests and report on it's compliance.
-More Information
+
+==== More Information ====
 	Protocol 3
-Required Skills
+
+==== Required Skills ====
 	Some experience with testing is a must
 
 == Python Stuff==
@@ -182,10 +191,11 @@ The next version of tpclient-pywx, the primary Thousand Parsec client is heavily
     * Vertical Title bars
 
 Feel free to add more ideas, a good place to look is wxAUI Forums.
-More Information
+==== More Information ====
 	PyAUI
 tpclient-pywx Development Branch
-Required Skills
+
+==== Required Skills ====
 	Good Python skills is a must
 
 == Rulesets ==
