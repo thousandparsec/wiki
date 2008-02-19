@@ -183,12 +183,12 @@ The python library currently as no testing. It's your job to write enough tests 
 
 The next version of tpclient-pywx, the primary Thousand Parsec client is heavily dependent on pyAUI. There are a bunch of improvements which could be added to make pyAUI even better. Some examples are,
 
-    * Minimise button support
-    * Add better way to align the windows initially
-    * Add better support for using floating MDI children under Windows
-    * Add support for "fly out" windows (IE Windows which only show themselves when moused over)
-    * Tab-based MDI classes (see C++ AUI)
-    * Vertical Title bars
+* Minimise button support
+* Add better way to align the windows initially
+* Add better support for using floating MDI children under Windows
+* Add support for "fly out" windows (IE Windows which only show themselves when moused over)
+* Tab-based MDI classes (see C++ AUI)
+* Vertical Title bars
 
 Feel free to add more ideas, a good place to look is wxAUI Forums.
 ==== More Information ====
