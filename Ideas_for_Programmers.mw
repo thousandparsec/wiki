@@ -132,12 +132,12 @@ The metaserver was written in about 5 hours. It works but requires a lot of work
 
 Some features would include:
 
-    * Implementing the full specification found in the discussion document
-    * Make it portable across databases
-    * Add RSS output support
-    * Produce statistics and some type of graphing
-    * "Back Connect" support for verification of details
-    * Some type of "match making" support
+* Implementing the full specification found in the discussion document
+* Make it portable across databases
+* Add RSS output support
+* Produce statistics and some type of graphing
+* "Back Connect" support for verification of details
+* Some type of "match making" support
 
 ==== More Information ====
 	[1652210] - Add long term stats to Metaserver
