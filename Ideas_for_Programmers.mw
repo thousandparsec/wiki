@@ -69,7 +69,7 @@ The interface it fairly straight forward, but there is likely to be changes to t
 * [http://sourceforge.net/tracker/index.php?func=detail&aid=1681326&group_id=132078&atid=829724 SF Todo Tracker Item].
 
 ==== Required Skills ====
-	SQL (preferably PostgreSQL and or MySQL) experience, C++ experience
+SQL (preferably PostgreSQL and or MySQL) experience, C++ experience
 
 === SQLite persistence ===
 
@@ -103,6 +103,9 @@ Some things that would be nice to have:
 * Modules dependencies
 * New types of modules (advertising methods, universe builders, etc)
 * Load all modules, list their names on the console (on command), use some modules, unload rest.
+
+=== More useful fail frames ===
+Fail frames as of TP04 have a list of General Purpose References. Most of the createFailFrame calls currently do not set the list of references. They need to be added.  Some things don't yet have reference types yet, they will also need to be added.
 
 == Development Tools ==
 
