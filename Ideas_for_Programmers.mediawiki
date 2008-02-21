@@ -89,7 +89,7 @@ The interface it fairly straight forward, but there is likely to be changes to t
 It shouldn't be too hard to abstract a generic SQL persistence module for tpserver-cpp from the current MySQL persistence module that could be used with just about any SQL database. It would also mean less work in future to keep the persistence modules in sync with the core data models.
 
 ==== Required Skills ====
- SQL experience, C++ experience
+SQL experience, C++ experience
 
 === Calendar Timer ===
 tpserver-cpp supports plug-able methods for triggering the end of turn processing. The current TurnTimer supports threshold finished changing of the timer, which is set in seconds.
