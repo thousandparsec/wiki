@@ -1,0 +1,31 @@
+Many people have contributed to Thousand parsec over the years of its existence. Here you will get to see faces and get to know people behind nicknames on IRC or names in commit messages and e-mails on mailing lists.
+
+For a list of contributors also take a look at [http://www.ohloh.net/projects/3679/contributors Thousand Parsec Contributors at Ohloh].
+
+== Tim "mithro" Ansell ==
+The founding father of Thousand Parsec project.
+
+'''Subprojects''': [[libtpproto-py]], [[libtpclient-py]], [[tpclient-pywx]], [[tpserver-py]], [[tpai-py]]<br />
+'''Location''': Adelaide, Australia<br />
+'''Contact''':
+
+== Lee "llnz" Begg ==
+'''Subprojects''': [[libtpproto-cpp]], [[tpserver-cpp]]<br />
+'''Location''': New zeland<br />
+'''Contact''':
+
+== Jure "JLP" Repinc ==
+Joined in December 2006 when looking for a bigger project where he could contribute and learn C++, Qt and KDE programming. So he started to work on Parsek client for KDE 4. He also works a bit on promotional stuff.
+
+'''Subprojects''': [[Parsek]]<br />
+'''Location''': Bohinjska Bistrica, Slovenia (GMT+1)<br />
+'''Contact''':
+* Jabber: JLP@jabber.org
+* E-mail: jlp@holodeck1.com
+
+== Brett "nash" Nash ==
+Started contributing in January 2007 when Thousand Parsec held an AI Competition.
+
+'''Subprojects''': [[Galaxie]]<br />
+'''Location''': Australia<br />
+'''Contact''':
