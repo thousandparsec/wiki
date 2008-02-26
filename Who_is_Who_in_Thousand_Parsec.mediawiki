@@ -7,7 +7,7 @@ The founding father of Thousand Parsec project.
 
 '''Subprojects''': [[libtpproto-py]], [[libtpclient-py]], [[tpclient-pywx]], [[tpserver-py]], [[tpai-py]]<br />
 '''Location''': Adelaide, Australia<br />
-'''Contact''':
+'''Contact''': [mailto:tim@thousandparsec.net tim@thousandparsec.net] [mailto:mithro@mithis.com mithro@mithis.com]
 
 == Lee "llnz" Begg ==
 '''Subprojects''': [[libtpproto-cpp]], [[tpserver-cpp]]<br />
