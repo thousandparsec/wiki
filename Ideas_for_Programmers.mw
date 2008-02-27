@@ -149,7 +149,7 @@ Some features would include:
 ==== Required Skills ====
 	Some PHP skills (or other Web development skills).
 
-'''Update:''' metaserver-lite-rewrite has most of the features above, but needs a little polish. It would be nice to have the rewrite as the active metaserver.
+'''Update:''' [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=metaserver-lite.git;a=shortlog;h=rewrite metaserver-lite-rewrite] has most of the features above, but needs a little polish. It would be nice to have the rewrite as the active metaserver.
 
 == Thousand Parsec Protocol ==
 
