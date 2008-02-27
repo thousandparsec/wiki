@@ -115,27 +115,26 @@ Some things that would be nice to have:
 == More useful fail frames ==
 Fail frames as of TP04 have a list of General Purpose References. Most of the createFailFrame calls currently do not set the list of references. They need to be added.  Some things don't yet have reference types yet, they will also need to be added.
 
-== Development Tools ==
+= Development Tools =
 
 These projects are about improving or creating standalone tools for Thousand Parsec. They are the mostly self contain projects, however it is still expected that you be involved with the rest of the project.
 
 Some of these projects might require you to extend the Thousand Parsec protocol or specify out new features. These will need to be public discussed on the mailing lists.
 
-=== Ruleset Development Environment ===
+== Ruleset Development Environment ==
 
 Scheme is quite a hard language to write. tpcl the language which is used for communicating between server and client the details about Designs, components and properties is based on Scheme.
 
 For SoC 2007, DystopicFro wrote a Ruleset Development Environment called tpruledev. It is written in python, and works well for Designs, components and properties. But since then, there have been changes to tpserver-cpp that require reflecting in tpruledev, and some new features in TP04 are close to being useful and so could now be done inside tpruledev (namely Object Descriptions). So there are few improvements that could be made, and more are coming soon.
 
-=== Race Designer ===
+== Race Designer ==
 
 Meet strange and interesting races... and kill them. One of the core tenants of the modern 4X game. Race design for Stars! is an art form, with few major race strategies (HP, HG, -F...), and dozens of minor variations. Other games feature fixed races - do you play the strange robotic machines, or the orange giant insects of Epsilon Persei III.
 
 The goal for this project is to design and implement a protocol for player races. Protocol and server support are a necessity, as is a (portable) client that can create races in some way. Race files will need to be saved and distributed.. Take into account both fixed races (ala Master of Orion) or races built using another ruleset (ala Stars!). Also you will need to have at least one implementation of a game that uses the races in some way - easiest is Minisec, but if others are working on another project building a ruleset, you may work with them. Race files need to be verified in some manner on the server, so take into account how to do this easily.
 More Information
 	
-==== Required Skills ====
-
+=== Required Skills ===
 
 == MetaServer ==
 
