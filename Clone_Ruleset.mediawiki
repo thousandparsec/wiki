@@ -42,3 +42,6 @@ Take Risk board game and adapt it to be a space empire game.
 
 == Sword of the Stars ==
 [http://en.wikipedia.org/wiki/Sword_of_the_Stars Sword of the Stars]
+
+== Spaceward Ho! ==
+[http://en.wikipedia.org/wiki/Spaceward_Ho%21 Wikipedia Page]
