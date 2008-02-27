@@ -286,7 +286,8 @@ TP itself is missing some basic in turn messaging, but otherwise a ruleset using
 The goal of this project is to implement a Diplomacy style game - one focused on shifting alliances and political manoeuvring, rather then pure military might. Messaging between players will need to implemented in a server and client, and minor protocol adjustments will need to be made to allow messaging between players.
 
 === More Information ===
-* Wikipedia Page
+* [http://en.wikipedia.org/wiki/Diplomacy_%28game%29 Wikipedia Page]
+
 === Required Skills ===
 * Good Python or C++ Skills
 
