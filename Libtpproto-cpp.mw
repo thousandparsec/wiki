@@ -1,0 +1,21 @@
+libtpproto-cpp is a library to simplify the writing of clients for Thousand Parsec. The library is written in C++. It is written by [[User:Lee Begg|Lee]].
+
+==Users==
+* [[tpclient-cpptext]]
+* [[Parsek]]
+
+==Documentation==
+* [http://www.thousandparsec.net/tp/dev/documents/libtpproto-cpp/html/ Doxygen] of current GIT repo.
+
+== Current plans ==
+* add TP04 support
+** frames (done, mostly)
+** Interfaces
+** filters
+* make library more toolkit friendly, ie:
+** expose file descriptor to add to toolkit event loop
+** make library more asynchronous, callbacks, etc
+** expose timers
+* zeroconf and metaserver support
+* add http tunnelling socket
+* authenticate x509 certs in secure connections
