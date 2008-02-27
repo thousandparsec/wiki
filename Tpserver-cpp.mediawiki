@@ -8,7 +8,7 @@
 ==Setup==
 See [[Tpserver-cpp Setup]] for some hints on building tpserver-cpp.
 
-To quick-start a game, use the corresponding quickstart-''gamename''.conf configuration files. For more options, see the sample.conf files.
+To quick-start a game, use the corresponding quickstart-''rulesetname''.conf configuration files. For more options, see the sample.conf files.
 
 ==Future work ideas==
 See [[Ideas for Programmers]].
