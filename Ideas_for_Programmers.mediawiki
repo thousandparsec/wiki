@@ -245,6 +245,14 @@ Feel free to add more ideas, a good place to look is wxAUI Forums.
 === Required Skills ===
 * Good Python skills is a must
 
+
+
+
+
+
+
+
+
 = Rulesets =
 
 Thousand Parsec's greatest strength is that it is a protocol for describing games, not a single game ruleset. Obviously then the more (complete) rulesets the better.
