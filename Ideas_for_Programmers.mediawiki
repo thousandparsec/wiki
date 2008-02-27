@@ -58,8 +58,7 @@ It is expected that the client has the following functionality:
 
 == AI Clients ==
 
-An AI client in Thousand Parsec games connects to the game as a normal client and has exactly the same information as a normal player would have. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] implements a some-what simple AI for Minisec. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
- Galaxie] also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
+An AI client in Thousand Parsec games connects to the game as a normal client and has exactly the same information as a normal player would have. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] implements a some-what simple AI for Minisec.[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary Galaxie] also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
 
 === More Information ===
 * [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary Existing Python Simple AI].
