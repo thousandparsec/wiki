@@ -62,7 +62,7 @@ The AI in TP games connects to the game as a normal client and has exactly the s
 
 = Servers =
 
-tpserver-cpp is one of the main servers in Thousand Parsec. These project ideas deal with improving it in various ways.
+[[tpserver-cpp]] is one of the main servers in Thousand Parsec. These project ideas deal with improving it in various ways.
 
 You will need some C++ skills before you start any of these projects (but not as much as if you where implementing a ruleset for this server). [[User:Lee Begg|Lee]] (llnz) is happy to mentor anyone working in these areas.
 
