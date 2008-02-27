@@ -1,4 +1,17 @@
-= Diplomancy... In Space =
+Thousand Parsec is the ideal framework to clone your favourite 4X game! 
+
+Thousand Parsec's greatest strength is that it is a protocol for describing games, not a single game ruleset. Obviously then the more (complete) rulesets the better.
+
+You can choose to implement the rulesets in either the Python Server or in the C++ Server. Both servers currently only implement MiniSec but have been designed to support a wide variety of other rulesets.
+
+﻿Here are some ideas on some cool games to clone.
+
+=== Skills required ===
+
+﻿All these tasks will require C++ skills (if developing for the C++ Server) or Python (if developing for the Python Server). You may need to do some work on the core of the server if you are doing more advanced stuff too.
+
+
+== Diplomancy... In Space ==
 [http://en.wikipedia.org/wiki/Diplomacy_%28game%29 Wikipedia Page]
 
 One of the greatest board (and later computer) games is Avalon Hills Diplomacy game. Focusing on diplomacy between the players, forcing them to ally, lie, cheat, support and often backstab each other the game was (and is) a classic. Without the diplomacy aspect it becomes a fairly average war game - with the diplomacy aspect, it's simple support-based combat system, secret orders and general tight confines make for an engaging and deep gaming experience.
@@ -6,9 +19,3 @@ One of the greatest board (and later computer) games is Avalon Hills Diplomacy g
 TP itself is missing some basic in turn messaging, but otherwise a ruleset using some of the ideas from Diplomacy to create fairly simple diplomatic game - in space could be done. Some work on how to turn adjacent countries/territories into space fleets need to done.
 
 The goal of this project is to implement a Diplomacy style game - one focused on shifting alliances and political manoeuvring, rather then pure military might. Messaging between players will need to implemented in a server and client, and minor protocol adjustments will need to be made to allow messaging between players.
-
-=== More Information ===
-* [http://en.wikipedia.org/wiki/Diplomacy_%28game%29 Wikipedia Page]
-
-=== Required Skills ===
-* Good Python or C++ Skills
