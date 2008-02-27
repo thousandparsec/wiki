@@ -182,6 +182,36 @@ The python library currently as no testing. It's your job to write enough tests 
 ==== Required Skills ====
 	Some experience with unit testing and Python is a must
 
+=== Help develop wxWidget client ===
+
+[[http://www.thousandparsec.net/tp/downloads.php#tpclient-pywx tpclient-pywx]] is currently the primary client for access Thousand Parsec, there are many things which can be done to improve it. Here are a bunch of suggestions,
+
+===== Save window perspective =====
+The client should restore all the windows to the same position/size/location. See the wxAUI demo for the window saving perspective code.
+
+===== Improve info panel data display =====
+The info panel is the primary display for information about the currently selected object. Currently it is really crappy looking. Make it look nicer.
+
+===== "Distance to" window =====
+Add a window which replaces the starmap and shows the distant from the currently selected object to every other object in the Universe. Should be able to filter and sort on various criteria. This would be useful for blind players to fully access the game.
+
+===== Asset report =====
+Add a window which lists all your various assets.
+
+===== Add proper tech tree browser =====
+TP04 will support technology trees. Add support for viewing these to tpclient-pywx.
+
+FreeOrion has quite a cool looking tech-browser, see http://www.optisch-edel.de/fo/screenshots/research.jpg
+
+===== Add message board functionality =====
+Add full, proper message board support to tpclient-pywx.
+
+Features should include;
+* Ability to see all message boards on the server.
+* The ability to post new messages.
+* To easily filter various system messages in intelligent ways.
+* Good searching facility.
+
 === Improve wxWidget's pyAUI ===
 
 The next version of tpclient-pywx, the primary Thousand Parsec client is heavily dependent on pyAUI. There are a bunch of improvements which could be added to make pyAUI even better. Some examples are,
