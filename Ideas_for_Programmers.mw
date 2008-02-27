@@ -238,7 +238,7 @@ Feel free to add more ideas, a good place to look is wxAUI Forums.
 === Required Skills ===
 * Good Python skills is a must
 
-== Rulesets ==
+= Rulesets =
 
 Thousand Parsec's greatest strength is that it is a protocol for describing games, not a single game ruleset. Obviously then the more (complete) rulesets the better.
 
@@ -246,20 +246,20 @@ You can choose to implement the rulesets in either the Python Server or in the C
 
 All these tasks will require C++ skills (if developing for the C++ Server) or Python (if developing for the Python Server). You may need to do some work on the core of the server if you are doing more advanced stuff too.
 
-=== MTSec ===
+== MTSec ==
 
 MTSec (short for Missile and Torpedo Wars) is a simple game designed to flex the ship and weapon design capabilities of Thousand Parsec. It is the first ruleset to have a simple economy and should be more interesting then the first prototype game MiniSec.
 
-==== More Information ====
+=== More Information ===
 
 MTSec Documentation
 
 SF Todo Tracker Item
 
-==== Required Skills ====
-	C++ skills or Python skill.
+=== Required Skills ===
+* C++ skills or Python skill.
 
-=== Reach for the Stars ===
+== Reach for the Stars ==
 
 In 1981 SSI released "Reach for the Stars", a classic in the 4X genre. The rules for the game itself were fairly simple - in the mechanics for everything except combat were in the rule book. It allowed up to 4 players, although it lacked decent network play (not a surprise -- the internet as we know it was quite a few years in the future).
 
@@ -269,15 +269,15 @@ The goal of this project is to implement RFTS as a TP ruleset in any server. Add
 
 A new version of RFTS was released some years later. It also could be used as a ruleset, however it is a much more ambitous project, and would require a lot of work to expand the TP protocol.
 
-==== More Information ====
-	Wikipedia Page
+=== More Information ===
+Wikipedia Page
 
-==== Required Skills ====
-	Good Python or C++ Skills
+=== Required Skills ===
+Good Python or C++ Skills
 
 '''Update:''' xdotx in SoC 2007 wrote a RFTS clone for tpserver-cpp. Some of the more advanced rules have not yet been implemented. Also, some changes to the core of tpserver-cpp could make the ruleset code a little simpler.
 
-=== Diplomancy... In Space ===
+== Diplomancy... In Space ==
 
 One of the greatest board (and later computer) games is Avalon Hills Diplomacy game. Focusing on diplomacy between the players, forcing them to ally, lie, cheat, support and often backstab each other the game was (and is) a classic. Without the diplomacy aspect it becomes a fairly average war game - with the diplomacy aspect, it's simple support-based combat system, secret orders and general tight confines make for an engaging and deep gaming experience.
 
@@ -285,11 +285,11 @@ TP itself is missing some basic in turn messaging, but otherwise a ruleset using
 
 The goal of this project is to implement a Diplomacy style game - one focused on shifting alliances and political manoeuvring, rather then pure military might. Messaging between players will need to implemented in a server and client, and minor protocol adjustments will need to be made to allow messaging between players.
 
-==== More Information ====
-	Wikipedia Page
-==== Required Skills ====
-	Good Python or C++ Skills
+=== More Information ===
+* Wikipedia Page
+=== Required Skills ===
+* Good Python or C++ Skills
 
-=== New Rulesets ===
+== New Rulesets ==
 
 You could develop a new game from scratch. It is a lot of work though, and a lot of documentation should be created before coding. You could use tpruledev to simplify some of the design/component/property work.
