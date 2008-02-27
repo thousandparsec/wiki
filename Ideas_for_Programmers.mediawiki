@@ -103,7 +103,7 @@ Fail frames as of [[TP04]] have a list of General Purpose References. Most of th
 Make is possible that when started with no config file, ask the users a number of questions to set up the server and the game. tpserver-cpp uses [[libtprl]] for the console, and it supports changing command sets.
 
 == Separate the console from the server ==
-Make it possible to remotely, or at lest connect locally, to a daemon-ized tpserver-cpp. Need to pass commands into the server and get logging and output back. Could be quite a few ways to do this.
+Make it possible to connect remotely, or at least locally, to a daemon-ized tpserver-cpp. Need to pass commands into the server and get logging and output back. Could be quite a few ways to do this. Maybe a special server configuration protocol could be designed so that various different configuration interfaces (for example integrated into clients, presented as Single Player mode) could connect to a special configuration port.
 
 = Development Tools =
 
