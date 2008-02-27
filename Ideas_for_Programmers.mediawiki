@@ -244,8 +244,10 @@ All these tasks will require C++ skills (if developing for the C++ Server) or Py
 MTSec (short for Missile and Torpedo Wars) is a simple game designed to flex the ship and weapon design capabilities of Thousand Parsec. It is the first ruleset to have a simple economy and should be more interesting then the first prototype game MiniSec.
 
 ==== More Information ====
-	MTSec Documentation
-        SF Todo Tracker Item
+
+MTSec Documentation
+
+SF Todo Tracker Item
 
 ==== Required Skills ====
 	C++ skills or Python skill.
