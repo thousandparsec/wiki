@@ -1,0 +1,9 @@
+'''tpserver-cpp''' is a Thousand Parsec server written in C++. Most of the server was written by [[User:Lee Begg|Lee]], with the [[RFTS]] ruleset written by xdotx, and a number of patches from other people.
+
+==Setup==
+See [[Tpserver-cpp Setup]].
+
+==Future work ideas==
+See [[Ideas for Programmers]].
+
+[[Category:Tpserver-cpp]]
