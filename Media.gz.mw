@@ -9,13 +9,13 @@ Features of this specification include:
 
 
 == How to Use ==
-The server gives a base URL for the media in the GameInfo frame. When this URL is appended with "Media.gz", the Media.gz file will be present. Clients download this file and it describes the media available on the media server (ie, at the URL). If the base URL is http://media.thousandparsec.net/media/, then the Media.gz file will be at http://media.thousandparsec.net/media/Media.gz.
+The server gives a base URL for the game's media in the GameInfo frame. When this URL is appended with "Media.gz", the Media.gz file will be present. Clients download this file and it describes the media available on the media server (ie, at the URL). If the base URL is http://media.thousandparsec.net/media/, then the Media.gz file will be at http://media.thousandparsec.net/media/Media.gz.
 
 Thousand Servers will not give full URLs for the media to be used, instead it will give a URL leaving out the media extension. It is up to the client to choose the file type that is requires.
 
 For example,
 <pre>
-Server's base url:  http://media.thousandparsec.net/media/
+Game's base url:  http://media.thousandparsec.net/media/
 Object's media url: planets/planet1
 </pre>
 
