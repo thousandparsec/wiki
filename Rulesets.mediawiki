@@ -17,4 +17,4 @@ Milestone rulesets are special rulesets designed to exercise certain features of
 [[Category:Game Design]]
 </noinclude>
 
-=== Possible Rulesets ===
+==== Possible Rulesets ====
