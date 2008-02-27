@@ -191,7 +191,7 @@ The python library currently as no testing. It's your job to write enough tests 
 
 == Help develop wxWidget client ==
 
-[[http://www.thousandparsec.net/tp/downloads.php#tpclient-pywx tpclient-pywx]] is currently the primary client for access Thousand Parsec, there are many things which can be done to improve it. Here are a bunch of suggestions,
+[http://www.thousandparsec.net/tp/downloads.php#tpclient-pywx tpclient-pywx] is currently the primary client for access Thousand Parsec, there are many things which can be done to improve it. Here are a bunch of suggestions,
 
 ===== Save window perspective =====
 The client should restore all the windows to the same position/size/location. See the wxAUI demo for the window saving perspective code.
