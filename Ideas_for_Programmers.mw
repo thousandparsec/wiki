@@ -4,6 +4,9 @@ Below are some of the ideas and suggestions for people who would like to join in
 
 For additional ideas you can also take a look at [http://sourceforge.net/tracker/?group_id=132078&atid=829724 Thousand Parsec TODO list].
 
+
+
+
 = Clients =
 
 Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the main client is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
@@ -60,6 +63,9 @@ The AI in TP games connects to the game as a normal client and has exactly the s
 === More Information ===
 * [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary Existing Python Simple AI].
 
+
+
+
 = Servers =
 
 [[tpserver-cpp]] is one of the main servers in Thousand Parsec. These project ideas deal with improving it in various ways.
@@ -114,6 +120,9 @@ Some things that would be nice to have:
 
 == More useful fail frames ==
 Fail frames as of TP04 have a list of General Purpose References. Most of the createFailFrame calls currently do not set the list of references. They need to be added.  Some things don't yet have reference types yet, they will also need to be added.
+
+
+
 
 = Development Tools =
 
@@ -176,7 +185,10 @@ Currently protocol libraries have no way of testing their compliance with the pr
 * [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=documents.git;a=summary Documents repository]
 
 ==== Required Skills ====
-	Some experience with testing is a must
+* Some experience with testing is a must
+
+
+
 
 = Python Stuff =
 
@@ -239,6 +251,9 @@ Feel free to add more ideas, a good place to look is wxAUI Forums.
 
 === Required Skills ===
 * Good Python skills is a must
+
+
+
 
 = Rulesets =
 
