@@ -6,7 +6,7 @@ For additional ideas you can also take a look at [http://sourceforge.net/tracker
 
 == Clients ==
 
-Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the main client is written in Python. There is also a C++ client for KDE being developed.
+Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the main client is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
 
 We want you to write a new client for Thousand Parsec. This client will service people who are not in a situation to use tpclient-pywx.
 
@@ -31,11 +31,11 @@ It is expected that you would produce a client which has the following functiona
 [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py]
 
 ==== Required Skills ====
-	Strong Web development skill.
+Strong Web development skill.
 
 === 3D Client ===
 
-A cool 3d client for Thousand Parsec is needed. A pyOgre client was started but is in need of quite a bit of love. You could choose to use that as a base or start a new client from scratch.
+A cool 3d client for Thousand Parsec is needed. A [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pyogre.git;a=summary pyOgre client] was started but is in need of quite a bit of love. You could choose to use that as a base or start a new client from scratch.
 
 It is expected that you would produce a client which has the following functionality,
 
@@ -45,10 +45,13 @@ It is expected that you would produce a client which has the following functiona
 * Support for creating designs
 
 ==== More Information ====
-	pyOgre
+For Python look at [http://python-ogre.org/ pyOgre], [http://panda3d.org/ Panda3D], [http://www.pyglet.org/ pyglet].
+For C++ look at [http://www.ogre3d.org/ Ogre 3D], [http://www.cegui.org.uk/wiki/index.php/Main_Page CEGUI]
 
 ==== Required Skills ====
-	Some 3D development skills
+* Some 3D development skills.
+* Strong coding skills in language of choice.
+
 
 === AI Clients ===
 
