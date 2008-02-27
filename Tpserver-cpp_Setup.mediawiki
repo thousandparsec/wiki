@@ -1,3 +1,6 @@
+This page documents some ways of getting [[tpserver-cpp]] built.
+
+==mithro's setup==
 The follow is how mithro sets up his server, YMMV.
 
 <pre>
@@ -42,3 +45,5 @@ Now use the following option for the tpserver-cpp configure script to show it wh
 <pre>
 --with-guile=/sw/share/guile/1.8/scripts/binoverride
 </pre>
+
+[[Category:Tpserver-cpp]]
