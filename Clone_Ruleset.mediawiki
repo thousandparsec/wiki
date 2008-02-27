@@ -27,7 +27,12 @@ The goal of this project is to implement a Diplomacy style game - one focused on
 [http://en.wikipedia.org/wiki/Ascendancy_(computer_game) Wikipedia Page]
 
 == Stars! ==
-[http://en.wikipedia.org/wiki/Stars%21 Wikipedia Page]
+[http://en.wikipedia.org/wiki/Stars%21 Wikipedia Page], [http://wiki.gible.net/index.php?title=Main_Page Stars! Wiki], [http://www.starsautohost.org/stars.htm Stars! Autohost]
+
+Stars! is an Advanced, Interstellar, Turn Based Strategy Game and a member of 4x genre (eXplore, eXpand, eXploit, eXterminate) of PC games. It was written by Jeff Johnson and Jeff McBride with help from Jeffrey Krauss (collectively known as the Jeffs). Written in response to finding a distinct lack of quality games in the genre, it was truly a game ahead of its time. It is by far one of the most strategically in-depth and balanced games in existence. It has kept people addicted for years, and still supports a loyal player community.
+
+==== More information ====
+* [http://wiki.gible.net/index.php?title=Order_of_Events Order of events in turn generation]
 
 == Risk... in space! ==
 [http://en.wikipedia.org/wiki/Risk_%28game%29 Wikipedia Page]
