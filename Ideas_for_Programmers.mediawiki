@@ -171,7 +171,9 @@ Any changes to the core protocol will need to be vetted by other Thousand Parsec
 Currently protocol libraries have no way of testing their compliance with the protocol specification. Your job would be to write a suite which runs a protocol library through a bunch of tests and report on it's compliance.
 
 ==== More Information ====
-	Protocol 3
+* [http://www.thousandparsec.net/tp/dev/documents/protocol3.php Protocol 3]
+* [http://www.thousandparsec.net/tp/dev/documents/protocol4.php Protocol 4], [http://www.thousandparsec.net/tp/dev/documents/protocolxml.php xml description]
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=documents.git;a=summary Documents repository]
 
 ==== Required Skills ====
 	Some experience with testing is a must
