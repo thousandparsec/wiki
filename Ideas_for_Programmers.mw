@@ -4,7 +4,7 @@ Below are some of the ideas and suggestions for people who would like to join in
 
 For additional ideas you can also take a look at [http://sourceforge.net/tracker/?group_id=132078&atid=829724 Thousand Parsec TODO list].
 
-== Clients ==
+= Clients =
 
 Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the main client is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
 
@@ -12,7 +12,7 @@ We want you to write a new client for Thousand Parsec. This client will service 
 
 These tasks are a reasonable amount of work, depending on which language you choose you may need to improve (or implement from scratch) a protocol library. You will need to be a reasonable coder before you start any of these projects if you hope to succeed.
 
-=== Web based client ===
+== Web based client ==
 
 A web based client enables players to join Thousand Parsec games easily from any computer with a web browser and internet connection. This makes web based client the fastest and easiest way to start playing the game.
 
@@ -25,15 +25,15 @@ It is expected that you would produce a client which has the following functiona
 * Support for issuing orders
 * Support for creating designs
 
-==== More Information ====
+=== More Information ===
 [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-php.git;a=summary libtpproto-php], 
 [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git;a=summary libtpproto-rb], 
 [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py]
 
-==== Required Skills ====
+=== Required Skills ===
 Strong Web development skill.
 
-=== 3D Client ===
+== 3D Client ==
 
 A cool 3d client for Thousand Parsec is needed. A [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pyogre.git;a=summary pyOgre client] was started but is in need of quite a bit of love. You could choose to use that as a base or start a new client from scratch.
 
@@ -44,18 +44,21 @@ It is expected that you would produce a client which has the following functiona
 * Support for issuing orders
 * Support for creating designs
 
-==== More Information ====
+=== More Information ===
 * For Python look at [http://python-ogre.org/ pyOgre], [http://panda3d.org/ Panda3D], [http://www.pyglet.org/ pyglet], [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py].
 * For C++ look at [http://www.ogre3d.org/ Ogre 3D], [http://www.cegui.org.uk/wiki/index.php/Main_Page CEGUI], [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-cpp.git;a=summary libtpproto-cpp]
 
-==== Required Skills ====
+=== Required Skills ===
 * Some 3D development skills.
 * Strong coding skills in language of choice.
 
 
-=== AI Clients ===
+== AI Clients ==
 
 The AI in TP games connects to the game as a normal client and has exactly the same information as a normal player would have. tpsai-py implements a some-what simple AI for Minisec. Galaxie also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
+
+=== More Information ===
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary Existing Python Simple AI].
 
 == Servers ==
 
