@@ -176,20 +176,20 @@ Currently protocol libraries have no way of testing their compliance with the pr
 ==== Required Skills ====
 	Some experience with testing is a must
 
-== Python Stuff==
+= Python Stuff =
 
 Thousand Parsec uses a lot of python. These projects are generally to do with improve some python part of Thousand Parsec.
 
-=== Add testing to libtpproto-py ===
+== Add testing to libtpproto-py ==
 
 The python library currently as no testing. It's your job to write enough tests that at least 60% of the code has proper testing.
 
-==== More Information ====
-	libtpproto-py
-==== Required Skills ====
-	Some experience with unit testing and Python is a must
+=== More Information ===
+* libtpproto-py
+=== Required Skills ===
+* Some experience with unit testing and Python is a must
 
-=== Help develop wxWidget client ===
+== Help develop wxWidget client ==
 
 [[http://www.thousandparsec.net/tp/downloads.php#tpclient-pywx tpclient-pywx]] is currently the primary client for access Thousand Parsec, there are many things which can be done to improve it. Here are a bunch of suggestions,
 
@@ -219,7 +219,7 @@ Features should include;
 * To easily filter various system messages in intelligent ways.
 * Good searching facility.
 
-=== Improve wxWidget's pyAUI ===
+== Improve wxWidget's pyAUI ==
 
 The next version of tpclient-pywx, the primary Thousand Parsec client is heavily dependent on pyAUI. There are a bunch of improvements which could be added to make pyAUI even better. Some examples are,
 
@@ -231,12 +231,12 @@ The next version of tpclient-pywx, the primary Thousand Parsec client is heavily
 * Vertical Title bars
 
 Feel free to add more ideas, a good place to look is wxAUI Forums.
-==== More Information ====
-	PyAUI
-tpclient-pywx Development Branch
+=== More Information ===
+* PyAUI
+* tpclient-pywx Development Branch
 
-==== Required Skills ====
-	Good Python skills is a must
+=== Required Skills ===
+* Good Python skills is a must
 
 == Rulesets ==
 
