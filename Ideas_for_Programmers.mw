@@ -105,6 +105,11 @@ Make is possible that when started with no config file, ask the users a number o
 == Separate the console from the server ==
 Make it possible to connect remotely, or at least locally, to a daemon-ized tpserver-cpp. Need to pass commands into the server and get logging and output back. Could be quite a few ways to do this. Maybe a special server configuration protocol could be designed so that various different configuration interfaces (for example integrated into clients, presented as Single Player mode) could connect to a special configuration port.
 
+
+
+
+
+
 = Development Tools =
 
 These projects are about improving or creating standalone tools for Thousand Parsec. They are the mostly self contain projects, however it is still expected that you be involved with the rest of the project.
@@ -168,9 +173,6 @@ Currently protocol libraries have no way of testing their compliance with the pr
 
 ==== Required Skills ====
 * Some experience with testing is a must
-
-
-
 
 = Python Stuff =
 
