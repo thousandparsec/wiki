@@ -63,7 +63,7 @@ An AI client in Thousand Parsec games connects to the game as a normal client an
 === More Information ===
 * [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary Existing Python Simple AI].
 
-= tpserver-cpp =
+= Tpserver-cpp =
 
 [[tpserver-cpp]] is one of the main servers in Thousand Parsec. These project ideas deal with improving it in various ways.
 
