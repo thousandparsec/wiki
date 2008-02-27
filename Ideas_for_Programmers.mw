@@ -269,7 +269,8 @@ The goal of this project is to implement RFTS as a TP ruleset in any server. Add
 A new version of RFTS was released some years later. It also could be used as a ruleset, however it is a much more ambitous project, and would require a lot of work to expand the TP protocol.
 
 === More Information ===
-Wikipedia Page
+* [http://en.wikipedia.org/wiki/Reach_for_the_Stars_%28computer_game%29 Wikipedia Page]
+* [http://www.thousandparsec.net/wiki/TP_RFTS Thousand Parsec Wiki]
 
 === Required Skills ===
 Good Python or C++ Skills
