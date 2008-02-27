@@ -9,7 +9,7 @@ For additional ideas you can also take a look at [http://sourceforge.net/tracker
 
 = Clients =
 
-Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=summary main client)] is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
+Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=summary main client] is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
 
 You can help us by  writing a new client for Thousand Parsec. This client will service people who are not in a situation to use tpclient-pywx.
 
