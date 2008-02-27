@@ -150,10 +150,10 @@ Some features would include:
 * Some type of "match making" support
 
 ==== More Information ====
-	[1652210] - Add long term stats to Metaserver
-[1652205] - Add match making service to the Metaserver.
-[1652204] - Add RSS Feeds to the Metaserver.
-[1652209] - Clean up Metaserver code.
+* [https://sourceforge.net/tracker/index.php?func=detail&aid=1652210&group_id=132078&atid=829724 1652210 - Add long term stats to Metaserver]
+* [https://sourceforge.net/tracker/index.php?func=detail&aid=1652205&group_id=132078&atid=829724 1652205 - Add match making service to the Metaserver.]
+* [https://sourceforge.net/tracker/index.php?func=detail&aid=1652204&group_id=132078&atid=829724 1652204 - Add RSS Feeds to the Metaserver.]
+* [https://sourceforge.net/tracker/index.php?func=detail&aid=1652209&group_id=132078&atid=829724 1652209 - Clean up Metaserver code.]
 
 ==== Required Skills ====
 	Some PHP skills (or other Web development skills).
