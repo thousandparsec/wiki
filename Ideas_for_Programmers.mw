@@ -45,8 +45,8 @@ It is expected that you would produce a client which has the following functiona
 * Support for creating designs
 
 ==== More Information ====
-For Python look at [http://python-ogre.org/ pyOgre], [http://panda3d.org/ Panda3D], [http://www.pyglet.org/ pyglet].
-For C++ look at [http://www.ogre3d.org/ Ogre 3D], [http://www.cegui.org.uk/wiki/index.php/Main_Page CEGUI]
+* For Python look at [http://python-ogre.org/ pyOgre], [http://panda3d.org/ Panda3D], [http://www.pyglet.org/ pyglet], [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py].
+* For C++ look at [http://www.ogre3d.org/ Ogre 3D], [http://www.cegui.org.uk/wiki/index.php/Main_Page CEGUI], [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-cpp.git;a=summary libtpproto-cpp]
 
 ==== Required Skills ====
 * Some 3D development skills.
