@@ -9,9 +9,9 @@ For additional ideas you can also take a look at [http://sourceforge.net/tracker
 
 = Clients =
 
-Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the main client is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
+Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=summary main client)] is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
 
-We want you to write a new client for Thousand Parsec. This client will service people who are not in a situation to use tpclient-pywx.
+You can help us by  writing a new client for Thousand Parsec. This client will service people who are not in a situation to use tpclient-pywx.
 
 These tasks are a reasonable amount of work, depending on which language you choose you may need to improve (or implement from scratch) a protocol library. You will need to be a reasonable coder before you start any of these projects if you hope to succeed.
 
@@ -21,7 +21,7 @@ A web based client enables players to join Thousand Parsec games easily from any
 
 Any language could be used for the client. Some suggestions are PHP, Python or Ruby. It might be a good idea to use AJAX or something similar.
 
-It is expected that you would produce a client which has the following functionality,
+It is expected that the client has the following functionality:
 
 * Support for displaying the Starmap
 * Support for displaying all information about objects
@@ -29,8 +29,8 @@ It is expected that you would produce a client which has the following functiona
 * Support for creating designs
 
 === More Information ===
-[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-php.git;a=summary libtpproto-php], 
-[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git;a=summary libtpproto-rb], 
+[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-php.git;a=summary libtpproto-php],<br />
+[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git;a=summary libtpproto-rb],<br />
 [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py]
 
 === Required Skills ===
@@ -38,9 +38,9 @@ Strong Web development skill.
 
 == 3D Client ==
 
-A cool 3d client for Thousand Parsec is needed. A [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pyogre.git;a=summary pyOgre client] was started but is in need of quite a bit of love. You could choose to use that as a base or start a new client from scratch.
+A cool 3D client for Thousand Parsec is needed. A [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pyogre.git;a=summary pyOgre client] was started but is in need of quite a bit of love. You could choose to use that as a base or start a new client from scratch.
 
-It is expected that you would produce a client which has the following functionality,
+It is expected that the client has the following functionality:
 
 * Support for displaying the Starmap
 * Support for displaying all information about objects
@@ -58,13 +58,11 @@ It is expected that you would produce a client which has the following functiona
 
 == AI Clients ==
 
-The AI in TP games connects to the game as a normal client and has exactly the same information as a normal player would have. tpsai-py implements a some-what simple AI for Minisec. Galaxie also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
+An AI client in Thousand Parsec games connects to the game as a normal client and has exactly the same information as a normal player would have. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] implements a some-what simple AI for Minisec. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
+ Galaxie] also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
 
 === More Information ===
 * [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary Existing Python Simple AI].
-
-
-
 
 = Servers =
 
