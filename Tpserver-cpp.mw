@@ -1,7 +1,14 @@
-'''tpserver-cpp''' is a Thousand Parsec server written in C++. Most of the server was written by [[User:Lee Begg|Lee]], with the [[RFTS]] ruleset written by xdotx, and a number of patches from other people.
+'''tpserver-cpp''' is a Thousand Parsec server written in C++. Most of the server was written by [[User:Lee Begg|Lee]], with the [[TP RFTS]] ruleset written by xdotx, and a number of patches from other people.
+
+==Implemented Rulesets==
+* [[Minisec]]
+* [[MTSec]] (WIP)
+* [[TP RFTS]]
 
 ==Setup==
-See [[Tpserver-cpp Setup]].
+See [[Tpserver-cpp Setup]] for some hints on building tpserver-cpp.
+
+To quick-start a game, use the corresponding quickstart-''gamename''.conf configuration files. For more options, see the sample.conf files.
 
 ==Future work ideas==
 See [[Ideas for Programmers]].
