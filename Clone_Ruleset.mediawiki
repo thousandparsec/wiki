@@ -33,3 +33,12 @@ The goal of this project is to implement a Diplomacy style game - one focused on
 [http://en.wikipedia.org/wiki/Risk_%28game%29 Wikipedia Page]
 
 Take Risk board game and adapt it to be a space empire game.
+
+== Master of Orion ==
+[ Wikipedia Page]
+
+== Space Empires III ==
+[http://en.wikipedia.org/wiki/Space_Empires_III Wikipedia Page]
+
+== Sword of the Stars ==
+[http://en.wikipedia.org/wiki/Sword_of_the_Stars Sword of the Stars]
