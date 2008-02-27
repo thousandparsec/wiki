@@ -99,6 +99,12 @@ Some things that would be nice to have:
 == More useful fail frames ==
 Fail frames as of [[TP04]] have a list of General Purpose References. Most of the createFailFrame calls currently do not set the list of references. They need to be added.  Some things don't yet have reference types yet, they will also need to be added to the protocol.
 
+== Console guided setup ==
+Make is possible that when started with no config file, ask the users a number of questions to set up the server and the game. tpserver-cpp uses [[libtprl]] for the console, and it supports changing command sets.
+
+== Separate the console from the server ==
+Make it possible to remotely, or at lest connect locally, to a daemon-ized tpserver-cpp. Need to pass commands into the server and get logging and output back. Could be quite a few ways to do this.
+
 = Development Tools =
 
 These projects are about improving or creating standalone tools for Thousand Parsec. They are the mostly self contain projects, however it is still expected that you be involved with the rest of the project.
