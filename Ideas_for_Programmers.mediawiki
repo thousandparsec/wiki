@@ -252,9 +252,8 @@ MTSec (short for Missile and Torpedo Wars) is a simple game designed to flex the
 
 === More Information ===
 
-MTSec Documentation
-
-SF Todo Tracker Item
+* [http://www.thousandparsec.net/tp/dev/documents/mtsec.php MTSec Documentation]
+* [https://sourceforge.net/tracker/index.php?func=detail&aid=1678819&group_id=132078&atid=829724 SF Todo Tracker Item]
 
 === Required Skills ===
 * C++ skills or Python skill.
