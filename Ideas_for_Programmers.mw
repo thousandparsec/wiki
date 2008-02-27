@@ -60,51 +60,51 @@ The AI in TP games connects to the game as a normal client and has exactly the s
 === More Information ===
 * [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary Existing Python Simple AI].
 
-== Servers ==
+= Servers =
 
 tpserver-cpp is one of the main servers in Thousand Parsec. These project ideas deal with improving it in various ways.
 
 You will need some C++ skills before you start any of these projects (but not as much as if you where implementing a ruleset for this server). [[User:Lee Begg|Lee]] (llnz) is happy to mentor anyone working in these areas.
 
-=== PostgreSQL persistence ===
+== PostgreSQL persistence ==
 
 Tpserver-cpp (C++ Thousand Parsec server) has an abstract persistence interface that allows different methods of saving the game data. Currently, only a basic MySQL module has been written.
 
 The interface it fairly straight forward, but there is likely to be changes to the interface as the new game features are created and the internal architecture changes.
 
-==== More Information ====
+=== More Information ===
 * [http://www.postgresql.org/ PostgresSQL]
 * [http://sourceforge.net/tracker/index.php?func=detail&aid=1681326&group_id=132078&atid=829724 SF Todo Tracker Item].
 
-==== Required Skills ====
+=== Required Skills ===
 SQL (preferably PostgreSQL and or MySQL) experience, C++ experience
 
-=== SQLite persistence ===
+== SQLite persistence ==
 
 Tpserver-cpp (C++ Thousand Parsec server) has an abstract persistence interface that allows different methods of saving the game data. Currently, only a basic MySQL module has been written.
 
 The interface it fairly straight forward, but there is likely to be changes to the interface as the new game features are created and the internal architecture changes.
 
-==== More Information ====
+=== More Information ===
 * [http://www.sqlite.org/ SQLite]
 * [http://sourceforge.net/tracker/index.php?func=detail&aid=1681330&group_id=132078&atid=829724 SF Todo Tracker Item].
 
-==== Required Skills ====
-	SQL (preferably SQLite or MySQL) experience, C++ experience
+=== Required Skills ===
+* SQL (preferably SQLite or MySQL) experience, C++ experience
 
-=== Generic SQL persistence ===
+== Generic SQL persistence ==
 
 It shouldn't be too hard to abstract a generic SQL persistence module for tpserver-cpp from the current MySQL persistence module that could be used with just about any SQL database. It would also mean less work in future to keep the persistence modules in sync with the core data models.
 
-==== Required Skills ====
+=== Required Skills ===
 SQL experience, C++ experience
 
-=== Calendar Timer ===
+== Calendar Timer ==
 tpserver-cpp supports plug-able methods for triggering the end of turn processing. The current TurnTimer supports threshold finished changing of the timer, which is set in seconds.
 
 A new timer, called CalendarTimer could be developed that starts the EOT processing at the same calendar time (IE, everyday at 12:03am or similar).
 
-=== Rework Module System ===
+== Rework Module System ==
 tpserver-cpp module system works ok, but could be better. It could be just a matter of adding a layer of indirection in.
 
 Some things that would be nice to have:
@@ -112,7 +112,7 @@ Some things that would be nice to have:
 * New types of modules (advertising methods, universe builders, etc)
 * Load all modules, list their names on the console (on command), use some modules, unload rest.
 
-=== More useful fail frames ===
+== More useful fail frames ==
 Fail frames as of TP04 have a list of General Purpose References. Most of the createFailFrame calls currently do not set the list of references. They need to be added.  Some things don't yet have reference types yet, they will also need to be added.
 
 == Development Tools ==
