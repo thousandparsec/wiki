@@ -26,7 +26,9 @@ It is expected that you would produce a client which has the following functiona
 * Support for creating designs
 
 ==== More Information ====
-	libtpproto-php, libtpproto-rb, libtpproto-py
+[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-php.git;a=summary libtpproto-php], 
+[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git;a=summary libtpproto-rb], 
+[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py]
 
 ==== Required Skills ====
 	Strong Web development skill.
