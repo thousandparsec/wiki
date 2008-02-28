@@ -1,18 +1,18 @@
-Traders is based around 2 settings, Elite and Traveller.
+Traders is [[Rulesets|ruleset]] based around two settings, [http://en.wikipedia.org/wiki/Elite_(video_game) Elite] and [http://en.wikipedia.org/wiki/Traveller_(role-playing_game) Traveller].
 
 == Elite & Traveller ==
 
 Originally the idea was inspired from Elite, but as time has progressed I've
-moved more towards traveller for the core ideas.  There are a number of
-reasons for this.  Elite is fun, but at the end of the day it is heavily based
-around blowing stuff up.  Pirates are found in nearly all systems, and you can
+moved more towards traveller for the core ideas. There are a number of
+reasons for this. Elite is fun, but at the end of the day it is heavily based
+around blowing stuff up. Pirates are found in nearly all systems, and you can
 expect to have blast your way through at least some of the time.  
 
-Traveller also has a number of big pluses to my mind.  The speed of
-information travel being slow is the first big plus.  Making trade decisions
+Traveller also has a number of big pluses to my mind. The speed of
+information travel being slow is the first big plus. Making trade decisions
 based only on your current information, no matter how old is a good game
-design idea.  Also traveller's range of ship sizes - from 100 ton (or
-smaller!?) to up to 3 million tons.  This allows a vast gulf for potential
+design idea. Also traveller's range of ship sizes - from 100 ton (or
+smaller!?) to up to 3 million tons. This allows a vast gulf for potential
 ship improvement.
 
 == Basic Ideas ==
