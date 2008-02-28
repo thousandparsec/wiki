@@ -1,16 +1,16 @@
 Thousand Parsec is the ideal framework to clone your favourite 4X game! 
 
-Thousand Parsec's greatest strength is that it is a protocol for describing games, not a single game ruleset. Obviously then the more (complete) rulesets the better.
+Thousand Parsec's greatest strength is that it is a [[Protocol|protocol]] for describing games, not a single game [[Rulesets|ruleset]]. Obviously then the more (complete) rulesets the better.
 
 You can choose to implement the rulesets in either the Python Server or in the C++ Server. Both servers currently only implement MiniSec but have been designed to support a wide variety of other rulesets.
 
-﻿Here are some ideas on some cool games to clone.
+Here are some ideas on some cool games to clone.
 
 === Skills required ===
 
 Creating a new ruleset is a significant amount of work. Some rulesets may require more significant amount of work as they may require additions to protocol or changes to various server internals. Generally difficulty is proportional to the ruleset complexity.
 
-﻿All these tasks will require C++ skills (if developing for the C++ Server) or Python (if developing for the Python Server). You may need to do some work on the core of the server if you are doing more advanced stuff too.
+All these tasks will require C++ skills (if developing for the C++ Server) or Python (if developing for the Python Server). You may need to do some work on the core of the server if you are doing more advanced stuff too.
 
 
 == Diplomancy... In Space ==
