@@ -1,4 +1,4 @@
-TIM Trader (Typical Interstellar Material Trader) is a ruleset designed to test some of the more advance parts of ruleset creation for Python Server's ruleset.
+TIM Trader (Typical Interstellar Material Trader) is a [[Rulesets|ruleset]] designed to test some of the more advance parts of ruleset creation for Python Server's ruleset.
 
 The game is relatively simple, the idea is to accumulate as much wealth as possible. You do this by moving goods around the universe. Your actions however effect the development of the Universe, you can cause systems to become a poor industrial backwater or wealth trading hub.
 
