@@ -40,6 +40,8 @@ Stars! is an Advanced, Interstellar, Turn Based Strategy Game and a member of 4x
 == Risk... in space! ==
 [http://en.wikipedia.org/wiki/Risk_%28game%29 Wikipedia Page]
 
+''' Difficulty:''' Easier
+
 Take Risk board game and adapt it to be a space empire game.
 
 == Master of Orion ==
