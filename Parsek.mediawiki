@@ -1,7 +1,7 @@
 '''Parsek''' is a free and open source '''game client''' for playing 4X (explore, expand, exploit and exterminate) strategy games created by Thousand Parsec project. Parsek is designed for '''KDE 4 desktop''' and should run at least on Linux, Mac OS X and Windows. Here you will find description of Parsek and some info on how to get started with development.
 
 == What is Parsek? ==
-Parsek is one of the [[clients]] for Thousand Parsec games. It is designed to run in [http://www.kde.org/ KDE] 4 desktop environment. This version of KDE is currently under development and is [http://techbase.kde.org/Schedules/KDE4/4.0_Release_Schedule planned] to be released sometime in October 2007. Like most of the KDE 4 applications, Parsek is programmed in C++ and uses [http://doc.trolltech.com/4.3/index.html Qt 4.3] and [http://api.kde.org/4.0-api/kdelibs-apidocs/ KDE 4 libraries]. In addition it also uses [http://www.thousandparsec.net/tp/dev/documents/libtpproto-cpp/html/ libtpproto-cpp library], which provides functions needed to communicate with Thousand Parsec game [[servers]].
+Parsek is one of the [[clients]] for Thousand Parsec games. It is designed to run in [http://www.kde.org/ KDE] 4 desktop environment. Like most of the KDE 4 applications, Parsek is programmed in C++ and uses [http://doc.trolltech.com/latest/ Qt 4] and [http://api.kde.org/4.x-api/kdelibs-apidocs/ KDE 4 libraries]. In addition it also uses [http://www.thousandparsec.net/tp/dev/documents/libtpproto-cpp/html/ libtpproto-cpp library], which provides functions needed to communicate with Thousand Parsec game [[servers]].
 
 == Preparing for development ==
 
