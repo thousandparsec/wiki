@@ -6,7 +6,7 @@ Parsek is one of the [[clients]] for Thousand Parsec games. It is designed to ru
 == Preparing for development ==
 
 === KDE 4 development environment ===
-First you will need to set up KDE 4 development environment. This means that you get Qt 4.3 and kdelibs installed. The complete process is described on [http://developernew.kde.org/Getting_Started/Build/Unstable_Version this web page].
+First you will need to set up KDE 4 development environment. This means that you get Qt 4.3 and kdelibs installed. The complete process is described on [http://techbase.kde.org/index.php?title=Getting_Started/Build/KDE4 this web page].
 
 === libtpproto-cpp library ===
 Before trying to compile Parsek you will also need to compile and install libtpproto-cpp library. [http://sourceforge.net/project/showfiles.php?group_id=132078&package_id=153887 Download it from here].
