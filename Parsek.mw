@@ -12,7 +12,7 @@ First you will need to set up KDE 4 development environment. This means that you
 Before trying to compile Parsek you will also need to compile and install libtpproto-cpp library. [http://sourceforge.net/project/showfiles.php?group_id=132078&package_id=153887 Download it from here].
 
 === Get Parsek source code ===
-The source code for Parsek is available in [[Git]] repository of Thousand Parsec project. To get the source code for Parsek, run the command:
+The source code for Parsek is available in [[Git]] repository of Thousand Parsec project. To get the source code for Parsek, run the command (you need to have git and cogito installed):
  
  cg-clone git://git.thousandparsec.net/git/parsek.git
 
@@ -20,7 +20,7 @@ You use this command only for the first time you are getting the source code. La
 
  cg-update
 
-from within the parsek folder. 
+from within the parsek folder.
 
 === Compiling Parsek ===
 Now that you have development environment ready and source code on your computer it is time to compile Parsek. For this it is recommended that you first create a separate folder for building. Then you move into this folder and issue this command: 
