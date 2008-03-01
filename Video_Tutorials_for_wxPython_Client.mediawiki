@@ -1,0 +1,21 @@
+== Part I - Connecting to a Game Server ==
+
+Welcome to the first part of video tutorial for the main client for playing Thousand Parsec games. In this tutorial we will show you how to connect to a server that is hosting the game.
+
+After you start the client and this cool intro video ends, a Connect to Server dialog appears. You use it to connect to a remote (or local) server where Thousand Parsec games are hosted.
+
+As you can see it asks you to enter the name of the server to connect to, the username of the account you have on this server and its password. This is useful if you already know all the required login information.
+
+We will now take a different approach, which is more suitable if you are connecting to a game server for the first time.
+
+Let's first click on the Find button, which is next to the Server field. This brings up the dialog which shows you all the servers known to the client. The game client gets the list of servers from a special Thousand Parsec metaserver, which is also available through your web browser. As you can see, the same servers are listed on this page.
+
+OK, let's return to the client. In addition to server names it also shows which game is being played on each server, how many players are playing this game, how many objects are in the Universe and some other info.
+
+Let's pick some server... This Demo1 one looks quite nice. Now we also need to create an account for ourselves on this server, by clicking on the New Account button.
+
+A new dialog opens where the server is already entered into the server field. As you can see, it is very similar to the first Connect to Server dialog. First we need to click on the Check button. *** WHY? *** Now you can enter your desired username and password. You have to enter the same password two times. Just to make sure you didn't make typo. Finally, you also enter your e-mail address and click the OK button.
+
+The server will tell you if it has successfully created your new account. Let's click OK again, and one more time on the very first dialog. At this point the client asks you, if you would like to save the account details, so that you can use the entered account information anytime in the future when you connect to the same server. Let's say Yes.
+
+The client will now download the information about the game Universe and then you will actually be ready to conquer the Universe.
