@@ -192,6 +192,10 @@ Currently protocol libraries have no way of testing their compliance with the pr
 
 Thousand Parsec uses a lot of python. These projects are generally to do with improve some python part of Thousand Parsec.
 
+== Extend tpsai-py to support RFTS ruleset ==
+
+[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] is a simple AI which currently only supports minisec. Your job is to clean up and extend it to support the [ RFTS ruleset].
+
 == Port tpserver-py to Twisted ==
 
 The python server currently uses it's own async core loop. Your job is to port it to the [http://twistedmatrix.com/ twisted framework], this will be a multiple stage process.
@@ -216,7 +220,7 @@ Step 8 - Party
 
 == Create a new ruleset for tpserver-py ==
 
-See the Ruleset section for more information.
+See the [#Ruleset Ruleset] section for more information.
 
 == Add testing to libtpproto-py ==
 
