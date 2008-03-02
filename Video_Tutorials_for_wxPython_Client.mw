@@ -1,21 +1,49 @@
 == Part I - Connecting to a Game Server ==
 
-Welcome to the first part of video tutorial for the main client for playing Thousand Parsec games. In this tutorial we will show you how to connect to a server that is hosting the game.
+(before you start the client)
+Welcome to the first part of video tutorial for the main client for playing Thousand Parsec games. In this tutorial we will show you how find a server, create an account and then connect to a game.
 
-After you start the client and this cool intro video ends, a Connect to Server dialog appears. You use it to connect to a remote (or local) server where Thousand Parsec games are hosted.
+(start the client and wait till the connection dialog?) 
 
-As you can see it asks you to enter the name of the server to connect to, the username of the account you have on this server and its password. This is useful if you already know all the required login information.
+When you start the client and the cool intro video finishes, a Connect to Server dialog appears. You use it to connect to a Thousand Parsec game server.
 
-We will now take a different approach, which is more suitable if you are connecting to a game server for the first time.
+(highlight the various feilds as they are mentioned)
+As you can see it asks you to enter the name of the server to connect to, the username of the account you have on this server and its password. 
 
-Let's first click on the Find button, which is next to the Server field. This brings up the dialog which shows you all the servers known to the client. The game client gets the list of servers from a special Thousand Parsec metaserver, which is also available through your web browser. As you can see, the same servers are listed on this page.
+The first time you start, the default values will log you in as guest on the primary demo server. This lets you view the universe but not actually play the game. 
 
-OK, let's return to the client. In addition to server names it also shows which game is being played on each server, how many players are playing this game, how many objects are in the Universe and some other info.
+To actually start playing, we need to create a new account. To do this we click the "Find" button, which is next to the Server field. 
 
-Let's pick some server... This Demo1 one looks quite nice. Now we also need to create an account for ourselves on this server, by clicking on the New Account button.
+(click the "find" button)
 
-A new dialog opens where the server is already entered into the server field. As you can see, it is very similar to the first Connect to Server dialog. First we need to click on the Check button. *** WHY? *** Now you can enter your desired username and password. You have to enter the same password two times. Just to make sure you didn't make typo. Finally, you also enter your e-mail address and click the OK button.
+This brings up the "Server Browser" dialog which shows you all the servers known to the client. The game client gets the list of servers from a special Thousand Parsec metaserver, which is also available through your web browser.  
+
+(show the metaserver website)
+
+As you can see, the same servers are listed on this page. The links on this page let you start the client directly from the web browser. OK, let's return to the client. 
+
+(return to the client)
+
+(highlight the various columns and let the tooltip show)
+In addition to server names it also shows which game is being played on each server, how many players are playing this game, how many objects are in the Universe and some other info.
+
+Let's pick some server... The Demo1 one looks quite nice. Now we also need to create an account for ourselves on this server, by clicking on the New Account button.
+
+(click the new account button)
+
+A new dialog opens where the server is already entered into the server field. As you can see, it is very similar to the first Connect to Server dialog. 
+
+First we need to check that the server supports remote creation of accounts. Some servers may require that you sign up through a webpage or may be private games. You can do this by clicking the "check" button.
+
+(click the check button)
+
+Now you can enter your desired username and password. You have to enter the same password two times. Just to make sure you didn't make typo. Finally, you also enter your e-mail address and click the OK button.
+
+(click the okay button)
 
 The server will tell you if it has successfully created your new account. Let's click OK again, and one more time on the very first dialog. At this point the client asks you, if you would like to save the account details, so that you can use the entered account information anytime in the future when you connect to the same server. Let's say Yes.
 
 The client will now download the information about the game Universe and then you will actually be ready to conquer the Universe.
+
+* Maybe add recalling other accounts?
+* What about the 'g' button, that probably needs to be explained?
