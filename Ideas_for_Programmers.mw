@@ -214,6 +214,10 @@ Step 8 - Party
 
 '''Note:''' It is important that tpserver-py still has "zero install and setup" option which means that you can just get a copy of the code and type ./tpserver-py
 
+== Create a new ruleset for tpserver-py ==
+
+See the Ruleset section for more information.
+
 == Add testing to libtpproto-py ==
 
 The python library currently as no testing. It's your job to write enough tests that at least 60% of the code has proper testing.
