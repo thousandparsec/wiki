@@ -194,7 +194,7 @@ Thousand Parsec uses a lot of python. These projects are generally to do with im
 
 == Extend tpsai-py to support RFTS ruleset ==
 
-[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] is a simple AI which currently only supports minisec. Your job is to clean up and extend it to support the [ RFTS ruleset].
+[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] is a simple AI which currently only supports minisec. Your job is to clean up and extend it to support the [[TP RFTS]] ruleset.
 
 == Port tpserver-py to Twisted ==
 
