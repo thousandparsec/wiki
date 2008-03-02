@@ -231,7 +231,7 @@ The python server currently uses it's own async core loop. Your job is to port i
 
 == Create a new ruleset for tpserver-py ==
 
-See the [[#Ruleset|Ruleset]] section for more information.
+See the [[#Rulesets|Rulesets]] section for more information.
 
 == Add testing to libtpproto-py ==
 
