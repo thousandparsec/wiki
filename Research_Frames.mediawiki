@@ -1,0 +1,40 @@
+This page documents a '''proposal''' for '''Research frames''' for [[TP04]].
+
+= Concept =
+Technologies that can be researched form an acyclic directed graph of dependencies. Technologies can have other technologies they conflict with so that they can not be chosen. The player is given a number of "points" and distributes them as the player sees fit.
+
+This model should be able to support all methods used for research by controlling the dependence and points.
+
+Per-player, technologies can be known or not know (IE, the player knows the technology exists), and can be learnt or not learnt (IE, the player has researched it, or was given it).
+
+= Frames =
+
+== Technology Description ==
+All fields are read only.
+
+* techId - uint32
+* name - str
+* description - str
+* prerequisites - List uint32
+* conflicts - List uint32
+* provides - List GPR (General Purpose Reference)
+* otherBenefits - str
+* serial - uint64 serial number
+
+== Technology Id List ==
+A pair of getIdList and IdList frames will be used to get known technologies.
+
+== Research ==
+Research frames are a pair of Get and Set, both returning a Research frame. A ResearchSet frame has the same content as a Research frame.
+
+* pointsAvailable - uint32 (RO)
+* researchList - List
+** techId - uint32
+** assignedPoints - uint32
+** turns - uint32
+
+= Open issues =
+* How to find what tech the player has learnt
+* How to find what tech other players have learnt
+
+[[Category:Proposals]]
