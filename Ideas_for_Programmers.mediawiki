@@ -118,6 +118,13 @@ New rulesets can be written for tpserver-cpp, see [[#Rulesets|Rulesets]] section
 == Change to use Boost.Random ==
 We currently have a reasonable PRNG, which Boost.Random also supplies, but only a limited set of random variables. This could be changed by replacing the custom implementation with Boost.Random.
 
+
+
+
+
+
+
+
 = Development Tools =
 
 These projects are about improving or creating standalone tools for Thousand Parsec. They are the mostly self contain projects, however it is still expected that you be involved with the rest of the project.
