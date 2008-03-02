@@ -192,6 +192,22 @@ Currently protocol libraries have no way of testing their compliance with the pr
 
 Thousand Parsec uses a lot of python. These projects are generally to do with improve some python part of Thousand Parsec.
 
+== Intergrate and improve schemepy ==
+
+[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=schemepy.git;a=summary Schemepy] is a Python ctypes library that Mithro started to allow Python to call out to various supported C Scheme implimentations (such as [http://www.gnu.org/software/guile/guile.html Guile]). This makes processing scheme 10 to 100 times faster then the current pyscheme.
+
+You job is to do (some) of the following,
+* Add support for various other C scheme libraries such as [http://www.plt-scheme.org/software/mzscheme/ mzscheme], [http://www.call-with-current-continuation.org/ chicken], [http://freshmeat.net/redir/gauche/19776/url_homepage/gauche Gauche], [http://freshmeat.net/projects/sizzle/ Sizzle] or [http://tinyscheme.sourceforge.net/home.html TinyScheme]. The more popular scheme libraries should be preferred.
+* Add support for [http://freshmeat.net/projects/sisc/ SISC], [http://freshmeat.net/projects/gleam/ Gleam] or other Java scheme implimentations when run under Jython.
+* Add support for python scheme implimentation as fallbacks, both [http://hkn.eecs.berkeley.edu/~dyoo/python/pyscheme/ pyscheme] and [http://code.google.com/soc/2007/psf/appinfo.html?csaid=7DEFE8FECA98BD0B PyPy Scheme] (code found [https://codespeak.net/viewvc/pypy/dist/pypy/lang/scheme/ here]).
+
+You will also need to do these at a minimum,
+* Create a strong scheme and tpcl test suite including benchmarking.
+* Port [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpserver-py.git;a=summary tpserver-py] to use the schemepy interface.
+* Port [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpclient-py.git;a=summary libtpclient-py] to use the schemepy interface.
+
+'''Required Skill:''' Strong Python skills are a '''must'''. Having used either scheme or python-ctypes is a strong plus but not required. Experiance building compliance and/or testing suits is also a bonus.
+
 == Extend tpsai-py to support RFTS ruleset ==
 
 [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] is a simple AI which currently only supports minisec. Your job is to clean up and extend it to support the [[TP RFTS]] ruleset.
@@ -200,23 +216,18 @@ Thousand Parsec uses a lot of python. These projects are generally to do with im
 
 The python server currently uses it's own async core loop. Your job is to port it to the [http://twistedmatrix.com/ twisted framework], this will be a multiple stage process.
 
-Step 1 - Port the core to Twisted's reactor, see [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=blob;f=tp/netlib/twist.py libtpproto-py twist.py] for a start of this.
-
-Step 2 - Change the SQL queries to using the async thread worker pool. [http://foss.eepatents.com/sAsync/ See this documentation] about how this could be done.
-
-Step 3 - Change any print statements to be logging statements.
-
-Step 4 - Make tpserver-py daemonize.
-
-Step 5 - Add support for an inbuilt http server - including authentication (to allow download of media and battle data etc)
-
-Step 6 - Add support for multicast DNS/Zeroconf to Twisted.
-
-Step 7 - Add a ssh/telnet port that lets programs remotely manage the server (such as add/remove games, etc).
-
-Step 8 - Party
+* Step 1 - Port the core to Twisted's reactor, see [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=blob;f=tp/netlib/twist.py libtpproto-py twist.py] for a start of this.
+* Step 2 - Change the SQL queries to using the async thread worker pool. [http://foss.eepatents.com/sAsync/ See this documentation] about how this could be done.
+* Step 3 - Change any print statements to be logging statements.
+* Step 4 - Make tpserver-py daemonize.
+* Step 5 - Add support for an inbuilt http server - including authentication (to allow download of media and battle data etc)
+* Step 6 - Add support for multicast DNS/Zeroconf to Twisted.
+* Step 7 - Add a ssh/telnet port that lets programs remotely manage the server (such as add/remove games, etc).
+* Step 8 - Party
 
 '''Note:''' It is important that tpserver-py still has "zero install and setup" option which means that you can just get a copy of the code and type ./tpserver-py
+
+'''Required Skills:''' Strong Python skills are '''required''', experience with twisted is also strongly advised.
 
 == Create a new ruleset for tpserver-py ==
 
@@ -226,10 +237,11 @@ See the [#Ruleset Ruleset] section for more information.
 
 The python library currently as no testing. It's your job to write enough tests that at least 60% of the code has proper testing.
 
-=== More Information ===
+'''More Information:'''
 * libtpproto-py
-=== Required Skills ===
-* Some experience with unit testing and Python is a must
+
+'''Required Skills''':
+* Some experience with unit testing and Python is a must.
 
 == Help develop wxWidget client ==
 
