@@ -302,7 +302,7 @@ All these tasks will require C++ skills (if developing for the C++ Server) or Py
 
 == MTSec ==
 
-MTSec (short for Missile and Torpedo Wars) is a simple game designed to flex the ship and weapon design capabilities of Thousand Parsec. It is the first ruleset to have a simple economy and should be more interesting then the first prototype game MiniSec.
+MTSec (short for Missile and Torpedo Wars) is a simple game designed to flex the ship and weapon design capabilities of Thousand Parsec. It is the first ruleset to have a simple economy and should be more interesting then the first prototype game MiniSec. A start has been made to the C++ implementation, but needs a lot of work.
 
 === More Information ===
 
@@ -311,7 +311,6 @@ MTSec (short for Missile and Torpedo Wars) is a simple game designed to flex the
 
 === Required Skills ===
 * C++ skills or Python skill.
-
 
 == [[Clone_Ruleset|Clone an Existing Game]] ==
 Thousand Parsec is the ideal framework to clone your favourite 4X game!
