@@ -49,3 +49,33 @@ The next tutorial will show you the basics of navigating the Universe and issuin
 
 * Maybe add recalling other accounts?
 * What about the 'g' button, that probably needs to be explained?
+
+== Part II - A Tour Around the Main Window ==
+
+Welcome to the second video tutorial for the main client for playing Thousand Parsec games. This tutorial will show you around the main window of the client.
+
+Once you have an account on a server and you succesfully connect to that server, the client <dramatic voice>downloads the Universe</dramatic voice>. This means it gets the information about players in the game, planets, spaceships, and whatnot. After the downloading is complete just click OK to get into the game.
+
+As in many other programs the first thing that pops up is the Tip of the Day window. When you read all the tips you can disable the window by de-selecting the Show tips at startup option. Now let's click on the Close button to hide tips and get to the main window.
+
+At the heart of the game is the StarMap. Curently all the systems are cramped in the center of the map. So I will use the Zoom dropdown menu and select the Fit option. This makes all the systems in the universe fit nicely into the StarMap wiew. Other options are to zoom the map to view just some percentage, like this... Or you can also select to draw a Box around objects you would like to see in the map view.
+
+Now look at the map and find a green colored system (that's a dot with an orbit and one or more smaller dots around it). This is our home system. Other systems are colored in red (these are enemy systems) or in white (these are unclaimed systems). If you click on the last dropdown menu above the StarMap, where it now says Verses, and then select Individual, each system will be colored, depending on who owns it. Each player has his (or her) own, random, color.
+
+There is another different type of view on the Universe. If you click on the dropdown list, where it now says Systems, you can select the Resources option. You now get a pie-chart at every point in the Universe where there are some resources. For example here the red part represents the Home Planet resource and the blue part represents the Ship Part resource. Off course you can show all these resources separately, as defferently sized circles, if you select a specific resource from the second dropdown list where currently All is selected.
+
+Notice that when you have different view modes selected the data in the information popups is also different. Oh yeah, you might be wondering what this little triangles on the map are. These are spaceships. Or more accurately, fleets of spaceships. There is also one big red triangle on the map. This one shows the currently selected object.
+
+One more thing to explain about the starmap, this button right here. By defualt it shows an ordinary mouse pointer. This means clicking on the map selects objects. If you click on the button a menu shows where you can select Move. In this mode you can click anywhere on the map and move the map around. You can probably guess what Zoom In and Zoom Out options do. There is also a disabled option Waypoint, well see what this does in another tutorial. Keep in mind that you can always return to the default selection mode by just pressing the Escape key on your keyboard. And when you are in the Mouse selection mode you can still move the map around if you click in an empty space and move the map.
+
+It's time we look at all the panels around the StarMap.
+
+At the right you can see the System tree view. It shows all the objects in the Universe in a similar way you can explore files and folders on your hard disk. At the bottom you can see a quick search bar, which you can use to quickly find some object that is lost somwhere in space.
+
+In the bottom-right corner there is the Messages panel. Here you will first see a welcome message from the server. Later in the game you will receive messages about various events, like battles, completed constructions, and the like. You can use Prev and Next buttons to move from one message to another. Clicking Delete will remove the currently shown message. The Goto button gets enabled when you get a message that references some objects from the game. Clicking on this button enables you to quickly jump to those objects.
+
+To the left of the Messages panel is the Information wiew. It shows all the data about the currently selected object. Further to the left you can also see a picture of the currently selected object.
+
+Above the picture there's the Orders list, showing all orders asigned to the current object. This is also where you can manage orders, like add them, remove or edit them. We will see how to use this panel in detail in one of the next tutorials.
+
+One last important thing is hiding at the right of the status bar. The EOT acronym means End Of Time and here is where the countdown until the end of turn is shown, in hours, minutes and seconds.
