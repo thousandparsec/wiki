@@ -25,7 +25,7 @@
 : The current “media support” is just a hack in tpclient-pywx. The dynamic objects will allow proper specification of what media should be used for objects and such.
 
 ; Research support
-: The protocol will include support for figuring out which “Research options” are available. It will support a wide range of research methods too (from researching for a specific object, to researching in a general area).
+: The protocol will include support for figuring out which “Research options” are available. It will support a wide range of research methods too (from researching for a specific object, to researching in a general area). [[Research Frames|Proposal here]].
 
 ; EOT Support
 : There will be support for things like saying “I’m Done” and “Please end the turn now.”. This will mean we are no longer just stuck with the EOT at a certain time problem like in tpserver-cpp (or when admin runs a special program like in tpserver-py).
