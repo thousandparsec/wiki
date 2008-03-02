@@ -192,6 +192,28 @@ Currently protocol libraries have no way of testing their compliance with the pr
 
 Thousand Parsec uses a lot of python. These projects are generally to do with improve some python part of Thousand Parsec.
 
+== Port tpserver-py to Twisted ==
+
+The python server currently uses it's own async core loop. Your job is to port it to the [http://twistedmatrix.com/ twisted framework], this will be a multiple stage process.
+
+Step 1 - Port the core to Twisted's reactor, see [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=blob;f=tp/netlib/twist.py libtpproto-py twist.py] for a start of this.
+
+Step 2 - Change the SQL queries to using the async thread worker pool. [http://foss.eepatents.com/sAsync/ See this documentation] about how this could be done.
+
+Step 3 - Change any print statements to be logging statements.
+
+Step 4 - Make tpserver-py daemonize.
+
+Step 5 - Add support for an inbuilt http server - including authentication (to allow download of media and battle data etc)
+
+Step 6 - Add support for multicast DNS/Zeroconf to Twisted.
+
+Step 7 - Add a ssh/telnet port that lets programs remotely manage the server (such as add/remove games, etc).
+
+Step 8 - Party
+
+'''Note:''' It is important that tpserver-py still has "zero install and setup" option which means that you can just get a copy of the code and type ./tpserver-py
+
 == Add testing to libtpproto-py ==
 
 The python library currently as no testing. It's your job to write enough tests that at least 60% of the code has proper testing.
@@ -249,14 +271,6 @@ Feel free to add more ideas, a good place to look is wxAUI Forums.
 
 === Required Skills ===
 * Good Python skills is a must
-
-
-
-
-
-
-
-
 
 = Rulesets =
 
