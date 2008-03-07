@@ -251,6 +251,18 @@ The python library currently as no testing. It's your job to write enough tests 
 '''Required Skills''':
 * Some experience with unit testing and Python is a must.
 
+== Finish libtpproto2-py ==
+
+libtpproto2-py is the second generation protocol library designed to automatically generate packet descriptions from xml. It is pretty close to being finished and just needs a little love. It also need a large amount of testing.
+
+You should then port libtpclient-py to the library.
+'''More Information:'''
+* libtpproto-py
+
+'''Required Skills''':
+* Some experience with Python is a must.
+
+
 == Help develop wxWidget client ==
 
 [http://www.thousandparsec.net/tp/downloads.php#tpclient-pywx tpclient-pywx] is currently the primary client for access Thousand Parsec, there are many things which can be done to improve it. Here are a bunch of suggestions,
