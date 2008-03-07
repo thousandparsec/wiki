@@ -281,13 +281,13 @@ Features should include;
 * To easily filter various system messages in intelligent ways.
 * Good searching facility.
 
-===== Add undo support ====
+===== Add undo support =====
 
 Add the ability to undo any action. This probably comes in multiple parts,
 * Adding a change tracker to libtpclient-py
 * Adding the ability to revert specific things using the the change tracker
 
-==== Add a cool 3d starmap ====
+===== Add a cool 3d starmap =====
 
 It would be pretty easy to embedded an OpenGL window where the starmap is currently. Why not make a cool 3d starmap while still having access to all the GUI elements.
 
