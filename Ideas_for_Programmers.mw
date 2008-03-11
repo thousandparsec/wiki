@@ -269,11 +269,13 @@ The python library currently as no testing. It's your job to write enough tests 
 libtpproto2-py is the second generation protocol library designed to automatically generate packet descriptions from xml. It is pretty close to being finished and just needs a little love. It also need a large amount of testing.
 
 You should then port libtpclient-py to the library.
-'''More Information:'''
-* libtpproto-py
 
-'''Required Skills''':
-* Some experience with Python is a must.
+==== More Information ====
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git libtpproto-py] - The original Python protocol library.
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git libtpproto2-py] - The "second generation" protocol library.
+
+==== Required Skills ====
+* Some experience with [http://www.python.org/ Python] is a must.
 
 == Help develop wxWidget client ==
 
