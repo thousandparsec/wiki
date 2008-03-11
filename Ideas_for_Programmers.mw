@@ -247,7 +247,8 @@ The python server currently uses it's own async core loop. Your job is to port i
 
 '''Note:''' It is important that tpserver-py still has "zero install and setup" option which means that you can just get a copy of the code and type ./tpserver-py
 
-'''Required Skills:''' Strong Python skills are '''required''', experience with twisted is also strongly advised.
+==== Required Skills ====
+Strong Python skills are '''required''', experience with twisted is also strongly advised.
 
 == Create a new ruleset for tpserver-py ==
 
