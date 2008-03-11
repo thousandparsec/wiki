@@ -159,7 +159,7 @@ Meet strange and interesting races... and kill them. One of the core tenants of 
 
 The goal for this project is to design and implement a protocol for player races. Protocol and server support are a necessity, as is a (portable) client that can create races in some way. Race files will need to be saved and distributed. Take into account both fixed races (ala Master of Orion) or races built using another ruleset (ala Stars!). Also you will need to have at least one implementation of a game that uses the races in some way - easiest is Minisec, but if others are working on another project building a ruleset, you may work with them. Race files need to be verified in some manner on the server, so take into account how to do this easily.
 
-=== More information ===
+==== More information ====
 * [http://wiki.gible.net/index.php?title=Article_Library#Race_Design Stars! FAQ - Race Design]
 * [http://wiki.gible.net/index.php?title=Article_Library#Race_Design.2FStrategy Stars-R-Us - Race Design/Strategy]
 
