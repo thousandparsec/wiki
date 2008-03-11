@@ -54,10 +54,27 @@ It is expected that the client has the following functionality:
 
 == AI Clients ==
 
-An AI client in Thousand Parsec games connects to the game as a normal client and has exactly the same information as a normal player would have. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] implements a some-what simple AI for Minisec.[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary Galaxie] also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
+An AI client in Thousand Parsec games connects to the game as a normal client and has exactly the same information as a normal player would have. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] implements a some-what simple AI for Minisec. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary Galaxie] also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
+
+While it would be nice to have an AI client which adapts to any ruleset, this will '''NOT''' be possible in 3 months. We recommend that you concentrate on a specific ruleset (such as [[TP_RFTS|RFTS Clone]] or [http://www.thousandparsec.net/tp/dev/documents/mtsec.php MTSec]).
+
+An option might be intergrating with a resource allocation library like [http://www.librcps.org/ libRCPS]. It is okay to use external supporting libraries. Another good resource is [http://mirror.linux.org.au/linux.conf.au/2007/video/tuesday/tuesday_1450_gaming.ogg Wesnoth for Kernel Hackers] talk at [http://linux.conf.au/ Linux.conf.au], Rusty Russell talks about his solution to some of the complex AI battle problems.
+
+The AI will be expected to be do most of the following:
+* Able to complete games when playing against itself.
+* Offer a challange to newer player.
+
+The AI will '''NOT''' be able to do any of the following
+* Intergrate with the server, it must be a stand alone program.
+* Cheat or have some other handicap, it must play by the same rules as everyone else.
 
 === More Information ===
 * [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary Existing Python Simple AI].
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary Client with inbuilt AI], written in C.
+
+You will need to get a good knowledge of the ruleset you are writing the AI for.
+* [[TP_RFTS|RFTS Clone]] - Wiki page about our RFTS clone, getting yourself a copy of RFTS will also be highly advantagous.
+* [http://www.thousandparsec.net/tp/dev/documents/mtsec.php MTSec] - Page describing the MTSec dynamics.
 
 = Tpserver-cpp =
 
