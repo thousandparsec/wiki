@@ -52,7 +52,6 @@ It is expected that the client has the following functionality:
 * Some 3D development skills.
 * Strong coding skills in language of choice.
 
-
 == AI Clients ==
 
 An AI client in Thousand Parsec games connects to the game as a normal client and has exactly the same information as a normal player would have. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] implements a some-what simple AI for Minisec.[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary Galaxie] also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
@@ -107,13 +106,6 @@ New rulesets can be written for tpserver-cpp, see [[#Rulesets|Rulesets]] section
 
 == Change to use Boost.Random ==
 We currently have a reasonable PRNG, which Boost.Random also supplies, but only a limited set of random variables. This could be changed by replacing the custom implementation with Boost.Random.
-
-
-
-
-
-
-
 
 = Development Tools =
 
@@ -178,13 +170,6 @@ Currently protocol libraries have no way of testing their compliance with the pr
 
 ==== Required Skills ====
 * Some experience with testing is a must
-
-
-
-
-
-
-
 
 = Python Stuff =
 
@@ -251,7 +236,6 @@ You should then port libtpclient-py to the library.
 
 '''Required Skills''':
 * Some experience with Python is a must.
-
 
 == Help develop wxWidget client ==
 
