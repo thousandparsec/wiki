@@ -26,10 +26,9 @@ It is expected that the client has the following functionality:
 * Support for creating designs
 
 === More Information ===
-* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py] - Python Protocol Library
-* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto2-py.git;a=summary libtpproto2-py] - Second Generation Python Protocol Library
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py] - Python Protocol Library, [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto2-py.git;a=summary libtpproto2-py] - Second Generation Python Protocol Library, [http://pylonshq.com/ Pylons] - Python Rapid Web Development, [http://wiki.python.org/moin/Django Django] - High Level Web Development, [http://www.turbogears.org/ TurboGears] - Another RAD Web Toolkit
 * [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-php.git;a=summary libtpproto-php] - PHP Protocol Library
-* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git;a=summary libtpproto-rb] - Ruby Protocol Library
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git;a=summary libtpproto-rb] - Ruby Protocol Library, [http://www.rubyonrails.org/ Ruby on Rails] - Web development which does not hurt
 
 === Required Skills ===
 Strong Web development skill.
