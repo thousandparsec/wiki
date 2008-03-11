@@ -33,7 +33,13 @@ Please look at the [[Clone Ruleset]] page for some ideas of possible rulesets.
 
 == The Universe in an Hour ==
 
-Design a simple ruleset in which a whole game can be finished in an hour.
+Design a simple ruleset in which a whole game can be finished in an hour. This would be a perfect ruleset for beginners and those who don't have time for longer advanced games.
+
+=== More Information ===
+* [http://en.wikipedia.org/wiki/Konquest Konquest] - an example short 4X game
+
+=== Required Skills ===
+* C++ skills or Python skills.
 
 = Clients =
 
