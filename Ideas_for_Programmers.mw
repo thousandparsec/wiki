@@ -165,27 +165,25 @@ The goal for this project is to design and implement a protocol for player races
 
 == MetaServer ==
 
-The metaserver was written in about 5 hours. It works but requires a lot of work before it's a "good" piece of software. It could also be rewritten in another language.
+The metaserver was originally written in about 5 hours, it was then improved as part of last years Summer of Code. It is in a pretty good shape but needs some polish before we can deploy it as our main server. Once a release has been made, more features can then be added.
 
-Some features would include:
+You job will be to,
+* clean up and release the metaserver,
+* add more functionality to the metaserver.
 
-* Implementing the full specification found in the discussion document
+Some suggestions for new features include,
 * Make it portable across databases
-* Add RSS output support
-* Produce statistics and some type of graphing
-* "Back Connect" support for verification of details
-* Some type of "match making" support
+* Add a "match making" support
+* Intergrate with the [http://forums.thousandparsec.net/ forums] and [http://www.thousandparsec.net/tp/mailman.php/listinfo/ mailing lists].
+* Add request via standalone UDP or TCP ports.
 
 ==== More Information ====
-* [https://sourceforge.net/tracker/index.php?func=detail&aid=1652210&group_id=132078&atid=829724 1652210 - Add long term stats to Metaserver]
-* [https://sourceforge.net/tracker/index.php?func=detail&aid=1652205&group_id=132078&atid=829724 1652205 - Add match making service to the Metaserver.]
-* [https://sourceforge.net/tracker/index.php?func=detail&aid=1652204&group_id=132078&atid=829724 1652204 - Add RSS Feeds to the Metaserver.]
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=metaserver-lite.git;a=summary Metaserver Code Repository] (the currently running code), [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=metaserver-lite.git;a=shortlog;h=rewrite rewrite branch] (which was used during last Summer of Code).
+* [http://www.thousandparsec.net/tp/dev/documents/protocol4.php#metaserver Metaserver protocol definition]
 * [https://sourceforge.net/tracker/index.php?func=detail&aid=1652209&group_id=132078&atid=829724 1652209 - Clean up Metaserver code.]
 
 ==== Required Skills ====
-* Some PHP skills (or other Web development skills).
-
-'''Update:''' [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=metaserver-lite.git;a=shortlog;h=rewrite metaserver-lite-rewrite] has most of the features above, but needs a little polish. It would be nice to have the rewrite as the active metaserver.
+* Some PHP skills.
 
 == Thousand Parsec Protocol ==
 
