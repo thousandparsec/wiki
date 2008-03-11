@@ -4,9 +4,6 @@ Below are some of the ideas and suggestions for people who would like to join in
 
 For additional ideas you can also take a look at [http://sourceforge.net/tracker/?group_id=132078&atid=829724 Thousand Parsec TODO list].
 
-
-
-
 = Clients =
 
 Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=summary main client] is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
@@ -62,13 +59,6 @@ An AI client in Thousand Parsec games connects to the game as a normal client an
 
 === More Information ===
 * [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary Existing Python Simple AI].
-
-
-
-
-
-
-
 
 = Tpserver-cpp =
 
