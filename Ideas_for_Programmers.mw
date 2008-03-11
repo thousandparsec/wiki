@@ -226,9 +226,11 @@ You will also need to do these at a minimum,
 ==== Required Skills ====
 Some Python skills are a '''must'''. Having used either scheme or python-ctypes is a strong plus but not required. Experiance building compliance and/or testing suits is also a bonus.
 
-== Extend tpsai-py to support RFTS ruleset ==
+== tpsai-py - RFTS ruleset ==
 
-[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] is a simple AI which currently only supports minisec. Your job is to clean up and extend it to support the [[TP RFTS]] ruleset.
+[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] is a simple AI written in Python using the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpclient-py.git Client] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git Protocol] libraries. It has only had a couple of days worth of work and is still very simple. It currently does an okay job at playing [http://www.thousandparsec.net/tp/dev/documents/minisec.php MiniSec].
+
+Your job is to clean up and extend it to support either [[TP RFTS]] ruleset or [http://www.thousandparsec.net/tp/documents/mtsec.php MTSec] ruleset. You can see the [http://www.thousandparsec.net/wiki/Ideas_for_Programmers#AI_Clients AI Clients] section for more information on what you would need to do.
 
 == Port tpserver-py to Twisted ==
 
