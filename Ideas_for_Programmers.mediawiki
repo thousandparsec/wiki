@@ -70,9 +70,11 @@ While it would be nice to have an AI client which adapts to any ruleset, this wi
 
 An option might be intergrating with a resource allocation library like [http://www.librcps.org/ libRCPS]. It is okay to use external supporting libraries. Another good resource is [http://mirror.linux.org.au/linux.conf.au/2007/video/tuesday/tuesday_1450_gaming.ogg Wesnoth for Kernel Hackers] talk at [http://linux.conf.au/ Linux.conf.au], Rusty Russell talks about his solution to some of the complex AI battle problems.
 
+
 The AI will be expected to be do most of the following:
 * Able to complete games when playing against itself.
 * Offer a challange to newer player.
+
 
 The AI will '''NOT''' be able to do any of the following
 * Intergrate with the server, it must be a stand alone program.
