@@ -37,12 +37,22 @@ Strong Web development skill.
 
 A cool 3D client for Thousand Parsec is needed. A [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pyogre.git;a=summary pyOgre client] was started but is in need of quite a bit of love. You could choose to use that as a base or start a new client from scratch.
 
-It is expected that the client has the following functionality:
+This client can be developed in either C++ or Python. Having a prebuilt and tested protocol library is important as the amount of work required for just a 3d client is substantial, hence theses are the '''only languages''' we will accept.
 
+
+It is expected that the client has the following functionality
 * Support for displaying the Starmap
 * Support for displaying all information about objects
 * Support for issuing orders
 * Support for creating designs
+* '''Having a good UI is more important then flashy graphics which can be improved later.'''
+
+
+You could look at the following games for some ideas,
+* [http://www.hegemonia.info/ Hegemonia - Legions of Iron]
+* [http://en.wikipedia.org/wiki/Master_of_Orion_3 Master of Orion 3]
+* [http://en.wikipedia.org/wiki/Sins_of_a_Solar_Empire Sins of a Solar Empire]
+* [http://en.wikipedia.org/wiki/Galactic_Civilizations_II:_Dread_Lords Galactic Civilization II]
 
 === More Information ===
 * For Python look at [http://python-ogre.org/ pyOgre], [http://panda3d.org/ Panda3D], [http://www.pyglet.org/ pyglet], [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py].
