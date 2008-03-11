@@ -26,9 +26,10 @@ It is expected that the client has the following functionality:
 * Support for creating designs
 
 === More Information ===
-[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-php.git;a=summary libtpproto-php],<br />
-[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git;a=summary libtpproto-rb],<br />
-[http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py]
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py] - Python Protocol Library
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto2-py.git;a=summary libtpproto2-py] - Second Generation Python Protocol Library
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-php.git;a=summary libtpproto-php] - PHP Protocol Library
+* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git;a=summary libtpproto-rb] - Ruby Protocol Library
 
 === Required Skills ===
 Strong Web development skill.
