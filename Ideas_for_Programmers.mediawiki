@@ -279,7 +279,11 @@ You should then port libtpclient-py to the library.
 
 == Help develop wxWidget client ==
 
-[http://www.thousandparsec.net/tp/downloads.php#tpclient-pywx tpclient-pywx] is currently the primary client for access Thousand Parsec, there are many things which can be done to improve it. Here are a bunch of suggestions,
+[http://www.thousandparsec.net/tp/downloads.php#tpclient-pywx tpclient-pywx] is currently the primary client for access Thousand Parsec, there are many things which can be done to improve it. 
+
+You should take some of these suggestions and build them into a consistent proposal suitable for 3 months. You '''MUST''' download and used the client before trying to write an application. You also need to talk to [mithro@mithis.com Mithro] as you will be working closely with him if you take on this idea.
+
+These tasks are in no particular order and some are more difficult then others. 
 
 ===== Save window perspective =====
 The client should restore all the windows to the same position/size/location. See the wxAUI demo for the window saving perspective code.
