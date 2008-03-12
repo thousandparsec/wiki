@@ -362,7 +362,7 @@ Look into using something like pyglet or python-ogre.
 
 == Improve wxWidget's pyAUI ==
 
-The next version of tpclient-pywx, the primary Thousand Parsec client is heavily dependent on pyAUI. There are a bunch of improvements which could be added to make pyAUI even better. Some examples are,
+The next version of tpclient-pywx, the primary Thousand Parsec client, is heavily dependent on pyAUI. There are a bunch of improvements which could be added to make pyAUI even better. Some examples are,
 
 * Minimise button support
 * Add better way to align the windows initially
