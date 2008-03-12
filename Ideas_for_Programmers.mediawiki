@@ -74,7 +74,7 @@ Strong Web development skill.
 
 A cool 3D client for Thousand Parsec is needed. A [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pyogre.git;a=summary pyOgre client] was started but is in need of quite a bit of love. You could choose to use that as a base or start a new client from scratch.
 
-This client can be developed in either C++ or Python. Having a prebuilt and tested protocol library is important as the amount of work required for just a 3d client is substantial, hence theses are the '''only languages''' we will accept.
+We highly recommend to develop this client in either C++ or Python. Having a prebuilt and tested protocol library is important as the amount of work required for just a 3D client is substantial, hence these two are the '''only languages''' we will accept for Google Summer of Code.
 
 
 It is expected that the client has the following functionality
