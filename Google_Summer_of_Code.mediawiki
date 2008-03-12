@@ -66,28 +66,28 @@ For additional ideas we encourage students to look at [http://sourceforge.net/tr
 = Mentors =
 
 * Tim Ansell (mithro)
-** E-mail: [mithro@mithis.com mithro AT mithis DOT. com]
-** Jabber: [jabber://mithro@gmail.org mithro@gmail.org]
+** E-mail: [mailto:mithro@mithis.com mithro AT mithis DOT. com]
+** Jabber: mithro@gmail.org
 ** Responsible for: All Python Code (tpserver-py, tpclient-py, libtp*-py), Metaserver
 * Lee Begg (llnz)
-** E-mail: [llnz%20AT%20paradise%20DOT.%20net%20DOT.%20nz llnz AT paradise DOT. net DOT. nz]
-** Jabber: [jabber://llnz@jabber.org llnz@jabber.org]
+** E-mail: [mailto:llnz%20AT%20paradise%20DOT.%20net%20DOT.%20nz llnz AT paradise DOT. net DOT. nz]
+** Jabber: llnz@jabber.org
 ** Responsible for: All C++ Server (tpserver-cpp, libtpproto-cpp)
 * Jure Repinc (JLP)
-** E-mail: [jlp%20AT%20holodeck1%20DOT.%20com jlp AT holodeck1 DOT. com]
-** Jabber: [jabber://jlp@jabber.org jlp@jabber.org]
+** E-mail: [mailto:jlp%20AT%20holodeck1%20DOT.%20com jlp AT holodeck1 DOT. com]
+** Jabber: jlp@jabber.org
 ** Responsible for: parsek, General client Development
 * Brett Nash (nash)
-** E-mail: [nash%20AT%20nash%20DOT.%20id%20DOT.%20au nash AT nash DOT. id DOT. au]
-** Jabber: [jabber://brettnash@gmail.com brettnash@gmail.com]
+** E-mail: [mailto:nash%20AT%20nash%20DOT.%20id%20DOT.%20au nash AT nash DOT. id DOT. au]
+** Jabber: brettnash@gmail.com
 ** Responsible for: AI, General client Development, Ruleset Development
 
 There are also the following mentors, but they are smart enough not to disclose their details to the public.
 
 * Matthew Draper (matthewd)
-** Responsible for: All Ruby code (such as libtpproto-rb), Improvements to protocol.xml
+** Responsible for: All Ruby code (such as [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git libtpproto-rb]), Improvements to [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=documents.git;a=tree;f=protocol protocol.xml]
 * Jotham Read (jothamd)
-** Responsible for: Battleviewer, Some Artwork
+** Responsible for: [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=battleviewer.git;a=summary Battleviewer], Some Artwork
 * Tam Ho Wai Howell (pigeond)
 ** Responsible for: Mobile/Embedded Gui, Graphics, Play testing
 
