@@ -248,7 +248,7 @@ Thousand Parsec uses a lot of python. These projects are generally to do with im
 
 [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=schemepy.git;a=summary Schemepy] is a Python ctypes library that Mithro started to allow Python to call out to various supported C Scheme implimentations (such as [http://www.gnu.org/software/guile/guile.html Guile]). This makes processing scheme 10 to 100 times faster then the current pyscheme.
 
-Pyscheme is currently used by all the Python parts, include [Python Server] and the [Python Client]. It also has wider application in the Python community and it is recommended that you also work closely with the Python Software Foundation.
+Schemepy is currently used by all the Python parts, including the [Python Server] and the [Python Client]. It also has wider application in the Python community and it is recommended that you also work closely with the [http://www.python.org/psf/ Python Software Foundation].
 
 You job is to do (some) of the following,
 * Add support for various other C scheme libraries such as [http://www.plt-scheme.org/software/mzscheme/ mzscheme], [http://www.call-with-current-continuation.org/ chicken], [http://freshmeat.net/redir/gauche/19776/url_homepage/gauche Gauche], [http://freshmeat.net/projects/sizzle/ Sizzle] or [http://tinyscheme.sourceforge.net/home.html TinyScheme]. The more popular scheme libraries should be preferred.
