@@ -1,0 +1,128 @@
+
+
+Thousand Parsec was one of the mentoring organisations for [http://code.google.com/soc/2007 Google Summer of Code 2007]. This was a great chance for all students to work on a cool open source game project during the summer of 2007, have fun and earn some money during the process. The [http://www.thousandparsec.net/tp/google-summer-of-code-2007.php ideas page from 2007] is still available and a good source of information. 
+
+= Introduction =
+
+You can find a possible project for Google Summer of Code in multiple locations.
+
+* The first point of call should be the [[Ideas for Programmers]],
+* The second place to checkout is the [https://sourceforge.net/tracker/?group_id=132078&atid=829724 SF.net TODO list],
+* You can also try the [http://www.thousandparsec.net/tp/google-summer-of-code-2007.php#Ideas ideas list from 2007],
+* We also '''strongly encourage''' you to also come up with an idea on your own.
+
+We encourage you to read up about the [http://www.thousandparsec.net/tp/gettingstarted.php Getting Started Page], [[#Questions ask questions]], and then include the following in your proposal:
+
+# Detailed description / design document
+# An approximate schedule (timeline)
+# Brief description of past projects (including open source) that you've participated in
+# Brief resume/bio/contact information
+
+= Writing Proposals =
+
+The following links detail successful general ways to write a Summer of Code Proposal:
+
+* [http://inkscape.org/wiki/index.php/SOC_Writing_Project_Proposals HOWTO Write Project Proposals]
+* [http://inkscape.org/wiki/index.php/SOC_Accepted_Proposals Inkscape's Accepted Proposals]
+* [http://www.internet2.edu/~shalunov/writing/soc2005.html Internet2 Experience]
+* [http://summer.cs.pdx.edu/?q=node/12 Portland State University Experience]
+* [http://venge.net/monotone/summerofcode.html Monotone Experience]
+* [http://www.internet2.edu/~shalunov/tmp/rwatson-soc.txt Internet2 Experience]
+
+Please read [http://code.google.com/soc/2008/faqs.html Google's Summer of Code Student FAQ] and advice from past participants as you create your proposal.
+
+'''Feel free to submit multiple proposals.'''
+
+= Selection Criteria =
+
+The following gives some indication of some of the things we are looking for. There will probably be some subjective elements to it, but it's hoped that by trying to quantify the decision process, it'll help people understand why their application was or was not accepted.
+
+* '''Proposal is longer than a few sentences.''' We need some meat in the proposal in order to even consider it.
+* '''Proposer has contacted us prior to the submission.''' This demonstrates a definite interest in Thousand Parsec and proves an ability to communicate with us.
+* '''Proposer knows the appropriate programming language(s).'''
+* '''Proposer shows evidence of being able to create software.''' Our goal is to help programmers become good at Open Source, not to teach non-programmers how to program. However, we are willing to help people develop their programming skills.
+* '''Proposal is well written.''' While we don't expect perfect English, we do expect that the proposer took time to spell check, proofread it, organize it logically, and use comprehendable grammar.
+* '''Proposal demonstrates understanding of subject matter.''' We expect the proposer to do some research, ask questions, and gain some understanding of the project they're proposing. This gives us confidence that they'll be able to complete the project successfully.
+* '''Proposal shows creativity.''' We like to see someone thinking outside the box, including proposing ideas for projects we hadn't listed.
+* '''Proposal is the only submission for the given task.''' Many proposals focus on the same few tasks, so if you're the only person proposing to do a given project, that weighs in your favor.
+* '''Proposal shows implementation planning.''' If the author has broken the work out into a task list, it shows that they know what they'll be doing.
+* '''Proposal scope is realistic.''' 3 months goes fast. Proposals that are promising too much are unlikely to be completed in a timely fashion.
+
+The following are conditions that result in automatic rejection:
+
+* Reject: Group project proposed. Google has specified that groups MAY NOT participate. Individuals only.
+* Reject: Proposer is not a student. Requirement of the program.
+
+= Questions =
+
+# Read up the [http://www.thousandparsec.net/tp/dev/index.php developer section].
+# Join the [http://www.thousandparsec.net/tp/mailman.php/listinfo/ mailing lists] or [http://forums.thousandparsec.net/ web forums] (they are connected so you don't need to join both) and ask questions
+# Join the Thousand Parsec chat channel [irc://irc.freenode.org/#tp #tp, on irc.freenode.net].
+
+= Ideas =
+
+You can find our ideas list at [[Ideas for Programmers]] page. The list is not definitive and any student is more than welcome to come up with their own idea to work on. Initiative is a very good skill.
+
+The list is not definitive and any student is more than '''welcome to come up with their own idea''' to work on. '''Initiative is a skill which will rate highly''' when selecting projects. Feel free to come up with your own projects.
+
+For additional ideas we encourage students to look at [http://sourceforge.net/tracker/?group_id=132078&atid=829724 Thousand Parsec TODO list].
+
+= Mentors =
+
+* Tim Ansell (mithro)
+** E-mail: [mithro@mithis.com mithro AT mithis DOT. com]
+** Jabber: [jabber://mithro@gmail.org mithro@gmail.org]
+** Responsible for: All Python Code (tpserver-py, tpclient-py, libtp*-py), Metaserver
+* Lee Begg (llnz)
+** E-mail: [llnz%20AT%20paradise%20DOT.%20net%20DOT.%20nz llnz AT paradise DOT. net DOT. nz]
+** Jabber: [jabber://llnz@jabber.org llnz@jabber.org]
+** Responsible for: All C++ Server (tpserver-cpp, libtpproto-cpp)
+* Jure Repinc (JLP)
+** E-mail: [jlp%20AT%20holodeck1%20DOT.%20com jlp AT holodeck1 DOT. com]
+** Jabber: [jabber://jlp@jabber.org jlp@jabber.org]
+** Responsible for: parsek, General client Development
+* Brett Nash (nash)
+** E-mail: [nash%20AT%20nash%20DOT.%20id%20DOT.%20au nash AT nash DOT. id DOT. au]
+** Jabber: [jabber://brettnash@gmail.com brettnash@gmail.com]
+** Responsible for: AI, General client Development, Ruleset Development
+
+There are also the following mentors, but they are smart enough not to disclose their details to the public.
+
+* Matthew Draper (matthewd)
+** Responsible for: All Ruby code (such as libtpproto-rb), Improvements to protocol.xml
+* Jotham Read (jothamd)
+** Responsible for: Battleviewer, Some Artwork
+* Tam Ho Wai Howell (pigeond)
+** Responsible for: Mobile/Embedded Gui, Graphics, Play testing
+
+= Deadlines and Dates =
+
+Please see the [http://code.google.com/soc/2008/faqs.html#0.1_timeline official Google timeline] 
+
+'''Program timeline for 2008'''
+* March 17  - List of accepted mentoring organizations published on [http://code.google.com/soc/ code.google.com]; student application period opens.
+* March 24  - Student application period opens.
+* March 31  - Student application deadline.
+* April 14  - List of accepted student applications published on [http://code.google.com/soc/ code.google.com].
+'''[http://googlesummerofcode.blogspot.com/2007/04/so-what-is-this-community-bonding-all.html Community Bonding Period]''': Students get to know mentors, read documentation, get up to speed to begin working on their projects.
+* May 26    - Students begin coding for their GSoC projects; Google begins issuing initial student payments.
+'''Coding Period''': Mentors give students a helping hand and guidance on their projects.
+* July 7    - Mentors and students can begin submitting mid-term evaluations
+* July 14   - Mid-term evaluation deadline; Google begins issuing mid-term student payments.
+'''Coding Period''': Mentors give students a helping hand and guidance on their projects.
+* August 11 - Suggested 'pencils down' date. Take a week to scrub code, write tests, improve documentation, etc.
+* August 18 - Firm 'pencils down' date. Mentors, students and organization administrators can being submitting final evaluations to Google
+* September 1 - Final evaluation deadline; Google begins issuing student and mentoring organization payments.
+
+= External Links =
+
+* [http://code.google.com/gsoc Google Summer of Code (SoC)]
+* [http://code.google.com/soc/studentfaq.html Google SoC FAQ]
+
+= Thanks =
+
+We would like to thank the following people,
+
+* [http://wiki.creativecommons.org/Summer_of_Code Creative Commons] - a lot of the information in this document was adapted from their Summer of Code page.
+* [http://www.inkscape.com/ Inkscape] - the Inkscape project also has a large amount of stuff which was useful in creating this page.
+* [http://www.google.com/ Google] - without Google this wouldn't even be possible.
