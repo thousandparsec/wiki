@@ -8,7 +8,7 @@ For additional ideas you can also take a look at [http://sourceforge.net/tracker
 
 = Rulesets =
 
-Thousand Parsec's greatest strength is it's protocol for describing games. This allows a singple client to play any number of games. The different rules which make up a game still have to be added to a server, these are called [[Rulesets|rulesets]]. The more (complete) rulesets (and hence playable games) the better. Why not help out by building one?
+Thousand Parsec's greatest strength is it's protocol for describing games. This allows any client to play any number of games. The different rules which make up a game still have to be added to a server, these are called [[Rulesets|rulesets]]. The more (complete) rulesets (and hence playable games) the better. Why not help out by building one?
 
 You can choose to implement the rulesets in either the Python Server or in the C++ Server. Both servers currently only implement MiniSec but have been designed to support a wide variety of other rulesets.
 
@@ -34,6 +34,10 @@ MTSec (short for Missile and Torpedo Wars) is a simple game designed to flex the
 Thousand Parsec is the ideal framework to clone your favourite 4X game!
 
 Please look at the [[Clone Ruleset]] page for some ideas of possible rulesets.
+
+=== Required Skills ===
+* C++ skills or Python skills.
+* Knowledge of the Ruleset you wish to clone.
 
 == The Universe in an Hour ==
 
