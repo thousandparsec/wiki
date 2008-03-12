@@ -293,7 +293,7 @@ See the [[#Rulesets|Rulesets]] section for more information.
 
 == Add testing to libtpproto-py ==
 
-The python library currently as no testing. It's your job to write enough tests that at least 60% of the code has proper testing.
+The python library currently has no testing. It's your job to write enough tests that at least 60% of the code has proper testing.
 
 '''More Information:'''
 * libtpproto-py
