@@ -316,11 +316,11 @@ You should then port libtpclient-py to the library.
 
 == Help develop wxWidget client ==
 
-[http://www.thousandparsec.net/tp/downloads.php#tpclient-pywx tpclient-pywx] is currently the primary client for access Thousand Parsec, there are many things which can be done to improve it. 
+[http://www.thousandparsec.net/tp/downloads.php#tpclient-pywx tpclient-pywx] is currently the primary client for playing Thousand Parsec games. There are many things which can be done to improve it. 
 
-You should take some of these suggestions and build them into a consistent proposal suitable for 3 months. You '''MUST''' download and used the client before trying to write an application. You also need to talk to [mithro@mithis.com Mithro] as you will be working closely with him if you take on this idea.
+You should take some of these suggestions and build them into a consistent proposal suitable for 3 months. You '''MUST''' download and use the client before trying to write an application. You also need to talk to [mailto:mithro@mithis.com Mithro] as you will be working closely with him if you take on this idea.
 
-These tasks are in no particular order and some are more difficult then others. 
+These tasks are in no particular order and some are more difficult than others. 
 
 ===== Save window perspective =====
 The client should restore all the windows to the same position/size/location. See the wxAUI demo for the window saving perspective code.
@@ -329,7 +329,7 @@ The client should restore all the windows to the same position/size/location. Se
 The info panel is the primary display for information about the currently selected object. Currently it is really crappy looking. Make it look nicer.
 
 ===== "Distance to" window =====
-Add a window which replaces the starmap and shows the distant from the currently selected object to every other object in the Universe. Should be able to filter and sort on various criteria. This would be useful for blind players to fully access the game.
+Add a window which replaces the starmap and shows the distance from the currently selected object to every other object in the Universe. Should be able to filter and sort on various criteria. This would be useful for blind players to fully access the game.
 
 ===== Asset report =====
 Add a window which lists all your various assets.
@@ -354,9 +354,9 @@ Add the ability to undo any action. This probably comes in multiple parts,
 * Adding a change tracker to libtpclient-py
 * Adding the ability to revert specific things using the the change tracker
 
-===== Add a cool 3d starmap =====
+===== Add a cool 3D starmap =====
 
-It would be pretty easy to embedded an OpenGL window where the starmap is currently. Why not make a cool 3d starmap while still having access to all the GUI elements.
+It would be pretty easy to embedded an OpenGL window where the starmap is currently. Why not make a cool 3D starmap while still having access to all the GUI elements.
 
 Look into using something like pyglet or python-ogre.
 
