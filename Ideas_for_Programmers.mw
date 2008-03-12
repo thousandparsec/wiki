@@ -303,7 +303,7 @@ The python library currently has no testing. It's your job to write enough tests
 
 == Finish libtpproto2-py ==
 
-libtpproto2-py is the second generation protocol library designed to automatically generate packet descriptions from xml. It is pretty close to being finished and just needs a little love. It also need a large amount of testing.
+libtpproto2-py is the second generation protocol library designed to automatically generate packet descriptions from xml. It is pretty close to being finished and just needs a little love. It also needs a large amount of testing.
 
 You should then port libtpclient-py to the library.
 
