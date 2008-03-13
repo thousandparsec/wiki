@@ -149,6 +149,9 @@ You will need to get a good knowledge of the ruleset you are writing the AI for.
 
 You will need some C++ skills before you start any of these projects (but not as much as if you where implementing a ruleset for this server). [[User:Lee Begg|Lee]] (llnz) is happy to mentor anyone working in these areas.
 
+== New Rulesets ==
+New rulesets can be written for tpserver-cpp, see [[#Rulesets|Rulesets]] section below.
+
 == Persistence modules ==
 
 Tpserver-cpp has an abstract persistence interface that allows different methods of saving the game data. Currently, only a basic MySQL module has been written.
@@ -169,21 +172,6 @@ Another possible project would be to develop the interface for asynchronous pers
 ==== Required Skills ====
 * SQL (preferably MySQL and the target database) experience
 
-== Calendar Timer ==
-tpserver-cpp supports plug-able methods for triggering the end of turn processing. The current TurnTimer supports threshold finished changing of the timer, which is set in seconds.
-
-A new timer, called CalendarTimer (subclassing TurnTimer) could be developed that starts the EOT processing at the same calendar time (IE, everyday at 12:03am or similar). [http://www.boost.org/doc/html/date_time.html Boost.Date_Time] might be a good starting point
-
-== Rework Module System ==
-tpserver-cpp module system works ok, but could be better. It could be just a matter of adding a layer of indirection in.
-
-Some things that would be nice to have:
-* Modules dependencies
-* New types of modules (advertising methods, universe builders, etc)
-* Load all modules, list their names on the console (on command), use some modules, unload rest.
-
-== More useful fail frames ==
-Fail frames as of [[TP04]] have a list of General Purpose References. Most of the createFailFrame calls currently do not set the list of references. They need to be added.  Some things don't yet have reference types yet, they will also need to be added to the protocol.
 
 == Console guided setup ==
 Make is possible that when started with no config file, ask the users a number of questions to set up the server and the game. tpserver-cpp uses [[libtprl]] for the console, and it supports changing command sets.
@@ -191,10 +179,28 @@ Make is possible that when started with no config file, ask the users a number o
 == Separate the console from the server ==
 Make it possible to connect remotely, or at least locally, to a daemon-ized tpserver-cpp. Need to pass commands into the server and get logging and output back. Could be quite a few ways to do this. Maybe a special server configuration protocol could be designed so that various different configuration interfaces (for example integrated into clients, presented as Single Player mode) could connect to a special configuration port.
 
-== New Rulesets ==
-New rulesets can be written for tpserver-cpp, see [[#Rulesets|Rulesets]] section below.
 
-== Change to use Boost.Random ==
+== Shorter projects ==
+
+There are some smaller projects which could be a good introduction to tpserver-cpp. For Summer of Code, a number of these could be combined into a suitable proposal.
+
+=== Calendar Timer ===
+tpserver-cpp supports plug-able methods for triggering the end of turn processing. The current TurnTimer supports threshold finished changing of the timer, which is set in seconds.
+
+A new timer, called CalendarTimer (subclassing TurnTimer) could be developed that starts the EOT processing at the same calendar time (IE, everyday at 12:03am or similar). [http://www.boost.org/doc/html/date_time.html Boost.Date_Time] might be a good starting point
+
+=== Rework Module System ===
+tpserver-cpp module system works ok, but could be better. It could be just a matter of adding a layer of indirection in.
+
+Some things that would be nice to have:
+* Modules dependencies
+* New types of modules (advertising methods, universe builders, etc)
+* Load all modules, list their names on the console (on command), use some modules, unload rest.
+
+=== More useful fail frames ===
+Fail frames as of [[TP04]] have a list of General Purpose References. Most of the createFailFrame calls currently do not set the list of references. They need to be added.  Some things don't yet have reference types yet, they will also need to be added to the protocol.
+
+=== Change to use Boost.Random ===
 We currently have a reasonable PRNG, which Boost.Random also supplies, but only a limited set of random variables. This could be changed by replacing the custom implementation with Boost.Random.
 
 = Development Tools =
