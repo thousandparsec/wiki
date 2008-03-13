@@ -281,6 +281,13 @@ Currently protocol libraries have no way of testing their compliance with the pr
 ==== Required Skills ====
 * Some experience with testing is a must
 
+
+=== Protocol speed benchmarking tool ===
+
+It would be useful to have a tool that measures how fast various operations occur in the server to help profile bottlenecks and overall throughput. For an example of the sort of thing that would be useful, have a look at apachebench (AKA [http://httpd.apache.org/docs/2.2/programs/ab.html ab]) or [http://www.acme.com/software/http_load/ http_load].
+
+It would be helpful to start with one of the protocol libraries.
+
 = Python Stuff =
 
 Thousand Parsec uses a lot of python. These projects are generally to do with improve some python part of Thousand Parsec.
