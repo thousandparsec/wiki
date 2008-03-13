@@ -68,9 +68,9 @@ For additional ideas we encourage students to look at [http://sourceforge.net/tr
 ** Jabber: mithro@gmail.org
 ** Responsible for: All Python Code (tpserver-py, tpclient-py, libtp*-py), Metaserver
 * Lee Begg (llnz)
-** E-mail: [mailto:llnz%20AT%20paradise%20DOT.%20net%20DOT.%20nz llnz AT paradise DOT. net DOT. nz]
+** E-mail: [mailto:llnz@paradise.net.nz llnz AT paradise DOT. net DOT. nz]
 ** Jabber: llnz@jabber.org
-** Responsible for: All C++ Server (tpserver-cpp, libtpproto-cpp)
+** Responsible for: tpserver-cpp, libtpproto-cpp, Protocol Design, Ruleset Development
 * Jure Repinc (JLP)
 ** E-mail: [mailto:jlp%20AT%20holodeck1%20DOT.%20com jlp AT holodeck1 DOT. com]
 ** Jabber: jlp@jabber.org
