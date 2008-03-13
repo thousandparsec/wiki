@@ -165,13 +165,29 @@ Possible databases include:
 
 The finished module should store and retrieve all the game information without error. Any runtime settings should be documented in the module's sample.conf. Instructions for setting up the database and the server to use the game should also be present.
 
-It has been mooted to move the Persistence interface an asynchronous model where, if the database supported it, it could process save, update, remove and retrieve without blocking the rest of the server. Any module should document if this is possible, and what would need to change.
-
-Another possible project would be to develop the interface for asynchronous persistence modules and a interface wrapper for the existing modules. This would be very invasive in tpserver-cpp and probably too large for SoC. Perhaps one of the Manager classes (ie, ObjectManager, OrderManager, etc) could be converted first, then plumb in the persistence.
+It has been mooted to move the Persistence interface an asynchronous model where, if the database supported it, it could process save, update, remove and retrieve without blocking the rest of the server. New modules should document if this is possible, and what would need to be changed.
 
 ==== Required Skills ====
 * SQL (preferably MySQL and the target database) experience
 
+
+== Asynchronous Managers and Persistence ==
+
+This project is very invasive in tpserver-cpp and probably too large for SoC.
+
+It has been mooted to move the Persistence interface an asynchronous model where, if the database supported it, it could process save, update, remove and retrieve without blocking the rest of the server. This would allow it to process another user's frames or other tasks in parallel with database accesses, thereby increasing overall performance and scalability.
+
+These tasks would need to be done:
+* Design approach
+* Convert one of the less common Managers (say, ResourceManager) to provide new API
+* Convert users of old API to new API, including creating "Command Pattern" classes, etc
+* Show that the new API works
+* Convert other Managers (ObjectManager, OrderManager, etc) one at a time, and convert users
+* Create async persistence interface
+* Create async persistence interface wrapper for existing (synchronous) persistence modules
+* Create fully asynchronous persistence module
+
+Since user access to the objects in the database is through the Manager classes, the Manager classes need to be converted first.
 
 == Console guided setup ==
 Make is possible that when started with no config file, ask the users a number of questions to set up the server and the game. tpserver-cpp uses [[libtprl]] for the console, and it supports changing command sets.
