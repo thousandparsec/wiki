@@ -150,7 +150,7 @@ You will need to get a good knowledge of the ruleset you are writing the AI for.
 You will need some C++ skills before you start any of these projects (but not as much as if you where implementing a ruleset for this server). [[User:Lee Begg|Lee]] (llnz) is happy to mentor anyone working in these areas.
 
 == New Rulesets ==
-New rulesets can be written for tpserver-cpp, see [[#Rulesets|Rulesets]] section below.
+New rulesets can be written for tpserver-cpp, see [[#Rulesets|Rulesets]] section above.
 
 == Persistence modules ==
 
