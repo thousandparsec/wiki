@@ -192,6 +192,14 @@ Since user access to the objects in the database is through the Manager classes,
 == Console guided setup ==
 Make is possible that when started with no config file, ask the users a number of questions to set up the server and the game. tpserver-cpp uses [[libtprl]] for the console, and it supports changing command sets.
 
+Questions to ask include:
+* Server name, admin email address, game info, etc
+* ruleset to use and parameters
+* persistence to use and parameters
+* turn timer parameters
+* whether to turn on metaserver updates
+* logging options (file, syslog, console; log level, colour, filename; etc)
+
 == Separate the console from the server ==
 Make it possible to connect remotely, or at least locally, to a daemon-ized tpserver-cpp. Need to pass commands into the server and get logging and output back. Could be quite a few ways to do this. Maybe a special server configuration protocol could be designed so that various different configuration interfaces (for example integrated into clients, presented as Single Player mode) could connect to a special configuration port.
 
