@@ -200,6 +200,8 @@ Questions to ask include:
 * whether to turn on metaserver updates
 * logging options (file, syslog, console; log level, colour, filename; etc)
 
+This task could include making changes to libtprl as well to make this work easier.
+
 == Separate the console from the server ==
 Make it possible to connect remotely, or at least locally, to a daemon-ized tpserver-cpp. Need to pass commands into the server and get logging and output back. Could be quite a few ways to do this. Maybe a special server configuration protocol could be designed so that various different configuration interfaces (for example integrated into clients, presented as Single Player mode) could connect to a special configuration port.
 
