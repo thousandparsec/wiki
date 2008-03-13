@@ -79,6 +79,10 @@ For additional ideas we encourage students to look at [http://sourceforge.net/tr
 ** E-mail: [mailto:nash%20AT%20nash%20DOT.%20id%20DOT.%20au nash AT nash DOT. id DOT. au]
 ** Jabber: brettnash@gmail.com
 ** Responsible for: AI, General client Development, Ruleset Development
+* Krzysztof Sobolewski ('''jezuch''')
+** E-mail: [mailto:jezuch%20AT%20interia%20DOT.%20pl jezuch AT interia DOT. pl]
+** Jabber: jezuch@jabber.uznam.net.pl
+** Responsible for: Java code (libtpproto-java)
 
 There are also the following mentors, but they are smart enough not to disclose their details to the public.
 
