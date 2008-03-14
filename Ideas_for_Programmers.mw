@@ -15,9 +15,9 @@ __TOC__
 
 Thousand Parsec's greatest strength is it's protocol for describing games. This allows any client to play any number of games. The different rules which make up a game still have to be added to a server, these are called [[Rulesets|rulesets]]. The more (complete) rulesets (and hence playable games) the better. Why not help out by building one?
 
-You can choose to implement the rulesets in either the Python Server or in the C++ Server. Both servers currently only implement MiniSec but have been designed to support a wide variety of other rulesets.
+You can choose to implement the rulesets in either the Python Server or in the C++ Server. Both servers currently implement a limited number of rulesets, but have been designed to support a wide variety of other rulesets. Rulesets which required advanced features will require you to also help improve the the core of the server you are using.
 
-All these tasks will require C++ skills (if developing for the C++ Server) or Python (if developing for the Python Server). You may need to do some work on the core of the server if you are doing more advanced stuff too.
+Developing a ruleset will require at a minimum C++ (if developing for the C++ Server) or Python (if developing for the Python Server) skills. 
 
 Rulesets can be one of the most rewarding parts to work on (as you are actually creating a playable game). One of the successful students from [[Google Summer of Code]] 2007 produced the [[TP RFTS|Reach for the Stars ruleset]] and liked it so much he has continued to improve it.
 
