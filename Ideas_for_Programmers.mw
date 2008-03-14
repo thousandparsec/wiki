@@ -54,7 +54,7 @@ Design a simple ruleset in which a whole game can be finished in an hour. This w
 === Required Skills ===
 * C++ skills or Python skills.
 
-= Clients =
+= New Client Ideas =
 
 Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=summary main client] is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
 
