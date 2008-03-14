@@ -11,7 +11,7 @@ You can find information about applying for the [http://code.google.com/soc Goog
 
 __TOC__
 
-= Rulesets =
+= Ruleset Ideas =
 
 Thousand Parsec's greatest strength is it's protocol for describing games. This allows any client to play any number of games. The different rules which make up a game still have to be added to a server, these are called [[Rulesets|rulesets]]. The more (complete) rulesets (and hence playable games) the better. Why not help out by building one?
 
