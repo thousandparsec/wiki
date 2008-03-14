@@ -143,7 +143,7 @@ You will need to get a good knowledge of the ruleset you are writing the AI for.
 * Some knowledge of 4X games is recommended
 * Some knowledge of AI programming is recommended
 
-= Tpserver-cpp Tasks =
+= Tpserver-cpp Ideas =
 
 [[tpserver-cpp]] is one of the main servers in Thousand Parsec. These project ideas deal with improving it in various ways.
 
