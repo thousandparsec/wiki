@@ -17,11 +17,9 @@ Thousand Parsec's greatest strength is it's protocol for describing games. This 
 
 You can choose to implement the rulesets in either the Python Server or in the C++ Server. Both servers currently implement a limited number of rulesets, but have been designed to support a wide variety of other rulesets. Rulesets which required advanced features will require you to also help improve the the core of the server you are using.
 
-Developing a ruleset will require at a minimum C++ (if developing for the C++ Server) or Python (if developing for the Python Server) skills. 
-
 Rulesets can be one of the most rewarding parts to work on (as you are actually creating a playable game). One of the successful students from [[Google Summer of Code]] 2007 produced the [[TP RFTS|Reach for the Stars ruleset]] and liked it so much he has continued to improve it.
 
-Developing rulesets can be assisted by using the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpruledev.git;a=summary Ruleset Development Environment] (another [[Google Summer of Code]] project).
+Developing rulesets can be assisted by using the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpruledev.git;a=summary Ruleset Development Environment] (another [[Google Summer of Code]] project) but will still require good C++ (if developing for the C++ Server) or Python (if developing for the Python Server) skills. Scheme skills are not required but would be a strong advantage.
 
 == MTSec ==
 
