@@ -229,7 +229,7 @@ Fail frames as of [[TP04]] have a list of General Purpose References. Most of th
 === Change to use Boost.Random ===
 We currently have a reasonable PRNG, which Boost.Random also supplies, but only a limited set of random variables. This could be changed by replacing the custom implementation with Boost.Random.
 
-= Development Tools =
+= Development Tool Ideas =
 
 These projects are about improving or creating standalone tools for Thousand Parsec. They are mostly self contained projectss, however it is still expected that you are involved with the rest of the project.
 
