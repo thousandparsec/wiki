@@ -50,3 +50,7 @@ If you have a comment about any existing feature or a suggestion about a new fea
 '''Usecase''': A user opens the client and opens the list of servers that user can connect to. User sees different servers with different rulesets. Which one is the right one? User would like to see various information about rulesets: name, difficulty level, short description, story behind it, all rules with object descriptions and data...
 
 '''Suggestion''': The protocol should enable sending the above information and the ruleset modules should be required to provide this information to server. Maybe the longer parts (story, rules, objects data) could be provided in the form of an URL pointing to location with the information. Clients could then open these URLs in external browser or using an integrated internal browser.
+
+=== Proposals ===
+
+* [[Research Frames]] - proposal
