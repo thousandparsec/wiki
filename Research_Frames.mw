@@ -31,7 +31,7 @@ Research frames are a pair of Get and Set, both returning a Research frame. A Re
 * researchList - List
 ** techId - uint32
 ** assignedPoints - uint32
-** turns - uint32
+** turns - uint32 (RO)
 
 = Open issues =
 * How to find what tech the player has learnt
