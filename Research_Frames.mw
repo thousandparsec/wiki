@@ -41,5 +41,6 @@ Possible solutions:
 * provide a similar getIdList/IdList pair for asking for a player's learnt tech
 * id list in Player Frame
 * flag in technology frame for player's own, no way to get other player's
+* list of players the player knows have learnt this technology in the technology description
 
 [[Category:Proposals]]
