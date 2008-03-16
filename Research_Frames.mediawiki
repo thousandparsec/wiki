@@ -40,5 +40,6 @@ Research frames are a pair of Get and Set, both returning a Research frame. A Re
 Possible solutions:
 * provide a similar getIdList/IdList pair for asking for a player's learnt tech
 * id list in Player Frame
+* flag in technology frame for player's own, no way to get other player's
 
 [[Category:Proposals]]
