@@ -1,0 +1,29 @@
+Thousand Parsec uses [http://git.or.cz/ Git] to manage its source code. Git is a distributed version control system that was at first created for Linux kernel development and has since then become popular with other open source projects.
+
+Here are some instructions to help you get started with Git.
+
+== Cogito ==
+
+Before you start it is advisable to also install [http://git.or.cz/cogito/ Cogito]. Cogito is a user-friendly frontend to Git, which makes Git easier to use. While newest versions of Git include some features from Cogito, Cogito is still a nice tool to have around.
+
+== Where is the source code ==
+
+All the source code for Thousand Parsec sub-projects is available in our '''[http://git.thousandparsec.net/ central repository]'''. Developers first commit the changes to their local repository and when they get to the Internet connection push all the commits to the central server.
+
+To see the summary of the sub-project just click on it's name in the on-line browser. This way you get the URLs you can use to get the code and some other information like short changelog.
+
+== Getting the code ==
+
+This is how you download the code from a remote repository to your local one:
+
+Cogito:
+ cg-clone git://git.thousandparsec.net/git/'''project-name'''.git
+
+Where you replace project-name with the actual name of the desired project.
+
+== Updating the code ==
+
+When you already have the code and would like to update it to the latest revision you issue this command ''from within the project's folder'':
+
+Cogito:
+ cg-update
