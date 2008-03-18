@@ -454,3 +454,9 @@ If the above basic tasks are easy enough for you to do in less then three months
 
 === Required Skills ===
 * C++, Qt 4, KDE 4
+
+=== More information ===
+* [http://www.thousandparsec.net/tp/dev/documents/libtpproto-cpp/html/ C++ Protocol Library Documentation]
+* [http://doc.trolltech.com/4.4beta/index.html Qt 4.4 Documentation]
+* [http://techbase.kde.org/ KDE TechBase]
+* [http://api.kde.org/ KDE API Documentation]
