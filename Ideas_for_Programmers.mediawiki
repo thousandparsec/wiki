@@ -434,3 +434,23 @@ Feel free to add more ideas, a good place to look is wxAUI Forums.
 
 === Required Skills ===
 * Good Python skills is a must
+
+= Parsek client =
+
+[[Parsek]] is a game client that is written in C++ and uses Qt 4 and KDE 4 libraries to implement a cross-platform graphical user interface.
+
+== Make it possible to play games with Parsek ==
+
+Currently Parsek is only about half-finished. It does get the objects and messages from the server but displays them in an ugly way. Also it doesn't get any orders yet and you can't issue orders. Your job would be to finish Parsek at least up to the point so that it is usefull for playing basic games. This includes implementation of:
+* displaying StarMap
+* getting and displaying orders
+* creating new orders
+* nice looking display of objects tree and messages
+If the above basic tasks are easy enough for you to do in less then three months consider these additional tasks:
+* integrate a battleviewer
+* integrate a starship design editor
+* automatic discovery of game servers
+* accounts manager
+
+=== Required Skills ===
+* C++, Qt 4, KDE 4
