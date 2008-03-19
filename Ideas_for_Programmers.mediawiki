@@ -260,7 +260,7 @@ You job will be to,
 Some suggestions for new features include,
 * Make it portable across databases
 * Add a "match making" support
-* Intergrate with the [http://forums.thousandparsec.net/ forums] and [http://www.thousandparsec.net/tp/mailman.php/listinfo/ mailing lists].
+* Intergrate with the [http://forums.thousandparsec.com/ forums] and [http://www.thousandparsec.net/tp/mailman.php/listinfo/ mailing lists].
 * Add request via standalone UDP or TCP ports.
 
 ==== More Information ====
