@@ -52,6 +52,16 @@ Design a simple ruleset in which a whole game can be finished in an hour. This w
 === Required Skills ===
 * C++ skills or Python skills.
 
+= Single Player =
+
+Thousand Parsec has generally been designed around a multiplayer philosophy but there is no reason a person could not play a game locally.
+
+Your job is to create a tool which makes setting up a local single player game easy. It should provide a GUI which includes functionality to set up a game (including starting a server) with various ruleset and server parameters, adding AI clients and starting the client.
+
+The tool should support both installed components on Linux (installed through the package manager) and included components on Windows and Mac OS X.
+
+Ease of use is a HUGE factor in this tool. It should fail gracefully and provide a holistic user experiance.
+
 = New Client Ideas =
 
 Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=summary main client] is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
