@@ -66,19 +66,19 @@ For additional ideas we encourage students to look at [http://sourceforge.net/tr
 * Tim Ansell ('''mithro''')
 ** E-mail: [mailto:mithro@mithis.com mithro AT mithis DOT. com]
 ** Jabber: mithro@gmail.org
-** Responsible for: All Python Code (tpserver-py, tpclient-py, libtp*-py), Metaserver
+** Responsible for: All Python Code (tpserver-py, tpclient-py, libtp*-py), Metaserver, Ruleset development for tpserver-py, Python client development
 * Lee Begg ('''llnz''')
 ** E-mail: [mailto:llnz@paradise.net.nz llnz AT paradise DOT. net DOT. nz]
 ** Jabber: llnz@jabber.org
-** Responsible for: tpserver-cpp, libtpproto-cpp, Protocol Design, Ruleset Development
+** Responsible for: tpserver-cpp, libtpproto-cpp, Protocol Design, Ruleset development for tpserver-cpp
 * Jure Repinc ('''JLP''')
 ** E-mail: [mailto:jlp%20AT%20holodeck1%20DOT.%20com jlp AT holodeck1 DOT. com]
 ** Jabber: jlp@jabber.org
-** Responsible for: parsek, General client Development
+** Responsible for: parsek, General client development
 * Brett Nash ('''nash''')
 ** E-mail: [mailto:nash%20AT%20nash%20DOT.%20id%20DOT.%20au nash AT nash DOT. id DOT. au]
 ** Jabber: brettnash@gmail.com
-** Responsible for: AI, General client Development, Ruleset Development
+** Responsible for: AI, General client development, General ruleset development
 * Krzysztof Sobolewski ('''jezuch''')
 ** E-mail: [mailto:jezuch%20AT%20interia%20DOT.%20pl jezuch AT interia DOT. pl]
 ** Jabber: jezuch@jabber.uznam.net.pl
