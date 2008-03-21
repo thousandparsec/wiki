@@ -1,0 +1,35 @@
+This is a rough draft of my project proposal to create a Risk ruleset for Thousand Parsec during GSoC '08. I would appreciate any feedback from community members, [[user:llnz|llnz]] and other project leaders in particular. I am still a little wishy-washy about the project details and the schedule in particular. I don't know if I am including enough features to warrant a full summer on this, please look at my documentation on the ruleset [[Risk|here]] and comment here (or there).
+
+Name: [[user:jphr|Ryan Neufeld]] 
+
+Project Title: Creation of a Risk ruleset for the Thousand Parsec C++ server 
+
+== Benefits to Thousand Parsec ==
+A ruleset for such a common and well known game such as Risk would have a very positive effect on the Thousand Parsec community. It would act as a common ground to attract players unfamiliar with 4X games and furthermore act as a gateway to more 4X-like rulesets such as previous GSoC student Tyler Shaub’s TP RFTS ruleset and MTSec. 
+
+
+== Synopsis ==
+I will create a ruleset for Thousand Parsec modeled after the board game Risk. Since Risk is a relatively simple ruleset it can be implemented with little to no modification to tpserver-cpp itself. In its first iteration the ruleset will mimic basic Risk with a galactic board resembling the connectivity of the original board game. This iteration will provide a single unit type, battle system, and reinforcements based on provincial control similar to the original game. Later iterations within GSoC and beyond will implement new boards, “continent ownership” based reinforcements, cards, and a “Rock-Paper-Scissors” assortment of unit types. This ruleset may later be extended to mimic Risk 2210 A.D., a more complicated version of Risk. 
+
+
+== Deliverables ==
+The deliverables of this project will include at least a functional game of Risk with a play style, board, combat system and reinforcement schedule similar to the original Risk game. This ruleset will provide server options on how games are started (by random distribution of units or turn-by-turn selection of territories.) If time permits the ruleset will be extended piece-by-piece with the end goal of transforming into a more complex game of Risk modeled after Risk 2210 A.D.
+
+
+== Project Details ==
+The majority of the project details are outlined on the TP Wiki [[Risk|here]]. At the end of its first iteration the Risk ruleset will emulate very closely the original rules for Risk. The TP framework allows for the existence of multiple server options to determine how games start and victory conditions for games. As well the framework allows the Risk ruleset to be extended to modify the rules of Risk and allow players to maintain ownership of territories without keeping units on the territory.
+
+
+== Project Schedule ==
+My first order of business will be to draft a full description of the ruleset, including features to be considered for later iteration of the project. This should be done in a few days, if not finished before the project begins. This will be placed on the TP wiki for community improvement. I will then move on to study xdotx’s RFTS clone implementation, and begin modeling pseudo-code for my ruleset. It should take another week or two to produce complete pseudocode. Leaving room for growth and taking into consideration warnings given by llnz I would like to deliver complete documentation and pseudo-code for the ruleset at the midpoint of the project. The last half of the project will be spent implementing the ruleset in real code. This will be the final milestone for the project. Should a tested working ruleset be produced before the end of the project work will begin on further more complex iterations of the ruleset.
+
+
+== Bio ==
+I am a B.Sc. Comp Sci. student at the University of Manitoba in Canada and am ashamed to say I had not heard of Thousand Parsec before GSoC. I am avid gamer and enjoyed many 4X games during my childhood (Alpha Centauri, Civilization 2-4, Pax Imperia.) I was also introduced to Risk at an early age by my father and it has been a game I excel in/enjoy since then; I still recall the first time I beat by father without him going easy on me!
+
+It is my intention when I am finished school to become a game developer/programmer, and the opportunity to gain relative experience with GSoC is an exciting prospect. My most recent and current project is creating a game that blends Peggle and Puzzle Quest to create an experience akin to replacing Puzzle Quest’s “Bejeweled” combat mechanic with a horizontal Peggle mechanic. I have currently created a basic Peggle clone and am now wrestling with my physics engine to get proper call backs on collisions so I can move on to RPG elements of the game.!
+
+As for other coding experience I was introduced to programming through C++ and have been coding for 3-4 years. I am quite proficient in C++, Java, and C#. At present I am taking classes on Abstract Data Types and have already taken classes on Object-Orientation and Project Management. In my free time, as I mentioned, I have been creating a game using C# and Microsoft’s XNA framework. I chose to use the Farseer Physics Engine in my game because it gives me more opportunity to work with other people’s code, a skill I felt pertinent to gain in preparation for GSoC.
+
+== Your Comments ==
+Please feel free to leave comments on my project proposal here, or heck just edit the document
