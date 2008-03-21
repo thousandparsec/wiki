@@ -1,0 +1,43 @@
+== Proposal ==
+I ([[User:jphr|jphr]]) am currently proposing the development of a Risk clone ruleset to be developed this summer (of '08) during Google Summer of Code. The ruleset will emulate an almost complete game of Risk. The only features not guaranteed (but very likely) in the GSoC iteration will be continent-ownership based reinforcements and a cards system.
+
+
+== Starting Turns ==
+*An option will exist for games to begin by random assignment of territories to players or by turn-based selection of territories. Each territory will receive one unit from that player (to signal ownership). 
+**It may be possible to not require a unit to signify ownership, as TP can easily remember who owns what; undefended territory will simply require an enemy unit moving onto it to claim it.
+*Players will then proceed to place additional units onto their territories, turn-by-turn, or in a lump, one turn, fashion (depending on the chosen implementation)
+*Having finished starting turns normal play will then begin.
+
+
+== Normal Turns ==
+*At the start of each turn players will receive reinforcements based upon how many territories they own (sorry no "continents" or cards yet.)
+**Depending on the TP framework players may be able to simple "spawn" units from their pool of reinforcements at any owned space. The only issue is that once any action occurs a flag must be switched disallowing placing new reinforcements.
+*The player then has a fixed amount of time to attack as they see fit (I am not sure of how long this should yet, but there should exist an option for a player to end their turn early.)
+*When attacking an attack command will start one "round" of Risk attacking, rolling virtual die to determine the outcome. If the enemy is defeated the player can simply move units onto the territory to claim it. If the enemy is not defeated the player may choose to attack again for another attack "round". 
+**This attack system will be easy to manage because each attack "round" or movement can be an "action." The only catch is disallowing the movement of units around without attacking, since this counts as the "free move" part at the end of a Risk turn. The action of moving units around could also trigger the end of the turn (a possibility.)
+*Once the player has finished all attacks they want to do there should exist a way to signal an end of turn, either by making a "free move" to move units around, or by performing an action labeled "end turn" from one of the players planets. Ideally the command to end turn would not be on every planet, as I can imagine the angry cursing of a player accidentally clicking end turn.
+
+
+== Winning/Losing ==
+*Should a player be completely wiped out they are exited from the game. It is a possibility that the user could still spectate the game, as having no territories owned would simply "skip" their turn.
+*Should a player own every territory they win the game. It is also a possibility that owning a certain percentage of territories would constitute a win. This could be a server option.
+
+
+== Questions for the admins ==
+*Are there enough features to warrant a full summer? Should I include more Risk features
+*What do you think? Comments? Difficulties you see in coding certain features?
+
+
+== Features for further implementations ==
+These features will either be implemented in later iterations of the ruleset or at the conclusion of GSoC should a basic ruleset be finished early.
+*Continent-ownership based reinforcements. Come to think of it, the more and more I think about this the more I see it as very viable to include in the first iteration. What do you admins think?
+*Cards. This feature may involve extending the server a little, as I don't see it as ideal to have "cards" count as little ships; I just don't see that as a very refined approach. Not a terribly difficult feature so it may make it into the first iteration
+*Rock-Paper-Scissor interaction of different unit types. This would involve 3 (or more) different types of units, either costing the same amount of reinforcements to create, or variable costs. This would need a tight leash on it as it could quickly transform the ruleset into something entirely not Risk-like and more 4X space game like. It is a possibility that the ruleset could fork into other derivatives.
+*A bevy of other features from [http://en.wikipedia.org/wiki/Risk_2210_A.D.|Risk 2210 A.D.]. If you notice any features in 2210 you would like to see in the GSoC iteration please leave a comment at the end of the page. 
+
+== Your Comments ==
+Feel free to leave comments about the ruleset and improvements I should make.
+
+== Links ==
+* [[jphr_proposal| jphr's Draft Proposal ]]
+* [[user:jphr| My User Page]]
