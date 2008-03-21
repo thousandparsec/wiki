@@ -39,5 +39,5 @@ These features will either be implemented in later iterations of the ruleset or 
 Feel free to leave comments about the ruleset and improvements I should make.
 
 == Links ==
-* [[jphr_proposal| jphr's Draft Proposal ]]
-* [[user:jphr| My User Page]]
+* [[Jphr_proposal| jphr's Draft Proposal ]]
+* [[user:Jphr| My User Page]]
