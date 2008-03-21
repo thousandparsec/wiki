@@ -10,12 +10,11 @@ I ([[User:jphr|jphr]]) am currently [[Jphr_proposal|proposing]] the development 
 
 == Normal Turns ==
 *At the start of each turn players will receive reinforcements based upon how many territories they own (sorry no "continents" or cards yet.)
-**Depending on the TP framework players may be able to simple "spawn" units from their pool of reinforcements at any owned space. The only issue is that once any action occurs a flag must be switched disallowing placing new reinforcements.
-*The player then has a fixed amount of time to attack as they see fit (I am not sure of how long this should yet, but there should exist an option for a player to end their turn early.)
+**Depending on the TP framework players may be able to simple "spawn" units from their pool of reinforcements at any owned space. The only issue is that once any action occurs a flag must be switched disallowing placing of new reinforcements.
+*The player then has a fixed amount of time to attack as they see fit (I am not sure of how long this should be yet, but there should exist an option for a player to end their turn early.)
 *When attacking an attack command will start one "round" of Risk attacking, rolling virtual die to determine the outcome. If the enemy is defeated the player can simply move units onto the territory to claim it. If the enemy is not defeated the player may choose to attack again for another attack "round". 
 **This attack system will be easy to manage because each attack "round" or movement can be an "action." The only catch is disallowing the movement of units around without attacking, since this counts as the "free move" part at the end of a Risk turn. The action of moving units around could also trigger the end of the turn (a possibility.)
 *Once the player has finished all attacks they want to do there should exist a way to signal an end of turn, either by making a "free move" to move units around, or by performing an action labeled "end turn" from one of the players planets. Ideally the command to end turn would not be on every planet, as I can imagine the angry cursing of a player accidentally clicking end turn.
-
 
 == Winning/Losing ==
 *Should a player be completely wiped out they are exited from the game. It is a possibility that the user could still spectate the game, as having no territories owned would simply "skip" their turn.
