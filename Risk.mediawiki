@@ -29,7 +29,7 @@ I ([[User:jphr|jphr]]) am currently [[Jphr_proposal|proposing]] the development 
 These features will either be implemented in later iterations of the ruleset or at the conclusion of GSoC should a basic ruleset be finished early.
 *Continent-ownership based reinforcements. The more and more I think about this the more I see it as very viable to include in the first iteration. What do you admins think?
 *Cards. This feature may involve extending the server a little, as I don't see it as ideal to have "cards" count as little ships; I just don't see that as a very refined approach. Not a terribly difficult feature so it may make it into the first iteration
-*Rock-Paper-Scissor interaction of different unit types. This would involve 3 (or more) different types of units, either costing the same amount of reinforcements to create, or variable costs. This would need a tight leash on it as it could quickly transform the ruleset into something entirely not Risk-like and more 4X space game like. It is a possibility that the ruleset could fork into other derivatives.
+*Rock-Paper-Scissor interaction of different unit types. This would involve 3 (or more) different types of units, either costing the same amount of reinforcements to create, or variable costs. This would need a tight leash on it as it could quickly transform the ruleset into something entirely not Risk-like and more 4X-space-game like. It is a possibility that the ruleset could fork into other derivatives.
 *A bevy of other features from [http://en.wikipedia.org/wiki/Risk_2210_A.D.|Risk 2210 A.D.]. If you notice any features in 2210 you would like to see in the GSoC iteration please leave a comment at the end of the page.
 
 == Your Comments ==
