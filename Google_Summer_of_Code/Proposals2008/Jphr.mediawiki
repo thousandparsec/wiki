@@ -1,6 +1,6 @@
 This is a rough draft of my project proposal to create a Risk ruleset for Thousand Parsec during GSoC '08. I would appreciate any feedback from community members, [[user:llnz|llnz]] and other project leaders in particular. I am still a little wishy-washy about the project details and the schedule in particular. I don't know if I am including enough features to warrant a full summer on this, please look at my documentation on the ruleset [[Risk|here]] and comment here (or there).
 
-Name: [[user:jphr|Ryan Neufeld]] 
+Name: [[user:Jphr|Ryan Neufeld]] 
 
 Project Title: Creation of a Risk ruleset for the Thousand Parsec C++ server 
 
