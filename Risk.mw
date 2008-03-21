@@ -21,10 +21,9 @@ I ([[User:jphr|jphr]]) am currently [[Jphr_proposal|proposing]] the development 
 *Should a player own every territory they win the game. It is also a possibility that owning a certain percentage of territories would constitute a win. This could be a server option.
 
 
-== Questions for the admins ==
+== Questions for the Admins ==
 *Are there enough features to warrant a full summer? Should I include more Risk features
 *What do you think? Comments? Difficulties you see in coding certain features?
-
 
 == Features for Further Implementations ==
 These features will either be implemented in later iterations of the ruleset or at the conclusion of GSoC should a basic ruleset be finished early.
