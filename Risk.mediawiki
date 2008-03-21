@@ -1,5 +1,5 @@
 == Proposal ==
-I ([[User:jphr|jphr]]) am currently [[Jphr_proposal|proposing]] the development of a Risk clone ruleset to be developed this summer (of '08) during Google Summer of Code. The ruleset will emulate an almost complete game of Risk. The only features not guaranteed (but very likely) in the GSoC iteration will be continent-ownership based reinforcements and a cards system.
+I ([[User:jphr|jphr]]) am currently [[Jphr_proposal|proposing]] the development of a Risk clone ruleset to be developed this summer (of '08) during Google Summer of Code (GSoC). The ruleset will emulate an almost complete game of Risk. The only features not guaranteed (but very likely) in the GSoC iteration will be continent-ownership based reinforcements and a cards system.
 
 == Starting Turns ==
 *An option will exist for games to begin by random assignment of territories to players or by turn-based selection of territories. Each territory will receive one unit from that player (to signal ownership). 
