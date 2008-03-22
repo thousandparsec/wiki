@@ -4,14 +4,6 @@ This document should provide a general overview of the initial design concept of
 
 *Please feel free to make suggestions/corrections in the discussion section, and in the space provided below!!
 
-== Timeline (Checkpoints) ==
-
-*April 12 - My exams finish; Begin active study of libraries, ruleset, and other relevant materials.
-*April-May - Finalize the design scheme.
-*mid-May - Start coding.
-*July 7 - Have AI agent ready in time for mid-term evaluations.
-*August 11 - Complete AI agent-client library integration, and have a buffer week for "pencils down" date.
-
 
 == Goals ==
 
@@ -19,6 +11,15 @@ This document should provide a general overview of the initial design concept of
 *Integrate it with the libtpproto-java library.
 *Collaborate on completing the libtpproto-java library with jezuch.
 *Create a convenient and comprehensive UI for the AI client.
+
+
+== Timeline (Checkpoints) ==
+
+*April 12 - My exams finish; Begin active study of libraries, ruleset, and other relevant materials.
+*April-May - Finalize the design scheme.
+*mid-May - Start coding.
+*July 7 - Have AI agent ready in time for mid-term evaluations.
+*August 11 - Complete AI agent-client library integration, and have a buffer week for "pencils down" date.
 
 
 == Design Principles ==
@@ -51,3 +52,17 @@ The process of making new generations will happen a fixed number of times, or un
 ''Fitness function:''
 
 We need a function to give each hypothesis a numeric evaluation, by which they can be compared (e.g. higher = better, or closer to zero = better). This function will have as parameters the stats of the AI player, its relative standing in the universe (number of planets, fleets, etc), and the winning conditions of the ruleset in question (here, RFTS).
+
+
+== About me ==
+
+My name is Victor Ivri (forum and IRC: vi1985... ok, I admit it's a lame nick! ;) ). I'm double majoring in Computer science and Cognitive science at York U, Toronto, Canada. My main interest is... AI! I'm interested in both practical implementations of various forms of AI, and in the philosophical and psychological underpinnings of it. I heard of genetic algorithms not too long ago in a Cognitive science conference, ran home, read about how it's done, and built a few examples myself. I'm really excited at this opportunity to participate in the development process of a 4X game, since I'm a huge fan of both TBS and RTS. I don't have a lot of time for game-playing at the moment (I found out interesting things tend to happen in the world outside!!), but I still occasionally meet with friends to play HMM3 into the night :). 
+
+
+Thanks for considering my proposal.
+
+
+
+== YOUR COMMENTS HERE ==
+
+///you are most welcome to ask for clarifications, give suggestions, or ask for missing info here, or in the discussion ///
