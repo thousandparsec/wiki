@@ -25,7 +25,7 @@ My first order of business will be to draft a full description of the ruleset, i
 
 
 == Bio ==
-I am a B.Sc. Comp Sci. student at the University of Manitoba in Canada and am ashamed to say I had not heard of Thousand Parsec before GSoC. I am avid gamer and enjoyed many 4X games during my childhood (Alpha Centauri, Civilization 2-4, Pax Imperia.) I was also introduced to Risk at an early age by my father and it has been a game I excel in/enjoy since then; I still recall the first time I beat by father without him going easy on me!
+I am a B.Sc. Comp Sci. student at the University of Manitoba in Canada and am ashamed to say I had not heard of Thousand Parsec before GSoC. I am avid gamer and enjoyed many 4X games during my childhood (Alpha Centauri, Civilization 2-4, Pax Imperia.) I was also introduced to Risk at an early age by my father and it has been a game I excel in/enjoy since then; I still recall the first time I beat my father without him going easy on me!
 
 It is my intention when I am finished school to become a game developer/programmer, and the opportunity to gain relative experience with GSoC is an exciting prospect. My most recent and current project is creating a game that blends Peggle and Puzzle Quest to create an experience akin to replacing Puzzle Quest’s “Bejeweled” combat mechanic with a horizontal Peggle mechanic. I have currently created a basic Peggle clone and am now wrestling with my physics engine to get proper call backs on collisions so I can move on to RPG elements of the game.!
 
