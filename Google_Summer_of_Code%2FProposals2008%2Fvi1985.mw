@@ -1,0 +1,40 @@
+== '''''Genetic Conquest''' (henceforth, GC)'', an AI Client for Thousand Parsec: Proposal ==
+
+This document should provide a general overview of the initial design concept of the AI client (GC) I want to design for TP. The AI agent will build on, and integrate with the libtpproto-java library, and hence will be written in Java as well. Upon completion, the AI Client will be able to successfully play the RFTS ruleset, and with slight modifications to its Ruleset module (description follows below), GC will be able to play any other TP ruleset.
+
+*Please feel free to make suggestions/corrections in the discussion section, and in the space provided below!!
+
+== Timeline (Checkpoints) ==
+
+*April 12 - My exams finish; Begin active study of libraries, ruleset, and other relevant materials.
+*April-May - Finalize the design scheme.
+*mid-May - Start coding.
+*July 7 - Have AI agent ready in time for mid-term evaluations.
+*August 11 - Complete AI agent-client library integration, and have a buffer week for "pencils down" date.
+
+
+== Goals ==
+
+*Design and implement the AI agent for TP.
+*Integrate it with the libtpproto-java library.
+*Collaborate on completing the libtpproto-java library with jezuch.
+*Create a convenient and comprehensive UI for the AI client.
+
+
+== Design Principles ==
+
+'''General Execution Sequence:'''
+
+* Turn start: receive "universe-picture" from server.
+* Extract info from the universe picture.
+* Compare with previous universe-picture, and generate a prediction of opponent actions.
+* Run core genetic algorithm, which would return the set of actions to be performed this turn.
+* Communicate actions back to server.
+
+'''Core genetic algorithm'''
+
+    * For each generated hypothesis:
+      * init: generate dummy_universe = current_universe;
+      * For each move, while move.index < search_depth do: simulate move in dummy_universe, then simulate opponent moves based on previous prediction;
+      * when move.index = search.depth do: evaluate hypothesis based on fitness function;
+    * When finished evolution process, return best hypothesis.
