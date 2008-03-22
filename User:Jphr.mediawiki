@@ -3,3 +3,6 @@ My name is Ryan Neufeld and I am a B.Sc. Comp Sci. student at the University of 
 It is my intention when I am finished school to become a game developer/programmer, and the opportunity to gain relative experience with GSoC is an exciting prospect. My most recent and current project is creating a game that blends Peggle and Puzzle Quest to create an experience akin to replacing Puzzle Quest’s “Bejeweled” combat mechanic with a horizontal Peggle mechanic. I have currently created a basic Peggle clone and am now wrestling with my physics engine to get proper call backs on collisions so I can move on to RPG elements of the game.!
 
 As for other coding experience I was introduced to programming through C++ and have been coding for 3-4 years. I am quite proficient in C++, Java, and C#. At present I am taking classes on Abstract Data Types and have already taken classes on Object-Orientation and Project Management. In my free time, as I mentioned, I have been creating a game using C# and Microsoft’s XNA framework. I chose to use the Farseer Physics Engine in my game because it gives me more opportunity to work with other people’s code, a skill I felt pertinent to gain in preparation for GSoC.
+
+== My Articles ==
+Please feel free to check out my [[Jphr_proposal|draft proposal]] and the documentation for the [[Risk| Risk Ruleset]] I am proposing.
