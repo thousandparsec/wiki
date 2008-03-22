@@ -1,5 +1,23 @@
-== '''''Genetic Conquest''''', an AI Client for Thousand Parsec: Proposal ==
+== '''''Genetic Conquest''' (henceforth, GC)'', an AI Client for Thousand Parsec: Proposal ==
 
-This document should provide a general overview of the initial design concept of the AI agent (henceforth, “GC”) I want to design for TP. This agent will build on, and integrate with the libtpproto-java library, and hence will be written in Java as well. Upon completion, the AI Client will be able to successfully play the RFTS ruleset, and with slight modifications to its Ruleset module (description follows below), GC will be able to play any other TP ruleset.
+This document should provide a general overview of the initial design concept of the AI agent I want to design for TP. This agent will build on, and integrate with the libtpproto-java library, and hence will be written in Java as well. Upon completion, the AI Client will be able to successfully play the RFTS ruleset, and with slight modifications to its Ruleset module (description follows below), GC will be able to play any other TP ruleset.
+
 *Please feel free to make suggestions in the discussion!
-----
+
+
+== Timeline (Checkpoints) ==
+*April 12 - My exams finish; Begin active study of libraries, ruleset, and other relevant materials.
+*April-May - Finalize the design scheme.
+*mid-May - Start coding.
+*July 7 - Have AI agent ready in time for mid-term evaluations.
+*August 11 - Complete AI agent-client library integration, and have a buffer week for "pencils down" date.
+
+
+== Goals ==
+*Design and implement the AI agent for TP.
+*Integrate it with the libtpproto-java library.
+*Collaborate on completing the libtpproto-java library with jezuch.
+*Create a convenient and comprehensive UI for the AI client.
+
+
+== Design Principles ==
