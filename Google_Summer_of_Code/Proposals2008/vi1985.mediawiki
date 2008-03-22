@@ -56,12 +56,10 @@ We need a function to give each hypothesis a numeric evaluation, by which they c
 
 == About me ==
 
-My name is Victor Ivri (forum and IRC: vi1985... ok, I admit it's a lame nick! ;) ). I'm double majoring in Computer science and Cognitive science at York U, Toronto, Canada. My main interest is... AI! I'm interested in both practical implementations of various forms of AI, and in the philosophical and psychological underpinnings of it. I heard of genetic algorithms not too long ago in a Cognitive science conference, ran home, read about how it's done, and built a few examples myself. I'm really excited at this opportunity to participate in the development process of a 4X game, since I'm a huge fan of both TBS and RTS. I don't have a lot of time for game-playing at the moment (I found out interesting things tend to happen in the world outside!!), but I still occasionally meet with friends to play HMM3 into the night :). 
+My name is Victor Ivri (forum and IRC: vi1985... ok, I admit it's a lame nick! ;) ). I'm double majoring in Computer science and Cognitive science at York U, Toronto, Canada. My main interest is... AI! I'm interested in both practical implementations of various forms of AI, and in the philosophical and psychological underpinnings of it. I heard of genetic algorithms not too long ago in a Cognitive science conference, ran home, read about how it's done, and built a few (increasingly elaborate) examples myself. I'm really excited at this opportunity to participate in the development process of a 4X game, since I'm a huge fan of both TBS and RTS. I don't have a lot of time for game-playing at the moment (I found out interesting things tend to happen in the world outside!!), but I still occasionally meet with friends to play HMM3 into the night :). 
 
 
 Thanks for considering my proposal.
-
-
 
 == YOUR COMMENTS HERE ==
 
