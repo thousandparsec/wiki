@@ -19,6 +19,7 @@ This document provides a general overview of the initial design concept of the A
 *April-May - Finalize the design scheme.
 *beginning of May - Start coding.
 *July 7 - Have AI agent ready in time for mid-term evaluations.
+*Mid July - Have the GUI ready for the client.
 *August 11 - Complete AI agent-client library integration, and have a buffer week for "pencils down" date.
 
 '''General Considerations'''
