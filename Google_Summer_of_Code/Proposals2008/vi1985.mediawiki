@@ -15,10 +15,11 @@ This document provides a general overview of the initial design concept of the A
 
 *April 12 - My exams finish; Begin active study of libraries, ruleset, and other relevant materials.
 *April-May - Finalize the design scheme.
-*mid-May - Start coding.
+*beginning of May - Start coding.
 *July 7 - Have AI agent ready in time for mid-term evaluations.
 *August 11 - Complete AI agent-client library integration, and have a buffer week for "pencils down" date.
 
+I don't see this as a May 26-August 18 project. Rather, I'll start working on it full time beginning in April, finish the core coding on August 18, and then slowly work to complete the desired set of features (e.g. have full configurability of AI agent, design an appealing GUI, work on a better opponent move prediction, etc.) from then on. I definitely see this as a project I can slowly build on, rather than just a summer contract. I will be taking one university subject this summer, but I should have more than enough time for full-time development, and for studying.
 
 == Design Principles ==
 
