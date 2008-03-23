@@ -8,9 +8,8 @@ This document provides a general overview of the initial design concept of the A
 
 *Design and implement the AI agent for TP in Java.
 *Integrate it with the libtpproto-java library.
-*Collaborate on completing the libtpproto-java library with jezuch.
-*Create a convenient and comprehensive UI for the AI client.
-
+*Collaborate on completing the libtpproto-java library with jezuch, in the direction of making a complete discrete AI Client.
+*Create a convenient and comprehensive UI for the AI client: I intend to provide players with a good range of options to configure the AI agent, so as to increase the gameplay feel for players of all levels.
 
 == Planning and Progress ==
 
