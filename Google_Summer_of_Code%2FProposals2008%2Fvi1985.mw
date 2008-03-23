@@ -62,4 +62,15 @@ Thanks for considering my proposal.
 
 == Your Comments Here ==
 
-///you are most welcome to ask for clarifications, give suggestions, or ask for missing info here, or in the discussion ///
+Very nice proposal, the design is explained in quite a lot of detail. I think in the application you will submit thru the Google webform you can shorten it and make it more compact, but it is great to have it like this on the wiki.
+
+You should also make timeline a bit more detailed in the application and describe GUI a bit more. A some kind of risk management section should also be there: what kind od problems could arise (in coding, life) and what are your plans to deal with these problems.
+
+You also mention that you have already done some examples. It would be a plus if you could provide a link to the source code or examples.
+
+Into application you could also include information if you already have a blog or some other page where you would write about your progress.
+
+Oh yeah and write down what benefits your project brings to TP and game players. Also mention in the application how many hours a week you will be working on this and if you have any other commitments during GSoC period, Maybe you will be on vacation for a few days?
+
+I think this is enough for now from my part. Keep up the great work!
+--[[User:JLP|JLP]] 11:13, 23 March 2008 (EDT)
