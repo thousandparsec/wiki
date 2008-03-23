@@ -25,15 +25,14 @@ This document provides a general overview of the initial design concept of the A
 '''General Execution Sequence:'''
 
 * Turn start: receive "universe-picture" from server.
-* Extract info from the universe picture.
-* Compare with previous universe-picture, and generate a prediction of opponent actions.
+* Extract info from the universe-picture.
 * Run core genetic algorithm, which would return the set of actions to be performed this turn.
 * Communicate actions back to server.
 
 
 '''Core genetic algorithm'''
 
-I chose a genetic algorithm (GA) for the implementation of the AI agent for several reasons. First of all, they are perfectly suited for the role in TBS games, since they involve a progressive refinement of "hypotheses", basically of complete move-sequences, until a suitable one has been reached. Since it is looking many moves ahead, and considering the whole move-sequence at once, the solutions it comes up with aren't "quick-fixes", but genuine strategy. Together with a heuristic to predict opponent-moves, this algorithm will make the AI relatively sensitive to traps, and hard to fool. Another bonus is that the solutions it comes up with, will be genuinely creative ones, since there will be no hard-coded templates, or even heuristics, on which it will rely in decision making. This will ensure that it will always be a creative and unpredictable opponent! Finally, a GA design will make the algorithm highly modular, and ensure quick transitions between rulesets. The main difficulty I expect to encounter, will be in making a good heuristic for predicting enemy moves. Careful analysis will have to be done to estimate what should a player do, based on its assets, and the positioning on the map relative to others. Then a small set of rules (possibly probabilistic ones!) will be extracted, and implemented as the "opponent-predictor" module. 
+I chose a genetic algorithm (GA) for the implementation of the AI agent for several reasons. First of all, they are perfectly suited for the role in TBS games, since they involve a progressive refinement of "hypotheses", basically of complete move-sequences, until a suitable one has been reached. Since it is looking many moves ahead, and considering the whole move-sequence at once, the solutions it comes up with aren't "quick-fixes", but genuine strategy. Together with a heuristic to predict opponent-moves, this algorithm will make the AI relatively sensitive to traps, and hard to fool. Another bonus is that the solutions it comes up with, will be genuinely creative ones, since there will be no hard-coded templates, or even heuristics, on which it will rely in decision making. This will ensure that it will always be a creative and unpredictable opponent! Finally, a GA design will make the algorithm highly modular, and ensure quick transitions between rulesets. The main difficulty I expect to encounter, will be in making a good heuristic for predicting opponent moves. Careful analysis will have to be done to estimate what should a reasonable player do, based on its assets, and the positioning on the map relative to others. Then a small set of rules (possibly probabilistic ones!) will be extracted, and implemented as the "opponent-predictor" module. I will try my best to incorporate elements of machine learning and inference making into the module, so that the AI will be simulating games against a similar opponent, when deciding on strategy. A further layer of heuristics will have to be used, as the information available to the player will be incomplete.
 
 '''The Evolutionary Paradigm'''
 
@@ -49,7 +48,7 @@ The process of making new generations will happen a fixed number of times, or un
 
 ''Fitness function:''
 
-A fitness function will be derived to give each hypothesis a numeric evaluation, by which they can be compared (e.g. higher = better, or closer to zero = better). This function will have as parameters the current stats of the AI player, its relative standing in the universe compared to others (number of planets, fleets, etc), and the winning conditions of the ruleset in question (here, RFTS).
+A fitness function will be derived to give each hypothesis a numeric evaluation, by which they can be compared (e.g. higher = better, or closer to zero = better). This function will have as parameters the current stats of the AI player, its relative standing in the universe compared to others (number of planets, fleets, etc), and the winning conditions of the ruleset in question (here, RFTS). A heuristic will have to be used, as the information available to the player will be incomplete.
 
 == About me ==
 
