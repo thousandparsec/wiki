@@ -36,7 +36,7 @@ I plan to start a blog to document my progress, as well as making it a place for
 
 == Benefits to Thousand Parsec, and its community of gamers ==
 
-TP is a game, where several intelligent individuals compete against each other. In the case of the RFTS ruleset, the game can only be played with a fixed amount of players (four, I believe), so it is of great benefit to have a good AI Client handy in the case only one, two or three players wish to start a game. This particular design ensures that no two AI players ever play the same, which makes it inherently creative, hard to "crack" and trap. These features are bound to add to gameplay quality, as human players will strive not only to outsmart each other, but will also struggle with the AI player as well. The fact that I chose to code it in Java will make it easy to set up on any machine.
+A good AI Client would enrich the game experience in cases where only a small number of people can have a game together. This particular design (see below) ensures inherently creative solutions, which would make it hard to "crack" and trap. These features are bound to add to gameplay quality, as human players will strive not only to outsmart each other, but will also struggle with the AI player. The fact that I chose to code it in Java will make it easy to set up on any machine.
 
 == Design Principles ==
 
