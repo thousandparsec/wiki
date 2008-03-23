@@ -77,7 +77,7 @@ My name is Victor Ivri (forum and IRC: vi1985). I'm double majoring in Computer 
 I want to do this project because it is very interesting and challenging. I can only imagine the sigh of relief and satisfaction I'll have when it finally runs without bugs! (some 6 months from now...)  :)) . In the time elapsed since I first heard of TP (not more than a week!), I've had the pleasure to talk and exchange ideas with many of you, and I hope that our collaboration will continue into the future. Even more than that, I hope that you give me a chance to prove that my ideas and skills are an asset to Thousand Parsec.
 
 '''Programming Example''': 
-Here's a rather simple, but neat, example of genetic programming, which solves a class of non-trivial problems in arithmetic. It is of a quite different design than explained above, but it illustrates how "letting evolution run its course" can solve non-trivial problems. Here is the link: [http://www.4shared.com/account/file/41671485/10b80908/genArithmetic.html].
+Here's a rather simple, but neat, example of genetic programming (a day's worth of hacking), which solves a class of non-trivial problems in arithmetic. It is of a quite different design than explained above, but it illustrates how "letting evolution run its course" can solve non-trivial problems. Here is the link: [http://www.4shared.com/account/file/41671485/10b80908/genArithmetic.html].
 
 
 Thanks for considering my proposal.
