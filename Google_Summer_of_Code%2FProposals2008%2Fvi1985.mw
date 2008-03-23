@@ -36,7 +36,7 @@ I plan to start a blog to document my progress, as well as making it a place for
 
 == Benefits to Thousand Parsec, and its community of gamers ==
 
-A good AI Client would enrich the game experience in cases where only a small number of people can have a game together. This particular design (see below) ensures inherently creative solutions, which would make it hard to "crack" and trap. These features are bound to add to gameplay quality, as human players will strive not only to outsmart each other, but will also struggle with the AI player. The fact that I chose to code it in Java will make it easy to set up on any machine.
+A good AI Client would enrich the game experience in cases where only a small number of people can have a game together. In the TP RFTS-clone[[http://www.thousandparsec.net/wiki/TP_RFTS]], there is a hard-coded number of players, which must participate in the game. A good AI Client will make games of less than four human players possible and enjoyable. This particular design (see below) ensures inherently creative solutions, which would make it hard to "crack" and trap. These features are bound to add to gameplay quality, as human players will strive not only to outsmart each other, but will also struggle with the AI player. The fact that I chose to code it in Java will make it easy to set up on any machine.
 
 == Design Principles ==
 
