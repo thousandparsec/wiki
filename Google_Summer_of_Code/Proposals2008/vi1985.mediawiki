@@ -33,6 +33,14 @@ I mentioned before, I will have two high-priority obligations for the summer: th
 
 I plan to start a blog to document my progress report, as well as just general thought tangents that are relevant to it. I also intend to be available on the IRC channel as much as possible, and generally communicate with the other members of the TP project as much as necessary.
 
+
+
+== Benefits for Thousand Parsec, and its community of gamers ==
+
+TP is suited for a group of several intelligent people to compete against each other. In the case of RFTS, the game can only be played with a fixed amount of players (four, I believe), so it is of great benefit to have a good AI Client handy in the case only one, two or three players wish to start a game. A genetic programming design ensures that no two AI players ever play the same, which makes it inherently creative, hard to "crack", or trap. These features are bound to add to gameplay quality, as human players will strive not only to outsmart each other, but will also struggle with the AI player as well. The fact that I chose to code it in Java will make it easy to set up on any machine.
+
+
+
 == Design Principles ==
 
 '''General Execution Sequence:'''
