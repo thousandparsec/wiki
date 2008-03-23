@@ -6,11 +6,10 @@ This document provides a general overview of the initial design concept of the A
 
 == Goals ==
 
-*Design and implement the AI agent for TP.
+*Design and implement the AI agent for TP in Java.
 *Integrate it with the libtpproto-java library.
 *Collaborate on completing the libtpproto-java library with jezuch.
 *Create a convenient and comprehensive UI for the AI client.
-
 
 == Timeline (Checkpoints) ==
 
