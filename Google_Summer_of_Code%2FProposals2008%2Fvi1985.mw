@@ -23,17 +23,15 @@ This document provides a general overview of the initial design concept of the A
 
 '''General Considerations'''
 
-I don't see this as a May 26-August 18 project. Rather, I'll start working on it full time beginning in April, finish the core coding by August 11, and then slowly work to complete the desired set of features (e.g. have full configurability of AI agent, design an appealing GUI, work on a better opponent move prediction, etc.) from then on. I definitely see this as a project I can slowly build on, rather than just a summer contract. I will be taking one university subject this summer, but I should have more than enough time for full-time development, and for studying. There are no week-long vacations planned for the summer, although some weekends I may be unavailable.
+I don't see this as a May 26-August 18 project. Rather, I'll start working on it full time beginning in April, finish the core coding by August 11, and then slowly work to complete the desired set of features (e.g. have full configurability of AI agent, design an appealing GUI, work on a better opponent move prediction, etc.) from then on. I definitely see this as a project I can slowly build on, rather than just a summer contract. I will be taking one university subject this summer, but I should have more than enough time for full-time development, and for studying.  I plan on spending at least 30 hrs/wk for coding, and of course many more will go on planning, reading relevant materials and communicating. There are no week-long vacations planned for the summer, although some weekends I may be unavailable.
 
 '''Disaster Contingencies'''
 
-I mentioned before, I will have two high-priority obligations for the summer: this project, and a single university subject. There should be ample time to delegate to each. I plan on spending at least 30 hrs/wk for coding, and of course many more will go on planning, reading relevant materials and communicating. A preemptive strategy to counter unexpected situations would be to divide the task into three parts: first design and implement the AI agent, with reliance on the libtpproto-java library (Deadline: July 7), create a comprehensive GUI, by means of which the players will be able to fully configure the AI agent, and only then do the general work of creating a discrete and (as much as possible!) complete AI Client, using the AI agent, and the libtpproto-java library. If something unexpected were to occur during the summer, then at least the core features and logic would have hopefully been completed.
+As mentioned above, I will have two high-priority obligations for the summer: this project, and a single university subject. There should be ample time to delegate to each. A preemptive strategy to counter unexpected situations would be to divide the task into three parts: first design and implement the AI agent, with reliance on the libtpproto-java library (Deadline: July 7), create a comprehensive GUI, by means of which the players will be able to fully configure the AI agent, and only then do the general work of creating a discrete and (as much as possible!) complete AI Client, using the AI agent, and the libtpproto-java library. If something unexpected were to occur during the summer, then at least the core features and logic would have hopefully been completed.
 
 '''Work Progress Log and Communication'''
 
 I plan to start a blog to document my progress report, as well as just general thought tangents that are relevant to it. I also intend to be available on the IRC channel as much as possible, and generally communicate with the other members of the TP project as much as necessary.
-
-
 
 == Benefits to Thousand Parsec, and its community of gamers ==
 
