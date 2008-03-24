@@ -1,0 +1,9 @@
+== FreeOrion ==
+* Space krill
+* Space Squid (50)
+* Space Wyrm (100)
+* Space Dragon (250)
+
+== Stars! Autohost ==
+
+== Thousand Parsec ==
