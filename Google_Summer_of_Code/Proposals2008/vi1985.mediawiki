@@ -89,7 +89,7 @@ I wish to make the AI-agent as fully configurable as possible. Although it is im
 
 The UI can either be text or GUI. When working on the AI agent, I will use the console command line, but then I plan to implement an MVC GUI module. An important note is that I only see usefulness in a UI prior to game start, so there is no reason to keep it running during the game. ///perhaps anyone has some idea of usefulness of AI manipulation during the game? I can't think of anything at the moment.///
 
-== Future Directions for Genetic Conquest ==
+== Future Directions for ''Genetic Conquest'' ==
 
 Endless work can be put in optimizing an optimizing algorithm :). The most interesting and promising directions for future work I can see from this disadvantaged point are:
 
