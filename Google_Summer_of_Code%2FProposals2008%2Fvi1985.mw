@@ -20,11 +20,11 @@ This document provides a general overview of the initial design concept of the A
 *beginning of May - Start coding.
 *July 7 - Have AI agent ready in time for mid-term evaluations.
 *Mid July - Have the GUI ready for the client.
-*August 11 - Complete AI agent-client library integration, and have a buffer week for "pencils down" date.
+*August 11 - Complete AI agent - client library integration, have a complete and ready to use Java AI Client, and still have a buffer week for "pencils down" date.
 
 '''General Considerations'''
 
-I don't see this as a May 26-August 18 project. Rather, I'll start working on it full time beginning in April, finish the core coding by August 11, and then slowly work to complete the desired set of features (e.g. have full configurability of AI agent, design an appealing GUI, work on a better opponent move prediction, etc.) from then on. I definitely see this as a project I can slowly build on, rather than just a summer contract. I will be taking one university subject this summer, but I should have more than enough time for full-time development, and for studying.  I plan on spending at least 30 hrs/wk for coding, and of course many more will go on planning, reading relevant materials and communicating. There are no week-long vacations planned for the summer, although some weekends I may be unavailable.
+I don't see this as a May 26-August 18 project. Rather, I'll start working on it full time beginning in April, finish the core coding by August 11, and then slowly work to complete the desired set of features from then on. I definitely see this as a project I can slowly build on, rather than just a summer contract. I will be taking one university subject this summer, but I should have more than enough time for full-time development, and for studying.  I plan on spending at least 30 hrs/wk for coding, and of course many more will go on planning, reading relevant materials and communicating. There are no week-long vacations planned for the summer, although on some weekends I may be unavailable.
 
 '''Disaster Contingencies'''
 
