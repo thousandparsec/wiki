@@ -10,21 +10,21 @@ What has to be done though, is deciding what exactly to implement. In fact, SEII
 ===Clustering the rules===
 
 The start of the project is to cluster the rules of SEIII into categories (or layers as I’ll call them). These layers are ordered by importance, and any layer should not depend on the next one. This way, I’ll be able to implement and fully test one layer at a time, incrementally. Here is how I would cluster the rules:
--	Layer 1: 	
-o	  Planets and systems, with worm holes. Planet characteristics (size, value, population growth and happiness, atmosphere) are all there.
-o	Facilities: Only construction centers, space ports, and maybe ship yards as facilities too (they wouldn’t take up space on the planet though).
-o	Notion of points (research and construction) and point storage.
-o	Ships: Only some pre-built designs, no customization. 
-o	Simple combat system (no tactical combat).
--	Layer 2:
-o	Add all the usual facility types, but no planetary battles (no troops….), and no intelligence.
-o	Add real components to ships, which can then be customized at will.
-o	Research unlocks new or better ship components, as well as sizes and types.
-o	Real damage system of SEIII: destruction of individual components of a ship.
--	 Layer 3:
-o	Add a complete research system, with plenty of levels.
-o	Add basic intelligence.
-o	Add some minor left out things.
+* Layer 1: 	
+** Planets and systems, with worm holes. Planet characteristics (size, value, population growth and happiness, atmosphere) are all there.
+** Facilities: Only construction centers, space ports, and maybe ship yards as facilities too (they wouldn’t take up space on the planet though).
+** Notion of points (research and construction) and point storage.
+** Ships: Only some pre-built designs, no customization. 
+** Simple combat system (no tactical combat).
+* Layer 2:
+** Add all the usual facility types, but no planetary battles (no troops….), and no intelligence.
+** Add real components to ships, which can then be customized at will.
+** Research unlocks new or better ship components, as well as sizes and types.
+** Real damage system of SEIII: destruction of individual components of a ship.
+* Layer 3:
+** Add a complete research system, with plenty of levels.
+** Add basic intelligence.
+** Add some minor left out things.
 
 There are only three layers here, but I’ll probably divide them into more, to be able to test each thing separately. I think layer 1 is the minimum requirement for a decent game though.
 
