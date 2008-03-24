@@ -56,7 +56,7 @@ The main difficulty I expect to encounter will be in making a good heuristic for
 
 ''Possible Alternatives''
 
-I would rather not simply use a set of heuristics and behavioral tendencies as my decision making module, since having it look several moves ahead would entail creating an alpha-beta decision tree, then proceeding by the Paranoid Hypothesis assumption (would probably have to be done this way, since there are 4, not 2 players), which will be much more memory- and execution-time guzzling, and much less accurate, than a well designed GA. Another alternative would be to these rules to calculate a solution one move in advance. While it may be a good quick-fix, it will not offer more advanced (and intelligent) players a challenge, and furthermore its simple strategy would damage gameplay qualities.
+I would rather not simply use a set of heuristics and behavioral tendencies as my decision making module, since having it look several moves ahead would entail creating an alpha-beta decision tree, then proceeding by the Paranoid Hypothesis assumption (would probably have to be done this way, since there are 4, not 2 players), which will be much more memory- and execution-time guzzling, and much less accurate, than a well designed GA. Another alternative would be to have these rules calculate a solution a single in advance. While it may be a good quick-fix, it will not offer the more advanced (and intelligent) player a challenge, and furthermore its simple strategy would damage gameplay quality.
 
 '''The Evolutionary Paradigm'''
 
