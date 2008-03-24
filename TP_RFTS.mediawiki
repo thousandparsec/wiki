@@ -1,5 +1,5 @@
 == TP RFTS ==
-TP RFTS is the current name for the Reach for the Stars clone being developed this summer (of '07), by Google Summer of Code student Tyler Shaub / [[User:Xdotx|xdotx]]. A new name is currently being sought (RFTP anyone?), and suggestions are highly encouraged.
+TP RFTS is the current name for the Reach for the Stars clone being developed for Google Summer of Code 2007 by Tyler Shaub / [[User:Xdotx|xdotx]].
 
 
 == Basics ==
@@ -93,9 +93,9 @@ At the start of the game, a max number of turns is selected between 40 and 160. 
 == Differences ==
 RFTS, being an older game only supported multiplayer though hot-seat and play-by-email. Inevitably, TP RFTS is going to contain some appropriate differences.
 
-* 4 player min/max - no promises on AI implementation, and thusly on a hard 4 for number of players/AI
-* wrapping map - this is not currently supported by TP, although a fix / work around may be implemented
-* withdraws - RFTS supports withdrawing ships from combat after a battle; TP RFTS current lacks support for this, and implementation is pending
+* 4 player min/max - without an AI implementation there is no set player minimum, only a maximum set in the config
+* wrapping map - ship movement is treated like the map wraps at the edges, though this is not really supported visually
+* withdraws - RFTS supports withdrawing ships from combat after a battle; TP RFTS currently lacks support for this, and implementation is pending
 * RFTS has many advanced rules, it is likely that TP RFTS will simplify some of these and incorporate some of the advanced rules into a standard game
 
 == Links ==
