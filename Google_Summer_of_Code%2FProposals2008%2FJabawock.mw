@@ -1,0 +1,54 @@
+==Space Empires III ruleset for Thousand Parsec==
+
+As a project for this year’s GSoC, I’d like to implement a ruleset for the game Space Empires III in the Thousand Parsec framework. I really like this game, and am willing to explore it in detail to be able to implement the rules behind it. I don’t aim at a perfect clone though; I’ll probably tweak some concepts here and there to make it (in my opinion) more interesting. I think it makes a pretty nice GSoC project, as it has a useful purpose (to have a popular game under the Thousand Parsec framework), is an interesting project for a student, and is a good opener to the open source development community.
+
+===Details===
+
+Implementing a ruleset within the existing framework is, in itself, not too difficult. The biggest part of the design is already done, so I’d just have to use it for this particular game. I’ve looked into the framework’s code, and it looks straightforward enough not to spend too much time figuring it out. The already existing examples (like RFTS) should also be very helping. 
+What has to be done though, is deciding what exactly to implement. In fact, SEIII is not the basic 4X game, as it has a more or less high level of detail. This gives a relatively complex universe, which cannot be entirely implemented over the course three months. So, choices have to be made, to narrow down all of the rules to a reasonable base, which would still provide an interesting game to play. 
+
+===Clustering the rules===
+
+The start of the project is to cluster the rules of SEIII into categories (or layers as I’ll call them). These layers are ordered by importance, and any layer should not depend on the next one. This way, I’ll be able to implement and fully test one layer at a time, incrementally. Here is how I would cluster the rules:
+-	Layer 1: 	
+o	  Planets and systems, with worm holes. Planet characteristics (size, value, population growth and happiness, atmosphere) are all there.
+o	Facilities: Only construction centers, space ports, and maybe ship yards as facilities too (they wouldn’t take up space on the planet though).
+o	Notion of points (research and construction) and point storage.
+o	Ships: Only some pre-built designs, no customization. 
+o	Simple combat system (no tactical combat).
+-	Layer 2:
+o	Add all the usual facility types, but no planetary battles (no troops….), and no intelligence.
+o	Add real components to ships, which can then be customized at will.
+o	Research unlocks new or better ship components, as well as sizes and types.
+o	Real damage system of SEIII: destruction of individual components of a ship.
+-	 Layer 3:
+o	Add a complete research system, with plenty of levels.
+o	Add basic intelligence.
+o	Add some minor left out things.
+
+There are only three layers here, but I’ll probably divide them into more, to be able to test each thing separately. I think layer 1 is the minimum requirement for a decent game though.
+
+===Schedule===
+
+With these layers in mind, here’s a basic schedule for the project:
+-	14/04: Think of how to fit the layer 1 rules in the framework, and design a rough class diagram (I won’t spend too much time on formal modeling).
+-	End of April: Start implementing the layer 1.
+-	Halfway through May: Start preparing for the exams; continue the project from time to time.
+-	24/06 (more or less): End of exam period, continue coding on full time.
+-	First deadline: Must have finished with layer 1. The last week before the deadline should be used for testing.
+-	Second half of the project: design and code layer 2, same for layer 3 if enough time.
+-	Final deadline: Must have at least completed and tested layer 2. 
+I clustered the rules in order to give me some margin. This way, I can have something to deliver for the final deadline even if the coding in the second stage was delayed. If it happens that I cannot finish layer 3 on time, I’ll probably finish it after GSoC. I may also implement more additional rules afterwards if time allows for it.
+In the early stages of the project I’ll work on the project on week ends and evenings of week days. It is convenient that all of my university projects will be finished by April 13th. During my exams I’ll try to work on the project too, but on an irregular basis, finding some spare time here and there. After the exams are over I don’t have any planned activities, so I can spend most of my time coding and testing (like on a full time job).
+
+===Personal background===
+My name is Boris Iolis (Jabawock on the forum), and I’m in my third year of computer science study at the ULB (in Brussels). I’m interested in this project because it is a way to use all of the knowledge I acquired to make a game that people will actually play (and not just rate like in university), which is really important to me. Combined with the fact that the project is about a game I like a lot, it makes my determination very strong. Also, I feel that it is a great opportunity to discover the world of open source software, which I am not particularly familiar with. 
+I don’t have much related experience, except for an ant colony simulation I worked on with a group of people last year. As a turn based simulation, it has common points with 4X games. It was the biggest programming project I worked on, and I learned a lot through it, especially not to underestimate the amount of work. Thinking of a schedule is easy, but things quickly go off track and delays occur. That’s why I divided my project into layers; to ensure that, whatever happens, there will be something coherent to deliver for the deadline.
+
+===Communication===
+I understand that communication is very important in this kind of project, so I’ll keep contact with developers of Thousand Parsec as much as possible, to keep them informed of the progress I make. I’ll be active in the mailing list and forum, and creating a blog about the project seems like a good idea too. 
+I have a problem with IRC though; I live in a student room, and my internet connection is provided by my university. IRC must be blocked somehow because I can’t connect with any IRC client. There won’t be problems in the second stage of the project though, as I’ll be at my parent’s house and will be able to connect freely from there.
+Contact: biolis@ulb.ac.be
+
+===Feedback===
+Feel free to leave any comments on this proposal draft. I don’t know what level of detail is necessary; I’ll dig deeper if it’s not enough.  I’m sorry I didn’t have the opportunity to ask more questions about all this before, mostly because I couldn’t get on IRC and was very busy.
