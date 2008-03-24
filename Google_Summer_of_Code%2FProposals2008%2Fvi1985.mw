@@ -91,7 +91,7 @@ The UI can either be text or GUI. When working on the AI agent, I will use the c
 
 == Future Directions for ''Genetic Conquest'' ==
 
-Endless work can be put in optimizing an optimizing algorithm :). The most interesting and promising directions for future work I can see from this disadvantaged point are:
+Endless work can be put in optimizing an optimization algorithm :). The most interesting and promising directions for future work I can see from this disadvantaged point are:
 
 *OMM (Opponent Move Module) Optimization: Quite possibly the most interesting and useful direction to consider, it to provide the OMM with advanced machine-learning capabilities, directed at analyzing visible opponent behavior. This will highly optimize the selection process of hypotheses, since the games being simulated will be with opponents very similar in behavior to real ones. To that end, neural nets could be used for a robust and generic solution. ''I would be very interested in conducting further work in that avenue!''
 *Evolutionary Paradigm Optimization: The above evolutionary paradigm is robust and efficient, but it is far from perfect. Even more creative evolutionary solutions can be found, for example combining evolution and dynamic tree structures, or just changing the paradigm altogether. 
