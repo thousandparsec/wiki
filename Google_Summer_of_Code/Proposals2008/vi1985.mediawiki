@@ -136,3 +136,5 @@ I think this is enough for now from my part. Keep up the great work!
 
 - Not exactly. This is true of the standard RFTS but is one of the differences for TP RFTS- it has no min players, only a max. Btw, I've made trivial updates to the TP RFTS wiki page.
 --[[User:Xdotx|Xdotx]] 21:01, 24 March 2008 (EDT)
+
+>>>Xdotx: Thanks for the update! I have actually caught it about 30mins ago, and made a comment about it in my Google proposal ;). I should change it here as well... --[[User:Vi1985|Vi1985]] 21:31, 24 March 2008 (EDT)
