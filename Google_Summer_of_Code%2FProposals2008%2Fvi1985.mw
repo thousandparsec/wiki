@@ -10,7 +10,7 @@ The goal of this project is to devise and implement an efficient and capable AI 
 
 *Design and implement the AI agent for TP in Java.
 *Integrate it with the libtpproto-java library.
-*Create a convenient and comprehensive UI for the AI client, for pre-game adjustments.
+*Create a convenient and comprehensive UI for the AI client, for pre-game adjustments. [EDIT: Can use command-line entries instead of a GUI. See dedicated section below. --[[User:Vi1985|vi1985]] 18:21, 25 March 2008 (EDT)]
 *Collaborate on completing the libtpproto-java library with jezuch, in the direction of finalizing a complete and discrete AI Client.
 
 == Planning and Progress ==
