@@ -52,3 +52,12 @@ Contact: biolis@ulb.ac.be
 
 ===Feedback===
 Feel free to leave any comments on this proposal draft. I don’t know what level of detail is necessary; I’ll dig deeper if it’s not enough.  I’m sorry I didn’t have the opportunity to ask more questions about all this before, mostly because I couldn’t get on IRC and was very busy.
+
+----
+
+You say that you have already some some game programming in university, maybe you could put these examples (or any other that you have done) somwhere on the internet if they are relevant to this application.
+
+I guess we all here prefer the dates in ISO standard format, like YYYY-MM-DD. This makes it the most clear which one is month and which one is day.
+
+If you have already explored which ruleset elements (objects, orders, ...) are not doable with current protocol specification (version 3) write this down. Is it OK with version 4 which is in the works? Maybe something will need to be added to TP04 to make it possible to create the fuller ruleset.
+--[[User:JLP|JLP]] 05:33, 25 March 2008 (EDT)
