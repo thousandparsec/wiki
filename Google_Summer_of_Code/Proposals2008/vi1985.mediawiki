@@ -21,7 +21,7 @@ The goal of this project is to devise and implement an efficient and capable AI 
 *April-May - Finalize the design scheme.
 *beginning of May - Start coding.
 *July 7 - Have AI agent ready in time for mid-term evaluations.
-*Mid July - Have the GUI ready for the client. [EDIT: as jezuch noticed, it would probably be better to make it a primarily a command-line interface. So, if everything goes well, I can probably make an optional GUI interface, but this now turns into an optional deliverable --[[User:Vi1985|vi1985]] 10:52, 25 March 2008 (EDT)]
+*Mid July - Have the GUI ready for the client. [EDIT: as jezuch noticed, it would probably be better to make it a primarily a console interface. So, if everything goes well, I can probably make an optional GUI interface (Can be opened by a command from console), but this now turns into an optional deliverable --[[User:Vi1985|vi1985]] 10:52, 25 March 2008 (EDT)]
 *August 11 - Complete AI agent - client library integration, have a complete and ready to use Java AI Client, and still have a buffer week for "pencils down" date.
 
 '''General Considerations'''
