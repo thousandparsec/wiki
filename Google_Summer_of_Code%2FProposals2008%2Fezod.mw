@@ -56,3 +56,17 @@ This project holds special significance for me, as I am a long-time fan of 4X st
 I am available full-time throughout the course of the Google Summer of Code timeline. Though I will be enrolled in the Ph.D. program, I will not have any coursework for the summer semester, and my general workload will be light enough to accommodate full-time concentration on a SoC project.
 
 == Comments ==
+I think it would be easier ot read if you put different points of development plan under a date:<br />
+2008-04-15 - 2008-05-26:
+# Research...
+# Develop...
+
+Mention how many hours per day/week do you plan to work on the project.
+
+Do you plan anything during the summer that will interupt the work (holidays for one week..., when)?
+
+What problems and risks do you expect during the work? What are the preventive/curative actions you will take to minimise the risk?
+
+I you have a homepage or a blog where you will write about your progress during the work do point out that in the application.
+
+Also if you have any links to some toy code that is relevant to this project do provide a link to it.--[[User:JLP|JLP]] 15:16, 25 March 2008 (EDT)
