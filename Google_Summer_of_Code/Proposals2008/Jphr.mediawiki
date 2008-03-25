@@ -33,3 +33,9 @@ As for other coding experience I was introduced to programming through C++ and h
 
 == Your Comments ==
 Please feel free to leave comments on my project proposal here, or heck just edit the document
+
+----
+
+In project schedule it would be nice to include what is being planed to be done by dates, like in:
+2008-04-12 - 2008-05-05: Doing research
+--[[User:JLP|JLP]] 05:47, 25 March 2008 (EDT)
