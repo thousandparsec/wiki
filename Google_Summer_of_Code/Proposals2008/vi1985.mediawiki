@@ -16,13 +16,13 @@ The goal of this project is to devise and implement an efficient and capable AI 
 == Planning and Progress ==
 
 '''Timeline (Big Checkpoints)'''
+''Note that the timeline will become much clearer, and much more detailed, after the initial study and software-design stage. I expect it to be firmly set by end of April.''
 
 *April 12 - My exams finish; Begin active study of libraries, ruleset, and other relevant materials.
 *April-May - Finalize the design scheme.
 *beginning of May - Start coding.
-*July 7 - Have AI agent ready in time for mid-term evaluations.
-*Mid July - Have the GUI ready for the client. [EDIT: as jezuch noticed, it would probably be better to make it a primarily a console interface. So, if everything goes well, I can probably make an optional GUI interface (Can be opened by a command from console), but this now turns into an optional deliverable --[[User:Vi1985|vi1985]] 10:52, 25 March 2008 (EDT)]
-*August 11 - Complete AI agent - client library integration, have a complete and ready to use Java AI Client, and still have a buffer week for "pencils down" date.
+*MJuly 7 - Have AI agent logic ready in time for mid-term evaluations.
+*August 11 - AI agent - client library integration, have a complete and ready to use Java AI Client, and still have a buffer week for "pencils down" date.
 
 '''General Considerations'''
 
