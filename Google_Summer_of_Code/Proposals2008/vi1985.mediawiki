@@ -130,3 +130,9 @@ I think this is enough for now from my part. Keep up the great work!
 >>>Thank you for your suggestions, JLP. I will put some source code online, and expand on the areas that you mentioned. --[[User:Vi1985|Vi1985]] 11:59, 23 March 2008 (EDT)
 
 >>>Done. --[[User:Vi1985|Vi1985]] 16:12, 23 March 2008 (EDT)
+
+
+"there is a hard-coded number of players, which must participate in the game"
+
+- Not exactly. This is true of the standard RFTS but is one of the differences for TP RFTS- it has no min players, only a max. Btw, I've made trivial updates to the TP RFTS wiki page.
+--[[User:Xdotx|Xdotx]] 21:01, 24 March 2008 (EDT)
