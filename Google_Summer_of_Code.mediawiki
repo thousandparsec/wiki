@@ -43,6 +43,7 @@ The following gives some indication of some of the things we are looking for. Th
 * '''Proposal is the only submission for the given task.''' Many proposals focus on the same few tasks, so if you're the only person proposing to do a given project, that weighs in your favor.
 * '''Proposal shows implementation planning.''' If the author has broken the work out into a task list, it shows that they know what they'll be doing.
 * '''Proposal scope is realistic.''' 3 months goes fast. Proposals that are promising too much are unlikely to be completed in a timely fashion.
+* '''Proposal shows motivation.''' While describing the project in detail and showing that you have the necessary skills is important, do not forget to show your motivation, i.e. why you want to work for us on this particular project.
 
 The following are conditions that result in automatic rejection:
 
