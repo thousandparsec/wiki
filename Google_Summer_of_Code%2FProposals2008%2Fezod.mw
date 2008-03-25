@@ -1,0 +1,56 @@
+== Remote Server Configuration Protocol and Single-Player Mode ==
+
+The Thousand Parsec server (tpserver-cpp) will be extended to include a new server configuration protocol, which will allow remote command passing and a remote interactive shell for configuration, administration, and monitoring. A relevant command set will be incorporated to access the appropriate internal functions. The server will be modified so that all such operations are encapsulated in this client-server paradigm, and an internal “client” using the same services will be integrated into the server itself in order to preserve existing functionality. A console-based configuration client and a web-based interface will also be provided as appropriate.
+
+A special configuration client will be integrated into the main Thousand Parsec client (tpclient-pywx) and presented as a user-friendly single-player game configuration menu.
+
+The protocol itself would be implemented in a library similar to, or within if appropriate, the game protocol library (libtpproto-*). It will use proper secure authentication, and will, where appropriate, be based on or be implemented using similar existing software.
+
+Design objectives will include adherence to Thousand Parsec's philosophies and conventions, preservation of existing functionality where appropriate, modularity and extensibility for future use, use of existing software and standards where appropriate, and minimal code base inflation.
+
+== Benefits ==
+
+This proposal holds several key benefits to the Thousand Parsec project.
+
+Generally, the separation of the console from the server daemon itself allows for a more modular and extensible approach to configuration and administration. Two particular advantages to game operators are interactive configuration and remote configuration and monitoring. The paradigm lends itself to a variety of other possibilities, such as on-the-fly configuration changes, metaserver polling, and remote logging.
+
+A very important benefit is the ability for players to install both the server and the client, and easily set up local single-player games from the GUI. This will undoubtedly become even more important once the player has the ability to install and easily configure a series of local AI clients to play against. The inclusion of such a mode will be a major factor in attracting new players.
+
+== Deliverables ==
+
+*A full Thousand Parsec server configuration protocol and command set specification document.
+*Server (tpserver-cpp) and/or library (libtpproto-*) code extensions to implement the protocol.
+*Server (tpserver-cpp) code modifications to encapsulate existing configuration functionality in the new client-server paradigm.
+*A standalone console-based server configuration client, if appropriate.
+*A web-based server configuration interface, if appropriate.
+*Client (tpclient-pywx) code and GUI extensions to implement a special user-friendly single-player mode server configuration client.
+
+== Plan ==
+
+Development of the new configuration paradigm has been divided into a series of atomic segments. Thorough testing after each stage will ensure that no part of Thousand Parsec's existing functionality is negatively affected.
+
+#Research similar existing software and protocols (both games and otherwise); determine how much can be adapted to this project, and what the best approach is.
+#Develop a full protocol specification and command set with input from current game operators and developers.
+#Modularize current server internals as necessary to prepare for migration to the new paradigm.
+#Implement the protocol and command set functionality in the server.
+#Switch existing configuration functionality into the new paradigm and clean up any unnecessary existing code.
+#Develop standalone configuration client if necessary, depending on availability of existing clients for the communication protocol used.
+#Develop web-based configuration interface if appropriate.
+#Implement single-player configuration client functionality into the game client.
+#Develop a user-friendly GUI for configuring local single-player games, including future extensibility to starting one or more AI clients.
+
+It is envisioned that the first two stages will take place prior to May 26. Stages 3, 4 and 5, related to the server, as well as at least some of stage 6, should be complete prior to the mid-term evaluation July 7. The remaining stages will be completed in early August so that all code can be tested and finalized prior to August 18.
+
+== Biography and Qualifications ==
+
+I am a 25-year-old graduate student in electrical & computer engineering at the University of Windsor, in the process of completing my M.A.Sc. My area of research is 3D distributed smart camera networks, related to distributed systems and computer vision.
+
+I have been using UNIX since 1993, and related free software since 1996 when I was introduced to FreeBSD and GNU/Linux. Since 1999, I have been an organizer of the Windsor UNIX Users Group (wuug.org). I learned to code C over 10 years ago, and since then I have become quite proficient at C, C++, Python, and Bash scripting. I have been exposed to a gamut of other languages and APIs over the years with which I consider myself reasonably competent, and I am versatile in picking up new syntax and conventions.
+
+In addition to my love for computer systems and software, I am passionate about software freedom. I strive to contribute to free software in a variety of ways, from advocacy to support to coding. I have contributed various small projects, patches, and documentation in the past, and currently serve as a package tester on the SPARC architecture for Gentoo Linux. I believe I am now ready for the next step: this application is motivated by my desire to surmount the learning curve of distributed free software development, so that I can contribute much more in the future.
+
+This project holds special significance for me, as I am a long-time fan of 4X strategy games – notably, I spent many hours of my youth playing Stars!, Thousand Parsec's original inspiration. Generally, turn-based strategy games (computer and board) fascinate me and I have played a large cross-section of them. Having recently discovered Thousand Parsec through Google Summer of Code, I hope to continue to play and contribute in the future. Fortunately, my skill set (particularly C++, Python, and GTK+ experience) appears to complement the project well.
+
+== Availability ==
+
+I am available full-time throughout the course of the Google Summer of Code timeline. Though I will be enrolled in the Ph.D. program, I will not have any coursework for the summer semester, and my general workload will be light enough to accommodate full-time concentration on a SoC project.
