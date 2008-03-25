@@ -27,19 +27,30 @@ A very important benefit is the ability for players to install both the server a
 
 == Plan ==
 
-Development of the new configuration paradigm has been divided into a series of atomic segments. Thorough testing after each stage will ensure that no part of Thousand Parsec's existing functionality is negatively affected.
+Development of the new configuration paradigm has been divided into a series of atomic segments. Thorough testing after each stage will ensure that no part of Thousand Parsec's existing functionality is negatively affected. Below is a tentative roadmap and timeline for completion of these segments.
 
-#Research similar existing software and protocols (both games and otherwise); determine how much can be adapted to this project, and what the best approach is.
-#Develop a full protocol specification and command set with input from current game operators and developers.
-#Modularize current server internals as necessary to prepare for migration to the new paradigm.
-#Implement the protocol and command set functionality in the server.
-#Switch existing configuration functionality into the new paradigm and clean up any unnecessary existing code.
-#Develop standalone configuration client if necessary, depending on availability of existing clients for the communication protocol used.
-#Develop web-based configuration interface if appropriate.
-#Implement single-player configuration client functionality into the game client.
-#Develop a user-friendly GUI for configuring local single-player games, including future extensibility to starting one or more AI clients.
+'''Phase I: Preliminary''' (2008-04-18 to 2008-05-25)
 
-It is envisioned that the first two stages will take place prior to May 26. Stages 3, 4 and 5, related to the server, as well as at least some of stage 6, should be complete prior to the mid-term evaluation July 7. The remaining stages will be completed in early August so that all code can be tested and finalized prior to August 18.
+*Research similar existing software and protocols (both games and otherwise); determine how much can be adapted to this project, and what the best approach is.
+*Develop a full protocol specification and command set with input from current game operators and developers.
+
+'''Phase II: Server''' (2008-05-26 to 2008-07-07)
+
+*Modularize current server internals as necessary to prepare for migration to the new paradigm.
+*Implement the protocol and command set functionality in the server.
+*Switch existing configuration functionality into the new paradigm and clean up any unnecessary existing code.
+*Develop minimal standalone configuration client if necessary, depending on availability of existing clients for the communication protocol used.
+
+'''Phase III: Client''' (2008-07-08 to 2008-08-10)
+
+*Enhance standalone configuration client feature base, if applicable.
+*Develop web-based configuration interface if appropriate.
+*Implement single-player configuration client functionality into the game client.
+*Develop a user-friendly GUI for configuring local single-player games, including future extensibility to starting one or more AI clients.
+
+'''Phase IV: Validation''' (2008-08-11 to 2008-08-18)
+
+*Test all code for full functionality and compliance with design objectives.
 
 == Biography and Qualifications ==
 
