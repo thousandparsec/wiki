@@ -60,4 +60,6 @@ You say that you have already some some game programming in university, maybe yo
 I guess we all here prefer the dates in ISO standard format, like YYYY-MM-DD. This makes it the most clear which one is month and which one is day.
 
 If you have already explored which ruleset elements (objects, orders, ...) are not doable with current protocol specification (version 3) write this down. Is it OK with version 4 which is in the works? Maybe something will need to be added to TP04 to make it possible to create the fuller ruleset.
+
+Oh yeah, don't forget to mention which language you will use. If I remember correctly it is C++. So that we know for which server this is going to be.
 --[[User:JLP|JLP]] 05:33, 25 March 2008 (EDT)
