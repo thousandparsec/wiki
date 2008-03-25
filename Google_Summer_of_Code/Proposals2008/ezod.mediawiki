@@ -66,6 +66,15 @@ In addition to my love for computer systems and software, I am passionate about 
 
 This project holds special significance for me, as I am a long-time fan of 4X strategy games – notably, I spent many hours of my youth playing Stars!, Thousand Parsec's original inspiration. Generally, turn-based strategy games (computer and board) fascinate me and I have played a large cross-section of them. Having recently discovered Thousand Parsec through Google Summer of Code, I hope to continue to play and contribute in the future. Fortunately, my skill set (particularly C++, Python, and GTK+ experience) appears to complement the project well.
 
+== Portfolio ==
+
+*[http://mavrinac.com/projects/minimine/index.html Minimine] - C++, Win32 API (learning project, Win32 API & graphics)
+*[http://mavrinac.com/projects/fishbucket/index.html Fishbucket] - C++, Win32 API (learning project, HTTPD implementation)
+*[http://mavrinac.com/projects/bpnn/index.html BPNN] - C++ (learning project, AI)
+*[http://mavrinac.com/projects/imageseg/index.html Color Image Segmentation] - C++ (learning project, AI)
+*[http://mavrinac.com/projects/sabacc/index.html Casino Sabacc] - JavaScript, HTML (popular web game)
+*[http://mavrinac.com/projects/stereo/index.html Stereo Correspondence/Disparity] - C, GTK+ (learning project, GTK+, stereo computer vision)
+
 == Availability ==
 
 I am available full-time throughout the course of the Google Summer of Code timeline. Though I will be enrolled in the Ph.D. program, I will not have any coursework for the summer semester, and my general workload will be light enough to accommodate full-time concentration on a SoC project. No particular vacations are planned; any such interruptions will be contingent on progress, take place during weekends or other non-critical periods, and be discussed with the mentor in advance.
