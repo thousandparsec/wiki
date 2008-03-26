@@ -20,18 +20,21 @@ The goal of this project is to devise and implement an efficient and capable AI 
 ''Note that the timeline will become much clearer, and much more detailed, after the initial study and software-design stage. I expect it to be firmly set by end of April.''
 
 *April 12 - My exams finish; Begin active study of libraries, ruleset, and other relevant materials.
-*April-May - Finalize the design scheme.
+*April 30 - Finalize the design scheme.
 *beginning of May - Start coding.
-*MJuly 7 - Have AI agent logic ready in time for mid-term evaluations.
-*August 11 - AI agent - client library integration, have a complete and ready to use Java AI Client, and still have a buffer week for "pencils down" date.
+*June 14 - Have the core genetic algorithm set up.
+*July 7 - Have the Opponent Simulation Module (OSM) done in time for mid-term evaluations.
+July 20 - Complete work on AI Agent, and start working on having a complete and functional AI Client.
+*August 11 - Finish AI agent - client library integration, have a complete and ready to use Java AI Client, and still have a buffer week for "pencils down" date.
+*August 11-18 - Polish relevant documentation.
 
 '''General Considerations'''
 
-I don't see this as a May 26-August 18 project. Rather, I'll start working on it full time beginning in April, finish the core coding by August 11, and then slowly work to complete the desired set of features from then on. I definitely see this as a project I can slowly build on, rather than just a summer contract. I will be taking one university subject this summer, but I should have more than enough time for full-time development, and for studying.  I plan on spending at least 30 hrs/wk for coding, and of course many more will go on planning, reading relevant materials and communicating. There are no week-long vacations planned for the summer, although on some weekends I may be unavailable.
+I don't see this as a May 26-August 18 project. Rather, I'll start working on it full time beginning in April, finish the core coding by August 11, and then slowly work to complete the desired set of features from then on. I definitely see this as a project I can slowly build on, rather than just a summer contract. I will be taking one university subject this summer, but I should have more than enough time for full-time development, and for studying.  I plan on spending at least 35 hrs/wk for coding, and of course many more will go on planning, reading relevant materials and communicating. There are no week-long vacations planned for the summer, although on some weekends I may be unavailable.
 
 '''Disaster Contingencies'''
 
-As mentioned above, I will have two high-priority obligations for the summer: this project, and a single university subject. There should be ample time to delegate to each. A preemptive strategy to counter unexpected situations would be to divide the task into three parts: first design and implement the AI agent, with reliance on the libtpproto-java library (Deadline: July 7), create a comprehensive GUI, by means of which the players will be able to fully configure the AI agent, and only then do the general work of creating a discrete and (as much as possible!) complete AI Client, using the AI agent, and the libtpproto-java library. If something unexpected were to occur during the summer, then at least the core features and logic would have hopefully been completed.
+As mentioned above, I will have two high-priority obligations for the summer: this project, and a single university subject. There will be ample time to delegate to each. A preemptive strategy to counter unexpected situations would be to divide the task into three parts: first design and implement the AI agent, with reliance on the libtpproto-java library (Deadline: July 20), and then work towards finishing the AI Client, using the AI agent and the libtpproto-java library. If something unexpected were to occur during the summer, then at least the core features and logic would have hopefully been completed. 
 
 '''Work Progress Log and Communication'''
 
