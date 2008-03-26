@@ -96,7 +96,7 @@ A fitness function will be derived to give each hypothesis a numeric evaluation,
 
 I wish to make the AI-agent as fully configurable as possible. Although it is impossible to deterministically predict and influence its behavior, some important features can be played around with:
 *Difficulty: This can simply be a function of search depth of the generated hypotheses, of the size of the generation, and/or of the number of generations the algorithm will go through, before outputting a solution.
-*Changes to the opponents AI modules, which will alter the opponents the GA will be simulating playing against. This can be useful if a player wants a serious challenge. In that case, the player would tweak the opponent-module to play similarly to him(her).
+*Changes to the three OSM's the algorithm will be simulating games against, which will alter the characteristics of the simulated opponents. This can be useful if a player wants a serious challenge. In that case, the player would tweak the opponent-module to play similarly to him(her).
 
 The UI can either be text or GUI. A console command-line interface will serve as the base for all communication with the AI Client, but if time permits I can definitely include the option to have a console command, which invokes a GUI, for increased convenience. An important note is that I only see usefulness in a UI prior to game start, so there is no reason to keep it running during the game. Perhaps some ideas as to the usefulness of in-game communication with the AI player will surface during development.
 
