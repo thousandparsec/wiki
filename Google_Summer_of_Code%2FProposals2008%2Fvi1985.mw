@@ -1,4 +1,4 @@
-== '''''Genetic Conquest''' (henceforth, GC)'', an AI Client for Thousand Parsec: Proposal     '''''<<<FINALIZED>>>'''''==
+== '''''Genetic Conquest''' (henceforth, GC)'', an AI Client for Thousand Parsec: Proposal ==
 
 This document provides a general overview of the initial design concept of the AI client (GC) I want to design for Thousand Parsec. The AI agent will be written in Java, since it is the language I'm proficient in, and hence will use the libtpproto-java library. Upon completion, the AI Client will be able to successfully play the RFTS ruleset, and with slight modifications to some of its modules, GC will be able to play any other TP ruleset.
 
