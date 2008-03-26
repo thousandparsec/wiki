@@ -31,6 +31,11 @@ Formally, here are the objects of this game and their properties.
 
 ===Orders that can be given to owned objects===
 
+* Planets: Add new facility in building queue, change the demanded production rate, build or repair a ship with the inbuilt ship yard.
+* Ships: Move to a given position, attack or perform a special action (colonize, load population…). The resupply is automatic if the ship is next to a planet with a resupply depot. Reparations are also automatic if it is next to a ship yard. A ship can be purchased if the player can afford it. 
+* Designs: Can be changed if in the state of prototype.
+* Components: Some components have a special function which can be ordered, like the self destructing device.
+
 ==End of turn processing==
 
 ==Clustering the rules==
