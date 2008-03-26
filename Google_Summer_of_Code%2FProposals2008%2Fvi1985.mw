@@ -18,17 +18,17 @@ The goal of this project is to devise and implement an efficient and capable AI 
 
 '''Timeline (Big Checkpoints)'''
 ''Note that the timeline will become much clearer, and much more detailed, after the initial study and software-design stage. I expect it to be firmly set by end of April.''
-**Initial period of learning and Software Design:
+*''Initial period of learning and Software Design'':
 *April 12 - My exams finish; Begin active study of libraries, ruleset, and other relevant materials.
 *April 30 - Finalize the design scheme.
-**Coding I:
+*''Coding I'':
 *beginning of May - Start coding.
 *June 14 - Have the core genetic algorithm and AI agent ADT running and tested.
 *July 7 - Have the Opponent Simulation Module (OSM) running and tested in time for mid-term evaluations.
-**Coding II:
+**''Coding II'':
 July 20 - Complete work on AI Agent, run integration tests, and start working on having a complete and functional AI Client.
-*August 11 - Finish AI agent - client library integration, have a complete and ready to use Java AI Client, and still have a buffer week for "pencils down" date.
-**
+*August 11 - Finish and test AI agent/client library integration, have a complete and ready to use Java AI Client, and still have a buffer week for "pencils down" date.
+*''Final touches'':
 *August 11-18 - Polish relevant documentation.
 
 '''General Considerations'''
@@ -37,7 +37,7 @@ I don't see this as a May 26-August 18 project. Rather, I'll start working on it
 
 '''Disaster Contingencies'''
 
-As mentioned above, I will have two high-priority obligations for the summer: this project, and a single university subject. There will be ample time to delegate to each. A preemptive strategy to counter unexpected situations would be to divide the task into three parts: first design and implement the AI agent, with reliance on the libtpproto-java library (Deadline: July 20), and then work towards finishing the AI Client, using the AI agent and the libtpproto-java library. If something unexpected were to occur during the summer, then at least the core features and logic would have hopefully been completed. 
+As mentioned above, I will have two high-priority obligations for the summer: this project, and a single university subject. There will be ample time to delegate to each. I do not foresee anything that can possibly interfere with the work on the project, but my preemptive strategy to counter unexpected situations would be to divide the task into three parts: first design and implement the AI agent, with reliance on the libtpproto-java library, and then work towards finishing the AI Client, using the AI agent and the libtpproto-java library, and then the final integration-testing and polishing period. If something unexpected were to occur during the summer, then at least the core features and logic would have hopefully been completed, and the code available together with documentation.
 
 '''Work Progress Log and Communication'''
 
