@@ -51,7 +51,7 @@ A worthy AI Client would enrich the game experience in cases where only a small 
 
 '''Design and Testing Philosophy'''
 
-My vision is that this AI client should be highly modular, and designed from the top-down. A well planned, careful design would serve as the start point for coding. Having created the necessary stubs for classes, methods, and fields, I will proceed with a flexible coding philosophy, that will allow me to have an overall vision of which data-structures should be used to ensure efficient inter-module communication, and generally low overhead. I intend to follow the timeline previously outlined, and focus on the modules which need to be completed for deadline. I intend to run unit tests twice: First, do a top-down test with dummy-values prior to implementation, and then I plan to run black-box unit tests when coding for the module is done.
+My vision is that this AI client should be highly modular, and designed from the top-down. A well planned, careful design would serve as the start point for coding. Having created the necessary stubs for classes, methods, and fields, I will proceed with a flexible, iterative approach to coding, which will allow me to have an overall vision of which data-structures should be used to ensure efficient inter-module communication, and generally low overhead. I intend to follow the timeline previously outlined, and focus on the modules which need to be completed for deadline. I intend to run unit tests twice: First, do a top-down test with dummy-values prior to implementation, and then I plan to run black-box unit tests when coding for the module is done.
 
 
 '''General Execution Sequence:'''
