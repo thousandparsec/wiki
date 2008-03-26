@@ -1,5 +1,6 @@
-== Proposal ==
-I ([[User:jphr|jphr]]) am currently [[Jphr_proposal|proposing]] the development of a Risk clone ruleset to be developed this summer (of '08) during Google Summer of Code (GSoC). The ruleset will emulate an almost complete game of Risk. The only features not guaranteed (but very likely) in the GSoC iteration will be continent-ownership based reinforcements and a cards system.
+== Ruleset Documentation ==
+The ruleset will emulate an almost complete game of Risk. The only features not guaranteed (but very likely) in the GSoC iteration will be continent-ownership based reinforcements and a cards system.
+
 
 == Starting Turns ==
 *An option will exist for games to begin by random assignment of territories to players or by turn-based selection of territories. Each territory will receive one unit from that player (to signal ownership). 
@@ -9,6 +10,11 @@ I ([[User:jphr|jphr]]) am currently [[Jphr_proposal|proposing]] the development 
 
 
 == Normal Turns ==
+Since TP exists in a simultaneous order system additional concessions and considerations must be made for Risk's “take turns” playstyle. I currently have a few thoughts on how to get around this. First idea, considering the galaxie client is known to update relatively transparently, is to have “moves” in a players “turn” take place in ~5 second rounds. I.e. moving a ship to attack occurs over one round. The board quickly updates, then the player continues, until they take no action for 2-3 turns or they choose to end their “turn.” To control “turns” a flag can simply be held for whose turn it is, and only that player may make actions in the microround. This way players will be aware of moves as they take place, and not be forced to refresh after a players round to find they have been completely wiped out. 
+
+Should this be unsatisfactory I am also concurrently proposing the creation of a Modified Risk Ruleset that has players take actions at the same time, with a bit of creative conflict resolution.
+
+As for a logical turn structure it goes as follows:
 *At the start of each turn players will receive reinforcements based upon how many territories they own (sorry no "continents" or cards yet.)
 **Depending on the TP framework players may be able to simple "spawn" units from their pool of reinforcements at any owned space. The only issue is that once any action occurs a flag must be switched disallowing placing of new reinforcements.
 *The player then has a fixed amount of time to attack as they see fit (I am not sure of how long this should be yet, but there should exist an option for a player to end their turn early.)
@@ -16,22 +22,45 @@ I ([[User:jphr|jphr]]) am currently [[Jphr_proposal|proposing]] the development 
 **This attack system will be easy to manage because each attack "round" or movement can be an "action." The only catch is disallowing the movement of units around without attacking, since this counts as the "free move" part at the end of a Risk turn. The action of moving units around could also trigger the end of the turn (a possibility.)
 *Once the player has finished all attacks they want to do there should exist a way to signal an end of turn, either by making a "free move" to move units around, or by performing an action labeled "end turn" from one of the players planets. Ideally the command to end turn would not be on every planet, as I can imagine the angry cursing of a player accidentally clicking end turn.
 
+
 == Winning/Losing ==
 *Should a player be completely wiped out they are exited from the game. It is a possibility that the user could still spectate the game, as having no territories owned would simply "skip" their turn.
 *Should a player own every territory they win the game. It is also a possibility that owning a certain percentage of territories would constitute a win. This could be a server option.
 
 
-== Questions for the Admins ==
-*Are there enough features to warrant a full summer? Should I include more Risk features
-*What do you think? Comments? Difficulties you see in coding certain features?
+== Example Game Session ==
+I'd like to walk through a general sample of a few turns of the ruleset. The example will have 5 territories, A through E, all fully connected to eachother. 2 players, X and Y, will be playing.
+*The game begins. Objects A through E are created, with all their connections.
+*Both players are informed they can place one colony, as they are in the Colonization phase.
+*X and Y both try to colonize A. A random number is generated and X wins the colony.
+*The next round disallows all players except Y from acting. Y can choose to colonize a different colony. Y picks E
+*There are still unclaimed territories so X and Y claim B and D respectively.
+*Next round only C remains, X and Y both try to claim it, Y wins.
+*X now owns A, B. Y now owns C, D, E
+*X will get 4 reinforcements to place, and Y will get 6. (This is some arbitrary number of reinforcements per territory)
+*Both players take turns placing 3 reinforcements per turn (so everyone can see what is being place where) until all reinforcements are spent.
+*X places 2 units on A and B. Y places 2 on C, D but only 1 on E. Y has 1 reinforcement left.
+*Y neglects to place his last unit, and after 2 absent turns, forfeits those units. Normal play now begins
+*The first turn for a normal player flips a flag signifying it is their turn, when their turn is over (for all their rounds) a flag is flipped signifying it is the NEXT players turn
+*It is X's turn first, X attacks E from A. X is successful, losing no units. X decides not to move any units
+*X decides next to attack D from A. X loses 1 unit, Y loses 1 unit.
+*X decides to use B to attack A. X beats Y. X moves 1 unit into D.
+*X ends his turn. X now owns A(1),B(1),D(1).E(1). This is in stark contrast to my concurrent application.
+*Y begins his turn with a paltry 2 units on C. Y attacks A from C, Y loses 1 unit. Y ends his turn, owning C(1).
+*At the end of the first round X owns A(1),B(1),D(1).E(1). Y owns C(1).
+*Since the first round is over players now receive reinforcements.
+*X receives 8 units, places them all on A.
+*X now attacks C from A. X loses 4 units, but ultimately wins.
+
+I just want to make note again of the constast between this game and my concurrent example in the Modified Risk Proposal. It is important to notice that the modified game actually plays a lot more “fairly.” That is not to say it is the best, but it does provide a more 4X play style and easier implementation in the TP framework. If llnz is a Risk purist, however, he may prefer this application.
+
 
 == Features for Further Implementations ==
 These features will either be implemented in later iterations of the ruleset or at the conclusion of GSoC should a basic ruleset be finished early.
-*Continent-ownership based reinforcements. The more and more I think about this the more I see it as very viable to include in the first iteration. What do you admins think?
-*Cards. This feature may involve extending the server a little, as I don't see it as ideal to have "cards" count as little ships; I just don't see that as a very refined approach. Not a terribly difficult feature so it may make it into the first iteration
+*Continent-ownership based reinforcements. This feature would extend the first iteration by providing additional reinforcements should a player completely control a star cluster.
+*Cards. This feature may involve extending the server a little, as I don't see it as ideal to have "cards" count as little ships; I just don't see that as a very refined approach.
 *Rock-Paper-Scissor interaction of different unit types. This would involve 3 (or more) different types of units, either costing the same amount of reinforcements to create, or variable costs. This would need a tight leash on it as it could quickly transform the ruleset into something entirely not Risk-like and more 4X-space-game like. It is a possibility that the ruleset could fork into other derivatives.
 *A bevy of other features from [http://en.wikipedia.org/wiki/Risk_2210_A.D. ''Risk 2210 A.D.'' ]. If you notice any features in 2210 you would like to see in the GSoC iteration please leave a comment at the end of the page.
-
 
 == Your Comments ==
 Feel free to leave comments about the ruleset and improvements I should make.
