@@ -27,7 +27,7 @@ The goal of this project is to devise and implement an efficient and capable AI 
 *By July 7 - Have the Opponent Simulation Module (OSM) running and tested in time for mid-term evaluations.
 *'''''Coding II''''':
 *By July 15 - Complete work on AI Agent, run integration tests, and start working on having a complete and functional AI Client.
-*By August 11 - Finish and test AI agent/client library integration, have a complete and ready to use Java AI Client.
+*By August 11 - Finish and test AI agent/client library integration, have a complete and ready to use Java AI Client. Integration testing completed.
 *'''''Final touches and documentation''''':
 *By August 18 - Polish relevant documentation, and do some final touches on the code.
 
