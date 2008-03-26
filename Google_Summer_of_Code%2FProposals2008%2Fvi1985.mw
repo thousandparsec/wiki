@@ -51,7 +51,7 @@ I plan to start a blog to document my progress, as well as making it a place for
 
 == Benefits to Thousand Parsec, and its community of Users==
 
-A worthy AI Client would enrich the game experience in cases where only a small number of people can have a game together. This particular design (see below) ensures inherently creative solutions, which would make it hard to "crack" and trap. These features are bound to add to gameplay quality, as human players will strive not only to outsmart each other, but will also struggle with the AI player. This is a project that has much growth potential, as outlined in the relevant section below. Also, one advantage to programming it in Java, is the ease of creating comprehensive documentation (javadoc), and the high cross-platform portability the client will have.
+A worthy AI Client would enrich the game experience in cases where only a small number of people can have a game together. This particular design (see below) ensures inherently creative solutions, which would make it hard to "crack" and trap. These features are bound to add to gameplay quality, as human players will strive not only to outsmart each other, but will also struggle with the AI player. This is a project that has much growth potential, as outlined in the relevant section below. There are a couple of advantages advantage to making it in Java: For one, there is the ease of creating comprehensive documentation (javadoc); then,there is a high cross-platform portability the client will inherently have.
 
 == Design Principles ==
 
