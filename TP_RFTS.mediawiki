@@ -1,6 +1,5 @@
 == TP RFTS ==
-TP RFTS is the current name for the Reach for the Stars clone being developed for Google Summer of Code 2007 by Tyler Shaub / [[User:Xdotx|xdotx]].
-
+TP RFTS is the current name for the Reach for the Stars clone being developed for [[Google Summer of Code]] 2007 by Tyler Shaub / [[User:Xdotx|xdotx]].
 
 == Basics ==
 * Every turn is a movement turn, every odd turn is also a production turn.
