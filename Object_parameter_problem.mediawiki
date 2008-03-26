@@ -1,0 +1,57 @@
+Object parameter problem:
+* ((RefQuantityListObjectParam*)(obj->getParameter(4,1))) == gross
+
+Possible Solutions:
+* ObjectType stores std::pair<uint, uint> = ObjId - groupId, paramId
+** this would probably have to be static ids stored in the ObjectType,
+** and there would have to be special hooks in ObjectParameterGroupDesc to set these ids when it adds the params 
+** (!) most notably, a special hook for setting the groupId, which isn't known until the group itself is added via addParameterGroupDesc
+* syntax could then look like:
+
+	MyObjectType::getShipList(obj)
+
+	// which is defined as
+	static RefQuantityListObjectParam* MyObjectType::getShipList(IGObject* obj) const {
+		dynamic_cast<RefQuantityListObjectParam*>(obj->getParameter(shipListIds.first, shipListIds.second));
+	}
+
+* downside here is that the ObjectType classes have to provide each of these static functions and ids,
+* and of course the special hooks that go in to the ObjectParamGroupDesc for setting the ids
+
+------------------------------------
+* Another idea is to name ObjectParameters upon creation
+** then, most likely via a helper container class (replacing std::map<uint32_t, ObjectParameterGroupPtr> IGObject::parameters)
+** we could map name->ObjectParam, and otherwise maintain the current functionality - looking up based on map/list index
+* new container would look something like:
+	ObjParamGroups {	
+		ObjParam* getParam(const std::string& name) { return namedParams[name]; }
+		ObjParam* getParam(u32 groupId, u32 paramId) { return paramGroups[groupId]->getParam(paramId); }
+		// ... other functionality for initial setup, etc
+	private:
+		std::map<u32, ObjParamGroupPtr> paramGroups;
+		std::map<std::string, ObjParam*> namedParams;
+	}
+* downside here is it feels a bit bloated to have names in the ObjectParams, that are otherwise unused.
+*
+
+-------------------------------------
+* Another, even less invasive idea is to primarily use IGObject::getParameterByType,
+* and give each ObjectParameter a const static ObjectParamType
+* as in:
+	RefQuantityListObjectParam {
+		static const ObjectParamType OBJET_PARAM_TYPE  = obpT_Reference_Quantity_List;
+		// ... rest of class
+	}
+
+* syntax then would look something like:
+	obj->getParameterByType<RefQuantityListObjectParam>();
+
+* which would be defined something like:
+	template <typename ParamType> ParamType* IGObject::getParameterByType()	{
+		return dynamic_cast<ParamType*>(getParamByType(ParamType::OBJECT_PARAM_TYPE));
+	}									// ^^ the current fn
+* This function could be expanded to optionally take a groupId to check as well,
+* and/or to return the Nth occurance of that type, or all occurances of that type
+* Or possibly be used in conjunction with the idea of naming Object Params
+
+* downside here is having to use the param type as the primary identifier.
