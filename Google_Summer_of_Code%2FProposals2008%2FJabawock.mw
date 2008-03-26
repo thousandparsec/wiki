@@ -71,18 +71,25 @@ The start of the project is to cluster the rules of SEIII into categories (or la
 
 There are only three layers here, but I’ll probably divide them into more, to be able to test each thing separately. I think layer 1 is the minimum requirement for a decent game though.
 
-==Schedule==
+==Road map==
 
-With these layers in mind, here’s a basic schedule for the project:
-* 14/04: Think of how to fit the layer 1 rules in the framework, and design a rough class diagram (I won’t spend too much time on formal modeling).
-* End of April: Start implementing the layer 1.
-* Halfway through May: Start preparing for the exams; continue the project from time to time.
-* 24/06 (more or less): End of exam period, continue coding on full time.
-* First deadline: Must have finished with layer 1. The last week before the deadline should be used for testing.
-* Second half of the project: design and code layer 2, same for layer 3 if enough time.
-* Final deadline: Must have at least completed and tested layer 2. 
-I clustered the rules in order to give me some margin. This way, I can have something to deliver for the final deadline even if the coding in the second stage was delayed. If it happens that I cannot finish layer 3 on time, I’ll probably finish it after GSoC. I may also implement more additional rules afterwards if time allows for it.
-In the early stages of the project I’ll work on the project on week ends and evenings of week days. It is convenient that all of my university projects will be finished by April 13th. During my exams I’ll try to work on the project too, but on an irregular basis, finding some spare time here and there. After the exams are over I don’t have any planned activities, so I can spend most of my time coding and testing (like on a full time job).
+With these layers in mind, here’s a detailed schedule for the project:
+
+* Week 1 (starting 2008/04/14): Set up the basics to start coding, make sure layer 1 is coherent and ready to be implemented.
+* Week 2 (starting 2008/04/21)): Start implementing layer 1, object after object. Implement planets and facilities.
+* Week 3 (starting 2008/04/28): Implement ships, basic designs and components.
+* Week 4 (starting 2008/05/05): Implement the basic combat system, and other details left in layer 1.
+* Week 5 (starting 2008/05/12): Start preparing for the exams.
+* Week 11 and 12 (starting 2008/06/23): Exams probably finished (there is no precise exam schedule available at the moment), start thoroughly test layer 1 implementation, and make it coherent as a game. A complete layer 1 implementation should be over by the end of week 12, if everything goes as planned.
+* Week 13 (starting 2008/07/07): Final week before first deadline, used to tweak the code before submission. It can be used to finish testing in case of unplanned delay, or to add a trivial research system if everything else went fine.
+* Week 14 (starting 2008/07/14): Start implementing layer 2. First implement additional facilities, components and research of new components.
+* Week 15 (starting 2008/07/21): Implement component damaging combat system and test the whole layer 2.
+* Week 16 (starting 2008/07/28): Start implementing layer 3. First implement a full intelligence system then add more research levels.
+* Week 17 (starting 2008/08/04): Test the whole layer 3 and make the research system wide, by adding as much levels as time allows. Maybe add a couple of additional features which would seem necessary then. 
+* Week 18 (starting 2008/08/11): Thoroughly test what has not yet been tested. If there were delays, finish and test basic features of layer 3.
+
+I clustered the rules in order to give myself some margin. This way, I can have something to deliver for the final deadline even if the coding in the second stage was heavily delayed. If it happens that I cannot finish layer 3 on time, I’ll submit layer 2 for the final deadline, and probably finish it after GSoC. I may also implement more additional rules afterwards if time allows for it.
+In the early stages of the project I’ll work on week ends and evenings of week days. It is convenient that all of my university projects will be finished by April 13th. During my exams I’ll try to work on the project too, but on an irregular basis, finding some spare time here and there. After the exams are over I don’t have any planned activities, so I can spend most of my time coding and testing (like on a full time job).
 
 ==Personal background==
 My name is Boris Iolis (Jabawock on the forum), and I’m in my third year of computer science study at the ULB (in Brussels). I’m interested in this project because it is a way to use all of the knowledge I acquired to make a game that people will actually play (and not just rate like in university), which is really important to me. Combined with the fact that the project is about a game I like a lot, it makes my determination very strong. Also, I feel that it is a great opportunity to discover the world of open source software, which I am not particularly familiar with. 
