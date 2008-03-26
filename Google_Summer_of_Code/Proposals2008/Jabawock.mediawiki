@@ -80,7 +80,7 @@ With these layers in mind, here’s a detailed schedule for the project:
 * Week 5 (starting 2008/05/12): Start preparing for the exams.
 * Week 11 and 12 (starting 2008/06/23): Exams probably finished (there is no precise exam schedule available at the moment), start thoroughly test layer 1 implementation, and make it coherent as a game. A complete layer 1 implementation should be over by the end of week 12, if everything goes as planned.
 * Week 13 (starting 2008/07/07): Final week before first deadline, used to tweak the code before submission. It can be used to finish testing in case of unplanned delay, or to add a trivial research system if everything else went fine.
-* Week 14 (starting 2008/07/14): Start implementing layer 2. First implement additional facilities, components and research of new components.
+* Week 14 (starting 2008/07/14): Start implementing layer 2. First implement additional facilities, components, customizable designs and research of new components.
 * Week 15 (starting 2008/07/21): Implement component damaging combat system and test the whole layer 2.
 * Week 16 (starting 2008/07/28): Start implementing layer 3. First implement a full intelligence system then add more research levels.
 * Week 17 (starting 2008/08/04): Test the whole layer 3 and make the research system wide, by adding as much levels as time allows. Maybe add a couple of additional features which would seem necessary then. 
