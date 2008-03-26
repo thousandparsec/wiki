@@ -3,6 +3,7 @@ Edit: I have now put out a second draft of the proposal and documentation.
 Name: [[user:Jphr|Ryan Neufeld]] 
 
 Project Title: Creation of a Modified Risk ruleset for the Thousand Parsec C++ server
+
 Additional Documentation: http://www.thousandparsec.net/wiki/Risk_Modified
 
 == Benefits to Thousand Parsec ==
