@@ -12,6 +12,7 @@ The goal of this project is to devise and implement an efficient and capable AI 
 *Integrate it with the libtpproto-java library.
 *Create a convenient and comprehensive UI for the AI client, for pre-game adjustments. Would utilize the console as a base, and optionally include a GUI, which can be activated by a console command (not by automatic pop-up).
 *Collaborate on completing the libtpproto-java library with jezuch, in the direction of finalizing a complete and discrete AI Client.
+*Fully document the process both in javadoc, and create a separate volume of comprehensive and coherent documentation.
 
 == Planning and Progress ==
 
