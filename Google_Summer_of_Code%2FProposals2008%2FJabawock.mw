@@ -29,6 +29,8 @@ Formally, here are the objects of this game and their properties.
 * Designs: Are made of a ship type and a set of components, located into one of the three hulls (inner, middle and outer). These hulls determine which components will be destroyed first. Ship types determine how many components can fit in and the actions that can be performed by the ship. There also are requirements for using a particular ship type, like the need of some specific components (crew quarters, life support…). Designs also have a cost, which is the sum of its components’ costs and the cost of the ship type. They can be labeled as prototype if no ships we ever build using that design.
 * Components: Grand a benefit to the ship, depending on the type of component. A component type can be, for example, shield generator, and the component could then be shield generator 1, 2, 3…
 
+===Orders that can be given to owned objects===
+
 ==End of turn processing==
 
 ==Clustering the rules==
