@@ -96,6 +96,7 @@ The process of making new generations will happen a fixed number of times (for a
 
 A fitness function will be derived to give each hypothesis a numeric evaluation, by which they can be compared (e.g. higher = better, or closer to zero = better). This function will have as parameters the current stats of the AI player, its relative standing in the universe compared to others (number of planets, fleets, etc), and the winning conditions of the ruleset in question (here, RFTS). A heuristic will have to be used, as the information available to the player will be incomplete.
 
+
 '''User Interface'''
 
 I wish to make the AI-agent as fully configurable as possible. Although it is impossible to deterministically predict and influence its behavior, some important features can be played around with:
