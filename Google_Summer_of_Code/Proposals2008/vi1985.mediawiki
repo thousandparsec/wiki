@@ -23,14 +23,13 @@ The goal of this project is to devise and implement an efficient and capable AI 
 *April 12 - My exams finish; Begin active study of libraries, ruleset, and other relevant materials.
 *April 30 - Finalize the design scheme.
 *'''''Coding I''''':
-*beginning of May - Start coding.
-*June 14 - Have the core genetic algorithm and AI agent ADT running and tested.
-*July 7 - Have the Opponent Simulation Module (OSM) running and tested in time for mid-term evaluations.
+*By June 14 - Have the core genetic algorithm and AI agent ADT running and tested.
+*By July 7 - Have the Opponent Simulation Module (OSM) running and tested in time for mid-term evaluations.
 *'''''Coding II''''':
-*July 20 - Complete work on AI Agent, run integration tests, and start working on having a complete and functional AI Client.
-*August 11 - Finish and test AI agent/client library integration, have a complete and ready to use Java AI Client, and still have a buffer week for "pencils down" date.
+*By July 15 - Complete work on AI Agent, run integration tests, and start working on having a complete and functional AI Client.
+*By August 11 - Finish and test AI agent/client library integration, have a complete and ready to use Java AI Client.
 *'''''Final touches and documentation''''':
-*August 11-18 - Polish relevant documentation, and do some final touches on the code.
+*By August 18 - Polish relevant documentation, and do some final touches on the code.
 
 '''General Considerations'''
 
