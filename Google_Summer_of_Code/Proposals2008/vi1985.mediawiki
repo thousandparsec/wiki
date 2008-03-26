@@ -62,7 +62,7 @@ My vision is that this AI client should be highly modular, and designed from the
 * Communicate actions back to server.
 
 
-'''Description and Virtues of A Genetic Algorithm Solution'''
+'''Description and Virtues of a Genetic Algorithm Solution'''
 
 I chose a genetic algorithm (GA) implementation of the AI agent for several reasons. First of all, it is perfectly suited for the role in TBS games, since is involves a progressive refinement of "hypotheses", until a suitable one has been reached, in a "contemplative" manner, rather than in a quick, heuristic fashion. Basically, it will simulate and evaluate outcomes of its own actions and opponent replies for several moves ahead, progressively improving the planned actions in future moves _as a whole_ (instead of utilizing a "greedy" solution), utilizing the power of evolution to come up with good and original solutions. Since it will be looking many moves ahead, and considering the whole move-sequence at once, the solutions it comes up with aren't obvious "quick-fixes", but genuine strategy. Together with a heuristic to predict opponent-moves, this algorithm will make the AI relatively sensitive to traps, and hard to fool. Another bonus is that the solutions it comes up with will be creative ones, since there will be no hard-coded templates on which it will rely in decision making. This will ensure that it will always be a creative and unpredictable opponent! Finally, a GA design will make the algorithm highly modular, and ensure quick transitions between rulesets. 
 
