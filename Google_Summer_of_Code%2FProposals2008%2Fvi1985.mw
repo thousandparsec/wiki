@@ -63,13 +63,13 @@ I would rather not simply use a set of heuristics and behavioral tendencies as m
 
 '''The Evolutionary Paradigm'''
 
-''Hypotheses:''
+''Hypotheses: The basic objects of the algorithm:''
 
 The GA will operate on "hypotheses", which are basically encoded move-sequences. Each such hypothesis will be a 4D array (x-axis: encoding moves ahead (1... search_depth); y-axis: available action categories, e.g. development, purchasing, invading, etc. The logic for that is to say, for example, I want to have a maximum of 2 technology moves, 3 industry moves, 1 send fleet move, etc.; w-axis: division by planets owned and by current fleet on the move (max. value will vary in accordance with situation); z-axis: a uniquely-encoded set of actions (one set per each category). 
 
 Such encoding ensures complete coverage, is compact and is easy to operate upon. Every point in the 4D array corresponds to some action, in some action-class, on some planet or some fleet, in some future move. In each hypothesis, the x and y-values (number of moves, action categories) will always be fixed, the w-values will change in accordance with how many planets the player owns, and the only thing that can mutate are z-values (according to some restrictions, of course).
 
-''Generations:''
+''Generations and Mutation:''
 
 The GA algorithm will start with an init_seed, which is a hypothesis. At the start of the game the init_seed will be determined by the OMM, which will provide a decent strategy to build on (to save on overhead costs on running the algorithm from random values. Note that the init_seed will probably mutate beyond recognition when run through enough generations), then at each subsequent turn, the winning hypothesis of the previous turn will be modified to serve as the next turn's init_seed. The modification will be as follows: shift all 3D <y,z,w> slices one to the left on the x-axis; generate the last one using OMM. Again, this is done to minimize overhead, and it will still retain creativity beyond the OMM heuristic paradigm. 
 
@@ -77,7 +77,7 @@ The init_seed will then mutate, such that the z-values will mutate in several ra
 
 The process of making new generations will happen a fixed number of times (for a fixed and reasonable execution-time), or until some hypothesis promises a win, and at the end returns the best one. I will have to play around with the numbers, to have the AI take less than 1 to 2 minutes to complete its turn. (//Your suggestions as to the time an AI should reasonably take to find a solution?//). Then, the actions specified in the first move of the winning hypothesis are sent back to the server for execution.
 
-''Fitness function:''
+''Fitness function (Hypothesis-assessment):''
 
 A fitness function will be derived to give each hypothesis a numeric evaluation, by which they can be compared (e.g. higher = better, or closer to zero = better). This function will have as parameters the current stats of the AI player, its relative standing in the universe compared to others (number of planets, fleets, etc), and the winning conditions of the ruleset in question (here, RFTS). A heuristic will have to be used, as the information available to the player will be incomplete.
 
