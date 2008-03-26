@@ -17,8 +17,9 @@ Possible Solutions:
 
 * downside here is that the ObjectType classes have to provide each of these static functions and ids,
 * and of course the special hooks that go in to the ObjectParamGroupDesc for setting the ids
-
 ------------------------------------
+
+
 * Another idea is to name ObjectParameters upon creation
 ** then, most likely via a helper container class (replacing std::map<uint32_t, ObjectParameterGroupPtr> IGObject::parameters)
 ** we could map name->ObjectParam, and otherwise maintain the current functionality - looking up based on map/list index
@@ -32,9 +33,11 @@ Possible Solutions:
 		std::map<std::string, ObjParam*> namedParams;
 	}
 * downside here is it feels a bit bloated to have names in the ObjectParams, that are otherwise unused.
-*
+
 
 -------------------------------------
+
+
 * Another, even less invasive idea is to primarily use IGObject::getParameterByType,
 * and give each ObjectParameter a const static ObjectParamType
 * as in:
