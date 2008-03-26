@@ -17,7 +17,7 @@ The deliverables of this project will include at least a functional game of Risk
 
 
 == Project Details ==
-The majority of the project details are outlined on the TP Wiki [[Risk|here]]. At the end of its first iteration the Risk ruleset will emulate very closely the original rules for Risk. The TP framework allows for the existence of multiple server options to determine how games start and victory conditions for games. As well the framework allows the Risk ruleset to be extended to modify the rules of Risk and allow players to maintain ownership of territories without keeping units on the territory.
+'''The majority of the project details are outlined on the TP Wiki [[Risk|here]]'''. At the end of its first iteration the Risk ruleset will emulate very closely the original rules for Risk. The TP framework allows for the existence of multiple server options to determine how games start and victory conditions for games. As well the framework allows the Risk ruleset to be extended to modify the rules of Risk and allow players to maintain ownership of territories without keeping units on the territory.
 
 
 == Project Schedule ==
