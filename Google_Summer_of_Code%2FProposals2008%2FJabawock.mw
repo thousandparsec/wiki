@@ -48,6 +48,8 @@ Here are the different things happening at the end of the turn. The order is not
 * Spending of research points, unlocking of new components.
 * Intelligence operations.
 
+==Compatibility with the existing framework==
+
 ==Clustering the rules==
 
 The start of the project is to cluster the rules of SEIII into categories (or layers as I’ll call them). These layers are ordered by importance, and any layer should not depend on the next one. This way, I’ll be able to implement and fully test one layer at a time, incrementally. Here is how I would cluster the rules:
