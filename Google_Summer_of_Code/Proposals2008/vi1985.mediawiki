@@ -62,8 +62,8 @@ My vision is that this AI client should be highly modular, and designed from the
 
 '''General Execution Sequence:'''
 
-* Turn start: receive "universe-picture" from server.
-* Extract info from the universe-picture.
+* Turn start: receive universe object from server.
+* Extract info from the universe object.
 * Run core genetic algorithm, which would return the set of actions to be performed this turn.
 * Communicate actions back to server.
 
