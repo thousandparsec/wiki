@@ -5,5 +5,6 @@ It is my intention when I am finished school to become a game developer/programm
 As for other coding experience I was introduced to programming through C++ and have been coding for 3-4 years. I am quite proficient in C++, Java, and C#. At present I am taking classes on Abstract Data Types and have already taken classes on Object-Orientation and Project Management. In my free time, as I mentioned, I have been creating a game using C# and Microsoft’s XNA framework. I chose to use the Farseer Physics Engine in my game because it gives me more opportunity to work with other people’s code, a skill I felt pertinent to gain in preparation for GSoC.
 
 == My Articles ==
-Please feel free to check out my [[Jphr_proposal|draft proposal]] and the documentation for the [[Risk| Risk Ruleset]] I am proposing.
-I am also concurrently proposing the creation of a [[Risk Modified| Modified Risk Ruleset]] outlined in this [[Jphr_modified_proposal| Modified Proposal]].
+I've updated my [[Jphr_proposal|first proposal]] and the documentation for the [[Risk| Risk Ruleset]] I am proposing.
+
+I am also concurrently proposing the creation of a [[Risk Modified| Modified Risk Ruleset]] outlined in this [[Jphr_modified_proposal| Modified Proposal]]. I have a feeling the devs, mithro in particular, prefer this ruleset.
