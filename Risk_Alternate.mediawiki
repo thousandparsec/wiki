@@ -1,4 +1,4 @@
-= Risky Space =
+= Risky Galaxy=
 
 <p>   Risky Space is a Thousand Parsec Ruleset that is a basic Risk board game clone.  It is designed to, initially, be a basic Risk ruleset clone, implementing the core 2 player gameplay of Risk.  It will initially abandon most of the standard 4X standards in lieu of standard board game play that is easily measured according to a Risk rulebook.  Some of the features planned are:
 * Static map divided into continents and then further divided into territories
