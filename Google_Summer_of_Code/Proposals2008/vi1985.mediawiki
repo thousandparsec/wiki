@@ -168,16 +168,27 @@ I think this is enough for now from my part. Keep up the great work!
 
 * You mention game performance rating: 
 ** How is this done?
+>>> Hm... Did you mean Big-O analysis? --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 * Have you had a look at the status of libproto-java?
+>>> Yes, I have extensively corresponded with jezuch, the libtpproto-java developer, about these issues, and we have agreed that I will be building on the existing library in the direction of making the AI client, in consultation and (some) collaboration with him. This is specified in the last segment of the Roadmap. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 ** Does it do what you need, is it in a good enough status to use?
 ** Have you taken into account you need to be using it heavily?
 * Java:
-** What version?
+** What version? 
+>>> I currently use Java SE 6 for development, and if EE will have to be used, then of course the 6th edition as well. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 ** What platform(s) will you be testing on?
+>>> I am most likely to develop it on my Windows XP, and will test it at home, as well as on the RedHat Linux machines in the university's computer-science lab. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 * Training: 
 ** How long do you expect it to train a decent AI, or even an AI that can play the game?
-** Are you going to deliver working AIs?
+>>> I am not starting with a "baby-AI". I'm starting with a decent game hypothesis, and improving it through the process of evolution each turn, as new information about the universe comes in. This is _not_ a slow process; I will not need to simulate more than 1000 games. Again, my goal is between1 to 2 minutes of execution time on a decent machine. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
+** Are you going to deliver working AIs? 
+>>> The question was answered above, but I will not be "cooking" AI's at home; rather, the AI agent will dynamically evolve each turn. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 * Are AIs going to train themselves continually throughout the game? 
+>>> Yes :) Not really "train" though, as much as evolve, as this is not a machine-learning paradigm I'm using; rather, it's natural selection. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 ** Are they going to be able to stay viable in this case?  Or if they don't train?
+>>> The worst-case solutions it comes up with are going to be commonsense, reasonable solutions from the init_seed; the best case solutions are going to be creative strategies to deal with reasonable opponents. Thus, the strategy that will result will be _at least_ as viable as the commonsense solution that serves as the beginning of the evolutionary process (solutions are preserved between generations and between turns, as stated in the relevant section). --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 * Fitness Space
 ** You define a 4D fitness space.  Is this really enough?  How about more complex games like a Stars! ruleset?
+>>> The 4D space is just a reasonable working hypothesis for this stage of research and development; this is really not a big issue, as arrays are quick to operate on, and don't take up much space. The final design can be 5 or 6D if needed. But again, I'm aiming for a working RFTS AI. Perhaps a Sters! clone would need to be modified thusly. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
+
+>>>I hope this answers your questions. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
