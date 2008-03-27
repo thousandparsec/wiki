@@ -59,7 +59,7 @@ The coding time will be divided into two parts -- first one will implement the m
 
 == Brief Bio/Resume ==
 
-I'm a Computer Science PhD student (1th year) at the Wroclaw University, Poland. My interests lie in Game Programming and Design, with a special hunch for Real-time Procedural Content. 
+I'm a Computer Science PhD student (1st year) at the Wroclaw University, Poland. My interests lie in Game Programming and Design, with a special hunch for Real-time Procedural Content. 
 
 I've successfully taken part in last year's GSoC creating a Procedural City Generator for BZFlag ( project homepage, out of date, http://bzflag.chaosforge.org/ ).
 
