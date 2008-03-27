@@ -15,10 +15,10 @@ As for a logical turn structure it goes as follows:
 *At the start of each set of x turn players will receive reinforcements based upon how many territories they own (sorry no "continents" or cards yet.) x will be some number of turns found to be a fair (via testing.)
 **If it is possible I would like for the reinforcements turn to be a longer turn, around a minute or so. 
 **Once the reinforcement turn is finished all units allocated will be “built” on the location they are issued.
-*During normal “microturns” players will have a short amount of time to issue a singular order. Orders are executed at turns end, with results reported back to the user.
+*During normal “micro-turns” players will have a short amount of time to issue a singular order. Orders are executed at turns end, with results reported back to the user.
 **This attack system will be easy to manage because each attack "round" or movement can be an "action."
 **With the modified ruleset there exist possible conflicts to be managed; Some such conflicts are:
-***Two territories attacking eachother
+***Two territories attacking each other
 ***Defending territory is also retreating
 ***etc.
 
