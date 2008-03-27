@@ -6,3 +6,7 @@
 : http://chaosforge.org
 ; GTalk/E-mail
 : name.surname@gmail.com
+
+== GSoC Proposals ==
+
+[[User:Epyon/EliteSec]]
