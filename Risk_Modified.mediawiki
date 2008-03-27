@@ -1,3 +1,5 @@
+Article Creator [[user:Jphr| Ryan Neufeld]]
+
 == Ruleset Documentation ==
 The ruleset will emulate an almost complete game of Risk with a modification to the turn structure. Instead of turns playing out player-by-player they play out in a more 4X “all-at-once” fashion. The only features not guaranteed (but very likely) in the GSoC iteration will be continent-ownership based reinforcements and a cards system.
 
