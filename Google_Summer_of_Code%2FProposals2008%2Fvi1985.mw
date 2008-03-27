@@ -184,7 +184,7 @@ I think this is enough for now from my part. Keep up the great work!
 ** How long do you expect it to train a decent AI, or even an AI that can play the game?
 >>> I am not starting with a "baby-AI". I'm starting with a decent game hypothesis, and improving it through the process of evolution each turn, as new information about the universe comes in. This is _not_ a slow process; I will not need to simulate more than 1000 games. Again, my goal is between1 to 2 minutes of execution time on a decent machine. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 ** Are you going to deliver working AIs? 
->>> The question was answered above, but I will not be "cooking" AI's at home; rather, the AI agent will dynamically evolve each turn. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
+>>> The question was answered above, but I will not be "cooking" AIs at home; rather, the AI agent will dynamically evolve strategies each turn. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 * Are AIs going to train themselves continually throughout the game? 
 >>> Yes :) Not really "train" though, as much as evolve, as this is not a machine-learning paradigm I'm using; rather, it's natural selection. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 ** Are they going to be able to stay viable in this case?  Or if they don't train?
