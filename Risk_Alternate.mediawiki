@@ -10,19 +10,20 @@
 * Troop - one soldier, one ship, etc.  The basic unit of attack/defense in Risk
 * Territory - one planet, one star system, etc.  The smallest controllable landmass in Risk.  Territories reside within Continents.
 * Continent - one galaxy, one system cluster, etc. The Largest controllable landmass in Risk.  Players get bonuses if they control every territory in a continent.
-* Turn - this is the basic unit of play.  Each player gets a turn to Gather, attack, and fortify and then it becomes the next player's turn.
+* Turn - this is the basic unit of play.  On a player's turn (one game tick), he collects his new units, specifies discrete attacks and deploys his reinforcements.
 
 == Gameplay Basics ==
 === Game Board Setup ===
-* Players go back and forth picking territories to initially control until every territory on the game board is claimed for one player or the other.
-* Players go back and forth getting 3 troops and placing them on 1, 2, or 3 of their controlled territories.  This continues for n* turns until each player has a good amount of troops on the board.
+* Players go back and forth picking territories to initially control until every territory on the game board is claimed for one player or the other. These take one game tick each.
+* Players go back and forth getting 3 troops and placing them on 1, 2, or 3 of their controlled territories.  This continues for n turns until each player has a good amount of troops on the board. These also take one tick each
 * n is currently undefined, but no more than 30.
 
 === Turns ===
-<p> Since the game is designed to be played by two players, gameplay goes back and forth as each player takes a turn.  On a player's turn they may, in order:
+<p> Since the game is designed to be played by two players, gameplay goes back and forth as each player takes a turn.  On a player's turn they may, in order:</p>
 * gain troops and place them on any territory they control
-* stage attacks against any directly neighboring enemy territories
-* and fortify their troops from one territory to any one neighboring territory the player controls
+* stage discrete attacks against 0 - 4 distinct enemy territories
+* and fortify their troops from one territory to any one neighboring territory the player controlled at the start of the turn.
+<p> Since player turns must take place in ticks, the actions during a turn must be very discrete.  thsi is especially important in combat, since the player cannot play in a reactive way, at lest not reacting to events on his same turn.  This will be explained in [[Stage Attacks]].
 </p>
 
 === Gaining Troops ===
@@ -32,21 +33,20 @@ GT = ( territories held )/4 + ( continent bonuses from continents held )
 </p>
 
 === Stage Attacks ===
-<p>Once all troops have been placed, the player can attack any adjacent enemy territories.  The player selects how many of his troops in the territory he wants to attack with and this will determine the number of attack dice that will be rolled for him.  These rolls may not be apparent to the user during gameplay, but should be explained such that the player understands the importance of the number of troops attacking/defending.  If the player can successfully destroy all enemy troops defending the territory, the player can move as many troops into the territory greater than or equal to the amount of attack dice he rolled.  This essentially entails all of combat.</p>
+<p>Once all troops have been placed, the player can choose to attack.  Each attack must be against a different territory adjacent to your attacking territory and, you may not attack ''the same territory'' twice in one turn and you may not attack ''with one territory twice'' in one turn.  Therefore, the player may make as many attacks as he has territories controlled.  The player selects how many of his troops in the territory he wants to attack with and this will determine the number of attack dice that will be rolled for him.  These rolls may not be apparent to the user during gameplay, but should be explained such that the player understands the importance of the number of troops attacking/defending.  If the player can successfully destroy all enemy troops defending the territory, the player must move as many troops into the territory as they selected to attack with.  This essentially entails all of combat.</p>
 
 === Fortifying Your Territories ===
-<p>Once you have finished staging all your attacks, you now have the opportunity to move units from one territory to any adjacent territory you currently occupy.  The only caveat being that, you must leave at least one troop behind in the fortifying territory.</p>
+<p>Once you have finished staging all your attacks, you now have the opportunity to move units from one territory to any adjacent territory you currently occupy.  The only caveats being that, you must leave at least one troop behind in the fortifying territory adn you can only move into territories you control before the tick.</p>
 
 == Combat ==
 <p>As mentioned above, combat is determined by dice rolls.  The rules are as such:</p>
 * the attacker may roll n-1 attack dice (d6), where n is the number of attacking units, although you may not roll above 3 attack dice. 
 * the defender can roll n defense dice , where n is the number of defending units, although you may not roll above 2 defense dice
 * the greatest of the attack and defense dice are paired up one pair at a time and if a > d, the defense loses a troop, but if d>=a then the attacker loses a troop.  This continues until no more pairs can be made (max 2 pairs).
-* combat continues until the attacker ceases, the attacker has only 1 troop left to attack with, or the defender loses all his defending troops.
+* single turn combat is onyl resolved one fight at a time, but cross turn combat continues until the attacker ceases, the attacker has only 1 troop left to attack with, or the defender loses all his defending troops.
 
 == End Game ==
 <p> Win state is defined by either a player having troops on every territory on the board of a forfeit on the part of the opponent.</p>
-
 
 == Ideas for Future Development ==
 * Game board is not static.  A random universe is generated every game and based on the density of planets and resources, territories and continents are formed via an algorithm.  Because of this, the Continent bonus table and any/all map territory attributes would have to change with the universe.
@@ -58,3 +58,10 @@ GT = ( territories held )/4 + ( continent bonuses from continents held )
 * Player can harvest resources within a planet and use that to build planetary defenses to give planet a greater offensive or defensive bonus (roll 2d8 when attacking from this territory).  This would add more to the complexity of the overall combat and to the attributes associated with territories.
 
 <p>Note: all harvesting and research would be done during the opposing players turn and on your own turn if you choose not to gather, attack and fortify that turn.</p>
+
+== Community Feedback ==
+<p> Please leave your constructive feedback here, I greatly appreciate it.</p>
+
+== About Me ==
+* [http://www.geocities.com/kornkid606/ My Little Piece of the Internet (Bio)]
+* [http://www.digipen.edu/~bjohnso2 My Resume]
