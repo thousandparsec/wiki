@@ -6,3 +6,4 @@ As for other coding experience I was introduced to programming through C++ and h
 
 == My Articles ==
 Please feel free to check out my [[Jphr_proposal|draft proposal]] and the documentation for the [[Risk| Risk Ruleset]] I am proposing.
+I am also concurrently proposing the creation of a [[Risk Modified| Modified Risk Ruleset]] outlined in this [[Jphr_modified_proposal| Modified Proposal]].
