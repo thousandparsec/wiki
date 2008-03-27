@@ -1,0 +1,73 @@
+== Abstract ==
+
+There were space games and there was Elite.
+
+The goal of this assignment would be to create a ruleset for Thousand Parsec that would be in a similar spirit as the Elite series with inspirations from Traveller, Frontier, and other "me vs. the Galaxy" sources. Contrary to the typical TP ruleset, the player would not be in charge of vast fleets and owning many planets, but rather be based around a single ship, with the possibility of recruiting a small amount of helpers. To further make the proposal and game interesting, let's go the Elite way and generate content randomly, including, but not limited to planet positions, names and descriptions, trade routes, economical/political situations of planets, etc. The universe should feel alive without the players actions.
+
+Each player starts just with his ship and a fistful of credits. From this point on he can pursue any career he'd like. Buying new ships, hiring escorts, and creating a trade empire by first buying offices at, and then whole space stations could allow him pursuing the trade path. Recruiting various scum, and traveling across known lanes would make him pursue the adventurous path of the pirate. But he should be wary that piracy is illegal, and sooner or later, a bounty would be placed on his head, either by fellow players, the police or the military. Another type of players could pursue the bounty hunter path, and try to catch those players with bounties.
+
+Possibilities are endless, and the game can be brilliant, as long as we keep in mind the spirit of Elite/Traveller, and the fact that it should be a truly multiplayer game, allowing as much interaction between players as is possible in a turn-based environment.
+
+== Idea Source ==
+
+A similar idea was presented last year by nash and myself, though solely based on Elite. It has since then been discussed about a little and has a page on the wiki:  http://www.thousandparsec.net/wiki/Traders
+
+To ease writing, I will in this document call the proposed ruleset EliteSec.
+
+== Deliverables ==
+
+A ruleset module for TP implementing a interesting and balanced Space Exploration game. Also required extensions to the server, and proposals for enhancements to the protocol/client (if needed in the design). Along the module I will deliver all it's datafiles, each one with solid and complete documentation for anyone wanting to do a modifications.
+
+As an additional delivery, I plan to keep all the content generators (planet/ship names, planetary descriptions, system descriptions, events) in a separate universal module to allow re-usage of it by any TP-based game.
+
+If a graphical 3D client (or 2D even) will be developed this GSoC, and it's creator will be interested in making it compatible with EliteSec I'm also willing to supply the media for EliteSec (ship/station/planet) models.
+
+== Implementation Details ==
+
+The ruleset will be developed in C++.
+
+The following features will be included in the project, separated as much as possible for reusage:
+
+* dynamical economy model (that wont allow abusing good trade routes)
+* combat (it would have to be interesting, but still adhere to the turn count and hands-off principle -- probably allowing escapes and detailed ship damage)
+* trade "empire" management (allowing the hiring of proxies to do stuff, allowing buying of immovable property, but on the other hand somewhat restricted, so the game doesn't turn into boring micromanagement)
+* ships/ship upgrades (customization of ships would play a major role in the game, just as research plays in 4X games)
+* special events (like disease outbreaks -- quarantine and rise of medicine price in a system, war -- hiring and dangerous to travel through, revolutions -- illegal arms smuggling for big profit, etc)
+* information propagation (I really like nash's idea that information travels at lightspeed, so it's not instant. Information/rumors would spread from point of origin, and might come to the desired place too late)
+* reputation -- one of the most important information types. Reputation travels even more slowly than information, so you may still be able to pass through a system where theoretically you should be considered an outlaw already...
+
+The player will be able to choose a gameplay path, but will not be bound to it (he will be always able to change it at whim just by making other choices). This way the player will always find something interesting to do:
+
+* trading -- the primary path, especially for the pacifist. Except of always searching new trade routes (old ones get less and less benefactory as economy adjusts itself to the action of the player), he has to fend off pirates, buy better ships and establish a trading empire. Of course you can always try to transport less then legal cargo...
+* piracy -- the flip coin of the traders path -- you can pirate on passing spaceships by maintaining a good ship and some minions. Passing spaceships may include players too...
+* bounty hunting -- where there are pirates there are also prices on their heads. The bounty hunter collects those. His enemies are both computer ships as well as player controlled entities. The shady side of the bounty hunter is of course the assassin, but he should watch out for...
+* military -- you can also do missions for the one of the empires. Better not try to do them for more then one, or you may become a traitor.
+
+This is just the tip of an iceberg, other occupations that may be thought about is scouting and mining, for example.
+
+== Project Schedule ==
+
+I plan on working on the project fulltime during summer -- I have no summer job, nor school responsibilities. I plan to maintain a blog with progress update.
+
+In the case of a ruleset implementation the first part of the development will be creating a complete and thought through design document of the ruleset that takes into account balance, fun and that is in the scope of the 2 months time (with a possible section on "further" improvements). The game realized in the 2 months timeframe must be complete, playable and fun. 
+
+The design document will be finished before the official coding time starts, and will be presented to the community in the form of wiki pages that anyone can comment on. Design will be then finalized and frozen before the deadline of May 28. Also up to this date I assume to learn the details of the TP system in it's current shape, and submit proposals for enhancements if needed.
+
+The design will define a midpoint project -- a PLAYABLE game with basic capabilities. At this point I will probably be trying to find playtesters so we can see how the game handles in real life.
+
+The coding time will be divided into two parts -- first one will implement the midpoint project. At this point I start to run games and gather as much feedback/bug reports as possible to be included/fixed in the second part of the project. The second part will have new versions of the ruleset uploaded for testing at least weekly, and I'll be constantly monitoring feedback during this time (if the amount of people interested will be large I might need someone to help me organize all the stuff).
+
+== Brief Bio/Resume ==
+
+I'm a Computer Science PhD student (1th year) at the Wroclaw University, Poland. My interests lie in Game Programming and Design, with a special hunch for Real-time Procedural Content. 
+
+I've successfully taken part in last year's GSoC creating a Procedural City Generator for BZFlag ( project homepage, out of date, http://bzflag.chaosforge.org/ ).
+
+I know several computer languages, tough I favor FreePascal (Delphi) and C++ that I currently write my own projects in. These include the beginnings of a 3D game engine ( http://sourceforge.net/projects/libvalkyrie ) in C++, and an unannounced space combat/trading game (codenamed StarDreamer), which heavily is inspired by Elite and Frontier. 
+
+I am a big fan of roguelike games, due to their randomness, and the focus on gameplay over presentation. I have managed to write several roguelikes up to date, the most famous one of them being DoomRL ( http://doom.chaosforge.org ) that did even get mentions in contemporary gaming magazines. I also know how to do game designs and organize my time and work, having taken part in three 7DRL Competitions (aimed at writing a playable and fun roguelike game in 7 days), and managed to finish them successfully each time.
+
+Rules design is something that I needed to learn well, because good, balanced and interesting rules were the only way to get attention to a roguelike game. I always given high value to user submission evaluation in my projects, what can be seen on my games' forum ( http://forum.chaosforge.org/ ).
+
+* Homepage : http://chaosforge.org/ 
+* IRC Nick : Epyon
