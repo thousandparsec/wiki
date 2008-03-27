@@ -1,0 +1,60 @@
+= Risky Space =
+
+<p>   Risky Space is a Thousand Parsec Ruleset that is a basic Risk board game clone.  It is designed to, initially, be a basic Risk ruleset clone, implementing the core 2 player gameplay of Risk.  It will initially abandon most of the standard 4X standards in lieu of standard board game play that is easily measured according to a Risk rulebook.  Some of the features planned are:
+* Static map divided into continents and then further divided into territories
+* simple combat guided by dice roll logic
+* basic rule-based logic for army generation, movement, and size
+</p>
+
+=== Basic Terminology ===
+* Troop - one soldier, one ship, etc.  The basic unit of attack/defense in Risk
+* Territory - one planet, one star system, etc.  The smallest controllable landmass in Risk.  Territories reside within Continents.
+* Continent - one galaxy, one system cluster, etc. The Largest controllable landmass in Risk.  Players get bonuses if they control every territory in a continent.
+* Turn - this is the basic unit of play.  Each player gets a turn to Gather, attack, and fortify and then it becomes the next player's turn.
+
+== Gameplay Basics ==
+=== Game Board Setup ===
+* Players go back and forth picking territories to initially control until every territory on the game board is claimed for one player or the other.
+* Players go back and forth getting 3 troops and placing them on 1, 2, or 3 of their controlled territories.  This continues for n* turns until each player has a good amount of troops on the board.
+* n is currently undefined, but no more than 30.
+
+=== Turns ===
+<p> Since the game is designed to be played by two players, gameplay goes back and forth as each player takes a turn.  On a player's turn they may, in order:
+* gain troops and place them on any territory they control
+* stage attacks against any directly neighboring enemy territories
+* and fortify their troops from one territory to any one neighboring territory the player controls
+</p>
+
+=== Gaining Troops ===
+<p> The number of troops gained by the player is: </p>
+GT = ( territories held )/4 + ( continent bonuses from continents held )
+<p> It should be noted that troops gained via continent bonuses must be placed in those continents only. Also, continent bonuses are determined via a static bonus table.  Once troops are gained they can all (except for those mentioned above) be deployed to any currently held territory.
+</p>
+
+=== Stage Attacks ===
+<p>Once all troops have been placed, the player can attack any adjacent enemy territories.  The player selects how many of his troops in the territory he wants to attack with and this will determine the number of attack dice that will be rolled for him.  These rolls may not be apparent to the user during gameplay, but should be explained such that the player understands the importance of the number of troops attacking/defending.  If the player can successfully destroy all enemy troops defending the territory, the player can move as many troops into the territory greater than or equal to the amount of attack dice he rolled.  This essentially entails all of combat.</p>
+
+=== Fortifying Your Territories ===
+<p>Once you have finished staging all your attacks, you now have the opportunity to move units from one territory to any adjacent territory you currently occupy.  The only caveat being that, you must leave at least one troop behind in the fortifying territory.</p>
+
+== Combat ==
+<p>As mentioned above, combat is determined by dice rolls.  The rules are as such:</p>
+* the attacker may roll n-1 attack dice (d6), where n is the number of attacking units, although you may not roll above 3 attack dice. 
+* the defender can roll n defense dice , where n is the number of defending units, although you may not roll above 2 defense dice
+* the greatest of the attack and defense dice are paired up one pair at a time and if a > d, the defense loses a troop, but if d>=a then the attacker loses a troop.  This continues until no more pairs can be made (max 2 pairs).
+* combat continues until the attacker ceases, the attacker has only 1 troop left to attack with, or the defender loses all his defending troops.
+
+== End Game ==
+<p> Win state is defined by either a player having troops on every territory on the board of a forfeit on the part of the opponent.</p>
+
+
+== Ideas for Future Development ==
+* Game board is not static.  A random universe is generated every game and based on the density of planets and resources, territories and continents are formed via an algorithm.  Because of this, the Continent bonus table and any/all map territory attributes would have to change with the universe.
+
+* Player can research military tech tree that allows players to either build up a vast armada of low level troops or, with research, control a smaller but stronger fleet of more powerful ships (fighters, cruisers, battlestars, etc.).  This would mean that every type of ship would have to have its own attribute table and rules would have to be figured out for attacking with combinations of unit types
+
+* Player can research a universal relations tech tree and, instead of winning via military force, can send armadas of goodwill vessels to bring the populace of a territory onto that player’s side, the player would take control of that territory and any resources/armies within it.  Because of this, territories would have to have  some kind of resilience attribute to determine how resilient they are against persuasion
+
+* Player can harvest resources within a planet and use that to build planetary defenses to give planet a greater offensive or defensive bonus (roll 2d8 when attacking from this territory).  This would add more to the complexity of the overall combat and to the attributes associated with territories.
+
+<p>Note: all harvesting and research would be done during the opposing players turn and on your own turn if you choose not to gather, attack and fortify that turn.</p>
