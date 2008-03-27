@@ -71,3 +71,13 @@ Rules design is something that I needed to learn well, because good, balanced an
 
 * Homepage : http://chaosforge.org/ 
 * IRC Nick : Epyon
+
+== Comments ==
+
+'''Nash''':
+* You mention quite a few nice features:
+** How are you going to implement them?  How are you going to model a dynamic economy for instace?
+** Algorithms would be nice.
+* Helpers - what can they do?
+* Can you tell me how it would compare to things like http://www.aatraders.com/ (and it's many many relatives)? 
+** Why will this be ''better''?
