@@ -1,0 +1,66 @@
+= Overview =
+
+'''Protocol Test Suites for tpserver-cpp and libtpproto-cpp'''
+
+This is a proposal for protocol test suites for tpserver-cpp and libtpproto-cpp as suggested by the "Protocol compliance test suite" on the Thousand Parsec ideas page.
+          
+          
+= Deliverables =
+== Individual Frame Tests ==
+Test cases will be written for each outgoing frame type ensuring that the format of the generated frame conforms to the protocol specification.  Pregenerated frames will be passed to the libraries to ensure that they can be parsed. 
+
+== Frame Sequence Tests ==
+Isolated frame tests don't provide complete coverage of the protocol, however.  For example, a sequence frame must be followed with the correct number of response frames.  Higher level tests will be written to cover cases where multiple frames must be considered.
+
+== Malformed Frame Tests ==
+Tests will be written to ensure that the libraries handle malformed frames gracefully.  Besides providing more stable interoperability between different clients and servers, these tests will also provide protection against maliciously malformed frames.
+
+= Benefits =
+The benefits of unit testing are well known.  Each part of the software to be tested is isolated from each other allowing the location of bugs to be more quickly found.  They can allow a library to be refactored while making sure it still works correctly.
+
+== Interoperability ==
+A project like Thousand Parsec stands to benefit even more.  Several different servers and clients all rely on each other to correctly implement the communication protocol.  If a client developer, for example, experiences problems when connecting to a server then bugs in the server can be ruled out as a cause if the server's implementation of the protocol has been  verified as correct.
+
+== Security ==
+In addition to verifying the correct behavior under normal circumstances, tests can be written to test a library's ability to handle malformed data.  Such data may come from a malicious frame, or simply a noncompliant library.  Either way, an error message is preferable to a crash or exploit and a comprehensive test suite can ensure the correct response. 
+
+= Roadmap/Plan =
+
+== Tools ==
+The unit tests will be implemented using the Boost Test Library.  Many testing frameworks are available for C++.  This library was chosen because of its portability and flexibility.  Additionally, I have extensive experience in its use so no time will be lost to the learning curve.
+
+== Organization ==
+A separate top level suite will be created for both tpserver-cpp and libtpproto-cpp.  Each of these suites will have separate, lower-level suites covering the areas mentioned in the deliverables.
+
+Individual frame tests will initialize the library with some minimal test objects and request a frame to be generated.  This will then be compared to a manually generated frame.
+
+Testing sequences of frames will involve creating a "scaffold" of mock objects around the relevant parts of the library.  Requests will be fed in and generated responses will be compared to the responses dictated by the protocol definition. 
+
+== Timeline ==
+
+* '''Week 1:''' Test framework up and running.  Integration of dummy tests with tpserver-cpp and libtpproto-cpp build systems.  At least one frame type tested for each library.
+* '''Week 2:''' All simple frame types tested for protocol conformance.  This includes all fixed size frames such as "Ping Frame" and other simple request frames.
+* '''Weeks 3-4:''' All frame types in protocol version 0.3 are tested for basic conformance.  These tests ensure frames are properly serialized and deserialized according to the specification.
+* '''Mid-term evaluation'''
+* '''Weeks 5-6:''' Exhaustive edge case testing (i.e. trying to break things) for all frame types complete.  These tests ensure the libraries can handle malformed frames or frames that push the limits of the protocol specification. 
+* '''Weeks 7-9:''' Complex frame interaction testing complete.  These tests cover any server or client behavior spread out over more than one frame and will make extensive use of mock objects simulating one end or the other.
+* '''Weeks 10-11:''' Tests for WIP protocol version 0.4 are complete.  This will allow developers to have a check list of features to complete before compliance with TP04 is met.
+* '''Additional tasks:''' Any time remaining will spent on the following tasks.
+** '''Fix exposed bugs:''' Any bugs exposed by testing that haven't already been addressed will be worked on.
+** '''Simple conformance testing for libtpproto-py serialization:''' It should be relatively simple to port the basic serialization tests to a Python unit test framework.  More complex tests would probably benefit from a different approach in this language. 
+** '''Boost.Random integration:''' Unrelated to conformance testing, but within my area of expertise is changing tpserver-cpp to use Boost.Random as its psuedorandom number generator.  I've previously worked with this library as the base for a Perlin noise planet generator and I could drop it into the code if a few extra days are left over before the end of summer.
+
+= Biography and Qualifications =
+I'm currently a junior at the University of Nevada, Reno, earning a Bachelor's degree in computer science.  I am maintaining a cumulative GPA of 3.88.
+
+Although my formal education in the subject started only two years ago, I have extensive experience in C++ as a hobbyist game programmer.  I've found code in my archives dating from 16 years ago and for the last four years I've used test-driven development for all of my personal and university projects.
+
+One of my most recent personal projects showcases my testing abilities well.  It's an entity/component system for combining various libraries into a game engine.  It's conveniently accessible from a public git repository: http://repo.or.cz/w/MidoriGraph.git .
+
+I first became interested in Thousand Parsec after searching for an alternative to the Master of Orion series.  Although they were long time favorites of mine, it was becoming harder and harder to run them on modern systems and I was frustrated with bugs I couldn't fix because of their closed nature.  Since then I've contributed several small patches to the project.
+
+== Availability and Communication ==
+During my last break from school I was active on the Total Parsec IRC channel and the tp-devel mailing list and, if selected, will continue to do so.  I have no other courses or personal commitments this summer.
+
+
+JD Marble --[[User:MidoriKid|MidoriKid]] 02:01, 27 March 2008 (EDT)
