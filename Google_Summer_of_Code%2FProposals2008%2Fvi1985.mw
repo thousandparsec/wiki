@@ -163,3 +163,21 @@ I think this is enough for now from my part. Keep up the great work!
 --[[User:Xdotx|Xdotx]] 21:01, 24 March 2008 (EDT)
 
 >>>Xdotx: Thanks for the update! I have actually caught it about 30mins ago, and made a comment about it in my Google proposal ;). I should change it here as well... --[[User:Vi1985|Vi1985]] 21:31, 24 March 2008 (EDT)
+
+'''Nash''': 
+
+* You mention game performance rating: 
+** How is this done?
+* Have you had a look at the status of libproto-java?
+** Does it do what you need, is it in a good enough status to use?
+** Have you taken into account you need to be using it heavily?
+* Java:
+** What version?
+** What platform(s) will you be testing on?
+* Training: 
+** How long do you expect it to train a decent AI, or even an AI that can play the game?
+** Are you going to deliver working AIs?
+* Are AIs going to train themselves continually throughout the game? 
+** Are they going to be able to stay viable in this case?  Or if they don't train?
+* Fitness Space
+** You define a 4D fitness space.  Is this really enough?  How about more complex games like a Stars! ruleset?
