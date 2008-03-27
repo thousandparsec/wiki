@@ -38,13 +38,12 @@ Testing sequences of frames will involve creating a "scaffold" of mock objects a
 
 == Timeline ==
 
-* '''Week 1:''' Test framework up and running.  Integration of dummy tests with tpserver-cpp and libtpproto-cpp build systems.  At least one frame type tested for each library.
-* '''Week 2:''' All simple frame types tested for protocol conformance.  This includes all fixed size frames such as "Ping Frame" and other simple request frames.
-* '''Weeks 3-4:''' All frame types in protocol version 0.3 are tested for basic conformance.  These tests ensure frames are properly serialized and deserialized according to the specification.
-* '''Mid-term evaluation'''
-* '''Weeks 5-6:''' Exhaustive edge case testing (i.e. trying to break things) for all frame types complete.  These tests ensure the libraries can handle malformed frames or frames that push the limits of the protocol specification. 
-* '''Weeks 7-9:''' Complex frame interaction testing complete.  These tests cover any server or client behavior spread out over more than one frame and will make extensive use of mock objects simulating one end or the other.
-* '''Weeks 10-11:''' Tests for WIP protocol version 0.4 are complete.  This will allow developers to have a check list of features to complete before compliance with TP04 is met.
+* '''2008-06-02:''' Test framework up and running.  Integration of dummy tests with tpserver-cpp and libtpproto-cpp build systems.  At least one frame type tested for each library.
+* '''2008-06-09:''' All simple frame types tested for protocol conformance.  This includes all fixed size frames such as "Ping Frame" and other simple request frames.
+* '''2008-06-23:''' All frame types in protocol version 0.3 are tested for basic conformance.  These tests ensure frames are properly serialized and deserialized according to the specification.
+* '''2008-07-07:''' Exhaustive edge case testing (i.e. trying to break things) for all frame types complete.  These tests ensure the libraries can handle malformed frames or frames that push the limits of the protocol specification. 
+* '''2008-07-28:''' Complex frame interaction testing complete.  These tests cover any server or client behavior spread out over more than one frame and will make extensive use of mock objects simulating one end or the other.  
+* '''2008-08-11:''' Tests for WIP protocol version 0.4 are complete.  This will allow developers to have a check list of features to complete before compliance with TP04 is met.
 * '''Additional tasks:''' Any time remaining will spent on the following tasks.
 ** '''Fix exposed bugs:''' Any bugs exposed by testing that haven't already been addressed will be worked on.
 ** '''Simple conformance testing for libtpproto-py serialization:''' It should be relatively simple to port the basic serialization tests to a Python unit test framework.  More complex tests would probably benefit from a different approach in this language. 
