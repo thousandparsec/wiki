@@ -82,10 +82,7 @@ Here are the different things happening at the end of the turn. The order is not
 
 SEIII provides a great deal of winning conditions from which to choose from at the beginning f a new game. For example, a player can win if his score is X percent superior to any other player, has the highest score after X years, is the first to reach X score level, has researched X number of technologies… I don’t feel like implementing all of these, and will probably only have a “total conquest” victory. In my opinion, this way to win truly demonstrates you were the best player in the game. The other victory conditions don’t demonstrate this as good, that’s why I won’t implement them. Also, I prefer the game to last longer. I think it’s more interesting to fight until the very end, and it’s more rewarding too. I could even play without victory conditions at all, but I guess that’s just me.
 
-==Compatibility with the existing framework==
 
-
-under construction...
 
 ==Clustering the rules==
 
