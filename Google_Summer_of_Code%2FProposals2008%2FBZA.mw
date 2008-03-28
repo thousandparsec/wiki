@@ -11,10 +11,36 @@
 * Ruleset designed by an individual with 4+ years C++ programming experience, 2+ years focused student-level game development experience,  and 3+ years game design experience with a passion for game design and innovation.
 
 == Project Deliverables ==
-* First, since the turn-based to tick-based gameplay conversion is of paramount importance in terms of ruleset development, game flow, and fun, the first deliverable will be a shallow example ruleset that demonstrates the tick based game flow.
-* Second, the board establishment and unit placement functionality are core since no play can proceed before this occurs, so this will be the focus of the second deliverable.  Ideally this would be integrated with the turn system at deliverable time, but that integration may have unforeseen problems, so the two will only be integrated at deliverable time if it can be done without being total hack.
-* Third, is the combat system.  Once the above two have been accomplished, the next big focus is on getting the dice-roll logic, attack sequence, and combat rules/framework working well, so this combat system as explained in the [http://www.thousandparsec.net/wiki/Risk_Alternate#Stage_Attacks Staging Attacks] and [http://www.thousandparsec.net/wiki/Risk_Alternate#Combat Combat] sections of the ruleset description page.
-*Finally, with what time remains, I would focus on polishing and refining the ruleset and, if time permits, implementing one or more of the items described [http://www.thousandparsec.net/wiki/Risk_Alternate#Ideas_for_Future_Development here].
+* First, since the turn-based to tick-based gameplay conversion is of paramount importance in terms of ruleset development, game flow, and fun, the first deliverable will be a shallow example ruleset that demonstrates the tick based game flow. By the end of the first deliverable the user/player will be able to:
+**input an action to take (place units, attack, fortify) from a text menu, console style.
+**for each action, input the specifics like:
+***placing <int>n units on territory <string>x 
+***attacking from territory <string>x to territory <string>y with <int>n units
+***fortify form territory <string>x to territory <string>y with <int>n units
+**queue multiple actions 
+**at the tick, see the queued actions resolve correctly, via text output, or see any conflicts and the resolutions or error messages
+**any actions taken will be strictly superficial.  that is, it will not be remembered that there are 3 units on territory x or that the attack on territory y caused the player to lose 2 troops. Any data entered during a player's turn goes out of scope after the tick essentially.
+* Second, the board establishment and unit placement functionality are core since no play can proceed before this occurs, so this will be the focus of the second deliverable.  Ideally this would be integrated with the turn system at deliverable time, but that integration may have unforeseen problems, so the two will only be integrated at deliverable time if it can be done without being total hack.  The functionality in this is:
+**player can now see the game map, divided into named territories (planets), and named continents.  If some kind of coloring or outlining of planets is possible then continents will be demarcated this way with a key table/graphics showing a color, then a continent name, then the troop bonus associated with controlling it.  Otherwise, planets in the same continent will all have the same  ASCII symbol in front of their name, like "@ - Omicron Presei" and the key in this case would have the associated character instead of the color in the precious example.
+**player can now go through the process of setting up the board for a game as detailed in [[Risk Alternate]].
+**troop creation, troop count, turn troop bonuses, and continent troop bonuses are all kept track of now with the accompanying rules for placing troops
+**troops on a territory will be demarcated via a ship over the corresponding planet.  the number of troops on a territory will be displayed as a number either by the ship or by the territory name.
+**once the board is set up, the player can test out fortifying and gathering and placing troops.  Currently, if units can be moved across the board graphically then this would be the best way to show the player's actions being acted out, but otherwise the player will just only see the current state of the game board after every tick, sans any fancy graphics or animation.
+**the player will not yet be able to play through a game because there is no mechanic for combat yet and without combat no one can gain or lose ground.
+**this should act as a shell for the game with the player able to do everything from the core Risk ruleset except for combat.
+**all pertinent game data that does not have to do with combat, like player, troop and map data, being kept track of between turns and there may even be a win/lose state.
+* Third, is the combat system.  Once the above two have been accomplished, the next big focus is on getting the dice-roll logic, attack sequence, and combat rules/framework working well, so this combat system as explained in the [http://www.thousandparsec.net/wiki/Risk_Alternate#Stage_Attacks Staging Attacks] and [http://www.thousandparsec.net/wiki/Risk_Alternate#Combat Combat] sections of the ruleset description page.  The functions entailed in this deliverable are:
+**player can now issue commands to attack from one map territory to another with some number of untis and the conflict can now be resolved.  the player can queue as many attacks as he/she has territories controlled, but each attack must be against a territory that has not yet been attacked this turn.
+**if combat can be done via client area action, then that would be great, but if not the player could allways still work from some text menu or some console command.  This may not be enforced at the attack selection stage, but will most definitely be during attack resolution.
+**initially, the defender in an attack will always defend with as many dice as possible.
+**dice rolls are basically rand()%6 + 1 and this is done for as many troops selected for attack and defense, with the caveat that the attacker only gets max 3 attack die rolls and the defender only gets max 2.
+**once every attack has been resolved, the game board and player data is updated and the turn goes to the next player.
+**there will definitely be a win/lose state at this point and something will happen when you win, though I don't know what yet.
+*Finally, with what time remains, I would focus on polishing and refining the ruleset and, if time permits, implementing one or more of the items described [http://www.thousandparsec.net/wiki/Risk_Alternate#Ideas_for_Future_Development here]. Polishing will entail:
+**documenting any poorly documented code
+**play testing for edge cases which cause resolution conflicts
+**game flow tweaking such that the game is easy to pick up and fun to play.
+**etc.
 
 == Project Details ==
 <p> For everything you need to know about my current vision for the ruleset and its implementation, please see  the TP wiki page [[Risk Alternate]].</p>
