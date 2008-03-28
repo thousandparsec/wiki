@@ -191,6 +191,9 @@ I think this is enough for now from my part. Keep up the great work!
 >>> Hm... Did you mean Big-O analysis? --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 
 >>> If this is a question about the fitness function, then I plan on devising a formula, which will evaluate the player's standing in the game relative to others. This formula will compare known information between the players, and also it will have another layer of heuristics, which will extract "probable" info about the actual stats of various players. This information will be scaled relative to the winning conditions of the specific ruleset, to produce a one-to-one function, the value of which will serve as the "performance rating" of the player in the particular universe-snapshot. --[[User:Vi1985|vi1985]] 12:43, 27 March 2008 (EDT)
+
+>>>If you're wondering how well the AI will fare against human players, the quick answer would be: it would act,  at the very least, as a reasonable opponent for beginners. The upper bound for AI performance is how well I will program the relevant modules (the OSM, and the fitness function to be exact), which will directly influence how solutions will be evaluated on an absolute scale, and which solution will be selected for execution. If all goes well, I expect it to be reasonably good at finding creative strategies to outsmart the actions of mediocre players. --[[User:Vi1985|vi1985]] 14:53, 28 March 2008 (EDT)
+
 * Have you had a look at the status of libproto-java?
 >>> Yes, I have extensively corresponded with jezuch, the libtpproto-java developer, about these issues, and we have agreed that I will be building on the existing library in the direction of making the AI client, in consultation and (some) collaboration with him. This is specified in the last segment of the Roadmap. --[[User:Vi1985|vi1985]] 08:37, 27 March 2008 (EDT)
 ** Does it do what you need, is it in a good enough status to use?
