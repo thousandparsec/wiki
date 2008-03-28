@@ -94,7 +94,7 @@ I chose a genetic algorithm (GA) implementation of the AI agent for several reas
 I would rather not simply use a set of heuristics and behavioral tendencies as my decision making module, since having it look several moves ahead would most likely entail creating an alpha-beta decision tree, then proceeding by the Paranoid Hypothesis assumption (likely is the best heuristic, since there are 4, not 2 players), which will be much more memory- and execution-time guzzling, and much less accurate, than a well designed GA. Another alternative would be to have rules to calculate a solution a single move in advance. While this may be a good quick-fix, and be suited as a training tool for inexperienced players, it will not offer the more advanced (and intelligent) player a challenge, and furthermore its simple strategy would damage gameplay quality.
 
 
-* '''''Here you can find a PDF document rich with visual aids, which together with subsequent sections helps outline the design scheme of the AI Agent, and its core algorithms: '''''  [http://www.4shared.com/account/file/42276324/afb1a7a3/EvolutionaryParadigm.html]
+* '''''Here you can find a PDF document rich with visual aids, which together with subsequent sections helps outline the design scheme of the core genetic algorithm: '''''  [http://www.4shared.com/account/file/42276324/afb1a7a3/EvolutionaryParadigm.html]
 
 
 '''Opponent Simulation Module (OSM)'''
