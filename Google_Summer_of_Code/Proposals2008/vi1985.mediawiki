@@ -96,7 +96,7 @@ Another possible solution to having the algorithm look several moves ahead, woul
 Another alternative would be to have rules to calculate a reasonable solution a single move in advance. While this may be a good quick-fix, and be suited as a training tool for inexperienced players, it will not offer the more advanced (and intelligent) player a challenge, and furthermore its simple strategy would damage gameplay quality. In fact, the OSM (discussed below), will be mainly relying on just such a "cheap" solution.
 
 
-* '''''Here you can find a visually-rich PDF document, to aid the reader in understanding the design scheme of the core genetic algorithm: '''''  [http://www.4shared.com/account/file/42276324/afb1a7a3/EvolutionaryParadigm.html]
+* '''''Here you can find a visually-rich PDF document, to aid the reader in understanding the design scheme of the core genetic algorithm: '''''  [http://www.4shared.com/file/42290568/5cbdb383/EvolutionaryParadigm_2.html]
 
 
 '''Opponent Simulation Module (OSM)'''
