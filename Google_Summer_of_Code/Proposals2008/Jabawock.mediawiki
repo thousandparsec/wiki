@@ -42,6 +42,28 @@ Here is how I’m thinking if implementing a nice research system: As attaining 
 
 ==Honor system==
 
+This is an addition to the game I’d really love to implement. It’s mainly inspired by the Utopia game (a famous browser based game). Basically, a player has a total of honor points, and a rank, associated to it. The rank of the player provides him some advantages, and the highest the rank is, the better the advantages become. Honor points will periodically decrease (or increase if the player has less than the average 3500 points), so a player won’t keep his rank forever if he does nothing to deserve it. For a player to obtain honor, he has to achieve glorious victories over his enemies. For example, if he wins an almost equal ship battle, it would earn him much honor. However, he might lose some honor if he uses a big cruiser fleet to attack a colonizer ship or a population transporter. 
+Unlike in Utopia though, honor is created, not taken. The loser of an important battle won’t lose any honor. One has to perform really dishonorable actions to lose honor, or just don’t do anything honorable in a long period of time.
+
+===Honor ranks===
+
+Here is a first draft of which ranks would exist and their associated advantages:
+* Traitor: Less than 1000 honor points. 25% more efficiency for offensive intelligence operations (espionage and sabotage). 25% more ship combat efficiency during an uneven battle.
+* Dirty player: Between 1000 and 2999 honor points. 10% more efficiency for offensive intelligence operations. 10% more ship combat efficiency during an uneven battle.
+* Dishonorable: Between 3000 and 3499 honor points. 
+* Honorable: Between 3500 and 3999 honor points.
+* Trustworthy: Between 4000 and 5999 honor points. 10% more efficiency for defensive intelligence operations. 10% more ship combat efficiency during an even battle.
+* Noble: Between 6000 and 6999 honor points. 25% more efficiency for defensive intelligence operations. 10% more ship combat efficiency during an even battle.
+
+Honor points range between 0 and 6999, and the gain/loss of these points become more difficult when getting towards the extremes. Honorable and dishonorable ranks are transition ranks and don’t give any particular advantage or disadvantage.
+
+===Honor balance===
+
+
+First of all, the advantages given by honor ranks are not excessively high. In SEIII, similar advantages can be chosen as racial bonus in the beginning of the game (I chose not to implement these bonuses). I see these ranks as a way of playing. The goal is not, like in Utopia, to encourage even battles and discourage dishonorable players, but rather to give related advantages to each of those players. 
+
+Also, as it is easier to win fight uneven battles, losing honor points that way is slower than gaining some by winning even battles. In fact, the traitor rank gives similar advantages to the noble rank, so reaching both should take just as long.
+
 ==End of turn processing==
 
 Here are the different things happening at the end of the turn. The order is not really important here, except maybe for intelligence operations, which may damage ships and should come last. 
