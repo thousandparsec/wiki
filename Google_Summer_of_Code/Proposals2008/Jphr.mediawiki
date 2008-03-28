@@ -21,6 +21,7 @@ The deliverables of this project will include  a functional game of Risk with a 
 == Project Details ==
 '''The majority of the project details are outlined on the TP Wiki [[Risk|here]].''' At the end of its first iteration the Risk ruleset will emulate very closely the original rules for Risk. The TP framework allows for the existence of multiple server options to determine how games start and victory conditions for games. As well the framework allows the Risk ruleset to be extended to modify the rules of Risk and allow players to maintain ownership of territories without keeping units on the territory.
 
+Details and updates about progress may be placed on a livejournal account or on the TP wiki.
 
 == Project Roadmap ==
 It is my intention to treat TP as a full time job and as such I intend to commit 35-40 hours per week. I will most likely work during the normal work week, but considerations will need to be made for the difference in time zone between myself and my mentor llnz.
