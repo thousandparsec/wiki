@@ -182,14 +182,14 @@ Throughout the project I will keep code well documented to help future developer
 *Document the rules as work continues.
 *Document and test code as work progresses.
 
-2008-06-07: Deliverable 1
+2008-07-07: Deliverable 1
 *Deliverable 1 will be a basic ruleset with at least the following characteristics:
 **A map of solar system objects layed out in a rectangular grid.
 **At least one ship object with the ability to execute at least one order.
 **The framework for the multi-step turn as outlined above.  The user will be able to step through each phase, even if the phases are not fully implemented.
 **At least two people should be able to connect to a server running the ruleset.
 
-2008-06-07 to 2008-08-11
+2008-07-07 to 2008-08-11
 *Finish the implementation of all the objects, orders and resources.
 *Fully implement the game board with solar systems and allied region detection.
 *Fully implement the combat system.
@@ -212,8 +212,6 @@ Throughout the project I will keep code well documented to help future developer
 **Screenshots and diagrams to illustrate important rules
 **Concrete examples
 **A quick start guide for new players
-
-
 
 ==Biography==
 
