@@ -1,0 +1,224 @@
+== Abstract ==
+The goal of this project is to implement a new ruleset for the Thousand Parsec framework.  The ruleset will be an adaptation of the board game Tigris and Euphrates by Mayfair Games.  The reasoning behind this adaptation is to create a quick, fun, unique, and relatively easy ruleset to complement the rulesets already available on Thousand Parsec.  The timeframe is 3 months and the final deliverable will be a fully functioning ruleset.
+
+
+
+== Introduction ==
+This project is based on two ideas presented on the TP "Ideas for Programmers" wiki page.  The first was “a simple ruleset in which a whole game can be finished in an hour."  Building a game which has a short run time will help people who do not have the time to invest in a monumental 4X campaign.  The goal is to keep things relatively simple to learn and play.  In order to achieve this, much of the complexities and micro-managing of a traditional 4X game must be sacrificed for a simpler approach, yet still adhere to the core gameplay components of a 4X space game.
+
+The ruleset must not only be quick and simple, but also fun and worth playing.  This is where the second idea comes in: to clone an existing game.  Using an existing game means that valuable time does not have to be spent on designing the game from scratch.  Instead, the challenging part of the project is building a ruleset that works well within the TP framework.
+
+To encompass both of these ideas, I chose to adapt the board game Tigris and Euphrates.  It is quick to play (average play time 90 minutes when playing with a physical board), and, although it has a somewhat complex set of rules, it is relatively simple to learn and play once you try it out.  It is an award winning game (Deutscher Spiele Preis, 1998) and has proven itself to be an enjoyable experience to its many fans.  What really makes this project interesting is the uniqueness it provides to the TP ruleset collection.  While core 4X gameplay elements are present in Tigris and Euphrates, it is very different than the existing TP rulesets.  All the other rulesets were designed from the ground up as 4X space games.  The challenge for me will be taking the gameplay of Tigris and Euphrates, and casting it into the setting of the TP world.
+
+The reason I think this project will be a worthwhile addition to the TP framework is three-fold:  This project will create a fun, quick, easy to learn, easy to play ruleset.  It will show off the capabilities and the versatility of the TP framework.  And, it will also provide others with a stepping stone upon which to branch new rulesets and learn how to adapt games to the TP framework.
+
+
+
+== Overview of the Rules ==
+
+
+===Setting===
+Humans have exploded in growth and expansion with the discovery of ancient alien artifacts in several solar systems scattered around an unexplored region of space.  Colonists, scientists, and entrepreneurs alike are eager to explore the galaxy.  You and the other players act out the parts of powerful corporations vying for control of the galaxy using strategy, leadership, conflict, and a little bit of luck.  But only through the balance of resources and control of long forgotten artifacts can you achieve domination in this new frontier.
+
+
+===Initial setup===
+The play area is set up as a rectangular grid of solar systems.  There are 2 types of solar systems: inhabitable and uninhabitable.  Inhabitable solar systems can be colonized by any ship except mining vessels. The uninhabitable solar systems can only be colonized by mining vessels.  At the start there are 10 solar systems which start out colonized and contain a single ancient alien artifact each.
+
+Each player starts out with three fleets of ships: a fleet of 6 civilian vessels which are used to inhabit uninhabited solar systems (the civilian vessels are drawn at random from a pool of available civilian ships), a fleet of 4 leaders which are used to control regions of space, And a fleet of two prototype weapon ships which can be used one time each to destroy a solar system. The ships in each fleet are hidden from the other players.
+
+
+===Resources, Colonists, Leaders, and Allied Regions===
+As discussed above, each player has a fleet of civilians and leaders.  There are 4 types of resources, which correspond to 4 leaders per player and 4 types of civilian ships:
+#Mining robots with a Mining foreman produce Raw Materials
+#Merchants with a Merchant leader produce Money
+#Scientists with a Scientific leader produce Technology
+#Settlers with a Government head produce People
+
+Colonists settle solar systems, and when controlled by the corresponding type of leader that you own, generate resources for you.  The amount of resources each player has is hidden from the other players until the end of the game.
+
+Each leader may inhabit a single unoccupied solar system as long as it is adjacent to a Scientific settlement (more on this later).
+
+When two or more settled solar systems (including solar systems with leaders) are adjacent to one another, they are said to be linked together in an allied region.  Any solar system which is adjacent to the allied region is added to the allied region when it is settled.  An allied region may contain leaders from one or more players, but may only contain one of each of the four types of leaders.
+
+
+===Winning the Game===
+At the end of the game, a player's score is the number of resources collected in their weakest resource type.  For example:
+*Player 1 has the resources: 4 Raw Materials, 10 Money, 2 Technology, and 12 People.
+*Player 2 has the resources: 3 Raw Materials, 3 Money, 3 Technology, and 3 People.
+*Player 1's score is 2.  Player 2's score is 3. 
+*Player 2 wins.
+
+
+===Turns and Orders===
+The players take turns giving orders and collecting resources.  On a player's turn he may make up to two orders (two different orders or the same order twice).  The possible orders he can give are:
+1.Place, move, or remove a leader
+2.Colonize a solar system with an available colonist and distribute the resource generated by the settlement.
+3.Destroy a solar system with one of your prototype weapons.
+4.Swap up to 6 ships in your civilian fleet for new ships.
+
+====Place, move, or remove a leader====
+All of your leaders are initially not attached to any solar system.  You may place a leader onto any unoccupied solar system as long as it is adjacent to a Scientific settlement, and as long as it does not create a connection between two allied regions.  If you place a leader in a region which already has a leader of that type, it creates an internal conflict (see the combat section below).  Leaders can never be destroyed; they are simply removed from their current solar system only to be placed again later.
+
+====Colonize a solar system====
+You may order a ship from your civilian fleet to colonize an unoccupied solar system.  Mining robots may only colonize uninhabitable solar systems.  All other ships may colonize any inhabitable solar system.  When a ship colonizes a solar system it generates a single corresponding resource for the player who owns the corresponding leader which inhabits the allied region of the solar system.  If no leader of the corresponding type exists in the allied region, then the resource goes to the player who owns the Government head of that allied region.  If no Government head exists in the region, then the resource is lost.
+
+If the colonization of a solar system connects two regions, and both of those regions have a leader of the same type, then an external conflict occurs (see the combat section below).
+
+====Destroy a Solar System====
+You may order one of your prototype weapon ships to destroy a solar system of your choice.  All inhabitants are killed, and the solar system may never be colonized again and no leader may occupy the system.  If a leader is occupying the solar system at the time of destruction, it is returned to the player who owns the leader.  Each weapon ship may be used only once during the game (so you may destroy 2 total stars per game).
+
+====Swap out Civilian Fleet====
+You may swap out up to 6 ships from your civilian fleet when you use this order.  They are removed from the game and new ships are randomly drawn from the civilian ship pool.
+
+====End of the Turn====
+At the end of the turn, all players refill their fleet of civilian ships to 6 ships drawn at random from the civilian ship pool.
+
+
+===Combat===
+
+====Internal Combat====
+Internal combat occurs when one leader is placed into an allied region where another leader of the same type already resides.  The leader already residing in the region is said to be the “defender” the newly placed leader is the “attacker.”
+
+First, the initial strength of the attacker and defender are evaluated.  The initial strength of each leader is the number of Scientific settlements directly adjacent to each leader.  Then the attacker has a chance to bolster the strength of the leader by sending in Scientists from his civilian fleet.  Then the defender has a chance to do send Scientists in from his fleet.  The total strength of each leader is the initial strength plus the number of scientists sent by the player that owns the leader.  If the attacker is stronger than the defender, than the attacker wins, otherwise the defender wins.  In the case of a tie, the defender wins.  The winner receives 1 Technology resource and the looser must remove his leader from the board.  All extra ships sent in for the battle are removed from the game.
+
+====External Combat====
+External combat occurs when two regions are joined together forming a region with more than one leader of the same type.  The attacker is the player who settled the solar system which connected the two regions.  External combat is resolved one leader type at a time.  The attacker gets to choose the order of resolution.
+
+For each conflict:
+#The starting strength of each leader is determined by the number of solar systems of its type in its allied region.
+#Each player then add ships of the same type as the leader to bolster the strength of their leader (attacker first, then defender).
+#The leader with the higher total strength wins the battle.  In the case of a tie, the defender wins.
+#The loosing leader is removed and all solar systems of the same type as the leader, in the leader’s former region become uninhabited!  Note: This may cause the regions to be split up and may render other unresolved conflicts null since they are no longer in the same region.
+#The winner receives 1 resource of the type associated with the conflict for each solar system which was vacated and 1 resource for the leader which was removed.
+
+Continue this process until all conflicts are resolved.
+
+
+===Ancient Alien Artifact===
+An ancient alien artifact is a resource that counts as 1 of any other type of resource.  There are ten solar systems designated at the beginning of the game which are home to 1 ancient alien artifact each.  To harvest this artifact, you must have a Merchant leader in a region where at least two alien artifacts are located.  If you satisfy these conditions, then you can choose one alien artifact to harvest.
+
+
+===Game Ending Conditions===
+The game ends when one of two conditions is met:
+1.Two or fewer alien artifacts are left in the galaxy.
+2.The pool of civilian ships has been exhausted.
+At the end of the game, the points are tallied as described above in the “Winning the Game” section, and the winner is announced.
+
+
+
+==Project Details==
+
+===Planned Implementation===
+I plan to use the C++ server to implement the Tigris and Euphrates variant ruleset presented above.  I chose the C++ server because I am most familiar with C++.  I would love to pick up another language such as Python, but I do not want to waste time due to inexperience with a new language.
+
+Here is a brief description of the structure of the ruleset:
+
+A 2D array of Solar Systems to form the game board.
+An array of Civilian ships to form the “pool” of ships which each player’s fleet is refilled from.
+Multiple players.  Each one owning several collections of objects:
+*6 civilian ships drawn from the civilian ship pool.  These ships are not visible by the other players until they are used.
+*4 leaders
+*2 weapon ships
+
+Below is a more detailed description of each object, order, and resource.
+
+
+===Protocol Constructs===
+====Objects====
+*Solar System.  Solar systems aligned in a rectangular grid will make up the game board.  Solar systems can have the following parameters:
+**Inhabitable.  A Boolean value.  If true, then it can be colonized by all civilian ships except mining robots.  Otherwise it can only be colonized by mining robots.
+**Destroyed.  A Boolean value describing whether the solar system has been destroyed.
+**OccupiedBy.  The current occupants of the solar system.  Either one of the civilian ships or one of the leader types.
+**GridIndex.  The index of the solar system on the board.  Used for determining adjacent neighbors.
+**ContainsArtifact.  Boolean value describing whether or not the system contains an alien artifact.
+*CivilianShip.  Represents a ship of colonists which may inhabit a solar system.  CivilianShips may have the following parameters:
+**Type.  May be one of four values: Scientists, Merchants, Settlers, or Mining.
+*Leader.  A colonist leader controlled by a specific player.  Leaders may have the following parameters:
+**Type.  May be one of four values: Scientists, Merchants, Settlers, or Mining.
+**Owner.  The player who owns this leader.
+*WeaponShip.  A weapon with one purpose: to destroy solar systems.
+
+====Orders====
+*Colonize.  Orders a CivilianShip to colonize the specified solar system.
+*MoveTo.  Orders a Leader to move to the specified solar system.
+*Remove.  Orders a Leader to be removed from the board.
+*Destroy.  Orders a WeaponShip to destroy the specified solar system.
+*Reinforce.  Orders a CivilianShip to reinforce the specified leader.  Only valid in combat.
+*Swap.  Orders a CivilianShip to be swapped for a new one from the civilian ship pool.
+
+====Resources====
+Technology.  Produced by the colonization of a solar system by scientists, successful internal combat, and external combat involving solar systems occupied by scientists.
+People.  Produced by the colonization of a solar system by settlers, and external combat involving solar systems occupied by settlers.
+Money.  Produced by the colonization of a solar system by merchants, and external combat involving solar systems occupied by merchants.
+Raw Materials.  Produced by the colonization of a solar system by mining robots, and external combat involving solar systems occupied by mining robots.
+Alien Artifacts.  Harvested by a merchant leader when two alien artifacts are present in an allied region.
+
+
+===Turns===
+Players alternate taking turns.  Each turn can be split up into small phases, outlined below:
+
+#Player makes first order to any of his ships as described in the game rules above.
+#Resource generation due to the first order is resolved.
+#Combat due to the first order is resolved.
+#Player makes his second order.
+#Resource generation due to the second order is resolved.
+#Combat due to the second order is resolved.
+#All players refill civilian fleets to 6 ships.
+#Turn passes to the next player.
+
+
+===Documentation===
+Throughout the project I will keep code well documented to help future developers understand, use, and learn from my code.  I will keep a log of changes as work progresses.  I will keep a document describing the ruleset and refine it as work progresses with the goal of having a detailed description of the ruleset as well as a guide for new players.
+
+
+===Timeframe and Deliverables===
+2008-05-26 to 2008-06-07
+*Learn the TP framework and become familiar with the protocol, server, clients, and other rulesets.
+*Work on the basic framework for the ruleset.
+**Create the board
+**Create basic ships and orders
+**Create the turn structure for multiple players
+*Refine the rules to the game.
+*Document the rules as work continues.
+*Document and test code as work progresses.
+
+2008-06-07: Deliverable 1
+*Deliverable 1 will be a basic ruleset with at least the following characteristics:
+**A map of solar system objects layed out in a rectangular grid.
+**At least one ship object with the ability to execute at least one order.
+**The framework for the multi-step turn as outlined above.  The user will be able to step through each phase, even if the phases are not fully implemented.
+**At least two people should be able to connect to a server running the ruleset.
+
+2008-06-07 to 2008-08-11
+*Finish the implementation of all the objects, orders and resources.
+*Fully implement the game board with solar systems and allied region detection.
+*Fully implement the combat system.
+*Fully implement an appropriate user interface for the client.
+*Complement the ruleset description with screenshots and examples
+*Document and test code.
+
+2008-08-11 to 2008-08-18
+*Perform final cleanup of code and prepare required submissions.
+
+2008-08-18: Deliverable 2
+*A fully functional ruleset which adheres to all of the ruleset rules.  The ruleset will:
+**Implement all of the objects, orders, and resources outlined above.
+**Follow the multi-step turn as outlined above.
+**Fully implement and correctly resolve combat phases as outlined in the rules.
+**Correctly determine the game winner upon reaching the ending conditions.
+**Contian appropriate media for all implemented objects.  Media should also indicate parameter values of objects when relavent (i.e. this leader is controlled by Player 1).
+**Allow for a complete game (according to the rules) to be played by multiple people by connecting to a tpserver-cpp instance running the ruleset.
+*The deliverable will include a clear and complete documention of the rules.  The documentation will include:
+**Screenshots and diagrams to illustrate important rules
+**Concrete examples
+**A quick start guide for new players
+
+
+
+==Biography==
+
+I am a Computer Science student currently working on my Masters in Computer Science at Wake Forest University in North Carolina.  I received a BS in Computer Science from Elon University, also in North Carolina.  My undergraduate work was mostly done in Java with a heavy focus on object oriented design.  While studying at Elon, I published and presented a paper on pathfinding artificial intelligence in video games at the ACMSE07 Conference ([http://portal.acm.org/citation.cfm?id=1233341.1233398 Clarifications and Extensions of Tactical Waypoint Graph Algorithms in Video Games]).
+
+I have a strong background in Java, C, and C++, but I have worked in many languages everything from Fortran to Scheme.  I have always been passionate about video games and game development.  I grew up playing 4X space games and other similar games.  I am eager to work on the Thousand Parsec framework, and I look forward to learning a lot this summer and contributing something worthwhile.
+
+Please feel free to post feedback here or contact me via IRC or email.  My IRC nickname is Nuleren.
