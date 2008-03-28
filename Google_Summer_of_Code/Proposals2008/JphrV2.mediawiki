@@ -26,15 +26,15 @@ Details and updates about progress may be placed on a livejournal account or on 
 
 == Project Roadmap ==
 It is my intention to treat TP as a full time job and as such I intend to commit 35-40 hours per week. I will most likely work during the normal work week, but considerations will need to be made for the difference in time zone between myself and my mentor llnz.
-*Until late May: Community bonding and increasing familiarity with existing tpserver-cpp/ruleset code
-*First week of April: Present complete documentation on ruleset to mentor via TP Wiki. Specifically how I intend to bring balance to an “all-at-once” turn structure.
-*By the end of 3rd week of April: Produce rough pseudo-code for the workings of the ruleset while studying more indepth how rulesets operate
-*End of April: Present a complete shell Ruleset, with no game logic or objects. This may also be branched and kept for future GSoC students/ruleset developers.
-*Middle of June: Present a working ruleset that fully implements modified Risk logic and game startup
-*One week before end of June: Finish testing the ruleset logic. Emphasis put on a balanced combat/conflict resolution mechanism
-*End of June: Implement Risk board as a star system and extend startup logic
-*Middle of July: Finish testing complete ruleset. Present first iteration of ruleset to mentor
-*End of July: If time permits perform additional testing and implementation of more advanced features
+*2008-04-15 - 2008-05-28: Community bonding and increasing familiarity with existing tpserver-cpp/ruleset code
+*2008-05-29 - 2008-06-07: Produce and present complete documentation on ruleset to mentor via TP Wiki. Specifically how I intend to bring balance to an “all-at-once” turn structure.
+*2008-06-08 - 2008-06-21: Produce rough pseudo-code for the workings of the ruleset while studying more indepth how rulesets operate
+*2008-06-21 - 2008-06-30: Produce and present a complete shell Ruleset, with no game logic or objects. This may also be branched and kept for future GSoC students/ruleset developers.
+*2008-07-01 - 2008-07-15: Produce and present a working ruleset that fully implements modified Risk logic and game startup
+*2008-07-16 - 2008-07-24: Finish testing the ruleset logic. Emphasis put on a balanced combat/conflict resolution mechanism
+*2008-07-24 - 2008-07-30: Implement Risk board as a star system and extend startup logic
+*2008-08-01 - 2008-08-15: Finish testing complete ruleset. Present first iteration of ruleset to mentor
+*2008-08-16 - 2008-08-20: If time permits perform additional testing and implementation of more advanced features
 
 
 == Bio ==
