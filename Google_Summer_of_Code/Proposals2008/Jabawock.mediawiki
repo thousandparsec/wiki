@@ -38,6 +38,8 @@ Formally, here are the objects of this game and their properties.
 
 ==Research system implementation==
 
+Here is how I’m thinking if implementing a nice research system: As attaining a new technology level basically gives access to one or a couple of new ship components or facilities, it would be simple to add a state to all those objects, called “in research”, with the number of research points needed to obtain the object. Thus, a player will have access to all components and facilities currently not “in research”, and will see which ones he could obtain by investing his research points. If a component is not directly accessible through research (for example, if three technology levels must be completed and the player has completed none), it will be in “unavailable” state, and the player won’t know anything about it. There are also whole branches of research being unknown to the player, which appear when sufficient knowledge about other fields of research is accumulated. For example, the player can spend research points on “fighter transportation” only when he reached the first level of knowledge in “fighters” technology. Before that, he doesn’t even know about this branch of research. To implement that behavior, the first component of the new unknown branch will be in the “unavailable” state, so the player won’t know about it. It will become in the “in research” state when the player reached the desired level of knowledge in other branches.
+
 ==End of turn processing==
 
 Here are the different things happening at the end of the turn. The order is not really important here, except maybe for intelligence operations, which may damage ships and should come last. 
