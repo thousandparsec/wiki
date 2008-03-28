@@ -37,7 +37,7 @@ The goal of this project is to devise and implement an efficient and capable AI 
 *By July 15 - Work on AI Agent will be completed, integration tests run, and work on having a standalone and functional AI Client will have begun.
 *By August 11 - AI agent/client library integration will have been tested, and a complete and ready to use Java AI Client will be ready. Full-scale integration testing will have been completed.
 *'''''Final touches and documentation''''':
-*By August 18 - Polish relevant documentation, and do some final touches on the code.
+*By August 18 - Documentation will have been written and polished; code scrubbed and extensively commented.
 
 '''General Considerations'''
 
