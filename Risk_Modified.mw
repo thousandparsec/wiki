@@ -54,6 +54,10 @@ I'd like to walk through a general sample of a few turns of the ruleset. The exa
 *X attempts to attack A from E, Y attacks E from B. Since E is retreating it takes reduced odds on the roll, and Y's 8 units crush X's 
 
 
+== Expected Problems ==
+I imagine most of the problems I encounter implementing the ruleset will stem form turn-ordering, especially in regards to conflict resolution when two or more players attempt to colonize the same territory. As I noted above this will be solved by having one player win the spot, while the others get to act exclusively in the next turn to pick their replacement territory. Should this approach fail I may allow the conflict resolution to give the losing player/s an adjacent territory instead of a "free turn." If time permits, and I do begin developing advanced features in the game I expect to run into problems implementing a card system like Risk's. Should a the traditional system be unimplementable I may modify the game mechanic in such a fashion that it still fits with the game, but does not force the TP framework into an awkward situation.
+
+
 == Features for Further Implementations ==
 These features will either be implemented in later iterations of the ruleset or at the conclusion of GSoC should a basic ruleset be finished early.
 *Continent-ownership based reinforcements. This feature would extend the first iteration by providing additional reinforcements should a player completely control a star cluster.
