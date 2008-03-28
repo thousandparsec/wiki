@@ -2,9 +2,11 @@
 
 '''Abstract'''
 
-This document provides a general overview of the design concept of the AI client I intend to design for Thousand Parsec. The core design of the AI agent would be a genetic algorithm, which would enforce natural selection of game-hypotheses, and come up with an optimized solution. Each hypothesis would be simulated against several AI players, and the outcome will be evaluated at the end of the simulation. This design is inherently creative and robust, since it does not rely on templates for deciding on course of action. After the core design would be coded and tested, I will use an existing client library, to create a discrete and functional AI Client. 
+This document provides a general overview of the design concept of the AI client I intend to design for Thousand Parsec. The core design of the AI agent would be a genetic algorithm, which would enforce natural selection of game-hypotheses, and come up with an optimized solution. Each turn, an evolutionary cycle will take place, where populations of game-hypotheses would be simulated against several AI players, the outcome evaluated, the best ones chosen as successors for the next generation, ad nauseum. The end result would be a well-adapted game-hypothesis, the first stage of which will be communicated back to the server. This design is inherently creative and non-deterministic, since it does not rely on templates for deciding on course of action. After the core design would be coded and tested, I will use an existing client library, to create a discrete and functional AI Client. 
 
 The project will be implemented in Java, since it is the language I'm proficient in, and hence will use the libtpproto-java library. Upon completion, the AI Client will be able to successfully play the RFTS ruleset, and with slight modifications to some of its modules, GC will be able to play any other TP ruleset. 
+
+The main benefit to TP would be to have a capable and creative AI, which will enrich the game experience for novices, as well as weathered veterans. 
 
 
 
