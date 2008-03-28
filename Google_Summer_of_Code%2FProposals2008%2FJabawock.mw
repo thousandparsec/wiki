@@ -22,6 +22,7 @@ Formally, here are the objects of this game and their properties.
 ===Objects which cannot be owned by a player===
 * Systems:  Can contain one star, planets and space storms (which make passing by ships invisible), and at least one worm hole. All systems have the same size.
 * Worm holes: Link two systems together.
+* Battles: It would be useful to have those as objects, so they can be resolved easily. This object will also determine how even the battle is, to distribute honor points accordingly (see “honor system” below). Finally, it will be helping to be sure that no ship can cross a square where a battle is engaged.
 
 ===Owned objects===
 * Planets: Have 6 possible atmosphere types, a size (influencing the maximum number of facilities), a population, a population happiness (influencing population growth), the demanded production rate (influencing population happiness), a value (influencing productivity), and planetary conditions (influencing population growth). Planets with more than 100M inhabitants get an inbuilt ship yard, so ships can be constructed. A colony on a planet can be destroyed by attacking ships, if the population gets to 0. All the facilities are then destroyed. 
