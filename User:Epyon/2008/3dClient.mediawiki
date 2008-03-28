@@ -1,0 +1,69 @@
+== Abstract ==
+
+One of the biggest problems with Thousand Parsec in regards to the average player is that it's very inaccessible. The lack of a good "standard" client is one problem, but a bigger one is that all the existing clients have a big learning curve, presenting all their information at the player in a chaotic and intimidating raw form. 
+
+The creation of a good looking 3D client is one part of the solution. However, my concern here is not just a matter of moving an existing client to 3D and adding eye candy. To achieve success the client must be as streamlined as possible. It must be well organized, easy to control and self-explanatory. This involves studying it's usability from the point of view of a newcomer, and streamlining all the confusing parts.
+
+== Idea Source ==
+
+After sticking with the Thousand Parsec community for a longer time I finally managed to make out what the game's supposed to be. However it was not easy. To become a Thousand Parsec player one needs determination and will to go through many things to learn how to play.
+
+The first time I had contact with TP (last years GSoC) it took me quite some time to actually get hold of what the project is about. Downloading the existing client made matters even worse, for I was presented with tons of data with no explanation. To be a stable and popular part of the gaming culture TP needs a state-of-the-art (as far as free open source projects can) client -- it does not even necessary have to be 3D -- but in this case 3D makes it easier to deliver the level of eye-candy that would demand a professional fulltime artist in case of a 2D client.
+
+== Deliverables ==
+
+My goal for the project is to supply a working 3D client for Thousand Parsec that will fully support all of it's current rulesets. The client will be modular and well documented to allow easy extending it in the future. Extensions to the client and it's ruleset specific behavior will be handled by a scripting language -- my voice would go for Lua (because I know it really well), but I'm willing to negotiate here (a perfect solution would be to use SWIG, which would allow the usage of most popular scripting languages including Lua, Python, Scheme and Tcl, but I'm not sure I can deliver that in the timeframe).
+
+Also I'm willing to supply all the needed media (fonts, models, textures, etc.) as time allows, but at least enough to provide the basics and have a full coverage of a chosen ruleset. 
+
+== Implementation Details ==
+
+The engine will be implemented in C++, a graphics engine (probably OGRE, but I wouldn't mind using my own, what would make the matter a lot more ... personal), and a scripting engine -- as told before I'd preferably use Lua. Care will be taken for the client to be supported at least on Windows, Linux and MacOSX (my girlfriend has a MacBook, so I will be able to play with that too). Code will be fully OO, maintaining standards for formatting and all the interfaces documented for Doxygen. 
+
+=== Streamlined interface ===
+
+A good game is one that doesn't need a manual. And so should the TP client be. The idea is to make the interface as intuitive as possible. All the general info you need should be visible outright, all the detailed info should be hidden, but hinted with icons. Icons around systems should indicate what one should expect from the detailed info. 
+
+=== Inline help ===
+
+First part is a extended hint system, even possibly a tutorial. Usually developers leave tutorials for the end as something extra, but I think it should be planned from the beginning to lessen the learning curve. Apart from that there should be an easily accessible, robust and complete ingame help system. Rulesets should have a way to provide their own part of the help system to the client.
+
+=== Adaptive interface ===
+
+First of all we have the multi-ruleset scale -- the client should only use an interface as complicated as the ruleset needs. No additional unnecessary data should be presented. On the ruleset scale itself, the client should only present the player with extended options as they become available. In a lesser scale it means that only ships that you can build should be visible (a toggle switch can be presented to show the others), on a more sophisticated scale, the research dialogs and menus (for instance) should be hidden until the player can actually make use of them.
+
+
+== Project Schedule ==
+
+I plan on working on the project fulltime during summer -- I have no summer job, nor school responsibilities. I plan to maintain a blog with progress update.
+
+=== Phase 1 -- Planning, research and content creation ===
+
+I'd like to spend all the official project time on the code itself, for it may proove quite a challenge, so I'm willing to spend time on doing all the research and planning out the interface before the May 28 start time. Also, during planning I'll get an idea what content (models/textures) I need, and do most of them before that date. This is also the time to get familiar with the TP codebase and the existing clients.
+
+=== Phase 2 -- Prototyping ===
+
+A little time before May 28 I will present some screenshots for the interface layout and propose them to the community for discussion.
+
+=== Phase 3 -- Implementation ===
+
+The coding commences. Before program midterm I hope to achieve at least a state of MTSec-like playability.
+
+=== Phase 4 -- Documentation, testing and further content creation ===
+
+The last week of GSoC, and the 21-30 August period will be used to document the project, polish it up and provide missing content.
+
+== Brief Bio/Resume ==
+
+I'm a Computer Science PhD student (1st year) at the Wroclaw University, Poland. My interests lie in Game Programming and Design, with a special hunch for Real-time Procedural Content. 
+
+I've successfully taken part in last year's GSoC creating a Procedural City Generator for BZFlag ( project homepage, out of date, http://bzflag.chaosforge.org/ ).
+
+I know several computer languages, tough I favor FreePascal (Delphi) and C++ that I currently write my own projects in. These include the beginnings of a 3D game engine ( http://sourceforge.net/projects/libvalkyrie ) in C++, and an unannounced space combat/trading game (codenamed StarDreamer), which heavily is inspired by Elite and Frontier. 
+
+I am a big fan of roguelike games, due to their randomness, and the focus on gameplay over presentation. I have managed to write several roguelikes up to date, the most famous one of them being DoomRL ( http://doom.chaosforge.org ) that did even get mentions in contemporary gaming magazines. I also know how to do game designs and organize my time and work, having taken part in three 7DRL Competitions (aimed at writing a playable and fun roguelike game in 7 days), and managed to finish them successfully each time.
+
+I always given high value to user submission evaluation in my projects, what can be seen on my games' forum ( http://forum.chaosforge.org/ ).
+
+Homepage : http://chaosforge.org/ 
+IRC Nick : Epyon
