@@ -91,7 +91,7 @@ I chose a genetic algorithm (GA) implementation of the AI agent for several reas
 
 '''''Possible Alternatives to a GA Solution'''''
 
-I would rather not simply use a set of heuristics and behavioral tendencies as my decision making module, since having it look several moves ahead would most likely entail creating an alpha-beta decision tree, then proceeding by the Paranoid Hypothesis assumption. It is likely is the only heuristic to accommodate alpha-beta pruning to a 4-player game. The "opponent" in that case would be the 3 other players, playing against you, which is usually far from the truth. This is a much more memory- and execution-time guzzling, and much less accurate, than a well designed GA.
+Another possible solution to having the algorithm look several moves ahead, would entail creating an alpha-beta decision tree, then proceeding by the Paranoid Hypothesis assumption. It is likely is the only heuristic to accommodate alpha-beta pruning to a 4-player game. The "opponent" in that case would be the 3 other players, playing against you, which is usually far from the truth. This is a much more memory- and execution-time guzzling, and much less accurate, than a well designed GA.
 
 Another alternative would be to have rules to calculate a reasonable solution a single move in advance. While this may be a good quick-fix, and be suited as a training tool for inexperienced players, it will not offer the more advanced (and intelligent) player a challenge, and furthermore its simple strategy would damage gameplay quality. In fact, the OSM (discussed below), will be mainly relying on just such a "cheap" solution.
 
