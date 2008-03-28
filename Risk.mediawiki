@@ -55,6 +55,9 @@ I'd like to walk through a general sample of a few turns of the ruleset. The exa
 I just want to make note again of the constast between this game and my concurrent example in the Modified Risk Proposal. It is important to notice that the modified game actually plays a lot more “fairly.” That is not to say it is the best, but it does provide a more 4X play style and easier implementation in the TP framework. If llnz is a Risk purist, however, he may prefer this application.
 
 
+== Expected Problems ==
+As I spoke about quite extensively above I expect a wide array of problems in implementing player-by-player turns. The solution would require other players to be locked out of making commands while it was not their turn. Mithro has mentioned this is not an ideal solution for the TP framework, but I am willing to put forth the effort to find a way if by some change of heart it is desirable to produce a true Risk clone ruleset.
+
 == Features for Further Implementations ==
 These features will either be implemented in later iterations of the ruleset or at the conclusion of GSoC should a basic ruleset be finished early.
 *Continent-ownership based reinforcements. This feature would extend the first iteration by providing additional reinforcements should a player completely control a star cluster.
