@@ -3,7 +3,7 @@
 '''<p>Project: Risky Galaxy: A Thousand Parsec Ruleset for the TP C++ server - ([[Risk Alternate]])</p>'''
 
 == Project Synopsis == 
-<p>This project is to create a Thousand Parsec ruleset that clones/mimics the core rules of the [http://en.wikipedia.org/wiki/Risk_(game) Risk Board Game].  While some aspect of the turn based play will have to be modified to fit a tick-based play system, the goal of this project is that an individual who has played risk before can pick up the game with  ease.  In other word, the final product should have very small (~5 minutes) learning curve to an experienced Risk player. Play flow too should seem familiar and simple to the experienced Risk player.</p>
+<p>This project is to create a Thousand Parsec ruleset that clones/mimics the core rules of the [http://en.wikipedia.org/wiki/Risk_(game) Risk Board Game].  While some aspect of the turn based play will have to be modified to fit a turn system in which you are forced to queue up your turn actions and have them executed in a bundle instead of a system that allows you to play reactively and incrementally, the goal of this project is that an individual who has played risk before can pick up the game with  ease.  In other word, the final product should have very small (~5 minutes) learning curve to an experienced Risk player. Play flow too should seem familiar and simple to the experienced Risk player.</p>
 
 == Benefit to the Thousand Parsec Community ==
 <p>  The benefit TP receives form this project is that:</p>
