@@ -26,16 +26,16 @@ The goal of this project is to devise and implement an efficient and capable AI 
 
 '''Roadmap (Big Checkpoints)'''
 
-''Note that the timeline will become much clearer, and much more detailed, during the initial study and software-design period. I expect it to be firmly set by end of April.''
+''Note that the timeline will become much clearer, and much more detailed, during the initial study and software-design period. I expect it to be firmly set by end of April. I could have broken it down minute-by-minute, but there is no sense in doing that now.''
 *'''''Initial period of learning and Software Design''''':
 *April 12 - My exams finish; Begin active study of libraries, ruleset, and other relevant materials.
 *By April 30 - Finalize the design scheme for the ADT, the core algorithm, and the OSM (Opponent Simulation Module).
 *'''''Coding I''''':
-*By June 14 - Have the core genetic algorithm and AI agent ADT running and tested.
-*By July 7 - Have the Opponent Simulation Module (OSM) running and tested in time for mid-term evaluations.
+*By June 14 - Core genetic algorithm and AI agent ADT will be tested and running.
+*By July 7 - Opponent Simulation Module (OSM) will be tested and running in time for mid-term evaluations.
 *'''''Coding II''''':
-*By July 15 - Complete work on AI Agent, run integration tests, and start working on having a complete and functional AI Client.
-*By August 11 - Finish and test AI agent/client library integration, have a complete and ready to use Java AI Client. Integration testing completed.
+*By July 15 - Work on AI Agent will be completed, integration tests run, and work on having a standalone and functional AI Client will have begun.
+*By August 11 - AI agent/client library integration will have been tested, and a complete and ready to use Java AI Client will be ready. Full-scale integration testing will have been completed.
 *'''''Final touches and documentation''''':
 *By August 18 - Polish relevant documentation, and do some final touches on the code.
 
