@@ -1,1 +1,29 @@
-There is going to be a proposal here soon, just you wait and see
+'''<p>Name: Ben Johnson</p>'''
+
+'''<p>Project: Risky Galaxy: A Thousand Parsec Ruleset for the TP C++ server - ([[Risk Alternate]])</p>'''
+
+== Project Synopsis == 
+<p>This project is to create a Thousand Parsec ruleset that clones/mimics the core rules of the [http://en.wikipedia.org/wiki/Risk_(game) Risk Board Game].  While some aspect of the turn based play will have to be modified to fit a tick-based play system, the goal of this project is that an individual who has played risk before can pick up the game with  ease.  In other word, the final product should have very small (~5 minutes) learning curve to an experienced Risk player. Play flow too should seem familiar and simple to the experienced Risk player.</p>
+
+== Benefit to the Thousand Parsec Community ==
+<p>  The benefit TP receives form this project is that:</p>
+* TP can appeal to more than just 4X players, it could also appeal to board game lovers as well and, with a good combination of 4X setting and simple core ruleset, neither group would be completely denied the fun of the game.
+* Ruleset designed by an individual with 4+ years C++ programming experience, 2+ years focused student-level game development experience,  and 3+ years game design experience with a passion for game design and innovation.
+
+== Project Deliverables ==
+* First, since the turn-based to tick-based gameplay conversion is of paramount importance in terms of ruleset development, game flow, and fun, the first deliverable will be a shallow example ruleset that demonstrates the tick based game flow.
+* Second, the board establishment and unit placement functionality are core since no play can proceed before this occurs, so this will be the focus of the second deliverable.  Ideally this would be integrated with the turn system at deliverable time, but that integration may have unforeseen problems, so the two will only be integrated at deliverable time if it can be done without being total hack.
+* Third, is the combat system.  Once the above two have been accomplished, the next big focus is on getting the dice-roll logic, attack sequence, and combat rules/framework working well, so this combat system as explained in the [http://www.thousandparsec.net/wiki/Risk_Alternate#Stage_Attacks Staging Attacks] and [http://www.thousandparsec.net/wiki/Risk_Alternate#Combat Combat] sections of the ruleset description page.
+*Finally, with what time remains, I would focus on polishing and refining the ruleset and, if time permits, implementing one or more of the items described [http://www.thousandparsec.net/wiki/Risk_Alternate#Ideas_for_Future_Development here].
+
+== Project Details ==
+<p> For everything you need to know about my current vision for the ruleset and its implementation, please see  the TP wiki page [[Risk Alternate]].</p>
+
+== Project Schedule ==
+<p>My core principle in this schedule is giving myself one month for each deliverable starting as soon as my final exams end, April 25th.  If things progress quicker than this then that is great, but there is currently time built into the schedule such that even if a task goes longer that the personal deadline for every task, I should have the tree major deliverables complete by early April, which is my overall personal completion deadline. It should also be noted that I will be taking one summer class and working on my own game for some of my time, so I cannot make the assumption that my time will be spent "full time" on the project.</p>
+* 2008-04-14 - 2008-05-26: Community/Mentor bonding, ruleset protocol and c++ server research, and first deliverable prototyping as soon as possible because I don't want to waste time and the sooner the core tech is done, the sooner cool features and polish can be added.  That said though, the focus is to write good code, not quickly hack utter crap. It should be noted though that finals end 2008-04-25, so that is the point when I will begin working on the project.
+* 2008-04-26 - 2008-05-26: work begins on the first deliverable.  Hopefully I will be able to start coding right on the 26th, but there is not guarantee and I may not have gotten to do all the research necessary before the 26th, so this could push my code start date as far as June 3rd-10th.  Currently May 26th is my personal deadline for first deliverable but should be no later than the beginning of June.
+* 2008-05-27 - 2008-06-27: with a solid turn system prototype in hand, work begins on board definition, unit placement and movement and the definition of territories, continents, etc.  There will probably be some research time and if the turn system takes longer than expected, the start date for this deliverable could get pushed to early June but my personal completion date for this deliverable is June 28th with a late completion date of July 3rd-10th.
+* 2008-06-28 - 2008-07-28: finally, with most of the key elements of Risk intact, work begins on the combat system.  as with the previous task, some prep work will probably be involved but, regardless if this is necessary or the previous task runs late, this task should start no later than July 3rd-10th.  That established, work on this should end around the end of July but no later than early to mid-August.  At this point, every aspect of the game should be integrated into the core ruleset and '''hopefully''' be playable and community testable.
+* 2008-07-28 - 2008-08-17: whatever time is left over will be spent polishing gameplay and, if possible, introducing secondary elements that will not clutter the core gameplay.  The emphasis though is on polish, since the easier and more comfortable is thgame is to users and to the community, the better.  This is much more important than secondary features.
+* 2008-08-17 - 2008-09-1: whatever wrap-up is required of me by mentors/Google/et al. can be done in this time frame.
