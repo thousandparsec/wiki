@@ -65,5 +65,5 @@ I am a big fan of roguelike games, due to their randomness, and the focus on gam
 
 I always given high value to user submission evaluation in my projects, what can be seen on my games' forum ( http://forum.chaosforge.org/ ).
 
-Homepage : http://chaosforge.org/ 
-IRC Nick : Epyon
+* Homepage : http://chaosforge.org/ 
+* IRC Nick : Epyon
