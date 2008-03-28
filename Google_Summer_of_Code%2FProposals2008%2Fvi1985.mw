@@ -27,7 +27,7 @@ The goal of this project is to devise and implement an efficient and capable AI 
 
 * '''''Initial period of learning and Software Design''''':
 * April 14 - Winning Projects announced, and all exams have finished. Begin active study of libraries, ruleset, and other relevant materials.
-* April 15 - April 30 : Design scheme for the ADT, the core algorithm will have been completed in pseudocode and diagram form. 
+* April 15 -> April 30 : ADTs for the project will have been designed; the core algorithm will have been completed in pseudocode and diagram form. 
 * May 1 -> May 7 : Design scheme for the Opponent Simulation Module will have been completed in pseudocode and diagram form. 
   * Goal for period: All relevant materials have been studied, and initial volume of documentation released.
 
