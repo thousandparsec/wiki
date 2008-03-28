@@ -12,7 +12,7 @@ The ruleset will emulate an almost complete game of Risk with a modification to 
 
 
 == Normal Turns ==
-Contrary to my concurrent proposal, this version of my ruleset will have players taking turns at the same time. Each round will be a short, 10-20 second round, wherein each player can make one move or attack. Conflicts between players, say two territories attack eachother, can be resolved by “evening” the odds from 3-2 attack-defense to 3-3 attack-attack. Other conflicts, for example, attacking a territory, with a retreating defender, can be resolved with reduced odds for the defender, 3-1 instead of 3-2.
+Contrary to my concurrent proposal, this version of my ruleset will have players taking turns at the same time. Each round will be a short, 10-20 second round, wherein each player can make one move or attack. Conflicts between players, say two territories attack eachother, can be resolved by evening the odds from 3-2 attack-defense to 3-3 attack-attack. Other conflicts, for example, attacking a territory, with a retreating defender, can be resolved with reduced odds for the defender, 3-1 instead of 3-2.
 As for a logical turn structure it goes as follows:
 *At the start of each set of x turn players will receive reinforcements based upon how many territories they own (sorry no "continents" or cards yet.) x will be some number of turns found to be a fair (via testing.)
 **If it is possible I would like for the reinforcements turn to be a longer turn, around a minute or so. 
@@ -52,7 +52,6 @@ I'd like to walk through a general sample of a few turns of the ruleset. The exa
 *X isn't defeated yet, as he still owns one territory. Luckily for him there is a reinforcement round next. X receives 2 units which he places on E. Y receives 8, and places them all on B.
 *At this point X owns E(2). Y owns A(1),B(8), C(2), D(2).
 *X attempts to attack A from E, Y attacks E from B. Since E is retreating it takes reduced odds on the roll, and Y's 8 units crush X's 
-
 
 
 == Features for Further Implementations ==
