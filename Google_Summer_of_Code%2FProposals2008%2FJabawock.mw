@@ -52,6 +52,9 @@ Here are the different things happening at the end of the turn. The order is not
 * Spending of research points, unlocking of new components.
 * Intelligence operations.
 
+
+==Winning conditions==
+
 ==Compatibility with the existing framework==
 
 
