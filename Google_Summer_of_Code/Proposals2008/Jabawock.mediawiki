@@ -36,6 +36,8 @@ Formally, here are the objects of this game and their properties.
 * Designs: Can be changed if in the state of prototype.
 * Components: Some components have a special function which can be ordered, like the self destructing device.
 
+==Research system implementation==
+
 ==End of turn processing==
 
 Here are the different things happening at the end of the turn. The order is not really important here, except maybe for intelligence operations, which may damage ships and should come last. 
