@@ -64,7 +64,7 @@ Honor points range between 0 and 6999, and the gain/loss of these points become 
 
 First of all, the advantages given by honor ranks are not excessively high. In SEIII, similar advantages can be chosen as racial bonus in the beginning of the game (I chose not to implement these bonuses). I see these ranks as a way of playing. The goal is not, like in Utopia, to encourage even battles and discourage dishonorable players, but rather to give related advantages to each of those players. 
 
-Also, as it is easier to win fight uneven battles, losing honor points that way is slower than gaining some by winning even battles. In fact, the traitor rank gives similar advantages to the noble rank, so reaching both should take just as long.
+Also, as it is easier to win uneven battles, losing honor points that way is slower than gaining some by winning even battles. In fact, the traitor rank gives similar advantages to the noble rank, so reaching both should take just as long.
 
 ==End of turn processing==
 
