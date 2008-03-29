@@ -66,6 +66,8 @@ First of all, the advantages given by honor ranks are not excessively high. In S
 
 Also, as it is easier to win uneven battles, losing honor points that way is slower than gaining some by winning even battles. In fact, the traitor rank gives similar advantages to the noble rank, so reaching both should take just as long.
 
+==Experience==
+
 ==End of turn processing==
 
 Here are the different things happening at the end of the turn. The order is not really important here, except maybe for intelligence operations, which may damage ships and should come last. 
