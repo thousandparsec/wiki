@@ -68,6 +68,10 @@ Also, as it is easier to win uneven battles, losing honor points that way is slo
 
 ==Experience==
 
+Another concept I would like to add to the original ruleset of SEIII is experience for ships. In many RTS games, individual combat units gain experience from their past battles and become stronger than the average units of their type. It can also be applied in the present context; ships, taking part in many battles, will gain experience and eventually become more efficient in combat. Experience gained would be proportional to the difficulty of the battle, which would be calculated in the same way as for honor (so the same algorithm can work for both). The maximum experience level would give 25% more combat efficiency to the ship. This is not too much; in fact, a 20% efficiency bonus is available as a racial advantage in the original game.
+
+I won’t include this concept into my layer system though, because I want to keep things realistic and not promise to implement too much. However, as it is an addition I’d really like to see in the basic SEIII, I’ll be very motivated to implement it after the GSoC period.
+
 ==End of turn processing==
 
 Here are the different things happening at the end of the turn. The order is not really important here, except maybe for intelligence operations, which may damage ships and should come last. 
