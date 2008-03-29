@@ -45,7 +45,7 @@ Here is how I’m thinking of implementing a nice research system: As attaining 
 ==Honor system==
 
 This is an addition to the game I’d really love to implement. It’s mainly inspired by the Utopia game (a famous browser based game). Basically, a player has a total of honor points, and a rank, associated to it. The rank of the player provides him some advantages, and the highest the rank is, the better the advantages become. Honor points will periodically decrease (or increase if the player has less than the average 3500 points), so a player won’t keep his rank forever if he does nothing to deserve it. For a player to obtain honor, he has to achieve glorious victories over his enemies. For example, if he wins an almost equal ship battle, it would earn him much honor. However, he might lose some honor if he uses a big cruiser fleet to attack a colonizer ship or a population transporter. 
-Unlike in Utopia though, honor is created, not taken. The loser of an important battle won’t lose any honor. One has to perform really dishonorable actions to lose honor, or just don’t do anything honorable in a long period of time.
+Unlike in Utopia though, honor is created, not taken. The loser of an important battle won’t lose any honor. One has to perform really dishonorable actions to lose honor.
 
 ===Honor ranks===
 
