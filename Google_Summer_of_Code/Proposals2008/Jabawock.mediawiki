@@ -47,16 +47,14 @@ Formally, here are the objects of this game and their properties.
 
 Here are the different things happening at the end of the turn. The order is not really important here, except maybe for intelligence operations, which may damage ships and should come last. 
 
-* Ship movements, special actions and battles.
+* Ship movements and special actions.
+* Battles and subsequent honor (and experience) distribution.
 * Point production.
 * Population growth.
 * Construction of facilities.
 * Ship repairs.
 * Spending of research points, unlocking of new components.
 * Intelligence operations.
-
-
-
 
 ==Research system implementation==
 
