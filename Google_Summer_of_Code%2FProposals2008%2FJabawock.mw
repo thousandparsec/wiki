@@ -94,7 +94,11 @@ I won’t include this concept into my layer system though, because I want to ke
 
 ==Clustering the rules==
 
-The start of the project is to cluster the rules of SEIII into categories (or layers as I’ll call them). These layers are ordered by importance, and any layer should not depend on the next one. This way, I’ll be able to implement and fully test one layer at a time, incrementally. Here is how I would cluster the rules:
+The start of the project is to cluster the rules of SEIII into categories (or layers as I’ll call them). These layers are ordered by importance, and any layer should not depend on the next one. This way, I’ll be able to implement and fully test one layer at a time, incrementally. 
+
+Here is how I would cluster the rules:
+
+
 * Layer 1: 	
 ** Planets and systems, with worm holes. Planet characteristics (size, value, population growth and happiness, atmosphere) are all there.
 ** Facilities: Only construction centers, space ports, and maybe ship yards as facilities too (they wouldn’t take up space on the planet though).
