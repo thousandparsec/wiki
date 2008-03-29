@@ -148,9 +148,8 @@ I have a problem with IRC though; I live in a student room, and my internet conn
 Contact: biolis@ulb.ac.be
 
 ==Feedback==
-Feel free to leave any comments on this proposal draft. I don’t know what level of detail is necessary; I’ll dig deeper if it’s not enough.  I’m sorry I didn’t have the opportunity to ask more questions about all this before, mostly because I couldn’t get on IRC and was very busy.
 
-----
+
 
 You say that you have already some some game programming in university, maybe you could put these examples (or any other that you have done) somwhere on the internet if they are relevant to this application.
 
