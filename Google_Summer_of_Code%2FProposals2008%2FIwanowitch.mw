@@ -36,6 +36,8 @@ August primarily serves as buffer period when things are spinning horribly out o
 2008-07-20: Rules written, tested, working.<br>
 2008-08-11: Pencils down date, genetic algorithm around AI working and yielding some good results.
 
+Not a very detailed report, but these are the big milestones. I don't like to plan small things months in advance, it never works out. ;)
+
 ==Bio==
 I'm a 21 year old Belgian student at the K.U. Leuven. I have finished my bachelor's degree in mathematics and am currently studying for a master's degree in informatics with specialization in AI. This means I have broad understanding of many things maths- and computer-related, from Galois fields and error correcting codes to the Mahalanobis distance and data mining. I also have plenty of practical programming experience, working on school projects with 50 pages of design docs, hobby programming like IRC bots and small games (none really enjoyable :), and perhaps most relevant, Summer of Code 2007 where I successfully completed a Kross/Java binding for KDE under the mentorship of Sebastian Sauer.
 
