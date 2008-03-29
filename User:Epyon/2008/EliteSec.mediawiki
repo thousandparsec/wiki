@@ -81,3 +81,37 @@ Rules design is something that I needed to learn well, because good, balanced an
 * Helpers - what can they do?
 * Can you tell me how it would compare to things like http://www.aatraders.com/ (and it's many many relatives)? 
 ** Why will this be ''better''?
+
+'''Epyon''':
+
+'''Economy'''
+
+Economy isn't that hard once you think about it. There will be a "natural" state of economy for each planed (hence a natural state for the galaxy) which will only be influenced by global events (famine, food shortage, mineral discovery, war, etc). 
+
+Now in a nutshell the algorithm will work the following : If a player buys something at a planet, the given goods price will rise a little bit. If he sells something, the price of that good will fall a little bit. Hence, repeating the same route will get less and less profit. If no trade with the given article will be done in a given turn, the articles value will very slowly revert to it's original (galaxy) state. So exploiting a given price difference wont be possible, because it will after a time get unprofitable. However, you will be able to leave that for a longer time, and remeber to come back once the price difference is again profitable :). 
+
+Moreover because of the slower than light information speed and the fact that the universe is random you will not be able to just check all the planets for the best deals -- you will have to go there yourself and search the deal for yourself. Of course once you earn some cash, you can setup an agent on the planet that will send you reports about the current prices.
+
+'''Helpers'''
+
+There are several ideas for these, helpers may include (but are not limited to)
+
+* market agents (as mentioned above) that will be able to send you economical reports and keep you updated
+* informants -- especially useful for bounty hunters and pirates -- will send information on ship movements in a given sector
+* mercenaries/pirates -- additional escort ships that will tag along with your ship increasing your military defensive and offensive power
+
+'''Comparision to other trade games'''
+
+You suggest that it will be better, and I never said such a thing :P. But yes, I'd like it to be better. I never played the linked game, I read about it a little and can point out the few unique features that EliteSec will have:
+
+* the random universe with random events -- in the spirit of Elite and it's successors the game will have a universe built algorithmically, that will be different each time that started anew. Random events will provide the needed freshness of things happening. 
+
+* EliteSec will be on a much smaller scale -- you manage one ship and it's entourage, and possibly some outposts, not a trade empire. I far more prefer managing the story of my own ship than a gigantic empire that's boring to micromanage. In EliteSec you will wander around a living galaxy, not run the otherwise dead galaxy yourself. The goal is to provide the feeling of a living galaxy and freedom to explore it as was seen in Elite.
+
+* EliteSec will allow more freedom and more choices in the paths to be taken by a player, as stated in the initial proposal. What you do, will depend entirely on you -- there will be no "best" path. It's not just trade, civilize and conquer. You don't have to micromanage if you don't have to -- you can explore the galaxy as you will. 
+
+* In EliteSec you will be able to receive missions, from various sources (Military, Civilian, Criminal, Trade) with growing hardness and benefits, the more of them you do. An increase in playability factor ("one more mission..."). The fun part is that missions will be available until someone completes them, and considering that some of them might be galaxy wide, there may be often a situation involved that many players are competing who finishes a mission first.
+
+* In EliteSec it's not you who's running the show, there are many factions, both military/political (Empire, Federation, Alliance) and other (crime syndicates, trade syndicates, bounty hunter agencies -- possibly regenerated each time anew). You have a standing with each of those factions, and that determines your standing with them (better not hang in imperial space if you're doing a lot of missions for the alliance...). The reputation system I hope will be quite interesting, and provide an incentive to play :>.
+
+I have to admit, that most of this came from the design of StarDreamer :).
