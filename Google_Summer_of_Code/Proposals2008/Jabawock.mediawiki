@@ -55,9 +55,9 @@ Here is a first draft of which ranks would exist and their associated advantages
 * Dishonorable: Between 3000 and 3499 honor points. 
 * Honorable: Between 3500 and 3999 honor points.
 * Trustworthy: Between 4000 and 5999 honor points. 10% more efficiency for defensive intelligence operations. 10% more ship combat efficiency during an even battle.
-* Noble: Between 6000 and 6999 honor points. 25% more efficiency for defensive intelligence operations. 10% more ship combat efficiency during an even battle.
+* Noble: Between 6000 and 6999 honor points. 25% more efficiency for defensive intelligence operations. 25% more ship combat efficiency during an even battle.
 
-Honor points range between 0 and 6999, and the gain/loss of these points become more difficult when getting towards the extremes. Honorable and dishonorable ranks are transition ranks and don’t give any particular advantage or disadvantage.
+Honor points range between 0 and 6999, and the gain/loss of these points become more difficult when getting towards the extremes. The “honorable” and “dishonorable” ranks are transition ranks and don’t give any particular advantage or disadvantage.
 
 ===Honor balance===
 
