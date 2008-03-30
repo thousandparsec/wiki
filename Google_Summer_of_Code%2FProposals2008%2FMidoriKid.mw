@@ -49,14 +49,26 @@ Individual frame tests will initialize the library with some minimal test object
 
 Testing sequences of frames will involve creating a "scaffold" of mock objects around the relevant parts of the library.  Requests will be fed in and generated responses will be compared to the responses dictated by the protocol definition. 
 
-== Timeline ==
+== Milestones ==
 
-* '''2008-06-02:''' Test framework up and running.  Integration of dummy tests with tpserver-cpp and libtpproto-cpp build systems.  At least one frame type tested for each library.
-* '''2008-06-09:''' All simple frame types tested for protocol conformance.  This includes all fixed size frames such as "Ping Frame" and other simple request frames.
-* '''2008-06-23:''' All frame types in protocol version 0.3 are tested for basic conformance.  These tests ensure frames are properly serialized and deserialized according to the specification.
-* '''2008-07-07:''' Exhaustive edge case testing (i.e. trying to break things) for all frame types complete.  These tests ensure the libraries can handle malformed frames or frames that push the limits of the protocol specification. 
-* '''2008-07-28:''' Complex frame interaction testing complete.  These tests cover any server or client behavior spread out over more than one frame and will make extensive use of mock objects simulating one end or the other.  
-* '''2008-08-11:''' Tests for WIP protocol version 0.4 are complete.  This will allow developers to have a check list of features to complete before compliance with TP04 is met.
+* '''2008-06-02:''' 
+** The test framework will be integrated into each library's build system.
+** At least one frame type will be tested for each library.  
+
+* '''2008-06-09:''' 
+** All all frames types with five or fewer elements will be tested for correct serialization.
+
+* '''2008-06-16:'''
+** All frame types in protocol version 0.3 will be tested for correct serialization.
+
+* '''2008-06-23:''' 
+** All frame types in protocol version 0.4 will be tested for correct serialization.
+
+* '''2008-07-07:''' 
+** All frame types will be tested for correct deserialization.
+ 
+* '''2008-07-28:''' 
+** All frame sequences as specified by the protocol will be tested.
 
 == Potential Risks and Problems ==
 
