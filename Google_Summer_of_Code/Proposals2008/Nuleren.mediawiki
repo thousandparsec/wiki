@@ -155,7 +155,7 @@ Alien Artifacts.  Harvested by a merchant leader when two alien artifacts are pr
 
 
 ===Turns===
-Players alternate taking turns.  Each turn can be split up into small phases, outlined below:
+Players alternate taking turns.  A variable is kept to indicate who's turn it is.  Each turn can be split up into small phases, outlined below:
 
 #Player makes first order to any of his ships as described in the game rules above.
 #Resource generation due to the first order is resolved.
@@ -165,7 +165,6 @@ Players alternate taking turns.  Each turn can be split up into small phases, ou
 #Combat due to the second order is resolved.
 #All players refill civilian fleets to 6 ships.
 #Turn passes to the next player.
-
 
 ===Documentation===
 Throughout the project I will keep code well documented to help future developers understand, use, and learn from my code.  I will keep a log of changes as work progresses.  I will keep a document describing the ruleset and refine it as work progresses with the goal of having a detailed description of the ruleset as well as a guide for new players.
