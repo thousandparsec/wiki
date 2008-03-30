@@ -85,7 +85,7 @@ My vision is that this AI client should be highly modular, and designed from the
 * Communicate actions back to server.
 
 
-'''Description and Virtues of a Genetic Algorithm Solution'''
+'''Description and Merits of a Genetic Algorithm Solution'''
 
 I chose a genetic algorithm (GA) implementation of the AI agent for several reasons. First of all, it is perfectly suited for the role in TBS games, since is involves a progressive refinement of "hypotheses", until a suitable one has been reached, in a "contemplative" manner, rather than in a quick, heuristic fashion. Basically, it will simulate and evaluate outcomes of its own actions and opponent replies for several moves ahead, progressively improving the planned actions in future moves _as a whole_ (instead of utilizing a "greedy" solution), utilizing the power of evolution to come up with good and original solutions. Since it will be looking many moves ahead, and considering the whole move-sequence at once, the solutions it comes up with aren't obvious "quick-fixes", but genuine strategy. Together with a heuristic to predict opponent-moves, this algorithm will make the AI relatively sensitive to traps, and hard to fool. Another bonus is that the solutions it comes up with will be creative ones, since there will be no hard-coded templates on which it will rely in decision making. This will ensure that it will always be a creative and unpredictable opponent! Finally, a GA design will make the algorithm highly modular, and ensure quick transitions between rulesets. 
 
@@ -103,7 +103,7 @@ My hope is that the above answers these concerns, and provides necessary clarifi
 
 If anyone wishes to reply to this, please do so in the dedicated section. 
 
-'''''Possible Alternatives to a GA Solution'''''
+'''Possible Alternatives to a GA Solution'''
 
 Another possible solution to having the algorithm look several moves ahead, would entail creating an alpha-beta decision tree, then proceeding by the Paranoid Hypothesis assumption. It is likely is the only heuristic to accommodate alpha-beta pruning to a 4-player game. The "opponent" in that case would be the 3 other players, playing against you, which is usually far from the truth. This is a much more memory- and execution-time guzzling, and much less accurate, than a well designed GA.
 
