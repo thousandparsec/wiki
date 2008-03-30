@@ -52,7 +52,7 @@ Unit testing the libraries will involve breaking them into the smallest possible
 Another possibility is that there will be no problems at all and the tests will be completed much earlier than expected.  I've outlined a few smaller projects that I could complete with the remaining time.
 
 * '''Fix exposed bugs:''' Any bugs exposed by testing that haven't already been addressed will be worked on.
-* '''Simple conformance testing for libtpproto-py serialization:''' It should be relatively easy to port the basic serialization tests to a Python unit test framework.  More complex tests would probably benefit from a different approach in this language. 
+* '''Simple conformance testing for libtpproto-py serialization:''' Although there will be no actual code overlap between a C++ unit test executable and a Python unit test module, it should be relatively easy to port the basic serialization tests to Python.  This would be almost entirely separate from the main project. 
 * '''Boost.Random integration:''' Unrelated to conformance testing, but within my area of expertise is changing tpserver-cpp to use Boost.Random as its psuedorandom number generator.  I've previously worked with this library as the base for a Perlin noise planet generator and I could drop it into the code if a few extra days are left over before the end of summer.
 
 = Biography and Qualifications =
