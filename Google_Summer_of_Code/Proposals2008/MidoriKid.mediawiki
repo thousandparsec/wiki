@@ -86,7 +86,7 @@ I have no other courses or personal commitments this summer and should be able t
 
 = Example Unit Tests =
 
-What follows are two, trivial unit tests for simple libtpproto-cpp frame data serializations.  This hasn't been compiled and may not work, but it gives the general idea.
+What follows are two, trivial unit tests for simple libtpproto-cpp frame data serializations.  More complex frame types will have more complex (and numerous) unit tests.  This hasn't been compiled and may not work, but it gives the general idea.
 
 <pre>
 #include <string>
