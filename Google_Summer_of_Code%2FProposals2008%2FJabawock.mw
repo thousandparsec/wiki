@@ -2,7 +2,7 @@
 
 As a project for this year’s GSoC, I’d like to implement a ruleset for the game Space Empires III in the Thousand Parsec framework. I like this game quite a lot, which will make it motivating to work on this project. I think it makes a pretty nice GSoC project, as it has a useful purpose (to have a popular game under the Thousand Parsec framework), is an interesting project for a student, and is a good opener on the open source development community. 
 
-I don’t aim at a perfect clone though; I’ve added a couple of concepts to make the game more enjoyable, my goal being to convince people to play this particular implementation instead of the existing SEIII.
+I don’t aim at a perfect clone though; I’ve added a couple of new concepts to make the game more enjoyable, my goal being to convince people to play this particular implementation instead of the existing SEIII.
  
 In this proposal, I mainly worked at analyzing the rules of SEIII, and stating them formally, by determining which objects would exist in the game, which ones can be owned by a player… This way the rules are almost ready to be implemented in classes and algorithms. I’ve included a precise implementation schedule, which I think is realistic, as much of the design work is already done. 
 
