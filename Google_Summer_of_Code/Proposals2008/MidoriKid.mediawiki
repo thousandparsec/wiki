@@ -22,7 +22,20 @@ The benefits of unit testing are well known.  Each part of the software to be te
 A project like Thousand Parsec stands to benefit even more.  Several different servers and clients all rely on each other to correctly implement the communication protocol.  If a client developer, for example, experiences problems when connecting to a server then bugs in the server can be ruled out as a cause if the server's implementation of the protocol has been  verified as correct.
 
 == Security ==
-In addition to verifying the correct behavior under normal circumstances, tests can be written to test a library's ability to handle malformed data.  Such data may come from a malicious frame, or simply a noncompliant library.  Either way, an error message is preferable to a crash or exploit and a comprehensive test suite can ensure the correct response. 
+In addition to verifying the correct behavior under normal circumstances, tests can be written to test a library's ability to handle malformed data.  Such data may come from a malicious frame, or simply a noncompliant library.  Either way, an error message is preferable to a crash or exploit and a comprehensive test suite can ensure the correct response.
+
+== Unit Testing vs. System Testing ==
+Unit tests are compiled as one or more executables each containing several (possibly hundreds or thousands) of individual tests.  Each executable is a stand-alone unit and does not connect to a server or client to test for protocol compliance.  Instead, the components of the library to be tested are compiled as part of the test executable.  Individual tests then instantiate classes and call functions provided by the library and check that the results are correct.  This property of unit testing prevents one test suite from testing different libraries.
+
+Unit testing differs from system testing in that only small parts of the whole are tested at a time.  As an example, one possible way to run a system test on tpserver-cpp would be to write a "test client" that connects to a running server and sends request frames.  The reply frames would then be tested for protocol conformance.
+
+This type of black-box testing is beneficial in that one test client can test all types of servers.  It also ensures that the server works as expected when compiled and run.  It suffers from several drawbacks, however.
+
+*The internal state of the server "black-box" is not known.  Even if the server started at a known state (loaded from a persistence database, for example), during the course of a test that state would change.  Because of this, test failures may be caused by earlier tests or simply the passage of time.  This leads to lost time when searching for the source of test failures.
+
+*The part of the server that must be tested (protocol compliance, for example) depend on parts that may not be correct themselves.  As an example, consider a test client that requests a frame from a server running a known test database.  If the contents of the reply frame don't match the contents of the test database, then there may be an error in the portion of the server that serializes the reply frame.  There may also be an error in the persistence module or anything that handles the data between the two.
+
+There is a place for whole system testing, but it leaves large gaps in coverage and makes the bugs that it does find difficult to track down.
 
 = Roadmap/Plan =
 
