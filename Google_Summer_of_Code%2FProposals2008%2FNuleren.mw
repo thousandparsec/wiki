@@ -178,6 +178,8 @@ Resolution:
 Increment "current player":
 *Turn passes to the next player.
 
+This essentially means that there are two "turns" per player.
+
 ===Documentation===
 Throughout the project I will keep code well documented to help future developers understand, use, and learn from my code.  I will keep a log of changes as work progresses.  I will keep a document describing the ruleset and refine it as work progresses with the goal of having a detailed description of the ruleset as well as a guide for new players.
 
