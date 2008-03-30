@@ -25,7 +25,7 @@ A project like Thousand Parsec stands to benefit even more.  Several different s
 In addition to verifying the correct behavior under normal circumstances, tests can be written to test a library's ability to handle malformed data.  Such data may come from a malicious frame, or simply a noncompliant library.  Either way, an error message is preferable to a crash or exploit and a comprehensive test suite can ensure the correct response.
 
 == Unit Testing vs. System Testing ==
-Unit tests are compiled as one or more executables each containing several (possibly hundreds or thousands) of individual tests.  Each executable is a stand-alone unit and does not connect to a server or client to test for protocol compliance.  Instead, the components of the library to be tested are compiled as part of the test executable.  Individual tests then instantiate classes and call functions provided by the library and check that the results are correct.  This property of unit testing prevents one test suite from testing different libraries.
+Unit tests are compiled as one or more executables each containing several (possibly hundreds or thousands) of individual tests.  Each executable is a stand-alone unit and does not connect to a server or client to test for protocol compliance.  Instead, the components of the library to be tested are compiled as part of the test executable.  Individual tests then instantiate classes and call functions provided by the library and check that the results are correct.  This property of unit testing prevents one test suite from testing different libraries.  Some example unit tests are given below.
 
 Unit testing differs from system testing in that only small parts of the whole are tested at a time.  As an example, one possible way to run a system test on tpserver-cpp would be to write a "test client" that connects to a running server and sends request frames.  The reply frames would then be tested for protocol conformance.
 
@@ -84,5 +84,48 @@ My progress can be monitored through my git commits.  I plan on making frequent 
 
 I have no other courses or personal commitments this summer and should be able to devote a substantial amount of time to the project.
 
+= Example Unit Tests =
 
-JD Marble --[[User:MidoriKid|MidoriKid]] 02:01, 27 March 2008 (EDT)
+What follows are two, trivial unit tests for simple libtpproto-cpp frame data serializations.  This hasn't been compiled and may not work, but it gives the general idea.
+
+<pre>
+#include <string>
+#include <boost/test/auto_unit_test.hpp>
+
+#include "buffer.h"
+#include "connect.h"
+#include "ping.h"
+
+using namespace TPProto;
+
+/*! Ensure ping frame data is empty
+ */
+BOOST_AUTO_TEST_Case (ping_data) {
+    
+    Ping frame;
+    Buffer data;
+    frame.packBuffer(data);
+
+    BOOST_CHECK_EQUAL(data.getLength(), 0);
+}
+
+
+/*! Ensure a connect frame with a small client string is serialized correctly
+ */
+BOOST_AUTO_TEST_Case (connect_data) {
+    
+    Connect frame;
+    frame.setClientString("foobar");
+    Buffer data;
+    frame.packBuffer(data);
+
+    // The length is -required- to be correct before continuing to check each
+    // character.  Prevents reading past the end of the buffer.
+    BOOST_REQUIRE_EQUAL(data.getLength(), 4 + 6);
+
+    // The length of the string is converted to big-endian format manually.
+    BOOST_CHECK(!strncmp(data.getData(), "\x00000006" "foobar", 4 + 6));
+}
+</pre>
+
+JD "MidoriKid" Marble
