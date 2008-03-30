@@ -97,6 +97,8 @@ First of all, the evaluative function (fitness function) will measure the outcom
 
 Secondly, it was claimed that changing a single action can significantly alter the process of the game, and thusly the algorithm will not have a smooth optimization curve, but will jump haphazardy each cycle of mutations. This is an incorrect claim when the game is considered as a whole. Each turn, a reasonable player may perform tens or hundreds of actions, some of which are more influential than others. Thus, each generation of mutations will of course have a few "outliers" as far as the optimization curve is considered, but the majority of newly generated Hypotheses will roughly follow the curve. Another feature worth mentioning here, is that from each seed will generate three populations, which vary on the amount of mutation that took to produce them. This will allow the algorithm to have powerful search, while maintaining a conservative population to maintain good solutions. Also, good solutions will be preserved between-generations, and between-turns, to give the natural selection process an additional layer of robustness. 
 
+By the way, please feel free to look for the code sample below, which is a very simplified proof-of-concept application. It should decisively answer the second concern, that having unique encoding for each action, even if the presence or absence of such action can significantly alter the situation, does not compromise the optimization process.
+
 My hope is that the above answers these concerns, and provides necessary clarification for anyone who needs it. 
 
 If anyone wishes to reply to this, please do so in the dedicated section. 
