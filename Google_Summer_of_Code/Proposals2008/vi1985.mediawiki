@@ -40,7 +40,8 @@ The goal of this project is to devise and implement an efficient and capable AI 
 * June 12 -> June 18 : OSM module coding (2). OSM module coding will have been completed.
 * June 19 -> June 25 : Thorough unit and integration tests will have been run on the AI agent.
 * June 26 -> July 7 : Buffer zone for corrections, retesting, and unexpected situations.
-  * Goal for period: Core genetic algorithm and AI agent ADT, as well as the OSM, will be tested and running in time for mid-term evaluations.
+  * Goal for period: Core genetic algorithm and AI agent ADT, as well as the OSM, will be tested and running 
+  * in time for mid-term evaluations.
 
 *'''''Coding II''''':
 
