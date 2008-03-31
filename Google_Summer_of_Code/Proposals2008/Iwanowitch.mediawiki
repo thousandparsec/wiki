@@ -30,13 +30,31 @@ A week into July or something, I should have loads and loads of time to work on 
 
 August primarily serves as buffer period when things are spinning horribly out of control. If it all goes good, I will use the extra time to tweak the parameters using genetic algorithms, as discussed above. If I *still* have time left, I will try to refactor the design of the AI to extract a framework for possible future AIs for other rulesets. I think it'll be 40h/week for that period.
 
-===Milestones===
-2008-05-26: SoC starts, I have got a firm grasp on the existing Python libraries and will decide which one to base the client on.<br>
-2008-06-30: Basic rule engine in place.<br>
-2008-07-20: Rules written, tested, working.<br>
+==Milestones==
+The last date of each section is an important milestone and should be a final date. The other dates are mostly indicative for the amount of time I think I'll spend on it.
+===Pre-SoC study===
+2008-04-28 - 2008-05-12: Python study. 2 weeks of reading tutorials and writing various small scripts should be enough to grasp the important points.<br>
+2008-05-12 - 2008-05-26: Study of the TP existing Python code, to get up to par with existing code, to further expand my Python study, and to learn the coding style and habits of TP.<br>
+2008-05-26: SoC starts, by now I have got a firm grasp on the existing Python libraries and will decide which one to base the client on.
+===Rule engine design===
+2008-05-26 - 2008-05-30: Gone. Ideas might form, but I don't plan anything. I'll probably have sporadic internet access, but I can't promise I'll be able to hold extensive discussions.<br>
+2008-05-31 - 2008-06-08: Finalize the design of the rule engine, hopefully with mentor. Should provide for enough flexibility to express all wanted rules.<br>
+2008-06-08 - 2008-06-09: Set up a testing environment and a few testing goals, based on the design.<br>
+2008-06-10 - 2008-06-22: Coding, testing, debugging (it's all one process for me).<br>
+2008-06-22 - 2008-06-26: Buffer period. If it all goes to plan, start with the next part.<br>
+2008-06-26: Basic rule engine in place.
+===Rule design===
+2008-06-26 - 2008-07-06: Gone. Probably won't have any time for SoC.<br>
+2008-07-07 - 2008-07-14: Coding, testing, ... Final decision on what rules to include is made.<br>
+2008-07-14 - 2008-07-20: Further coding.<br>
+2008-07-20: Rules written, tested, working.
+===Extra period===
+2008-07-20 - 2008-07-24: Toy around with the rule engine, trying to create a some interesting behavior by hand.<br>
+The following only applies if the schedule works out and there are no huge setbacks.<br>
+2008-07-25 - 2008-07-31: Design of the genetic algorithm (textbook stuff), setup of testing environment (server configuration, being able to get stats from it, etc).<br>
+2008-08-01 - 2008-08-09: Genetic algorithm running, hopefully yielding even more good and interesting behavior.<br>
+2008-08-10 - 2008-08-16: Akademy, in my country, so I'll probably be there.<br>
 2008-08-11: Pencils down date, genetic algorithm around AI working and yielding some good results.
-
-Not a very detailed report, but these are the big milestones. I don't like to plan small things months in advance, it never works out. ;)
 
 ==Bio==
 I'm a 21 year old Belgian student at the K.U. Leuven. I have finished my bachelor's degree in mathematics and am currently studying for a master's degree in informatics with specialization in AI. This means I have broad understanding of many things maths- and computer-related, from Galois fields and error correcting codes to the Mahalanobis distance and data mining. I also have plenty of practical programming experience, working on school projects with 50 pages of design docs, hobby programming like IRC bots and small games (none really enjoyable :), and perhaps most relevant, Summer of Code 2007 where I successfully completed a Kross/Java binding for KDE under the mentorship of Sebastian Sauer.
