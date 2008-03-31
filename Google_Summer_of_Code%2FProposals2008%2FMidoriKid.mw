@@ -6,8 +6,9 @@ This is a proposal for protocol test suites for tpserver-cpp and libtpproto-cpp 
           
           
 = Deliverables =
-== Individual Frame Tests ==
-Test cases will be written for each outgoing frame type ensuring that the format of the generated frame conforms to the protocol specification.  Pregenerated frames will be passed to the libraries to ensure that they can be parsed. 
+== Tests for Correct Deserialization of Frames ==
+
+Unit tests will be written for each type of frame a library is expected to serialize.  These will consist of manually creating the frame then comparing its serialization with the expected result.  Many tests may be written for a particular frame type depending on its complexity.  Refer to the [[MidoriKid's proposal for GSoC#Example Unit Tests|examples]] at the end of this document for unit tests that fall under this category.
 
 == Frame Sequence Tests ==
 Isolated frame tests don't provide complete coverage of the protocol, however.  For example, a sequence frame must be followed with the correct number of response frames and a bad request should be responded to with the correct error frame. Higher level tests will be written to cover cases where multiple frames must be considered.
