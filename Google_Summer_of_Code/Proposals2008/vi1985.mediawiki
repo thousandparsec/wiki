@@ -1,6 +1,6 @@
 == '''''Genetic Conquest''' (GC)'', an AI Client for Thousand Parsec: Proposal ==
 
-'''<<< This is officially a hands-off document, and should not change during the evaluation process. Any further changes will be in [EDIT: ..... --[[User:Vi1985|vi1985]] 22:07, 30 March 2008 (EDT)] format. >>>'''
+'''<<< This is officially a hands-off document, which will not change during the evaluation process. Any further changes due to mentor comments will be in [EDIT: ..... --[[User:Vi1985|vi1985]] 22:07, 30 March 2008 (EDT)] format. >>>'''
 
 
 '''Abstract'''
