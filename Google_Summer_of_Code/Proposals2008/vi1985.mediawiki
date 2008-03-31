@@ -1,5 +1,8 @@
 == '''''Genetic Conquest''' (GC)'', an AI Client for Thousand Parsec: Proposal ==
 
+'''<<< This is officially a hands-off document, and should not change during the evaluation process. Any further changes will be in [EDIT: ..... --[[User:Vi1985|vi1985]] 22:07, 30 March 2008 (EDT)] format. >>>'''
+
+
 '''Abstract'''
 
 This document provides a general overview of the design concept of the AI client I intend to design for Thousand Parsec. The core design of the AI agent would be a genetic algorithm, which would enforce natural selection of game-hypotheses, and come up with an optimized solution. Each turn, an evolutionary cycle will take place, where populations of game-hypotheses would be simulated against several AI players, the outcome evaluated, the best ones chosen as successors for the next generation, ad nauseum. The end result would be a well-adapted game-hypothesis, the first stage of which will be communicated back to the server. This design is inherently creative and non-deterministic, since it does not rely on templates for deciding on course of action. After the core design would be coded and tested, I will use an existing client library, to create a discrete and functional AI Client. 
