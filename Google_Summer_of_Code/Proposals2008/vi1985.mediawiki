@@ -27,18 +27,19 @@ The goal of this project is to devise and implement an efficient and capable AI 
 == Planning and Progress ==
 
 '''Roadmap (Big Checkpoints and Detailed Breakdown)'''
+[EDIT: Adjusted for new schedule --[[User:Vi1985|vi1985]] 21:09, 31 March 2008 (EDT)]
 
 * '''''Initial period of learning and Software Design''''':
-* April 14 - Winning Projects announced, and all exams have finished. Begin active study of libraries, ruleset, and other relevant materials.
-* April 15 -> April 30 : ADTs for the project will have been designed; the core algorithm will have been completed in pseudocode and diagram form. 
-* May 1 -> May 7 : Design scheme for the Opponent Simulation Module will have been completed in pseudocode and diagram form. 
+* April 21 -> April 29 - Winning Projects announced. Begin active study of libraries, ruleset, and other relevant materials.
+* April 30 -> May 7 : ADTs for the project will have been designed; the core algorithm will have been completed in pseudocode and diagram form. 
+* May 7 -> May 13 : Design scheme for the Opponent Simulation Module will have been completed in pseudocode and diagram form. 
   * Goal for period: All relevant materials have been studied, and initial volume of documentation released.
 
 * '''''Coding I''''':
-* May 8 -> May 14 : Relevant classes, methods, and fields will have been created for the AI agent.
-* May 15 -> May 21 : The core genetic algorithm will have been coded.
-* May 22 -> 28 : The Fitness Function for the evaluation of game-hypotheses will have been devised and tested.
-* May 29 -> June 4 : All coding of overhead AI agent structures will have been completed.
+* May 14 -> May 17 : Relevant classes, methods, and fields will have been created for the AI agent.
+* May 17 -> May 24 : The core genetic algorithm will have been coded.
+* May 25 -> 29 : The Fitness Function for the evaluation of game-hypotheses will have been devised and tested.
+* May 30 -> June 4 : All coding of overhead AI agent structures will have been completed.
 * June 5 -> June 11 : OSM module coding (1).
 * June 12 -> June 18 : OSM module coding (2). OSM module coding will have been completed.
 * June 19 -> June 25 : Thorough unit and integration tests will have been run on the AI agent.
