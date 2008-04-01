@@ -26,15 +26,17 @@ Details and updates about progress may be placed on a livejournal account or on 
 == Project Roadmap ==
 It is my intention to treat TP as a full time job and as such I intend to commit 35-40 hours per week. I will most likely work during the normal work week, but considerations will need to be made for the difference in time zone between myself and my mentor llnz.
 *2008-04-15 - 2008-05-28: Community bonding and increasing familiarity with existing tpserver-cpp/ruleset code
-*2008-05-29 - 2008-06-07: Produce and present complete documentation on ruleset to mentor via TP Wiki.
-*2008-06-08 - 2008-06-21: Produce rough pseudo-code for the workings of the ruleset while studying more indepth how rulesets operate
-*2008-06-21 - 2008-06-30: Produce and present a complete shell Ruleset, with no game logic or objects. This may also be branched and kept for future GSoC students/ruleset developers.
-*2008-07-01 - 2008-07-15: Produce and present a working ruleset that fully implements Risk logic and game startup
-*2008-07-16 - 2008-07-24: Finish testing the ruleset logic.
-*2008-07-24 - 2008-07-30: Implement Risk board as a star system and extend startup logic
-*2008-08-01 - 2008-08-15: Finish testing complete ruleset. Present first iteration of ruleset to mentor
-*2008-08-16 - 2008-08-20: If time permits perform additional testing and implementation of more advanced features
-
+*2008-06-06: The game will initialize and place game in Territory Selection state. The game board will mimic connectivity and territory placement of original Risk board. Players will be able to claim a single territory per turn. There will be no conflict resolution on territory claiming.
+*2008-06-13: Conflicts between players in picking territories will now be resolved by a roll-mechanic and extra turn for the losing player/s to choose new territories.
+*2008-06-20: Game will now properly transition form Territory Selection state to normal move state.
+*2008-06-27: Normal move state will now allow players to make basic attack actions. These actions will be implemented by a roll mechanic (not dummy actions)
+*2008-07-04: Normal move state will now all players to make movement actions.
+*2008-07-11: Normal move state will now resolve conflicts during attack and movement. As an example, two territories both attacking each other will do so with even odds, as opposed to odds weighted in the attacker's favor.
+*2008-07-18: Normal move state will now allow players to claim territories by moving onto empty territories.
+*2008-07-25: Normal move state will now periodically transition to reinforcement state. This means once every "x" normal turns a reinforcement transition will take place.
+*2008-08-08: Reinforcement state will now allow players to place additional units on one territory per turn.  
+*2008-08-22: Reinforcement state will transition back to normal state when all players have used their reinforcements up or not placed reinforcements for two turns.
+*2008-08-29: During normal move state game will now check if Win/Lose conditions are met. Game will end if a player wins. Game will lock out players that have lost from taking actions. Losing players will still be able to observe non-winning game.
 
 == Bio ==
 I am a B.Sc. Comp Sci. student at the University of Manitoba in Canada and am ashamed to say I had not heard of Thousand Parsec before GSoC. I am avid gamer and enjoyed many 4X games during my childhood (Alpha Centauri, Civilization 2-4, Pax Imperia.) I was also introduced to Risk at an early age by my father and it has been a game I excel in/enjoy since then; I still recall the first time I beat my father without him going easy on me!
