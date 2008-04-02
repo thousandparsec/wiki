@@ -31,7 +31,7 @@ The following links detail successful general ways to write a Summer of Code Pro
 
 Please read [http://code.google.com/soc/2008/faqs.html Google's Summer of Code Student FAQ] and advice from past participants as you create your proposal. '''Feel free to submit multiple proposals.'''
 
-==== Mithro has prepared some [http://forums.thousandparsec.com/viewtopic.php?f=4&t=101 tips for writing an application]. '''PLEASE''' read this before submitting an application. ====
+Mithro has prepared some [http://forums.thousandparsec.com/viewtopic.php?f=4&t=101 tips for writing an application]. '''PLEASE''' read this before submitting an application.
 
 = Selection Criteria =
 
