@@ -4,7 +4,7 @@ The goal of this ruleset is to present the players with a small set of very powe
 
 =Ships=
 There are two classes of ships in TotV: Battlecruisers and support craft.
-*Battlecruisers are hThe economy of TotV is simple, but provides a good backend for the combat system.uge, nation-state sized behemoths that are the main combat craft of space faring peoples.
+*Battlecruisers are huge, nation-state sized behemoths that are the main combat craft of space faring peoples.
 *Support craft are ALL non-combat craft that serve a fit into a set of specific roles: Resupply, Scouting, Raiding.
 
 ==Battlecruisers==
