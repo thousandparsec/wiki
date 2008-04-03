@@ -142,6 +142,7 @@ Five types of orders:
 #Barricade/Production (Planets only)
 #Produce (Planets only)
 #Target (Battlecruiser only)
+#Takeover (Battlecruiser only, targets planets)
 #Supply/Repair (Support craft)
 
 I would prefer to develop in C++, but I know some python and would be happy to work on tpserver-py if that is the only spot available.
