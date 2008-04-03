@@ -1,3 +1,6 @@
+Name: David Kohlbrenner
+Project: Titans of the Void ruleset
+
 Titans of the Void is a ruleset proposal for Thousand Parsec emphasizing supply lines and small battles between large, multi-piece ships.
 
 The goal of this ruleset is to present the players with a small set of very powerful combat ships and alot of strategic options.
@@ -79,6 +82,15 @@ A planet has two modes it can be in. Production and Barricade.
 *Relatedly, Battlecruisers MUST be player nameable. Empire taught me that.
 *I want to build the combat model on a sound mathematical model, making the value of targets equal across a ship.
 
+=Timeline=
+*I start my summer on May 14th, and it runs until August 25th. (I am out of town the week of July 20th, but can do some dev. remotely)
+*If accepted, I would be working this as my summer job (thus, 8 hour days, 5 days a week) I would also hope to continue development after GSoC
+*My hours (if needed for communication) would be basically 100% flexible. (CS majors don't sleep)
+
+Milestones/Time Estimates:
+*May 15th: Have ruleset features finalized (I will be working on it on/off until then)
+*Still working this out
+*August 25th: All documentation is done, playable balanced version released.
 =Student=
 *IRC: PunD (I try and idle in #tp at all times).
 
