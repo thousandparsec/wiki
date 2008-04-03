@@ -5,13 +5,13 @@
 Titans of the Void is a ruleset proposal for Thousand Parsec emphasizing supply lines and small battles between large, multi-piece ships.
 
 The goal of this ruleset is to present the players with a small set of very powerful combat ships and alot of strategic options.
-
-=Ships=
+=The Game=
+==Ships==
 There are two classes of ships in TotV: Battlecruisers and support craft.
 *Battlecruisers are huge, nation-state sized behemoths that are the main combat craft of space faring peoples.
 *Support craft are ALL non-combat craft that serve a fit into a set of specific roles: Resupply, Scouting, Raiding.
 
-==Battlecruisers==
+===Battlecruisers===
 Outright destruction of a Battlecruiser very unlikely. Thus, to make battles between them interesting, they have a number of subsystems, or components.
 A player begins the game with a handful of these ships, and will probably only construct a few more throughout the game.
 These are really the core of combat in TotV.
@@ -25,7 +25,7 @@ Battlecruiser components:
 #Hull: Generic Damage zone. Massive HP/Armor, destruction reveals Core. (V. Easy to hit, Heavy armor, Very Heavy HP)
 ##Core: Normally non-target-able. Lightly armored, almost no HP, hardish to hit. Destruction eliminates the Battlecruiser. (This is the only way to kill them) (Fuel/ammo stores are here? flavor...)
 
-==Support Craft==
+===Support Craft===
 *Supply:
 **Munitions Carrier: Supplies fuel and ammunition.
 **Systems Repair: Can repair: Hull, Engines, Targeting.
@@ -35,7 +35,7 @@ Battlecruiser components:
 *Raiding:
 **Flak ship: Two abilities, for each flak ship present in an area, destroys one scout before it can report back. Also, if in the same area as enemy support craft, has a chance to randomly destroy one.
 
-==Balance concept/thinking==
+===Balance concept/thinking===
 Battlecruisers are battlecruisers and completely overpower support craft. Also, 1v1 they are basically even, however, there is a specific set of ideas behind their components. The expected value of going after any specific component is about equal.
 
 Things that are hard to hit (Bridge, targeting) cause massive failure to the enemy, while things that are somewhat easy to hit (engines, weapons) cause problems, but cannot be fully taken out, while the easiest to hit (Hull) take an enormous amount of damage before being effected. Assault bays are a special case as I am not sure yet if they should be an easy target (stop planetary takeover fast) or hard (have to try for it). Note that an enemy player has options, they can go after subsystems (crippling their opponent) or go after the hull (no effect for a long time) to try and destroy their opponent.
@@ -45,8 +45,8 @@ Support craft are pretty simple in their balance:
 *Scouts are fast and necessary, but are easily fooled/countered by flak (as well as having no other abilities)
 *Flak can stop the opponent from spying on you, and can raid enemy supply lines, but serve no direct support to your battlecruisers.
 
-=Combat=
-==Combat Concept==
+==Combat==
+===Combat Concept===
 Combat is intended to be simple to construct, yet deep in strategic options.
 
 There is only ONE combat ship type, the battlecruiser. A battlecruiser has standing orders for its target (A specific component type, or a specific supply craft type). My idea works then as follows:
@@ -54,28 +54,28 @@ There is only ONE combat ship type, the battlecruiser. A battlecruiser has stand
 **When an array receives a target, it 'rolls' against the chance to hit the component/ship. If it hits, it applies its damage based on the state of the weapon array (%repair=%damage dealt). Armor, and possibly damage types will come into play here also.
 *Support craft combat is exceedingly simple. If a flak ship is in the same area as an enemy support craft, they have a chance to destroy it. (One to one ratio of flaks: possible kills).
 
-==Health==
+===Health===
 Two Health/Armor/Size concepts:
 #Health/Size: A component/ship has HP and how hard it is to hit.
 #Health/Armor/Size: A component/ship has HP, an armor type that can counter damage, and how hard it is to hit.
 
-==Movement==
+===Movement===
 Two Movement Speed concepts:
 #Scouts/Everyone else: Scouts move faster than everything, everyone else moves at the same speed.
 #Scouts/Support/Battlecruiser: Scouts still move the fastest, but support craft outpace battlecruisers.
 
-=Economy=
+==Economy==
 The economy of TotV is simple, but provides a good backend for the combat system.
-==Resources==
+===Resources===
 *There is one resource type (called rez from here on)
 *Each planet gives a fixed rate of rez per turn. It takes a small amount of rez to build a supply craft of any type. Production occurs every few turns (for support craft).
 Battlecruisers taken many many turns and the combined income from many planets to produce.
-==Planets==
+===Planets===
 A planet has two modes it can be in. Production and Barricade.
 *In production mode, the planet produces rez, can build ships, and can be captured.
 *In barricade mode, the planet drains rez, cannot build ships, and cannot be captured.
 
-=Other=
+==Other==
 *As with any new system, balance is going to be very tough. To account for this, the first set of options are going to be simple: One battlecruiser type, one damage type, one ammunition type, one fuel type. I hope to leave space for (and later develop) more options for these and add customizability to battlecruisers. (Note: I know people interested in playtesting this who will be available over the summer)
 *Flavor text. As strange as it sounds, the most important non-mechanic part of TotV to me is the flavor. I have found that interesting and immersive feedback (even textual) from a game makes it far, far more fun. Example: (A battlecruiser has just taken major damage to its engines during the last turn)
 **What I don't want: "Battlecruiser at Alpha Centauri has taken %75 damage to engine"
@@ -83,19 +83,65 @@ A planet has two modes it can be in. Production and Barricade.
 *Relatedly, Battlecruisers MUST be player nameable. Empire taught me that.
 *I want to build the combat model on a sound mathematical model, making the value of targets equal across a ship.
 
+==Wishlist==
+These are features that are NOT required for the game to work or be balanced, but will add to the complexity and fun of the game. (In order of importance)
+*Different battlecruiser classes.
+*Different weapon types.
+*Varied planetary types.
+*Upgrades/Research.
+*Custom battlecruiser classes.
+*Varied player abilities (races)
+
 =Timeline=
 *I start my summer on May 14th, and it runs until August 25th. (I am out of town the week of July 20th, but can do some dev. remotely)
 *If accepted, I would be working this as my summer job (thus, 8 hour days, 5 days a week) I would also hope to continue development after GSoC
 *My hours (if needed for communication) would be basically 100% flexible. (CS majors don't sleep)
 
-Milestones/Time Estimates:
-*May 15th: Have ruleset features finalized (I will be working on it on/off until then)
-*Still working this out
-*August 25th: All documentation is done, playable balanced version released.
-=Student=
-*IRC: PunD (I try and idle in #tp at all times).
+==Milestones/Time Estimates==
+*May 15th: Have ruleset features finalized (I will be working on it on/off until then between classes and finals).
+*May 23rd: Have Stage 1 complete (This allows for enough time to fully familiarize myself with the codebase)
+*June 6th: Have Stage 2 complete
+*June 13th: Stage 3 complete
+*June 20th: Stage 4 complete
+*June 27th: Stage 5 complete
+*July 11th: Stage 6 complete
+*August 1st: Stage 7 complete (Stages 7/8 will probably take a little longer than others)
+*August 15th: Stage 8 complete
+*August 18th->onward: Stage 9 begins (and never ends)
+I have scheduled all milestones on Fridays, this is so that I have a two day buffer zone to fix any problems/catch up as needed.
 
+This is an upper bound for my schedule; it is my belief that I will be working ahead on this reasonably quickly.
+In the case that I am ahead of schedule, I will begin implementing features from my wishlist section.
+
+If I do somehow fall behind, there is unfortunately very little I can scrap feature-wise and still have the system be balanced. However, in that event, I would re-evaluate what still needs to be done and limit it realistically.
+
+==Implementation==
+There are three aspects of TotV to create, the ships, the combat, and the economy.
+During development, each will be split into parts, which will be done across categories in stages.
+#Stage 1: Implement the two ship classes only to the point of having them in-game. Have planets gThis is an upper bound for my schedule; it is my belief that I will be working ahead on this reasonably quickly.
+In the case that I am ahead of schedule, I will begin implementing features from my wishlist section.
+
+If I do somehow fall behind, there is unfortunately very little I can scrap feature-wise and still have the system be balanced. However, in that event, I would re-evaluate what still needs to be done and limit it realistically.ive resources every turn.
+#Stage 2: Implement component system on battlecruisers, specifically get them to be damageable.
+#Stage 3: Implement combat system based on the component system. (At this point, it is playable, if incredibly basic)
+#Stage 4: Implement the 5 Support classes.
+#Stage 5: Implement repairing/resupply orders and targeting orders.
+#Stage 6: Implement flak ships (their attack capabilities)
+#Stage 7: Implement full component system, with effects applied to battlecruisers based on repair state. This includes planetary takeover, movement, etc.
+#Stage 8: Implement planetary modes and ship construction.
+#Stage 9: Balancing
+
+=Student=
+==Contact==
+*I try to idle in #tp always (PunD)
+*I am consistently available via chat services, email, and VoIP services. (Ask me for any of my contact info specifics)
+*I will blog daily as to progress and the design procedure.
+*If for some reason, I am out of contact, my phone number will be available.
+*I do not anticipate any issues with losing access to internet (I have a FIOS connection), but in the event of computer failure, I have 3 backup machines I could move to.
+==Info==
 Hi, my name is David and I am a freshman at Carnegie Mellon University majoring in Computer Science.
+I have experience as a Java developer, and am used to dealing with pre-existing codebases.
+I have not worked on an Open Source project before, but am eager to start
 *I have a large amount of experience in Java and C, decent (and growing) experience in C++, and a scattering of other languages.
 *I have been an avid gamer all of my life, and concentrate mostly on FPSs. However, 4X and space sims also take much of my interest. 
 *Recently I have been an addict of Sins of a Solar Empire, but my fondest 4X memories come from Master of Orion and Spaceward Ho!.
