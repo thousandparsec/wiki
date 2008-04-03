@@ -1,0 +1,88 @@
+Titans of the Void is a ruleset proposal for Thousand Parsec emphasizing supply lines and small battles between large, multi-piece ships.
+
+The goal of this ruleset is to present the players with a small set of very powerful combat ships and alot of strategic options.
+
+=Ships=
+There are two classes of ships in TotV: Battlecruisers and support craft.
+*Battlecruisers are hThe economy of TotV is simple, but provides a good backend for the combat system.uge, nation-state sized behemoths that are the main combat craft of space faring peoples.
+*Support craft are ALL non-combat craft that serve a fit into a set of specific roles: Resupply, Scouting, Raiding.
+
+==Battlecruisers==
+Outright destruction of a Battlecruiser very unlikely. Thus, to make battles between them interesting, they have a number of subsystems, or components.
+A player begins the game with a handful of these ships, and will probably only construct a few more throughout the game.
+These are really the core of combat in TotV.
+
+Battlecruiser components:
+#Engines: Cannot be completely destroyed, can be crippled. (Medium to hit, Medium Armor, Medium HP)
+#Bridge: Rare to hit, causes vessel to head to nearest friendly planet at 1/2 speed if destroyed. (Impossible to hit, Heavy Armor, No HP)
+#Targeting systems: destruction massively reduces accuracy/coordination of weapon arrays (Hard to hit, light armor, medium HP)
+#Weapon Arrays: Redundant(4-10), multiple types(?). Destruction disables firing. (Medium to hit, medium armor, Light/Medium HP)
+#Assault Bays: Destruction disables planetary takeover. (Easy to hit,  medium armor, medium HP)
+#Hull: Generic Damage zone. Massive HP/Armor, destruction reveals Core. (V. Easy to hit, Heavy armor, Very Heavy HP)
+##Core: Normally non-target-able. Lightly armored, almost no HP, hardish to hit. Destruction eliminates the Battlecruiser. (This is the only way to kill them) (Fuel/ammo stores are here? flavor...)
+
+==Support Craft==
+*Supply:
+**Munitions Carrier: Supplies fuel and ammunition.
+**Systems Repair: Can repair: Hull, Engines, Targeting.
+**Crew Transport: Can repair: Bridge, Weapon Arrays, Assault bays.
+*Scouting:
+**Drone Scout: Fast movement, very light armor. This is what you go looking for stuff with.
+*Raiding:
+**Flak ship: Two abilities, for each flak ship present in an area, destroys one scout before it can report back. Also, if in the same area as enemy support craft, has a chance to randomly destroy one.
+
+==Balance concept/thinking==
+Battlecruisers are battlecruisers and completely overpower support craft. Also, 1v1 they are basically even, however, there is a specific set of ideas behind their components. The expected value of going after any specific component is about equal.
+
+Things that are hard to hit (Bridge, targeting) cause massive failure to the enemy, while things that are somewhat easy to hit (engines, weapons) cause problems, but cannot be fully taken out, while the easiest to hit (Hull) take an enormous amount of damage before being effected. Assault bays are a special case as I am not sure yet if they should be an easy target (stop planetary takeover fast) or hard (have to try for it). Note that an enemy player has options, they can go after subsystems (crippling their opponent) or go after the hull (no effect for a long time) to try and destroy their opponent.
+
+Support craft are pretty simple in their balance:
+*Munitions and repair are needed all the time, and are very valuable to have around, but don't do anything but support their battlecruisers.
+*Scouts are fast and necessary, but are easily fooled/countered by flak (as well as having no other abilities)
+*Flak can stop the opponent from spying on you, and can raid enemy supply lines, but serve no direct support to your battlecruisers.
+
+=Combat=
+==Combat Concept==
+Combat is intended to be simple to construct, yet deep in strategic options.
+
+There is only ONE combat ship type, the battlecruiser. A battlecruiser has standing orders for its target (A specific component type, or a specific supply craft type). My idea works then as follows:
+*If a battlecruiser is in combat this is one turn; it issues orders to weapon arrays based on standing orders and the state of targeting systems. If targeting systems are at 100% repair, each weapon array told the standing order target. Otherwise, they have a %repair chance being told to target the correct system, or otherwise a random system/ship.
+**When an array receives a target, it 'rolls' against the chance to hit the component/ship. If it hits, it applies its damage based on the state of the weapon array (%repair=%damage dealt). Armor, and possibly damage types will come into play here also.
+*Support craft combat is exceedingly simple. If a flak ship is in the same area as an enemy support craft, they have a chance to destroy it. (One to one ratio of flaks: possible kills).
+
+==Health==
+Two Health/Armor/Size concepts:
+#Health/Size: A component/ship has HP and how hard it is to hit.
+#Health/Armor/Size: A component/ship has HP, an armor type that can counter damage, and how hard it is to hit.
+
+==Movement==
+Two Movement Speed concepts:
+#Scouts/Everyone else: Scouts move faster than everything, everyone else moves at the same speed.
+#Scouts/Support/Battlecruiser: Scouts still move the fastest, but support craft outpace battlecruisers.
+
+=Economy=
+The economy of TotV is simple, but provides a good backend for the combat system.
+==Resources==
+*There is one resource type (called rez from here on)
+*Each planet gives a fixed rate of rez per turn. It takes a small amount of rez to build a supply craft of any type. Production occurs every few turns (for support craft).
+Battlecruisers taken many many turns and the combined income from many planets to produce.
+==Planets==
+A planet has two modes it can be in. Production and Barricade.
+*In production mode, the planet produces rez, can build ships, and can be captured.
+*In barricade mode, the planet drains rez, cannot build ships, and cannot be captured.
+
+=Other=
+*As with any new system, balance is going to be very tough. To account for this, the first set of options are going to be simple: One battlecruiser type, one damage type, one ammunition type, one fuel type. I hope to leave space for (and later develop) more options for these and add customizability to battlecruisers. (Note: I know people interested in playtesting this who will be available over the summer)
+*Flavor text. As strange as it sounds, the most important non-mechanic part of TotV to me is the flavor. I have found that interesting and immersive feedback (even textual) from a game makes it far, far more fun. Example: (A battlecruiser has just taken major damage to its engines during the last turn)
+**What I don't want: "Battlecruiser at Alpha Centauri has taken %75 damage to engine"
+**What I do want:"The Indomnible's captain reports: a barrage from the Freedom's missile batteries has struck home and they are now venting engine plasma (Engines at %25)" (This would be better if I was a writer.... might get some help on these)
+*Relatedly, Battlecruisers MUST be player nameable. Empire taught me that.
+*I want to build the combat model on a sound mathematical model, making the value of targets equal across a ship.
+
+=Student=
+*IRC: PunD (I try and idle in #tp at all times).
+
+Hi, my name is David and I am a freshman at Carnegie Mellon University majoring in Computer Science.
+*I have a large amount of experience in Java and C, decent (and growing) experience in C++, and a scattering of other languages.
+*I have been an avid gamer all of my life, and concentrate mostly on FPSs. However, 4X and space sims also take much of my interest. 
+*Recently I have been an addict of Sins of a Solar Empire, but my fondest 4X memories come from Master of Orion and Spaceward Ho!.
