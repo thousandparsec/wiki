@@ -115,9 +115,7 @@ In the case that I am ahead of schedule, I will begin implementing features from
 
 If I do somehow fall behind, there is unfortunately very little I can scrap feature-wise and still have the system be balanced. However, in that event, I would re-evaluate what still needs to be done and limit it realistically.
 
-==Implementation==In the case that I am ahead of schedule, I will begin implementing features from my wishlist section.
-
-If I do somehow fall behind, there is unfortunately very little I can scrap feature-wise and still have the system be balanced. However, in that event, I would re-evaluate what still needs to be done and limit it realistically.ive resources every turn.
+==Implementation==
 There are three aspects of TotV to create, the ships, the combat, and the economy.
 During development, each will be split into parts, which will be done across categories in stages.
 
