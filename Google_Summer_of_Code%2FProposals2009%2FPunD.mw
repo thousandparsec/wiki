@@ -120,15 +120,15 @@ There are three aspects of TotV to create, the ships, the combat, and the econom
 During development, each will be split into parts, which will be done across categories in stages.
 
 ===Stages===
-#Stage 1: Implement the two ship classes only to the point of having them in-game. Have planets give resources on a per turn basis.
-#Stage 2: Implement component system on battlecruisers, specifically get them to be damageable.
-#Stage 3: Implement combat system based on the component system. (At this point, it is playable, if incredibly basic)
-#Stage 4: Implement the 5 Support classes.
-#Stage 5: Implement repairing/resupply orders and targeting orders.
-#Stage 6: Implement flak ships (their attack capabilities)
-#Stage 7: Implement full component system, with effects applied to battlecruisers based on repair state. This includes planetary takeover, movement, etc.
-#Stage 8: Implement planetary modes and ship construction.
-#Stage 9: Balancing
+#Stage 1: There will be two ship classes in-game (BC and support) and planets will give resources.
+#Stage 2: Battlecruisers will have 7 types of components, that have a health system.
+#Stage 3: Battles will be able to take place between battlecruisers. (This is the first playable milestone)
+#Stage 4: There will be 5 different types of support craft in-game.
+#Stage 5: There will be 3 order types: Move,Repair,Target.
+#Stage 6: Flak ships will be able to attack enemy support craft.
+#Stage 7: Battlecruisers will lose capabilities based on component damage, battlecruisers will be destructible from core damage only.
+#Stage 8: Planets will have two orders: Mode and Construction.
+#Stage 9: Balancing and atmosphere.
 
 ===Technical===
 Four types of objects in TotV:
@@ -143,6 +143,9 @@ Five types of orders:
 #Produce (Planets only)
 #Target (Battlecruiser only)
 #Supply/Repair (Support craft)
+
+I would prefer to develop in C++, but I know some python and would be happy to work on tpserver-py if that is the only spot available.
+
 
 =Student=
 ==Contact==
