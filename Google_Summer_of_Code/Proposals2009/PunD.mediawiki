@@ -1,5 +1,6 @@
-Name: David Kohlbrenner
-Project: Titans of the Void ruleset
+'''Name: David Kohlbrenner'''
+
+'''Project: Titans of the Void ruleset'''
 
 Titans of the Void is a ruleset proposal for Thousand Parsec emphasizing supply lines and small battles between large, multi-piece ships.
 
