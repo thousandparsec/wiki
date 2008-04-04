@@ -19,6 +19,8 @@ This a list of all Student Proposals for 2008. This should make it easier for st
 
 [[Google Summer of Code/vi1985 proposal]]
 
+[[User:Iwanowitch/RFTS AI proposal]]
+
 '''Server'''
 
 [[Google Summer of Code/ezod proposal]]
