@@ -98,55 +98,97 @@ These are features that are NOT required for the game to work or be balanced, bu
 *My hours (if needed for communication) would be basically 100% flexible. (CS majors don't sleep)
 
 ==Milestones/Time Estimates==
-*May 15th: Have ruleset features finalized (I will be working on it on/off until then between classes and finals).
-*May 23rd: Have Stage 1 complete (This allows for enough time to fully familiarize myself with the codebase)
-*June 6th: Have Stage 2 complete
-*June 13th: Stage 3 complete
-*June 20th: Stage 4 complete
-*June 27th: Stage 5 complete
-*July 11th: Stage 6 complete
-*August 1st: Stage 7 complete (Stages 7/8 will probably take a little longer than others)
-*August 15th: Stage 8 complete
-*August 18th->onward: Stage 9 begins (and never ends)
+#May 15th: Have ruleset features finalized (I will be working on it on/off until then between classes and finals).
+#May 23rd: There will be two ship classes in-game (BC and support) and planets will give resources.
+#June 6th: All ships will have their components in-place. (All _Basic components will be complete). Turn processing will be implemented.
+#June 13th: Battles will be able to take place between battlecruisers. (This is the first playable milestone)
+#June 20th: There will be 3 order types: Move,Repair,Target. These will be able to be issued to ships as per their permissions.
+#July 4th: Flak ships will be able to attack enemy support craft.
+#July 11th: Battlecruisers will check components and modify their capabilities as expected. Battlecruisers will be destructible from core damage only.
+#July 18th: Planets will have two orders: Mode and Construction.
+#August 1st: Atmosphere (flavor text, titles) will be inplace (enough to feel immersion) 
+#August 3rd -> August 25th->:Balancing, catchup, and bugfix. If time permits, addition of wishlist features.
+
 I have scheduled all milestones on Fridays, this is so that I have a two day buffer zone to fix any problems/catch up as needed.
 
-This is an upper bound for my schedule; it is my belief that I will be working ahead on this reasonably quickly.
-In the case that I am ahead of schedule, I will begin implementing features from my wishlist section.
+I expect to have enough time to implement a good number of wishlist features. 
 
-If I do somehow fall behind, there is unfortunately very little I can scrap feature-wise and still have the system be balanced. However, in that event, I would re-evaluate what still needs to be done and limit it realistically.
+If I do somehow fall behind, all features not listed under wishlist are necessary for balance to be achievable, thus I will reschedule my milestones to extend into the last time period, and cut some wishlist features.
 
 ==Implementation==
 There are three aspects of TotV to create, the ships, the combat, and the economy.
 During development, each will be split into parts, which will be done across categories in stages.
 
-===Stages===
-#Stage 1: There will be two ship classes in-game (BC and support) and planets will give resources.
-#Stage 2: Battlecruisers will have 7 types of components, that have a health system.
-#Stage 3: Battles will be able to take place between battlecruisers. (This is the first playable milestone)
-#Stage 4: There will be 5 different types of support craft in-game.
-#Stage 5: There will be 3 order types: Move,Repair,Target.
-#Stage 6: Flak ships will be able to attack enemy support craft.
-#Stage 7: Battlecruisers will lose capabilities based on component damage, battlecruisers will be destructible from core damage only.
-#Stage 8: Planets will have two orders: Mode and Construction.
-#Stage 9: Balancing and atmosphere.
-
 ===Technical===
-Four types of objects in TotV:
-#Support ships
-#Planets
-#Battlecruisers
-#Components
+Four types of player interactable objects in TotV:
+#Support ships (Move,Supply/Repair)
+#Planets (Produce,Barricade)
+#Battlecruisers (Move,Target,Takeover)
+#Components (No orders)
 
 Five types of orders:
-#Move (Ships)
-#Barricade/Production (Planets only)
-#Produce (Planets only)
-#Target (Battlecruiser only)
-#Takeover (Battlecruiser only, targets planets)
-#Supply/Repair (Support craft)
+#Move- Issued to a ship. Targets a planet. The selected ship will move at it's top speed to the targeted planet.
+#Barricade/Production- Issued to a planet. Toggles the planet between Production mode and Barricade mode. (See balance section).
+#Produce- Issued to a planet. Tells the planet to being producing the selected ship (assuming the player has enough resources).
+#Target- Issued to a battlecruiser. Sets the priority target type for the battlecruiser. (See combat section)
+#Takeover- Issued to a battlecruiser. Targets the planet at the same location. If the planet is vulnerable, sets the planet's owner to the battlecruiser's owner.
+#Supply/Repair- Issued to a support craft. Targets a battlecruiser in the same location. Adds to the battlecruiser's ammo/fuel, or repairs a component.
 
 I would prefer to develop in C++, but I know some python and would be happy to work on tpserver-py if that is the only spot available.
 
+===Design Diagram===
+*Planet Class- Contains flag for mode, and getRez()
+**Basic Planet: getRez() returns 1 or -1.
+*Ship Class:
+**Battlecruiser Class- Contains an unbounded list of components.
+***Starting Battlecruiser-Seven BC Components
+**Support Class- Contains one component. (These are a basic wrapper for their component, not much more)
+***Munitions-One component: SP_Munitions_Basic
+***Systems-One component: SP_Systems_Basic
+***Crew-One component: SP_Crew_Basic
+***Scout-One component: SP_Scout_Basic
+***Flak-One component: SP_Flak_Basic
+*Component Class- Contains a virtual damage(dmg) method, a virtual getHP() method , an armor rating, and an HP counter
+**BC_Hull: 
+***BC_Hull_Basic- damage(dmg) updates internal HP. getHP() returns HP ratio.
+**BC_Targeting: 
+***BC_Targeting_Basic- damage(dmg) updates internal HP. getHP() returns HP ratio
+**BC_Weapon-Virtual getDmgAmt() getDmgType()
+***BC_Weapon_Basic- damage(dmg) updates internal HP. getHP() returns HP ratio. getDmgAmt() returns 10. getDmgType() returns "none".
+**BC_Bridge-
+***BC_Bridge_Basic- damage(dmg) updates internal HP.  getHP() returns HP ratio.
+**BC_Engines- virtual getSpeed()
+***BC_Engines_Basic- damage(dmg) updates internal HP. getHP() returns HP ratio. getSpeed() return top speed currently available.
+**BC_Assault
+***BC_Assault_Basic- damage(dmg) updates internal HP. getHP() returns HP ratio.
+**BC_Core
+***BC_Core_Basic- damage(dmg) updates internal HP. getHP() returns HP ratio.
+**SP_Munitions
+***SP_Munitions_Basic- damage(dmg) updates internal HP. getHP() returns HP ratio.
+**SP_Systems
+***SP_Systems_Basic-damage(dmg) updates internal HP. getHP() returns HP ratio.
+**SP_Crewe
+***SP_Crew_Basic-damage(dmg) updates internal HP. getHP() returns HP ratio.
+**SP_Scout
+***SP_Scout_Basic-damage(dmg) updates internal HP. getHP() returns HP ratio.
+**SP_Flak
+***SP_Flak_Basic-damage(dmg) updates internal HP. getHP() returns HP ratio.
+
+The design emphasizes modularity of components. The goal is that later on, new battlecruiser types or variant support ships can be implemented with radically different components that behave differently. Ex. damage might be shared across components in one ship, or the bridge might be indestructible.
+
+The _Basic indicates this is the base implementation that is required to be completed for the game to work. Other implementations can be added for more features.
+
+==Turn Process==
+#Check win conditions.
+##I will have to figure these out during balance testing. Total annihilation will NOT be required.
+#Collect Resources.
+##This just iterates through all planets owned by the player, calls getRez() and adds the total (positive or negative) to their balance
+#Produce ships. (On a planet by planet basis)
+#Serve arrival, production and battle updates to the player
+#Allow player to issue orders to ships and planets.
+#Move all ships with move orders.
+#Process Battles currently active. (Having this after orders allows the player to react to enemy attacks. However, it is AFTER move, thus there is a first strike advantage for the attacker.)
+#End turn.
 
 =Student=
 ==Contact==
@@ -156,9 +198,11 @@ I would prefer to develop in C++, but I know some python and would be happy to w
 *If for some reason, I am out of contact, my phone number will be available.
 *I do not anticipate any issues with losing access to internet (I have a FIOS connection), but in the event of computer failure, I have 3 backup machines I could move to.
 ==Info==
-Hi, my name is David and I am a freshman at Carnegie Mellon University majoring in Computer Science.
-I have experience as a Java developer, and am used to dealing with pre-existing codebases and large-scale projects.
-I have not worked on an Open Source project before, but am eager to start
-*I have a large amount of experience in Java and C, decent (and growing) experience in C++, and a scattering of other languages.
+Hi, my name is David Kohlbrenner and I am a freshman at Carnegie Mellon University majoring in Computer Science.
+*I have experience with large projects, and am used to dealing with pre-existing codebases.
+*I have not worked on an Open Source project before, but am eager to start
+*I have worked as a professional Java developer for a Washington DC based startup.
+*I am currently a part-time developer for a California based web startup.
+*I have a large amount of experience in Java and C, decent (and growing) experience in C++, and a good grasp of a scattering of other languages.
 *I have been an avid gamer all of my life, and concentrate mostly on FPSs. However, 4X and space sims also take much of my interest. 
-*Recently I have been an addict of Sins of a Solar Empire, but my fondest 4X memories come from Master of Orion and Spaceward Ho!.
+*Recently I have been an addict of Sins of a Solar Empire, but my fondest 4X memories come from Master of Orion 1 and Spaceward Ho!.
