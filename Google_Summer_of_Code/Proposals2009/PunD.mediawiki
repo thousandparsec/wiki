@@ -204,5 +204,6 @@ Hi, my name is David Kohlbrenner and I am a freshman at Carnegie Mellon Universi
 *I have worked as a professional Java developer for a Washington DC based startup.
 *I am currently a part-time developer for a California based web startup.
 *I have a large amount of experience in Java and C, decent (and growing) experience in C++, and a good grasp of a scattering of other languages.
+*I have experience developing and implementing systems ranging from data compression and image manipulation (C) to OO modular email filters (Java).
 *I have been an avid gamer all of my life, and concentrate mostly on FPSs. However, 4X and space sims also take much of my interest. 
 *Recently I have been an addict of Sins of a Solar Empire, but my fondest 4X memories come from Master of Orion 1 and Spaceward Ho!.
