@@ -49,8 +49,8 @@ Support craft are pretty simple in their balance:
 ===Combat Concept===
 Combat is intended to be simple to construct, yet deep in strategic options.
 
-There is only ONE combat ship type, the battlecruiser. A battlecruiser has standing orders for its target (A specific component type, or a specific supply craft type). My idea works then as follows:
-*If a battlecruiser is in combat this is one turn; it issues orders to weapon arrays based on standing orders and the state of targeting systems. If targeting systems are at 100% repair, each weapon array told the standing order target. Otherwise, they have a %repair chance being told to target the correct system, or otherwise a random system/ship.
+There is only ONE combat ship type, the battlecruiser. A battlecruiser is given standing orders for its target (A specific component type, or a specific supply craft type). 
+*One battlecruiser turn is thus: it issues orders to weapon arrays based on standing orders and the state of targeting systems. If targeting systems are at 100% repair, each weapon array told the standing order target. Otherwise, they have a %repair chance being told to target the correct system, or otherwise a random system/ship.
 **When an array receives a target, it 'rolls' against the chance to hit the component/ship. If it hits, it applies its damage based on the state of the weapon array (%repair=%damage dealt). Armor, and possibly damage types will come into play here also.
 *Support craft combat is exceedingly simple. If a flak ship is in the same area as an enemy support craft, they have a chance to destroy it. (One to one ratio of flaks: possible kills).
 
