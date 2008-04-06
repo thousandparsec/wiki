@@ -121,7 +121,7 @@ Here is how I would cluster the rules:
 
 With these layers in mind, here’s a detailed schedule for the project:
 
-* Week 1 (starting 2008-04-14): Set up the basics to start coding, make sure layer 1 is coherent and ready to be implemented. Quantify all the rules to be implemented next.
+* Week 1 (starting 2008-04-14): Set up the basics to start coding, make sure layer 1 is coherent and ready to be implemented. Quantify all the rules to be implemented next. Note that the project start date has changed to 2008-04-21, but I don't have the time to do these preparations after that date, so I think I'll just do this like planned, even if the project wouldn't be started that week.
 * Week 2 (starting 2008-04-21): Start implementing layer 1, object after object. Implement Systems, planets and facilities. Systems and planets will be created when the game is started, and a player will be able to build facilities on his home planet. 
 * Week 3 (starting 2008-04-28): Implement ships, basic designs and components. A player will be able to purchase various ships, to explore other systems and to colonize other planets.
 * Week 4 (starting 2008-05-05): Implement the basic combat system, and other details left in layer 1. Two players will be able to fight against each other with their ships.
