@@ -172,7 +172,7 @@ I want to do this project because it is very interesting and challenging. It is 
 
 
 '''Programming Example''': 
-Here's a rather simple, but neat, example of genetic programming (a day's worth of hacking), which solves a class of non-trivial problems in arithmetic. It is of a quite different design than explained above, but it illustrates how "letting evolution run its course" can solve non-trivial problems. '''Here is the link:''' [http://www.4shared.com/account/file/41671485/10b80908/genArithmetic.html]. I have started slowly working on a checkers AI that implements the design above for testing purposes, but I'm afraid it won't be ready soon due to university workload.
+Here's a rather simple, but neat, example of genetic programming (a day's worth of hacking), which solves a class of non-trivial problems in arithmetic. It is of a quite different design than explained above, but it illustrates how "letting evolution run its course" can solve non-trivial problems. '''''Here is the link:''''' [http://www.4shared.com/account/file/41671485/10b80908/genArithmetic.html]. I have started slowly working on a checkers AI that implements the design above for testing purposes, but I'm afraid it won't be ready soon due to university workload.
 
 '''Contact info''': victor.ivri AT gmail DOT. com
 
