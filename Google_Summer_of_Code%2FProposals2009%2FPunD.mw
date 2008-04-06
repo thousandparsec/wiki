@@ -98,16 +98,17 @@ These are features that are NOT required for the game to work or be balanced, bu
 *My hours (if needed for communication) would be basically 100% flexible. (CS majors don't sleep)
 
 ==Milestones/Time Estimates==
-#May 15th: Have ruleset features finalized (I will be working on it on/off until then between classes and finals).
-#May 23rd: There will be two ship classes in-game (BC and support) and planets will give resources.
-#June 6th: All ships will have their components in-place. (All _Basic components will be complete). Turn processing will be implemented.
-#June 13th: Battles will be able to take place between battlecruisers. (This is the first playable milestone)
-#June 20th: There will be 3 order types: Move,Repair,Target. These will be able to be issued to ships as per their permissions.
-#July 4th: Flak ships will be able to attack enemy support craft.
-#July 11th: Battlecruisers will check components and modify their capabilities as expected. Battlecruisers will be destructible from core damage only.
-#July 18th: Planets will have two orders: Mode and Construction.
+#May 15th: Base ruleset will be finalized (I will be working on it on/off until then between classes and finals). 
+#May 23rd: Clients/Servers will be able to see two ships in-game (BC and support). 
+#May 30th: Ships in-game will now have a correct list of components internally.(All _Basic components and _Basic ships will be complete)
+#June 6th: The client will display fully detailed ship status (component status). Client/Server will follow  turn processing order.
+#June 13th: Client/Server will allow battles to take place between battlecruisers. (This is the first playable milestone) 
+#June 20th: Clients will be able to issue 4 order types: Move,Repair,Target,Takeover. These will be able to be issued to ships as per their permissions. 
+#July 4th: Flak ships will be able to attack enemy support craft. 
+#July 11th: Clients will force battlecruisers to check components and modify their capabilities as expected. Battlecruisers will be destructible from core damage only. 
+#July 18th: Clients will be able to issue two planet orders: Mode and Construction. 
 #August 1st: Atmosphere (flavor text, titles) will be inplace (enough to feel immersion) 
-#August 3rd -> August 25th->:Balancing, catchup, and bugfix. If time permits, addition of wishlist features.
+#August 3rd -> August 25th->:Balancing, catchup, and bugfix. If time permits, addition of wishlist features. 
 
 I have scheduled all milestones on Fridays, this is so that I have a two day buffer zone to fix any problems/catch up as needed.
 
