@@ -185,10 +185,17 @@ Throughout the project I will keep code well documented to help future developer
 
 
 ===Timeframe and Deliverables===
-2008-05-26 to 2008-07-07
-*Learn the TP framework and become familiar with the protocol, server, clients, and other rulesets.
+2008-05-26 to 2008-05-31
+*Learn the TP framework and become familiar with the protocol, server, and other rulesets.
+**Focus on how other rulesets are implemented to gain a better idea of how to implement a new one
+2008-06-01 to 2008-06-07
+*Create a bare-bones ruleset to work off of.
+**Should be able to run the ruleset on a server even if there is no way to "play" it.
+*Create a basic "board."
+**Create the solar system objects
+**Get the solar system objects displaying in a grid formation
+2008-06-07 to 2008-07-07
 *Work on the basic framework for the ruleset.
-**Create the board
 **Create basic ships and orders
 **Create the turn structure for multiple players
 *Refine the rules to the game.
