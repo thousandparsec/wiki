@@ -191,36 +191,63 @@ Throughout the project I will keep code well documented to help future developer
 2008-06-01 to 2008-06-07
 *Create a bare-bones ruleset to work off of.
 **Should be able to run the ruleset on a server even if there is no way to "play" it.
-*Create a basic "board."
-**Create the solar system objects
+*Create a basic "board"
+**Implement the solar system objects
 **Get the solar system objects displaying in a grid formation
-2008-06-07 to 2008-07-07
-*Work on the basic framework for the ruleset.
-**Create basic ships and orders
-**Create the turn structure for multiple players
-*Refine the rules to the game.
-*Document the rules as work continues.
-*Document and test code as work progresses.
-
-2008-07-07: Deliverable 1
+2008-06-07 to 2008-06-14
+*Implement the ships:
+**All four types of civilian ships
+**All four types of leaders
+**The weapon ship
+2008-06-14 to 2008-06-21
+*Implement a basic order for each ship
+**Civilian ships: colonize a solar system
+**Leaders: occupy a solar system
+**Weapon Ship: destroy a solar system
+2008-06-21 to 2008-06-28
+*Implement the main turn structure
+**Turns should alternate between players
+**Each player should get two orders per turn
+**Players should be able to order a ship with one of the orders implemented last week
+**Combat and game ending conditions will not be implemented at this point
+2008-06-28 to 2008-07-05
+*Focus on getting the current implementation running on a server with two clients
+**Implement basic visual assets for the clients
+**At the end of this week, at least two players should be able to connect to the server and issue basic commands through a client.
+2008-07-05 to 2008-07-07
+*Cleanup code and prepare for deliverable 1
+2008-07-07: '''Deliverable 1'''
 *Deliverable 1 will be a basic ruleset with at least the following characteristics:
 **A map of solar system objects layed out in a rectangular grid.
-**At least one ship object with the ability to execute at least one order.
+**Each ship object with the ability to execute at least one order.
 **The framework for the multi-step turn as outlined above.  The user will be able to step through each phase, even if the phases are not fully implemented.
 **At least two people should be able to connect to a server running the ruleset.
-
-2008-07-07 to 2008-08-11
-*Finish the implementation of all the objects, orders and resources.
-*Fully implement the game board with solar systems and allied region detection.
-*Fully implement the combat system.
-*Fully implement an appropriate user interface for the client.
-*Complement the ruleset description with screenshots and examples
-*Document and test code.
-
+2008-07-07 to 2008-07-14: '''Midterm Evaluations'''
+*Resolve issues arising from deliverable 1
+*Prepare and submit midterm evaluations
+2008-07-14 to 2008-07-21
+*Implement the remaining orders:
+**Civilian ships: swap for new ship
+**Leaders: remove from board
+*Implement alien artifact capturing and ending conditions:
+**No civilian ships left
+**Two or fewer alien artifacts remain
+2008-07-21 to 2008-07-28
+*Implement combat phases and associated orders
+**Internal combat
+**External combat
+**Reinforce order for civilian ships
+2008-07-28 to 2008-08-04
+*Modify client if necessary to ensure:
+**All ships and solar systems appear as originally designed
+**All orders are able to be performed
+**Multiple people can connect and play the game
+2008-08-04 to 2008-08-11
+*Buffer week used to resolve any outstanding issues
+*Make sure documentation is up to date
 2008-08-11 to 2008-08-18
 *Perform final cleanup of code and prepare required submissions.
-
-2008-08-18: Deliverable 2
+2008-08-18: '''Deliverable 2'''
 *A fully functional ruleset which adheres to all of the ruleset rules.  The ruleset will:
 **Implement all of the objects, orders, and resources outlined above.
 **Follow the multi-step turn as outlined above.
@@ -232,6 +259,9 @@ Throughout the project I will keep code well documented to help future developer
 **Screenshots and diagrams to illustrate important rules
 **Concrete examples
 **A quick start guide for new players
+2008-08-18 to 2008-08-31: '''Final Evaluation phase'''
+*Resolve any issues with deliverable 2
+*Submit final evaluation
 
 ==Biography==
 
