@@ -29,35 +29,36 @@ The goal of this project is to devise and implement an efficient and capable AI 
 '''Roadmap (Big Checkpoints and Detailed Breakdown)'''
 
 [EDIT: Adjusted for new schedule --[[User:Vi1985|vi1985]] 21:09, 31 March 2008 (EDT)]
+[EDIT: Dates in new format --[[User:Vi1985|vi1985]] 09:57, 7 April 2008 (EDT)]
 
 * '''''Initial period of learning and Software Design''''':
-* April 21 -> April 29 - Winning Projects announced. Begin active study of libraries, ruleset, and other relevant materials.
-* April 30 -> May 7 : ADTs for the project will have been designed; the core algorithm will have been completed in pseudocode and diagram form. 
-* May 8 -> May 13 : Design scheme for the Opponent Simulation Module will have been completed in pseudocode and diagram form. 
+* 2008-04-21 - 2008-04-29 : Begin active study of libraries, ruleset, and other relevant materials.
+* 2008-04-30 - 2008-05-7 : ADTs for the project will have been designed; the core algorithm will have been completed in pseudocode and diagram form. 
+* 2008-05-8 - 2008-05-13 : Design scheme for the Opponent Simulation Module will have been completed in pseudocode and diagram form. 
   * Goal for period: All relevant materials have been studied, and initial volume of documentation released.
 
 * '''''Coding I''''':
-* May 14 -> May 17 : Relevant classes, methods, and fields will have been created for the AI agent.
-* May 18 -> May 24 : The core genetic algorithm will have been coded.
-* May 25 -> 29 : The Fitness Function for the evaluation of game-hypotheses will have been devised and tested.
-* May 30 -> June 4 : All coding of overhead AI agent structures will have been completed.
-* June 5 -> June 11 : OSM module coding (1).
-* June 12 -> June 18 : OSM module coding (2). OSM module coding will have been completed.
-* June 19 -> June 25 : Thorough unit and integration tests will have been run on the AI agent.
-* June 26 -> July 7 : Buffer zone for corrections, retesting, and unexpected situations.
+* 2008-05-14 - 2008-05-17 : Relevant classes, methods, and fields will have been created for the AI agent.
+* 2008-05-18 - 2008-05-24 : The core genetic algorithm will have been coded.
+* 2008-05-25 - 2008-05-29 : The Fitness Function for the evaluation of game-hypotheses will have been devised and tested.
+* 2008-05-30 - 2008-06-4 : All coding of overhead AI agent structures will have been completed.
+* 2008-06-5 - 2008-06-11 : OSM module coding (1).
+* 2008-06-12 - 2008-06-18 : OSM module coding (2). OSM module coding will have been completed.
+* 2008-06-19 - 2008-06-25 : Thorough unit and integration tests will have been run on the AI agent.
+* 2008-06-26 - 2008-07-7 : Buffer zone for corrections, retesting, and unexpected situations.
   * Goal for period: Core genetic algorithm and AI agent ADT, as well as the OSM, will be tested and running 
   * in time for mid-term evaluations.
 
 *'''''Coding II''''':
 
-* July 8 -> July 14 : Work on completing libtpproto-java towards having an AI Client (1).
-* July 15 -> July 21 : Work on completing libtpproto-java towards having an AI Client (2). All work on completing the library will have been completed.
-* July 22 -> July 28 : Thorough unit and integration tests will have been run on the AI client.
-* July 29 -> August 11 : Buffer zone for corrections, retesting, and unexpected situations.
+* 2008-07-8 - 2008-07-14 : Work on completing libtpproto-java towards having an AI Client (1).
+* 2008-07-15 - 2008-07-21 : Work on completing libtpproto-java towards having an AI Client (2). All work on completing the library will have been completed. AI Client will successfully connect to server, and play the game.
+* 2008-07-22 - 2008-07-28 : Thorough unit and integration tests will have been run on the AI client.
+* 2008-07-29 - 2008-08-11 : Buffer zone for corrections, retesting, and unexpected situations.
   * Goal for period: A complete and ready to use Java AI Client will be ready. Full-scale integration testing will have been completed.
 
 *'''''Final touches and documentation''''':
-* August 12 - August 18 : Documentation will have been written and polished; code scrubbed and extensively commented.
+* 2008-08-12 - 2008-08-18 : Documentation will have been written and polished; code scrubbed and extensively commented.
   * Goal for period: Finish code scrubbing, and complete all relevant documentation (javadoc and a separate volume).
 
 '''General Considerations'''
