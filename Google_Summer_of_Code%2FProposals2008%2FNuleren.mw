@@ -104,6 +104,89 @@ The game ends when one of two conditions is met:
 #The pool of civilian ships has been exhausted.
 At the end of the game, the points are tallied as described above in the “Winning the Game” section, and the winner is announced.
 
+
+===Examples===
+Image legend:
+*White square: Unoccupied solar system
+*Square with U: Uninhabitable solar system (can only be colonized by mining robots)
+*Square with X: Destroyed solar system
+*Square with A: Contains an alien artifact
+*Red square: Solar system inhabited by scientists
+*Blue square: Solar system inhabited by mining robots
+*Green square: Solar system inhabited by merchants
+*Black square: Solar system inhabited by settlers
+*Circles: Leaders corresponding to the same color scheme as above.  The number in the circle is the player who owns that leader.
+
+====2 Players, Basic Round====
+Initial Board:
+[http://www.logosatlas.com/GSoC/board1.jpg img]
+*Player 1 places a government leader
+*Player 1 places a mining robot.  Since no mining leader exists in that region, the resource goes to the government leader.  Thus, Player 1 gains one raw material resource.
+[http://www.logosatlas.com/GSoC/basic2.jpg img]
+*Player 1's turn ends and he refills his civilian fleet to 6 ships
+
+*Player 2 places a mining leader
+*Player 2 places a mining robot.  Player 2 gets one raw material resource since he owns the mining leader for that region.
+[http://www.logosatlas.com/GSoC/basic3.jpg img]
+*Player 2's turn ends and he refills his civilian fleet to 6 ships
+
+====2 Players, Internal Conflict====
+Initial Board:[http://www.logosatlas.com/GSoC/internal1.jpg img]
+
+*Player 1's Civilian ships: 2 merchants, 1 settler, 3 scientists
+*Player 2's Civilian ships: 1 scientist, 3 mining robots, 1 settler, 1 merchant
+
+*Player 1 places a merchant leader.  This leader creates an internal conflict with Player 2's merchant leader. 
+[http://www.logosatlas.com/GSoC/internal2.jpg img]
+
+Internal Conflict:
+*Initial strength is determined by the number of technological solar systems (red squares) adjacent to each leader
+**Player 1 strength: 2
+**Player 2 strength: 1
+*Players may send in scientists as reinforcements
+**Player 1 (the attacker) sends in his 3 scientists bolstering his strength to 5
+**Player 2 (the defender) has only 1 extra scientist so he opts not to send the scientist in.  His final strength is 1.
+*Player 1 wins the conflict
+*Player 2's leader is removed from the board
+*Player 1 receives 1 technology resource for winning
+
+Player 1's turn continues:
+*Player 1 places a merchant settlement and receives 1 money resource.
+[http://www.logosatlas.com/GSoC/internal3.jpg img]
+*Player 1 and 2 refill their civilian fleet to 6 ships
+
+*Player 2 uses one of his weapon ships to destroy a solar system.  This splits the region into two regions.
+*Player 2 places his merchant leader.  Since the region has been split, there is no conflict.
+[http://www.logosatlas.com/GSoC/internal4.jpg img]
+
+====2 Players, External Conflict====
+Initial Board:[http://www.logosatlas.com/GSoC/external1.jpg img]
+
+*Player 1's Civilian ships: 3 merchants, 2 settlers, 1 mining robot
+*Player 2's Civilian ships: 3 mining robots, 3 settlers
+
+*It is currently player 2's turn
+*Player 2 places a settler.  This settler creates a union between two regions.  The regions have a conflict of merchant leaders.  This triggers an external conflict.
+[http://www.logosatlas.com/GSoC/external2.jpg img]
+
+External Conflict:
+*Initial strength is determined by the number of solar systems occupied by the leader's type in each leader's region.  In this case, merchants (green squares).
+**Player 1 strength: 3
+**Player 2 strength: 5
+*Players may send in reinforcements of the same type as the leader (merchants)
+**Player 1 (the attacker) has no merchants to send.  Final strength: 5
+**Player 2 (the defender) has 3 extra merchants, but chooses to only send 2 since he only needs a tie to win.  Final strength: 5
+*Player 2 wins the conflict
+*Player 1's merchant leader is removed from the board.  Player 2 receives 1 money resource.
+*All merchant solar systems on Player 1's side are vacated.  Player 2 receives 1 money resource for each of these solar systems (5 total)
+
+Player 2's turn continues:
+*Player 2 places a settler and gains 1 people resource.
+*Player 2's turn ends
+**Both players refill their civilian fleets to 6 ships
+**Player 2 harvests an alien artifact since he has a merchant leader in a region which contains at least 2 alien artifacts
+[http://www.logosatlas.com/GSoC/external3.jpg img]
+
 ==Project Details==
 
 ===Planned Implementation===
