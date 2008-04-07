@@ -98,17 +98,30 @@ These are features that are NOT required for the game to work or be balanced, bu
 *My hours (if needed for communication) would be basically 100% flexible. (CS majors don't sleep)
 
 ==Milestones/Time Estimates==
-#May 15th: Base ruleset will be finalized (I will be working on it on/off until then between classes and finals). 
-#May 23rd: Clients/Servers will be able to see two ships in-game (BC and support). 
-#May 30th: Ships in-game will now have a correct list of components internally.(All _Basic components and _Basic ships will be complete)
-#June 6th: The client will display fully detailed ship status (component status). Client/Server will follow  turn processing order.
-#June 13th: Client/Server will allow battles to take place between battlecruisers. (This is the first playable milestone) 
-#June 20th: Clients will be able to issue 4 order types: Move,Repair,Target,Takeover. These will be able to be issued to ships as per their permissions. 
-#July 4th: Flak ships will be able to attack enemy support craft. 
-#July 11th: Clients will force battlecruisers to check components and modify their capabilities as expected. Battlecruisers will be destructible from core damage only. 
-#July 18th: Clients will be able to issue two planet orders: Mode and Construction. 
-#August 1st: Atmosphere (flavor text, titles) will be inplace (enough to feel immersion) 
-#August 3rd -> August 25th->:Balancing, catchup, and bugfix. If time permits, addition of wishlist features. 
+#May 15th: Base ruleset will be finalized (My finals end on the 14th)
+#May 14th-16th: Write a small testing environment for ships. (Single location that displays ships at the location) Includes writing a simple planet class.
+#May 19th-21st: Write two ship superclasses, and one stub implementation of each. 
+#May 21st-23rd: Write stub versions of all support ships as implementations of the superclass.
+#May 25th-28th: Begin writing stubbed versions of all _Basic components.
+#May 28th-30th: Complete _Basic components. Add in component lists to _Basic ship classes.
+#June 2nd-6th: Write display system for ships. This will show the client the status of components on a battlecruiser and the status of a support craft.
+#June 9th-10th: Write recognition for the server to detect that a battle should take place, and pass off to combat code.
+#June 10th-13th: Write combat code that follows the rules outlined for combat between battlecruisers.
+#June 15th-17th: Write move order code that updates on a turn basis.
+#June 17th-18th: Write repair order code that can be issued to support craft.
+#June 18th-20th: Write target/takeover orders that can be issued to battlecruisers. 
+#June 22nd-25th: Write server turn order processing. Includes rez collection from planets.
+#June 25th-27th: Heavy testing of the components of the combat code. Rewrite testing environment to include multiple locations to better test combat code and movement code.
+#June 30th-July 1st: Write server detection of flak ships for destruction of enemy support craft.
+#July 2nd-4th: Write server detection of scouts for vision purposes, and include checks for present flak ships.
+#July 6th-10th: Write in damage processing on battlecruisers so that components modify capabilities.
+#July 11th: Testing of component damaging. (Using the combat code from before)
+#July 14th-16th: Write planetary mode switching orders. Implement modes for planets.
+#July 16th-18th: Write planetary construction order. Implement construction queue on the planet.
+#July 21st-25th: Out of town.
+#July 28th-30th: Write combat descriptor generator code. Insert into combat feedback.
+#July 30th-August 1st: Write lots of descriptors. Other flavor text insertion.
+#August 3rd -> August 25th->:Balancing, catchup, and bugfix. If time permits, addition of wishlist features.
 
 I have scheduled all milestones on Fridays, this is so that I have a two day buffer zone to fix any problems/catch up as needed.
 
