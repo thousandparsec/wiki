@@ -9,26 +9,28 @@ Parsek is one of the [[clients]] for Thousand Parsec games. It is designed to ru
 First you will need to set up KDE 4 development environment. This means that you get Qt 4.3 and kdelibs installed. The complete process is described on [http://techbase.kde.org/index.php?title=Getting_Started/Build/KDE4 this web page].
 
 === libtpproto-cpp library ===
-Before trying to compile Parsek you will also need to compile and install libtpproto-cpp library. [http://sourceforge.net/project/showfiles.php?group_id=132078&package_id=153887 Download it from here].
+Before trying to compile Parsek you will also need to compile and install libtpproto-cpp library. [http://sourceforge.net/project/showfiles.php?group_id=132078&package_id=153887 Download it from here] or get the latest source code from the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-cpp.git;a=summary Git repository].
 
 === Get Parsek source code ===
-The source code for Parsek is available in [[Git]] repository of Thousand Parsec project. To get the source code for Parsek, run the command (you need to have git and cogito installed):
+The source code for Parsek is available in Subversion (SVN) repository of KDE project. To get the source code for Parsek, run the command:
  
- cg-clone git://git.thousandparsec.net/git/parsek.git
+ svn co svn://anonsvn.kde.org/home/kde/trunk/playground/games/parsek/
 
 You use this command only for the first time you are getting the source code. Later, to update to the latest version of source code, you run: 
 
- cg-update
+ svn update
 
 from within the parsek folder.
 
 === Compiling Parsek ===
 Now that you have development environment ready and source code on your computer it is time to compile Parsek. For this it is recommended that you first create a separate folder for building. Then you move into this folder and issue this command: 
 
- cmake -DCMAKE_BUILD_TYPE=debugfull /home/kde4dev/parsek/src
+ cmake -DCMAKE_BUILD_TYPE=debugfull /home/kde-devel/parsek
 
-Be sure to replace /home/kde4dev/parsek/src with the actual path to Parsek source code folder. After the cmake command finishes (make sure it finds everything needed) it is time to actually run the compilation by running the command: 
+Be sure to replace /home/kde-devel/parsek with the actual path to Parsek source code folder. After the cmake command finishes (make sure it finds everything needed) it is time to actually run the compilation by running the command: 
 
  make
 
-from within the build folder. After make finishes successfully you should have the parsek binary in the build folder.
+from within the build folder. After make finishes successfully you should have the parsek binary in the build folder. Try to run it:
+
+ ./parsek
