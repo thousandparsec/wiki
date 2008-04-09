@@ -47,7 +47,7 @@ A little time before May 28 I will present some screenshots for the interface la
 
 === Phase 3 -- Implementation ===
 
-The coding commences. Before program midterm I hope to achieve at least a state of MTSec-like playability.
+The coding commences. Before program midterm I hope to achieve at least a state of MiniSec-like playability.
 
 === Phase 4 -- Documentation, testing and further content creation ===
 
@@ -67,3 +67,34 @@ I always given high value to user submission evaluation in my projects, what can
 
 * Homepage : http://chaosforge.org/ 
 * IRC Nick : Epyon
+
+== Detailed timeline ==
+
+A detailed timeline is hard to write without a good plan of implementation and an extended knowledge of the TP framework, hence this is just a guideline that is subject to change before May 25.
+
+=== April 21 -- May 25 ===
+
+Design, planning, content creation and research.
+
+=== May 25 -- July 7 ===
+
+* May 25 - May 31 : application framework, basic class structure, and the ability to handle connections, no visual yet -- Lua support if agreed upon
+* June 1 - June 7 : GUI framework implementation (all needed windows, their skinning and layout), debug ingame console (hidden) for debuging and tracking of low-level connection information
+* June 8 - June 14 : basic starmap (rendering, visualisation, object picking and information browsing) 
+* '''MILESTONE 1''' (June 14) - game connects to a simple game server (MiniSec?) and is able to provide data on the game in progress
+* June 15 - June 21 : messaging and turn organization (timing)
+* June 22 - July 5 : orders handling and order sending
+* July 6 - July 12 : preparations for initial release (polishing and documentation, testing, MTSec/MiniSec testing, eventual additional media)
+* '''MILESTONE 2''' (July 12) - client will be able to play a MiniSec or MTSec game (without bigger problems)
+
+=== July 13 -- August 18 ===
+
+* July 13 - July 19 : streamlining and removing of unnecessary visuals depending on ruleset and game situation
+* July 20 - July 26 : implementation of any additional functionality that might help other rulesets, help system and help file downloading
+* July 27 - August 2 : visual and media improvements (also for ship/element info screens)
+* August 3 - August 18 : polishing up, installer and additional help files, finalization, documentation before the final deadline. Additional buffer time for an unexpected delay.
+* '''MILESTONE 3''' (August 18) - the client is ready for beta deployment and final evaluation.
+
+=== August 11+ ===
+
+Eventually additional media and lua-scripts for other servers, bigfixing, RFE handling. If I'd do this project, I'd commit myself to at least keeping it up to date with the servers and the rulesets.
