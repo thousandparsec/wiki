@@ -72,6 +72,37 @@ Rules design is something that I needed to learn well, because good, balanced an
 * Homepage : http://chaosforge.org/ 
 * IRC Nick : Epyon
 
+== Detailed timeline ==
+
+A detailed timeline is hard to write without a good plan of implementation and an extended knowledge of the TP framework, hence this is just a guideline that is subject to change before May 25.
+
+=== April 21 -- May 25 ===
+
+Design, planning and research. 
+
+=== May 25 -- July 7 ===
+
+* May 25 - May 31 : application framework, basic class structure, and the ability to handle connections -- basic framework, possibly Lua support  
+* June 1 - June 7 : basic world generation (names, descriptions, systems, trade info), sending them to the client (and if necessary, changes to one of the clients)
+* June 8 - June 14 : basic orders (trade, movement, ship upgrades), trade system, combat code
+* '''MILESTONE 1''' (June 14) - game needs to be operable by multiple clients, with full information for all
+* June 15 - June 21 : events (combat events, planetary events, information events), event generation, message generation
+* June 22 - June 28 : non-player organizations (generation, AI, ownage of systems, system conquering, reputation system, and display to the player)
+* June 29 - July 5 : missions (random generation, descriptions, rewards and completion and progress checking)
+* July 6 - July 12 : preparations for a open testing server (polishing and documentation, server setup, testing, client modifications, eventual additional media for the graphical clients)
+* '''MILESTONE 2''' (July 12) - server will be playable and open to people, a discussion forum, or other medium will be set up to playtest/discuss the game. I will also provide some initial beta-testers ;)
+=== July 13 -- August 18 ===
+
+* July 13 - July 19 : additional rules (information propagation, NPC helpers (see below) implementation))
+* July 20 - July 26 : roles revisited (balancing and additional content rules for the trade, piracy, bounty hunting and military career paths)
+* July 27 - August 2 : lategame improvements (buying fixed world elements, like hangars, bases etc, rules for them)
+* '''MILESTONE 3''' (August 2) - the basic game features are complete, the game is initially balanced, no longer in testing, but a beta.
+* August 3 - August 18 : polishing up, finalization, documentation before the final deadline. Additional buffer time for an unexpected delay.
+
+=== August 11+ ===
+
+This is one of the games that if executed well always has room for improvement. If it will work, and start gaining players, I'm sure to work on it more (including maybe even a dedicated graphical client). 
+
 == Comments ==
 
 '''Nash''':
