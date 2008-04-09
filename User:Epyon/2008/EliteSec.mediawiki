@@ -96,8 +96,8 @@ Design, planning and research.
 * July 13 - July 19 : additional rules (information propagation, NPC helpers (see below) implementation))
 * July 20 - July 26 : roles revisited (balancing and additional content rules for the trade, piracy, bounty hunting and military career paths)
 * July 27 - August 2 : lategame improvements (buying fixed world elements, like hangars, bases etc, rules for them)
-* '''MILESTONE 3''' (August 2) - the basic game features are complete, the game is initially balanced, no longer in testing, but a beta.
 * August 3 - August 18 : polishing up, finalization, documentation before the final deadline. Additional buffer time for an unexpected delay.
+* '''MILESTONE 3''' (August 18) - the basic game features are complete, the game is initially balanced, no longer in testing, but a beta.
 
 === August 11+ ===
 
