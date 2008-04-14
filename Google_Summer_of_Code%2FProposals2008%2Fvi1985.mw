@@ -178,6 +178,9 @@ I want to do this project because it is very interesting and challenging. It is 
 
 
 '''Programming Example''': 
+Here's an example of a console-based space-conquest game I finished developing just now, as part of my proof-of-concept code (I intended to create an AI agent for it using a simplified version of the proposed design, but I was advised to not proceed with it at the moment). It is bug-free as far as I know, and completely functional for human players (AI players are idle). Here is the link: [http://www.4shared.com/file/44036400/443d254c/ConsoleConquest.html?dirPwdVerified=d5bf75e8]
+
+
 Here's a rather simple, but neat, example of genetic programming (a day's worth of hacking), which solves a class of non-trivial problems in arithmetic. It is of a quite different design than explained above, but it illustrates how "letting evolution run its course" can solve non-trivial problems. '''''Here is the link:''''' [http://www.4shared.com/account/file/41671485/10b80908/genArithmetic.html]. I have started slowly working on a checkers AI that implements the design above for testing purposes, but I'm afraid it won't be ready soon due to university workload.
 
 '''Contact info''': victor.ivri AT gmail DOT. com
