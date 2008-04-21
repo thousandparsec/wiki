@@ -311,6 +311,10 @@ It would be useful to have a tool that measures how fast various operations occu
 
 It would be helpful to start with one of the protocol libraries.
 
+=== Wireshark dissector === 
+
+It would be helpful to have a module for wireshark (previously ethereal) to decode TP frames. This would help debugging in some cases.
+
 = Python Based Ideas =
 
 Thousand Parsec uses a lot of python. These projects are generally to do with improve some python part of Thousand Parsec.
