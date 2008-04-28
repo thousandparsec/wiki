@@ -12,7 +12,7 @@ make
 sudo make install
 
 cd ..
-cg-clone git://git.thousandparsec.net/git/tpserver-cpp.git#rfts
+cg-clone git://git.thousandparsec.net/git/tpserver-cpp.git
 cd tpserver-cpp
 ./autogen.sh
 PKG_CONFIG_PATH=/opt/tpserver-cpp/lib/pkg_config ./configure --prefix=/opt/tpserver-cpp
@@ -24,7 +24,6 @@ cp quickstart-* /opt/tpserver-cpp/etc
 cd /opt/tpserver-cpp/bin
 ./tpserver-cpp -C ../etc/quickstart-<gametype>
 </pre>
-
 
 == Building on Mac OS X with Fink ==
 
