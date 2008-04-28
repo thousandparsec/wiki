@@ -1,26 +1,28 @@
+Article Creator [[user:Jphr| Ryan Neufeld]]
+
 == Ruleset Documentation ==
-The ruleset will emulate an almost complete game of Risk. The only features not guaranteed (but very likely) in the GSoC iteration will be continent-ownership based reinforcements and a cards system.
+The ruleset will emulate an almost complete game of Risk with a modification to the turn structure. Instead of turns playing out player-by-player they play out in a more 4X “all-at-once” fashion. The only features not guaranteed (but very likely) in the GSoC iteration will be continent-ownership based reinforcements and a cards system.
 
 
 == Starting Turns ==
-*An option will exist for games to begin by random assignment of territories to players or by turn-based selection of territories. Each territory will receive one unit from that player (to signal ownership). 
+*An option will exist for games to begin by random assignment of territories to players or by turn-based selection of territories. Conflicts between players can be resolved by dice roll. The losing player may be given the opportunity to pick a new territory in a solitary turn, or by random assignment. Each territory will receive one unit from that player (to signal ownership). 
 **It may be possible to not require a unit to signify ownership, as TP can easily remember who owns what; undefended territory will simply require an enemy unit moving onto it to claim it.
-*Players will then proceed to place additional units onto their territories, turn-by-turn, or in a lump, one turn, fashion (depending on the chosen implementation)
+*Players will then proceed to place additional units onto their territories. This may be done all at once, or x amount per player per round. It may seem more fair to players if the latter is used.
 *Having finished starting turns normal play will then begin.
 
 
 == Normal Turns ==
-Since TP exists in a simultaneous order system additional concessions and considerations must be made for Risk's “take turns” playstyle. I currently have a few thoughts on how to get around this. First idea, considering the galaxie client is known to update relatively transparently, is to have “moves” in a players “turn” take place in ~5 second rounds. I.e. moving a ship to attack occurs over one round. The board quickly updates, then the player continues, until they take no action for 2-3 turns or they choose to end their “turn.” To control “turns” a flag can simply be held for whose turn it is, and only that player may make actions in the microround. This way players will be aware of moves as they take place, and not be forced to refresh after a players round to find they have been completely wiped out. 
-
-Should this be unsatisfactory I am also concurrently proposing the creation of a Modified Risk Ruleset that has players take actions at the same time, with a bit of creative conflict resolution.
-
+Contrary to my concurrent proposal, this version of my ruleset will have players taking turns at the same time. Each round will be a short, 10-20 second round, wherein each player can make one move or attack. Conflicts between players, say two territories attack eachother, can be resolved by evening the odds from 3-2 attack-defense to 3-3 attack-attack. Other conflicts, for example, attacking a territory, with a retreating defender, can be resolved with reduced odds for the defender, 3-1 instead of 3-2.
 As for a logical turn structure it goes as follows:
-*At the start of each turn players will receive reinforcements based upon how many territories they own (sorry no "continents" or cards yet.)
-**Depending on the TP framework players may be able to simple "spawn" units from their pool of reinforcements at any owned space. The only issue is that once any action occurs a flag must be switched disallowing placing of new reinforcements.
-*The player then has a fixed amount of time to attack as they see fit (I am not sure of how long this should be yet, but there should exist an option for a player to end their turn early.)
-*When attacking an attack command will start one "round" of Risk attacking, rolling virtual die to determine the outcome. If the enemy is defeated the player can simply move units onto the territory to claim it. If the enemy is not defeated the player may choose to attack again for another attack "round". 
-**This attack system will be easy to manage because each attack "round" or movement can be an "action." The only catch is disallowing the movement of units around without attacking, since this counts as the "free move" part at the end of a Risk turn. The action of moving units around could also trigger the end of the turn (a possibility.)
-*Once the player has finished all attacks they want to do there should exist a way to signal an end of turn, either by making a "free move" to move units around, or by performing an action labeled "end turn" from one of the players planets. Ideally the command to end turn would not be on every planet, as I can imagine the angry cursing of a player accidentally clicking end turn.
+*At the start of each set of x turn players will receive reinforcements based upon how many territories they own (sorry no "continents" or cards yet.) x will be some number of turns found to be a fair (via testing.)
+**If it is possible I would like for the reinforcements turn to be a longer turn, around a minute or so. 
+**Once the reinforcement turn is finished all units allocated will be “built” on the location they are issued.
+*During normal “micro-turns” players will have a short amount of time to issue a singular order. Orders are executed at turns end, with results reported back to the user.
+**This attack system will be easy to manage because each attack "round" or movement can be an "action."
+**With the modified ruleset there exist possible conflicts to be managed; Some such conflicts are:
+***Two territories attacking each other
+***Defending territory is also retreating
+***etc.
 
 
 == Winning/Losing ==
@@ -38,25 +40,22 @@ I'd like to walk through a general sample of a few turns of the ruleset. The exa
 *Next round only C remains, X and Y both try to claim it, Y wins.
 *X now owns A, B. Y now owns C, D, E
 *X will get 4 reinforcements to place, and Y will get 6. (This is some arbitrary number of reinforcements per territory)
-*Both players take turns placing 3 reinforcements per turn (so everyone can see what is being place where) until all reinforcements are spent.
+*Both players place 3 reinforcements per turn (so everyone can see what is being place where) until all reinforcements are spent.
 *X places 2 units on A and B. Y places 2 on C, D but only 1 on E. Y has 1 reinforcement left.
 *Y neglects to place his last unit, and after 2 absent turns, forfeits those units. Normal play now begins
-*The first turn for a normal player flips a flag signifying it is their turn, when their turn is over (for all their rounds) a flag is flipped signifying it is the NEXT players turn
-*It is X's turn first, X attacks E from A. X is successful, losing no units. X decides not to move any units
-*X decides next to attack D from A. X loses 1 unit, Y loses 1 unit.
-*X decides to use B to attack A. X beats Y. X moves 1 unit into D.
-*X ends his turn. X now owns A(1),B(1),D(1).E(1). This is in stark contrast to my concurrent application.
-*Y begins his turn with a paltry 2 units on C. Y attacks A from C, Y loses 1 unit. Y ends his turn, owning C(1).
-*At the end of the first round X owns A(1),B(1),D(1).E(1). Y owns C(1).
-*Since the first round is over players now receive reinforcements.
-*X receives 8 units, places them all on A.
-*X now attacks C from A. X loses 4 units, but ultimately wins.
-
-I just want to make note again of the constast between this game and my concurrent example in the Modified Risk Proposal. It is important to notice that the modified game actually plays a lot more “fairly.” That is not to say it is the best, but it does provide a more 4X play style and easier implementation in the TP framework. If llnz is a Risk purist, however, he may prefer this application.
+*X decides to attack E from A, Y decides to attack B from D. Both players are completely successful, except neither moves units onto their conquered territories.
+*At this point X owns A(2), E(0). Y owns B(0), C(2), D(2).
+*X and Y now both try to attack eachother on A and C. This situation calls for even odds, Y defeats one unit of A.
+*At this point X owns A(1), E(0). Y owns B(0), C(2), D(2).
+*X now tries to retreat from A to E. Y attacks A from C. This situation calls for reduced odds for A, unfortunetely, and A is defeated. Y moves one unit onto A
+*At this point X owns E(0). Y owns A(1),B(0), C(2), D(2).
+*X isn't defeated yet, as he still owns one territory. Luckily for him there is a reinforcement round next. X receives 2 units which he places on E. Y receives 8, and places them all on B.
+*At this point X owns E(2). Y owns A(1),B(8), C(2), D(2).
+*X attempts to attack A from E, Y attacks E from B. Since E is retreating it takes reduced odds on the roll, and Y's 8 units crush X's 
 
 
 == Expected Problems ==
-As I spoke about quite extensively above I expect a wide array of problems in implementing player-by-player turns. The solution would require other players to be locked out of making commands while it was not their turn. Mithro has mentioned this is not an ideal solution for the TP framework, but I am willing to put forth the effort to find a way if by some change of heart it is desirable to produce a true Risk clone ruleset.
+I imagine most of the problems I encounter implementing the ruleset will stem form turn-ordering, especially in regards to conflict resolution when two or more players attempt to colonize the same territory. As I noted above this will be solved by having one player win the spot, while the others get to act exclusively in the next turn to pick their replacement territory. Should this approach fail I may allow the conflict resolution to give the losing player/s an adjacent territory instead of a "free turn." If time permits, and I do begin developing advanced features in the game I expect to run into problems implementing a card system like Risk's. Should a the traditional system be unimplementable I may modify the game mechanic in such a fashion that it still fits with the game, but does not force the TP framework into an awkward situation.
 
 
 == Features for Further Implementations ==
@@ -65,10 +64,3 @@ These features will either be implemented in later iterations of the ruleset or 
 *Cards. This feature may involve extending the server a little, as I don't see it as ideal to have "cards" count as little ships; I just don't see that as a very refined approach.
 *Rock-Paper-Scissor interaction of different unit types. This would involve 3 (or more) different types of units, either costing the same amount of reinforcements to create, or variable costs. This would need a tight leash on it as it could quickly transform the ruleset into something entirely not Risk-like and more 4X-space-game like. It is a possibility that the ruleset could fork into other derivatives.
 *A bevy of other features from [http://en.wikipedia.org/wiki/Risk_2210_A.D. ''Risk 2210 A.D.'' ]. If you notice any features in 2210 you would like to see in the GSoC iteration please leave a comment at the end of the page.
-
-== Your Comments ==
-Feel free to leave comments about the ruleset and improvements I should make.
-
-== Links ==
-* [[Jphr_proposal| jphr's Draft Proposal ]]
-* [[user:Jphr| My User Page]]
