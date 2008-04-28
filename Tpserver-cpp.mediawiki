@@ -10,6 +10,12 @@ See [[Tpserver-cpp Setup]] for some hints on building tpserver-cpp.
 
 To quick-start a game, use the corresponding quickstart-''rulesetname''.conf configuration files. For more options, see the sample.conf files.
 
+==Documentation==
+
+* Old version of the [http://code.thousandparsec.net/~lee/ruleset-dev.pdf Ruleset Development Book]
+* Pages on [http://www.thousandparsec.net/tp/dev/documents/tpserver-cpp main website]. Mostly well out of date.
+* Add pages on the wiki here...
+
 ==Future work ideas==
 See [[Ideas for Programmers]].
 
