@@ -1,7 +1,7 @@
 '''TP04''' is the fourth version of [[Protocol|Thousand Parsec protocol]] and is currently in active development. The protocol specification is going to be written in XML. Some of the planned features are:
 
 ; Full XML protocol specification
-: The protocol will be completely specified in an XML document. This will allow more dynamic languages (such as Python, Ruby and PHP) to read in the protocol document and dynamical create the correct data. This doesn't mean our good documentation is going away (for those people who want to implement it the “hard way”), instead it will be more accurate and contain better linking, lot more useful tables and even an index. The documentation will all be generated using XSLT from the protocol XML document so it will also always be current. The generated protocol document is [http://www.thousandparsec.net/tp/dev/protocolxml.php here].
+: The protocol will be completely specified in an XML document. This will allow more dynamic languages (such as Python, Ruby and PHP) to read in the protocol document and dynamical create the correct data. This doesn't mean our good documentation is going away (for those people who want to implement it the “hard way”), instead it will be more accurate and contain better linking, lot more useful tables and even an index. The documentation will all be generated using XSLT from the protocol XML document so it will also always be current. The generated protocol document is [http://www.thousandparsec.net/tp/dev/documents/protocolxml.php here].
 
 ; Meta Protocol definition
 : A definition on how to talk the “meta protocol”, IE talking to the metaserver and find local games will be specified. It will be almost identical to the current protocol specified separately.
