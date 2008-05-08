@@ -1,0 +1,39 @@
+This page documents the '''Sockets''' and the flow of information into and out of [[tpserver-cpp]].
+
+= Types of Socket =
+There are three types of socket. The first is the listen sockets, used to listen for connections and accept them when they arrive. The second is the Player sockets, which handle the player protocol. The last is the outgoing connections, such as the MetaserverConnection which talks to the metaserver.
+
+There are several types of listen and player sockets. When a listen socket accepts a connection, it creates a corresponding player socket. These types and relations are:
+* TcpSocket, creates PlayerTcpConnection
+* TlsSocket, creates PlayerTlsConnection
+* HttpSocket, creates PlayerHttpConnection
+* HttpsSocket, creates PlayerTlsConnection
+
+The base classes ListenSocket and PlayerConnection provide most of the functionality. 
+
+ListenSocket handles the file descriptor, creating the listen socket, and accepting connections. The subclasses handle setting some defaults, and what to do with the connection once it is accepted.
+
+PlayerConnection handles all of the state machine for player connections, and handling the various frame types. The subclasses handle low-level details, such as read and writing to the sockets, and the initial version checking.
+
+=Network class and Connection object handling=
+The Network class is the main event manager for tpserver-cpp. The basis of which is a select() loop. Connection objects represent the different sockets (and files) open. ListenSocket and PlayerConnection are both subclasses of Connection.
+
+When a new Connection is added to Network, the Connection's file descriptor is added to the fd_set for reading, and is checked for data in the select call. If there is data ready, the Connection's process() method is called, which should read the data from the socket. If the status of the socket is 0 after the call to process(), it is removed from the set of connections and deleted (freed/destructed). Sockets should not block so that other connections are not delayed.
+
+If a Connection is not able to send all it's data and is set with non-blocking sockets, it can add itself to the writequeue in Network, so that it can be tested to see if it is able to take more data.
+
+There is a significant difference between the usual checking for data to be read and waiting for data to be written. The write queue is a one-shot queue; once the Connection can write, it is removed from the write queue. If it has more data to write, it had to re-add itself to the write queue. For reading, the Connection is left in the set for checking for more data until it's status is 0 (disconnected) or it is removed for some reason.
+
+=Reading Frames=
+When a PlayerConnection has data ready, this is what it does.
+
+PlayerConnection::process() is called. It checks what state it is in (Pre-connect frame, waiting for login, or in game). If in pre-connect, it calls the verCheck() method, implemented by the subclass. If waiting for login or in game, another PlayerConnection method is called, which do similar things. First it creates a frame to receive the incoming frame, then it calls the subclass's readFrame().
+
+In general the subclass will do the following things (based on PlayerTcpConnection). First it will try to read the header. If it fails (other than a -EAGAIN) the socket is closed and it returns false. If it gets -EAGAIN, it doesn't close the socket, but does return false. After the header is read, it is given to the frame to parse the header. Some checks are done (such as the header was decoded ok, and the frame size isn't too big), then the body is read. The same error conditions are checked. Once all the body is received, it is given to the frame, some more checks are done (is the protocol version number the same, is the frame type valid), then true is returned.
+
+When false is returned, the temporary frame is deleted and everything returns to the caller back to Network. When true is returned, PlayerConnection checks the type (and sometimes the protocol version) to see what to do with the frame. After the frame has been processed by either PlayerConnection (for out of game frames) or PlayerAgent (for in game frames), the frame is deleted and the methods return back to Network.
+
+=From connecting to disconnected=
+Shown in this section is the flow of activities from before a connection is made, to when it is disconnected.
+
+Well... it might when I get to writing it.
