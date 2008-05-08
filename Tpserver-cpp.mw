@@ -14,6 +14,7 @@ To quick-start a game, use the corresponding quickstart-''rulesetname''.conf con
 
 * Snapshot version of the [http://code.thousandparsec.net/~lee/ruleset-book.pdf Ruleset Development Book]. Updated sometimes, based on ruleset-book in git. 
 * Pages on [http://www.thousandparsec.net/tp/dev/documents/tpserver-cpp main website]. Mostly well out of date.
+* [[Tpserver-cpp/Sockets|Sockets]] and the flow of data.
 * Add pages on the wiki here...
 
 ==Future work ideas==
