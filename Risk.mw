@@ -3,27 +3,36 @@ Article Creator [[user:Jphr| Ryan Neufeld]]
 == Ruleset Documentation ==
 The ruleset will emulate an almost complete game of Risk with a modification to the turn structure. Instead of turns playing out player-by-player they play out in a more 4X “all-at-once” fashion. The only features not guaranteed (but very likely) in the GSoC iteration will be continent-ownership based reinforcements and a cards system.
 
+Update: I've started development of the Risk ruleset and as a consequence I cannot guarantee the validity of this document at any given time until the ruleset starts to solidify. I'll be going through the document today (May 14/08) and adapting things to reflect my current ideas about how the ruleset will work.
 
-== Starting Turns ==
-*An option will exist for games to begin by random assignment of territories to players or by turn-based selection of territories. Conflicts between players can be resolved by dice roll. The losing player may be given the opportunity to pick a new territory in a solitary turn, or by random assignment. Each territory will receive one unit from that player (to signal ownership). 
-**It may be possible to not require a unit to signify ownership, as TP can easily remember who owns what; undefended territory will simply require an enemy unit moving onto it to claim it.
-*Players will then proceed to place additional units onto their territories. This may be done all at once, or x amount per player per round. It may seem more fair to players if the latter is used.
-*Having finished starting turns normal play will then begin.
+
+== Initial Turns ==
+Due to some changes made to turn ordering and general play it is no longer necessary to have extra states to represent the start of a game. Games will simply launch into normal turns. Since no territories have been claimed players will only be able to attempt to build units on unclaimed territories to claim them. For posterity sake this action may be called "colonize" to attach a realistic name to the action.
+
+Mithro suggested a minimum number of units required to claim. While I agree with the aim, reducing "grab everything tactics" I think a balance exists with this strategy and more fortified strategies. If a player spreads themselves too thin they are more than likely to be outbid by other players, and will essentially be punished by the other players, and not the server. This is still to be considered.
+
+
+'''''NOTE''': Empty territories may be built on by any players in an auction style ''
+*''Most units attempted wins, other players are not docked units (but they could be :P.) ''
+*''In the case of a tie a virtual roll-off occurs, winner grabs the territory. A message could be displayed to users letting them know this occurred, or not.''
+
+'''NOTE''':'' A player must maintain a positive number of units on a territory to maintain ownership. Reduction to zero units will allow for colonization by other players. The possibility of stealing will be eliminated by the attack action, which will force a defeated territory to be colonized by the attacker.''
 
 
 == Normal Turns ==
-Contrary to my concurrent proposal, this version of my ruleset will have players taking turns at the same time. Each round will be a short, 10-20 second round, wherein each player can make one move or attack. Conflicts between players, say two territories attack eachother, can be resolved by evening the odds from 3-2 attack-defense to 3-3 attack-attack. Other conflicts, for example, attacking a territory, with a retreating defender, can be resolved with reduced odds for the defender, 3-1 instead of 3-2.
-As for a logical turn structure it goes as follows:
-*At the start of each set of x turn players will receive reinforcements based upon how many territories they own (sorry no "continents" or cards yet.) x will be some number of turns found to be a fair (via testing.)
-**If it is possible I would like for the reinforcements turn to be a longer turn, around a minute or so. 
-**Once the reinforcement turn is finished all units allocated will be “built” on the location they are issued.
-*During normal “micro-turns” players will have a short amount of time to issue a singular order. Orders are executed at turns end, with results reported back to the user.
-**This attack system will be easy to manage because each attack "round" or movement can be an "action."
-**With the modified ruleset there exist possible conflicts to be managed; Some such conflicts are:
-***Two territories attacking each other
-***Defending territory is also retreating
-***etc.
+My idea of how normal turns will occur has diverged greatly from what I originally conceived. This mainly stems from Mithro's valid concerns about short turns and slow gameplay. With his help I've modified the turn structure to play out with everyone issuing their orders and then at turn completion all orders are executed in some fixed order. This fixed order could give priority to territories with less connectivity to other territories, essentially crippling "hot spot" territories with as many as 5-6 adjacent territories. Aside from "which territory goes first" there is also precedence given to certain orders. That order follows:
+*'''Reinforce orders''': These orders will be executed first as they occur first in Risk. If a player tries to allocate say 150 units, when they only have 100 reinforcements only the FIRST 100 reinforcements will be issued. The fixed order of territories may be reversed or modified to favor higher risk territories.
+*'''Move orders''': Next all attempts by players to move units to an adjacent friendly territory will be executed. Players will no be able to make giant free moves as they can in normal Risk as at present I feel like this could really be abused (say like rearranging the entire board in one turn.)
+*'''Attack orders''': Next all attempts to move onto an enemy territory will be executed. This movement will result in a battle. Odds favor attacker, unless territories are mutually attacking each other (in which case odds are even). If the attacker defeats an entire army then all units are moved onto the territory. See NOTE at end of section.
+*'''Nop orders''': As with all rulesets the last order executed is always the no operation order. I still don't fully understand the workings of Nop (haven't gone through enough code:P).
 
+My only question left standing is what to do with excess orders? It could create the opportunity for alternative strategies by allowing a player to delay orders, but it also may be abused, or result in a disadvantage to players not understanding the turn order.
+
+You may have noticed I also took out the retreating from battle bonus. I am not really sure about this feature. I don't really think a defending territory should have the advantage of including retreated armies.
+
+
+'''''NOTE''': Any movement (friendly or attack) will only move 1 less units than the territory currently has. I.e. If I have 50 units and I try to attack with 50, or even 500, I only end up attacking with 49. That way I can't leave a territory with no units remaining.
+''
 
 == Winning/Losing ==
 *Should a player be completely wiped out they are exited from the game. It is a possibility that the user could still spectate the game, as having no territories owned would simply "skip" their turn.
@@ -31,31 +40,7 @@ As for a logical turn structure it goes as follows:
 
 
 == Example Game Session ==
-I'd like to walk through a general sample of a few turns of the ruleset. The example will have 5 territories, A through E, all fully connected to eachother. 2 players, X and Y, will be playing.
-*The game begins. Objects A through E are created, with all their connections.
-*Both players are informed they can place one colony, as they are in the Colonization phase.
-*X and Y both try to colonize A. A random number is generated and X wins the colony.
-*The next round disallows all players except Y from acting. Y can choose to colonize a different colony. Y picks E
-*There are still unclaimed territories so X and Y claim B and D respectively.
-*Next round only C remains, X and Y both try to claim it, Y wins.
-*X now owns A, B. Y now owns C, D, E
-*X will get 4 reinforcements to place, and Y will get 6. (This is some arbitrary number of reinforcements per territory)
-*Both players place 3 reinforcements per turn (so everyone can see what is being place where) until all reinforcements are spent.
-*X places 2 units on A and B. Y places 2 on C, D but only 1 on E. Y has 1 reinforcement left.
-*Y neglects to place his last unit, and after 2 absent turns, forfeits those units. Normal play now begins
-*X decides to attack E from A, Y decides to attack B from D. Both players are completely successful, except neither moves units onto their conquered territories.
-*At this point X owns A(2), E(0). Y owns B(0), C(2), D(2).
-*X and Y now both try to attack eachother on A and C. This situation calls for even odds, Y defeats one unit of A.
-*At this point X owns A(1), E(0). Y owns B(0), C(2), D(2).
-*X now tries to retreat from A to E. Y attacks A from C. This situation calls for reduced odds for A, unfortunetely, and A is defeated. Y moves one unit onto A
-*At this point X owns E(0). Y owns A(1),B(0), C(2), D(2).
-*X isn't defeated yet, as he still owns one territory. Luckily for him there is a reinforcement round next. X receives 2 units which he places on E. Y receives 8, and places them all on B.
-*At this point X owns E(2). Y owns A(1),B(8), C(2), D(2).
-*X attempts to attack A from E, Y attacks E from B. Since E is retreating it takes reduced odds on the roll, and Y's 8 units crush X's 
-
-
-== Expected Problems ==
-I imagine most of the problems I encounter implementing the ruleset will stem form turn-ordering, especially in regards to conflict resolution when two or more players attempt to colonize the same territory. As I noted above this will be solved by having one player win the spot, while the others get to act exclusively in the next turn to pick their replacement territory. Should this approach fail I may allow the conflict resolution to give the losing player/s an adjacent territory instead of a "free turn." If time permits, and I do begin developing advanced features in the game I expect to run into problems implementing a card system like Risk's. Should a the traditional system be unimplementable I may modify the game mechanic in such a fashion that it still fits with the game, but does not force the TP framework into an awkward situation.
+The old example session wasn't relevant with changes to turn ordering. I will attempt to create a new exampe game session ASAP.
 
 
 == Features for Further Implementations ==
