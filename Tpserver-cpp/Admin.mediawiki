@@ -58,6 +58,8 @@ The '''remote administration''' project intends to remove the internal console f
 | || Command Description Frame || Frame describing a command. || Response || 
 |-----
 | || Command Frame || Generic frame issuing a command to the server. || Request || 
+|-----
+| || Command Result Frame || Response frame with the result of the command. || Response || 
 |}
 
 ''The protocol specification document will soon be set in the protocol XML format currently used for the game [[protocol]].''
