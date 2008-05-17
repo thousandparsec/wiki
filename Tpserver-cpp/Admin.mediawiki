@@ -1,4 +1,4 @@
-The '''remote administration''' project intends to remove the internal console from [[tpserver-cpp]] and replace it with a protocol which can be accessed by administration clients in a variety of useful ways.
+The '''remote administration''' project intends to remove the internal console from [[tpserver-cpp]] and replace it with a protocol which can be accessed by administration clients in a variety of useful ways. This is being developed for [[Google Summer of Code]] 2008 by Aaron Mavrinac / [[User:Ezod|ezod]]. 
 
 == Plan ==
 
