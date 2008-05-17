@@ -4,17 +4,17 @@ The '''remote administration''' project intends to remove the internal console f
 
 === Functional Milestones ===
 
-* 2008-05-25: protocol specification document
-* 2008-06-02: tpserver-cpp will start as a daemon by default
-* 2008-06-13: tpserver-cpp will accept administration connections
-* 2008-06-13: tpadmin-cpp client will be able to connect to tpserver-cpp
-* 2008-06-20: tpserver-cpp will accept basic command set
-* 2008-06-20: tpadmin-cpp client will support command frames
-* 2008-07-07: tpserver-cpp will implement full command set
-* 2008-07-14: libtpclient/libtpproto will include a partial admin client
-* 2008-08-01: tpclient-pywx will be able to start and configure a server
-* 2008-08-08: tpclient-pywx will include a single-player GUI wizard
-* 2008-08-18: tpclient-pywx will check for AI clients, and be able to start and configure them
+* '''2008-05-25:''' protocol specification document
+* '''2008-06-02:''' tpserver-cpp will start as a daemon by default
+* '''2008-06-13:''' tpserver-cpp will accept administration connections
+* '''2008-06-13:''' tpadmin-cpp client will be able to connect to tpserver-cpp
+* '''2008-06-20:''' tpserver-cpp will accept basic command set
+* '''2008-06-20:''' tpadmin-cpp client will support command frames
+* '''2008-07-07:''' tpserver-cpp will implement full command set
+* '''2008-07-14:''' libtpclient/libtpproto will include a partial admin client
+* '''2008-08-01:''' tpclient-pywx will be able to start and configure a server
+* '''2008-08-08:''' tpclient-pywx will include a single-player GUI wizard
+* '''2008-08-18:''' tpclient-pywx will check for AI clients, and be able to start and configure them
 
 === Planned Clients ===
 
