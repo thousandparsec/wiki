@@ -26,11 +26,9 @@ No protocol is specified yet.
 
 These are the commands currently supported by the internal console.
 
-''To do: change command mnemonics to full synopses.''
-
 ==== QuitCommand ====
 
-'''quit''', exit
+'''quit''', '''exit'''
 
 Quit and shutdown the server.
 
@@ -38,7 +36,7 @@ Quit and shutdown the server.
 
 ==== EndTurnCommand ====
 
-'''end'''
+'''turn end'''
 
 End the current turn now and start processing.
 
@@ -47,7 +45,7 @@ End the current turn now and start processing.
 
 ==== TurnTimeCommand ====
 
-'''time'''
+'''turn time'''
 
 The amount of time until the next turn.
 
@@ -55,7 +53,7 @@ The amount of time until the next turn.
 
 ==== TurnResetCommand ====
 
-'''reset'''
+'''turn reset'''
 
 Reset the timer for the next turn.
 
@@ -64,9 +62,9 @@ Reset the timer for the next turn.
 
 ==== TurnLengthCommand ====
 
-'''length'''
+'''turn length''' tlen
 
-Sets the turn length, but doesn't affect the current turn. //Commented out.//
+Sets the turn length, but doesn't affect the current turn. ''Commented out.''
 
   uint32_t tlen = atoi(cmdline.c_str());
   Game::getGame()->setTurnLength(tlen);
@@ -74,7 +72,7 @@ Sets the turn length, but doesn't affect the current turn. //Commented out.//
 
 ==== TurnNumberCommand ====
 
-'''number'''
+'''turn number'''
 
 Gets the current turn number.
 
@@ -82,7 +80,7 @@ Gets the current turn number.
 
 ==== NetworkStartCommand ====
 
-'''start'''
+'''network start'''
 
 Starts the network listeners and accepts connections.
 
@@ -90,7 +88,7 @@ Starts the network listeners and accepts connections.
 
 ==== NetworkStopCommand ====
 
-'''stop'''
+'''network stop'''
 
 Stops the network listeners and drops all connections.
 
@@ -98,7 +96,7 @@ Stops the network listeners and drops all connections.
 
 ==== SettingsSetCommand ====
 
-'''set'''
+'''settings set''' setting value
 
 Sets a setting.
 
@@ -108,7 +106,7 @@ Sets a setting.
 
 ==== SettingsGetCommand ====
 
-'''get'''
+'''settings get''' setting
 
 Gets a setting.
 
@@ -116,7 +114,7 @@ Gets a setting.
 
 ==== PluginLoadCommand ====
 
-'''load'''
+'''plugin load''' plugin
 
 Loads a plugin.
 
@@ -128,7 +126,7 @@ Loads a plugin.
 
 ==== PluginListCommand ====
 
-'''list'''
+'''plugin list'''
 
 Lists the plugins that are loaded.
 
@@ -136,7 +134,7 @@ Lists the plugins that are loaded.
 
 ==== GameRulesetCommand ====
 
-'''ruleset'''
+'''game ruleset''' ruleset-name
 
 Sets the ruleset to be used by ther server.
 
@@ -148,7 +146,7 @@ Sets the ruleset to be used by ther server.
 
 ==== GameTpschemeCommand ====
 
-'''tpscheme'''
+'''game tpscheme''' tpscheme-name
 
 Sets the tpscheme implementation to be used by ther server.
 
@@ -160,7 +158,7 @@ Sets the tpscheme implementation to be used by ther server.
 
 ==== GamePersistenceCommand ====
 
-'''persistence'''
+'''game persistence''' method
 
 Sets the persistence method to be used by ther server.
 
@@ -172,7 +170,7 @@ Sets the persistence method to be used by ther server.
 
 ==== GameLoadCommand ====
 
-'''load'''
+'''game load'''
 
 Loads the initial data for the game.
 
@@ -180,7 +178,7 @@ Loads the initial data for the game.
 
 ==== GameStartCommand ====
 
-'''start'''
+'''game start'''
 
 Starts the game and the end of turn timer.
 
