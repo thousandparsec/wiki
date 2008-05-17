@@ -18,6 +18,10 @@ The '''remote administration''' project intends to remove the internal console f
 # Daemonize the server and make a different logging option default.
 # Remove [[libtprl]] dependency from packages.
 
+== Administration Protocol ==
+
+No protocol is specified yet.
+
 == Basic Command Set ==
 
 These are the commands currently supported by the internal console.
