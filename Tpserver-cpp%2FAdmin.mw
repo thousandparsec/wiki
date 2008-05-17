@@ -53,6 +53,8 @@ The '''remote administration''' project intends to remove the internal console f
 |-----
 | 3 || Connect Frame || || Request ||
 |-----
+| 4 || Login Frame || || Request ||
+|-----
 | || Get Active Commands Frame || Gets a sequence of active commands available on this server. || Request ||
 |-----
 | || Command Description Frame || Frame describing a command. || Response || 
