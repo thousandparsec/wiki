@@ -28,7 +28,7 @@ These are the commands currently supported by the internal console.
 
 ''To do: change command mnemonics to full synopses.''
 
-===== QuitCommand =====
+==== QuitCommand ====
 
 '''quit''', exit
 
@@ -36,7 +36,7 @@ Quit and shutdown the server.
 
   Network::getNetwork()->stopMainLoop();
 
-===== EndTurnCommand =====
+==== EndTurnCommand ====
 
 '''end'''
 
@@ -45,7 +45,7 @@ End the current turn now and start processing.
   Logger::getLogger()->info("End Of Turn initiated from console");
   Game::getGame()->getTurnTimer()->manuallyRunEndOfTurn();
 
-===== TurnTimeCommand =====
+==== TurnTimeCommand ====
 
 '''time'''
 
@@ -53,7 +53,7 @@ The amount of time until the next turn.
 
   std::cout << Game::getGame()->getTurnTimer()->secondsToEOT() << " seconds to EOT" << std::endl;
 
-===== TurnResetCommand =====
+==== TurnResetCommand ====
 
 '''reset'''
 
@@ -62,7 +62,7 @@ Reset the timer for the next turn.
   Game::getGame()->getTurnTimer()->resetTimer();
   std::cout << "Reset EOT timer, " << Game::getGame()->getTurnTimer()->secondsToEOT() << " seconds to EOT" << std::endl;
 
-===== TurnLengthCommand =====
+==== TurnLengthCommand ====
 
 '''length'''
 
@@ -72,7 +72,7 @@ Sets the turn length, but doesn't affect the current turn. //Commented out.//
   Game::getGame()->setTurnLength(tlen);
   std::cout << "Setting turn length to " << tlen << " seconds" << std::endl;
 
-===== TurnNumberCommand =====
+==== TurnNumberCommand ====
 
 '''number'''
 
@@ -80,7 +80,7 @@ Gets the current turn number.
 
   std::cout << "The current turn number is " << Game::getGame()->getTurnNumber() << std::endl;
 
-===== NetworkStartCommand =====
+==== NetworkStartCommand ====
 
 '''start'''
 
@@ -88,7 +88,7 @@ Starts the network listeners and accepts connections.
 
   Network::getNetwork()->start();
 
-===== NetworkStopCommand =====
+==== NetworkStopCommand ====
 
 '''stop'''
 
@@ -96,7 +96,7 @@ Stops the network listeners and drops all connections.
 
   Network::getNetwork()->stop();
 
-===== SettingsSetCommand =====
+==== SettingsSetCommand ====
 
 '''set'''
 
@@ -106,7 +106,7 @@ Sets a setting.
   Settings::getSettings()->set(cmdline.substr(0, pos1), cmdline.substr(pos1+1));
   std::cout << "Setting value of \"" << cmdline.substr(0, pos1) << "\" to \"" << cmdline.substr(pos1+1) << "\"." << std::endl;
 
-===== SettingsGetCommand =====
+==== SettingsGetCommand ====
 
 '''get'''
 
@@ -114,7 +114,7 @@ Gets a setting.
 
   std::cout << "Setting \"" << cmdline << "\" is set to \"" << Settings::getSettings()->get(cmdline) << "\"." << std::endl;
 
-===== PluginLoadCommand =====
+==== PluginLoadCommand ====
 
 '''load'''
 
@@ -126,7 +126,7 @@ Loads a plugin.
       std::cout << "Plugin \"" << cmdline << "\" was not loaded." << std::endl;
   }
 
-===== PluginListCommand =====
+==== PluginListCommand ====
 
 '''list'''
 
@@ -134,7 +134,7 @@ Lists the plugins that are loaded.
 
   std::cout << "These plugins are loaded: " << PluginManager::getPluginManager()->getLoadedLibraryNames() << std::endl;
 
-===== GameRulesetCommand =====
+==== GameRulesetCommand ====
 
 '''ruleset'''
 
@@ -146,7 +146,7 @@ Sets the ruleset to be used by ther server.
       std::cout << "Ruleset \"" << cmdline << "\" was not loaded." << std::endl;
   }
 
-===== GameTpschemeCommand =====
+==== GameTpschemeCommand ====
 
 '''tpscheme'''
 
@@ -158,7 +158,7 @@ Sets the tpscheme implementation to be used by ther server.
       std::cout << "TpScheme implementation \"" << cmdline << "\" was not loaded." << std::endl;
   }
 
-===== GamePersistenceCommand =====
+==== GamePersistenceCommand ====
 
 '''persistence'''
 
@@ -170,7 +170,7 @@ Sets the persistence method to be used by ther server.
       std::cout << "Persistence method \"" << cmdline << "\" was not loaded." << std::endl;
   }
 
-===== GameLoadCommand =====
+==== GameLoadCommand ====
 
 '''load'''
 
@@ -178,7 +178,7 @@ Loads the initial data for the game.
 
   Game::getGame()->load();
 
-===== GameStartCommand =====
+==== GameStartCommand ====
 
 '''start'''
 
@@ -186,7 +186,7 @@ Starts the game and the end of turn timer.
 
   Game::getGame()->start();
 
-===== StatusCommand =====
+==== StatusCommand ====
 
 '''status'''
 
