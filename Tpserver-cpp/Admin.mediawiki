@@ -1,11 +1,197 @@
 The '''remote administration''' project intends to remove the internal console from [[tpserver-cpp]] and replace it with a protocol which can be accessed by administration clients in a variety of useful ways.
 
-==Plan==
+== Plan ==
 
-===Clients===
+=== Clients ===
 
 * Main CLI client, written in C++, based on a minimal [[libtpproto-cpp]].
 * Single-player mode wizard in [[tpclient-pywx]], based on [[libtpproto-py]].
 * Main GUI client, written in Python, based on [[libtpproto2-py]].
+
+== Basic Command Set ==
+
+These are the commands currently supported by the internal console.
+
+==== QuitCommand ====
+
+'''quit''', exit
+
+Quit and shutdown the server.
+
+  Network::getNetwork()->stopMainLoop();
+
+==== EndTurnCommand ====
+
+'''end'''
+
+End the current turn now and start processing.
+
+  Logger::getLogger()->info("End Of Turn initiated from console");
+  Game::getGame()->getTurnTimer()->manuallyRunEndOfTurn();
+
+==== TurnTimeCommand ====
+
+'''time'''
+
+The amount of time until the next turn.
+
+  std::cout << Game::getGame()->getTurnTimer()->secondsToEOT() << " seconds to EOT" << std::endl;
+
+==== TurnResetCommand ====
+
+'''reset'''
+
+Reset the timer for the next turn.
+
+  Game::getGame()->getTurnTimer()->resetTimer();
+  std::cout << "Reset EOT timer, " << Game::getGame()->getTurnTimer()->secondsToEOT() << " seconds to EOT" << std::endl;
+
+==== TurnLengthCommand ====
+
+'''length'''
+
+Sets the turn length, but doesn't affect the current turn. //Commented out.//
+
+  uint32_t tlen = atoi(cmdline.c_str());
+  Game::getGame()->setTurnLength(tlen);
+  std::cout << "Setting turn length to " << tlen << " seconds" << std::endl;
+
+==== TurnNumberCommand ====
+
+'''number'''
+
+Gets the current turn number.
+
+  std::cout << "The current turn number is " << Game::getGame()->getTurnNumber() << std::endl;
+
+==== NetworkStartCommand ====
+
+'''start'''
+
+Starts the network listeners and accepts connections.
+
+  Network::getNetwork()->start();
+
+==== NetworkStopCommand ====
+
+'''stop'''
+
+Stops the network listeners and drops all connections.
+
+  Network::getNetwork()->stop();
+
+==== SettingsSetCommand ====
+
+'''set'''
+
+Sets a setting.
+
+  size_t pos1 = cmdline.find(' ');
+  Settings::getSettings()->set(cmdline.substr(0, pos1), cmdline.substr(pos1+1));
+  std::cout << "Setting value of \"" << cmdline.substr(0, pos1) << "\" to \"" << cmdline.substr(pos1+1) << "\"." << std::endl;
+
+==== SettingsGetCommand ====
+
+'''get'''
+
+Gets a setting.
+
+  std::cout << "Setting \"" << cmdline << "\" is set to \"" << Settings::getSettings()->get(cmdline) << "\"." << std::endl;
+
+==== PluginLoadCommand ====
+
+'''load'''
+
+Loads a plugin.
+
+  if(PluginManager::getPluginManager()->load(cmdline)){
+      std::cout << "Plugin \"" << cmdline << "\" was loaded." << std::endl;
+  }else{
+      std::cout << "Plugin \"" << cmdline << "\" was not loaded." << std::endl;
+  }
+
+==== PluginListCommand ====
+
+'''list'''
+
+Lists the plugins that are loaded.
+
+  std::cout << "These plugins are loaded: " << PluginManager::getPluginManager()->getLoadedLibraryNames() << std::endl;
+
+==== GameRulesetCommand ====
+
+'''ruleset'''
+
+Sets the ruleset to be used by ther server.
+
+  if(PluginManager::getPluginManager()->loadRuleset(cmdline)){
+      std::cout << "Ruleset \"" << cmdline << "\" was loaded." << std::endl;
+  }else{
+      std::cout << "Ruleset \"" << cmdline << "\" was not loaded." << std::endl;
+  }
+
+==== GameTpschemeCommand ====
+
+'''tpscheme'''
+
+Sets the tpscheme implementation to be used by ther server.
+
+  if(PluginManager::getPluginManager()->loadTpScheme(cmdline)){
+      std::cout << "TpScheme implementation \"" << cmdline << "\" was loaded." << std::endl;
+  }else{
+      std::cout << "TpScheme implementation \"" << cmdline << "\" was not loaded." << std::endl;
+  }
+
+==== GamePersistenceCommand ====
+
+'''persistence'''
+
+Sets the persistence method to be used by ther server.
+
+  if(PluginManager::getPluginManager()->loadPersistence(cmdline)){
+      std::cout << "Persistence method \"" << cmdline << "\" was loaded." << std::endl;
+  }else{
+      std::cout << "Persistence method \"" << cmdline << "\" was not loaded." << std::endl;
+  }
+
+==== GameLoadCommand ====
+
+'''load'''
+
+Loads the initial data for the game.
+
+  Game::getGame()->load();
+
+==== GameStartCommand ====
+
+'''start'''
+
+Starts the game and the end of turn timer.
+
+  Game::getGame()->start();
+
+==== StatusCommand ====
+
+'''status'''
+
+Prints the key info about the server and game.
+
+  std::cout << "Server: tpserver-cpp" << std::endl;
+  std::cout << "Version: " VERSION << std::endl;
+  std::cout << "Persistence available: " << ((Game::getGame()->getPersistence() != NULL) ? "yes" : "no") << std::endl;
+  Ruleset* rules = Game::getGame()->getRuleset();
+  std::cout << "Ruleset Loaded: " << ((rules != NULL) ? "yes" : "no") << std::endl;
+  if(rules != NULL){
+      std::cout << "Ruleset Name: " << rules->getName() << std::endl;
+      std::cout << "Ruleset Version: " << rules->getVersion() << std:: endl;
+  }
+  std::cout << "Game Loaded: " << ((Game::getGame()->isLoaded()) ? "yes" : "no") << std::endl;
+  std::cout << "Game Started: " << ((Game::getGame()->isStarted()) ? "yes" : "no") << std::endl;
+  if(Game::getGame()->isStarted()){
+      std::cout << "Time to next turn: " << Game::getGame()->getTurnTimer()->secondsToEOT() << std::endl;
+      std::cout << "Turn length: " << Game::getGame()->getTurnTimer()->getTurnLength() << " seconds" << std::endl;
+      std::cout << "Turn number: " << Game::getGame()->getTurnNumber() << std::endl;
+  }
+  std::cout << "Network Started: " << ((Network::getNetwork()->isStarted()) ? "yes" : "no") << std::endl;
 
 [[Category:Tpserver-cpp]]
