@@ -2,5 +2,5 @@
 
 '''ezod''' on Freenode IRC
 
-[[http://www.mavrinac.com|Website]]
-[[http://ezod.livejournal.com/tag/tp|Blog]]
+* [http://www.mavrinac.com Website]
+* [http://ezod.livejournal.com/tag/tp Blog]
