@@ -34,7 +34,14 @@ The '''remote administration''' project intends to remove the internal console f
 
 == Administration Protocol ==
 
-No protocol is specified yet.
+=== Summary ===
+{| border="1" cellpadding="2" 
+|-----
+! Value || Name || Description || Base || Dir
+|-----
+| || Header Frame || || || any
+| || Request Frame || || Header || any
+|}
 
 == Basic Command Set ==
 
