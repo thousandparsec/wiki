@@ -38,7 +38,7 @@ The '''remote administration''' project intends to remove the internal console f
 
 The administration client will connect and authenticate in a manner similar to the game [[protocol]]. Once connected, it may receive log messages and  issue commands.
 
-The main CLI client must store all available command descriptions locally (for command line verification, tab completion, etc.). After any operation which could result in new commands becoming available on the server, such as loading a ruleset, this local set must be updated.
+The main CLI client must store all available command descriptions locally (for command line verification, tab completion, etc.). It initially grabs the full current command set from the server upon a successful connection. After any operation which could result in new commands becoming available on the server, such as loading a ruleset, this local set must be updated.
 
 Some command IDs are reserved (say, anything under 1000) for important server commands which all servers support, with static descriptions. These include the commands which will be used by tpclient-pywx and other game clients to start a local server for single-player mode.
 
