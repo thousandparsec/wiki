@@ -55,7 +55,7 @@ The '''remote administration''' project intends to remove the internal console f
 |-----
 | 4 || Login Frame || || Request ||
 |-----
-| || Log Message Frame || Frame containing a log message to display at the client. || Header || client
+| 5 || Log Message Frame || Frame containing a log message to display at the client. || Header || client
 |-----
 | || Get With ID Frame || Used to get things (commands) using their IDs. || Request ||
 |-----
@@ -63,17 +63,17 @@ The '''remote administration''' project intends to remove the internal console f
 |-----
 | || ID Sequence Frame || A sequence of IDs. || Response ||
 |-----
-| || Get Command Description Frame || Gets a description for a single command. || Get With ID ||
+| 6 || Get Command Description Frame || Gets a description for a single command. || Get With ID ||
 |-----
-| || Command Description Frame || Frame describing a command. || Response || 
+| 7 || Command Description Frame || Frame describing a command. || Response || 
 |-----
-| || Get Command Description IDs Frame || Gets a sequence of active commands available on this server. || Get ID Sequence ||
+| 8 || Get Command Description IDs Frame || Gets a sequence of active commands available on this server. || Get ID Sequence ||
 |-----
-| || List of Command Description IDs Frame || || ID Sequence ||
+| 9 || List of Command Description IDs Frame || || ID Sequence ||
 |-----
-| || Command Frame || Issues a command to the server. || Request || 
+| 10 || Command Frame || Issues a command to the server. || Request || 
 |-----
-| || Command Result Frame || Response frame with the result of the command. || Response || 
+| 11 || Command Result Frame || Response frame with the result of the command. || Response || 
 |}
 
 ''The protocol specification document will soon be set in the protocol XML format currently used for the game [[protocol]].''
