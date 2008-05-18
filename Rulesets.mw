@@ -11,12 +11,20 @@ Milestone rulesets are special rulesets designed to exercise certain features of
 
 * [[TP RFTS|RFTS Clone]]
 
+==== [[Google Summer of Code]] rulesets ===
+
+These rulesets are being developed as part of a the [[Google Summer of Code]].
+* [[Risk]] - A modified version of that classic board game now in space.
+* [[TAE]] - A more advanced board game also now in space.
+* [[DroneSec]] - By controlling a single mothership, take over the universe with your drones!
+
 ==== Designs in progress ====
 
 Links to ruleset designs in progress.
 * [[Traders]]
 * [[TIM Trader]]
 * [[Codename Elvis]]
+
 
 <noinclude>
 [[Category:Game Design]]
