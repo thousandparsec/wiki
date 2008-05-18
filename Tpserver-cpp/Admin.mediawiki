@@ -66,6 +66,8 @@ The '''remote administration''' project intends to remove the internal console f
 
 ''The protocol specification document will soon be set in the protocol XML format currently used for the game [[protocol]].''
 
+:What about log messages? --[[User:Lee Begg|Lee Begg]] 22:15, 17 May 2008 (EDT)
+
 == Basic Command Set ==
 
 These are the commands currently supported by the internal console.
