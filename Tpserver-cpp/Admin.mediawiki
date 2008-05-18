@@ -40,7 +40,7 @@ The administration client will connect and authenticate in a manner similar to t
 
 The main CLI client must store all available command descriptions locally (for command line verification, tab completion, etc.). After any operation which could result in new commands becoming available on the server, such as loading a ruleset, this local set must be updated.
 
-Some command IDs are reserved (say, anything under 1000) for important server commands which all servers support. These include the commands which will be used by tpclient-pywx and other game clients to start a local server for single-player mode.
+Some command IDs are reserved (say, anything under 1000) for important server commands which all servers support, with static descriptions. These include the commands which will be used by tpclient-pywx and other game clients to start a local server for single-player mode.
 
 === Summary ===
 {| border="1" cellpadding="2"
