@@ -57,11 +57,15 @@ The '''remote administration''' project intends to remove the internal console f
 |-----
 | || Get Active Commands Frame || Gets a sequence of active commands available on this server. || Request ||
 |-----
+| || Get Command Description Frame || Gets a description for a single command. || Request ||
+|-----
 | || Command Description Frame || Frame describing a command. || Response || 
 |-----
 | || Command Frame || Generic frame issuing a command to the server. || Request || 
 |-----
 | || Command Result Frame || Response frame with the result of the command. || Response || 
+|-----
+| || Log Message Frame || Frame containing a log message to display at the client. || Header || client
 |}
 
 ''The protocol specification document will soon be set in the protocol XML format currently used for the game [[protocol]].''
