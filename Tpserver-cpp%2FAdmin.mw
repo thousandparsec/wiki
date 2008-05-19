@@ -65,6 +65,8 @@ Some command IDs are reserved (say, anything under 1000) for important server co
 |-----
 | 5 || Log Message Frame || Frame containing a log message to display at the client. || Header || client
 |-----
+| 12 || Command Update Frame || Frame instructing the client to pull command set descriptions. || Header || client
+|-----
 | || Get With ID Frame || Used to get things (commands) using their IDs. || Request ||
 |-----
 | || Get ID Sequence Frame || || Request ||
@@ -85,9 +87,6 @@ Some command IDs are reserved (say, anything under 1000) for important server co
 |}
 
 ''The protocol specification document will soon be set in the protocol XML format currently used for the game [[protocol]].''
-
-:What about log messages? --[[User:Lee Begg|Lee Begg]] 22:15, 17 May 2008 (EDT)
-::Done. [[User:Ezod|ezod]] 14:31, 18 May 2008 (EDT)
 
 == Basic Command Set ==
 
