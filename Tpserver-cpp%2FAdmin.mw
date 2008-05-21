@@ -63,9 +63,9 @@ Some command IDs are reserved (say, anything under 1000) for important server co
 |-----
 | 4 || Login Frame || || Request ||
 |-----
-| 200 || Log Message Frame* || Frame containing a log message to display at the client. || Header || client
+| 200 || '''Log Message Frame''' || Frame containing a log message to display at the client. || Header || client
 |-----
-| 201 || Command Update Frame* || Frame instructing the client to pull command set descriptions. || Header || client
+| 201 || '''Command Update Frame''' || Frame instructing the client to pull command set descriptions. || Header || client
 |-----
 | || Get With ID Frame || Used to get things (commands) using their IDs. || Request ||
 |-----
@@ -73,20 +73,20 @@ Some command IDs are reserved (say, anything under 1000) for important server co
 |-----
 | || ID Sequence Frame || A sequence of IDs. || Response ||
 |-----
-| 202 || Get Command Description Frame* || Gets a description for a single command. || Get With ID ||
+| 202 || '''Get Command Description Frame''' || Gets a description for a single command. || Get With ID ||
 |-----
-| 203 || Command Description Frame* || Frame describing a command. || Response || 
+| 203 || '''Command Description Frame''' || Frame describing a command. || Response || 
 |-----
-| 204 || Get Command Description IDs Frame* || Gets a sequence of active commands available on this server. || Get ID Sequence ||
+| 204 || '''Get Command Description IDs Frame''' || Gets a sequence of active commands available on this server. || Get ID Sequence ||
 |-----
-| 205 || List of Command Description IDs Frame* || || ID Sequence ||
+| 205 || '''List of Command Description IDs Frame''' || || ID Sequence ||
 |-----
-| 206 || Command Frame* || Issues a command to the server. || Request || 
+| 206 || '''Command Frame''' || Issues a command to the server. || Request || 
 |-----
-| 207 || Command Result Frame* || Response frame with the result of the command. || Response || 
+| 207 || '''Command Result Frame''' || Response frame with the result of the command. || Response || 
 |}
 
-* Administration frame (not part of the game [[protocol]] specification).
+Boldface denotes administration frame (not part of the game [[protocol]] specification).
 
 == Basic Command Set ==
 
