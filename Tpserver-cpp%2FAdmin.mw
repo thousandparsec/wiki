@@ -40,9 +40,12 @@ The administration client will connect and authenticate in a manner similar to t
 
 The main CLI client must store all available command descriptions locally (for command line verification, tab completion, etc.). It initially grabs the full current command set from the server upon a successful connection. After any operation which could result in new commands becoming available on the server, such as loading a ruleset, this local set must be updated.
 
-Some command IDs are reserved (say, anything under 1000) for important server commands which all servers support, with static descriptions. These include the commands which will be used by tpclient-pywx and other game clients to start a local server for single-player mode.
+Some command IDs are static and reserved for important server commands which all servers support. These include the commands which will be used by tpclient-pywx and other game clients to start a local server for single-player mode.
 
 === Summary ===
+
+The following table contains both existing [[protocol]] frames and new administration-related frames (the latter are bold). The server must support all of these frame types and ignore others.
+
 {| border="1" cellpadding="2"
 |-----
 ! Value || Name || Description || Base || Dir
@@ -85,8 +88,6 @@ Some command IDs are reserved (say, anything under 1000) for important server co
 |-----
 | 207 || '''Command Result Frame''' || Response frame with the result of the command. || Response || 
 |}
-
-Boldface denotes administration frame (not part of the game [[protocol]] specification).
 
 == Basic Command Set ==
 
