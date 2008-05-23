@@ -27,3 +27,39 @@ When you already have the code and would like to update it to the latest revisio
 
 Cogito:
  cg-update
+
+== Committing changes ==
+
+To check what changes are going to be commit, cg-status tells you what files, cg-diff gives a diff.
+
+To commit all the changes:
+
+Cogito:
+ cg-commit
+
+To commit only some files:
+
+Cogito:
+ cg-commit ''filename1'' ''filename2'' ...
+
+== Pushing changes ==
+
+If you have write access to the repo, you can push your changes so that they are available for everyone. This is done by:
+
+Cogito:
+ cg-push
+
+'''Note:''' git-push and cg-push might not push to the same branch! Be very careful!
+
+== Sending patches by email ==
+
+If you don't have write access to the repo, you can format your patches and attach them to an email to the mailing list or one of the developers. This can be done by first committing you changes into patches, then running:
+
+git:
+ git-format-patch ''origin''
+
+== Applying patches that arrived by email ==
+If you are not sure about the patch, create a new branch and apply it there to review, if needed.
+
+git:
+ git-am ''filename''
