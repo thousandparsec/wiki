@@ -213,6 +213,8 @@ This task could include making changes to libtprl as well to make this work easi
 == Separate the console from the server ==
 Make it possible to connect remotely, or at least locally, to a daemon-ized tpserver-cpp. Need to pass commands into the server and get logging and output back. Could be quite a few ways to do this. Maybe a special server configuration protocol could be designed so that various different configuration interfaces (for example integrated into clients, presented as Single Player mode) could connect to a special configuration port.
 
+'''GSoC Project:''' ezod is working on this for his GSoC 2008 project.
+
 == BattleXML support ==
 BattleXML is an xml format for describing battles that take place in Thousand Parsec, and the files can be viewed by the stand-alone battleviewer. The task is to design a suitable API for creating the xml files from combat being performed in the Rulesets, then using it in combat processing in the rulesets. Sample xml files and the dtd are available in the documents git repo. Also suggestions should be put forward how the xml files should be delivered to clients and how to associate them with particular battles.
 
