@@ -46,6 +46,8 @@ Some command IDs are static and reserved for important server commands which all
 
 The following table contains both existing [[protocol]] frames and new administration-related frames (the latter are bold). The server must support all of these frame types and ignore others.
 
+This protocol extension requires '''version 0.3 or greater''' of the TP protocol.
+
 {| border="1" cellpadding="2"
 |-----
 ! Value || Name || Description || Base || Dir
