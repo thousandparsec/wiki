@@ -68,9 +68,9 @@ This protocol extension requires '''version 0.3 or greater''' of the TP protocol
 |-----
 | 4 || Login Frame || || Request ||
 |-----
-| 200 || '''Log Message Frame''' || Frame containing a log message to display at the client. || Header || client
+| 1000 || '''Log Message Frame''' || Frame containing a log message to display at the client. || Header || client
 |-----
-| 201 || '''Command Update Frame''' || Frame instructing the client to pull command set descriptions. || Header || client
+| 1001 || '''Command Update Frame''' || Frame instructing the client to pull command set descriptions. || Header || client
 |-----
 | || Get With ID Frame || Used to get things (commands) using their IDs. || Request ||
 |-----
@@ -78,17 +78,17 @@ This protocol extension requires '''version 0.3 or greater''' of the TP protocol
 |-----
 | || ID Sequence Frame || A sequence of IDs. || Response ||
 |-----
-| 202 || '''Get Command Description Frame''' || Gets a description for a single command. || Get With ID ||
+| 1002 || '''Get Command Description Frame''' || Gets a description for a single command. || Get With ID ||
 |-----
-| 203 || '''Command Description Frame''' || Frame describing a command. || Response || 
+| 1003 || '''Command Description Frame''' || Frame describing a command. || Response || 
 |-----
-| 204 || '''Get Command Description IDs Frame''' || Gets a sequence of active commands available on this server. || Get ID Sequence ||
+| 1004 || '''Get Command Description IDs Frame''' || Gets a sequence of active commands available on this server. || Get ID Sequence ||
 |-----
-| 205 || '''List of Command Description IDs Frame''' || || ID Sequence ||
+| 1005 || '''List of Command Description IDs Frame''' || || ID Sequence ||
 |-----
-| 206 || '''Command Frame''' || Issues a command to the server. || Request || 
+| 1006 || '''Command Frame''' || Issues a command to the server. || Request || 
 |-----
-| 207 || '''Command Result Frame''' || Response frame with the result of the command. || Response || 
+| 1007 || '''Command Result Frame''' || Response frame with the result of the command. || Response || 
 |}
 
 == Basic Command Set ==
