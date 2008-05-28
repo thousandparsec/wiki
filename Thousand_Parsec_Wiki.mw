@@ -22,6 +22,7 @@ Pages which describe how to do something specific.
 * [[Mac Setup|Setting up tpclient-pywx development environment on Mac OS X]] 
 * [[Win Setup|Setting up tpclient-pywx development environment on Windows]]
 * [[Release Procedure|Steps to do a release of tpclient-pywx]]
+* [[Libtpclient Help|Working with the libtpclient-py library]]
 
 = Other pages =
 
