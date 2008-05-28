@@ -1,0 +1,115 @@
+= Thousand Parsec client library =
+Also known as libtpclient-py, this python library builds on the existing protocol library to add new features such as caching and threading.
+
+== Creating a cache ==
+A cache can be created by passing in the full url, including the protocol.
+  c = Cache("tp://username@server:6923/game")
+
+=== Optional parameters ===
+If a cache already exists for a given full URL, it will load it from a file. The "new" keyword argument prevents this from happening and forces a new version of the cache to be created.
+  c = Cache("tp://username@server:6923/game", new=True)
+
+== Refreshing the cache ==
+To refresh the cache, a network connection instance is needed.
+  c.update(connection_instance, callback_function)
+The callback function will be called with the following parameters:
+  callback(group=<mode>, state=<state>, message=<message>)
+The callback function is useful for clients who wish show progress to the user as the cache is updating.
+
+=== Explanation of callback parameters ===
+'''message'''
+:The message string is a human readable message about what is happening.
+'''group'''
+:Group is the current group of things which have been updated.
+:The possible choices are:
+:*objects
+:*orders
+:*orders_probe
+:*boards
+:*messages
+:*categories
+:*designs
+:*components
+:*properties
+:*players
+:*resources
+'''state'''
+:State is one of the following
+:*start           - no more arguments
+:*todownload      - total, the total number of things to be downloaded
+:*progress        - some sort of undetermined progress occurred
+:*failure         - some sort of failure when downloading occurred
+:*downloaded      - amount, the number of things which have been downloaded
+:*finished        - no more arguments
+
+The order of callback states goes like this:
+  start -> todownload -> failure -> finished -> downloaded
+You can get a progress callback at anytime. It only has meaning to humans and not the program.
+There should be one failure or downloaded message per object specified in the todownload message.
+
+== Using the cache ==
+=== Reading from cache ===
+The cache can be read from directly.
+  node = cache.orders[<object_id>].first  # get the first node of orders queue for object 0
+Gives you a ChangeNode. To get the actual order from the ChangeNode you will need to do the following:
+  node.CurrentOrder - the most "up to date" version of the order.
+  node.PendingOrder - ﻿the first pending change to the server (could be none).
+  node.ServerOrder  - ﻿the latest order to be issued to the server (but may not yet be committed).
+
+=== Writing to cache ===
+However, writing to the cache is a two-stage process
+
+:1. Use the cache ''apply'' method to make an event object
+  evt = c.apply("orders", "create after", self.oid, node, order)
+  evt = c.apply("orders", "create before", self.oid, node, order)
+  evt = c.apply("orders", "change", self.oid, node, order)
+  evt = c.apply("orders", "remove", self.oid, nodes=nodes)
+:2. Send the newly created event to the network ''OnCacheDirty(evt)'' method
+  network.Call(network.OnCacheDirty, evt)
+:Please keep in mind that step 2 will change in the future.
+
+Further explanation
+* The event created by ''cache.apply'' is a CacheDirtyEvent type
+* The call to ''NetworkThread.OnCacheDirty'' will call all the necessary methods for you, such as cache.commit(evt)
+
+==== Cache.apply parameters ====
+* name - name of thing to apply a change to (e.g. "orders", "objects", etc)
+* action - type of action to perform.
+* oid - object id to create the new order on
+* node - position in order queue to create the order
+* order - order instance
+
+The valid actions for a "normal" type are,
+  actions = ("create", "remove", "change")
+
+The valid actions for "compound" types are,
+  actions_compound = ("create before", "create after", "remove", "change")
+
+==== Creating an order instance ====
+1. Getting the different types of order classes
+  from tp.client.objects import OrderDescs
+  OrderDescs()            # returns a list of all possible order classes
+2. Setting default arguments
+  descclass = OrderDescs()[1]
+  orderargs = [0, oid, slot, descclass.subtype, 0, []]
+3. Creating the instance
+  order = descclass(*orderargs) # note that every order type will have special arguments as well
+''OrderDescs()'' can change as more order descriptions are downloaded. Make sure the cache has been fully populated before using this method.
+
+== Explanation of nodes ==
+TP orders use a queue system, and the ChangeList object allows one to have multiple pending orders. A new change node starts in the 'Adding' state.
+Possible states are
+  states = ["creating", "idle", "updating", "removing", "removed"]
+
+  creating  - the order has yet to be created on the server
+  idle      - there are no pending changed
+  updating  - the order is waiting to be updated on the server
+  removing  - the order is waiting to be removed
+  removed   - the order has been removed, when all references have been
+  forgotten - the node will be garbage collected.
+
+== Caveats ==
+=== Circular dependency between cache and thread objects ===
+Always import threads class before Cache class
+  import tp.client.threads
+  from tp.client.cache import Cache
