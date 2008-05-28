@@ -43,7 +43,9 @@ The callback function is useful for clients who wish show progress to the user a
 :*finished        - no more arguments
 
 The order of callback states goes like this:
-  start -> todownload -> failure -> finished -> downloaded
+  start -> todownload --> downloaded --> finished
+                      \->   failure  -/
+
 You can get a progress callback at anytime. It only has meaning to humans and not the program.
 There should be one failure or downloaded message per object specified in the todownload message.
 
