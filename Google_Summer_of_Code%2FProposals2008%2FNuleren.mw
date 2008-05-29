@@ -228,12 +228,11 @@ Below is a more detailed description of each object, order, and resource.
 *Swap.  Orders a CivilianShip to be swapped for a new one from the civilian ship pool.
 
 ====Resources====
-Technology.  Produced by the colonization of a solar system by scientists, successful internal combat, and external combat involving solar systems occupied by scientists.
-People.  Produced by the colonization of a solar system by settlers, and external combat involving solar systems occupied by settlers.
-Money.  Produced by the colonization of a solar system by merchants, and external combat involving solar systems occupied by merchants.
-Raw Materials.  Produced by the colonization of a solar system by mining robots, and external combat involving solar systems occupied by mining robots.
-Alien Artifacts.  Harvested by a merchant leader when two alien artifacts are present in an allied region.
-
+*Technology.  Produced by the colonization of a solar system by scientists, successful internal combat, and external combat involving solar systems occupied by scientists.
+*People.  Produced by the colonization of a solar system by settlers, and external combat involving solar systems occupied by settlers.
+*Money.  Produced by the colonization of a solar system by merchants, and external combat involving solar systems occupied by merchants.
+*Raw Materials.  Produced by the colonization of a solar system by mining robots, and external combat involving solar systems occupied by mining robots.
+*Alien Artifacts.  Harvested by a merchant leader when two alien artifacts are present in an allied region.
 
 ===Turns===
 Players alternate taking turns.  A variable is kept to indicate who's turn it is.  A variable is kept to indicate how many orders the player has completed this turn.  Each turn can be split up into small phases, outlined below:
