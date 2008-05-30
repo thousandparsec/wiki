@@ -1,0 +1,8 @@
+Overview of AI clients or GUI clients with AI built in per ruleset. (TODO: IIRC galaxie has an AI, where to classify it? Are there others?)
+
+== [[MiniSec]] ==
+* [[tpsai-py]]
+
+== [[RFTS]] ==
+* [[gencon-rfts-ai]]
+* [[daneel-ai]]
