@@ -1,0 +1,22 @@
+daneel-ai is a rule-based AI (to be) written in Python. The bot framework is designed to be ruleset-agnostic, with components that should be implemented per ruleset and per desired behavior. More info on the [[User:Iwanowitch/RFTS_AI_proposal|proposal page]] (this will be merged here in time).
+
+== Overview ==
+At the start of a turn, the bot downloads the universe data from the server and stores them in a local cache. It then enters the initialization phase. Based on the ''initialization rules'', the cache is read and constraints are added to the constraint store. The next phase is the resolution phase. The bot uses the constraints to deduce new knowledge about the system via ''resolution rules'' and adds it to the store. This is the bulk of the work. Afterwards, the finalization phase searches for constraints that signify orders to be executed and creates the appropriate orders.  As such, the resolution phase can be seen as a process that transforms the state of the game to actions to be performed, with the initialization phase providing the state and the finalization phase executing the actions.
+
+== Design ==
+The bot is based on libtpclient-py to handle the connection to the server and the cache of game objects. Furthermore, the client is designed to be modular, each of the 3 phases can be changed to another implementation to allow ruleset-specific information to be considered, or to change the strategies of the AI.
+
+=== Initialization phase ===
+The initialization phase pretty much copies the object hierarchy from the cache into the constraint store. This means that for example constraints of the form <code>planet(5)</code> and <code>location(5,0,100032,0)</code> will be added. The exact way this will happen still needs investigation, if possible some reflection should be used.
+
+=== Resolution phase ===
+Now the AI has a bunch of facts about the world and wants to deduce a battle plan from them. We give him a set of rules to apply to the constraint store. The idea of these rules is based on [http://www.cs.kuleuven.be/~dtai/projects/CHR/ CHR]. An example of a rule would be "if the constraint resources(X) exists and X > 500, then remove that constraint and add the constraints resources(X-500) and order_build_ship()".
+
+The exact way to represent these rules still has to be decided on. Probably the Interpreter design pattern will be used, together with a parser that reads CHR syntax which is pretty concise for these types of rules. It should be noted that it is necessary to allow arbitrary Python statements to appear inside these rules. Although CHR is Turing complete, you don't want to implement "calculate_distance_to" using nothing but constraints.
+
+=== Finalization phase ===
+When no more rules can fire because the preconditions don't match with the constraint store, the algorithm enters the finalization phase. The store is checked for predicates of a certain form (probably order_move and order_build etc), picks those out and executes the required actions.
+
+== TODO ==
+* Add TODOs
+* Add milestones and planning
