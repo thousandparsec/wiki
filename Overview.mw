@@ -11,6 +11,10 @@ Once you have a protocol defined you need some code, which implements various ob
 
 Now that we have a library that can “talk” as defined in the protocol we also need an easy way to make the library actually communicate. That's where a client comes into play. A client is usually a nice graphical user interface which makes it easy for a player to connect to a game server, see status of his galactic empire and issue orders to various objects in the game.
 
+=== [[AI Clients]] ===
+
+Some graphical clients have inbuild AI, and some dedicated AI clients are in development. These use the same protocol libraries as the graphical clients do, but instead of letting a player decide what orders to issue, those decisions are made automatically.
+
 == [[Servers]] ==
 
 Games that people play are hosted on computers which are running special programs which are called game servers. To be able to provide various types of game-play each server can load separate modules, each containing different set of rules.
