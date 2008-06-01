@@ -63,3 +63,7 @@ If you are not sure about the patch, create a new branch and apply it there to r
 
 git:
  git-am ''filename''
+
+== See Also ==
+* [http://www.gitcasts.com/ GitCasts: Video Tutorials for Using Git]
+* [http://ktown.kde.org/~zrusin/git/git-cheat-sheet.svg Zack Rusin's Git Cheat Sheet in SVG format]
