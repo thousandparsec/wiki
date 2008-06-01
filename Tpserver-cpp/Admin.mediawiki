@@ -6,6 +6,7 @@ The '''remote administration''' project intends to remove the internal console f
 
 * '''2008-05-25:''' protocol specification document - <font color="green">''complete''</font>
 * '''2008-06-02:''' tpserver-cpp will accept administration connections - <font color="green">''complete''</font>
+* '''2008-06-02:''' tpserver-cpp will log to administration clients - <font color="green">''complete''</font>
 * '''2008-06-06:''' tpserver-cpp will respond to requests for command lists and descriptions
 * '''2008-06-13:''' tpserver-cpp will start as a daemon by default
 * '''2008-06-20:''' tpserver-cpp will accept basic command set
