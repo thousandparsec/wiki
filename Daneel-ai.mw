@@ -17,6 +17,32 @@ The exact way to represent these rules still has to be decided on. Probably the 
 === Finalization phase ===
 When no more rules can fire because the preconditions don't match with the constraint store, the algorithm enters the finalization phase. The store is checked for predicates of a certain form (probably order_move and order_build etc), picks those out and executes the required actions.
 
+== Constraint syntax/semantics ==
+The program keeps track of a multiset of facts, called constraints. These facts are represented by predicates, possibly with parameters - those familiar with Prolog will be at home. It is important to note that facts might be parameterized with logical variables, that is, variables that don't have an assignment yet (a so-called non-ground variable). For example, if the fact <code>solution(X)</code> is in the constraint store, this asserts that there exists a solution X, which might be unified with a concrete value later on. This is useful for abstract reasoning and search strategies.
+
+The exact syntax as it will be in the bot still needs some thinking out. For now, I use some mix of Python and Prolog in this document. In CHR syntax, a general rule looks like this:
+ name @ kept \ removed <=> guard | body
+The ''name'' is an optional string, mostly to ease debugging and possibly useful for reflection, although that needs to be researched. The <code>kept \ removed</code> part is also named the ''head''. Both of those parts are optional. If there is no kept part, we talk about a ''simplification rule'', if there is no removed part, we talk about a ''propagation rule'' (for clarity, we write propagation rules as <code>kept ==> body</code>), if they are both there it is a ''simpagation rule'' and if none of them are there it's just a fact to be added to the constraint store, so it's not really a rule. The head consists of a conjunction of constraints only, the guard of Python code, and the body can contain a mix of both. Note that all Python calls need to be done with ground variables.
+
+As an example, the rule from above:
+ buildships @ resources(X) <=> X > 500 | resources(X-500); order_build_ship
+A way to enforce set semantics (no duplicates) for a predicate:
+ predicate \ predicate <=> pass
+A canonical CHR example is the less-then-or-equal relationship (note that = means logical unification and can work in both ways):
+ reflexivity @ leq(X,X) <=> pass
+ antisymmetry @ leq(X,Y) and leq(Y,X) <=> X = Y
+ transitivity @ leq(X,Y) and leq(Y,Z) ==> leq(X,Z)
+
+The algorithm matches each head to the constraint store in turn. If a match is found, the guard is checked. If it is found to evaluate to True in bool context, the rule ''fires''. The constraints that match the removed part are removed from the store, and those in the body are added to the store. The rules are then tried again from the beginning. This is the naive way of doing the matching, but if needed improvements are possible.
+
+To extend the standard example, assume the rules are the three leq rules defined above, and let the constraint store hold the three facts <code>leq(A,B),leq(B,C),leq(C,A)</code>. The transitivity rule will fire and add <code>leq(C,A)</code> from <code>leq(A,B),leq(A,C)</code>. Then the antisymmetry rule will assert that A = C. The reflexivity rule will remove <code>leq(C,A)</code> and <code>leq(A,C)</code> since A = C. The antisymmetry rule will make A=B and reflexivity will remove the remaining constraints. We end with an empty constraint store and the knowledge that A=B=C.
+
+If I have time and the need arises, I might implement parts of proposed extensions of CHR, like rule priorities, negation by absence, and aggregates support (which allows constructs like sum, min, max to appear in rules). It should be noted that these constructs can be implemented with the existing structure, but for clarity it doesn't hurt to have these extension. There might be the need to implement a few Prolog-like predicates that allow efficient work with non-ground variables, this will become clear when coding. If the program turns out to be too slow, the naive matching algorithm can be changed to the more advanced Rete algorithm that builds a graph of which rules to try when constraints are changed, dramatically speeding up the matching. Other algorithms might also be possible (TREAT, LEAPS), but I've never met these before so I'll have to do some research. Changes in the data structures underlying the constraint store and the rules might also provide speedup.
+
 == TODO ==
-* Add TODOs
+These are my direct TODOs, mostly for myself to see what I'm supposed to be doing at this moment instead of reading the wiki. The milestones part (when I create it) might be more interesting to other readers.
+* Finalize design
+** Find a sensible way to add weights to rules. This would change the semantics of CHR to a nondeterministic algorithm, so this needs a bit of consideration
+* Coding
+** Thin client using libtpclient-py
 * Add milestones and planning
