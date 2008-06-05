@@ -39,10 +39,45 @@ To extend the standard example, assume the rules are the three leq rules defined
 
 If I have time and the need arises, I might implement parts of proposed extensions of CHR, like rule priorities, negation by absence, and aggregates support (which allows constructs like sum, min, max to appear in rules). It should be noted that these constructs can be implemented with the existing structure, but for clarity it doesn't hurt to have these extension. There might be the need to implement a few Prolog-like predicates that allow efficient work with non-ground variables, this will become clear when coding. If the program turns out to be too slow, the naive matching algorithm can be changed to the more advanced Rete algorithm that builds a graph of which rules to try when constraints are changed, dramatically speeding up the matching. Other algorithms might also be possible (TREAT, LEAPS), but I've never met these before so I'll have to do some research. Changes in the data structures underlying the constraint store and the rules might also provide speedup.
 
+== Milestones ==
+* <s>Client that can connect to the server</s>
+* <s>Constraint representation</s>
+* <s>Logical unification support</s>
+* Constraint store
+* Rule representation
+* Rule parsing
+* Rule store
+* Rule engine complete
+* Client can extract orders from the constraint store and send them to the server
+* Get some sensible behavior
+
+== Planning ==
+Current planning already differs significantly from my original planning and will probably keep on changing. In my original plan, I envisioned the rule matching to be something very basic and writing the rules themselves to be hard. I changed that around after some research, after all, it seems more sensible to do as much work as possible on the framework to make rule creation/experimentation as easy as possible. Also, my exams are more painful than I thought they would be :(
+
+2008-05-31 - 2008-06-06: Get constraint matching to work.<br>
+2008-06-07 - 2008-06-17: Serious study time. Sorry. Though I should get the constraint store working.<br>
+2008-06-18 - 2008-06-22: Implement rule representation.<br>
+2008-06-23 - 2008-06-26: Implement rule store.<br>
+2008-06-26: Basic rule engine in place (test: add basic rules to move the scout around the universe).<br>
+
+2008-06-26 - 2008-07-06: Gone. Probably won't have any time for SoC.<br>
+2008-07-07: Start of mid-term evaluation. I kindly ask nash to wait with giving me bad marks for a few more days as I basically just start coding.
+2008-07-07 - 2008-07-20: Rule implementation. Will also involve some iterations of refining the engine to allow more flexible rule sets (and fix bugs).<br>
+2008-07-20: Rules written, tested, working.<br>
+
+2008-07-20 - 2008-07-24: Toy around with the rule engine, trying to create a some interesting behavior by hand.
+The following only applies if the schedule works out and there are no huge setbacks.<br>
+2008-07-25 - 2008-07-31: Design of the genetic algorithm (textbook stuff), setup of testing environment (server configuration, being able to get stats from it, etc).<br>
+2008-08-01 - 2008-08-09: Genetic algorithm running, hopefully yielding even more good and interesting behavior.
+2008-08-10 - 2008-08-16: Akademy, in my country, so I'll probably be there.<br>
+2008-08-11: Pencils down date, genetic algorithm around AI working and yielding some good results.
+
 == TODO ==
-These are my direct TODOs, mostly for myself to see what I'm supposed to be doing at this moment instead of reading the wiki. The milestones part (when I create it) might be more interesting to other readers.
+These are my direct TODOs, mostly for myself to see what I'm supposed to be doing at this moment instead of reading the wiki. The milestones part might be more interesting to other readers.
 * Finalize design
-** Find a sensible way to add weights to rules. This would change the semantics of CHR to a nondeterministic algorithm, so this needs a bit of consideration
+** Draw out the full design because it's a bit messy in my head right now
+** Think about rule representation
+** Find a sensible way to add weights to rules. This would change the semantics of CHR to a nondeterministic algorithm, so this needs a bit of consideration (not urgent, this is an extension for the rule implementation phase)
 * Coding
-** Thin client using libtpclient-py
-* Add milestones and planning
+** Create constraint store
+** Add initial facts from cache to store
