@@ -1,0 +1,50 @@
+== Overview ==
+Dronesec is a quick and easy to learn ruleset involving the use of a single commander unit to command and direct other drone units.
+
+Note: Everything here is subject to change throughout development
+
+== Rules ==
+
+===Initial setup===
+Each player will begin with a planet containing 100 Credits, and an Overlord.
+
+===Victory===
+Players achieve victory by being the last players standing.
+
+===Defeat===
+Defeat occurs when a player has no planets left.
+
+==Turns==
+On each turn a player can assign the types of research and drone production that each planet will perform.
+They may also choose to move their overlords and to allow overlords to perform commands.
+
+==Capturing a planet==
+A Planet is captured when a certain number of units is present such that a threshold on power is passed. Then all units in the system(excluding Overlords) are removed as a colonizing force and production can begin.
+
+==Objects==
+===Overlords===
+Overlords are the basic command unit and effective ordering of the overlord will be the key to victory. Overlords are the only unit controlled by the player and they only ones whose movement they can direct. Overlords act as a sort of magnet from which all units will be attracted to and move towards.
+*Move: Overlords can move to any location specified by this order.
+*Command: Follow: This order makes the Overlord act as a magnet cause all drones to move towards it.
+*Command: Stop: This order makes all drones stop moving.
+*Command: Continue: This order is normally use in conjunction with Follow. It allows an overlord to set a destination for the drones and be free to move without being followed.
+
+===Drones===
+Drones are all produced ships that do not have a mind of their own. They cannot be controlled by the player and will follow the Overlord. Drones come in different types which will affect the research upgrades that affect them and bonus damage to other types.
+Some types are:
+*Fighters - Fighters are strong against Bombers but weak against Capital Ships
+*Bombers - Bombers are strong against Capital Ships but weak against Fighters
+*Capital Ships - Capital Ships are strong against Fighters but weak against Bombers.
+
+===Planets===
+Planets are bases of operation. All growth is dependent on Planets
+*Planets produce 100 resources each turn
+*Research: Planets can choose which research upgrades they would like to begin producing.
+*Drone Production: Planets can begin to produce as many drones as they have available resources for.
+
+==Combat==
+Combat uses a drones type to determine which units they will attack first and how much damage they will do. Drones will choose to attack units which are weakest to their attacks first. Combat will occur between units in a certain range from one another.
+
+== Further information ==
+*[http://docs.google.com/Doc?id=dg93sdv_6k523p9dx Dronesec Proposal Document]
+*[http://juangsocblogspot.com Dronesec Development Blog]
