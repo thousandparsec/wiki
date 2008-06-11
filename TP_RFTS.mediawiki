@@ -79,7 +79,7 @@ The formula used is: RPs = (population * 2) + ( (industry * social) / 16 )
 |-----
 | PDB Maint. || align=center | 1/2/2 *
 |}
-(*) PDB cost depends on Ship Tech. Level
+(*) PDB cost depends on Ship Tech. Level. Higher tech level == higher costs.
 
 
 == Combat ==
