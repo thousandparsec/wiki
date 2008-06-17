@@ -43,7 +43,7 @@ If I have time and the need arises, I might implement parts of proposed extensio
 * <s>Client that can connect to the server</s>
 * <s>Constraint representation</s>
 * <s>Logical unification support</s>
-* Constraint store
+* <s>Constraint store</s>
 * Rule representation
 * Rule parsing
 * Rule store
