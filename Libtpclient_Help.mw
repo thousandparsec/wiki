@@ -89,7 +89,7 @@ The valid actions for "compound" types are,
 
 ==== Creating an order instance ====
 1. Getting the different types of order classes
-  from tp.client.objects import OrderDescs
+  from tp.netlib.objects import OrderDescs
   OrderDescs()            # returns a list of all possible order classes
 2. Setting default arguments
   descclass = OrderDescs()[1]
