@@ -61,14 +61,14 @@ Current planning already differs significantly from my original planning and wil
 2008-06-26: Basic rule engine in place (test: add basic rules to move the scout around the universe).<br>
 
 2008-06-26 - 2008-07-06: Gone. Probably won't have any time for SoC.<br>
-2008-07-07: Start of mid-term evaluation. I kindly ask nash to wait with giving me bad marks for a few more days as I basically just start coding.
+2008-07-07: Start of mid-term evaluation. I kindly ask nash to wait with giving me bad marks for a few more days as I basically just start coding.<br>
 2008-07-07 - 2008-07-20: Rule implementation. Will also involve some iterations of refining the engine to allow more flexible rule sets (and fix bugs).<br>
 2008-07-20: Rules written, tested, working.<br>
 
-2008-07-20 - 2008-07-24: Toy around with the rule engine, trying to create a some interesting behavior by hand.
+2008-07-20 - 2008-07-24: Toy around with the rule engine, trying to create a some interesting behavior by hand.<br>
 The following only applies if the schedule works out and there are no huge setbacks.<br>
 2008-07-25 - 2008-07-31: Design of the genetic algorithm (textbook stuff), setup of testing environment (server configuration, being able to get stats from it, etc).<br>
-2008-08-01 - 2008-08-09: Genetic algorithm running, hopefully yielding even more good and interesting behavior.
+2008-08-01 - 2008-08-09: Genetic algorithm running, hopefully yielding even more good and interesting behavior.<br>
 2008-08-10 - 2008-08-16: Akademy, in my country, so I'll probably be there.<br>
 2008-08-11: Pencils down date, genetic algorithm around AI working and yielding some good results.
 
