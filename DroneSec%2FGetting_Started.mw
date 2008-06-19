@@ -1,0 +1,106 @@
+=Installing tpserver-py=
+
+==Using git to get the pull the latest repositories==
+
+Bring up the terminal on the directory you want to install tpserver-py.
+Use git to get the latest repositories.
+<pre>
+git clone git://git.thousandparsec.net/git/tpserver-py.git
+git clone git://git.thousandparsec.net/git/libtpproto-py.git
+git clone git://git.thousandparsec.net/git/scratchpad.git
+</pre>
+
+==Install libtpproto-py and tpserver-py==
+<pre>
+cd libtpproto-py
+sudo python setup.py install
+cd ..
+cd tpserver-py
+sudo python setup.py install
+cd ..
+cd scratchpad
+sudo ./setup.sh
+cd ..
+</pre>
+
+==Starting tpserver-py==
+<pre>
+cd tpserver-py
+sudo ./tpserver-py
+</pre>
+
+=Starting a Dronesec game=
+<pre>
+sudo ./tpserver-py-tool --addgame <name> dronesec <admin e-mail> <comment>
+</pre>
+This will start  a game on the server.  As an example we will have the name be tp. Every time you want to do something with the game you must use its name.
+
+==Populating Dronesec==
+<pre>
+sudo ./tpserver-py-tool --populate tp <> <number of Planets> <>  <> <seed>
+</pre>
+
+Right now you must place some items between tp and seed. These are currently placeholders for when other types of maps are supported and coded in.
+All that is important right now is the number of planets and the seed.
+The seed can be left blank for a random seed.
+
+==Adding Players==
+
+<pre>
+sudo ./tpserver-py-tool --player tp <name> <password>
+</pre>
+
+==Ending a Turn==
+As of right now dronesec does not end a turn based on a timer or through tpclient-pywx's Request End of Turn feature. Instead the server must has a turn pass manually by typing this into the terminal.
+<pre>
+sudo ./tpserver-py-tool --turn tp
+</pre>
+
+=Playing Dronesec=
+
+==tpclient-pywx==
+The latest tpclient-pywx release can be found [http://thousandparsec.net/tp/downloads.php here].
+
+start tpclient-pywx
+
+<pre>
+sudo tpclient-pywx
+</pre>
+
+In this case. The server address is ourselves so we use localhost.
+
+<html>
+<a href="http://picasaweb.google.com/juanmy777/Dronesec/photo#5213677956610476002"><img src="http://lh6.ggpht.com/juanmy777/SFq0enENR-I/AAAAAAAAAC0/SzbOD_tQGsw/s800/Screenshot-TP%3A%20Connect%20to%20a%20Server.png" /></a>
+</html>
+
+After typing in the username @ <gamename> and the password we click ok to connect.
+ 
+==Play==
+In this game its blah vs blag.
+
+Open the system tree and find your planet.
+We will now order it produce some drones.
+On the left there is an orders window. Click on the pull down menu at the bottom of it and choose ProduceDrones and click the New Button.
+
+Lets make some fighters.
+Our planet has 100 resources right now. This is enough to make 4 Fighters. Lets go ahead and name the fleet 'Fighter Squad' and click save.
+
+Note: Planets produce 100 Credit resources every turn which can be used for Drone Production.
+
+Now lets give our overlord some orders. By default they do not give out any commands. We can make the overlord place "magnets" of sorts which will attract or repel units to or from a location. There are two ways to do this.
+The default way of doing this is to choose the overlord and assign the order normally. This would involve writing the position of movement or clicking the P button and then the location.An easier and faster way of doing this when sending units towards an object(such as a planet) Is to click the overlord and then right click on the object you wish to "place the magnet" and select to "Attract" or "Repel" to the object. Stop is a command that will force all drones to remain stationary.
+The Overlord can also Move but this does not generally serve any purpose.
+
+==Capturing a Planet==
+A planet is captured when enough units are present at that location.
+Once a certain "power" is present, the units will be removed and that planet will be captured and ready to be used for production.
+
+
+==Combat:==
+Combat occurs when at least two fleets enter the same position.
+
+
+=Known Bugs:=
+*Repel will not repel drones away from a location if they are already at that location.
+*Dronesec is currently dependant on each fleet having only one type of unit. 
+**Drone Production using multiple unit types in a fleet might break something.
