@@ -69,27 +69,43 @@ sudo tpclient-pywx
 
 In this case. The server address is ourselves so we use localhost.
 
-<html>
-<a href="http://picasaweb.google.com/juanmy777/Dronesec/photo#5213677956610476002"><img src="http://lh6.ggpht.com/juanmy777/SFq0enENR-I/AAAAAAAAAC0/SzbOD_tQGsw/s800/Screenshot-TP%3A%20Connect%20to%20a%20Server.png" /></a>
-</html>
+[[images/Dronesec-ConnectingToServer.png]]
 
 After typing in the username @ <gamename> and the password we click ok to connect.
  
 ==Play==
 In this game its blah vs blag.
 
+[[images/Dronesec Start.png]]
+
 Open the system tree and find your planet.
 We will now order it produce some drones.
 On the left there is an orders window. Click on the pull down menu at the bottom of it and choose ProduceDrones and click the New Button.
 
-Lets make some fighters.
-Our planet has 100 resources right now. This is enough to make 4 Fighters. Lets go ahead and name the fleet 'Fighter Squad' and click save.
+[[images/Dronesec choosing order.png]]
+
+==Drone Production==
+Lets make some fighters. Production is handled automatically. We only have to pick what type of unit we wish to create and the planet will continue producing that unit using as many resources as it can until the order is changed.
+Our planet has 100 resources right now. This is enough to make 4 Fighters. Lets go ahead and name the fleet 'Blah Planet' and click save.
+Dronesec automatically appends the unit type and "Fleet" after a name to make it easier to tell which fleets contain what.
 
 Note: Planets produce 100 Credit resources every turn which can be used for Drone Production.
+
+[[images/Dronesec ProduceDrones.png]]
+
+==Overlords==
 
 Now lets give our overlord some orders. By default they do not give out any commands. We can make the overlord place "magnets" of sorts which will attract or repel units to or from a location. There are two ways to do this.
 The default way of doing this is to choose the overlord and assign the order normally. This would involve writing the position of movement or clicking the P button and then the location.An easier and faster way of doing this when sending units towards an object(such as a planet) Is to click the overlord and then right click on the object you wish to "place the magnet" and select to "Attract" or "Repel" to the object. Stop is a command that will force all drones to remain stationary.
 The Overlord can also Move but this does not generally serve any purpose.
+
+[[images/Dronesec Overlord order.png]]
+
+Overlord commands are:
+* Attract: This commands all drones to move towards this location.
+* Repel: This commands all drones to move away from this location.
+* Stop: This commands all units to come to a complete stop
+* Move: Moves the overlord.
 
 ==Capturing a Planet==
 A planet is captured when enough units are present at that location.
@@ -102,5 +118,3 @@ Combat occurs when at least two fleets enter the same position.
 
 =Known Bugs:=
 *Repel will not repel drones away from a location if they are already at that location.
-*Dronesec is currently dependant on each fleet having only one type of unit. 
-**Drone Production using multiple unit types in a fleet might break something.
