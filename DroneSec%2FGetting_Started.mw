@@ -26,8 +26,14 @@ cd ..
 ==Starting tpserver-py==
 <pre>
 cd tpserver-py
-sudo ./tpserver-py
+./tpserver-py
 </pre>
+
+If tpserver-py does not work without sudo then do:
+<pre>
+chown <username> tp.db
+</pre>
+where <username> is your own Unix username.
 
 =Starting a Dronesec game=
 <pre>
