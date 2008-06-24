@@ -1,0 +1,39 @@
+= Installing tpserver-cpp =
+== Getting a base tpserver-cpp installed ==
+See mithro's excellent guide on [[Tpserver-cpp Setup]]. You may as well clone 
+== Getting the Risk repository ==
+This is a temporary measure to be taken until Risk is merged with the main branch.
+<pre>
+git checkout --track -b risk origin/risk 
+</pre>
+== Recompiling with Risk ==
+Head back on over to mithro's guide and compile/install tpserver-cpp.
+
+
+= Starting a Risk game =
+To run a game where players have to bid on territories run the following command (so long as tpserver-cpp is in the path):
+<pre>
+tpserver-cpp -C quickstart-risk-bid.conf
+</pre>
+To start a game where players are randomly assigned planets run this command:
+<pre>
+tpserver-cpp -C quickstart-risk-random.conf
+</pre>
+
+
+= Playing Risk =
+==tpclient-pywx==
+The latest tpclient-pywx release can be found [http://thousandparsec.net/tp/downloads.php here].
+start tpclient-pywx
+<pre>
+sudo tpclient-pywx
+</pre>
+In this case. The server address is ourselves so we use localhost.
+
+[[images/Risk-ConnectingToServer.png]]
+
+After typing in the username @ <gamename> and the password we click ok to connect.
+==Play==
+''Insert Play Instructions here''
+
+= Known Bugs =
