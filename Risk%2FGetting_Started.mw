@@ -34,6 +34,13 @@ In this case. The server address is ourselves so we use localhost.
 
 After typing in the username @ <gamename> and the password we click ok to connect.
 ==Play==
-''Insert Play Instructions here''
+When you connect to the server you will be greeted with something like this (maybe less "Mac"ified):
+[[Image:Risk-Startup.png]]
+
+Open the system tree and find your planet (or right click your green system and select the planet.) We're running a little bit low on reinforcements on our planet. Create a new Reinforce order. We can check the number of reinforcements available in the Info pane; Lets add all 10 reinforcements.
+[[Image:Risk-Reinforcements.png]]
+Now that we have a few more units it is time to start spreading our influence across the universe. There are two possible ways to do so, (only one if random planet assignment was turned on,) with colonize order or a move order. Colonize orders allow you to place units on any open planet, while move orders allow you to move units to any adjacent planet. Since the list of planets is populated for you you need not worry about picking a valid choice. Here are screenshots of what issuing an order should look like:
+
+[[Image:Risk-Move.png]]    [[Image:Risk-Colonize.png]]
 
 = Known Bugs =
