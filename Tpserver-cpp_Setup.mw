@@ -4,7 +4,7 @@ This page documents some ways of getting [[tpserver-cpp]] built.
 
 Make sure you have the following dependencies installed before building
 <pre>
-apt-get install autoconf automake libtool build-essential g++
+apt-get install autoconf automake libtool build-essential g++ cogito
 </pre>
 
 The follow is how mithro sets up his server, YMMV.
