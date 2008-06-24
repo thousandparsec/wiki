@@ -1,51 +1,33 @@
-Article Creator [[user:Jphr| Ryan Neufeld]]
-
 == Ruleset Documentation ==
-The ruleset will emulate an almost complete game of Risk with a modification to the turn structure. Instead of turns playing out player-by-player they play out in a more 4X “all-at-once” fashion. The only features not guaranteed (but very likely) in the GSoC iteration will be continent-ownership based reinforcements and a cards system.
+The Risk ruleset emulates an almost complete game of Risk with some slight modifications to the turn structure. Instead of turns playing out player-by-player they play out in a more 4X “all-at-once” fashion. This means that players plan out their movements and issue orders simultaneously. 
 
-Update: I've started development of the Risk ruleset and as a consequence I cannot guarantee the validity of this document at any given time until the ruleset starts to solidify. I'll be going through the document today (May 14/08) and adapting things to reflect my current ideas about how the ruleset will work.
-
-
-== Initial Turns ==
-Due to some changes made to turn ordering and general play it is no longer necessary to have extra states to represent the start of a game. Games will simply launch into normal turns. Since no territories have been claimed players will only be able to attempt to build units on unclaimed territories to claim them. For posterity sake this action may be called "colonize" to attach a realistic name to the action.
-
-Mithro suggested a minimum number of units required to claim. While I agree with the aim, reducing "grab everything tactics" I think a balance exists with this strategy and more fortified strategies. If a player spreads themselves too thin they are more than likely to be outbid by other players, and will essentially be punished by the other players, and not the server. This is still to be considered.
+As the ruleset is still in development game mechanics are subject to change.
 
 
-'''''NOTE''': Empty territories may be built on by any players in an auction style ''
-*''Most units attempted wins, other players are not docked units (but they could be :P.) ''
-*''In the case of a tie a virtual roll-off occurs, winner grabs the territory. A message could be displayed to users letting them know this occurred, or not.''
+== Rules ==
+=== Starting Play ===
+As with the boardgame version of Risk a Risk game can start in one of two ways:
+*Players may begin the game by using the '''Colonize''' order to bid on territories they wish to claim. At the conclusion of each turn bids are tallied on a planet-by-planet basis and the highest valid bid will gain ownership of the planet. Losing bids will not lose any Armies. Once all available territories are claimed the colonize order will disappear from the order list. ''OR''...
+*Players may begin the game by randomly receiving a fraction of the available planets. Each player will receive TOTAL_PLANETS / MAX_PLAYERS planets. If random planet assignment is turned on the Colonize order is never available. Players can still colonize adjacent planets with the '''Move''' order
 
-'''NOTE''':'' A player must maintain a positive number of units on a territory to maintain ownership. Reduction to zero units will allow for colonization by other players. The possibility of stealing will be eliminated by the attack action, which will force a defeated territory to be colonized by the attacker.''
+=== Normal Turns ===
+Once a player has gained ownership of a planet they can being issuing regular movements, hence beginning play. Risk, unlike earlier Thousand Parsec Rulesets, is incredibly simple. There are no ships, all moves take only 1 turn, and the movement of units is cleanly restricted to adjacent planets. Here are the available moves in Risk. '''Orders are executed in the order presented''':
+*'''Colonize'''(if available): As explained above Colonize orders constitute bids to colonize a planet. At the end of a turn all colonize orders on a planet are tallied and a winner is selected. That winner gains ownership of the planet and transfers the bidded number of units to it, while the losers (if any) do not lose any units.
+*'''Reinforce''': This order will take units from your reinforcement pool, displayed as the "quantity minable" number, and add them to the currently selected planet. Since the available reinforcements is a ''global'' value it means that if you have 5 reinforcements you cannot add 5 units to each planet, you can only add 5 units to planets IN TOTAL. Be careful of this, as units are given out in the order the Orders are encountered; You may well use up all your reinforcements before all your reinforcement orders are filled.
+*'''Move''': This order will move units from a selected planet to an adjacent planet. If the adjacent planet is uncolonized or owned by you then the movement is quarrel free. On the other hand if the target planet is owned by another player the movement becomes an Attack move. Move orders will only move one less than the total available units on the planet, forcing players not to desert their planets.
+**'''Attack Move''': Any normal Move order that tries to move units to an enemy territory. When an attack movement occurs a number of dice are rolled equivalent to the strength of the participating planets. Each parties dice are then compared in descending order. For every pair of dice the loser of the pair will lose one unit. The attacker will win if their die is higher than the opponents, while the defender will win if their die is equal or greater to the attackers. If it so happens that on the battles conclusion the defender has no more units on the planet then the attacker has won, and colonizes that planet with his remaining units. If two planets are attacking each other simultaneously then the defender will get one additional roll on account of their preparedness for battle.
 
-
-== Normal Turns ==
-My idea of how normal turns will occur has diverged greatly from what I originally conceived. This mainly stems from Mithro's valid concerns about short turns and slow gameplay. With his help I've modified the turn structure to play out with everyone issuing their orders and then at turn completion all orders are executed in some fixed order. This fixed order could give priority to territories with less connectivity to other territories, essentially crippling "hot spot" territories with as many as 5-6 adjacent territories. Aside from "which territory goes first" there is also precedence given to certain orders. That order follows:
-*'''Reinforce orders''': These orders will be executed first as they occur first in Risk. If a player tries to allocate say 150 units, when they only have 100 reinforcements only the FIRST 100 reinforcements will be issued. The fixed order of territories may be reversed or modified to favor higher risk territories.
-*'''Move orders''': Next all attempts by players to move units to an adjacent friendly territory will be executed. Players will no be able to make giant free moves as they can in normal Risk as at present I feel like this could really be abused (say like rearranging the entire board in one turn.)
-*'''Attack orders''': Next all attempts to move onto an enemy territory will be executed. This movement will result in a battle. Odds favor attacker, unless territories are mutually attacking each other (in which case odds are even). If the attacker defeats an entire army then all units are moved onto the territory. See NOTE at end of section.
-*'''Nop orders''': As with all rulesets the last order executed is always the no operation order. I still don't fully understand the workings of Nop (haven't gone through enough code:P).
-
-My only question left standing is what to do with excess orders? It could create the opportunity for alternative strategies by allowing a player to delay orders, but it also may be abused, or result in a disadvantage to players not understanding the turn order.
-
-You may have noticed I also took out the retreating from battle bonus. I am not really sure about this feature. I don't really think a defending territory should have the advantage of including retreated armies.
+=== Winning ===
+Should any one player gain sole dominance over the universe then that player has won. This means the player has either vanquished all foes and/or conquered all planets. Defeated players are not required to leave the game, and can continue to spectate.
 
 
-'''''NOTE''': Any movement (friendly or attack) will only move 1 less units than the territory currently has. I.e. If I have 50 units and I try to attack with 50, or even 500, I only end up attacking with 49. That way I can't leave a territory with no units remaining.
-''
-
-== Winning/Losing ==
-*Should a player be completely wiped out they are exited from the game. It is a possibility that the user could still spectate the game, as having no territories owned would simply "skip" their turn.
-*Should a player own every territory they win the game. It is also a possibility that owning a certain percentage of territories would constitute a win. This could be a server option.
-
-
-== Example Game Session ==
-The old example session wasn't relevant with changes to turn ordering. I will attempt to create a new exampe game session ASAP.
+== Advanced Strategies ==
+On account of the versatile nature of the Thousand Parsec Client and Server several more advanced tactics for players to use have been discovered. The first such tactic is a strategy I call "chaining." With chaining players can repeatedly attack a planet within a single turn. This is accomplished by creating multiple "move" orders on a single planet, all of which attempting to move to an enemy planet. The big challenge of this strategy is deciding how many times to chain, as chaining too many moves will move all available units to a planet, leaving the original planet undefended. The second tactic I call "holding out." When holding out a player with very little armies can increase their chance of survival by actually attacking his expected defeater. This causes the defending player to get better odds if attacked. On the other hand, the player will also be partaking in an attack, which could lose him even more units!
 
 
 == Features for Further Implementations ==
 These features will either be implemented in later iterations of the ruleset or at the conclusion of GSoC should a basic ruleset be finished early.
 *Continent-ownership based reinforcements. This feature would extend the first iteration by providing additional reinforcements should a player completely control a star cluster.
-*Cards. This feature may involve extending the server a little, as I don't see it as ideal to have "cards" count as little ships; I just don't see that as a very refined approach.
+*More advanced battle mechanics. More fortified positions will receive better odds, while wide open territories will face harsher odds.
 *Rock-Paper-Scissor interaction of different unit types. This would involve 3 (or more) different types of units, either costing the same amount of reinforcements to create, or variable costs. This would need a tight leash on it as it could quickly transform the ruleset into something entirely not Risk-like and more 4X-space-game like. It is a possibility that the ruleset could fork into other derivatives.
 *A bevy of other features from [http://en.wikipedia.org/wiki/Risk_2210_A.D. ''Risk 2210 A.D.'' ]. If you notice any features in 2210 you would like to see in the GSoC iteration please leave a comment at the end of the page.
