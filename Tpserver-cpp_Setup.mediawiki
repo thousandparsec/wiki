@@ -21,7 +21,7 @@ cd ..
 cg-clone git://git.thousandparsec.net/git/tpserver-cpp.git
 cd tpserver-cpp
 ./autogen.sh
-PKG_CONFIG_PATH=/opt/tpserver-cpp/lib/pkg_config ./configure --prefix=/opt/tpserver-cpp
+PKG_CONFIG_PATH=/opt/tpserver-cpp/lib/pkgconfig ./configure --prefix=/opt/tpserver-cpp
 make
 sudo make install
 
