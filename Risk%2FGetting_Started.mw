@@ -44,3 +44,5 @@ Now that we have a few more units it is time to start spreading our influence ac
 [[Image:Risk-Move.png]]    [[Image:Risk-Colonize.png]]
 
 = Known Bugs =
+*There has been a server side segfault by SOME coincidence when colonizing two planets simultaneously. I have not been able to reproduce the bug.
+*There is a bug where a new player joining a game receives an error that they have no objects. The only problem with this is the player does own an object. The object does not "light up" green, but the player can still issue orders on the planet.
