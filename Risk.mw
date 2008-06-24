@@ -1,6 +1,8 @@
 == Ruleset Documentation ==
 The Risk ruleset emulates an almost complete game of Risk with some slight modifications to the turn structure. Instead of turns playing out player-by-player they play out in a more 4X “all-at-once” fashion. This means that players plan out their movements and issue orders simultaneously. 
 
+A '''getting started guide''' can be found [[Risk/Getting_Started|here]].
+
 As the ruleset is still in development game mechanics are subject to change.
 
 
