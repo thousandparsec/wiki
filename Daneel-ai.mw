@@ -44,9 +44,9 @@ If I have time and the need arises, I might implement parts of proposed extensio
 * <s>Constraint representation</s>
 * <s>Logical unification support</s>
 * <s>Constraint store</s>
-* Rule representation
+* <s>Rule representation</s>
 * Rule parsing
-* Rule store
+* <s>Rule store</s>
 * Rule engine complete
 * Client can extract orders from the constraint store and send them to the server
 * Get some sensible behavior
