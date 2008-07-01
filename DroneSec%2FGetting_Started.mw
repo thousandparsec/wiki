@@ -37,13 +37,13 @@ where <username> is your own Unix username.
 
 =Starting a Dronesec game=
 <pre>
-sudo ./tpserver-py-tool --addgame <name> dronesec <admin e-mail> <comment>
+./tpserver-py-tool --addgame <name> dronesec <admin e-mail> <comment>
 </pre>
 This will start  a game on the server.  As an example we will have the name be tp. Every time you want to do something with the game you must use its name.
 
 ==Populating Dronesec==
 <pre>
-sudo ./tpserver-py-tool --populate tp <> <number of Planets> <>  <> <seed>
+./tpserver-py-tool --populate tp <> <number of Planets> <>  <> <seed>
 </pre>
 
 Right now you must place some items between tp and seed. These are currently placeholders for when other types of maps are supported and coded in.
@@ -53,7 +53,7 @@ The seed can be left blank for a random seed.
 ==Adding Players==
 
 <pre>
-sudo ./tpserver-py-tool --player tp <name> <password>
+./tpserver-py-tool --player tp <name> <password>
 </pre>
 
 ==Ending a Turn==
