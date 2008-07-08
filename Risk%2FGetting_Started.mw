@@ -32,11 +32,12 @@ start tpclient-pywx
 <pre>
 sudo tpclient-pywx
 </pre>
-In this case. The server address is ourselves so we use localhost.
+In this case the server address is ourselves so we use localhost.
 
 [[Image:Risk-ConnectingToServer.png]]
 
 After typing in the username @ <gamename> and the password we click ok to connect.
+
 ==Play==
 When you connect to the server you will be greeted with something like this (maybe less "Mac"ified):
 [[Image:Risk-Startup.png]]
