@@ -7,27 +7,28 @@ Note: Everything here is subject to change throughout development
 
 ===Initial setup===
 Each player will begin with a planet containing 100 Credits, and an Overlord.
+They can build the basic Drones for Fighter, Bomber and Capital Ship types.
 
 ===Victory===
 Players achieve victory by being the last players standing.
 
 ===Defeat===
-Defeat occurs when a player has no planets left.
+Defeat occurs when a player has no planets or drones left.
 
 ==Turns==
-On each turn a player can assign the types of research and drone production that each planet will perform.
+On each turn a player can assign the types of research or drone production that each planet will perform.
 They may also choose to move their overlords and to allow overlords to perform commands.
 
 ==Capturing a planet==
-A Planet is captured when a certain number of units is present such that a threshold on power is passed. Then all units in the system(excluding Overlords) are removed as a colonizing force and production can begin.
+A Planet is captured when a certain number of units is present such that a threshold on power is passed. Then drones are removed from the planet(excluding Overlords) are removed as a colonizing force and production can begin. Removal is done in a way that the drones with the most power hopefully survive.
 
 ==Objects==
 ===Overlords===
 Overlords are the basic command unit and effective ordering of the overlord will be the key to victory. Overlords are the only unit controlled by the player and they only ones whose movement they can direct. Overlords act as a sort of magnet from which all units will be attracted to and move towards.
 *Move: Overlords can move to any location specified by this order.
-*Command: Follow: This order makes the Overlord act as a magnet cause all drones to move towards it.
+*Command: Follow: This order makes the Overlord "drop a magnet" causing all drones to move towards the determined position.
 *Command: Stop: This order makes all drones stop moving.
-*Command: Continue: This order is normally use in conjunction with Follow. It allows an overlord to set a destination for the drones and be free to move without being followed.
+*Command: Repel: This order makes the Overlord "drop a magnet" but in this case it would repel the drones. Drones that are already at that same location will not move.
 
 ===Drones===
 Drones are all produced ships that do not have a mind of their own. They cannot be controlled by the player and will follow the Overlord. Drones come in different types which will affect the research upgrades that affect them and bonus damage to other types.
@@ -35,6 +36,8 @@ Some types are:
 *Fighters - Fighters are strong against Bombers but weak against Capital Ships
 *Bombers - Bombers are strong against Capital Ships but weak against Fighters
 *Capital Ships - Capital Ships are strong against Fighters but weak against Bombers.
+
+Note: This is the general layout of their strengths and weaknesses. Many drones may be exceptions to this scheme.
 
 ===Planets===
 Planets are bases of operation. All growth is dependent on Planets
@@ -44,6 +47,13 @@ Planets are bases of operation. All growth is dependent on Planets
 
 ==Combat==
 Combat uses a drones type to determine which units they will attack first and how much damage they will do. Drones will choose to attack units which are weakest to their attacks first. Combat will occur between units in a certain range from one another.
+
+==Research==
+There are 4 types of research all performed by the Research Order.
+*Combat - This Research Type includes those that affect a drone's health, damage, and number of attacks.
+*World - This Research Type includes those that affect a drone's speed and power.
+*Economy - This Research Type includes those that affect a planet's resource production as well as resource bonuses while researching. Drone cost reduction is tentative.
+*Unit - This Research Type unlocks new drones.
 
 == Further information ==
 *[http://docs.google.com/Doc?id=dg93sdv_6k523p9dx Dronesec Proposal Document]
