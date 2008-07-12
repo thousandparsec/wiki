@@ -1,0 +1,13 @@
+Thousand Parsec is a 4X game framework, allowing aspiring universe leaders to develop and play wildly varying types of strategic games. However, conquering the universe is a bit boring when you are all alone, so I started a project to create an easily customizable, rule-driven AI player. This player can be very versatile: it could be scripted as a vicious opponent, an ally or even an event-driven neutral player in a storyline campaign.
+
+During the first half of Summer of Code, I created a rule system. This system holds knowledge about the universe ("I have a battle fleet ready at planet X") and a set of rules to reason about this knowledge ("if I have found a target for colonization, start production of a colonization fleet"). This knowledge and the rules are written down in a terse and powerful form, which allows quick AI development. I had to rewrite parts of it a few times because it wasn't working out or wasn't fast enough, but it seems to work okay now.
+
+The framework allows for easy mingling between the rule system and Python code. It's currently (almost) possible, for example, to find all stars with uncolonized planets, rank them according to a Python heuristic and return the highest ranked to the rule system to make a colonization order, all this in about 10 lines of code.
+
+It's not finished yet, though. I still need to work out long-term planning. Currently the knowledge store gets purged every turn to keep old knowledge from slowing down the system. There's still a few parsing issues to work out, the rules are currently a bit unwieldy to write out. And then I still need to write a cunning opponent to showcase the whole system, as the proof that I did something useful after all.
+
+It might all sound a bit vague, and I can't really provide screenshots. That's the nature of an AI framework, I'm afraid. I'm always happy to answer any questions that might arise.
+
+All in all, I like this project. First and foremost, I learned Python which is a fine language. It's not perfect, it has quirks, but it also has support for some high-level constructs that ease programming a lot (list comprehensions, yay). Next to that, I worked a bit with git. I can see its usefulness in some projects where you need branching a lot (like kernel development, I suppose), but I still prefer the simplicity of SVN.
+
+I also learned a lot about TP, obviously. Amazing how a few people can create something this big. It is still in need of a lot of work, but if it gets Summer of Code students every year and they are always as good as they are this year, I think TP will be big very soon.
