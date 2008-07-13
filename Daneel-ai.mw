@@ -16,6 +16,8 @@ where C is the constraint in the head, as counted from left starting with 0. A i
  whoami(int) and owner(int,int) \ planet(int) <=> _var_0_0 == _var_1_1 and _var_1_0 == _var_2_0 | myplanet(_var_2_0)
 In CHR, you would just reuse the same variable:
  whoami(X) and owner(X,Y) \ planet(Y) <=> myplanet(Y)
+=== Python code ===
+Just a section where you can add helper functions. You can also import other modules. The whole section is executed as Python code and the resulting  global variables are inserted in the environment where guards and bodies execute.
 
 == Overview ==
 At the start of a turn, the bot downloads the universe data from the server and stores them in a local cache. It then enters the initialization phase. Based on the ''initialization rules'', the cache is read and constraints are added to the constraint store. The next phase is the resolution phase. The bot uses the constraints to deduce new knowledge about the system via ''resolution rules'' and adds it to the store. This is the bulk of the work. Afterwards, the finalization phase searches for constraints that signify orders to be executed and creates the appropriate orders.  As such, the resolution phase can be seen as a process that transforms the state of the game to actions to be performed, with the initialization phase providing the state and the finalization phase executing the actions.
