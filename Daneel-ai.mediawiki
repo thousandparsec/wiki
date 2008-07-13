@@ -12,10 +12,11 @@ The current syntax of the rules is a bit more verbose than what the final syntax
  scout @ cacheentered and stars(tuple) \ scout(int) <=> Target = randomstar(_var_1_0); order_move(_var_2_0,Target)
 The basic syntax is the same as below, explained in "Constraint syntax/semantics". The main difference is in the head and the variables. The head consist of free versions of the constraints, in the same way as they are entered in the constraints section. The variables are named according to the following scheme:
  _var_C_A
-where C is the constraint in the head, as counted from left starting with 0. A is the argument, again counted from 0. So in the example above, <code>_var_1_0</code> refers to the first argument of the second constraint, thus the tuple in <code>stars<code> (note that <code>cacheentered</code> is the first constraint). Lastly, the guards are all made explicit as seen in the following example
+where C is the constraint in the head, as counted from left starting with 0. A is the argument, again counted from 0. So in the example above, <code>_var_1_0</code> refers to the first argument of the second constraint, thus the tuple in <code>stars</code> (note that <code>cacheentered</code> is the first constraint). Lastly, the guards are all made explicit as seen in the following example
  whoami(int) and owner(int,int) \ planet(int) <=> _var_0_0 == _var_1_1 and _var_1_0 == _var_2_0 | myplanet(_var_2_0)
 In CHR, you would just reuse the same variable:
  whoami(X) and owner(X,Y) \ planet(Y) <=> myplanet(Y)
+
 === Python code ===
 Just a section where you can add helper functions. You can also import other modules. The whole section is executed as Python code and the resulting  global variables are inserted in the environment where guards and bodies execute.
 
