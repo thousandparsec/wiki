@@ -1,6 +1,8 @@
 == Overview ==
 Tigris and Euphrates is a ruleset currently in development in conjunction with Google Summer of Code 2008.  This ruleset is an adaptation based on the board game ''Tigris and Euphrates'' by Mayfair Games.
 
+For a quick guide to getting started with TaE, [[Tigris_and_Euphrates/Getting_Started|click here]].
+
 == Rules ==
 This is an preliminary draft of the rules and may change as development progresses.
 
@@ -175,5 +177,6 @@ Player 2's turn continues:
 [http://www.logosatlas.com/GSoC/external3.jpg img]
 
 == Related Links ==
+*[[Tigris_and_Euphrates/Getting_Started|Guide to getting started with TaE]]
 *[[Google_Summer_of_Code/Nuleren's_Propsal]]
 *[http://nuleren.blogspot.com TaE Development Blog]
