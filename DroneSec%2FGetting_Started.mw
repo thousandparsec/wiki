@@ -43,18 +43,43 @@ This will start  a game on the server.  As an example we will have the name be t
 
 ==Populating Dronesec==
 <pre>
-./tpserver-py-tool --populate tp <> <number of Planets> <>  <> <seed>
+./tpserver-py-tool --populate <game> <number of Planets> <number of Players>  <map type> <seed> <load file>
 </pre>
 
-Right now you must place some items between tp and seed. These are currently placeholders for when other types of maps are supported and coded in.
-All that is important right now is the number of planets and the seed.
+Game is the game name. In this case we are using tp
+
+The number of Planets includes the player planets. This is set to 2 by default.
+
+
+
+There are currently 2 map types:
+Random: All planets are arranged randomly and players will be spawned in any of these. This is set by default.
+Standard: The Map is randomly generated but allows for a more balanced map or attempts to at least.
+
+A Maptype is being planned which would allow for a pre-made map to be loaded.
+
 The seed can be left blank for a random seed.
+
+Random games that do not wish to specify a seed only need to specify the number of Planets.
+Standard games must at least specify the number of planets, the number of players and the maptype.
+
+Examples:
+<pre>
+./tpserver-py-tool tp --populate 15
+./tpserver-py-tool tp --populate 10 3 standard
+</pre>
+
+The first example would create a random game with 15 planets
+The second example would create a standard game with 10 planets and 3 players.
 
 ==Adding Players==
 
 <pre>
 ./tpserver-py-tool --player tp <name> <password>
 </pre>
+
+A standard or loaded game will only allow the specified maximum number of players.
+On random games there can be as many players as there are planets.
 
 ==Ending a Turn==
 As of right now dronesec does not end a turn based on a timer or through tpclient-pywx's Request End of Turn feature. Instead the server must has a turn pass manually by typing this into the terminal.
