@@ -1,0 +1,70 @@
+== Installing tpserver-cpp with TaE ==
+This setup is based off mithro's [[Tpserver-cpp_Setup]]
+
+First make sure you have all the correct dependencies:
+<pre>
+apt-get install autoconf automake libtool build-essential g++ cogito libncurses5-dev guile-1.8-dev boost-build libboost-dev
+</pre>
+
+Then install the tae branch of tpserver-cpp:
+<pre>
+cg-clone git://git.thousandparsec.net/git/libtprl.git
+cd libtprl
+./autogen.sh
+./configure --prefix=/opt/tpserver-cpp
+make
+sudo make install
+
+cd ..
+cg-clone git://git.thousandparsec.net/git/tpserver-cpp.git#tae
+cd tpserver-cpp
+./autogen.sh
+PKG_CONFIG_PATH=/opt/tpserver-cpp/lib/pkgconfig ./configure --prefix=/opt/tpserver-cpp
+make
+sudo make install
+</pre>
+
+
+==Running TaE==
+First start up an instance of tpserver-cpp. The quickstart-tae.conf file is in the tpserver-cpp directory after downloading the tae branch as described above. You may modify the configuration file or make your own.
+<pre>
+tpserver-cpp -C tpserver-cpp/quickstart-tae.conf
+</pre>
+
+After starting the server, run a thousand parsec client. For this guide we'll use tpclient-pywx. You can download it [http://thousandparsec.net/tp/downloads.php here].
+<pre>
+tpclient-pywx
+</pre>
+
+Type in the IP address of the server, your username, and password. Then click OK to connect.
+
+
+==How to Play==
+You should see something like this when you fist start up the game (if it doesn't look right, try selecting "fit" from the dropdown menu at the top of the screen):
+
+[[images/TaE_Board1.png|800px]]
+
+
+The "board" is displayed in the middle, and the contents of each of the star systems is detailed on the right hand side. You have one system which belongs to you (it's named after your username and highlighted in green on the board). In orbit in this star system is your "hand" of fleets ([http://www.thousandparsec.net/wiki/Tigris_and_Euphrates#Resources.2C_Colonists.2C_Leaders.2C_and_Allied_Regions click here] for more information on the types of fleets).
+
+[[images/TaE_home_system.jpg]]
+
+
+You can click on each fleet to get further information on them. This information is displayed in the "information" section at the bottom of the screen.
+
+[[images/TaE_fleet_info.jpg]]
+
+
+You can issue an order to one of your fleets by selecting it then clicking the "new" button on the order panel located to the left of the screen. Then select a star system to perform the order on and click save (for more info on orders [http://www.thousandparsec.net/wiki/Tigris_and_Euphrates#Turns_and_Orders click here]).
+
+[[images/TaE_order.jpg]]
+
+
+Each of the different star systems is characterized by what resources it has and what ships are in orbit around it. A good way to view the resources in each star system is by selecting the "Resources" view from the dropdown menu at the top of the screen (just to the right of the home button).  You will see something like this:
+
+[[images/TaE_Board2.png|800px]]
+
+
+Hovering the mouse over any of the systems will tell you exactly what resources the system has.
+
+Once you've gotten the hang of the interface, you should read through the rules of the game [http://www.thousandparsec.net/wiki/Tigris_and_Euphrates#Rules here].
