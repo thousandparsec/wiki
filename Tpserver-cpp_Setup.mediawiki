@@ -10,7 +10,7 @@ apt-get install autoconf automake libtool build-essential g++ cogito libncurses5
 The follow is how mithro sets up his server, YMMV.
 
 <pre>
-cg-clone git://git.thousandparsec.net/git/libtprl.git
+git clone git://git.thousandparsec.net/git/libtprl.git
 cd libtprl
 ./autogen.sh
 ./configure --prefix=/opt/tpserver-cpp
@@ -18,7 +18,7 @@ make
 sudo make install
 
 cd ..
-cg-clone git://git.thousandparsec.net/git/tpserver-cpp.git
+git clone git://git.thousandparsec.net/git/tpserver-cpp.git
 cd tpserver-cpp
 ./autogen.sh
 PKG_CONFIG_PATH=/opt/tpserver-cpp/lib/pkgconfig ./configure --prefix=/opt/tpserver-cpp
