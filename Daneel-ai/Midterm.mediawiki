@@ -1,13 +1,26 @@
-Thousand Parsec is a 4X game framework, allowing aspiring universe leaders to develop and play wildly varying types of strategic games. However, conquering the universe is a bit boring when you are all alone, so I started a project to create an easily customizable, rule-driven AI player. This player can be very versatile: it could be scripted as a vicious opponent, an ally or even an event-driven neutral player in a storyline campaign.
+== What is daneel-ai? ==
 
-During the first half of Summer of Code, I created a rule system. This system holds knowledge about the universe ("I have a battle fleet ready at planet X") and a set of rules to reason about this knowledge ("if I have found a target for colonization, start production of a colonization fleet"). This knowledge and the rules are written down in a terse and powerful form, which allows quick AI development. I had to rewrite parts of it a few times because it wasn't working out or wasn't fast enough, but it seems to work okay now.
+Thousand Parsec is a 4X game framework, allowing aspiring universe leaders to develop and play wildly varying types of strategic games. However, conquering the universe is a bit boring when you are all alone, so I started a project to create an easily customizable, rule-driven AI player. We baptized the project daneel-ai, after the robot in Asimov's books. The bot can be very versatile: it could be scripted as a vicious opponent, an ally or even an event-driven neutral player in a storyline campaign. The project has further use for developers who write their own rulesets and want to play some test games. Creating an opponent from scratch should be no more than half an hour work with this project.
 
-The framework allows for easy mingling between the rule system and Python code. It's currently (almost) possible, for example, to find all stars with uncolonized planets, rank them according to a Python heuristic and return the highest ranked to the rule system to make a colonization order, all this in about 10 lines of code.
+During the first half of Summer of Code, I created a rule system. This system holds knowledge about the universe ("I have a battle fleet ready at planet X") and a set of rules to reason about this knowledge ("if I have found a target for colonization, start production of a colonization fleet"). Knowledge and rules are written down in a terse and powerful form, which allows quick AI development.
 
-It's not finished yet, though. I still need to work out long-term planning. Currently the knowledge store gets purged every turn to keep old knowledge from slowing down the system. There's still a few parsing issues to work out, the rules are currently a bit unwieldy to write out. And then I still need to write a cunning opponent to showcase the whole system, as the proof that I did something useful after all.
+The bot allows for easy mingling between the rule system and Python code. It's possible, for example, to find all stars with uncolonized planets, rank them according to a Python heuristic and return the highest ranked to the rule system to make a colonization order, all this in about 10 lines of code.
 
-It might all sound a bit vague, and I can't really provide screenshots. That's the nature of an AI framework, I'm afraid. I'm always happy to answer any questions that might arise.
+A second goal of the project is to actually develop a bot to play the Reach For The Stars ruleset. This both proves the bot works and helps stabilizing RFTS by playing it more. And it gives you an opponent to play with if you don't want to go online.
 
-All in all, I like this project. First and foremost, I learned Python which is a fine language. It's not perfect, it has quirks, but it also has support for some high-level constructs that ease programming a lot (list comprehensions, yay). Next to that, I worked a bit with git. I can see its usefulness in some projects where you need branching a lot (like kernel development, I suppose), but I still prefer the simplicity of SVN.
+== Impressions about the project ==
 
-I also learned a lot about TP, obviously. Amazing how a few people can create something this big. It is still in need of a lot of work, but if it gets Summer of Code students every year and they are always as good as they are this year, I think TP will be big very soon.
+All in all, I like this project. First and foremost, I learned Python which is a fine language. It's not perfect, it has quirks, but it also has support for some high-level constructs that ease programming a lot (list comprehensions, yay). Next to that, I worked a bit with git, which was certainly an interesting experience.
+
+I also learned a lot about TP, obviously. Amazing how a few people can create something this big. It is still in need of a lot of work, but if it gets Summer of Code students every year and they are always as good as they are this year, I think TP will be big very soon. A game framework to keep your eyes on!
+
+== About Summer of Code ==
+
+Summer of Code allows students to work for an Open Source project during the summer, giving them a chance to valuable experience while lowering the bar for those that otherwise wouldn't even think of joining such a project. Summer of Code gives open source projects a chance to get motivated developers, and it promotes the open source movement in general. I suppose it goes without saying that this is a very lovable initiative.
+
+This is my second year of Summer of Code, and yet it is a very different year from last year. Last year I worked with KDE, which features thousands of developers (or that's what it seems like), astounding amounts of mailing lists and an enourmous code base which takes you a day to download and compile even the tiny part you need from it. Thousand Parsec is in comparison a tiny project, where everyone mostly knows everyone and you can have a bit of an overview of current development in a matter of hours. This makes that people are following you more closely and expect you to participate a bit more. For open source development, that is a good thing. The name doesn't lie, open source is all about openness.
+
+== About me ==
+
+My name is Vincent Verhoeven and I'm a 21 years old Computer Science student from Belgium. I'm mostly interested in computers and maths obviously, but I'm also active in youth movement and student's organization.
+(in search of picture :)
