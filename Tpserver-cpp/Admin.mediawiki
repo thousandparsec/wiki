@@ -10,10 +10,10 @@ The '''remote administration''' project intends to remove the internal console f
 * '''2008-06-06:''' tpserver-cpp will respond to requests for command lists and descriptions - <font color="green">''complete''</font>
 * '''2008-06-13:''' tpserver-cpp will start as a daemon by default - <font color="green">''complete''</font>
 * '''2008-06-20:''' tpserver-cpp will accept basic command set - <font color="green">''complete''</font>
-* '''2008-06-20:''' tpadmin-cpp client will be able to connect to tpserver-cpp
-* '''2008-06-27:''' tpadmin-cpp client will support command frames
-* '''2008-07-07:''' tpserver-cpp will implement full command set
-* '''2008-07-14:''' libtpclient/libtpproto will include a partial admin client
+* '''2008-06-20:''' tpadmin-cpp client will be able to connect to tpserver-cpp - <font color="green">''complete''</font>
+* '''2008-06-27:''' tpadmin-cpp client will support command frames - <font color="green">''complete''</font>
+* '''2008-07-07:''' tpserver-cpp will implement full command set - <font color="green">''complete''</font>
+* '''2008-07-14:''' libtpclient/libtpproto will include a partial admin client - <font color="orange">''partial''</font>
 * '''2008-08-01:''' tpclient-pywx will be able to start and configure a server
 * '''2008-08-08:''' tpclient-pywx will include a single-player GUI wizard
 * '''2008-08-18:''' tpclient-pywx will check for AI clients, and be able to start and configure them
