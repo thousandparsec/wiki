@@ -35,42 +35,92 @@ chown <username> tp.db
 </pre>
 where <username> is your own Unix username.
 
+Trying to join a game before running ./tpserver-py will fail.
+
 =Starting a Dronesec game=
 <pre>
 ./tpserver-py-tool --addgame <name> dronesec <admin e-mail> <comment>
 </pre>
-This will start  a game on the server.  As an example we will have the name be tp. Every time you want to do something with the game you must use its name.
+This will start  a game on the server.
+<name> corresponds to the name given to the game. It must be used everytime a command is being sent through tpserver-py-tool
+
+Example:
+<pre>
+./tpserver-py-tool --addgame tp dronesec myemail@email.com "Dronesec Server"
+</pre>
 
 ==Populating Dronesec==
 <pre>
-./tpserver-py-tool --populate <game> <number of Planets> <number of Players>  <map type> <seed> <load file>
+./tpserver-py-tool --populate <game> <number of Planets> <map type> <number of Players> <seed> <load file>
 </pre>
 
-Game is the game name. In this case we are using tp
-
-The number of Planets includes the player planets. This is set to 2 by default.
-
-
+<game> is the game name. In this case we are using tp.
 
 There are currently 2 map types:
-Random: All planets are arranged randomly and players will be spawned in any of these. This is set by default.
-Standard: The Map is randomly generated but allows for a more balanced map or attempts to at least.
+Random: All planets are arranged randomly and players will be spawned in any of these. This is set by default.All planets are designated home planets and players can join as long as there are unowned planets.
+Standard: The Map is randomly generated but allows for a more balanced map or attempts to at least. The number of players is set so that the map can remain balanced.
+Load: A Maptype is being planned which would allow for a pre-made map to be loaded. Each map xml file specifies which planets are home planets and as such the maximum number of players.
 
-A Maptype is being planned which would allow for a pre-made map to be loaded.
+The seed can be left blank or written as None for a random seed.
 
-The seed can be left blank for a random seed.
 
-Random games that do not wish to specify a seed only need to specify the number of Planets.
-Standard games must at least specify the number of planets, the number of players and the maptype.
 
-Examples:
+Example Table
+{| class="wikitable" border=1
+|-
+! Example
+! Number of Planets
+! Number of Players
+! Map Type
+! Seed
+! Load File
+|-
+| Default
+| No Default
+| Random
+| 2
+| None (Random)
+| None
+|-
+| Minimal Random
+| 15
+|-
+| Minimal Standard
+| 10
+| standard
+|-
+| Standard with Players
+| 12
+| standard
+| 5
+|-
+| Load Map needs
+|
+| load 
+|
+| A seed
+| test.xml
+|-
+| Actual Load
+| 2
+| load
+| 20
+| None
+| test.xml
+|}
+
+Some examples:
 <pre>
 ./tpserver-py-tool tp --populate 15
-./tpserver-py-tool tp --populate 10 3 standard
+./tpserver-py-tool tp --populate 10 standard 3
+./tpserver-py-tool tp --populate 5 load 5 None test.xml
 </pre>
 
 The first example would create a random game with 15 planets
 The second example would create a standard game with 10 planets and 3 players.
+The third example would load up the map called test.xml in the maps folder using a random seed.
+
+You should not be able to populate more than once.
 
 ==Adding Players==
 
@@ -144,8 +194,10 @@ Once a certain "power" is present, the units will be removed and that planet wil
 
 
 ==Combat:==
-Combat occurs when at least two fleets enter the same position.
+Combat occurs when at least two fleets of opposing sides enter the same position.
 
 
 =Known Bugs:=
-*Repel will not repel drones away from a location if they are already at that location.
+* Repel will not repel drones away from a location if they are already at that location.
+* Production orders allow for multiple drones to be added to the list but only one of them will be allowed.
+* Research orders allow multiple researches to be done although they are not researched in the order place on the order list.
