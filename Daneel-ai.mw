@@ -1,27 +1,43 @@
 daneel-ai is a rule-based AI (to be) written in Python. The bot framework is designed to be ruleset-agnostic, with components that should be implemented per ruleset and per desired behavior. More info on the [[User:Iwanowitch/RFTS_AI_proposal|proposal page]] (this will be merged here in time).
 
+== Overview ==
+At the start of a turn, the bot downloads the universe data from the server and stores them in a local cache. It then enters the initialization phase. Based on the ''initialization rules'' defined in the ''mod files'', the cache is read and constraints are added to the constraint store. The next phase is the resolution phase. The bot uses the constraints to deduce new knowledge about the system via ''resolution rules'' listed in the mod files and the ''rule files'' and adds this new knowledge to the store. This is the bulk of the work. Afterwards, the ''finalization phase'' (in the mod files) searches for constraints that signify orders to be executed and creates the appropriate orders.  As such, the resolution phase can be seen as a process that transforms the state of the game to actions to be performed, with the initialization phase providing the state and the finalization phase executing the actions.
+
 == Run the bot ==
 If you want to try out the bot, you can. Clone the repository at git://git.thousandparsec.net/git/daneel-ai.git and read the README to get started.
 
 == Rule file ==
-The rule file consists of 3 parts: the list of constraints, the rules and a section with Python helper code.
+A rule file controls the final behavior of the bot. The file consists of 4 parts: the list of mods, the list of constraints, the rules and a section with Python helper code. Two examples are in the directory currently: rules-rfts and rules-risk.
+
+At any point, you can add a comment line by using a '#' as the first character on the line. You cannot use this technique to make comments on the end of a line, only the first character of each line is checked.
+=== Mods ===
+A list of mod files to be read. These control the initialization and finalization phases, and might also predefine constraints and rules. Currently, there are the following mod files: basic, mod-rfts and mod-risk.
 === Constraints ===
-Each constraint that is used in the system is listed here, together with the types it uses.
+Each constraint that is used in the system is listed here, together with the types it uses. A constraint can have a '*' appended to signify this is a longterm constraint. A longterm constraint will not get removed from the constraint store at the end of a turn, all other constraints are removed. Longterm constraints can thus be used to carry over some of the bot's state to the next turn.
 === Rules ===
-The current syntax of the rules is a bit more verbose than what the final syntax should be, so I'll explain:
- scout @ cacheentered and stars(tuple) \ scout(int) <=> Target = randomstar(_var_1_0); order_move(_var_2_0,Target)
-The basic syntax is the same as below, explained in "Constraint syntax/semantics". The main difference is in the head and the variables. The head consist of free versions of the constraints, in the same way as they are entered in the constraints section. The variables are named according to the following scheme:
- _var_C_A
-where C is the constraint in the head, as counted from left starting with 0. A is the argument, again counted from 0. So in the example above, <code>_var_1_0</code> refers to the first argument of the second constraint, thus the tuple in <code>stars</code> (note that <code>cacheentered</code> is the first constraint). Lastly, the guards are all made explicit as seen in the following example
- whoami(int) and owner(int,int) \ planet(int) <=> _var_0_0 == _var_1_1 and _var_1_0 == _var_2_0 | myplanet(_var_2_0)
-In CHR, you would just reuse the same variable:
- whoami(X) and owner(X,Y) \ planet(Y) <=> myplanet(Y)
+The rules roughly follow the CHR syntax, as explained below. The best way to get a feeling for this is to study the examples provided, I think.
 
-=== Python code ===
-Just a section where you can add helper functions. You can also import other modules. The whole section is executed as Python code and the resulting  global variables are inserted in the environment where guards and bodies execute.
+=== Functions ===
+Just a section where you can add helper functions. You can also import Python modules. The whole section is executed as Python code and the resulting  global variables are inserted in the environment where guards and bodies execute. Python code can make use of the variables "rulesystem", "cache" and "connection" to access the rule system, the libtpclent-py cache and the libtpproto-py connection directly. These can be used to make probe orders, for example. Usage is discouraged though.
 
-== Overview ==
-At the start of a turn, the bot downloads the universe data from the server and stores them in a local cache. It then enters the initialization phase. Based on the ''initialization rules'', the cache is read and constraints are added to the constraint store. The next phase is the resolution phase. The bot uses the constraints to deduce new knowledge about the system via ''resolution rules'' and adds it to the store. This is the bulk of the work. Afterwards, the finalization phase searches for constraints that signify orders to be executed and creates the appropriate orders.  As such, the resolution phase can be seen as a process that transforms the state of the game to actions to be performed, with the initialization phase providing the state and the finalization phase executing the actions.
+== Mod file ==
+A mod file is actually just a python module where some functions and variables can be defined that influence the different phases. Note that this file is parsed with the Python parser, and the rule files use a simple, line-based homemade parser.
+=== constraints, rules, functions ===
+Three lists of strings that are interpreted in the same way as the sections of rule files. It should be noted that all code should be considered global, so it is possible that a rule file (or another mod file) overwrites a function in a mod file's functions list.
+
+=== init ===
+ init(cache,rulesystem,connection)
+A function that gets called just once, right before the first turn starts. The cache has been filled with the server's data and the rule system has the rules but no constraints yet. This can for example be used to initialize some long-term constraints or set constants based on static universe data.
+=== startTurn ===
+ startTurn(cache,store)
+This function gets called at the start of each turn. The purpose is to read the cache and add its data to the constraint store in a way that is useful to rule file writers. An example is in the basic.py file that reads all objects and adds their position, velocity, ... to the constraint store.
+=== endTurn ===
+ endTurn(cache,rulesystem,connection)
+This function gets called once all rule processing is done. The idea here is to search for some form of constraints and change the game state with those, probably by adding orders to the relevant objects or posting messages or something.
+
+== Classes ==
+=== Rulesystem ===
+TODO: document some useful methods here (findConstraint, addConstraint, others?)
 
 == Design ==
 The bot is based on libtpclient-py to handle the connection to the server and the cache of game objects. Furthermore, the client is designed to be modular, each of the 3 phases can be changed to another implementation to allow ruleset-specific information to be considered, or to change the strategies of the AI.
