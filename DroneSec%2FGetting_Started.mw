@@ -68,40 +68,40 @@ The seed can be left blank or written as None for a random seed.
 Example Table
 {| class="wikitable" border=1
 |-
-! Example
+!
 ! Number of Planets
 ! Number of Players
 ! Map Type
 ! Seed
 ! Load File
 |-
-| Default
+| ''Default''
 | No Default
 | Random
 | 2
 | None (Random)
 | None
 |-
-| Minimal Random
+| ''Minimal Random''
 | 15
 |-
-| Minimal Standard
+| ''Minimal Standard''
 | 10
 | standard
 |-
-| Standard with Players
+| ''Standard with Players''
 | 12
 | standard
 | 5
 |-
-| Load Map needs
+| ''Requirements for a Load Map''
 |
 | load 
 |
 | A seed
-| test.xml
+| aMap.xml
 |-
-| Actual Load
+| ''Load Example''
 | 2
 | load
 | 20
@@ -118,7 +118,7 @@ Some examples:
 
 The first example would create a random game with 15 planets
 The second example would create a standard game with 10 planets and 3 players.
-The third example would load up the map called test.xml in the maps folder using a random seed.
+The third example would load up the map called test.xml in the maps folder using a random seed. The two instances that '5' are used are irrelevant since the xml file should specify the number of planet and players
 
 You should not be able to populate more than once.
 
