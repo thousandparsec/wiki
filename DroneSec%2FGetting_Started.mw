@@ -111,9 +111,9 @@ Example Table
 
 Some examples:
 <pre>
-./tpserver-py-tool tp --populate 15
-./tpserver-py-tool tp --populate 10 standard 3
-./tpserver-py-tool tp --populate 5 load 5 None test.xml
+./tpserver-py-tool --populate tp 15
+./tpserver-py-tool --populate tp 10 standard 3
+./tpserver-py-tool --populate tp 5 load 5 None test.xml
 </pre>
 
 The first example would create a random game with 15 planets
