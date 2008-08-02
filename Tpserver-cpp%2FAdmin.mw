@@ -18,7 +18,7 @@ The '''remote administration''' project intends to remove the internal console f
 === Planned Clients ===
 
 * Main CLI client, written in C++, based on a minimal [[libtpproto-cpp]].
-* Single-player mode wizard in [[tpclient-pywx]], based on [[libtpproto-py]].
+* Single-player mode wizard in [[tpclient-pywx]], based on [[libtpproto-py]] (currently does not use administration protocol).
 * Main GUI client, written in Python, based on [[libtpproto2-py]].
 
 === Procedure ===
