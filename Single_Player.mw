@@ -1,5 +1,11 @@
 '''Single-player mode''' is a cross-client effort to allow users to configure a local server and AI opponents automatically via an easy wizard interface. This is being developed for [[Google Summer of Code]] 2008 by Aaron Mavrinac / [[User:Ezod|ezod]].
 
+==Configuration==
+
+===Flowchart===
+
+[[Image:SinglePlayerFC.png|Single-Player Configuration Flowchart]]
+
 ==Adding Single-Player Support==
 
 In order for a component to be available for single-player mode, it must install an XML description of itself (using tpconfig.dtd) in a shared directory (currently /usr/share/tp). Additionally, servers and AI clients require control scripts with a common interface for starting and stopping the processes.
