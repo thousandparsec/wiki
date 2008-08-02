@@ -62,7 +62,7 @@ The control script takes 3 required arguments: a start or stop command, the rule
       --ruleset $TPGAME \
       --tp_port $TPPORT \
       $TPARGS &
-
+  
     if ps ax | grep -v grep | grep $TPBIN > /dev/null; then
       echo "OK."
     else
@@ -94,7 +94,7 @@ The control script takes 3 required arguments: a start or stop command, the rule
 
 Rulesets are part of the server they are modules for, and thus also live in the ''servers'' subdirectory. Rulesets built into the server may simply be added to that server's XML file, as shown in tpserver-cpp-0.5.1.xml above, but in cases where the ruleset is installed separately, something like the following may be used. The server name must match the server to which the ruleset belongs.
 
-====tpserver-cpp-risk-0.1====
+====tpserver-cpp-risk-0.1.xml====
 
   <?xml version="1.0"?>
   <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
