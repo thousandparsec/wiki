@@ -12,6 +12,10 @@ This is an preliminary draft of the rules and may change as development progress
 Humans have exploded in growth and expansion with the discovery of ancient alien artifacts in several solar systems scattered around an unexplored region of space.  Colonists, scientists, and entrepreneurs alike are eager to explore the galaxy.  You and the other players act out the parts of powerful corporations vying for control of the galaxy using strategy, leadership, conflict, and a little bit of luck.  But only through the balance of resources and control of long forgotten artifacts can you achieve domination in this new frontier.
 
 
+===Object of the Game===
+In this game you are collecting four different types of resources. Your final score is the the number of resources of the type which you have collected the '''least''' of.  So, if you have 4 of type A, 5 of type B, 1 of type C, and 20 of type D, your score would be 1!  The winner is the player with the highest score at the end of the game
+
+
 ===Initial setup===
 The play area is set up as a rectangular grid of solar systems.  There are two types of solar systems: inhabitable and uninhabitable.
 
@@ -37,6 +41,7 @@ Each player starts out with 12 fleets at their home system:
 *6 colonist vessels which are used to inhabit uninhabited solar systems (these colonist ships are drawn at random from a pool of available colonist ships).  Other players cannot see what type of colonist ships you have
 *4 leaders, one for each type of colonist ship. These are used to control regions of colonized space
 *2 bombers which can be used one time each to destroy a solar system.
+
 
 ===Resources, Colonists, Leaders, and Allied Regions===
 As discussed above, each player has a fleet of civilians and leaders.  There are 4 types of resources, which correspond to 4 leaders per player and 4 types of civilian ships:
