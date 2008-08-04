@@ -3,6 +3,8 @@ Tigris and Euphrates is a ruleset currently in development in conjunction with G
 
 For a quick guide to getting started with TaE, [[Tigris_and_Euphrates/Getting_Started|click here]].
 
+Note: Screenshots in this page are taken from the tpclient-pywx client.
+
 == Rules ==
 This is an preliminary draft of the rules and may change as development progresses.
 
