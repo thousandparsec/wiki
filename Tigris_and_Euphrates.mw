@@ -13,10 +13,30 @@ Humans have exploded in growth and expansion with the discovery of ancient alien
 
 
 ===Initial setup===
-The play area is set up as a rectangular grid of solar systems.  There are 2 types of solar systems: inhabitable and uninhabitable.  Inhabitable solar systems can be colonized by any ship except mining vessels. The uninhabitable solar systems can only be colonized by mining vessels.  At the start there are 10 solar systems which start out colonized and contain a single ancient alien artifact each.
+The play area is set up as a rectangular grid of solar systems.  There are two types of solar systems: inhabitable and uninhabitable.
 
-Each player starts out with three fleets of ships: a fleet of 6 civilian vessels which are used to inhabit uninhabited solar systems (the civilian vessels are drawn at random from a pool of available civilian ships), a fleet of 4 leaders which are used to control regions of space, And a fleet of two prototype weapon ships which can be used one time each to destroy a solar system. The ships in each fleet are hidden from the other players.
+Also, at the start there are 10 solar systems which contain an ancient alien artifact.  These systems have already been colonized by scientists.
 
+
+{| border="1" cellspacing="0" cellpadding="2" width="800px" align="center"
+!align="center" colspan="2" style="background:#ffdead;" |TIP
+|-
+|colspan="2" |When using tpclient-pywx, a quick way to get information on a system is to switch to "Resource View" by selecting "Resource" from the dropdown menu at the top of the screen.  Then simply mouse over a system, and it will tell you whether it has been colonized, is inhabitable, or if it contains an alien artifact.
+|-
+|align="center" |[[Image:TaE_uninhabitable.jpg]] 
+|align="center" |[[Image:TaE_alien.jpg]]
+|-
+|align="center" |An uninhabitable system
+|align="center" |A colonized system (colonized by scientists) with an alien artifact.
+|}
+
+
+Each player also has a home system.  Your system is highlighted in green and your opponents' systems are highlighted in red.  This home system is only used to hold your fleets of ships and is not actually part of the game board.
+
+Each player starts out with 12 fleets at their home system:
+*6 colonist vessels which are used to inhabit uninhabited solar systems (these colonist ships are drawn at random from a pool of available colonist ships).  Other players cannot see what type of colonist ships you have
+*4 leaders, one for each type of colonist ship. These are used to control regions of colonized space
+*2 bombers which can be used one time each to destroy a solar system.
 
 ===Resources, Colonists, Leaders, and Allied Regions===
 As discussed above, each player has a fleet of civilians and leaders.  There are 4 types of resources, which correspond to 4 leaders per player and 4 types of civilian ships:
