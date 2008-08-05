@@ -12,6 +12,8 @@ Configuration in tpclient-pywx will be done via a wizard-style interface availab
 
 In order for a component to be available for single-player mode, it must install an XML description of itself (using tpconfig.dtd) in a shared directory (currently /usr/share/tp). Additionally, servers and AI clients require control scripts with a common interface for starting and stopping the processes.
 
+In the XML files, there are ''forced'' parameters (simply added to the command line as-is) and ''regular'' parameters (offered to the player in the wizard). Any options required for single-player mode (including those which allow for non-interactive control) should be forced parameters; any that are relevant to a single-player game and can be set by the player should be regular parameters.
+
 ===Servers===
 
 Server files live in the ''servers'' subdirectory (i.e., /usr/share/tp/servers).
