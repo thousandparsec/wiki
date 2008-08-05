@@ -22,83 +22,83 @@ The control script takes 3 required arguments: a start or stop command, the rule
 
 ====tpserver-cpp-0.5.1.xml====
 
-  <?xml version="1.0"?>
-  <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
-  <tpconfig>
-    <server name="tpserver-cpp-0.5.1">
-      <longname>tpserver-cpp</longname>
-      <version>0.5.1</version>
-      <description>Thousand Parsec server in C++.</description>
-      <forced>--game_load yes</forced>
-      <forced>--game_start yes</forced>
-      <forced>--network_start yes</forced>
-      <forced>--add_players yes</forced>
-      <forced>--turn_player_threshold 100</forced>
-      <parameter name="turnlength" type="I">
-        <longname>Turn Length</longname>
-        <description>Maximum length of a turn (0 for unlimited).</description>
-        <default>0</default>
-        <commandstring>--turn_length_over_threshold %d</commandstring>
-      </parameter>
-      <ruleset name="minisec">
-        <longname>MiniSec</longname>
-        <version>0.3</version>
-        <description />
-      </ruleset>
-      <ruleset name="mtsec">
-        <longname>MTSec</longname>
-        <version>0.0</version>
-        <description />
-      </ruleset>
-    </server>
-  </tpconfig>
+ <?xml version="1.0"?>
+ <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
+ <tpconfig>
+   <server name="tpserver-cpp-0.5.1">
+     <longname>tpserver-cpp</longname>
+     <version>0.5.1</version>
+     <description>Thousand Parsec server in C++.</description>
+     <forced>--game_load yes</forced>
+     <forced>--game_start yes</forced>
+     <forced>--network_start yes</forced>
+     <forced>--add_players yes</forced>
+     <forced>--turn_player_threshold 100</forced>
+     <parameter name="turnlength" type="I">
+       <longname>Turn Length</longname>
+       <description>Maximum length of a turn (0 for unlimited).</description>
+       <default>0</default>
+       <commandstring>--turn_length_over_threshold %d</commandstring>
+     </parameter>
+     <ruleset name="minisec">
+       <longname>MiniSec</longname>
+       <version>0.3</version>
+       <description />
+     </ruleset>
+     <ruleset name="mtsec">
+       <longname>MTSec</longname>
+       <version>0.0</version>
+       <description />
+     </ruleset>
+   </server>
+ </tpconfig>
 
 ====tpserver-cpp-0.5.1.init====
 
-  #!/bin/bash
-  
-  # Single-player control script for tpserver-cpp
-  # Copyright 2008 Aaron Mavrinac and the Thousand Parsec Project
-  # Distributed under the terms of the GNU General Public License v2
-  
-  TPBIN="/usr/games/bin/tpserver-cpp"
-  TPCMD=$1
-  TPNAME=`basename $0 .init`
-  
-  function startfunc {
-    echo "Starting $TPNAME..."
-  
-    $TPBIN --configure /dev/null \
-      --ruleset $TPGAME \
-      --tp_port $TPPORT \
-      $TPARGS &
-  
-    if ps ax | grep -v grep | grep $TPBIN > /dev/null; then
-      echo "OK."
-    else
-      echo "$0: error: unable to start $TPNAME"
-      exit 1
-    fi
-  }
-  
-  function stopfunc {
-    echo "Stopping $TPNAME..."
-  
-    killall $TPBIN
-  }
-  
-  if [ $TPCMD = "start" ]; then
-    TPGAME=$2
-    TPPORT=$3
-    TPARGS=`echo $@ | cut -f4- -d' '`
-    startfunc
-  elif [ $TPCMD = "stop" ]; then
-    stopfunc
-  else
-    echo "$0: error: unknown command"
-  fi
-  
-  exit 0
+ #!/bin/bash
+ 
+ # Single-player control script for tpserver-cpp
+ # Copyright 2008 Aaron Mavrinac and the Thousand Parsec Project
+ # Distributed under the terms of the GNU General Public License v2
+ 
+ TPBIN="/usr/games/bin/tpserver-cpp"
+ TPCMD=$1
+ TPNAME=`basename $0 .init`
+ 
+ function startfunc {
+   echo "Starting $TPNAME..."
+ 
+   $TPBIN --configure /dev/null \
+     --ruleset $TPGAME \
+     --tp_port $TPPORT \
+     $TPARGS &
+ 
+   if ps ax | grep -v grep | grep $TPBIN > /dev/null; then
+     echo "OK."
+   else
+     echo "$0: error: unable to start $TPNAME"
+     exit 1
+   fi
+ }
+ 
+ function stopfunc {
+   echo "Stopping $TPNAME..."
+ 
+   killall $TPBIN
+ }
+ 
+ if [ $TPCMD = "start" ]; then
+   TPGAME=$2
+   TPPORT=$3
+   TPARGS=`echo $@ | cut -f4- -d' '`
+   startfunc
+ elif [ $TPCMD = "stop" ]; then
+   stopfunc
+ else
+   echo "$0: error: unknown command"
+ fi
+ 
+ exit 0
 
 ===Ruleset Modules===
 
@@ -106,23 +106,23 @@ Rulesets are part of the server they are modules for, and thus also live in the 
 
 ====tpserver-cpp-risk-0.1.xml====
 
-  <?xml version="1.0"?>
-  <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
-  <tpconfig>
-    <server name="tpserver-cpp-0.5.1">
-      <ruleset name="risk">
-        <longname>Risk</longname>
-        <version>0.1</version>
-        <description>A modified Risk ruleset for tpserver-cpp.</description>
-        <parameter name="map" type="S">
-          <longname>Map</longname>
-          <description>Map file to load.</description>
-          <default />
-          <commandstring>--risk_map %s</commandstring>
-        </parameter>
-      </ruleset>
-    </server>
-  </tpconfig>
+ <?xml version="1.0"?>
+ <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
+ <tpconfig>
+   <server name="tpserver-cpp-0.5.1">
+     <ruleset name="risk">
+       <longname>Risk</longname>
+       <version>0.1</version>
+       <description>A modified Risk ruleset for tpserver-cpp.</description>
+       <parameter name="map" type="S">
+         <longname>Map</longname>
+         <description>Map file to load.</description>
+         <default />
+         <commandstring>--risk_map %s</commandstring>
+       </parameter>
+     </ruleset>
+   </server>
+ </tpconfig>
 
 ===AI Clients===
 
@@ -132,86 +132,86 @@ The control script takes 4 required arguments: a start or stop command, the rule
 
 ====fakeai-0.1.xml====
 
-  <?xml version="1.0"?>
-  <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
-  <tpconfig>
-    <aiclient name="fakeai-0.1">
-      <longname>FakeAI</longname>
-      <version>0.1</version>
-      <description>A fake AI client.</description>
-      <rules>risk</rules>
-      <rules>minisec</rules>
-      <parameter name="difficulty" type="I">
-        <longname>Difficulty</longname>
-        <description>Difficulty level (0 - 10).</description>
-        <default>5</default>
-        <commandstring>--difficulty %d</commandstring>
-      </parameter>
-    </aiclient>
-  </tpconfig>
+ <?xml version="1.0"?>
+ <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
+ <tpconfig>
+   <aiclient name="fakeai-0.1">
+     <longname>FakeAI</longname>
+     <version>0.1</version>
+     <description>A fake AI client.</description>
+     <rules>risk</rules>
+     <rules>minisec</rules>
+     <parameter name="difficulty" type="I">
+       <longname>Difficulty</longname>
+       <description>Difficulty level (0 - 10).</description>
+       <default>5</default>
+       <commandstring>--difficulty %d</commandstring>
+     </parameter>
+   </aiclient>
+ </tpconfig>
 
 ====fakeai-0.1.init====
 
-  #!/bin/bash
-  
-  # Single-player control script for FakeAI
-  # Copyright 2008 Aaron Mavrinac and the Thousand Parsec Project
-  # Distributed under the terms of the GNU General Public License v2
-  
-  TPBIN="/bin/echo"
-  TPCMD=$1
-  TPNAME=`basename $0 .init`
-  
-  function startfunc {
-    echo "Starting $TPNAME..."
-  
-    $TPBIN \
-      --ruleset $TPGAME \
-      --port $TPPORT \
-      --username $TPUSER \
-      $TPARGS &
-  
-    echo "OK."
-  }
-  
-  function stopfunc {
-    echo "Stopping $TPNAME..."
-  }
-  
-  if [ $TPCMD = "start" ]; then
-    TPGAME=$2
-    TPPORT=$3
-    TPUSER=$4
-    TPARGS=`echo $@ | cut -f5- -d' '`
-    startfunc
-  elif [ $TPCMD = "stop" ]; then
-    stopfunc
-  else
-    echo "$0: error: unknown command"
-  fi
-  
-  exit 0
+ #!/bin/bash
+ 
+ # Single-player control script for FakeAI
+ # Copyright 2008 Aaron Mavrinac and the Thousand Parsec Project
+ # Distributed under the terms of the GNU General Public License v2
+ 
+ TPBIN="/bin/echo"
+ TPCMD=$1
+ TPNAME=`basename $0 .init`
+ 
+ function startfunc {
+   echo "Starting $TPNAME..."
+ 
+   $TPBIN \
+     --ruleset $TPGAME \
+     --port $TPPORT \
+     --username $TPUSER \
+     $TPARGS &
+ 
+   echo "OK."
+ }
+ 
+ function stopfunc {
+   echo "Stopping $TPNAME..."
+ }
+ 
+ if [ $TPCMD = "start" ]; then
+   TPGAME=$2
+   TPPORT=$3
+   TPUSER=$4
+   TPARGS=`echo $@ | cut -f5- -d' '`
+   startfunc
+ elif [ $TPCMD = "stop" ]; then
+   stopfunc
+ else
+   echo "$0: error: unknown command"
+ fi
+ 
+ exit 0
 
 ===tpconfig.dtd===
 
-  <!ELEMENT tpconfig (server?, aiclient?) >
-  
-  <!ELEMENT longname (#PCDATA) >
-  <!ELEMENT version (#PCDATA) >
-  <!ELEMENT description (#PCDATA) >
-  <!ELEMENT forced (#PCDATA) >
-  <!ELEMENT default (#PCDATA) >
-  <!ELEMENT commandstring (#PCDATA) >
-  <!ELEMENT rules (#PCDATA) >
-  
-  <!ELEMENT parameter (longname?, description?, default?, commandstring?) >
-  <!ATTLIST parameter name ID #REQUIRED type NMTOKEN #REQUIRED >
-  
-  <!ELEMENT ruleset (longname?, version?, description?, forced*, parameter*) >
-  <!ATTLIST ruleset name ID #REQUIRED >
-  
-  <!ELEMENT server (longname?, version?, description?, forced*, parameter*, ruleset+) >
-  <!ATTLIST server name ID #REQUIRED >
-  
-  <!ELEMENT aiclient (longname?, description?, forced*, parameter*, rules+) >
-  <!ATTLIST aiclient name ID #REQUIRED >
+ <!ELEMENT tpconfig (server?, aiclient?) >
+ 
+ <!ELEMENT longname (#PCDATA) >
+ <!ELEMENT version (#PCDATA) >
+ <!ELEMENT description (#PCDATA) >
+ <!ELEMENT forced (#PCDATA) >
+ <!ELEMENT default (#PCDATA) >
+ <!ELEMENT commandstring (#PCDATA) >
+ <!ELEMENT rules (#PCDATA) >
+ 
+ <!ELEMENT parameter (longname?, description?, default?, commandstring?) >
+ <!ATTLIST parameter name ID #REQUIRED type NMTOKEN #REQUIRED >
+ 
+ <!ELEMENT ruleset (longname?, version?, description?, forced*, parameter*) >
+ <!ATTLIST ruleset name ID #REQUIRED >
+ 
+ <!ELEMENT server (longname?, version?, description?, forced*, parameter*, ruleset+) >
+ <!ATTLIST server name ID #REQUIRED >
+ 
+ <!ELEMENT aiclient (longname?, description?, forced*, parameter*, rules+) >
+ <!ATTLIST aiclient name ID #REQUIRED >
