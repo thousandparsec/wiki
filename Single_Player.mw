@@ -20,12 +20,12 @@ Server files live in the ''servers'' subdirectory (i.e., /usr/share/tp/servers).
 
 The control script takes 3 required arguments: a start or stop command, the ruleset name, and the TCP port to listen on.
 
-====tpserver-cpp-0.5.1.xml====
+====tpserver-cpp.xml====
 
  <?xml version="1.0"?>
  <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
  <tpconfig>
-   <server name="tpserver-cpp-0.5.1">
+   <server name="tpserver-cpp">
      <longname>tpserver-cpp</longname>
      <version>0.5.1</version>
      <description>Thousand Parsec server in C++.</description>
@@ -53,7 +53,7 @@ The control script takes 3 required arguments: a start or stop command, the rule
    </server>
  </tpconfig>
 
-====tpserver-cpp-0.5.1.init====
+====tpserver-cpp.init====
 
  #!/bin/bash
  
@@ -104,21 +104,27 @@ The control script takes 3 required arguments: a start or stop command, the rule
 
 Rulesets are part of the server they are modules for, and thus also live in the ''servers'' subdirectory. Rulesets built into the server may simply be added to that server's XML file, as shown in tpserver-cpp-0.5.1.xml above, but in cases where the ruleset is installed separately, something like the following may be used. The server name must match the server to which the ruleset belongs.
 
-====tpserver-cpp-risk-0.1.xml====
+====tpserver-cpp-risk.xml====
 
  <?xml version="1.0"?>
  <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
  <tpconfig>
-   <server name="tpserver-cpp-0.5.1">
+   <server name="tpserver-cpp">
      <ruleset name="risk">
        <longname>Risk</longname>
-       <version>0.1</version>
+       <version>0</version>
        <description>A modified Risk ruleset for tpserver-cpp.</description>
        <parameter name="map" type="S">
          <longname>Map</longname>
          <description>Map file to load.</description>
          <default />
          <commandstring>--risk_map %s</commandstring>
+       </parameter>
+       <parameter name="rfcstart" type="I">
+         <longname>Reinforcements</longname>
+         <description>Starting reinforcement count.</description>
+         <default />
+         <commandstring>--risk_rfc_start %d</commandstring>
        </parameter>
      </ruleset>
    </server>
@@ -130,64 +136,59 @@ AI client files live in the ''aiclients'' subdirectory (i.e., /usr/share/tp/aicl
 
 The control script takes 4 required arguments: a start or stop command, the ruleset name, the TCP port to connect to, and a username for the AI opponent.
 
-====fakeai-0.1.xml====
+====daneel-ai.xml====
 
  <?xml version="1.0"?>
  <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
  <tpconfig>
-   <aiclient name="fakeai-0.1">
-     <longname>FakeAI</longname>
-     <version>0.1</version>
-     <description>A fake AI client.</description>
-     <rules>risk</rules>
-     <rules>minisec</rules>
-     <parameter name="difficulty" type="I">
-       <longname>Difficulty</longname>
-       <description>Difficulty level (0 - 10).</description>
-       <default>5</default>
-       <commandstring>--difficulty %d</commandstring>
-     </parameter>
-   </aiclient>
+     <aiclient name="daneel-ai">
+         <longname>daneel-ai</longname>
+         <version>0</version>
+         <description>An advanced rule based AI.</description>
+         <rules>risk</rules>
+         <rules>rfts</rules>
+     </aiclient>
  </tpconfig>
 
-====fakeai-0.1.init====
+====daneel-ai.init====
 
  #!/bin/bash
  
- # Single-player control script for FakeAI
+ # Single-player control script for daneel-ai
  # Copyright 2008 Aaron Mavrinac and the Thousand Parsec Project
  # Distributed under the terms of the GNU General Public License v2
  
- TPBIN="/bin/echo"
+ TPBIN="/path/to/daneel-ai"
  TPCMD=$1
  TPNAME=`basename $0 .init`
  
  function startfunc {
-   echo "Starting $TPNAME..."
+     echo "Starting $TPNAME ($TPUSER)..."
  
-   $TPBIN \
-     --ruleset $TPGAME \
-     --port $TPPORT \
-     --username $TPUSER \
-     $TPARGS &
+     $TPBIN \
+         --file rules-$TPGAME \
+         --uri tp://$TPUSER:password@localhost:$TPPORT &
  
-   echo "OK."
+     #TODO: verify running by pid
+     echo "OK."
  }
  
  function stopfunc {
-   echo "Stopping $TPNAME..."
+     echo "Stopping $TPNAME..."
+ 
+     #TODO: kill by pid
+     killall daneel-ai
  }
  
  if [ $TPCMD = "start" ]; then
-   TPGAME=$2
-   TPPORT=$3
-   TPUSER=$4
-   TPARGS=`echo $@ | cut -f5- -d' '`
-   startfunc
+     TPGAME=$2
+     TPPORT=$3
+     TPUSER=$4
+     startfunc
  elif [ $TPCMD = "stop" ]; then
-   stopfunc
+     stopfunc
  else
-   echo "$0: error: unknown command"
+     echo "$0: error: unknown command"
  fi
  
  exit 0
