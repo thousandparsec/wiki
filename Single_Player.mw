@@ -15,6 +15,64 @@ The SinglePlayerGame object in libtpclient-py provides all back end functionalit
  from tp.client.SinglePlayer import SinglePlayerGame
  game = SinglePlayerGame()
 
+The player first chooses a ruleset from the ruleset list:
+
+ print 'SELECT RULESET'
+ while game.rname not in game.rulesets:
+     game.rname = raw_input('Choose a ruleset from ' + str(game.rulesets) + ': ')
+
+If there are multiple servers implementing the chosen ruleset, a server must be chosen:
+
+ slist = game.list_servers_with_ruleset()
+ if len(slist) > 1:
+     print 'SELECT SERVER'
+     print 'There are multiple servers implementing the', game.rname, 'ruleset.'
+     while game.sname not in slist:
+         game.sname = raw_input('Choose a server from ' + str(slist) + ': ')
+ else:
+     game.sname = slist[0]
+
+Ruleset options, if any, may be specified:
+
+ paramlist = game.serverlist[sname]['rulesets'][rname]['parameters']
+ if len(paramlist):
+     print 'RULESET OPTIONS'
+     for param in paramlist.keys():
+         game.rparams[param] = raw_input(paramlist[param]['longname'] + ' (' + paramlist[param]['type'] + '): ')
+
+Likewise for server options:
+
+ paramlist = game.serverlist[sname]['parameters']
+ if len(paramlist):
+     print 'SERVER OPTIONS'
+     for param in paramlist.keys()
+         game.sparams[param] = raw_input(paramlist[param]['longname'] + ' (' + paramlist[param]['type'] + '): ')
+
+Opponents may then be added:
+
+ ailist = game.list_aiclients_with_ruleset()
+ while len(ailist) > 0:
+     aiuser = raw_input('Enter an opponent name (leave blank to stop adding opponents): ')
+     if aiuser:
+         ainame = ''
+         while ainame not in ailist:
+             ainame = raw_input('Please select an AI client from ' + str(ailist) + ': ')
+         aiparams = {}
+         paramlist = game.ailist[ainame]['parameters']
+         for param in paramlist.keys():
+             aiparams[param] = raw_input(paramlist[param]['longname'] + ' (' + paramlist[param]['type'] + '): ')
+         game.add_opponent(ainame, aiuser, aiparams)
+
+When everything is complete, start the game:
+
+ port = game.start()
+ if port:
+     # start player's client and connect to localhost:port
+
+Finally, to clean up when the game is done, stop it:
+
+ game.stop()
+
 ==Adding Single-Player Support==
 
 In order for a component to be available for single-player mode, it must install an XML description of itself (using tpconfig.dtd) in a shared directory (currently /usr/share/tp). Additionally, servers and AI clients require control scripts with a common interface for starting and stopping the processes.
