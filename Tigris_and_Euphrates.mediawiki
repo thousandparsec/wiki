@@ -104,23 +104,29 @@ The only time this is different is with alien artifact resources.  Alien artifac
 
 ===Combat===
 
-====Internal Combat====
-Internal combat occurs when one leader is placed into an allied region where another leader of the same type already resides.  The leader already residing in the region is said to be the “defender” the newly placed leader is the “attacker.”
+Combat occurs when there are two leaders of the same type in a single region.  This can happen two ways: A leader moving into a region which already has a leader of that type, or two regions being connected forming one large region with conflicting leaders.
 
-First, the initial strength of the attacker and defender are evaluated.  The initial strength of each leader is the number of Scientific settlements directly adjacent to each leader.  Then the attacker has a chance to bolster the strength of the leader by sending in Scientists from his civilian fleet.  Then the defender has a chance to do send Scientists in from his fleet.  The total strength of each leader is the initial strength plus the number of scientists sent by the player that owns the leader.  If the attacker is stronger than the defender, than the attacker wins, otherwise the defender wins.  In the case of a tie, the defender wins.  The winner receives 1 Technology resource and the looser must remove his leader from the board.  All extra ships sent in for the battle are removed from the game.
+====Internal Combat====
+Internal combat occurs when one leader is moved into an region where another leader of the same type already resides.
+
+First, the initial strength of each leader is determined.  The initial strength is the number of systems adjacent to the leader which contain a scientist colony.  
+
+For example, here is a screenshot of an internal conflict.  The systems which were colonized by scientists are circled in blue to make it easier to see.
+
+[[images/TaE_internal.jpg]]
+
+The "red" leader has an initial strength of 2.  The "green" leader has an initial strength of 1.
+
+After combat is initiated, the next turn each player with a leader in combat may send in reinforcements to bolster their strength.  Scientist colonist fleets can be used to reinforce by issuing the reinforce order.  Each scientist fleet you send in adds one to your strength.
+
+The player with the highest strength at the end of the turn is declared the winner and gains one "Technological Advancement" resource point.  The loser's leader is removed and sent to his home system.
 
 ====External Combat====
-External combat occurs when two regions are joined together forming a region with more than one leader of the same type.  The attacker is the player who settled the solar system which connected the two regions.  External combat is resolved one leader type at a time.  The attacker gets to choose the order of resolution.
+External combat occurs when two regions are joined together forming a region with more than one leader of the same type.
 
-For each conflict:
-#The starting strength of each leader is determined by the number of solar systems of its type in its allied region.
-#Each player then add ships of the same type as the leader to bolster the strength of their leader (attacker first, then defender).
-#The leader with the higher total strength wins the battle.  In the case of a tie, the defender wins.
-#The loosing leader is removed and all solar systems of the same type as the leader, in the leader’s former region become uninhabited!  Note: This may cause the regions to be split up and may render other unresolved conflicts null since they are no longer in the same region.
-#The winner receives 1 resource of the type associated with the conflict for each solar system which was vacated and 1 resource for the leader which was removed.
+External combat is similar to internal combat with a few exceptions. Initial strength is determined by how many colonies of the same type as the leader are in the leader's region. For example, if leader A is a merchant leader and in an external conflict, then the number of merchant colonies in leader A's region is his initial strength.  Similarly, reinforcements are added by colonist fleets of the same type as the leader.
 
-Continue this process until all conflicts are resolved.
-
+The loser's leader and '''all colonies in the leader's region of the same type as the leader''' are removed.  The winner gets one resource point of the same type as the leader for each colony and leader removed.
 
 ===Ancient Alien Artifact===
 An ancient alien artifact is a resource that counts as 1 of any other type of resource.  There are ten solar systems designated at the beginning of the game which are home to 1 ancient alien artifact each.  To harvest this artifact, you must have a Merchant leader in a region where at least two alien artifacts are located.  If you satisfy these conditions, then you can choose one alien artifact to harvest.
