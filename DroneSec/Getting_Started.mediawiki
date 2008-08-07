@@ -23,9 +23,15 @@ sudo ./setup.sh
 cd ..
 </pre>
 
-==Starting tpserver-py==
+==Switching to the dronesec branch==
 <pre>
 cd tpserver-py
+git branch dronesec origin/dronesec
+git checkout dronesec
+</pre>
+
+==Starting tpserver-py==
+<pre>
 ./tpserver-py
 </pre>
 
