@@ -8,6 +8,13 @@ Configuration in tpclient-pywx will be done via a wizard-style interface availab
 
 [[images/SinglePlayerFC.png|Single-Player Configuration Flowchart]]
 
+===Implementation===
+
+The SinglePlayerGame object in libtpclient-py provides all back end functionality:
+
+ from tp.client.SinglePlayer import SinglePlayerGame
+ game = SinglePlayerGame()
+
 ==Adding Single-Player Support==
 
 In order for a component to be available for single-player mode, it must install an XML description of itself (using tpconfig.dtd) in a shared directory (currently /usr/share/tp). Additionally, servers and AI clients require control scripts with a common interface for starting and stopping the processes.
