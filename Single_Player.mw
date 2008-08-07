@@ -51,6 +51,8 @@ Likewise for server options:
 Opponents may then be added:
 
  ailist = game.list_aiclients_with_ruleset()
+ if len(ailist):
+     print 'ADD OPPONENTS'
  while len(ailist) > 0:
      aiuser = raw_input('Enter an opponent name (leave blank to stop adding opponents): ')
      if aiuser:
