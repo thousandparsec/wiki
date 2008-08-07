@@ -34,7 +34,7 @@ If there are multiple servers implementing the chosen ruleset, a server must be 
 
 Ruleset options, if any, may be specified:
 
- paramlist = game.serverlist[sname]['rulesets'][rname]['parameters']
+ paramlist = game.serverlist[game.sname]['rulesets'][game.rname]['parameters']
  if len(paramlist):
      print 'RULESET OPTIONS'
      for param in paramlist.keys():
@@ -42,10 +42,10 @@ Ruleset options, if any, may be specified:
 
 Likewise for server options:
 
- paramlist = game.serverlist[sname]['parameters']
+ paramlist = game.serverlist[game.sname]['parameters']
  if len(paramlist):
      print 'SERVER OPTIONS'
-     for param in paramlist.keys()
+     for param in paramlist.keys():
          game.sparams[param] = raw_input(paramlist[param]['longname'] + ' (' + paramlist[param]['type'] + '): ')
 
 Opponents may then be added:
@@ -62,6 +62,8 @@ Opponents may then be added:
          for param in paramlist.keys():
              aiparams[param] = raw_input(paramlist[param]['longname'] + ' (' + paramlist[param]['type'] + '): ')
          game.add_opponent(ainame, aiuser, aiparams)
+     else:
+         break
 
 When everything is complete, start the game:
 
