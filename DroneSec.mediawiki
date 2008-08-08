@@ -57,5 +57,5 @@ There are 4 types of research all performed by the Research Order.
 
 == Further information ==
 *[http://docs.google.com/Doc?id=dg93sdv_6k523p9dx Dronesec Proposal Document]
-*[http://juangsocblogspot.com Dronesec Development Blog]
+*[http://juangsoc.blogspot.com Dronesec Development Blog]
 *[[DroneSec/Getting_Started]]
