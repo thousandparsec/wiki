@@ -140,14 +140,7 @@ The control script takes 3 required arguments: a start or stop command, the rule
    $TPBIN --configure /dev/null \
      --ruleset $TPGAME \
      --tp_port $TPPORT \
-     $TPARGS &
- 
-   if ps ax | grep -v grep | grep $TPBIN > /dev/null; then
-     echo "OK."
-   else
-     echo "$0: error: unable to start $TPNAME"
-     exit 1
-   fi
+     $TPARGS || ( echo "$0: error: unable to start $TPNAME" && exit 1 )
  }
  
  function stopfunc {
