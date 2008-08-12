@@ -1,0 +1,34 @@
+==How to Load a Custom Map==
+To load a custom map, you need to edit .conf file used when you start up a TaE server. You must modify (or add if it does not exist) the line:
+
+<pre>
+board_path = /path/to/map
+</pre>
+
+Where "/path/to/map" is the path to the custom map file.
+
+
+==How to Make a Custom Map==
+To make a custom map first create a new text file. In this file you "draw" the board using the following characters:
+*"." - A normal inhabitable system.
+*"A" - A system which contains an alien artifact.
+*"M" - An uninhabitable system which can only be colonized by mining fleets.
+
+The map will appear exactly how you lay it out in the file.  TaE will ignore any characters other than the ones listed above.  If the path is not entered correctly in the .conf file or an error occurs when loading the map, then the default map (which is stored internally not in a map file) will be used.
+
+
+==Sample Map==
+<pre>
+A.....A
+..MMM..
+..MMM..
+A.....A
+</pre>
+
+{| border="0" cellspacing="0" cellpadding="10" align="center"
+|-
+|align="center" |[[Image:TaE_samplemap1.jpg]]
+|align="center" |[[Image:TaE_samplemap2.jpg]]
+|-
+|The sample map in "normal" view. ||The sample map in "resource" view.
+|}
