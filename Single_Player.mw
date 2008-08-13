@@ -112,12 +112,12 @@ The control script takes 3 required arguments: a start or stop command, the rule
      <ruleset name="minisec">
        <longname>MiniSec</longname>
        <version>0.3</version>
-       <description />
+       <description>The first milestone game. Simple test of being able to issue orders and perform simple combat.</description>
      </ruleset>
      <ruleset name="mtsec">
        <longname>MTSec</longname>
        <version>0.0</version>
-       <description />
+       <description>The second milestone game. It is designed to both be a fun game and to exercise the object design capabilities of the framework.</description>
      </ruleset>
    </server>
  </tpconfig>
