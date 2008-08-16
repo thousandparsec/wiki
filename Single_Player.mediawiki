@@ -220,16 +220,17 @@ The control script takes 4 required arguments: a start or stop command, the rule
  # Copyright 2008 Aaron Mavrinac and the Thousand Parsec Project
  # Distributed under the terms of the GNU General Public License v2
  
- TPBIN="/path/to/daneel-ai"
+ TPPATH="/home/aaron/tp/git/daneel-ai"
+ TPBIN="daneel-ai"
  TPCMD=$1
  TPNAME=`basename $0 .init`
- 
+
  function startfunc {
      echo "Starting $TPNAME ($TPUSER)..."
  
-     $TPBIN \
-         --file rules-$TPGAME \
-         --uri tp://$TPUSER:password@localhost:$TPPORT &
+     $TPPATH/$TPBIN \
+         -f $TPPATH/rules-$TPGAME \
+         -u tp://$TPUSER:password@localhost:$TPPORT & 
  
      #TODO: verify running by pid
      echo "OK."
