@@ -356,7 +356,7 @@ You can test remote administration using the following procedure:
 # Install the 'logilab-constraint' Python package if necessary (dependency for daneel-ai).
 # Clone the daneel-ai repository.
 # Clone the 'singleplayer' branch of the tpclient-pywx repository.
-# Download the [http://glorfindel.mavrinac.com/~aaron/tp/tpshare.tar.bz2|test share file tarball].
+# Download the [http://glorfindel.mavrinac.com/~aaron/tp/tpshare.tar.bz2 test share file tarball].
 # Extract the tarball to /usr/share/tp, /usr/local/share/tp, or /opt/tp.
 # Modify the TPBIN and TPPATH variables in the tpserver-cpp.init and daneel-ai.init scripts to point to the proper paths (will be done by install in the future).
 # Run tpclient-pywx.
