@@ -224,7 +224,7 @@ The control script takes 4 required arguments: a start or stop command, the rule
  TPBIN="daneel-ai"
  TPCMD=$1
  TPNAME=`basename $0 .init`
-
+ 
  function startfunc {
      echo "Starting $TPNAME ($TPUSER)..."
  
