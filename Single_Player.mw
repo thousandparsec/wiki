@@ -352,6 +352,7 @@ The control script takes 4 required arguments: a start or stop command, the rule
 You can test remote administration using the following procedure:
 
 # Clone and compile the 'config' branch of the tpserver-cpp repository.
+# Ensure that libtpproto-py is installed ('config' branch not necessary).
 # Clone and install the 'singleplayer' branch of the libtpclient-py repository.
 # Install the 'logilab-constraint' Python package if necessary (dependency for daneel-ai).
 # Clone the daneel-ai repository.
