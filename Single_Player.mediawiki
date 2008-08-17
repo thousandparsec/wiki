@@ -2,9 +2,9 @@
 
 ==Configuration==
 
-Configuration in tpclient-pywx is done via a wizard-style interface available from the initial "Connect To Server" screen. The wizard is a user-friendly front end to the functions in the SinglePlayer module of libtpclient-py.
+[[images/Sp03.png|right|100px|thumb|Page 2]]
 
-[[images/Sp03.png|Single-Player Wizard]]
+Configuration in tpclient-pywx is done via a wizard-style interface available from the initial "Connect To Server" screen. The wizard is a user-friendly front end to the functions in the SinglePlayer module of libtpclient-py.
 
 ===Flowchart===
 
