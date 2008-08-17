@@ -2,7 +2,12 @@
 
 ==Configuration==
 
+[[Image:Sp02.png|right|100px|thumb|Page 1]]
 [[Image:Sp03.png|right|100px|thumb|Page 2]]
+[[Image:Sp04.png|right|100px|thumb|Page 3]]
+[[Image:Sp05.png|right|100px|thumb|Page 4]]
+[[Image:Sp06.png|right|100px|thumb|Page 5]]
+[[Image:Sp07.png|right|100px|thumb|Page 6]]
 
 Configuration in tpclient-pywx is done via a wizard-style interface available from the initial "Connect To Server" screen. The wizard is a user-friendly front end to the functions in the SinglePlayer module of libtpclient-py.
 
