@@ -6,8 +6,11 @@ At the start of a turn, the bot downloads the universe data from the server and 
 == Run the bot ==
 If you want to try out the bot, you can. Clone the repository at git://git.thousandparsec.net/git/daneel-ai.git and read the README to get started.
 
+== Tutorial: create an AI ==
+See [[daneel-ai/tutorial]].
+
 == Rule file ==
-A rule file controls the final behavior of the bot. The file consists of 4 parts: the list of mods, the list of constraints, the rules and a section with Python helper code. Two examples are in the directory currently: rules-rfts and rules-risk.
+A rule file controls the final behavior of the bot. The file consists of 4 parts: the list of mods, the list of constraints, the rules and a section with Python helper code. All 4 parts are ''mandatory'', skipping a part might make the bot hang or crash. Two examples are in the directory currently: rules-rfts and rules-risk.
 
 At any point, you can add a comment line by using a '#' as the first character on the line. You cannot use this technique to make comments on the end of a line, only the first character of each line is checked.
 === Mods ===
@@ -15,8 +18,7 @@ A list of mod files to be read. These control the initialization and finalizatio
 === Constraints ===
 Each constraint that is used in the system is listed here, together with the types it uses. A constraint can have a '*' appended to signify this is a longterm constraint. A longterm constraint will not get removed from the constraint store at the end of a turn, all other constraints are removed. Longterm constraints can thus be used to carry over some of the bot's state to the next turn.
 === Rules ===
-The rules roughly follow the CHR syntax, as explained below. The best way to get a feeling for this is to study the examples provided, I think.
-
+The rules roughly follow the CHR syntax, as explained below. The best way to get a feeling for this is to study the examples provided, I think. Coding these rules is a bit different from everyday imperative programming. For tips and pitfalls, see [[daneel-ai/rules]].
 === Functions ===
 Just a section where you can add helper functions. You can also import Python modules. The whole section is executed as Python code and the resulting  global variables are inserted in the environment where guards and bodies execute. Python code can make use of the variables "rulesystem", "cache" and "connection" to access the rule system, the libtpclent-py cache and the libtpproto-py connection directly. These can be used to make probe orders, for example. Usage is discouraged though.
 
@@ -43,15 +45,14 @@ TODO: document some useful methods here (findConstraint, addConstraint, others?)
 The bot is based on libtpclient-py to handle the connection to the server and the cache of game objects. Furthermore, the client is designed to be modular, each of the 3 phases can be changed to another implementation to allow ruleset-specific information to be considered, or to change the strategies of the AI.
 
 === Initialization phase ===
-The initialization phase pretty much copies the object hierarchy from the cache into the constraint store. This means that for example constraints of the form <code>planet(5)</code> and <code>location(5,0,100032,0)</code> will be added. The exact way this will happen still needs investigation, if possible some reflection should be used.
+The initialization phase pretty much copies the object hierarchy from the cache into the constraint store. This means that for example constraints of the form <code>planet(5)</code> and <code>location(5,0,100032,0)</code> will be added. This depends on the startTurn function in the loaded mods. At the end of the initialization phase, the constraint "cacheentered" is entered into the store.
 
 === Resolution phase ===
 Now the AI has a bunch of facts about the world and wants to deduce a battle plan from them. We give him a set of rules to apply to the constraint store. The idea of these rules is based on [http://www.cs.kuleuven.be/~dtai/projects/CHR/ CHR]. An example of a rule would be "if the constraint resources(X) exists and X > 500, then remove that constraint and add the constraints resources(X-500) and order_build_ship()".
 
-The exact way to represent these rules still has to be decided on. Probably the Interpreter design pattern will be used, together with a parser that reads CHR syntax which is pretty concise for these types of rules. It should be noted that it is necessary to allow arbitrary Python statements to appear inside these rules. Although CHR is Turing complete, you don't want to implement "calculate_distance_to" using nothing but constraints.
-
+One thing to note here is that, as soon as a rule can fire, it will fire. This means that the resolution and initialization phase overlap: if a resources(1200) constraint is entered in the startTurn function, the above rule will fire even if not all constraints are entered yet. To prevent the rule from firing, add the cacheentered constraint to the head so the rule doesn't match until all information is entered.
 === Finalization phase ===
-When no more rules can fire because the preconditions don't match with the constraint store, the algorithm enters the finalization phase. The store is checked for predicates of a certain form (probably order_move and order_build etc), picks those out and executes the required actions.
+When no more rules can fire because the preconditions don't match with the constraint store, the algorithm enters the finalization phase. The store is checked for predicates of a certain form (probably order_move and order_build etc), picks those out and executes the required actions. This depends on the endTurn functions in the loaded mods.
 
 == Constraint syntax/semantics ==
 The program keeps track of a multiset of facts, called constraints. These facts are represented by predicates, possibly with parameters - those familiar with Prolog will be at home. It is important to note that facts might be parameterized with logical variables, that is, variables that don't have an assignment yet (a so-called non-ground variable). For example, if the fact <code>solution(X)</code> is in the constraint store, this asserts that there exists a solution X, which might be unified with a concrete value later on. This is useful for abstract reasoning and search strategies.
@@ -75,45 +76,7 @@ To extend the standard example, assume the rules are the three leq rules defined
 
 If I have time and the need arises, I might implement parts of proposed extensions of CHR, like rule priorities, negation by absence, and aggregates support (which allows constructs like sum, min, max to appear in rules). It should be noted that these constructs can be implemented with the existing structure, but for clarity it doesn't hurt to have these extension. There might be the need to implement a few Prolog-like predicates that allow efficient work with non-ground variables, this will become clear when coding. If the program turns out to be too slow, the naive matching algorithm can be changed to the more advanced Rete algorithm that builds a graph of which rules to try when constraints are changed, dramatically speeding up the matching. Other algorithms might also be possible (TREAT, LEAPS), but I've never met these before so I'll have to do some research. Changes in the data structures underlying the constraint store and the rules might also provide speedup.
 
-== Milestones ==
-* <s>Client that can connect to the server</s>
-* <s>Constraint representation</s>
-* <s>Logical unification support</s>
-* <s>Constraint store</s>
-* <s>Rule representation</s>
-* Rule parsing
-* <s>Rule store</s>
-* Rule engine complete
-* Client can extract orders from the constraint store and send them to the server
-* Get some sensible behavior
-
-== Planning ==
-Current planning already differs significantly from my original planning and will probably keep on changing. In my original plan, I envisioned the rule matching to be something very basic and writing the rules themselves to be hard. I changed that around after some research, after all, it seems more sensible to do as much work as possible on the framework to make rule creation/experimentation as easy as possible. Also, my exams are more painful than I thought they would be :(
-
-2008-05-31 - 2008-06-06: Get constraint matching to work.<br>
-2008-06-07 - 2008-06-17: Serious study time. Sorry. Though I should get the constraint store working.<br>
-2008-06-18 - 2008-06-22: Implement rule representation.<br>
-2008-06-23 - 2008-06-26: Implement rule store.<br>
-2008-06-26: Basic rule engine in place (test: add basic rules to move the scout around the universe).<br>
-
-2008-06-26 - 2008-07-06: Gone. Probably won't have any time for SoC.<br>
-2008-07-07: Start of mid-term evaluation. I kindly ask nash to wait with giving me bad marks for a few more days as I basically just start coding.<br>
-2008-07-07 - 2008-07-20: Rule implementation. Will also involve some iterations of refining the engine to allow more flexible rule sets (and fix bugs).<br>
-2008-07-20: Rules written, tested, working.<br>
-
-2008-07-20 - 2008-07-24: Toy around with the rule engine, trying to create a some interesting behavior by hand.<br>
-The following only applies if the schedule works out and there are no huge setbacks.<br>
-2008-07-25 - 2008-07-31: Design of the genetic algorithm (textbook stuff), setup of testing environment (server configuration, being able to get stats from it, etc).<br>
-2008-08-01 - 2008-08-09: Genetic algorithm running, hopefully yielding even more good and interesting behavior.<br>
-2008-08-10 - 2008-08-16: Akademy, in my country, so I'll probably be there.<br>
-2008-08-11: Pencils down date, genetic algorithm around AI working and yielding some good results.
-
 == TODO ==
-These are my direct TODOs, mostly for myself to see what I'm supposed to be doing at this moment instead of reading the wiki. The milestones part might be more interesting to other readers.
-* Finalize design
-** Draw out the full design because it's a bit messy in my head right now
-** Think about rule representation
-** Find a sensible way to add weights to rules. This would change the semantics of CHR to a nondeterministic algorithm, so this needs a bit of consideration (not urgent, this is an extension for the rule implementation phase)
-* Coding
-** Create constraint store
-** Add initial facts from cache to store
+Since SoC 2008 is essentially done, these are a bit lower priority at the moment.
+* Increase performance. Currently, a non-trivial bot easily takes minutes to do something that can be done in a few seconds in pure Python. I belief the underlying rulesystem algorithms are not optimal. Improving these might need some research and experimentation though.
+* Make not every section in a rulefile mandatory and loosen the parsing there.
