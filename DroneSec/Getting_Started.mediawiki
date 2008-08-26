@@ -1,5 +1,5 @@
 =Installing tpserver-py=
-
+These instructions were made using Ubuntu. For Windows try [[DroneSec/Getting_Started/Windows_Install]]
 ==Using git to get the pull the latest repositories==
 
 Bring up the terminal on the directory you want to install tpserver-py.
