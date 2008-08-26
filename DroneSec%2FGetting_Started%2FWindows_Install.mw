@@ -1,0 +1,57 @@
+Installing tpserver-py in Windows is only currently available by using cygwin.
+
+Step 1: Getting Cygwin
+Cygwin can be downloaded from here: [http://www.cygwin.com/ Cygwin]
+
+Once downloaded run the setup and make sure that the following options are checked:
+gcc
+Python
+sqlite
+git
+
+Now run Cygwin and right-click the window menu on the top-left and select Properties.
+
+In Properties make sure that QuickEdit Mode is checked in.
+Now copy the following to your clipboard and paste into Cygwin. A right-click should do it.
+
+<pre>
+mkdir tp
+cd tp
+
+git clone git://git.thousandparsec.net/git/tpserver-py.git
+git clone git://git.thousandparsec.net/git/libtpproto-py.git
+git clone git://git.thousandparsec.net/git/scratchpad.git
+
+
+cd libtpproto-py
+python setup.py install
+cd ..
+cd tpserver-py
+python setup.py install
+cp config.py-template config.py
+cd ..
+cd scratchpad
+./setup.sh
+python ez_setup.py
+cd
+
+easy_install-2.5 SQLAlchemy 0.4.7
+easy_install-2.5 pysqlite
+
+cd .python-eggs/pysqlite-2.4.1-py2.5-cygwin-1.5.25-i686.egg-tmp/pysqlite2
+chmod +x _sqlite.dll
+
+
+cd tp/tpserver-py
+git branch dronesec origin/dronesec
+git checkout dronesec
+
+</pre>
+
+Now edit the config.py file in C:\cygwin\home\<username>\tp\tpserver-py.
+Most notably the server address and server name should be changed to actual values.
+
+Now to run the server type:
+<pre>
+./tpserver-py
+</pre>
