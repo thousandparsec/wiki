@@ -2,18 +2,6 @@
 == Getting a base tpserver-cpp installed ==
 See mithro's excellent guide on [[Tpserver-cpp Setup]].
 
-== Getting the Risk repository ==
-This is a temporary measure to be taken until Risk is merged with the main branch.
-
-From within the tpserver-cpp directory:
-<pre>
-git checkout --track -b risk origin/risk 
-</pre>
-
-== Recompiling with Risk ==
-Head back on over to mithro's guide and compile/install tpserver-cpp.
-
-
 = Starting a Risk game =
 To run a game where players have to bid on territories run the following command (so long as tpserver-cpp is in the path):
 <pre>
