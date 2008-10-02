@@ -88,7 +88,7 @@ Finally, to clean up when the game is done, stop it:
 
 ==Adding Single-Player Support==
 
-In order for a component to be available for single-player mode, it must install an XML description of itself (using tpconfig.dtd) in a shared directory (currently /usr/share/tp). Additionally, servers and AI clients require control scripts with a common interface for starting and stopping the processes.
+In order for a component to be available for single-player mode, it must install an XML description of itself (using tpconfig.dtd) in a shared directory (currently, libtpclient-py looks in /usr/share/tp, /usr/local/share/tp, /opt/tp, and ./singleplayer in its own install path).
 
 In the XML files, there are ''forced'' parameters (simply added to the command line as-is) and ''regular'' parameters (offered to the player in the wizard). Any options required for single-player mode (including those which allow for non-interactive control) should be forced parameters; any that are relevant to a single-player game and can be set by the player should be regular parameters.
 
@@ -96,80 +96,40 @@ In the XML files, there are ''forced'' parameters (simply added to the command l
 
 Server files live in the ''servers'' subdirectory (i.e., /usr/share/tp/servers).
 
-The control script takes 3 required arguments: a start or stop command, the ruleset name, and the TCP port to listen on.
-
 ====tpserver-cpp.xml====
 
  <?xml version="1.0"?>
  <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
  <tpconfig>
-   <server name="tpserver-cpp">
-     <longname>tpserver-cpp</longname>
-     <version>0.5.1</version>
-     <description>Thousand Parsec server in C++.</description>
-     <forced>--game_load yes</forced>
-     <forced>--game_start yes</forced>
-     <forced>--network_start yes</forced>
-     <forced>--add_players yes</forced>
-     <forced>--turn_player_threshold 100</forced>
-     <parameter name="turnlength" type="I">
-       <longname>Turn Length</longname>
-       <description>Maximum length of a turn (0 for unlimited).</description>
-       <default>0</default>
-       <commandstring>--turn_length_over_threshold %d</commandstring>
-     </parameter>
-     <ruleset name="minisec">
-       <longname>MiniSec</longname>
-       <version>0.3</version>
-       <description>The first milestone game. Simple test of being able to issue orders and perform simple combat.</description>
-     </ruleset>
-     <ruleset name="mtsec">
-       <longname>MTSec</longname>
-       <version>0.0</version>
-       <description>The second milestone game. It is designed to both be a fun game and to exercise the object design capabilities of the framework.</description>
-     </ruleset>
-   </server>
+     <server name="tpserver-cpp">
+         <longname>tpserver-cpp</longname>
+         <version>0.5.1</version>
+         <description>Thousand Parsec server in C++.</description>
+         <commandstring>tpserver-cpp -d --configure /dev/null --ruleset %(rname)s --tp_port %(port)d</commandstring>
+         <forced>--game_load yes</forced>
+         <forced>--game_start yes</forced>
+         <forced>--network_start yes</forced>
+         <forced>--add_players yes</forced>
+         <forced>--autoadd_players yes</forced>
+         <forced>--turn_player_threshold 100</forced>
+         <parameter name="turnlength" type="I">
+             <longname>Turn Length</longname>
+             <description>Maximum length of a turn (0 for unlimited).</description>
+             <default>0</default>
+             <commandstring>--turn_length_over_threshold %d</commandstring>
+         </parameter>
+         <ruleset name="minisec">
+             <longname>MiniSec</longname>
+             <version>0.3</version>
+             <description>The first milestone game. Simple test of being able to issue orders and perform simple combat.</description>
+         </ruleset>
+         <ruleset name="mtsec">
+             <longname>MTSec</longname>
+             <version>0.0</version>
+             <description>The second milestone game. It is designed to both be a fun game and to exercise the object design capabilities of the framework.</description>
+         </ruleset>
+     </server>
  </tpconfig>
-
-====tpserver-cpp.init====
-
- #!/bin/bash
- 
- # Single-player control script for tpserver-cpp
- # Copyright 2008 Aaron Mavrinac and the Thousand Parsec Project
- # Distributed under the terms of the GNU General Public License v2
- 
- TPBIN="/usr/games/bin/tpserver-cpp"
- TPCMD=$1
- TPNAME=`basename $0 .init`
- 
- function startfunc {
-   echo "Starting $TPNAME..."
- 
-   $TPBIN --configure /dev/null \
-     --ruleset $TPGAME \
-     --tp_port $TPPORT \
-     $TPARGS || ( echo "$0: error: unable to start $TPNAME" && exit 1 )
- }
- 
- function stopfunc {
-   echo "Stopping $TPNAME..."
- 
-   killall $TPBIN
- }
- 
- if [ $TPCMD = "start" ]; then
-   TPGAME=$2
-   TPPORT=$3
-   TPARGS=`echo $@ | cut -f4- -d' '`
-   startfunc
- elif [ $TPCMD = "stop" ]; then
-   stopfunc
- else
-   echo "$0: error: unknown command"
- fi
- 
- exit 0
 
 ===Ruleset Modules===
 
@@ -203,9 +163,7 @@ Rulesets are part of the server they are modules for, and thus also live in the 
 
 ===AI Clients===
 
-AI client files live in the ''aiclients'' subdirectory (i.e., /usr/share/tp/aiclients).
-
-The control script takes 4 required arguments: a start or stop command, the ruleset name, the TCP port to connect to, and a username for the AI opponent.
+AI client files live in the ''aiclients'' subdirectory.
 
 ====daneel-ai.xml====
 
@@ -216,54 +174,12 @@ The control script takes 4 required arguments: a start or stop command, the rule
          <longname>daneel-ai</longname>
          <version>0</version>
          <description>An advanced rule based AI.</description>
+         <commandstring>daneel-ai -f rules-%(rname)s -u tp://%(user)s:password@localhost:%(port)d</commandstring>
          <rules>risk</rules>
          <rules>rfts</rules>
      </aiclient>
  </tpconfig>
 
-====daneel-ai.init====
-
- #!/bin/bash
- 
- # Single-player control script for daneel-ai
- # Copyright 2008 Aaron Mavrinac and the Thousand Parsec Project
- # Distributed under the terms of the GNU General Public License v2
- 
- TPPATH="/home/aaron/tp/git/daneel-ai"
- TPBIN="daneel-ai"
- TPCMD=$1
- TPNAME=`basename $0 .init`
- 
- function startfunc {
-     echo "Starting $TPNAME ($TPUSER)..."
- 
-     $TPPATH/$TPBIN \
-         -f $TPPATH/rules-$TPGAME \
-         -u tp://$TPUSER:password@localhost:$TPPORT & 
- 
-     #TODO: verify running by pid
-     echo "OK."
- }
- 
- function stopfunc {
-     echo "Stopping $TPNAME..."
- 
-     #TODO: kill by pid
-     killall daneel-ai
- }
- 
- if [ $TPCMD = "start" ]; then
-     TPGAME=$2
-     TPPORT=$3
-     TPUSER=$4
-     startfunc
- elif [ $TPCMD = "stop" ]; then
-     stopfunc
- else
-     echo "$0: error: unknown command"
- fi
- 
- exit 0
 
 ====gencon.xml====
 
@@ -274,63 +190,17 @@ The control script takes 4 required arguments: a start or stop command, the rule
          <longname>GenCon</longname>
          <version>0</version>
          <description>An AI based around a genetic algorithm.</description>
+         <commandstring>java GenConRunner %(rname)s tp://%(user)s:password@localhost:%(port)d</commandstring>
          <rules>risk</rules>
          <rules>rfts</rules>
          <parameter name="difficulty" type="I">
              <longname>Difficulty</longname>
              <description>Difficulty level (1 - 9).</description>
              <default>8</default>
-             <commandstring>%d</commandstring>
+             <commandstring>%d n</commandstring>
          </parameter>
      </aiclient>
  </tpconfig>
-
-====gencon.init====
-
- #!/bin/bash
- 
- # Single-player control script for FakeAI
- # Copyright 2008 Aaron Mavrinac and the Thousand Parsec Project
- # Distributed under the terms of the GNU General Public License v2
- 
- TPJAR="/path/to/GenConRunner"
- TPCMD=$1
- TPNAME=`basename $0 .init`
- 
- function startfunc {
-     echo "Starting $TPNAME ($TPUSER)..."
- 
-     java $TPJAR \
-         $TPGAME \
-         tp://$TPUSER:password@localhost:$TPPORT \
-         $TPARGS \
-         n &
- 
-     #TODO: verify running by pid
-     echo "OK."
- }
- 
- function stopfunc {
-     echo "Stopping $TPNAME..."
- 
-     #TODO: kill by pid
-     killall GenConRunner
- }
- 
- if [ $TPCMD = "start" ]; then
-     TPGAME=$2
-     TPPORT=$3
-     TPUSER=$4
-     TPARGS=`echo $@ | cut -f5- -d' '`
-     startfunc
- elif [ $TPCMD = "stop" ]; then
-     stopfunc
- else
-     echo "$0: error: unknown command"
- fi
- 
- exit 0
-
 
 ===tpconfig.dtd===
 
@@ -350,15 +220,15 @@ The control script takes 4 required arguments: a start or stop command, the rule
  <!ELEMENT ruleset (longname?, version?, description?, forced*, parameter*) >
  <!ATTLIST ruleset name ID #REQUIRED >
  
- <!ELEMENT server (longname?, version?, description?, forced*, parameter*, ruleset+) >
+ <!ELEMENT server (longname?, version?, description?, commandstring?, forced*, parameter*, ruleset+) >
  <!ATTLIST server name ID #REQUIRED >
  
- <!ELEMENT aiclient (longname?, description?, forced*, parameter*, rules+) >
+ <!ELEMENT aiclient (longname?, description?, commandstring?, forced*, parameter*, rules+) >
  <!ATTLIST aiclient name ID #REQUIRED >
 
 ==Testing==
 
-You can test remote administration using the following procedure:
+You can test single-player mode using the following procedure:
 
 # Clone and compile the 'config' branch of the tpserver-cpp repository.
 # Ensure that libtpproto-py is installed ('config' branch not necessary).
