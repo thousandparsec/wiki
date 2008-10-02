@@ -94,7 +94,7 @@ In the XML files, there are ''forced'' parameters (simply added to the command l
 
 ===Servers===
 
-Server files live in the ''servers'' subdirectory (i.e., /usr/share/tp/servers).
+Server files live in the ''servers'' subdirectory.
 
 ====tpserver-cpp.xml====
 
@@ -179,7 +179,6 @@ AI client files live in the ''aiclients'' subdirectory.
          <rules>rfts</rules>
      </aiclient>
  </tpconfig>
-
 
 ====gencon.xml====
 
