@@ -230,14 +230,11 @@ AI client files live in the ''aiclients'' subdirectory.
 You can test single-player mode using the following procedure:
 
 # Clone and compile the 'config' branch of the tpserver-cpp repository.
-# Ensure that libtpproto-py is installed ('config' branch not necessary).
-# Clone and install the 'singleplayer' branch of the libtpclient-py repository.
 # Install the 'logilab-constraint' Python package if necessary (dependency for daneel-ai).
 # Clone the daneel-ai repository.
 # Clone the 'singleplayer' branch of the tpclient-pywx repository.
-# Download the [http://glorfindel.mavrinac.com/~aaron/tp/tpshare.tar.bz2 test share file tarball].
-# Extract the tarball to /usr/share/tp, /usr/local/share/tp, or /opt/tp.
-# Modify the TPBIN and TPPATH variables in the tpserver-cpp.init and daneel-ai.init scripts to point to the proper paths (will be done by install in the future).
+# Switch the libtpclient-py submodule in tpclient-pywx to the 'singleplayer' branch.
+# Modify the commandstring elements in tpserver-cpp.xml and daneel-ai.xml (bundled with libtpclient-py under tp/client/singleplayer) to point to the proper paths (will be done by installers in the future).
 # Run tpclient-pywx.
 # Click the Single Player button on the connection window, and start a game with the Risk ruleset and daneel-ai opponent(s).
 
