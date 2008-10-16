@@ -7,13 +7,11 @@ Milestone rulesets are special rulesets designed to exercise certain features of
 * [http://www.thousandparsec.net/tp/dev/documents/minisec.php MiniSec], the first milestone game. Simple test of being able to issue orders and perform simple combat.
 * [http://www.thousandparsec.net/tp/dev/documents/mtsec.php MTSec], the second milestone game. It is designed to both be a fun game and to exercise the object design capabilities of the framework.
 
-==== Working rulesets ====
-
-* [[TP RFTS|RFTS Clone]]
-
 ==== [[Google Summer of Code]] rulesets ====
 
-These rulesets are being developed as part of a the [[Google Summer of Code]].
+These rulesets have been developed as part of a the [[Google Summer of Code]].
+
+* [[TP RFTS|RFTS Clone]]
 * [[Risk]] - A modified version of that classic board game now in space.
 * [[Tigris and Euphrates|TAE]] - A more advanced board game also now in space.
 * [[DroneSec]] - By controlling a single mothership, take over the universe with your drones!
