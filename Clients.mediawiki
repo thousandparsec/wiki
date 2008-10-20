@@ -19,7 +19,7 @@ After we have a library that can “talk” as defined in the protocol we also n
 |-
 ! Name !! Maintainer !! Language !! Code !! Notes
 |-
-| [[tpclient-pyogre]] || || Python || [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pyogre.git;a=summary Git] ||
+| [[tpclient-pyogre]] || Eugene Tan (jmtan) || Python || [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pyogre.git;a=summary Git] ||
 |}
 
 {| border="1"
