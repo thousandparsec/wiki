@@ -1,0 +1,93 @@
+== Introduction ==
+Welcome! If this is your first time hearing about Thousand Parsec, you may want to read the rest of this introduction. If you are already familiar with the project, you may want to skip to "First Steps", which talks about installing and running the client.
+
+=== A quick primer to Thousand Parsec ===
+Thousand Parsec is a framework for creating turn-based strategy games. Each game is based around a ruleset which defines how the game will be played. Some popular rulesets include:
+
+'''Reach for the Stars'''
+A port of the old space 4X strategy game Reach for the Stars. A notable feature of this ruleset is that each turn is actually one of three "phrases", so different actions will be available during each phase.
+
+'''Minisec and MTSec'''
+These are the "example" rulesets for Thousand Parsec, and you can usually see Minisec being played on the demo servers (demo1.thousandparsec.net) if you'd like to take a quick look.
+
+In addition there have been many new rulesets released during this years Google Summer of Code program. This [[Rulesets|page]] lists them all.
+
+There are also many different [[Clients|clients]] available for connecting to the server. It is important to note that the actions that take place in-game are not affected by your choice of client - they are just different ways of doing the same thing.
+
+== First steps ==
+=== Binary builds ===
+Binary builds are versions of a software that usually come with some, if not all of their dependencies included into a single package. These are the fastest way to get up and running with the client, and you can download a Windows version from [http://www.thousandparsec.net/%7Ejmtan/ here]. After downloading the setup file, run it and follow the instructions to install it on your system. The client can then be run from the start menu, under the Thousand Parsec/tpclient-pyogre folder. For linux users, there is an Ubuntu .deb file being worked on at the moment.
+
+=== Running from source ===
+Running from source means downloading the source code and getting all the dependencies for yourself. Currently, the client has these dependencies:
+
+* [http://www.python.org/ Python], a programming language
+* [http://python-ogre.org/ Python-Ogre], a free open source Python interface to a wide range of C++ libraries
+* Python TP Client and Network [http://www.thousandparsec.net/tp/downloads.php libraries], a common code base for python-based clients in Thousand Parsec
+* [http://www.pygame.org/ Pygame] (optional), a game development library used to playback sound and movies in the client
+
+The source code is hosted in a Git repository, so you'll need [http://git.or.cz/ Git] to download a copy. Windows users can get a binary version of Git from [http://code.google.com/p/msysgit/downloads/list here].
+
+== Using the client ==
+=== Logging on ===
+Upon starting the client, the first thing you will see is the login screen, with textboxes to fill in the user name and password. To select a server to join, either type in the url in the server textbox or click the drop-down button to show a list of servers currently running.
+
+=== The user interface ===
+After logging into the game, you'll see a zoomed out version of the playing area showing all game objects in an "iconified" view:
+Here's an explanation of what the labelled items on the user interface do, from top to bottom:
+* Menu - Shows the main menu
+* Designs - Shows a list of ship types in the game (may not be applicable to all rulesets)
+* Current turn - Shows how long the game has been progressing
+* Zoom in and out - Get closer or further to the currently selected object
+* Deselect - Unselects the currently selected object
+* Focus - Centers and zooms all the way in on the currently selected object
+* Fit Map - Zooms out all the way and shows the entire map
+* Orders - Shows the order queue for the currently selected object
+* Information - Shows additional details about the currently selected object
+* System - Shows the list of systems in the game, double-clicking on a system will focus on it
+* Messages - Shows the list of messages received
+* Turn timer - Number of minutes and seconds until the current turn ends. The "End" button tells the server you're done with your actions.
+
+=== Creating new orders ===
+You can issue orders to objects that belong to you.
+
+=== Viewing messages ===
+
+== Controls ==
+=== Object selection and orders ===
+'''Mouse'''
+:Select an object by clicking on it
+:Right-click on a destination to issue a move command
+
+'''Keyboard'''
+:Spacebar to bring up an orders menu for the currently selected object
+
+
+=== Moving the map ===
+'''Mouse'''
+:Middle-click + drag to pan the map around
+:Mouse-wheel will zoom in and out
+:Right-click + drag to rotate the map around the focal point
+:Double-clicking on an object will center and zoom in on it
+
+'''Keyboard'''
+:Arrow keys to pan the map around
+:+/- keys will zoom in and out
+:C to center on the selected object
+:A to zoom out and fit the map to screen
+
+
+=== Additional keys ===
+:Esc - bring up the main menu
+:Ctrl-Q - quit immediately
+:F12 - take a screenshot
+
+== Troubleshooting ==
+Finding players
+
+Empty dialog boxes
+
+No sound
+
+
+== Appendix A - Running from source ==
