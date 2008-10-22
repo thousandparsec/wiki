@@ -31,23 +31,28 @@ The source code is hosted in a Git repository, so you'll need [http://git.or.cz/
 == Using the client ==
 === Logging on ===
 [[images/Login.png]]
+
 Upon starting the client, the first thing you will see is the login screen, with textboxes to fill in the user name and password. To select a server to join, either type in the url in the server textbox or click the drop-down button to show a list of servers currently running.
 
 === The user interface ===
-After logging into the game, you'll see a zoomed out version of the playing area showing all game objects in an "iconified" view:
+After logging into the game, you'll see the main screen:
+[[images/tpclient-pyogre_main.png]]
+
 Here's an explanation of what the labelled items on the user interface do, from top to bottom:
-* Menu - Shows the main menu
-* Designs - Shows a list of ship types in the game (may not be applicable to all rulesets)
-* Current turn - Shows how long the game has been progressing
-* Zoom in and out - Get closer or further to the currently selected object
-* Deselect - Unselects the currently selected object
-* Focus - Centers and zooms all the way in on the currently selected object
-* Fit Map - Zooms out all the way and shows the entire map
-* Orders - Shows the order queue for the currently selected object
-* Information - Shows additional details about the currently selected object
-* System - Shows the list of systems in the game, double-clicking on a system will focus on it
-* Messages - Shows the list of messages received
-* Turn timer - Number of minutes and seconds until the current turn ends. The "End" button tells the server you're done with your actions.
+# Menu - Shows the main menu
+# Designs - Shows a list of ship types in the game (may not be applicable to all rulesets)
+# Current turn - Shows how long the game has been progressing
+# Zoom in - Get closer to the currently selected object
+# Zoom out - Get further from the currently selected object
+# Deselect - Unselects the currently selected object
+# Focus - Centers and zooms all the way in on the currently selected object
+# Fit map - Zooms out all the way and shows the entire map
+# Orders - Shows the order queue for the currently selected object
+# Information - Shows additional details about the currently selected object
+# System - Shows the list of systems in the game, double-clicking on a system will focus on it
+# Messages - Shows the list of messages received
+# Turn timer - Number of minutes and seconds until the current turn ends
+# End turn - Tells the server you are ready to end your turn
 
 === Creating new orders ===
 You can issue orders to objects that belong to you.
