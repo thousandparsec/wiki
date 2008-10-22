@@ -54,8 +54,12 @@ Here's an explanation of what the labelled items on the user interface do, from 
 # Turn timer - Number of minutes and seconds until the current turn ends
 # End turn - Tells the server you are ready to end your turn
 
-=== Creating new orders ===
-You can issue orders to objects that belong to you.
+=== Issuing orders ===
+Orders are how you control your assets in the game. Planetary production, fleet movement and colonization are just a few examples of the different orders you can issue to objects belonging to you.
+ 
+To view an object's current orders, first select an object and bring up the Orders window. You can drag or resize the Orders window if it is blocking your view. You should see something similar to the following screen:
+
+[[Image:Tpclient-pyogre_issue_orders.png]]
 
 === Viewing messages ===
 
