@@ -30,6 +30,7 @@ The source code is hosted in a Git repository, so you'll need [http://git.or.cz/
 
 == Using the client ==
 === Logging on ===
+[[images/Login.png]]
 Upon starting the client, the first thing you will see is the login screen, with textboxes to fill in the user name and password. To select a server to join, either type in the url in the server textbox or click the drop-down button to show a list of servers currently running.
 
 === The user interface ===
