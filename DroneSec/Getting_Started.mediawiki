@@ -177,7 +177,7 @@ On random games there can be as many players as there are planets.
 ==Ending a Turn==
 As of right now dronesec does not end a turn based on a timer or through tpclient-pywx's Request End of Turn feature. Instead the server must has a turn pass manually by typing this into the terminal.
 <pre>
-sudo ./tpserver-py-tool --turn tp
+./tpserver-py-tool --turn tp
 </pre>
 
 =Playing Dronesec=
