@@ -20,21 +20,7 @@ Resolving deltas: 100% (2743/2743), done.
 tansell@tansell-mobile:~/FOSS/tp/server$ 
 </pre>
 
-==Install libtpproto-py and tpserver-py==
-<pre>
-cd scratchpad
-./setup.sh
-cd ..
-</pre>
 
-The output should look something like this
-<pre>
-tansell@tansell-mobile:~/FOSS/tp/server$ cd scratchpad
-tansell@tansell-mobile:~/FOSS/tp/server/scratchpad$ ./setup.sh
-Setting up tpserver-py for inplace operation...
-tansell@tansell-mobile:~/FOSS/tp/server/scratchpad$ cd ..
-tansell@tansell-mobile:~/FOSS/tp/server$ 
-</pre>
 
 ==Switching to the dronesec branch==
 <pre>
