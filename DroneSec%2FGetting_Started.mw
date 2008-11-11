@@ -183,7 +183,7 @@ As of right now dronesec does not end a turn based on a timer or through tpclien
 =Playing Dronesec=
 
 ==tpclient-pywx==
-The latest tpclient-pywx release can be found [http://thousandparsec.net/tp/downloads.php here].
+The latest tpclient-pywx release can be found [http://www.thousandparsec.net/tp/downloads.php here].
 
 start tpclient-pywx
 
