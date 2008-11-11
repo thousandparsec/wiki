@@ -188,7 +188,7 @@ The latest tpclient-pywx release can be found [http://thousandparsec.net/tp/down
 start tpclient-pywx
 
 <pre>
-sudo tpclient-pywx
+tpclient-pywx
 </pre>
 
 In this case. The server address is ourselves so we use localhost.
@@ -196,7 +196,7 @@ In this case. The server address is ourselves so we use localhost.
 [[images/Dronesec-ConnectingToServer.png]]
 
 After typing in the username @ <gamename> and the password we click ok to connect.
- 
+
 ==Play==
 In this game its blah vs blag.
 
