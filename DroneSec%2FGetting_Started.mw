@@ -20,11 +20,92 @@ Resolving deltas: 100% (2743/2743), done.
 tansell@tansell-mobile:~/FOSS/tp/server$ 
 </pre>
 
-==Switching to the dronesec branch==
+== Switching to the dronesec branch ==
 <pre>
 cd tpserver-py
 git branch dronesec origin/dronesec
 git checkout dronesec
+</pre>
+
+== Check you have all the requirements ==
+
+<pre>
+python requirements.py
+</pre>
+
+The output should look something like,
+<pre>
+tansell@tansell-mobile:~/FOSS/tp/server/tpserver-py$ python requirements.py 
+It appears this is a fresh git checkout, trying to get dependencies
+Submodule 'libtpproto-py' (git://git.thousandparsec.net/git/libtpproto-py) registered for path 'libtpproto-py'
+Submodule 'schemepy' (git://git.thousandparsec.net/git/schemepy.git) registered for path 'schemepy'
+Initialized empty Git repository in /home/tansell/FOSS/tp/server/tpserver-py-2/libtpproto-py/.git/
+remote: Counting objects: 2137, done.
+remote: Compressing objects: 100% (775/775), done.
+remote: Total 2137 (delta 1346), reused 2131 (delta 1344)
+Receiving objects: 100% (2137/2137), 344.26 KiB | 114 KiB/s, done.
+Resolving deltas: 100% (1346/1346), done.
+Submodule path 'libtpproto-py': checked out '4b05b93fdeea88d4b37a537a75c90b01c44430a5'
+Initialized empty Git repository in /home/tansell/FOSS/tp/server/tpserver-py-2/schemepy/.git/
+remote: Counting objects: 1898, done.
+remote: Compressing objects: 100% (676/676), done.
+remote: Total 1898 (delta 1193), reused 1898 (delta 1193)
+Receiving objects: 100% (1898/1898), 509.23 KiB | 157 KiB/s, done.
+Resolving deltas: 100% (1193/1193), done.
+Submodule path 'schemepy': checked out 'f66a4b8f9ce459fbb7c89aa627f0dca931bcaa2c'
+My information:
+---------------------------------------------------------------
+My version 0.2.0+0.2.1 (git 38493b680488483179a500009cb9b356c86211c3)
+Running from  /home/tansell/FOSS/tp/server/tpserver-py
+
+Checking requirements:
+---------------------------------------------------------------
+
+ * Looking for Thousand Parsec Protocol Library,
+    Thousand Parsec Protocol Library Version (0, 2, 4)
+       (installed at /home/tansell/FOSS/tp/server/tpserver-py-2/libtpproto-py)
+       (git 4b05b93fdeea88d4b37a537a75c90b01c44430a5)
+
+ * Looking for SQLAlchemy,
+    SQLAlchemy installed version 0.3.10
+SQLAlchemy version is too old
+
+ * Looking for ElementTree implimentation,
+    An Element Tree version is installed (xml.etree.ElementTree).
+
+ * Looking for gettext,
+    Found gettext.
+
+ * Looking for SQLite,
+      SQLite support installed, version 3.4.2 (DPI version 2.3.4)
+
+ * Looking for MySQL support,
+      MySQL support installed, version 1.2.2
+
+ * Looking for SSL support,
+No module named pyOpenSSL
+      SSL support found, provided by <module 'OpenSSL' from '/var/lib/python-support/python2.5/OpenSSL/__init__.pyc'>
+
+Configuring Schemepy:
+---------------------------------------------------------------
+ * Checking mzscheme
+    recommended package mzscheme not installed
+    installing mzscheme can make the scheme part runs faster
+    use "apt-get install plt-scheme" to install
+ * Checking guile
+    recommended package guile not installed
+    installing guile can make the scheme part runs faster
+    use "apt-get install guile-1.8 guile-1.8-dev" to install
+ * Configuring load path for schemepy
+ Done.
+
+Checking config file:
+---------------------------------------------------------------
+WARNING: No config.py found, setting one up for you.
+ * Configuration seems okay
+
+Possible problems found:
+---------------------------------------------------------------
 </pre>
 
 ==Starting tpserver-py==
