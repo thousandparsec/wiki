@@ -20,8 +20,6 @@ Resolving deltas: 100% (2743/2743), done.
 tansell@tansell-mobile:~/FOSS/tp/server$ 
 </pre>
 
-
-
 ==Switching to the dronesec branch==
 <pre>
 cd tpserver-py
