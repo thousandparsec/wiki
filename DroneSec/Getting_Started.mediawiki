@@ -6,8 +6,6 @@ Bring up the terminal on the directory you want to install tpserver-py.
 Use git to get the latest repositories.
 <pre>
 git clone git://git.thousandparsec.net/git/tpserver-py.git
-git clone git://git.thousandparsec.net/git/libtpproto-py.git
-git clone git://git.thousandparsec.net/git/scratchpad.git
 </pre>
 
 The output should look like the following,
@@ -19,20 +17,6 @@ remote: Compressing objects: 100% (1756/1756), done.
 remote: Total 4630 (delta 2743), reused 4630 (delta 2743)
 Receiving objects: 100% (4630/4630), 963.11 KiB | 303 KiB/s, done.
 Resolving deltas: 100% (2743/2743), done.
-tansell@tansell-mobile:~/FOSS/tp/server$ git clone git://git.thousandparsec.net/git/libtpproto-py.git
-Initialized empty Git repository in /home/tansell/FOSS/tp/server/libtpproto-py/.git/
-remote: Counting objects: 2137, done.
-remote: Compressing objects: 100% (775/775), done.
-remote: Total 2137 (delta 1346), reused 2131 (delta 1344)
-Receiving objects: 100% (2137/2137), 344.26 KiB | 169 KiB/s, done.
-Resolving deltas: 100% (1346/1346), done.
-tansell@tansell-mobile:~/FOSS/tp/server$ git clone git://git.thousandparsec.net/git/scratchpad.git
-Initialized empty Git repository in /home/tansell/FOSS/tp/server/scratchpad/.git/
-remote: Counting objects: 157, done.
-remote: Compressing objects: 100% (74/74), done.
-remote: Total 157 (delta 80), reused 157 (delta 80)
-Receiving objects: 100% (157/157), 101.16 KiB | 67 KiB/s, done.
-Resolving deltas: 100% (80/80), done.
 tansell@tansell-mobile:~/FOSS/tp/server$ 
 </pre>
 
