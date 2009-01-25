@@ -120,6 +120,30 @@ You could look at the following games for some ideas,
 * Some 3D development skills.
 * Strong coding skills in language of choice.
 
+=== Additional Updates ===
+A 3D client was developed in GSOC 2008, right now it is in need of the following features:
+
+* Support for creating designs
+** Allow users to create and edit ship designs
+* [[TP04]] support
+** Support for the new features contained in the tp04 protocol
+* BattleXML support
+** A standalone battle viewer which is integrated into the main client as well
+* [[Media.gz]] support
+** Client should download models and other media off the media server
+* Single player mode
+** Players can play a game locally against AI competition
+
+In order to work on the client, you will need an understanding of Python. Familiarity with [http://www.ogre3d.org Ogre], [http://www.cegui.org.uk/ CEGUI] and [http://www.pythonogre.com Python-Ogre] would be preferable as well.
+
+In addition, there are some other features which may not fit the scope of a Summer of Code program or are not as important:
+* Game lobby system
+** Ability to communicate with other players and host games, perhaps by launching tpserver-cpp or tpserver-py in the background
+* Procedural planet generation
+** Generate planet and stars according to their attributes
+* Addition of more special effects and eye candy
+** Locate areas in the client which could be improved for a better player experience
+
 == AI Clients ==
 
 An AI client in Thousand Parsec games connects to the game as a normal client and has exactly the same information as a normal player would have. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpsai-py.git;a=summary tpsai-py] implements a some-what simple AI for Minisec. [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary Galaxie] also has an inbuilt AI. There are many improvements that could be made to these AI, and possibly made more generic so that they could be used with other rulesets.
