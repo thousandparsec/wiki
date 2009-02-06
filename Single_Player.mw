@@ -88,7 +88,7 @@ Finally, to clean up when the game is done, stop it:
 
 ==Adding Single-Player Support==
 
-In order for a component to be available for single-player mode, it must install an XML description of itself (using tpconfig.dtd) in a shared directory (currently, libtpclient-py looks in /usr/share/tp, /usr/local/share/tp, /opt/tp, and ./singleplayer in its own install path).
+In order for a component to be available for single-player mode, it must install an XML description of itself (using tpconfig.dtd) somewhere. On Unix platforms, libtpclient-py looks in /usr/share/tp, /usr/local/share/tp, /opt/tp, and ./singleplayer in its own install path. On Windows platforms, it looks at the registry key "HKLM\Software\Thousand Parsec\Single Player" and adds any values it finds there to the list of search paths (note that the 'servers' and 'aiclients' subdirectories are still observed).
 
 In the XML files, there are ''forced'' parameters (simply added to the command line as-is) and ''regular'' parameters (offered to the player in the wizard). Any options required for single-player mode (including those which allow for non-interactive control) should be forced parameters; any that are relevant to a single-player game and can be set by the player should be regular parameters.
 
