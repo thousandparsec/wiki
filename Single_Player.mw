@@ -99,7 +99,7 @@ Server files live in the ''servers'' subdirectory.
 ====tpserver-cpp.xml====
 
  <?xml version="1.0"?>
- <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
+ <!DOCTYPE tpconfig SYSTEM "http://thousandparsec.net/tp/downloads/tpconfig.dtd">
  <tpconfig>
      <server name="tpserver-cpp">
          <longname>tpserver-cpp</longname>
@@ -138,7 +138,7 @@ Rulesets are part of the server they are modules for, and thus also live in the 
 ====tpserver-cpp-risk.xml====
 
  <?xml version="1.0"?>
- <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
+ <!DOCTYPE tpconfig SYSTEM "http://thousandparsec.net/tp/downloads/tpconfig.dtd">
  <tpconfig>
    <server name="tpserver-cpp">
      <ruleset name="risk">
@@ -183,7 +183,7 @@ AI client files live in the ''aiclients'' subdirectory.
 ====gencon.xml====
 
  <?xml version="1.0"?>
- <!DOCTYPE tpconfig SYSTEM "../tpconfig.dtd">
+ <!DOCTYPE tpconfig SYSTEM "http://thousandparsec.net/tp/downloads/tpconfig.dtd">
  <tpconfig>
      <aiclient name="gencon">
          <longname>GenCon</longname>
