@@ -13,7 +13,7 @@ The required XML descriptions are currently available for the following componen
 
 ===Flowchart===
 
-[[images/SinglePlayerFC.png|Single-Player Configuration Flowchart]]
+[[images/SinglePlayerFC.png|200px|Single-Player Configuration Flowchart]]
 
 ===Implementation===
 
