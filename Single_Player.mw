@@ -1,4 +1,4 @@
-'''Single-player mode''' is a cross-client effort to allow users to configure a local server and AI opponents automatically via an easy wizard interface. This is being developed for [[Google Summer of Code]] 2008 by Aaron Mavrinac / [[User:Ezod|ezod]].
+'''Single-player mode''' is a cross-client effort to allow users to configure a local server and AI opponents automatically via an easy wizard interface. This was originally developed for [[Google Summer of Code]] 2008 by Aaron Mavrinac / [[User:Ezod|ezod]].
 
 ==Configuration==
 
@@ -88,154 +88,120 @@ Finally, to clean up when the game is done, stop it:
 
 ==Adding Single-Player Support==
 
-In order for a component to be available for single-player mode, it must install an XML description of itself (using tpconfig.dtd) somewhere. On Unix platforms, libtpclient-py looks in /usr/share/tp, /usr/local/share/tp, /opt/tp, and ./singleplayer in its own install path. On Windows platforms, it looks at the registry key "HKLM\Software\Thousand Parsec\SinglePlayer" and adds any values it finds there to the list of search paths (note that the 'servers' and 'aiclients' subdirectories are still observed).
+===XML Search Path===
 
-In the XML files, there are ''forced'' parameters (simply added to the command line as-is) and ''regular'' parameters (offered to the player in the wizard). Any options required for single-player mode (including those which allow for non-interactive control) should be forced parameters; any that are relevant to a single-player game and can be set by the player should be regular parameters.
+In order for a component to be available for single-player mode, it must install an XML description of itself (using [http://thousandparsec.net/tp/downloads/tpconfig.dtd tpconfig.dtd]) somewhere. On Unix platforms, libtpclient-py looks in /usr/share/tp, /usr/local/share/tp, /opt/tp, and ./singleplayer in its own install path. On Windows platforms, it looks at the registry key "HKLM\Software\Thousand Parsec\SinglePlayer" and adds any values it finds there to the list of search paths.
 
-===Servers===
+For development purposes, a Git checkout of libtpclient-py will also look at all other directories at the same level as its own repository. Special XML files can be included at the top level of the repository for this purpose. The '''type''' attribute of the '''tpconfig''' root tag must be set to ''inplace'', and the '''name''' attribute of servers and AI clients is conventionally suffixed with ''-inplace'' and the '''longname''' attribute with ''(Development)'' as well to distinguish them from installed copies.
 
-Server files live in the ''servers'' subdirectory.
+===Parameters===
 
-====tpserver-cpp.xml====
+There are ''forced'' parameters (simply added to the command line as-is) and ''regular'' parameters (offered to the player in the wizard). Any options required for single-player mode (including those which allow for non-interactive control) should be forced parameters; any that are relevant to a single-player game and can be set by the player should be regular parameters.
+
+There following parameter types are supported (for formatting and validation):
+
+{| class="wikitable"
+|-
+! Type
+! XML Type
+! Format String
+! Appearance
+|-
+| Integer
+| I
+| %d
+| Numeric Textbox
+|-
+| String
+| S
+| %s
+| Alpha Textbox
+|-
+| File 
+| F
+| %s
+| File Dialog
+|-
+| Boolean
+| B
+| none
+| Checkbox
+|}
+
+
+===Example XML Files===
+
+====Server====
+
+For servers, the '''commandstring''' and/or '''forced''' parameters should include exactly one instance each of the following format strings, which will be supplied by the client:
+
+* %(rname)s - the ruleset name
+* %(port)d - the port to listen on
 
  <?xml version="1.0"?>
  <!DOCTYPE tpconfig SYSTEM "http://thousandparsec.net/tp/downloads/tpconfig.dtd">
- <tpconfig>
-     <server name="tpserver-cpp">
-         <longname>tpserver-cpp</longname>
-         <version>0.5.1</version>
-         <description>Thousand Parsec server in C++.</description>
-         <commandstring>tpserver-cpp -d --configure /dev/null --ruleset %(rname)s --tp_port %(port)d</commandstring>
-         <forced>--game_load yes</forced>
-         <forced>--game_start yes</forced>
-         <forced>--network_start yes</forced>
-         <forced>--add_players yes</forced>
-         <forced>--autoadd_players yes</forced>
-         <forced>--turn_player_threshold 100</forced>
+ <tpconfig type="installed">
+     <server name="tpserver-foo">
+         <longname>tpserver-foo</longname>
+         <version>0.1.2</version>
+         <description>A new Thousand Parsec server.</description>
+         <commandstring>tpserver-foo --ruleset %(rname)s --port %(port)d</commandstring>
+         <forced>--some_option yes</forced>
+         <forced>--some_other_option</forced>
          <parameter name="turnlength" type="I">
              <longname>Turn Length</longname>
              <description>Maximum length of a turn (0 for unlimited).</description>
              <default>0</default>
-             <commandstring>--turn_length_over_threshold %d</commandstring>
+             <commandstring>--turn_length %d</commandstring>
          </parameter>
-         <ruleset name="minisec">
-             <longname>MiniSec</longname>
-             <version>0.3</version>
-             <description>The first milestone game. Simple test of being able to issue orders and perform simple combat.</description>
-         </ruleset>
-         <ruleset name="mtsec">
-             <longname>MTSec</longname>
-             <version>0.0</version>
-             <description>The second milestone game. It is designed to both be a fun game and to exercise the object design capabilities of the framework.</description>
-         </ruleset>
      </server>
  </tpconfig>
 
-===Ruleset Modules===
+====Ruleset Module====
 
-Rulesets are part of the server they are modules for, and thus also live in the ''servers'' subdirectory. Rulesets built into the server may simply be added to that server's XML file, as shown in tpserver-cpp-0.5.1.xml above, but in cases where the ruleset is installed separately, something like the following may be used. The server name must match the server to which the ruleset belongs.
-
-====tpserver-cpp-risk.xml====
+Rulesets may have their own XML files, with the '''name''' attribute of the '''server''' tag set to the name of the server they are associated with, or may be written directly into the server's XML file.
 
  <?xml version="1.0"?>
  <!DOCTYPE tpconfig SYSTEM "http://thousandparsec.net/tp/downloads/tpconfig.dtd">
- <tpconfig>
-   <server name="tpserver-cpp">
-     <ruleset name="risk">
-       <longname>Risk</longname>
-       <version>0</version>
-       <description>A modified Risk ruleset for tpserver-cpp.</description>
-       <parameter name="map" type="S">
+ <tpconfig type="installed">
+   <server name="tpserver-foo">
+     <ruleset name="bar">
+       <longname>Bar: Galactic Carnage</longname>
+       <version>0.1</version>
+       <description>A very violent ruleset for tpserver-foo.</description>
+       <parameter name="map" type="F">
          <longname>Map</longname>
          <description>Map file to load.</description>
-         <default />
-         <commandstring>--risk_map %s</commandstring>
+         <default/>
+         <commandstring>--bar_map %s</commandstring>
        </parameter>
-       <parameter name="rfcstart" type="I">
-         <longname>Reinforcements</longname>
-         <description>Starting reinforcement count.</description>
-         <default />
-         <commandstring>--risk_rfc_start %d</commandstring>
+       <parameter name="fleets" type="I">
+         <longname>Fleets</longname>
+         <description>Starting fleet count.</description>
+         <default/>
+         <commandstring>--bar_starting_fleets %d</commandstring>
        </parameter>
      </ruleset>
    </server>
  </tpconfig>
 
-===AI Clients===
+====AI Client====
 
-AI client files live in the ''aiclients'' subdirectory.
+For AI clients, the '''commandstring''' and/or '''forced''' parameters should include exactly one instance each of the following format strings (unless marked optional), which will be supplied by the client:
 
-====daneel-ai.xml====
-
- <?xml version="1.0"?>
- <!DOCTYPE tpconfig SYSTEM "http://thousandparsec.net/tp/downloads/tpconfig.dtd">
- <tpconfig>
-     <aiclient name="daneel-ai">
-         <longname>daneel-ai</longname>
-         <version>0</version>
-         <description>An advanced rule based AI.</description>
-         <commandstring>daneel-ai -f %(rname)s -u tp://%(user)s:password@localhost:%(port)d</commandstring>
-         <rules>risk</rules>
-         <rules>rfts</rules>
-     </aiclient>
- </tpconfig>
-
-====gencon.xml====
+* %(rname)s - the ruleset name (optional - for multi-ruleset AI clients)
+* %(user)s - a username for the AI
+* %(port)d - the port to connect to
 
  <?xml version="1.0"?>
  <!DOCTYPE tpconfig SYSTEM "http://thousandparsec.net/tp/downloads/tpconfig.dtd">
- <tpconfig>
-     <aiclient name="gencon">
-         <longname>GenCon</longname>
+ <tpconfig type="installed">
+     <aiclient name="baz-ai">
+         <longname>baz-ai</longname>
          <version>0</version>
-         <description>An AI based around a genetic algorithm.</description>
-         <commandstring>java GenConRunner %(rname)s tp://%(user)s:password@localhost:%(port)d</commandstring>
-         <rules>risk</rules>
-         <rules>rfts</rules>
-         <parameter name="difficulty" type="I">
-             <longname>Difficulty</longname>
-             <description>Difficulty level (1 - 9).</description>
-             <default>8</default>
-             <commandstring>%d n</commandstring>
-         </parameter>
+         <description>An invincible AI from another dimension.</description>
+         <commandstring>baz-ai -r %(rname)s -u %(user)s -h localhost:%(port)d</commandstring>
+         <rules>bar</rules>
+         <rules>qux</rules>
      </aiclient>
  </tpconfig>
-
-===tpconfig.dtd===
-
- <!ELEMENT tpconfig (server?, aiclient?) >
- 
- <!ELEMENT longname (#PCDATA) >
- <!ELEMENT version (#PCDATA) >
- <!ELEMENT description (#PCDATA) >
- <!ELEMENT forced (#PCDATA) >
- <!ELEMENT default (#PCDATA) >
- <!ELEMENT commandstring (#PCDATA) >
- <!ELEMENT rules (#PCDATA) >
- 
- <!ELEMENT parameter (longname?, description?, default?, commandstring?) >
- <!ATTLIST parameter name ID #REQUIRED type NMTOKEN #REQUIRED >
- 
- <!ELEMENT ruleset (longname?, version?, description?, forced*, parameter*) >
- <!ATTLIST ruleset name ID #REQUIRED >
- 
- <!ELEMENT server (longname?, version?, description?, commandstring?, forced*, parameter*, ruleset+) >
- <!ATTLIST server name ID #REQUIRED >
- 
- <!ELEMENT aiclient (longname?, description?, commandstring?, forced*, parameter*, rules+) >
- <!ATTLIST aiclient name ID #REQUIRED >
-
-==Testing==
-
-You can test single-player mode using the following procedure:
-
-# Clone and compile the 'config' branch of the tpserver-cpp repository.
-# Install the 'logilab-constraint' Python package if necessary (dependency for daneel-ai).
-# Clone the daneel-ai repository.
-# Clone the 'singleplayer' branch of the tpclient-pywx repository.
-# Switch the libtpclient-py submodule in tpclient-pywx to the 'singleplayer' branch.
-# Modify the commandstring elements in tpserver-cpp.xml and daneel-ai.xml (bundled with libtpclient-py under tp/client/singleplayer) to point to the proper paths (will be done by installers in the future).
-# Run tpclient-pywx.
-# Click the Single Player button on the connection window, and start a game with the Risk ruleset and daneel-ai opponent(s).
-
-If you find any bugs, please send a detailed description to [[User:Ezod|ezod]].
