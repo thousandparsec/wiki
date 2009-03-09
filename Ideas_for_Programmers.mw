@@ -52,16 +52,6 @@ Design a simple ruleset in which a whole game can be finished in an hour. This w
 === Required Skills ===
 * C++ skills or Python skills.
 
-= Single Player =
-
-Thousand Parsec has generally been designed around a multiplayer philosophy but there is no reason a person could not play a game locally.
-
-Your job is to create a tool which makes setting up a local single player game easy. It should provide a GUI which includes functionality to set up a game (including starting a server) with various ruleset and server parameters, adding AI clients and starting the client.
-
-The tool should support both installed components on Linux (installed through the package manager) and included components on Windows and Mac OS X.
-
-Ease of use is a HUGE factor in this tool. It should fail gracefully and provide a holistic user experiance.
-
 = New Client Ideas =
 
 Thousand Parsec is designed to allow many different clients to connect to the same server and still fully participate. Currently the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=summary main client] is written in Python. There are also clients for [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=parsek.git;a=summary KDE in C++] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary EFL in C].
@@ -233,11 +223,6 @@ Questions to ask include:
 * logging options (file, syslog, console; log level, colour, filename; etc)
 
 This task could include making changes to libtprl as well to make this work easier.
-
-== Separate the console from the server ==
-Make it possible to connect remotely, or at least locally, to a daemon-ized tpserver-cpp. Need to pass commands into the server and get logging and output back. Could be quite a few ways to do this. Maybe a special server configuration protocol could be designed so that various different configuration interfaces (for example integrated into clients, presented as Single Player mode) could connect to a special configuration port.
-
-'''GSoC Project:''' ezod is working on this for his GSoC 2008 project.
 
 == BattleXML support ==
 BattleXML is an xml format for describing battles that take place in Thousand Parsec, and the files can be viewed by the stand-alone battleviewer. The task is to design a suitable API for creating the xml files from combat being performed in the Rulesets, then using it in combat processing in the rulesets. Sample xml files and the dtd are available in the documents git repo. Also suggestions should be put forward how the xml files should be delivered to clients and how to associate them with particular battles.
