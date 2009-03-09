@@ -162,25 +162,25 @@ Rulesets may have their own XML files, with the '''name''' attribute of the '''s
  <?xml version="1.0"?>
  <!DOCTYPE tpconfig SYSTEM "http://thousandparsec.net/tp/downloads/tpconfig.dtd">
  <tpconfig type="installed">
-   <server name="tpserver-foo">
-     <ruleset name="bar">
-       <longname>Bar: Galactic Carnage</longname>
-       <version>0.1</version>
-       <description>A very violent ruleset for tpserver-foo.</description>
-       <parameter name="map" type="F">
-         <longname>Map</longname>
-         <description>Map file to load.</description>
-         <default/>
-         <commandstring>--bar_map %s</commandstring>
-       </parameter>
-       <parameter name="fleets" type="I">
-         <longname>Fleets</longname>
-         <description>Starting fleet count.</description>
-         <default/>
-         <commandstring>--bar_starting_fleets %d</commandstring>
-       </parameter>
-     </ruleset>
-   </server>
+     <server name="tpserver-foo">
+         <ruleset name="bar">
+             <longname>Bar: Galactic Carnage</longname>
+             <version>0.1</version>
+             <description>A very violent ruleset for tpserver-foo.</description>
+             <parameter name="map" type="F">
+                 <longname>Map</longname>
+                 <description>Map file to load.</description>
+                 <default/>
+                 <commandstring>--bar_map %s</commandstring>
+             </parameter>
+             <parameter name="fleets" type="I">
+                 <longname>Fleets</longname>
+                 <description>Starting fleet count.</description>
+                 <default>3</default>
+                 <commandstring>--bar_starting_fleets %d</commandstring>
+             </parameter>
+         </ruleset>
+     </server>
  </tpconfig>
 
 ====AI Client====
