@@ -1,17 +1,15 @@
 '''Single-player mode''' is a cross-client effort to allow users to configure a local server and AI opponents automatically via an easy wizard interface. This was originally developed for [[Google Summer of Code]] 2008 by Aaron Mavrinac / [[User:Ezod|ezod]].
 
+==Current Implementation==
+
+Single player mode is currently implemented in [[libtpclient-py]], with a wizard front-end in [[tpclient-pywx]].
+
+The required XML descriptions are currently available for the following components:
+
+* [[tpserver-cpp]] (>=0.6.0)
+* [[daneel-ai]]
+
 ==Configuration==
-
-Configuration in tpclient-pywx is done via a wizard-style interface available from the initial "Connect To Server" screen. The wizard is a user-friendly front end to the functions in the SinglePlayer module of libtpclient-py.
-
-{| style="font-size: 85%; text-align: center;"
-| [[Image:Sp02.png|100px|Page 1]]
-| [[Image:Sp03.png|100px|Page 2]]
-| [[Image:Sp04.png|100px|Page 3]]
-| [[Image:Sp05.png|100px|Page 4]]
-| [[Image:Sp06.png|100px|Page 5]]
-| [[Image:Sp07.png|100px|Page 6]]
-|}
 
 ===Flowchart===
 
