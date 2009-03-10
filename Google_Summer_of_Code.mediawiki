@@ -4,8 +4,8 @@ Thousand Parsec was a mentoring organisations for the Google Summer of code in b
 
 The older idea pages are a good reference to see how the project has evolved.
 
- * The [http://www.thousandparsec.net/tp/google-summer-of-code-2007.php ideas page from 2007] is still available and a good source of information.
- * The [http://www.thousandparsec.net/w/index.php?title=Ideas_for_Programmers&oldid=2302 ideas page from 2008] is just an older version of the current ideas page.
+* The [http://www.thousandparsec.net/tp/google-summer-of-code-2007.php ideas page from 2007] is still available and a good source of information.
+* The [http://www.thousandparsec.net/w/index.php?title=Ideas_for_Programmers&oldid=2302 ideas page from 2008] is just an older version of the current ideas page.
 
 = Introduction =
 
