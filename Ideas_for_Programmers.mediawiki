@@ -83,38 +83,10 @@ Strong Web development skill.
 
 == 3D Client ==
 
-A cool 3D client for Thousand Parsec is needed. A [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pyogre.git;a=summary pyOgre client] was started but is in need of quite a bit of love. You could choose to use that as a base or start a new client from scratch.
-
-We highly recommend to develop this client in either C++ or Python. Having a prebuilt and tested protocol library is important as the amount of work required for just a 3D client is substantial, hence these two are the '''only languages''' we will accept for Google Summer of Code.
-
-
-It is expected that the client has the following functionality
-* Support for displaying the Starmap
-* Support for displaying all information about objects
-* Support for issuing orders
-* Support for creating designs
-* '''Having a good UI is more important then flashy graphics which can be improved later.'''
-
-
-You could look at the following games for some ideas,
-* [http://www.hegemonia.info/ Hegemonia - Legions of Iron]
-* [http://en.wikipedia.org/wiki/Master_of_Orion_3 Master of Orion 3]
-* [http://en.wikipedia.org/wiki/Sins_of_a_Solar_Empire Sins of a Solar Empire]
-* [http://en.wikipedia.org/wiki/Galactic_Civilizations_II:_Dread_Lords Galactic Civilization II]
-
-=== More Information ===
-* For Python look at [http://python-ogre.org/ pyOgre], [http://panda3d.org/ Panda3D], [http://www.pyglet.org/ pyglet], [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py].
-* For C++ look at [http://www.ogre3d.org/ Ogre 3D], [http://www.cegui.org.uk/wiki/index.php/Main_Page CEGUI], [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-cpp.git;a=summary libtpproto-cpp]
-
-=== Required Skills ===
-* Some 3D development skills.
-* Strong coding skills in language of choice.
-
-=== Additional Updates ===
 A 3D client was developed in GSOC 2008, right now it is in need of the following features:
 
 * Support for creating designs
-** Allow users to create and edit ship designs
+** Allow users to create and edit ship designs (for reference check out [http://en.wikipedia.org/wiki/Spore_(game)#Editors Spore])
 * [[TP04]] support
 ** Support for the new features contained in the tp04 protocol
 * BattleXML support
@@ -122,7 +94,7 @@ A 3D client was developed in GSOC 2008, right now it is in need of the following
 * [[Media.gz]] support
 ** Client should download models and other media off the media server
 * Single player mode
-** Players can play a game locally against AI competition
+** Players can play a game locally against AI competition (similar [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=shortlog;h=refs/heads/singleplayer work] has been done on the wxWidgets client already)
 
 In order to work on the client, you will need an understanding of Python. Familiarity with [http://www.ogre3d.org Ogre], [http://www.cegui.org.uk/ CEGUI] and [http://www.pythonogre.com Python-Ogre] would be preferable as well.
 
