@@ -423,7 +423,29 @@ Feel free to add more ideas, a good place to look is wxAUI Forums.
 === Required Skills ===
 * Good Python skills is a must
 
-= Parsek client =
+= Single Player Ideas =
+
+Thousand Parsec now has support for [[single player]] mode, and there are a number of things that could be done to extend and improve it.
+
+== Scenarios ==
+
+Make it possible to save and load ''scenarios'' -- sets of ruleset, server, and AI client details and parameters. These should be stored in a self-contained file format that is easy to share between players (e.g. online). A further extension would be to support ''campaigns'', which chain several scenarios together.
+
+Although single player mode is currently only implemented in [[libtpclient-py]] and used by [[tpclient-pywx]], it is important to design this feature in such a way that other clients and client libraries can use it in the future.
+
+Another important factor is making sure that the player has the necessary server, ruleset, and AI client(s) installed to play the scenario, and providing the easiest way possible to install them (download links, instructions, etc.) if they don't.
+
+=== More Information ===
+
+* [[Single Player]] wiki page
+
+=== Required Skills ===
+
+* [http://www.python.org/ Python]
+* [http://www.w3.org/XML/ XML]
+* Possibly some [http://www.php.net PHP] for automating downloads
+
+= Parsek Client Ideas =
 
 [[Parsek]] is a game client that is written in C++ and uses Qt 4 and KDE 4 libraries to implement a cross-platform graphical user interface.
 
@@ -440,11 +462,13 @@ If the above basic tasks are easy enough for you to do in less then three months
 * automatic discovery of game servers
 * accounts manager
 
-=== Required Skills ===
-* C++, Qt 4, KDE 4
-
 === More information ===
 * [http://www.thousandparsec.net/tp/dev/documents/libtpproto-cpp/html/ C++ Protocol Library Documentation]
 * [http://doc.trolltech.com/4.4beta/index.html Qt 4.4 Documentation]
 * [http://techbase.kde.org/ KDE TechBase]
 * [http://api.kde.org/ KDE API Documentation]
+
+=== Required Skills ===
+* C++
+* Qt 4
+* KDE 4
