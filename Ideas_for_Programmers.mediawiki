@@ -429,7 +429,9 @@ Thousand Parsec now has support for [[single player]] mode, and there are a numb
 
 == Scenarios ==
 
-Make it possible to save and load ''scenarios'' -- sets of ruleset, server, and AI client details and parameters. These should be stored in a self-contained file format that is easy to share between players (e.g. online). A further extension would be to support ''campaigns'', which chain several scenarios together.
+Make it possible to save and load ''scenarios'' -- sets of ruleset, server, and AI client details and parameters. These should be stored in a self-contained file format that is easy to share between players (e.g. online). A logical extension would be to support ''campaigns'', which chain several scenarios together.
+
+Another use of scenarios would be in saving and loading single-player games. Provided the server and AI clients provide some way to store their state, a scenario could be used to not only load them and set parameters, but also to have them load specific saved states.
 
 Although single player mode is currently only implemented in [[libtpclient-py]] and used by [[tpclient-pywx]], it is important to design this feature in such a way that other clients and client libraries can use it in the future.
 
