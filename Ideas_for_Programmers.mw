@@ -138,8 +138,8 @@ You will need to get a good knowledge of the ruleset you are writing the AI for.
 
 You will need some C++ skills before you start any of these projects (but not as much as if you where implementing a ruleset for this server). [[User:Lee Begg|Lee]] (llnz) is happy to mentor anyone working in these areas.
 
-== New Rulesets ==
-New rulesets can be written for tpserver-cpp, see [[#Rulesets|Rulesets]] section above.
+== New/Improved Rulesets ==
+New rulesets can be written for tpserver-cpp and existing ones can be improved, see [[#Rulesets|Rulesets]] section above.
 
 == Persistence modules ==
 
@@ -178,18 +178,6 @@ These tasks would need to be done:
 
 Since user access to the objects in the database is through the Manager classes, the Manager classes need to be converted first.
 
-== Console guided setup ==
-Make is possible that when started with no config file, ask the users a number of questions to set up the server and the game. tpserver-cpp uses [[libtprl]] for the console, and it supports changing command sets.
-
-Questions to ask include:
-* Server name, admin email address, game info, etc
-* ruleset to use and parameters
-* persistence to use and parameters
-* turn timer parameters
-* whether to turn on metaserver updates
-* logging options (file, syslog, console; log level, colour, filename; etc)
-
-This task could include making changes to libtprl as well to make this work easier.
 
 == BattleXML support ==
 BattleXML is an xml format for describing battles that take place in Thousand Parsec, and the files can be viewed by the stand-alone battleviewer. The task is to design a suitable API for creating the xml files from combat being performed in the Rulesets, then using it in combat processing in the rulesets. Sample xml files and the dtd are available in the documents git repo. Also suggestions should be put forward how the xml files should be delivered to clients and how to associate them with particular battles.
@@ -232,7 +220,18 @@ Scheme is quite a hard language to write. tpcl; the language which is used for c
 
 For SoC 2007, DystopicFro wrote a Ruleset Development Environment called tpruledev. It is written in python, and works well for designs, components and properties. But since then, there have been changes to tpserver-cpp that require reflecting in tpruledev, and some new features in TP04 are close to being useful and so could now be done inside tpruledev (namely object descriptions). So there are few improvements that could be made, and more will be needed soon.
 
+== Remote Admin guided setup ==
+Make is possible that when tpserver-cpp started with no config file, ask the users a number of questions to set up the server and the game. tpserver-cpp uses [[tpadmin-cpp]] for the console, and it supports changing command sets.
 
+Questions to ask include:
+* Server name, admin email address, game info, etc
+* ruleset to use and parameters
+* persistence to use and parameters
+* turn timer parameters
+* whether to turn on metaserver updates
+* logging options (file, syslog, console; log level, colour, filename; etc)
+
+This task could include making changes to libtprl as well to make this work easier.
 
 == MetaServer ==
 
