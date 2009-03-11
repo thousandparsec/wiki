@@ -105,7 +105,7 @@ There are also the following mentors, but they are smart enough not to disclose 
 * Tyler Shaub ('''xdotx''')
 ** Responsible for: [[TP RFTS]] and Ruleset development for tpserver-cpp
 * Eugene Tan ('''jmtan''')
-** Responsible for: TP 3D client development (tpclient-pyogre)
+** Responsible for: TP [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pyogre.git;a=summary 3D client] development (tpclient-pyogre)
 
 = Deadlines and Dates =
 
