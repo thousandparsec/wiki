@@ -108,12 +108,12 @@ In addition, there are some other features which may not fit the scope of a Summ
 
 == AI Clients ==
 
-Thanks to a successful Google Summer of Code last year, Thousand Parsec now have 2 AI clients - [ daneel-ai] and [ gencon-rfts-ai]. 
+Thanks to a successful Google Summer of Code last year, Thousand Parsec now have 2 AI clients - [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=daneel-ai.git;a=summary daneel-ai] and [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=gencon-rfts-ai.git;a=summary gencon-rfts-ai]. 
 
 An AI client in Thousand Parsec games connects to the game as a normal client and has exactly the same information as a normal player would have. There are many improvements that could be made to these AI.
 
 The AI will '''NOT''' be able to do any of the following
-* Intergrate with the server, it must be a stand alone program.
+* Integrate with the server, it must be a stand alone program.
 * Cheat or have some other handicap, it must play by the same rules as everyone else.
 
 === More Information ===
@@ -121,7 +121,7 @@ The AI will '''NOT''' be able to do any of the following
 * [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=galaxie.git;a=summary Client with inbuilt AI], written in C.
 
 You will need to get a good knowledge of the ruleset you are writing the AI for.
-* [[TP_RFTS|RFTS Clone]] - Wiki page about our RFTS clone, getting yourself a copy of RFTS will also be highly advantagous.
+* [[TP_RFTS|RFTS Clone]] - Wiki page about our RFTS clone, getting yourself a copy of RFTS will also be highly advantageous.
 * [http://www.thousandparsec.net/tp/dev/documents/mtsec.php MTSec] - Page describing the MTSec dynamics.
 
 * A good resource is [http://mirror.linux.org.au/linux.conf.au/2007/video/tuesday/tuesday_1450_gaming.ogg Wesnoth for Kernel Hackers] talk at [http://linux.conf.au/ Linux.conf.au], Rusty Russell talks about his solution to some of the complex AI battle problems.
