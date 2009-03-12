@@ -13,7 +13,7 @@ You can find a possible project for Google Summer of Code in multiple locations.
 
 * The first point of call should be the [[Ideas for Programmers]],
 * The second place to checkout is the [https://sourceforge.net/tracker/?group_id=132078&atid=829724 SF.net TODO list],
-* You can also try the [http://www.thousandparsec.net/tp/google-summer-of-code-2007.php#Ideas ideas list from 2007],
+
 * We also '''strongly encourage''' you to also come up with an idea on your own.
 
 We encourage you to read up about the [http://www.thousandparsec.net/tp/gettingstarted.php Getting Started Page], [[#Questions|ask questions]], and then include the following in your proposal:
