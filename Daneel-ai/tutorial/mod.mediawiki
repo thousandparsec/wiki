@@ -1,0 +1,3 @@
+Now, as seen in the other link (or that should become seen), we load some mods there. One of the mods is called "minisec" and we'll dissect that here. The code can be found in daneel/mod-minisec.py. Notice that it is a simple Python file and it is also compiled and run as Python. Thus the first rule:'''Mod files are Python code.''' However, Daneel searches for some special constructs in this Python file.
+
+Before I continue this, I'll go play some minisec. :)
