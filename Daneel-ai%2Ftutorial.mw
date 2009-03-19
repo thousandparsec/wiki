@@ -1,0 +1,7 @@
+Welcome to the make-a-bot tutorial! As an example, we are going to create an AI for the minisec ruleset. There are two parts to this:
+* [[daneel-ai/tutorial/rules|Create the behavior of the bot]]
+* [[daneel-ai/tutorial/mod|Create a mod file to handle the ruleset]]
+
+Chronologically, the second part is the first one to get done, but it is actually the more advanced (but paradoxically also more straightforward) task. For learning purposes you are better off starting with the behavior before diving into mod files, as many things will return.
+
+The files developed here will become part of the main daneel-ai distribution. That means that there's no need to do any coding, but you shouldn't be lazy. Toy around with the code to see if you understand everything. Create a better AI. Create a load of AIs and make them battle each other. Go wild.
