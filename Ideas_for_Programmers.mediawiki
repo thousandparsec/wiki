@@ -94,7 +94,7 @@ A 3D client was developed in GSOC 2008, right now it is in need of the following
 * [[Media.gz]] support
 ** Client should download models and other media off the media server
 * Single player mode
-** Players can play a game locally against AI competition (similar [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=shortlog;h=refs/heads/singleplayer work] has been done on the wxWidgets client already, for more info see [[Single Player]])
+** Players can play a game locally against AI competition (similar [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=summary work] has been done on the wxWidgets client already, for more info see [[Single Player]])
 
 In order to work on the client, you will need an understanding of Python. Familiarity with [http://www.ogre3d.org Ogre], [http://www.cegui.org.uk/ CEGUI] and [http://www.pythonogre.com Python-Ogre] would be preferable as well.
 
