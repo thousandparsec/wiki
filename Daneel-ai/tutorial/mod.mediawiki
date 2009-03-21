@@ -2,7 +2,7 @@ Now, as seen in the other link (or that should become seen), we load some mods t
 
 = Constraints =
 == Definition ==
-The first part that is important in a mod is a definition of the various constraints a mod offers. '''Constraints can be added by assigning a list of strings to the variable ''constraints''.''' If you make a mod for a ruleset, you typically want to add the orders and some ruleset-specific pieces of information here. The RFTS mod, for example, has the constraints ''productionturn'' and ''fleetbuildingturn'' which signify that on the current turn one can produce or build fleets. Minisec being a very simple ruleset, there are no such oddities. We only add the orders. These can be found by a bit of digging in tpclient-pywx (select an object, and look at the orders panel), information on the ruleset, the source code of the ruleset, or even by starting an interactive python session and querying the server yourself. You'll probably need to familiarize yourself with this last option anyway, because it also allows you to find out the required parameters - more about that later.
+The first part that is important in a mod is a definition of the various constraints a mod offers. '''Constraints can be added by assigning a list of strings to the variable <code>constraints</code>.''' If you make a mod for a ruleset, you typically want to add the orders and some ruleset-specific pieces of information here. The RFTS mod, for example, has the constraints <code>productionturn</code> and <code>fleetbuildingturn</code> which signify that on the current turn one can produce or build fleets. Minisec being a very simple ruleset, there are no such oddities. We only add the orders. These can be found by a bit of digging in tpclient-pywx (select an object, and look at the orders panel), information on the ruleset, the source code of the ruleset, or even by starting an interactive python session and querying the server yourself. You'll probably need to familiarize yourself with this last option anyway, because it also allows you to find out the required parameters - more about that later.
 
 For minisec, I found the following orders via tpclient-pywx:
 * No Operation on planets and fleets
@@ -11,9 +11,9 @@ For minisec, I found the following orders via tpclient-pywx:
 * Colonize on fleets
 * Split Fleet on fleets
 * Merge Fleet on fleets
-Which I made into the constraints ''order_noop'' to ''order_mergefleet''.
+Which I made into the constraints <code>order_noop</code> to <code>order_mergefleet</code>.
 
 == Order arguments ==
-Now we have to determine the arguments. Each order will have a first ''int'' argument that signifies the object this order is assigned to. The next arguments depend on the order. Some experimentation and source diving/debugging might be required to get them right.
+Now we have to determine the arguments. Each order will have a first <code>int</code> argument that signifies the object this order is assigned to. The next arguments depend on the order. Some experimentation and source diving/debugging might be required to get them right.
 
 Before I continue this, I'll go play some minisec. :)
