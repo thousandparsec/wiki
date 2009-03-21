@@ -1,0 +1,8 @@
+Just some notes for myself until the definitive tutorial...
+
+* add file to /rules
+* singleplayer: modify daneel-ai-inplace.xml file
+otherwise:
+* start server: ./tpserver/tpserver-cpp -d -C quickstart-minisec.conf (perhaps modify .conf)
+* run ./daneel-ai -f minisec
+* Join as client, add more bots, ...
