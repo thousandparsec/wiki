@@ -1,4 +1,4 @@
-Thousand Parsec was a mentoring organisations for the Google Summer of code in both [http://code.google.com/soc/2007 2007] and in [http://code.google.com/soc/2008 2008]. This was a great chance for students to work on a cool open source game project during their summer, have fun and earn some money during the process. We are hoping that we will be selected again in 2009.
+Thousand Parsec was a mentoring organisations for the Google Summer of code in both [http://code.google.com/soc/2007 2007] and in [http://code.google.com/soc/2008 2008]. This was a great chance for students to work on a cool open source game project during their summer, have fun and earn some money during the process. We have been selected to participate again in 2009.
 
 ==== Historic Ideas Pages ====
 
@@ -34,7 +34,7 @@ The following links detail successful general ways to write a Summer of Code Pro
 * [http://venge.net/monotone/summerofcode.html Monotone Experience]
 * [http://www.internet2.edu/~shalunov/tmp/rwatson-soc.txt Internet2 Experience]
 
-Please read [http://code.google.com/soc/2008/faqs.html Google's Summer of Code Student FAQ] and advice from past participants as you create your proposal. '''Feel free to submit multiple proposals.'''
+Please read [http://socghop.appspot.com/document/show/program/google/gsoc2009/faqs Google's Summer of Code Student FAQ] and advice from past participants as you create your proposal. '''Feel free to submit multiple proposals.'''
 
 Mithro has prepared some [http://forums.thousandparsec.com/viewtopic.php?f=4&t=101 tips for writing an application]. '''PLEASE''' read this before submitting an application.
 
@@ -128,8 +128,8 @@ Please see the [http://socghop.appspot.com/document/show/program/google/gsoc2009
 
 = External Links =
 
-* [http://code.google.com/gsoc Google Summer of Code (SoC)]
-* [http://code.google.com/soc/studentfaq.html Google SoC FAQ]
+* [http://code.google.com/soc Google Summer of Code (SoC)]
+* [http://socghop.appspot.com/document/show/program/google/gsoc2009/faqs Google SoC FAQ]
 
 = Thanks =
 
