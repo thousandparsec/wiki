@@ -12,7 +12,7 @@ The older idea pages are a good reference to see how the project has evolved.
 You can find a possible project for Google Summer of Code in multiple locations.
 
 * The first point of call should be the [[Ideas for Programmers]],
-* The second place to checkout is the [https://sourceforge.net/tracker/?group_id=132078&atid=829724 SF.net TODO list],
+* The second place to checkout is the [http://code.google.com/p/thousandparsec/issues/list Google Code TODO list],
 
 * We also '''strongly encourage''' you to also come up with an idea on your own.
 
@@ -69,7 +69,7 @@ The following are conditions that result in automatic rejection:
 
 You can find our ideas list at [[Ideas for Programmers]] page. The list is not definitive and any student is more than '''welcome to come up with their own idea''' to work on. '''Initiative is a skill which will rate highly''' when selecting projects. Feel free to come up with your own projects.
 
-For additional ideas we encourage students to look at [http://sourceforge.net/tracker/?group_id=132078&atid=829724 Thousand Parsec TODO list].
+For additional ideas we encourage students to look at the [http://code.google.com/p/thousandparsec/issues/list Thousand Parsec TODO list].
 
 = Mentors =
 
