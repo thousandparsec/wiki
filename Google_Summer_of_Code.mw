@@ -93,11 +93,13 @@ For additional ideas we encourage students to look at [http://sourceforge.net/tr
 ** E-mail: [mailto:jezuch%20AT%20interia%20DOT.%20pl jezuch AT interia DOT. pl]
 ** Jabber: jezuch@jabber.uznam.net.pl
 ** Responsible for: Java code (libtpproto-java)
+* Matthew Draper ('''matthewd''')
+** E-mail: [mailto:matthew@trebex.net matthew@trebex.net]
+** Jabber: matthew@trebex.net
+** Responsible for: All Ruby code (such as [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git libtpproto-rb]), Improvements to [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=documents.git;a=tree;f=protocol protocol.xml]
 
 There are also the following mentors, but they are smart enough not to disclose their details to the public.
 
-* Matthew Draper ('''matthewd''')
-** Responsible for: All Ruby code (such as [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git libtpproto-rb]), Improvements to [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=documents.git;a=tree;f=protocol protocol.xml]
 * Jotham Read ('''jothamd''')
 ** Responsible for: [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=battleviewer.git;a=summary Battleviewer], Some Artwork
 * Tam Ho Wai Howell ('''pigeond''')
