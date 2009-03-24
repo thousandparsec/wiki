@@ -97,7 +97,10 @@ For additional ideas we encourage students to look at the [http://code.google.co
 ** E-mail: [mailto:matthew@trebex.net matthew@trebex.net]
 ** Jabber: matthew@trebex.net
 ** Responsible for: All Ruby code (such as [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git libtpproto-rb]), Improvements to [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=documents.git;a=tree;f=protocol protocol.xml]
-
+* Vincent Verhoeven ('''verhoevenv''')
+** E-mail: [mailto:verhoevenv@gmail.com verhoevenv@gmail.com]
+** Jabber: same thing
+** Responsible for: daneel-ai
 There are also the following mentors, but they are smart enough not to disclose their details to the public.
 
 * Jotham Read ('''jothamd''')
