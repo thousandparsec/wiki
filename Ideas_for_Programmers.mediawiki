@@ -474,3 +474,9 @@ If the above basic tasks are easy enough for you to do in less then three months
 * C++
 * Qt 4
 * KDE 4
+
+== Web page related work ==
+
+Convert the existing wiki+website into something like [http://ikiwiki.info/ ikiwiki]
+
+Cavets - this requires writing a bunch of scripts to do data conversion and reworking the website HTML/JavaScript and converting the current PHP
