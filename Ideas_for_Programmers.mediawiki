@@ -475,7 +475,7 @@ If the above basic tasks are easy enough for you to do in less then three months
 * Qt 4
 * KDE 4
 
-== Web page related work ==
+= Web page related work =
 
 Convert the existing wiki+website into something like [http://ikiwiki.info/ ikiwiki]
 
