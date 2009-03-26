@@ -9,5 +9,6 @@
 
 == GSoC Proposals ==
 
-* [[User:Epyon/EliteSec]]
-* [[User:Epyon/3dClient]]
+* [[User:Epyon/2008/EliteSec]]
+* [[User:Epyon/2008/3dClient]]
+* [[User:Epyon/2009/EliteSec]]
