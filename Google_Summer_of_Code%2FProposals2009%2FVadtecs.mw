@@ -1,0 +1,39 @@
+== ABSTRACT ==
+
+It is my intention to setup unit testing for the C++ client-server protocol module to validate it against the published Thousand Parsec protocol(s). This shall be achieved by using available testing tools such as CppUnit and custom code to test for adherence to the protocol. The testing will provide benchmarking of protocol library code as much as possible.
+
+== PROJECT PROPOSAL ==
+
+To implement unit testing for the Thousand Parsec C++ client-server protocol module to insure proper compliance with all requirements of the established protocol. The unit testing will test all code pathways to insure that all possible outcomes are within the protocol requirements and specifications. Where possible, the unit testing will provide benchmarking of the tested code pathways to help identify potential bottlenecks in the code. In addition, the unit testing will implement testing of network as effectively as possible and provide benchmarking for the code wherever possible.
+
+=== Expected Project Milestones ===
+
+::#General
+::##Maintain documentation of completed unit testing as each unit is completed.
+::##Insure that any unit testing code will compile and run as expected at least weekly, preferably nightly.
+::#May 23: Begin extending the existing unit testing for the current C++ protocol module.
+::#July 6: The unit testing will have implemented at least 75% of all non-network related testing and any possible benchmarking of the tested code.
+::#August 10: The unit testing will have implemented 100% of all non-network related testing and any possible benchmarking of the tested code and as much network related testing as possible with any possible benchmarking of the tested code.
+::#August 17: All implemented unit testing will be finalized and documented. Any unit testing which is incomplete will be excluded from normal unit testing to prevent false reporting or errors.
+
+=== Importance of Unit Testing ===
+
+The unit testing performed will insure that all clients and servers implementing it will function as expected. Without unit testing, conformance to the established protocol for Thousand Parsec cannot be guaranteed or enforced. It is imperative that the protocol module for the clients and servers function without error so that the game is both playable and enjoyable. Unit testing is also paramount to releasing a quality software package to the community as a whole.
+
+== PERSONAL HISTORY ==
+
+I am a single father of two wonderful children. My son is now eight and my daughter is now six. They are what drive me in life. Everything I do is to support them and give them the life they deserve. To say they are my life is an understatement. While I am a father first, I do enjoy many things. Computers would be my second love in life (after my kids of course). I like to bend computers to my will as much as possible. When I am not slave driving a computer, I am watching anime or playing a variety of video and computer games. RPGs rule and D&D is better than RPGs.
+
+As for programming, I am one of those people who know a little about a number of languages. C is my strongest language followed by PHP for web development. I have done smaller projects in Python and C++ though nothing on the scale of C or PHP. I have written small Tcl scripts for one of my eggdrops for tracking abusive nicks on IRC and storing them in a database.
+
+I love to learn about computers in general, so the more I know the happier it makes me. I can be quite stubborn and have a tendency to not give up on problems that I know can be solved. I am willing to try most things at least once and open to different points of view.
+
+== CLOSING ==
+
+I am eager to work on this project and help improve Thousand Parsec as much as possible. I know along the way I will learn a great deal and be contributing back to an open source project that I want to see become better.
+
+I appreciate your considering my application for working with Thousand Parsec during Google Summer of Code 2009 and hope to be working with you soon on this project.
+
+Sincerely,
+
+--[[User:Vadtec|Vadtec]] 01:51, 26 March 2009 (EDT)
