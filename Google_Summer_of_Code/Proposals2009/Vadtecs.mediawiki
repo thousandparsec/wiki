@@ -59,7 +59,7 @@ I am currently enrolled in an undergraduate school studying for my A.A.S. C.I.S.
 
 I am a user of primarily GNU/Linux since 2000 during which time I have come to love the Red Hat flavors of GNU/Linux. I have been an open source advocate almost the entire time, even going so far as to give up niceties of Windows in favor of open source software when it was appropriate. Any time I am presented with a problem, I look to open source first and (begrudgingly) turn to proprietary solutions only when I must.
 
-Outside of school I have limited professional experience. I am a self taught C coder and have been using C as my language of choice since around 2003. I have dabbled with many languages, some of which include Tcl, Python, Intel assembler, Perl and BASIC. I use PHP as my language of choice for web development, though I used Perl before PHP. I enjoy learning new languages, and even though I may dislike some languages, I will try to find the good points for any language I try.
+Outside of school I have limited professional experience. I am a self taught C coder and have been using C as my language of choice since around 2003. I have dabbled with many languages, some of which include Tcl, Python, Perl and BASIC. I use PHP as my language of choice for web development, though I used Perl before PHP. I enjoy learning new languages, and even though I may dislike some languages, I will try to find the good points for any language I try.
 
 == PERSONAL HISTORY ==
 
