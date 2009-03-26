@@ -1,0 +1,145 @@
+== Abstract ==
+
+There were space games and there was Elite.
+
+The goal of this assignment would be to create a ruleset for Thousand Parsec that would be in a similar spirit as the Elite series with inspirations from Traveller, Frontier, and other "me vs. the Galaxy" sources. Contrary to the typical TP ruleset, the player would not be in charge of vast fleets and owning many planets, but rather be based around a single ship, with the possibility of recruiting a small amount of helpers. To further make the proposal and game interesting, let's go the Elite way and generate content randomly, including, but not limited to planet positions, names and descriptions, trade routes, economical/political situations of planets, etc. The universe should feel alive without the players actions.
+
+Each player starts just with his ship and a fistful of credits. From this point on he can pursue any career he'd like. Buying new ships, hiring escorts, and creating a trade empire by first buying offices at, and then whole space stations could allow him pursuing the trade path. Recruiting various scum, and traveling across known lanes would make him pursue the adventurous path of the pirate. But he should be wary that piracy is illegal, and sooner or later, a bounty would be placed on his head, either by fellow players, the police or the military. Another type of players could pursue the bounty hunter path, and try to catch those players with bounties.
+
+Possibilities are endless, and the game can be brilliant, as long as we keep in mind the spirit of Elite/Traveller, and the fact that it should be a truly multiplayer game, allowing as much interaction between players as is possible in a turn-based environment.
+
+== Deliverables ==
+
+<!-- A ruleset module for TP implementing a interesting and balanced Space Exploration game. Also required extensions to the server, and proposals for enhancements to the protocol/client (if needed in the design). Along the module I will deliver all it's datafiles, each one with solid and complete documentation for anyone wanting to do a modifications.
+
+As an additional delivery, I plan to keep all the content generators (planet/ship names, planetary descriptions, system descriptions, events) in a separate universal module to allow re-usage of it by any TP-based game.
+
+If a graphical 3D client (or 2D even) will be developed this GSoC, and it's creator will be interested in making it compatible with EliteSec I'm also willing to supply the media for EliteSec (ship/station/planet) models.
+-->
+
+== Implementation Details ==
+
+<!--
+The ruleset will be developed in C++.
+
+The following features will be included in the project, separated as much as possible for reusage:
+
+* dynamical economy model (that wont allow abusing good trade routes)
+* combat (it would have to be interesting, but still adhere to the turn count and hands-off principle -- probably allowing escapes and detailed ship damage)
+* trade "empire" management (allowing the hiring of proxies to do stuff, allowing buying of immovable property, but on the other hand somewhat restricted, so the game doesn't turn into boring micromanagement)
+* ships/ship upgrades (customization of ships would play a major role in the game, just as research plays in 4X games)
+* special events (like disease outbreaks -- quarantine and rise of medicine price in a system, war -- hiring and dangerous to travel through, revolutions -- illegal arms smuggling for big profit, etc)
+* information propagation (I really like nash's idea that information travels at lightspeed, so it's not instant. Information/rumors would spread from point of origin, and might come to the desired place too late)
+* reputation -- one of the most important information types. Reputation travels even more slowly than information, so you may still be able to pass through a system where theoretically you should be considered an outlaw already...
+
+The player will be able to choose a gameplay path, but will not be bound to it (he will be always able to change it at whim just by making other choices). This way the player will always find something interesting to do:
+
+* trading -- the primary path, especially for the pacifist. Except of always searching new trade routes (old ones get less and less benefactory as economy adjusts itself to the action of the player), he has to fend off pirates, buy better ships and establish a trading empire. Of course you can always try to transport less then legal cargo...
+* piracy -- the flip coin of the traders path -- you can pirate on passing spaceships by maintaining a good ship and some minions. Passing spaceships may include players too...
+* bounty hunting -- where there are pirates there are also prices on their heads. The bounty hunter collects those. His enemies are both computer ships as well as player controlled entities. The shady side of the bounty hunter is of course the assassin, but he should watch out for...
+* military -- you can also do missions for the one of the empires. Better not try to do them for more then one, or you may become a traitor.
+
+This is just the tip of an iceberg, other occupations that may be thought about is scouting and mining, for example.
+
+-->
+
+== Project Schedule ==
+<!--
+I plan on working on the project fulltime during summer -- I have no summer job, nor school responsibilities. I plan to maintain a blog with progress update.
+
+In the case of a ruleset implementation the first part of the development will be creating a complete and thought through design document of the ruleset that takes into account balance, fun and that is in the scope of the 2 months time (with a possible section on "further" improvements). The game realized in the 2 months timeframe must be complete, playable and fun. 
+
+The design document will be finished before the official coding time starts, and will be presented to the community in the form of wiki pages that anyone can comment on. Design will be then finalized and frozen before the deadline of May 28. Also up to this date I assume to learn the details of the TP system in it's current shape, and submit proposals for enhancements if needed.
+
+The design will define a midpoint project -- a PLAYABLE game with basic capabilities. At this point I will probably be trying to find playtesters so we can see how the game handles in real life.
+
+The coding time will be divided into two parts -- first one will implement the midpoint project. At this point I start to run games and gather as much feedback/bug reports as possible to be included/fixed in the second part of the project. The second part will have new versions of the ruleset uploaded for testing at least weekly, and I'll be constantly monitoring feedback during this time (if the amount of people interested will be large I might need someone to help me organize all the stuff).
+-->
+== Brief Bio/Resume ==
+<!--
+I'm a Computer Science PhD student (1st year) at the Wroclaw University, Poland. My interests lie in Game Programming and Design, with a special hunch for Real-time Procedural Content. 
+
+I've successfully taken part in last year's GSoC creating a Procedural City Generator for BZFlag ( project homepage, out of date, http://bzflag.chaosforge.org/ ).
+
+I know several computer languages, tough I favor FreePascal (Delphi) and C++ that I currently write my own projects in. These include the beginnings of a 3D game engine ( http://sourceforge.net/projects/libvalkyrie ) in C++, and an unannounced space combat/trading game (codenamed StarDreamer), which heavily is inspired by Elite and Frontier. 
+
+I am a big fan of roguelike games, due to their randomness, and the focus on gameplay over presentation. I have managed to write several roguelikes up to date, the most famous one of them being DoomRL ( http://doom.chaosforge.org ) that did even get mentions in contemporary gaming magazines. I also know how to do game designs and organize my time and work, having taken part in three 7DRL Competitions (aimed at writing a playable and fun roguelike game in 7 days), and managed to finish them successfully each time.
+
+Rules design is something that I needed to learn well, because good, balanced and interesting rules were the only way to get attention to a roguelike game. I always given high value to user submission evaluation in my projects, what can be seen on my games' forum ( http://forum.chaosforge.org/ ).
+
+* Homepage : http://chaosforge.org/ 
+* IRC Nick : Epyon
+-->
+== Detailed timeline ==
+
+A detailed timeline is hard to write without a good plan of implementation and an extended knowledge of the TP framework, hence this is just a guideline that is subject to change before May 23.
+
+=== '''Preplanning''' (April 20 - May 23) ===
+
+=== '''Milestone 1''' - June 14 -  ''(Mostly Harmless)'' ===
+'''Goal:''' operability achieved
+
+'''Length:''' 3 weeks
+
+'''Deliverable:''' operational framework
+
+* Week 1 : basic framework -- application framework, basic class structure, and the ability to handle connections, possibly Lua support
+* Week 2 : basic world generation (names, descriptions, systems, trade info), sending them to the client (and if necessary, changes to one of the clients)
+* Week 3 : basic orders (trade, movement, ship upgrades), trade system, combat code
+
+=== '''Milestone 2''' - July 5 - ''(Average)'' ===
+'''Goal:''' basic playability
+
+'''Length:''' 3 weeks
+
+'''Deliverable:''' private-access alpha version
+
+* Week 4 : events (combat events, planetary events, information events), event generation, message generation
+* Week 5 :
+* Week 6 :
+-
+=== '''Milestone 3''' - July 26 - ''(Deadly)'' ===
+'''Goal:''' feature implementations
+
+'''Length:''' 3 weeks
+
+'''Deliverable:''' public beta version
+
+* Week 7 : 
+* Week 8 :
+* Week 9 :
+
+=== '''Milestone 4''' - August 10 - ''(Elite)'' ===
+'''Goal:''' bugfixing, stability and RFE's
+
+'''Length:''' 2 weeks
+
+'''Deliverable:''' stable version
+
+* Week 10 : bugfixing, feature requests, additional media, etc.
+* Week 11 : buffer week for eventual unexpected delays
+
+=== Aftermath (August 10+) ===
+
+This is one of the games that if executed well always has room for improvement. If it will work, and start gaining players, I'm sure to work on it more (including maybe even a dedicated graphical client).
+
+<!--
+
+* May 25 - May 31 : application framework, basic class structure, and the ability to handle connections -- basic framework, possibly Lua support  
+* June 1 - June 7 : basic world generation (names, descriptions, systems, trade info), sending them to the client (and if necessary, changes to one of the clients)
+* June 8 - June 14 : basic orders (trade, movement, ship upgrades), trade system, combat code
+* '''MILESTONE 1''' (June 14) - game needs to be operable by multiple clients, with full information for all
+* June 15 - June 21 : events (combat events, planetary events, information events), event generation, message generation
+* June 22 - June 28 : non-player organizations (generation, AI, ownage of systems, system conquering, reputation system, and display to the player)
+* June 29 - July 5 : missions (random generation, descriptions, rewards and completion and progress checking)
+* July 6 - July 12 : preparations for a open testing server (polishing and documentation, server setup, testing, client modifications, eventual additional media for the graphical clients)
+* '''MILESTONE 2''' (July 12) - server will be playable and open to people, a discussion forum, or other medium will be set up to playtest/discuss the game. I will also provide some initial beta-testers ;)
+=== July 13 -- August 18 ===
+
+* July 13 - July 19 : additional rules (information propagation, NPC helpers (see below) implementation))
+* July 20 - July 26 : roles revisited (balancing and additional content rules for the trade, piracy, bounty hunting and military career paths)
+* July 27 - August 2 : lategame improvements (buying fixed world elements, like hangars, bases etc, rules for them)
+* August 3 - August 18 : polishing up, finalization, documentation before the final deadline. Additional buffer time for an unexpected delay.
+* '''MILESTONE 3''' (August 18) - the basic game features are complete, the game is initially balanced, no longer in testing, but a beta.
+--->
+=== August 11+ ===
