@@ -53,17 +53,27 @@ In the event the entire Thousand Parsec protocol module has been unit tested and
 
 Unit testing will insure that all clients and servers implementing the Thousand Parsec protocol will function as expected. Without unit testing, conformance to the established Thousand Parsec protocol cannot be guaranteed or enforced. It is imperative that the Thousand Parsec protocol module for the clients and servers function without error so that the game is both playable and enjoyable. Unit testing is also paramount to releasing a quality software package to the community as a whole.
 
+== PERSONAL EXPERIENCE ==
+
+I am currently enrolled in an undergraduate school studying for my A.A.S. C.I.S. I am focused on the programming aspects of the source with interest in main frame development. I plan to transfer to another local college after obtaining my A.A.S. and continue my degree plan by refocusing into a M.A. C.S. with as much emphasis as possible in main frame development.
+
+I am a user of primarily GNU/Linux since 2000 during which time I have come to love the Red Hat flavors of GNU/Linux. I have been an open source advocate almost the entire time, even going so far as to give up niceties of Windows in favor of open source software when it was appropriate. Any time I am presented with a problem, I look to open source first and (begrudgingly) turn to proprietary solutions only when I must.
+
+Outside of school I have limited professional experience. I am a self taught C coder and have been using C as my language of choice since around 2003. I have dabbled with many languages, some of which include Tcl, Python, Intel assembler, Perl and BASIC. I use PHP as my language of choice for web development, though I used Perl before PHP. I enjoy learning new languages, and even though I may dislike some languages, I will try to find the good points for any language I try.
+
 == PERSONAL HISTORY ==
 
-I am a single father of two wonderful children. My son is now eight and my daughter is now six. They are what drive me in life. Everything I do is to support them and give them the life they deserve. To say they are my life is an understatement. While I am a father first, I do enjoy many things. Computers would be my second love in life (after my kids of course). I like to bend computers to my will as much as possible. When I am not slave driving a computer, I am watching anime or playing a variety of video and computer games. RPGs rule and D&D is better than RPGs.
+I am a single father of two wonderful children. My son is now eight and my daughter is now six. They are what drive me in life. Everything I do is to support them and give them the life they deserve. To say they are my life is an understatement.
 
-As for programming, I am one of those people who know a little about a number of languages. C is my strongest language followed by PHP for web development. I have done smaller projects in Python and C++ though nothing on the scale of C or PHP. I have written small Tcl scripts for one of my eggdrops for tracking abusive nicks on IRC and storing them in a database.
+While I am a father first, I do enjoy many things. Computers would be my second love in life (after my kids of course). I like to bend computers to my will as much as possible. When I am not slave driving a computer, I am watching anime or playing a variety of video and computer games. I am an avid RPGer, both on game consoles and in the older style of play from D&D. I play D&D any chance I get and am not afraid to play a whacky character. (My friends will say my characters represent my true self, but I disagree.)
 
 I love to learn about computers in general, so the more I know the happier it makes me. I can be quite stubborn and have a tendency to not give up on problems that I know can be solved. I am willing to try most things at least once and open to different points of view.
 
+When I'm not having fun with my kids or playing computer gaming or bending computers to my will, I enjoy going out with my friends and making trips to see my best friend. I try not to sweat the small stuff and take life one day at a time. If life should rear its ugly head and get in my way, I try my best to push it aside and live my life as I see fit.
+
 == CLOSING ==
 
-I am eager to work on this project and help improve Thousand Parsec as much as possible. I know along the way I will learn a great deal and be contributing back to an open source project that I want to see become better.
+I am eager to work on this project and help improve Thousand Parsec as much as possible. The 4x genre of gaming is one of my favorites. Anything I can do to bring a new spin on the genre is a good thing to me. I know along the way I will learn a great deal and be contributing back to an open source project that I want to see become better. I also know that along the way I will get to know a great group of people who are passionate about the work they do in open source.
 
 I appreciate your considering my application for working with Thousand Parsec during Google Summer of Code 2009 and hope to be working with you soon on this project.
 
