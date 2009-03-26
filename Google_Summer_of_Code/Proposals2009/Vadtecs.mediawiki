@@ -4,17 +4,48 @@ It is my intention to setup unit testing for the C++ client-server protocol modu
 
 == PROJECT PROPOSAL ==
 
-To implement unit testing for the Thousand Parsec C++ client-server protocol module to insure proper compliance with all requirements of the established protocol. The unit testing will test all code pathways to insure that all possible outcomes are within the protocol requirements and specifications. Where possible, the unit testing will provide benchmarking of the tested code pathways to help identify potential bottlenecks in the code. In addition, the unit testing will implement testing of network as effectively as possible and provide benchmarking for the code wherever possible.
+To implement unit testing for the Thousand Parsec C++ client-server protocol module to insure proper compliance with all requirements of the established Thousand Parsec protocol.
+
+'''Testing for correctness'''
+:*The unit testing will test all code pathways to insure that all possible outcomes are within the protocol requirements and specifications.
+
+'''Benchmarking'''
+:*Where possible, the unit testing will provide benchmarking of the tested code pathways to help identify potential bottlenecks in the code
+:*In addition, the unit testing will implement testing of network code and provide benchmarking wherever possible.
 
 === Expected Project Milestones ===
 
 ::#General
-::##Maintain documentation of completed unit testing as each unit is completed.
-::##Insure that any unit testing code will compile and run as expected at least weekly, preferably nightly.
-::#May 23: Begin extending the existing unit testing for the current C++ protocol module.
-::#July 6: The unit testing will have implemented at least 75% of all non-network related testing and any possible benchmarking of the tested code.
-::#August 10: The unit testing will have implemented 100% of all non-network related testing and any possible benchmarking of the tested code and as much network related testing as possible with any possible benchmarking of the tested code.
-::#August 17: All implemented unit testing will be finalized and documented. Any unit testing which is incomplete will be excluded from normal unit testing to prevent false reporting or errors.
+::#*Maintain documentation of unit testing
+::#**Using the wiki to document each unit test as it is completed, or in a situation where unit testing isn't feasible or possible documenting as to why
+::#*Subversion/Git repository tracking
+::#**Use Subversion or Git to track all code changes
+::#**Insure that any given revision will compile and run as expected
+::#*Provide feedback to the core development team and mentors regarding any possible improvements or changes that could be made to the protocol code
+::#'''April 20 - May 22'''
+::#*Research unit testing methodologies and techniques
+::#*Create simple examples of unit testing
+::#*Become familiar with the Thousand Parsec protocol and gain a fundamental understanding of its workings
+::#'''May 23 - July 5'''
+::#*Begin extending the existing unit testing for the current C++ protocol module.
+::#**Benchmark any possible code pathways
+::#*Document each unit test as it is completed
+::#'''July 6'''
+::#*The unit testing will have implemented at least 75% of all non-network related unit testing and any possible benchmarking of the tested code pathways
+::#'''July 6 - August 9'''
+::#*Continue implementing non-network related unit testing and any possible benchmarking of the tested code pathways
+::#*Continue documenting each unit test as it is completed
+::#*Once the non-network related unit testing is completed, begin implementing network related unit testing and any possible benchmarking of the tested code pathways
+::#'''August 10'''
+::#*The testing will have implemented 100% of all non-network related unit testing and any possible benchmarking of the tested code pathways
+::#*The testing will have implemented as much network related unit testing as possible with any possible benchmarking of the tested code pathways
+::#'''August 10 - August 16'''
+::#*All implemented unit testing will be finalized and documented
+::#*Any unit testing which is incomplete will be excluded from normal unit testing to prevent false reporting or errors
+::#*Code clean up
+::#'''August 17'''
+::#*Final check in of all unit testing code and documentation
+
 
 === Importance of Unit Testing ===
 
