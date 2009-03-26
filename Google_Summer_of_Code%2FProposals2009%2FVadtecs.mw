@@ -49,7 +49,7 @@ To implement unit testing for the Thousand Parsec C++ client-server protocol mod
 
 === Importance of Unit Testing ===
 
-The unit testing performed will insure that all clients and servers implementing it will function as expected. Without unit testing, conformance to the established protocol for Thousand Parsec cannot be guaranteed or enforced. It is imperative that the protocol module for the clients and servers function without error so that the game is both playable and enjoyable. Unit testing is also paramount to releasing a quality software package to the community as a whole.
+Unit testing will insure that all clients and servers implementing the Thousand Parsec protocol will function as expected. Without unit testing, conformance to the established Thousand Parsec protocol cannot be guaranteed or enforced. It is imperative that the Thousand Parsec protocol module for the clients and servers function without error so that the game is both playable and enjoyable. Unit testing is also paramount to releasing a quality software package to the community as a whole.
 
 == PERSONAL HISTORY ==
 
