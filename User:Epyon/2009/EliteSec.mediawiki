@@ -70,6 +70,21 @@ Available actions depend on what turn type the player is.
 
 === Combat ===
 
+Combat can occur only at the end of a players "docking" turn. Combat can be initiated by another player that is also docking, or by the server itself ( pirates, police if criminal, military, or other ). Combat has a random factor, generally however the ship with the stronger weapons does more damage, the ship with the better armor receives less damage ( strength may be affected by pilot skills if implemented ). Internally four factors determine the outcome of a battle:
+
+* '''Hull status''' : a precentage value, representing the shape the ship is in
+* '''Armor''' : the rate in which the ship looses hull status
+* '''Shields''' : the amount of damage that the ship absorbes in a turn without loosing hull status
+* '''Weaponary''' : the rate in which the ship deals damage
+
+After combat the result is judged. The ship that lost more hull status is the looser, as long as the difference in the loss is relatively significant, hence a draw is possible. In case of draw, nothing happens, except hull loss. In case of a conclusion:
+
+* if the looser is reduced to below 50% he risks having upgrades on the ship damaged
+* if the looser is reduced to below 25% he risks having upgrades on the ship destroyed
+* in normal mode game if the looser is reduced to 0% he makes an immidate planet dock, loosing all his cargo to the winner
+* in case of a permakill mode game, if a looser is reduced to 0% he looses his ship, and unless he has money for a new one, he probably ends the game
+* in case of a permadeath mode game, if a looser is reduced to 0% he ends game
+
 === Missions ===
 
 === Goal ===
