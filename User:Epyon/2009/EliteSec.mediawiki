@@ -292,3 +292,8 @@ A detailed timeline is hard to write without a good plan of implementation and a
 === Aftermath (August 10+) ===
 
 This is one of the games that if executed well always has room for improvement. If it will work, and start gaining players, I'm sure to work on it more (including maybe even a dedicated graphical client).
+
+
+== Comments ==
+
+Looks very nice in general. Some things to add are more info about yourself (which timezone, education, motivation, past experiences, hours a day you would use to work on this, possible abscence/holidays...). Other thing I would like to see if you could add TP protocol structures you would use for each part of the ruleset and how you would use them. if protocol doesn't have the structure yet also mention this so you can quickly see what would be needed there. But as you say you will still have to take a deeper look at the server*protocol to see what's needed. Also I have a feeling that the ruleset itself would be more enough work and you will couldn't afford to also work on improving the client and doing so much work on the graphic stuff. The ruleset would have to have the highest priority and all other things are probably just bonus if there is time left. - [[User:JLP|JLP]]
