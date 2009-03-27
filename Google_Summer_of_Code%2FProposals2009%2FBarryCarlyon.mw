@@ -1,8 +1,12 @@
 Web Based Client
+
 Summary
+
 Taking the Python Client as an example I am to reproduce most if not all the functionality of the Python client in a web based form, using the relevant API.
 Primarily I am a PHP coder, so this will be coded in PHP using a relevant JavaScript platform to provide AJAX functionality.
+
 Proposal
+
 A few years ago I used to play the web based Game Ferion, which is similar in fashion to thousand parsec, given that it is a Space Based game, the aim being to conquer the opponents.
 I aim to implement all four of the initail ideas listed, in such a way so to allow the Client to be used for any ruleset as defined by their controlling files.
 
