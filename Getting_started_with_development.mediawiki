@@ -6,7 +6,7 @@ Access to source code of Thousand Parsec components is available through [http:/
 
 == Bug tracking ==
 
-Every project has bugs. When we say bugs we don't mean only defects in software. Requests for new features are also tracked as bugs. So are errors on web pages and suggestions for improvements. Thousand Parsec uses the [http://sourceforge.net/tracker/?group_id=132078&atid=723099 Bugs Tracker] service from [http://sourceforge.net/ SourceForge.net] to handle bugs. To let us know what needs fixing, what we could improve or add first read the [[Reporting bugs]] page and then start filing bug reports.
+Every project has bugs. When we say bugs we don't mean only defects in software. Requests for new features are also tracked as bugs. So are errors on web pages and suggestions for improvements. Thousand Parsec uses the [http://code.google.com/p/thousandparsec/issues/list issue tracker] service from [http://code.google.com/ Google Code] to handle bugs. To let us know what needs fixing, what we could improve or add first read the [[Reporting bugs]] page and then start filing bug reports.
 
 == Submitting patches ==
 
