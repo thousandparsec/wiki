@@ -22,6 +22,8 @@ If a graphical 3D client (or 2D even) will be developed this GSoC, and it's crea
 <!--
 The ruleset will be developed in C++.
 
+Fine turn granularity ( 10 minutes )
+
 The following features will be included in the project, separated as much as possible for reusage:
 
 * dynamical economy model (that wont allow abusing good trade routes)
@@ -76,6 +78,13 @@ A detailed timeline is hard to write without a good plan of implementation and a
 
 === '''Preplanning''' (April 20 - May 23) ===
 
+* detailed design document
+* setting up the dev environment
+* studying the C++ server and protocol library
+* cleanup of the C++ server if needed
+* picking a primary client
+* basic artwork depending on the client
+
 === '''Milestone 1''' - June 14 -  ''(Mostly Harmless)'' ===
 '''Goal:''' operability achieved
 
@@ -83,9 +92,9 @@ A detailed timeline is hard to write without a good plan of implementation and a
 
 '''Deliverable:''' operational framework
 
-* Week 1 : basic framework -- application framework, basic class structure, and the ability to handle connections, possibly Lua support
+* Week 1 : basic framework -- application framework, basic class structure, and the ability to handle connections, possibly Lua support, basic updates to the C++ server if needed.
 * Week 2 : basic world generation (names, descriptions, systems, trade info), sending them to the client (and if necessary, changes to one of the clients)
-* Week 3 : basic orders (trade, movement, ship upgrades), trade system, combat code
+* Week 3 : continuation of week two, client changes if needed, connection and data download
 
 === '''Milestone 2''' - July 5 - ''(Average)'' ===
 '''Goal:''' basic playability
@@ -94,9 +103,9 @@ A detailed timeline is hard to write without a good plan of implementation and a
 
 '''Deliverable:''' private-access alpha version
 
-* Week 4 : events (combat events, planetary events, information events), event generation, message generation
-* Week 5 :
-* Week 6 :
+* Week 4 : basic orders (trade, movement, ship upgrades), economy and trade system, basic combat code
+* Week 5 : events (combat events, planetary events, information events), event generation, message generation
+* Week 6 : missions (random generation, descriptions, rewards, completion and progress checking)
 -
 === '''Milestone 3''' - July 26 - ''(Deadly)'' ===
 '''Goal:''' feature implementations
@@ -105,9 +114,9 @@ A detailed timeline is hard to write without a good plan of implementation and a
 
 '''Deliverable:''' public beta version
 
-* Week 7 : 
-* Week 8 :
-* Week 9 :
+* Week 7 : basic non-player organizations (generation, AI, ownage of systems, system conquering)
+* Week 8 : reputation system, organization status and missions, additional roles
+* Week 9 : setup for a public beta version, polishing updates, additional media
 
 === '''Milestone 4''' - August 10 - ''(Elite)'' ===
 '''Goal:''' bugfixing, stability and RFE's
@@ -116,30 +125,16 @@ A detailed timeline is hard to write without a good plan of implementation and a
 
 '''Deliverable:''' stable version
 
-* Week 10 : bugfixing, feature requests, additional media, etc.
+* Week 10 : bugfixing, feature requests, balance, additional media, etc.
 * Week 11 : buffer week for eventual unexpected delays
+
+=== Bonuses (if time allows) ===
+
+* information propagation
+* NPC helpers
+* buying fixed world elements
+* fixed world elements management
 
 === Aftermath (August 10+) ===
 
 This is one of the games that if executed well always has room for improvement. If it will work, and start gaining players, I'm sure to work on it more (including maybe even a dedicated graphical client).
-
-<!--
-
-* May 25 - May 31 : application framework, basic class structure, and the ability to handle connections -- basic framework, possibly Lua support  
-* June 1 - June 7 : basic world generation (names, descriptions, systems, trade info), sending them to the client (and if necessary, changes to one of the clients)
-* June 8 - June 14 : basic orders (trade, movement, ship upgrades), trade system, combat code
-* '''MILESTONE 1''' (June 14) - game needs to be operable by multiple clients, with full information for all
-* June 15 - June 21 : events (combat events, planetary events, information events), event generation, message generation
-* June 22 - June 28 : non-player organizations (generation, AI, ownage of systems, system conquering, reputation system, and display to the player)
-* June 29 - July 5 : missions (random generation, descriptions, rewards and completion and progress checking)
-* July 6 - July 12 : preparations for a open testing server (polishing and documentation, server setup, testing, client modifications, eventual additional media for the graphical clients)
-* '''MILESTONE 2''' (July 12) - server will be playable and open to people, a discussion forum, or other medium will be set up to playtest/discuss the game. I will also provide some initial beta-testers ;)
-=== July 13 -- August 18 ===
-
-* July 13 - July 19 : additional rules (information propagation, NPC helpers (see below) implementation))
-* July 20 - July 26 : roles revisited (balancing and additional content rules for the trade, piracy, bounty hunting and military career paths)
-* July 27 - August 2 : lategame improvements (buying fixed world elements, like hangars, bases etc, rules for them)
-* August 3 - August 18 : polishing up, finalization, documentation before the final deadline. Additional buffer time for an unexpected delay.
-* '''MILESTONE 3''' (August 18) - the basic game features are complete, the game is initially balanced, no longer in testing, but a beta.
---->
-=== August 11+ ===
