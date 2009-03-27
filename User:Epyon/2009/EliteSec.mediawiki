@@ -39,11 +39,14 @@ Initial design idea is to make turns short, and to make actions last several tur
 
 Depending on the players situation, turns allow for different actions. The basic situation in which the player can find himself are:
 
-* '''hyperspace''' : the player can only gather information from nearby planets, observe the movement of nearby players and send messages. Maybe in a future version he will be able to control his holdings and henchmen, but the basic version doesn't implement that. The player is fully safe during hyperspace travel, but absolutely can't do any world actions (even stopping or reversing his journey)
+;Hyperspace
+:the player can only gather information from nearby planets, observe the movement of nearby players and send messages. Maybe in a future version he will be able to control his holdings and henchmen, but the basic version doesn't implement that. The player is fully safe during hyperspace travel, but absolutely can't do any world actions (even stopping or reversing his journey)
 
-* '''docking/interplanet''' : each arrival at a planet has a turn (maybe more?) during the player is already out of hyperspace, but not yet docked ( in the future, maybe there will be more docking places in a given system, then there will be one docking turn between them ). Similarily, each time the player picks a new system destination, the first turn is docking. This is the only turn type at which end combat can occur. Docking consumes fuel (if fuel is zero, the only action available is planet docking). 
+;Orbit
+:each arrival at a planet has a turn (maybe more?) during the player is already out of hyperspace, but not yet docked ( in the future, maybe there will be more docking places in a given system, then there will be one docking turn between them ). Similarily, each time the player picks a new system destination, the first turn is docking. This is the only turn type at which end combat can occur. Docking consumes fuel (if fuel is zero, the only action available is planet docking). 
 
-* '''docked''' : player is docked at a planet. This allows the most actions, also the player is safe from attacks.
+;Docked
+:player is docked at a planet. This allows the most actions, also the player is safe from attack
 
 === Turn actions ===
 
@@ -54,17 +57,19 @@ Available actions depend on what turn type the player is.
 ** send message to other player
 ** read messages and newsfeeds (messages)
 
-* '''Docking actions''' ( available only in interplanet mode, one per turn )
+* '''Orbit actions''' ( available only in orbit mode, one per turn )
 ** attack a ship that is docking in the same system
 ** dock with planet
 ** choose a hyperjump destination
 ** use a jumpgate ( same as hyperjump but a lot faster, available only on selected routes )
+** mining ( possible only in some remote systems, with proper equipment, long action )
 ** wait ( default action )
 
 * '''Planet actions''' ( available only in docked mode, single per turn? )
 ** accept a mission
 ** perform a trade transaction ( buy or sell )
 ** preform a ship upgrade
+** preform a ship repair
 ** launch ( possibly with a set destination )
 ** wait ( default action )
 
@@ -97,6 +102,7 @@ Mission targets, descriptions and conditions are randomly generated. Misson temp
 * destroy [ENEMY(IES)] at [PLANET] on day [DAY]
 * clear (destroy all enemies) systems [PLANET], [PLANET] and...
 * bomb (survive a turn and return) system [PLANET]
+* scout (survive X turns and return) system [PLANET]
 * etc.
 
 Where:
@@ -126,6 +132,8 @@ A mission has different definitions on when it's undertaken. In case of "from he
 
 Missions have a positive impact on income and may have a positive impact on reputation ( possibly within a organization ), but may also have negative impacts (especially illegal missions, and missions targeted against given organizations).
 
+A possibility to define hardcoded missions will also be present.
+
 === Goal ===
 
 EliteSec in it's basic form would be definitively open-ended, as the original game was. With the simple model presented above that would make games that last longer probably boring after a time. However, there are many "late-game" ideas that could be added in the future.
@@ -137,6 +145,44 @@ However, the game will allow setting some "end-condition" at runtime, be it achi
 Due to the ship-based gameplay, the fact that the universe lives without the need of players, and that the game has a strong interaction between the player and the universe itself, this ruleset would be an ideal single-player game.
 
 === Gameplay example ===
+
+Days are in game universe days -- one day is one turn, one turn will normally be five minutes.
+
+;DAY 1 - LAVE (PLANET)
+:I log into the game at game start, take a look around the galaxy. No problems, in the distance of 4 light years (6 planets) there are no players. Life is good, let's take the easier path and find a local mission. In the local cantina I find something suitable for me, delivering a package to Riedquat for 200 credits in a timeframe of 12 days. Checking the starmap this is exactly 1 jump from here, consuming one ton of fuel. I check the inventory -- got 2 tons of fuel, so one to get me to orbit, and another one for the jump. I issue an order to take the misson, and issue a second order to launch.
+
+;DAY 2 - LAVE (ORBIT)
+:In orbit, no ships present, so I feel safe that there'll be no attack when I get into hyperspace. I give the order to jump to Riedquat, end turn, and go to make myself some coffee.
+
+;DAY 3-5 HYPERSPACE 
+:Day 3 started without a combat report so the jump went well. I look around the galaxy, write a few welcoming messages, check my email. On day 4 I receive a local EliteSec news bulletin. One thing that's interesting is an epidemy outbreak on Zaonce. Hell, this might be my beginners luck! I note it down and resume websurfing.
+
+;DAY 6 RIEDQUAT (ORBIT)
+:A little nervous with the turn update, luckily a quick look at the system at arrival revealed no pirates, nor previously cloaked players. I give the order to dock (actually I have no fuel left, so that's the only option).
+
+;DAY 7 RIEDQUAT (PLANET)
+:I get the always lovely message "mission completed", and a nice round 200cr. to my account. Remembering the bulletin, I take a look at the map. Zaonce is 2 jumps away, through Leesti or Orerve system. A quick look at the planet descriptions shows that Orerve has a low goverment control rating. I'd rather avoid pirates, so I decide to take the safer route through Leesti. Those are two jumps, so I need 3 tons of fuel. That leaves 4 tons of cargo space in my ship. It turns out it isn't much of an issue, cause I've got 300cr. and a ton of medicine costs 89cr. on Riedquat. Hence I place an order to buy 3 tons of fuel, 3 tons of medicine, and do a launch. Damn, just 18cr left, I hope I won't get into problems
+
+;DAY 8 RIEDQUAT (ORBIT)
+:All still safe here, orbit info only shows a transport ship docking (maybe one day I'll pirate it ;>). I choose the target Leesti for a jump.
+
+;DAY 9-10 HYPERSPACE
+:A safe journey, another local news builetin but nothing interests me.
+
+;DAY 11 LEESTI (ORBIT)
+:Safe arrival, only some Alliance military ships on orbit. I don't have any special standing with the alliance, so I'm quite safe. Nothing to do on planet, and still a ton of fuel, I plot the jump to Zaonce (I wish I had the money for that autopilot, it'd plot it as my default action itself...).
+
+;DAY 12-14 HYPERSPACE
+:Replying to work related e-mail, looking at the client from time to time. 
+
+;DAY 15 ZAONCE (ORBIT)
+:Pirates! A look at the orbit info indicates those annoying sever-hellspawn. Sure, this'd be too easy if they weren't. I check the info on them -- two Eagle Mk II class ships, I think I can manage... Order to planet land.
+
+;DAY 16 ZAONCE (PLANET)
+:Combat report! I managed to destroy one of them, and damage the other while taking 22% hull damage. My first kill! Rating goes from Harmless to Mostly Harmless :). Ah, I also get a message from the local police -- 40cr. bounty is little but always cool. I check the planet info (should have done that on orbit probably) -- yes, the state of epidemy is still valid. I look excited on the market... Bingo! The selling price of medicine is 220cr per ton! I wish I had more cargo space, maybe later I'll by myself a larger ship... I order the selling of medicine and end turn.
+
+;DAY 17 ZAONCE (PLANET)
+:660 credits aquired for the medicine, life is great. A quick look at the market shows that the new price is 200, seems as I managed to fill some of the demand. A look at the orbit reveals a player! Seems he was also racing to sell medicine... Hence he'll probably be landing, I should take off then, so I don't get at the same time with him in orbit (he might attack me...). A quick look at the mission board reveals an Alliance Officer. Ah hell, I might enroll -- looks fun, the mission to deliver a suitcase to Reorte for 420cr should be easy... probably...
 
 == Implementation details ==
 
@@ -151,42 +197,10 @@ Data will be also divided into three separate components, each assigned to a spe
 * '''Game data''': current state of the game and world, handled by a database
 * '''Script data''': scripts controlling the dynamic aspects of the world (missions, etc.)
 * '''Generation data''': data used only at server initialization, food for the Algorithms component
+
+More implementation details will appear when I familiarize myself with the available TP libraries.
 <!--
-The following features will be included in the project, separated as much as possible for reusage:
-
-* dynamical economy model (that wont allow abusing good trade routes)
-* combat (it would have to be interesting, but still adhere to the turn count and hands-off principle -- probably allowing escapes and detailed ship damage)
-* trade "empire" management (allowing the hiring of proxies to do stuff, allowing buying of immovable property, but on the other hand somewhat restricted, so the game doesn't turn into boring micromanagement)
-* ships/ship upgrades (customization of ships would play a major role in the game, just as research plays in 4X games)
-* special events (like disease outbreaks -- quarantine and rise of medicine price in a system, war -- hiring and dangerous to travel through, revolutions -- illegal arms smuggling for big profit, etc)
-* information propagation (I really like nash's idea that information travels at lightspeed, so it's not instant. Information/rumors would spread from point of origin, and might come to the desired place too late)
-* reputation -- one of the most important information types. Reputation travels even more slowly than information, so you may still be able to pass through a system where theoretically you should be considered an outlaw already...
-
-The player will be able to choose a gameplay path, but will not be bound to it (he will be always able to change it at whim just by making other choices). This way the player will always find something interesting to do:
-
-* trading -- the primary path, especially for the pacifist. Except of always searching new trade routes (old ones get less and less benefactory as economy adjusts itself to the action of the player), he has to fend off pirates, buy better ships and establish a trading empire. Of course you can always try to transport less then legal cargo...
-* piracy -- the flip coin of the traders path -- you can pirate on passing spaceships by maintaining a good ship and some minions. Passing spaceships may include players too...
-* bounty hunting -- where there are pirates there are also prices on their heads. The bounty hunter collects those. His enemies are both computer ships as well as player controlled entities. The shady side of the bounty hunter is of course the assassin, but he should watch out for...
-* military -- you can also do missions for the one of the empires. Better not try to do them for more then one, or you may become a traitor.
-
-This is just the tip of an iceberg, other occupations that may be thought about is scouting and mining, for example.
-
--->
-
-== Project Schedule ==
-<!--
-I plan on working on the project fulltime during summer -- I have no summer job, nor school responsibilities. I plan to maintain a blog with progress update.
-
-In the case of a ruleset implementation the first part of the development will be creating a complete and thought through design document of the ruleset that takes into account balance, fun and that is in the scope of the 2 months time (with a possible section on "further" improvements). The game realized in the 2 months timeframe must be complete, playable and fun. 
-
-The design document will be finished before the official coding time starts, and will be presented to the community in the form of wiki pages that anyone can comment on. Design will be then finalized and frozen before the deadline of May 28. Also up to this date I assume to learn the details of the TP system in it's current shape, and submit proposals for enhancements if needed.
-
-The design will define a midpoint project -- a PLAYABLE game with basic capabilities. At this point I will probably be trying to find playtesters so we can see how the game handles in real life.
-
-The coding time will be divided into two parts -- first one will implement the midpoint project. At this point I start to run games and gather as much feedback/bug reports as possible to be included/fixed in the second part of the project. The second part will have new versions of the ruleset uploaded for testing at least weekly, and I'll be constantly monitoring feedback during this time (if the amount of people interested will be large I might need someone to help me organize all the stuff).
--->
 == Brief Bio/Resume ==
-<!--
 I'm a Computer Science PhD student (1st year) at the Wroclaw University, Poland. My interests lie in Game Programming and Design, with a special hunch for Real-time Procedural Content. 
 
 I've successfully taken part in last year's GSoC creating a Procedural City Generator for BZFlag ( project homepage, out of date, http://bzflag.chaosforge.org/ ).
@@ -200,6 +214,14 @@ Rules design is something that I needed to learn well, because good, balanced an
 * Homepage : http://chaosforge.org/ 
 * IRC Nick : Epyon
 -->
+== Project Schedule ==
+
+I plan on working on the project fulltime during summer, apart from some time spending on research for my PhD thesis. I plan to maintain a blog with progress update, and once workable maybe a semi-public test server at my place.
+
+The design document will be finished before the official coding time starts, and will be presented to the community in the form of wiki pages that anyone can comment on. Design will be then finalized and frozen before the deadline of May 23. The design will also include a basic design of the technical aspects of the ruleset, as well as a report on what will need to be changed on the client, server and protocol side if need be. 
+
+The coding time will be divided into two parts -- first one will implement the midpoint project. At this point I start to run games and gather as much feedback/bug reports as possible to be included/fixed in the second part of the project. The second part will have new versions of the ruleset uploaded for testing at least weekly, and I'll be constantly monitoring feedback during this time (if the amount of people interested will be large I might need someone to help me organize all the stuff).
+
 == Detailed timeline ==
 
 A detailed timeline is hard to write without a good plan of implementation and an extended knowledge of the TP framework, hence this is just a guideline that is subject to change before May 23.
@@ -256,12 +278,16 @@ A detailed timeline is hard to write without a good plan of implementation and a
 * Week 10 : bugfixing, feature requests, balance, additional media, etc.
 * Week 11 : buffer week for eventual unexpected delays
 
-=== Bonuses (if time allows) ===
+=== Bonuses (some of them if time allows) ===
 
 * information propagation
 * NPC helpers
 * buying fixed world elements
 * fixed world elements management
+* additional career paths
+* robust organization AI
+* AI players/bounty hunting
+* lategame improvements
 
 === Aftermath (August 10+) ===
 
