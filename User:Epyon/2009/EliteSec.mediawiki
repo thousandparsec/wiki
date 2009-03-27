@@ -35,7 +35,38 @@ The world will be updated each turn. Initial design idea is to have a fine turn 
 
 Initial design idea is to make turns short, and to make actions last several turns. This would make for a casual game that you run in the background while doing other things, and only taking action once your long tasks are completed. Browser games of the like of OGame have prooven this model to be quite successful, and I also believe that this is a great model for an eventual future mobile or web-client. I also believe that such a model ( with the single-ship-focus added in ) would appeal to a wider audience than the current hardcode 4X players model.
 
+=== Turn types ===
+
+Depending on the players situation, turns allow for different actions. The basic situation in which the player can find himself are:
+
+* '''hyperspace''' : the player can only gather information from nearby planets, observe the movement of nearby players and send messages. Maybe in a future version he will be able to control his holdings and henchmen, but the basic version doesn't implement that. The player is fully safe during hyperspace travel, but absolutely can't do any world actions (even stopping or reversing his journey)
+
+* '''docking/interplanet''' : each arrival at a planet has a turn (maybe more?) during the player is already out of hyperspace, but not yet docked ( in the future, maybe there will be more docking places in a given system, then there will be one docking turn between them ). Similarily, each time the player picks a new system destination, the first turn is docking. This is the only turn type at which end combat can occur. Docking consumes fuel (if fuel is zero, the only action available is planet docking). 
+
+* '''docked''' : player is docked at a planet. This allows the most actions, also the player is safe from attacks.
+
 === Turn actions ===
+
+Available actions depend on what turn type the player is.
+
+* '''Common actions''' ( available in all modes, free )
+** check planet information if planet is in a given distance
+** send message to other player
+** read messages and newsfeeds (messages)
+
+* '''Docking actions''' ( available only in interplanet mode, one per turn )
+** attack a ship that is docking in the same system
+** dock with planet
+** choose a hyperjump destination
+** use a jumpgate ( same as hyperjump but a lot faster, available only on selected routes )
+** wait ( default action )
+
+* '''Planet actions''' ( available only in docked mode, single per turn? )
+** accept a mission
+** perform a trade transaction ( buy or sell )
+** preform a ship upgrade
+** launch ( possibly with a set destination )
+** wait ( default action )
 
 === Combat ===
 
@@ -46,6 +77,10 @@ Initial design idea is to make turns short, and to make actions last several tur
 EliteSec in it's basic form would be definitively open-ended, as the original game was. With the simple model presented above that would make games that last longer probably boring after a time. However, there are many "late-game" ideas that could be added in the future.
 
 However, the game will allow setting some "end-condition" at runtime, be it achieveing "Elite" ranking, gaining a set amount of money, killing all other players in permadeath mode ( mode where a destroyed player ends game ), or a simple time limit.
+
+=== Single player ===
+
+Due to the ship-based gameplay, the fact that the universe lives without the need of players, and that the game has a strong interaction between the player and the universe itself, this ruleset would be an ideal single-player game.
 
 === Gameplay example ===
 
