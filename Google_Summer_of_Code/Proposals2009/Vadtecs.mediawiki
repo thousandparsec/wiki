@@ -4,7 +4,7 @@ It is my intention to implement unit testing for the Thousand Parsec C++ client 
 
 == PROJECT PROPOSAL ==
 
-To implement unit testing for the Thousand Parsec C++ client-server protocol module to insure proper compliance with all requirements of the established Thousand Parsec protocol.
+To implement unit testing for the Thousand Parsec C++ client protocol module to insure proper compliance with all requirements of the established Thousand Parsec protocol.
 
 '''Testing for correctness'''
 :*The unit testing will test all code pathways to insure that all possible outcomes are within the protocol requirements and specifications.
