@@ -29,19 +29,29 @@ The world will be updated each turn. Initial design idea is to have a fine turn 
 * update of planetary data ( due to changes in politics )
 * update of reputation data
 * update of mission statuses
-* creation of new world events/missions
+* creation of new world events/new missions
 
 === Turn lenght ===
 
-Initial design idea is to make turns short, and to make actions last several turns. This would make for a casual game that you run in the background while doing other things, and only taking action once your long tasks are completed. Browser games of the like of OGame have prooven this model to be quite successful, and I also believe that this is a great model for an eventual future mobile or web-client.
+Initial design idea is to make turns short, and to make actions last several turns. This would make for a casual game that you run in the background while doing other things, and only taking action once your long tasks are completed. Browser games of the like of OGame have prooven this model to be quite successful, and I also believe that this is a great model for an eventual future mobile or web-client. I also believe that such a model ( with the single-ship-focus added in ) would appeal to a wider audience than the current hardcode 4X players model.
 
 === Turn actions ===
 
 === Combat ===
 
+=== Missions ===
+
+=== Goal ===
+
+EliteSec in it's basic form would be definitively open-ended, as the original game was. With the simple model presented above that would make games that last longer probably boring after a time. However, there are many "late-game" ideas that could be added in the future.
+
+However, the game will allow setting some "end-condition" at runtime, be it achieveing "Elite" ranking, gaining a set amount of money, killing all other players in permadeath mode ( mode where a destroyed player ends game ), or a simple time limit.
+
+=== Gameplay example ===
+
 == Implementation details ==
 
-The ruleset will be developed in C++, if allowed making heavy use of boost and STL libraries. The model will be broken up into three (as much independent as possible) major components:
+The ruleset will be developed in object oriented C++, making heavy use of boost (if allowed) and STL libraries. The model will be broken up into three (as much independent as possible) major components:
 
 * '''Core''': the action handling/server implementation
 * '''World''': the world representation, with a completely player/game independent model, and associated update algorithms
