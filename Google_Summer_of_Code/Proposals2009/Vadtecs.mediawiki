@@ -46,7 +46,6 @@ To implement unit testing for the Thousand Parsec C++ client protocol module to 
 ::#'''August 17'''
 ::#*Final check in of all unit testing code and documentation
 
-
 In the event the entire Thousand Parsec protocol module has been unit tested and conforms to the requirements of the protocol, I will begin an in-depth look at the code to find any possible improvements that may have been missed or passed over during unit testing.
 
 === Importance of Unit Testing ===
