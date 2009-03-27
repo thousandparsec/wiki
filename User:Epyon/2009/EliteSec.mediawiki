@@ -87,6 +87,45 @@ After combat the result is judged. The ship that lost more hull status is the lo
 
 === Missions ===
 
+Accepted missions can be checked any time. There's a limit to the amount of missions that one can have running at a given time, based on player rating and rating within the organization that assigns the mission. Missions have a time limit. Once a mission is assigned, it cannot be unassigned -- once the time limit ends the mission is considered failed (in some cases that has negative reputation effect, or even worse consequences). 
+
+Mission targets, descriptions and conditions are randomly generated. Misson templates are coded in a scripting language. Missions may be assigned by planets (individual assignee) or by organizations. Example missions from the technical point of view:
+
+* deliver [PACKAGE] from [PLANET] to [PLANET]
+* deliver X [PERSON(S)] from [PLANET] to [PLANET]
+* deliver X tons of [CARGO] to [PLANET]
+* destroy [ENEMY(IES)] at [PLANET] on day [DAY]
+* clear (destroy all enemies) systems [PLANET], [PLANET] and...
+* bomb (survive a turn and return) system [PLANET]
+* etc.
+
+Where:
+
+;PLANET
+:Destination. To achieve the goal one needs to dock at the planet. The most common source place is the place where the mission is given.
+
+;PACKAGE
+:A mission specific object, that doesn't take space.
+
+;PERSON
+:Mission specific object, takes crew space (most players start with single-person ships without crew compartments).
+
+;AMOUNT
+:People take 1 crew space each, cargo takes one cargo space each.
+
+;ENEMY
+:A mission target, a "combat event" controlled by the server.
+
+;DAY
+:Each game turn is a single day in the game's calendar
+
+
+The technical point of view doesn't reveal all info : a planet to planet person transfer may be a simple passanger, or may be a jailbreak (with the latter being filled with combat, and rating loss in some organizations/systems). Several such modifications are possible.
+
+A mission has different definitions on when it's undertaken. In case of "from here" missons, this is immidate. In other situations there's a given place where it's undertaken (or even undertaking is equal to completion) -- in that case it may happen that multiple players race for the same mission. In case of a tie, the one with the higher rating for the given organization (or global rating in case of individual missions) gets priority.
+
+Missions have a positive impact on income and may have a positive impact on reputation ( possibly within a organization ), but may also have negative impacts (especially illegal missions, and missions targeted against given organizations).
+
 === Goal ===
 
 EliteSec in it's basic form would be definitively open-ended, as the original game was. With the simple model presented above that would make games that last longer probably boring after a time. However, there are many "late-game" ideas that could be added in the future.
