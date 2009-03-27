@@ -10,20 +10,49 @@ Possibilities are endless, and the game can be brilliant, as long as we keep in 
 
 == Deliverables ==
 
-<!-- A ruleset module for TP implementing a interesting and balanced Space Exploration game. Also required extensions to the server, and proposals for enhancements to the protocol/client (if needed in the design). Along the module I will deliver all it's datafiles, each one with solid and complete documentation for anyone wanting to do a modifications.
+A ruleset module for TP implementing a interesting and balanced Space Exploration game. Also required extensions to the server, and proposals for enhancements to the protocol (if needed in the design). Along with the module I will deliver all it's datafiles, each one with solid and complete documentation for anyone wanting to do a modifications. I also plan to keep all the content generators (planet/ship names, planetary descriptions, system descriptions, events) in a separate universal module to allow re-usage of it by any TP-based game.
 
-As an additional delivery, I plan to keep all the content generators (planet/ship names, planetary descriptions, system descriptions, events) in a separate universal module to allow re-usage of it by any TP-based game.
+Additionally, one TP client will be chosen as the priority target for the ruleset. For it I plan to deliver a complete set of media needed to illustrate the game. Media will include textured, 3d engine ready, low-poly 3d ship/station/planet/weapon models, as well as 2D renders if need be. 
 
-If a graphical 3D client (or 2D even) will be developed this GSoC, and it's creator will be interested in making it compatible with EliteSec I'm also willing to supply the media for EliteSec (ship/station/planet) models.
--->
+== Design details ==
 
-== Implementation Details ==
+The following paragraphs describe the basic model of the game, IMHO achievable during the program timeframe. All code will however be written with expansions in mind.
 
+=== Galaxy behaviour ===
+
+The world will be fixed sized, generated and stored at start of the game. Following the KISS principle, initially there will be just one plane per system. Each world will have some suitable random description and parameters. Also each world will have one major (Empire, Alliance, Federation), and several minor affiliations.
+
+The world will be updated each turn. Initial design idea is to have a fine turn granularity. Changes include random events ( not affected by player actions ), and changes due to player involvement. Several standard galaxy updates will be done per turn:
+
+* update of the economy ( depending on what is sold/bought where )
+* update of the political model 
+* update of planetary data ( due to changes in politics )
+* update of reputation data
+* update of mission statuses
+* creation of new world events/missions
+
+=== Turn lenght ===
+
+Initial design idea is to make turns short, and to make actions last several turns. This would make for a casual game that you run in the background while doing other things, and only taking action once your long tasks are completed. Browser games of the like of OGame have prooven this model to be quite successful, and I also believe that this is a great model for an eventual future mobile or web-client.
+
+=== Turn actions ===
+
+=== Combat ===
+
+== Implementation details ==
+
+The ruleset will be developed in C++, if allowed making heavy use of boost and STL libraries. The model will be broken up into three (as much independent as possible) major components:
+
+* '''Core''': the action handling/server implementation
+* '''World''': the world representation, with a completely player/game independent model, and associated update algorithms
+* '''Algorithms''': a library of fairly generic random generation algorithms (names, planet data, starmap, descriptions)
+
+Data will be also divided into three separate components, each assigned to a specific component:
+
+* '''Game data''': current state of the game and world, handled by a database
+* '''Script data''': scripts controlling the dynamic aspects of the world (missions, etc.)
+* '''Generation data''': data used only at server initialization, food for the Algorithms component
 <!--
-The ruleset will be developed in C++.
-
-Fine turn granularity ( 10 minutes )
-
 The following features will be included in the project, separated as much as possible for reusage:
 
 * dynamical economy model (that wont allow abusing good trade routes)
@@ -106,7 +135,7 @@ A detailed timeline is hard to write without a good plan of implementation and a
 * Week 4 : basic orders (trade, movement, ship upgrades), economy and trade system, basic combat code
 * Week 5 : events (combat events, planetary events, information events), event generation, message generation
 * Week 6 : missions (random generation, descriptions, rewards, completion and progress checking)
--
+
 === '''Milestone 3''' - July 26 - ''(Deadly)'' ===
 '''Goal:''' feature implementations
 
