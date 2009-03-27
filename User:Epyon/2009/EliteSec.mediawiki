@@ -12,7 +12,7 @@ Possibilities are endless, and the game can be brilliant, as long as we keep in 
 
 A ruleset module for TP implementing a interesting and balanced Space Exploration game. Also required extensions to the server, and proposals for enhancements to the protocol (if needed in the design). Along with the module I will deliver all it's datafiles, each one with solid and complete documentation for anyone wanting to do a modifications. I also plan to keep all the content generators (planet/ship names, planetary descriptions, system descriptions, events) in a separate universal module to allow re-usage of it by any TP-based game.
 
-Additionally, one TP client will be chosen as the priority target for the ruleset. For it I plan to deliver a complete set of media needed to illustrate the game. Media will include textured, 3d engine ready, low-poly 3d ship/station/planet/weapon models, as well as 2D renders if need be. 
+Additionally, one TP client will be chosen as the priority target for the ruleset. For it I plan to do all the neccessary improvements to handle the ruleset and also deliver a complete set of media needed to illustrate the game. Media will include textured, 3d engine ready, low-poly 3d ship/station/planet/weapon models, as well as 2D renders if need be.
 
 == Design details ==
 
