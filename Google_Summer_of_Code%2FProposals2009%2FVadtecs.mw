@@ -28,6 +28,7 @@ To implement unit testing for the Thousand Parsec C++ client protocol module to 
 '''Benchmarking'''
 :*Where possible, the unit testing will provide benchmarking of the tested code pathways to help identify potential bottlenecks in the code
 :*In addition, the unit testing will implement testing of network code and provide benchmarking wherever possible.
+:*Benchmarking will be achieved initially using timing of calls to code. If possible within the allowed time frame, a method similar to cachegrind from the Valgrind suit will be employeed to provide more accurate method of benchmarking of code pathways.
 
 === Expected Project Milestones ===
 
