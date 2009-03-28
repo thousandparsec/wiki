@@ -1,6 +1,9 @@
 name: Patrick Thomson
+
 email: patrick.thomson@gmail.com
+
 IRC: Patrick` on freenode
+
 
 Abstract:
 
