@@ -2,6 +2,22 @@
 
 It is my intention to implement unit testing for the Thousand Parsec C++ client protocol module. The unit testing will validate the protocol module against the published Thousand Parsec protocol(s). Unit testing will be achieved by using available testing tools such as CppUnit and custom code to test for adherence to the protocol. The unit testing will provide benchmarking of protocol library code as much as possible.
 
+== CONTACT INFO & AVAILABILITY ==
+
+'''Contact Info'''
+
+Nicholas Davey
+IRC Nick: Vadtec
+E-mail: vadtec@vadtec.net
+AIM: vadtec MSN: vadtec@vadtec.net
+Note: You can reach me nearly any time on irc.vadtec.net (6667) or AIM/MSN.
+
+'''Availability'''
+
+I am usually available from 1600 CDT (GMT -6) to around 2300 (sometimes as late as 0100).
+
+I plan to spend at minimum 4 hours per day and 4-6 hours per weekend working on implementing unit testing. As time (and classwork) permits, I will put in extra time on the project. 
+
 == PROJECT PROPOSAL ==
 
 To implement unit testing for the Thousand Parsec C++ client protocol module to insure proper compliance with all requirements of the established Thousand Parsec protocol.
