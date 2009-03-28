@@ -76,4 +76,4 @@ Personal background:
 I am a student of chemistry and will be starting postdoctoral study at the university of Edinburgh for profs. Leigh & McNab in september 2009. A non-programming CV can be found [http://patrickthomson.ath.cx/cv.pdf here]
 
 
-The original proposal is published as a google document [http://docs.google.com/Doc?id=dhd4hhxz_13dw6jg2c3 here]
+The original proposal is published as a google document [http://docs.google.com/Doc?id=dhd4hhxz_13dw6jg2c3 here]. The definitive version will be that submitted via the GSOC website.
