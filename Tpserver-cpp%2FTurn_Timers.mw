@@ -1,0 +1,31 @@
+The '''turn timer''' in [[tpserver-cpp]] control when the EOT will occur. There are two basic mechanisms.
+* Timer expires (maximum time for a turn)
+* Players indicate they have finished their turn
+
+Using these mechanisms, there are a few different types of timer. They are documented below.
+== The timers ==
+=== BasicTurnTimer ===
+The turn ends x seconds after it begins.
+
+This timer actually drifts from being at the same time each period, as the EOT processing takes time, and is effectively added to the length of the turn.
+
+
+=== PlayersFinishedTurnTimer ===
+This turn timer finishes the turn when all players have finished or the maximum turn length is reached. The default maximum turn length is infinite.
+
+See below for some discussion about what "all players" actually means.
+
+
+=== ThresholdTurnTimer ===
+This timer allows greater control of the maximum turn length, and encourages the slow players to play faster. The threshold is set as a percentage, and a maximum turn length is set in seconds (default infinite). When the threshold of the players have indicated they are finished, a shorter timer is triggered (and announced). When all players are finished, or the timer expires, the EOT is started.
+
+This timer is good for LAN play, as it gives people a chance without taking forever for each turn.
+
+
+=== CalendarTurnTimer ===
+This timer makes the turn happen at the same time every period. For example, it could be configured to end the turn one minute past the hour every hour, or every day at midnight. Does not suffer the drift that the basic turn timer does.
+
+This timer is good for global play as the timer occurs at the same time, every time.
+
+== Implementation Details ==
+"All players" is a bit strange. It is controlled by two things. The total number of players in the game (of which some could be 'dead'), and the value for dead players set in the TurnTimer by the ruleset. The ruleset could use this to not have to indicated player finished turn for players the ruleset is directly controlling, as well as not waiting for players that are dead.
