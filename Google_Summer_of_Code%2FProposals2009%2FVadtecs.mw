@@ -82,6 +82,8 @@ By unit testing the client protocol modules for conformance to the established T
 :#Insure that all clients adhere to the Thousand Parsec protocol
 :#Better implementation of the Thousand Parsec protocol by clients
 
+By unit testing the client protocol module, the server developers can rely on the fact that the client is going to behave in a predefined manner. This will eliminate the need for the server developers to debug client related errors that are causing them issues.
+
 == PERSONAL EXPERIENCE ==
 
 I am currently enrolled in an undergraduate school studying for my A.A.S. C.I.S. I am focused on the programming aspects of the source with interest in main frame development. I plan to transfer to another local college after obtaining my A.A.S. and continue my degree plan by refocusing into a M.A. C.S. with as much emphasis as possible in main frame development.
