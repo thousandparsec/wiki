@@ -29,3 +29,5 @@ This timer is good for global play as the timer occurs at the same time, every t
 
 == Implementation Details ==
 "All players" is a bit strange. It is controlled by two things. The total number of players in the game (of which some could be 'dead'), and the value for dead players set in the TurnTimer by the ruleset. The ruleset could use this to not have to indicated player finished turn for players the ruleset is directly controlling, as well as not waiting for players that are dead.
+
+[[Category:Tpserver-cpp]]
