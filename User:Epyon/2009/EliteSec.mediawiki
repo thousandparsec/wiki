@@ -297,3 +297,25 @@ This is one of the games that if executed well always has room for improvement. 
 == Comments ==
 
 Looks very nice in general. Some things to add are more info about yourself (which timezone, education, motivation, past experiences, hours a day you would use to work on this, possible abscence/holidays...). Other thing I would like to see if you could add TP protocol structures you would use for each part of the ruleset and how you would use them. if protocol doesn't have the structure yet also mention this so you can quickly see what would be needed there. But as you say you will still have to take a deeper look at the server*protocol to see what's needed. Also I have a feeling that the ruleset itself would be more enough work and you will couldn't afford to also work on improving the client and doing so much work on the graphic stuff. The ruleset would have to have the highest priority and all other things are probably just bonus if there is time left. - [[User:JLP|JLP]]
+
+
+----
+
+How long are you suggesting turns should run for? One every 10 minutes, one every hour, or? It could make a big difference to how it plays out. 
+
+Do you plan on enabling single player support? This sounds like it could be a pretty good way to get a feel for the game before playing online with other people (even if there are no AI trying to kill you). It also sounds like a strong candidate for the "scenario idea". 
+
+I see a couple of client interface problems:
+* How do you plan to do the market stuff, none of the clients support something like that nor, does the protocol. 
+* How do you expect the attack on orbit thing to work? Does a player have to set an attack order or?
+* How will a person view available missions and currently accepted missions?
+* The auto-pilot problem you describe could easy be gotten around with a custom client.
+
+I think these steps should be done before the GSoC application period closes as they will effect how the proposal.
+* setting up the dev environment
+* studying the C++ server and protocol library
+* picking a primary client 
+
+Adding a new ruleset, extending the protocol and updating the clients is just too much and too invasive.
+
+- [[User:mithro|mithro]]
