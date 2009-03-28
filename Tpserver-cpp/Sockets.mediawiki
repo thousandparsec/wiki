@@ -37,3 +37,6 @@ When false is returned, the temporary frame is deleted and everything returns to
 Shown in this section is the flow of activities from before a connection is made, to when it is disconnected.
 
 Well... it might when I get to writing it.
+
+
+[[Category:Tpserver-cpp]]
