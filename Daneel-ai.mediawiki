@@ -65,7 +65,7 @@ As an example, the rule from above:
  buildships @ resources(X) <=> X > 500 | resources(X-500); order_build_ship
 A way to enforce set semantics (no duplicates) for a predicate:
  predicate \ predicate <=> pass
-A canonical CHR example is the less-then-or-equal relationship (basically, any partial ordering). Note that = means logical unification and can work in both ways:
+A canonical CHR example is the less-then-or-equal relationship (basically, any partial ordering). Note that = means logical unification and can work in both ways (thus this is not really applicable here, it's more of a Prolog example):
  reflexivity @ leq(X,X) <=> pass
  antisymmetry @ leq(X,Y) and leq(Y,X) <=> X = Y
  transitivity @ leq(X,Y) and leq(Y,Z) ==> leq(X,Z)
