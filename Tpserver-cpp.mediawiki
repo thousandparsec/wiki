@@ -4,6 +4,8 @@
 * [[Minisec]]
 * [[MTSec]] (WIP)
 * [[TP RFTS]]
+* [[Tigris and Euphrates]]
+* [[Risk]]
 
 ==Setup==
 See [[Tpserver-cpp Setup]] for some hints on building tpserver-cpp.
@@ -16,6 +18,7 @@ To quick-start a game, use the corresponding quickstart-''rulesetname''.conf con
 * Pages on [http://www.thousandparsec.net/tp/dev/documents/tpserver-cpp main website]. Mostly well out of date.
 * [[Tpserver-cpp/Sockets|Sockets]] and the flow of data.
 * [[Tpserver-cpp/Admin|Remote Administration]] - documentation on separating out the console and daemonizing the server.
+* [[Tpserver-cpp/Turn Timers|Turn Timers]] - Documentation for the turn timers.
 * Add pages on the wiki here...
 
 ==Future work ideas==
