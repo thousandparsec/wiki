@@ -1,5 +1,3 @@
- GSOC 2009 application to Thousand Parsec
-
 name: Patrick Thomson
 email: patrick.thomson@gmail.com
 IRC: Patrick` on freenode
@@ -27,7 +25,7 @@ Specifically: porting of the unit tests to twisted's testing framework will also
 
 Step 3: change the SQL to be asynchronous: (1 week)
 The SQL queries are (currently?) blocking, so these will need to operate asynchronously.
-There is already a most excellent project available here to implement this.
+There is already a most excellent project available [http://foss.eepatents.com/sAsync/ here] to implement this.
 
 Step 4: tidy up print statements into twisted's logging framework and make the server run as a daemon (2 days)
 
@@ -55,16 +53,16 @@ August 17: Official end of coding.
 
 Relevant Experience:
 
-All bodies of python code produced previously are accessible here
+All bodies of python code produced previously are accessible [https://sourceforge.net/users/pitt2 here]
 I have successfully completed SoC in 2007 for the kamaelia project, and completely authored the remaining two projects, pidge being a headless IRC/NMDC bridge and molmass being a trivial chemical calculator.
 
 Python:         good
 Network:        good
 Unit testing:   some
 
-pidge contains some unit tests of low-level networking components, accessible here
+pidge contains some unit tests of low-level networking components, accessible [http://pidge.svn.sourceforge.net/viewvc/pidge/trunk/Pidge/mysock_test.py?view=markup here]
 
-Kamaelia contains some work on threading and inter-thread communication, accessible here
+Kamaelia contains some work on threading and inter-thread communication, accessible [http://kamaelia.svn.sourceforge.net/viewvc/kamaelia/trunk/Sketches/PT/likefile/likefile.py?view=markup here]
 
 
 Commitment:
@@ -72,7 +70,7 @@ An average of 160 hours a month will be given to this project. One absence of up
 
 
 Personal background:
-I am a student of chemistry and will be starting postdoctoral study at the university of Edinburgh for profs. Leigh & McNab in september 2009. A non-programming CV can be found here
+I am a student of chemistry and will be starting postdoctoral study at the university of Edinburgh for profs. Leigh & McNab in september 2009. A non-programming CV can be found [http://patrickthomson.ath.cx/cv.pdf here]
 
 
 The original proposal is published as a google document [http://docs.google.com/Doc?id=dhd4hhxz_13dw6jg2c3 here]
