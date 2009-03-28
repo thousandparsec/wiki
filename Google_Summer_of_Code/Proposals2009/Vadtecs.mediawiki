@@ -76,6 +76,8 @@ Life sometimes throws a rock in the road ahead of us. While I try to avoid them 
 :#Enforce conformance to the Thousand Parsec protocol in all clients
 :#Improve the quality of released clients
 
+By unit testing the client protocol modules for conformance to the established Thousand Parsec protocol, the game developers can focus more on implementing features of the game. They will be able to rely on the fact that the client protocol library works as they expect it to. This will increase the rate at which the game developers can release new features for the framework. It will also help decrease the potential for serious bugs to be found and exploited if possible.
+
 === Benefits to Thousand Parsec ===
 :#Insure that all clients adhere to the Thousand Parsec protocol
 :#Better implementation of the Thousand Parsec protocol by clients
