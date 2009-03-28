@@ -1,35 +1,4 @@
-The '''remote administration''' project intends to remove the internal console from [[tpserver-cpp]] and replace it with a protocol which can be accessed by administration clients in a variety of useful ways. This is being developed for [[Google Summer of Code]] 2008 by Aaron Mavrinac / [[User:Ezod|ezod]]. 
-
-== Plan ==
-
-=== Functional Milestones ===
-
-* '''2008-05-25:''' protocol specification document - <font color="green">''complete''</font>
-* '''2008-06-02:''' tpserver-cpp will accept administration connections - <font color="green">''complete''</font>
-* '''2008-06-02:''' tpserver-cpp will log to administration clients - <font color="green">''complete''</font>
-* '''2008-06-06:''' tpserver-cpp will respond to requests for command lists and descriptions - <font color="green">''complete''</font>
-* '''2008-06-13:''' tpserver-cpp will start as a daemon by default - <font color="green">''complete''</font>
-* '''2008-06-20:''' tpserver-cpp will accept basic command set - <font color="green">''complete''</font>
-* '''2008-06-20:''' tpadmin-cpp client will be able to connect to tpserver-cpp - <font color="green">''complete''</font>
-* '''2008-06-27:''' tpadmin-cpp client will support command frames - <font color="green">''complete''</font>
-* '''2008-07-07:''' tpserver-cpp will implement full command set - <font color="green">''complete''</font>
-* '''2008-07-14:''' libtpproto-py will include a partial admin client - <font color="green">''complete''</font>
-
-=== Planned Clients ===
-
-* Main CLI client, written in C++, based on a minimal [[libtpproto-cpp]].
-* Single-player mode wizard in [[tpclient-pywx]], based on [[libtpproto-py]] (currently does not use administration protocol).
-* Main GUI client, written in Python, based on [[libtpproto2-py]].
-
-=== Procedure ===
-
-# Write a full administration protocol specification.
-# Create <code>AdminTcpSocket</code>, <code>AdminConnection</code>, and <code>AdminTcpConnection</code> objects.
-# Implement the protocol in the <code>AdminConnection</code> object.
-# Create the main CLI client.
-# Remove <code>Console</code> object and all associated code.
-# Daemonize the server and make a different logging option default.
-# Remove [[libtprl]] dependency from packages.
+The '''remote administration''' project intends to remove the internal console from [[tpserver-cpp]] and replace it with a protocol which can be accessed by administration clients in a variety of useful ways. This was originally developed for [[Google Summer of Code]] 2008 by Aaron Mavrinac / [[User:Ezod|ezod]]. 
 
 == Administration Protocol Extension ==
 
