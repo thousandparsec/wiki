@@ -71,6 +71,8 @@ Life sometimes throws a rock in the road ahead of us. While I try to avoid them 
 
 == IMPORTANCE OF UNIT TESTING ==
 
+Unit testing of the Thousand Parsec client protocol module is paramount to releasing an outstanding product for people to play and enjoy. Unit testing will free both the client developers and server developers from having to deal with issues as much from the opposite side of the game. Over all, unit testing will improve both the clients and the server.
+
 === Benefits to the community ===
 :#Insure that all clients implementing the Thousand Parsec protocol will function as expected
 :#Enforce conformance to the Thousand Parsec protocol in all clients
