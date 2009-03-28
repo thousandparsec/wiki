@@ -1,0 +1,78 @@
+ GSOC 2009 application to Thousand Parsec
+
+name: Patrick Thomson
+email: patrick.thomson@gmail.com
+IRC: Patrick` on freenode
+
+Abstract:
+
+The python server will be ported to twisted concurrent with the development of unit tests.
+
+
+
+Timeline:
+
+Now - 9th May:
+Occasionally during revision breaks, pidge (see relevant experience) will be ported to twisted as a proof of concept.
+
+9th May: University obligations discharged. Community bonding starts.
+23rd May: Official coding start date. Coding may well have started by this point.
+
+Phase 1: porting to twisted and restoration of existing functionality.
+Step 1: Unit testing of libtpproto-py: (3 weeks)
+A figure of 60% function coverage was proposed by the organisation.
+
+Step 2: port the server core to twisted: (3 weeks)
+Specifically: porting of the unit tests to twisted's testing framework will also take place.
+
+Step 3: change the SQL to be asynchronous: (1 week)
+The SQL queries are (currently?) blocking, so these will need to operate asynchronously.
+There is already a most excellent project available here to implement this.
+
+Step 4: tidy up print statements into twisted's logging framework and make the server run as a daemon (2 days)
+
+The end of Phase 1 will ideally coincide with the midterm evaluations in early July
+
+Phase 2: Now that core functionality has been replicated, other features will be added or ported.
+Step 5: Re-enable Zeroconf support:
+Support for multicast DNS/Zeroconf could be added to Twisted (2 weeks), or the current code could run in a separate thread as a workaround. (2 days)
+
+Step 6: Add support for an inbuilt http server: (2 weeks)
+Including authentication (to allow download of media and battle data etc)
+As a new feature, this is nice-to-have and would count as a secondary goal subject to time
+
+Step 7: Add remote management functionality: (2 weeks)
+A ssh/telnet server that enables remote management server (such as adding/removing games)
+As a new feature, this is nice-to-have and would count as a secondary goal subject to time.
+
+
+August 10: No new work will be started. Work in progress will be capped off neatly.
+August 17: Official end of coding.
+
+
+
+
+
+Relevant Experience:
+
+All bodies of python code produced previously are accessible here
+I have successfully completed SoC in 2007 for the kamaelia project, and completely authored the remaining two projects, pidge being a headless IRC/NMDC bridge and molmass being a trivial chemical calculator.
+
+Python:         good
+Network:        good
+Unit testing:   some
+
+pidge contains some unit tests of low-level networking components, accessible here
+
+Kamaelia contains some work on threading and inter-thread communication, accessible here
+
+
+Commitment:
+An average of 160 hours a month will be given to this project. One absence of up to 10 days is anticipated, but will be made up for beforehand. Working hours will probably not stray too far from GMT due to other commitments, but I will be available outside these times. No other job is arranged or anticipated.
+
+
+Personal background:
+I am a student of chemistry and will be starting postdoctoral study at the university of Edinburgh for profs. Leigh & McNab in september 2009. A non-programming CV can be found here
+
+
+The original proposal is published as a google document [http://docs.google.com/Doc?id=dhd4hhxz_13dw6jg2c3 here]
