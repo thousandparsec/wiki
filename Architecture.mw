@@ -2,10 +2,12 @@ This page documents the overall architecture of the Thousand Parsec framework.
 
 == Basics ==
 
-In essence, Thousand Parsec defines a client server protocol. The three main components are the [[protocol]], clients and servers. The clients communicate with the servers using the protocol.
+In essence, Thousand Parsec defines a client server protocol. The three main components are the '''[[protocol]]''', '''[[clients]]''' and '''[[servers]]'''. The clients communicate with the servers using the protocol.
 
 Because everything talks the same protocol, any client can connect and work with any server.
 
 The game is implemented within the server, and the client learns all the specific things about the game through the protocol. This means that any client can play any game (though it is possible to specialise clients to be more helpful to some games than others). This also means that many ways of cheating are removed, as the client is no responsible for any part of the full game universe. The server is the only authoritative source of information about the game universe.
 
-Game AI are implemented as clients and therefore cannot cheat by having more access to information. Some limited "game mechanics" can be implemented within game though, but these will generally not be competing with the players.
+'''[[AI Clients|Game AI]]''' are implemented as clients and therefore cannot cheat by having more access to information. Some limited "game mechanics" can be implemented within game though, but these will generally not be competing with the players.
+
+A '''Metaserver''' exists to help potential players find servers to connect to. The servers connect occasionally to update their details, and clients connect to get the list of servers and their properties. On the local network, servers can publish their details by mDNS-SD (multicast DNS service discovery).
