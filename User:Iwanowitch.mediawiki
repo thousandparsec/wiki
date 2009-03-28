@@ -1,3 +1,5 @@
 Hello!
 
-[[User:Iwanowitch/RFTS AI proposal|My AI proposal for RFTS]]
+On IRC known as verhoevenv.
+
+[[User:Iwanowitch/RFTS AI proposal|My AI proposal for RFTS (gsoc 2008)]] grew into [[daneel-ai]].
