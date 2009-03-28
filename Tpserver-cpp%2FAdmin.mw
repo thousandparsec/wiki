@@ -59,20 +59,4 @@ This protocol extension requires '''version 0.3 or greater''' of the TP protocol
 | 1007 || '''Command Result Frame''' || Response frame with the result of the command. || Response || 
 |}
 
-== Testing ==
-
-You can test remote administration using the following procedure:
-
-# Clone and compile the 'config' branch of the tpserver-cpp repository.
-# Clone and compile the 'config' branch of the libtpproto-cpp repository.
-# Clone and compile the tpadmin-cpp repository, linking against the above libtpproto-cpp (also requires libtprl).
-# Run an instance of the above tpserver-cpp as normal (use the -d switch for non-daemon operation).
-# Run tpadmin-cpp.
-# Type 'open localhost' (or replace 'localhost' with the host running tpserver-cpp).
-# Type 'login admin admin' (or other admin password, if specified).
-# Type 'help' to get a list of local and server commands.
-# Type 'quit' and close the server when finished.
-
-If you find any bugs, please send a detailed description to [[User:Ezod|ezod]].
-
 [[Category:Tpserver-cpp]]
