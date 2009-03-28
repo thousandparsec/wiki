@@ -14,6 +14,12 @@ For minisec, I found the following orders via tpclient-pywx:
 Which I made into the constraints <code>order_noop</code> to <code>order_mergefleet</code>.
 
 == Order arguments ==
-Now we have to determine the arguments. Each order will have a first <code>int</code> argument that signifies the object this order is assigned to. The next arguments depend on the order. Some experimentation and source diving/debugging might be required to get them right.
+Now we have to determine the arguments. Each order will have a first <code>int</code> argument that signifies the object this order is assigned to. The next arguments depend on the order. Some experimentation and source diving/debugging might be required to get them right. What I did is as follows: use the Python debugger to stop daneel when the cache has been read in, find the orders via <code>tp.netlib.objects.OrderDescs</code>, then use the <code>substruct</code> and <code>ARG_NAMEMAP</code> attributes to try and find the arguments. The exact procedure is an excellent exercise for the reader. The result (I think) is as follows:
+* No Operation: time
+* Build Fleet: list, string
+* Move: position
+* Colonize: nothing
+* Split Fleet: list
+* Merge Fleet: nothing
 
 Before I continue this, I'll go play some minisec. :)
