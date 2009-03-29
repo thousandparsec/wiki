@@ -2,9 +2,9 @@
 
 '''Project: Titans of the Void ruleset'''
 
-Titans of the Void is a ruleset proposal for Thousand Parsec emphasizing supply lines and small battles between large, multi-piece ships.
+Titans of the Void is a ruleset proposal for Thousand Parsec emphasizing supply lines and battles between large, multi-part ships.
 
-The goal of this ruleset is to present the players with a small set of very powerful combat ships and alot of strategic options.
+The goal of this ruleset is to present the players with a small set of very powerful combat ships and many strategic options. In many ways, this is similar to modern tactics games(Fire Emblem, FF Tactics, etc), but with an economic 4x flair to it. 
 =The Game=
 ==Ships==
 There are two classes of ships in TotV: Battlecruisers and support craft.
@@ -36,12 +36,12 @@ Battlecruiser components:
 **Flak ship: Two abilities, for each flak ship present in an area, destroys one scout before it can report back. Also, if in the same area as enemy support craft, has a chance to randomly destroy one.
 
 ===Balance concept/thinking===
-Battlecruisers are battlecruisers and completely overpower support craft. Also, 1v1 they are basically even, however, there is a specific set of ideas behind their components. The expected value of going after any specific component is about equal.
+Battlecruisers completely overpower support craft. 1v1 they are basically even, however, there is a specific set of ideas behind their components. The expected value of going after any specific component is about equal.
 
 Things that are hard to hit (Bridge, targeting) cause massive failure to the enemy, while things that are somewhat easy to hit (engines, weapons) cause problems, but cannot be fully taken out, while the easiest to hit (Hull) take an enormous amount of damage before being effected. Assault bays are a special case as I am not sure yet if they should be an easy target (stop planetary takeover fast) or hard (have to try for it). Note that an enemy player has options, they can go after subsystems (crippling their opponent) or go after the hull (no effect for a long time) to try and destroy their opponent.
 
 Support craft are pretty simple in their balance:
-*Munitions and repair are needed all the time, and are very valuable to have around, but don't do anything but support their battlecruisers.
+*Munitions and repair are needed all the time, but don't do anything in combat but support battlecruisers.
 *Scouts are fast and necessary, but are easily fooled/countered by flak (as well as having no other abilities)
 *Flak can stop the opponent from spying on you, and can raid enemy supply lines, but serve no direct support to your battlecruisers.
 
@@ -50,8 +50,8 @@ Support craft are pretty simple in their balance:
 Combat is intended to be simple to construct, yet deep in strategic options.
 
 There is only ONE combat ship type, the battlecruiser. A battlecruiser is given standing orders for its target (A specific component type, or a specific supply craft type). 
-*One battlecruiser turn is thus: it issues orders to weapon arrays based on standing orders and the state of targeting systems. If targeting systems are at 100% repair, each weapon array told the standing order target. Otherwise, they have a %repair chance being told to target the correct system, or otherwise a random system/ship.
-**When an array receives a target, it 'rolls' against the chance to hit the component/ship. If it hits, it applies its damage based on the state of the weapon array (%repair=%damage dealt). Armor, and possibly damage types will come into play here also.
+*One battlecruiser turn is thus: it issues orders to weapon arrays based on standing orders and the state of targeting systems. If targeting systems are at 100% repair, each weapon array told the standing order target. Otherwise, they have a %repair chance to target the correct system, or otherwise a random system/ship.
+**When an array receives a target, it 'rolls' against the chance to hit the component/ship. If it hits, it applies its damage based on the state of the weapon array (%repair=%damage dealt). Armor, and possibly damage types, will come into play here also.
 *Support craft combat is exceedingly simple. If a flak ship is in the same area as an enemy support craft, they have a chance to destroy it. (One to one ratio of flaks: possible kills).
 
 ===Health===
@@ -80,8 +80,8 @@ A planet has two modes it can be in. Production and Barricade.
 *Flavor text. As strange as it sounds, the most important non-mechanic part of TotV to me is the flavor. I have found that interesting and immersive feedback (even textual) from a game makes it far, far more fun. Example: (A battlecruiser has just taken major damage to its engines during the last turn)
 **What I don't want: "Battlecruiser at Alpha Centauri has taken %75 damage to engine"
 **What I do want:"The Indomnible's captain reports: a barrage from the Freedom's missile batteries has struck home and they are now venting engine plasma (Engines at %25)" (This would be better if I was a writer.... might get some help on these)
-*Relatedly, Battlecruisers MUST be player nameable. Empire taught me that.
-*I want to build the combat model on a sound mathematical model, making the value of targets equal across a ship.
+*Relatedly, Battlecruisers are player named.
+*Components on a battlecruiser will have equal value as targets. (%to-hit vs effect)
 
 ==Wishlist==
 These are features that are NOT required for the game to work or be balanced, but will add to the complexity and fun of the game. (In order of importance)
@@ -93,39 +93,30 @@ These are features that are NOT required for the game to work or be balanced, bu
 *Varied player abilities (races)
 
 =Design=
-*I start my summer on May 14th, and it runs until August 25th. (I am out of town the week of July 20th, but can do some dev. remotely)
-*If accepted, I would be working this as my summer job (thus, 8 hour days, 5 days a week) I would also hope to continue development after GSoC
-*My hours (if needed for communication) would be basically 100% flexible. (CS majors don't sleep)
+*I start my summer on May 15th, and it runs until August 25th. 
+*I am currently applying to GSoC projects and research projects at my college. So my plans are not fully solidified.
+*I would be working this as my summer job (thus, 8 hour days, 5 days a week) I would also hope to continue development after GSoC
+*My hours (if needed for communication) are 100% flexible.
 
 ==Milestones/Time Estimates==
 #May 15th: Base ruleset will be finalized (My finals end on the 14th)
-#May 14th-16th: Write a small testing environment for ships. (Single location that displays ships at the location) Includes writing a simple planet class.
-#May 19th-21st: Write two ship superclasses, and one stub implementation of each. 
-#May 21st-23rd: Write stub versions of all support ships as implementations of the superclass.
-#May 25th-28th: Begin writing stubbed versions of all _Basic components.
-#May 28th-30th: Complete _Basic components. Add in component lists to _Basic ship classes.
-#June 2nd-6th: Write display system for ships. This will show the client the status of components on a battlecruiser and the status of a support craft.
-#June 9th-10th: Write recognition for the server to detect that a battle should take place, and pass off to combat code.
-#June 10th-13th: Write combat code that follows the rules outlined for combat between battlecruisers.
-#June 15th-17th: Write move order code that updates on a turn basis.
-#June 17th-18th: Write repair order code that can be issued to support craft.
-#June 18th-20th: Write target/takeover orders that can be issued to battlecruisers. 
-#June 22nd-25th: Write server turn order processing. Includes rez collection from planets.
-#June 25th-27th: Heavy testing of the components of the combat code. Rewrite testing environment to include multiple locations to better test combat code and movement code.
-#June 30th-July 1st: Write server detection of flak ships for destruction of enemy support craft.
-#July 2nd-4th: Write server detection of scouts for vision purposes, and include checks for present flak ships.
-#July 6th-10th: Write in damage processing on battlecruisers so that components modify capabilities.
-#July 11th: Testing of component damaging. (Using the combat code from before)
-#July 14th-16th: Write planetary mode switching orders. Implement modes for planets.
-#July 16th-18th: Write planetary construction order. Implement construction queue on the planet.
-#July 21st-25th: Out of town.
-#July 28th-30th: Write combat descriptor generator code. Insert into combat feedback.
-#July 30th-August 1st: Write lots of descriptors. Other flavor text insertion.
-#August 3rd -> August 25th->:Balancing, catchup, and bugfix. If time permits, addition of wishlist features.
+#May 14th-18th: Write a small testing environment for ships. (Single location that displays ships at the location) Includes writing a simple planet class.
+#May 18th-22nd: Write stubs and superclasses for all ships.
+#May 25th-29th: Write _Basic components. Add in component lists to _Basic ship classes.
+#June 1st-5th: Write display system for ships. This will show the client the status of components on a battlecruiser and the status of a support craft.
+#June 8th-12th: Write recognition for the server to detect that a battle should take place, and write combat code that follows the rules outlined for combat between battlecruisers.
+#June 15th-19th: Write move and repair order code that updates on a turn basis.
+#June 22nd-26th: Write target/takeover orders that can be issued to battlecruisers. Write server turn order processing. Includes rez collection from planets.
+##At This point, a turn can be taken, combat can occur, and orders can be given.
+#June 29th-July 3rd: Heavy testing of the components of the combat code. Rewrite testing environment to include multiple locations to better test combat code and movement code. Write server detection of flak ships for destruction of enemy support craft.
+#July 6nd-10th: Write server detection of scouts for vision purposes, and include checks for present flak ships.
+#July 13th-17th: Write planetary mode switching orders. Implement modes for planets. Write planetary construction order. Implement construction queue on the planet.
+#July 20th-24th: Write combat descriptor generator code. Insert into combat feedback. Write lots of descriptors. Other flavor text insertion.
+#July 27th -> July 31st->:Balancing, catchup, and bugfix (and more combat descriptors). If time permits, addition of wishlist features.
 
 I have scheduled all milestones on Fridays, this is so that I have a two day buffer zone to fix any problems/catch up as needed.
 
-I expect to have enough time to implement a good number of wishlist features. 
+This is a pretty conservative timeline for working 8hr days. I'm confident that the basic implementation listed here could be completed in less time.
 
 If I do somehow fall behind, all features not listed under wishlist are necessary for balance to be achievable, thus I will reschedule my milestones to extend into the last time period, and cut some wishlist features.
 
@@ -140,15 +131,15 @@ Four types of player interactable objects in TotV:
 #Battlecruisers (Move,Target,Takeover)
 #Components (No orders)
 
-Five types of orders:
+Six types of orders:
 #Move- Issued to a ship. Targets a planet. The selected ship will move at it's top speed to the targeted planet.
 #Barricade/Production- Issued to a planet. Toggles the planet between Production mode and Barricade mode. (See balance section).
-#Produce- Issued to a planet. Tells the planet to being producing the selected ship (assuming the player has enough resources).
+#Produce- Issued to a planet. Tells the planet to begin producing the selected ship type (assuming the player has enough resources).
 #Target- Issued to a battlecruiser. Sets the priority target type for the battlecruiser. (See combat section)
 #Takeover- Issued to a battlecruiser. Targets the planet at the same location. If the planet is vulnerable, sets the planet's owner to the battlecruiser's owner.
-#Supply/Repair- Issued to a support craft. Targets a battlecruiser in the same location. Adds to the battlecruiser's ammo/fuel, or repairs a component.
+#Supply/Repair- Issued to a support craft. Targets a battlecruiser in the same location. Adds to the battlecruiser's ammo/fuel, or repairs a component. (This order may be given targeting an un-damaged battlecruiser, in which case the support ship follows until repairing will have an effect.)
 
-I would prefer to develop in C++, but I know some python and would be happy to work on tpserver-py if that is the only spot available.
+I would prefer to develop in C++.
 
 ===Design Diagram===
 *Planet Class- Contains flag for mode, and getRez()
@@ -188,9 +179,9 @@ I would prefer to develop in C++, but I know some python and would be happy to w
 **SP_Flak
 ***SP_Flak_Basic-damage(dmg) updates internal HP. getHP() returns HP ratio.
 
-The design emphasizes modularity of components. The goal is that later on, new battlecruiser types or variant support ships can be implemented with radically different components that behave differently. Ex. damage might be shared across components in one ship, or the bridge might be indestructible.
+The design emphasizes modularity of components. The goal is that later on, new battlecruiser types or variant support ships can be implemented with radically different components. Ex. a hull that shares damage across all components, an easy to hit engine that gives a large speed bonus, or a bridge that is indestructible.
 
-The _Basic indicates this is the base implementation that is required to be completed for the game to work. Other implementations can be added for more features.
+The _Basic indicates this is the base implementation that is required to be completed for the game to work. Other implementations can (and should) be added for interesting play.
 
 ==Turn Process==
 #Check win conditions.
@@ -206,18 +197,17 @@ The _Basic indicates this is the base implementation that is required to be comp
 
 =Student=
 ==Contact==
-*I try to idle in #tp always (PunD)
 *I am consistently available via chat services, email, and VoIP services. (Ask me for any of my contact info specifics)
-*I will blog daily as to progress and the design procedure.
 *If for some reason, I am out of contact, my phone number will be available.
-*I do not anticipate any issues with losing access to internet (I have a FIOS connection), but in the event of computer failure, I have 3 backup machines I could move to.
+*I do not anticipate any issues with losing access to internet and in the event of computer failure, I have many backup machines I could move to.
 ==Info==
-Hi, my name is David Kohlbrenner and I am a freshman at Carnegie Mellon University majoring in Computer Science.
+Hi, my name is David Kohlbrenner and I am a sophomore at Carnegie Mellon University majoring in Computer Science.
 *I have experience with large projects, and am used to dealing with pre-existing codebases.
 *I have not worked on an Open Source project before, but am eager to start
 *I have worked as a professional Java developer for a Washington DC based startup.
-*I am currently a part-time developer for a California based web startup.
-*I have a large amount of experience in Java and C, decent (and growing) experience in C++, and a good grasp of a scattering of other languages.
-*I have experience developing and implementing systems ranging from data compression and image manipulation (C) to OO modular email filters (Java).
-*I have been an avid gamer all of my life, and concentrate mostly on FPSs. However, 4X and space sims also take much of my interest. 
-*Recently I have been an addict of Sins of a Solar Empire, but my fondest 4X memories come from Master of Orion 1 and Spaceward Ho!.
+*I spent my previous summer developing software to sell on google's Android Market. (see: stelluxstudios.com) 
+*I have a large amount of experience in C, x86 assembly, and Java. I have some experience in C++, and have worked with a scattering of other languages.
+*I have experience designing and implementing systems ranging from a small unix-like kernel (C) to card games and sudoku on mobile devices (Java).
+*I have been an avid gamer all of my life, and concentrate mostly on FPSs and RPGs.
+*My fondest 4X memories come from Master of Orion 1 and Spaceward Ho!. Recently I have been playing Stardock's amazing Galactic Civilizations series.
+*I applied to TP for GSoC last year with TotV and have since updated it for this year.
