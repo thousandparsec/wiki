@@ -1,0 +1,98 @@
+=Quick Launch=
+'''... or "Abstract"'''<BR>
+The main goal of this project is to create a configurable AI "engine" incorporated into Thousand Parsec framework. It will be written mainly in C++ using all standard (STL) or close to standard (Boost) tools.
+<P>In the best case scenario, the final product:
+*will be relatively light on computer resources, with backdoor opened for pthreading support in the future
+*will keep up with the current state of the game, reflecting it and dynamicaly changing its strategy
+*will support configurable strategy interface without the need of recompilation, using just external config files
+*will support any ruleset supported also by libtpproto-cpp, new ruleset will be added just by adding new config file
+*will be through intensive test period
+*will be able to beat Garry Kasparov in ChessSec (optional, author cannot guarantee future existence of such ruleset)
+
+=Destinations List=
+'''... also "Features"'''<BR>
+
+==Reactive Agents Technology==
+*'''Goal:''' Each suitable in-game object has his own agent incorporated in agent hierarchy and governing a behaviour of this object.
+*'''Purpose:''' Decentralization of AI enables formation of local strategies, better resource management and overall flexibility of AI behaviour.
+*'''Plan B:''' This is the core idea of the whole project. No backup plan. This is a must.
+*'''Description:'''
+Example is worth one thousand words here. Lets have simple ruleset:
+#There is only one type of ship, a colonization ship. It costs 1 resource unit to build.
+#Any players planet can produce ship, these ships will have starting location of its parent planet.
+#Any number of ships can be produced each turn on any planet, provided there is enough resources.
+#Every players planet produces constant of resource units each turn. Resources goes to shared pot.
+#Player starts with one planet and one colonization ship.
+
+We will have two "static" agents, Resources manager and Map manager, both one of their kind. Also, there will be two kinds of "dynamic" agents, Planetary agent and Ship agent, both types created and assigned whenever new unit of their type comes under Players command. Now we will describe their behaviour:
+<BR>
+
+*'''Resource manager:''' Knows how many resources there are at any given point. It takes requests for resources and divides the resources among requestees.
+*'''Map manager''' For each abandoned planet, finds nearest planet owned by Player. Asks Resource manager how many resources we have. Picks this many shortest routes from owned planets to abandoned ones. Sends list of targets and distances to them to each of the involved Planetary managers. It checks out successfully assigned targets.
+*'''Planetary manager:''' If he gets target list form Map manager, he asks Resource manager for resources. He then builds as many ships as possible and assign them targets, starting with the closest. It then send notice of successfully served targets to Map manager, so he stops assigning those in future.
+*'''Ship manager:''' Has target planet to colonise. When in orbit, it launches Colonise order. Then its destroyed.
+
+This example is just illustrative, but as you can see, the behaviour of each agent is rather primitive, yet collectively, they will be able to colonise all the worlds in the map. There is lots of details to test and change in real world ruleset case, however the complexity of AI configuration will increase horizontally (more types of agents), rather than vertically. Also, failiure of one of the specific "dynamic" agents will not affect (much) functionality of the rest of the system, due to their local nature, while failiure of the top "static" agents is unlikely, due to the primitivity of their programme.
+
+==Exploit Existing Elements==
+*'''Goal:''' Save as much time for testing and making it work<BR>
+*'''Purpose:''' AI without crash testing is beautiful piece of useless theory.<BR>
+*'''Plan B:''' Alternative can be used only when tests show it should be used, reinforcing the original point.<BR>
+*'''Description:'''
+There is a development in progress for my Bachelor thesis. The details can be found [http://www.stud.fit.vutbr.cz/~xmynar01/ here]. It involves not only the library for creating agent structures, which will be used as base of this project, it also means a lot of research in AI and department. Last, but not least, it means not only that some things are done already, but that even more things will be done even before the official start of coding, because the thesis deadline is in the middle of May.
+<BR><BR>
+Existing clients will be exploited. It is not the goal of this project to build a client from scratch. Everything what can be reused from other clients, mainly network interface, will be reused. Natural choice is tpclient-cpptext and parsek, because of the language compatibility.
+<BR><BR>
+There are ways how to pay back this debt. Libtpproto-cpp will be tested as a consequence of testing this AI client. It can be incorporated into Parsek to create compact singleplayer client. Being designed not dependent on any exiting or future ruleset, but rather on protocol possibilities, it will be able to play not only rulesets like MTSec, which are currently very poorly supported, but also help to test rulesets in progress, for example EliteSec, proposed also for this years GSoC by Epyon [http://www.thousandparsec.net/wiki/User:Epyon/2009/EliteSec here]
+
+==Tweaking through Testing==
+*'''Goal:''' AI works perfectly with one ruleset (MTSec) and has basic ability to play others
+*'''Purpose:''' Make it usable for singleplayer, find out limitations when specialized
+*'''Plan B:''' Extending usability to as much rulesets possible, find out limitations when generalized
+*'''Description:'''
+The ultimate goal of this AI is mastering of one ruleset, preferably one with weak support in other AI clients, while also being able to play at least two other rulesets at maybe not top notch, but still reasonable level. Good choice will be RFTS and Risk, because those two are supported by two main clients of today, Daneel and Gencon, which will allow me to do some comparison and benchmarking against concurrent systems. However, flexibility is not expected to be a bottleneck. Therefore, I will focus more on optimizing single ruleset as much as possible.
+<BR><BR>
+One of the main goals in the abstract section says "will be through intensive test period". This is particulary important to project like this. It is very imaginable, that tweaking the "final" product will take longer than making it "final". I am very aware of this, so I count with testing period over one month, from mid-term evaluation until end of GSoC.
+==Make it Configurable==
+*'''Goal:''' Behaviour of all agents will be configurable from an external config file
+*'''Purpose:''' Makes possible to change (improve) the AI also for people not able to compile it
+*'''Plan B:''' Not included in the final product, low priority
+*'''Description:'''
+Each object allowed by current protocol and server capability, such as Planet or Fleet, will have not only hardwired agent, but rather configurable agent taking the details from a file (possibly XML or simple custom text format) at startup. This approach will quicken tweaking process, allows adding support for new rulesets without compiling the client, and other very useful concepts. Lets name at least two:
+*Difficulty settings. There can be more config files for each ruleset, which will differ in AI effectivity. This is very easy solution of setting a difficulty level in singleplayer.
+*Stages. There can be defined thresholds in game, such as military superiority, having certain ratio of planets compared to enemy etc., which will trigger change of overall strategy. Lets say that there will be four stages in the config file, startup, middle play, bad ending and good ending. Each agent will then have defined different behaviour for different stages - for example good ending triggers, when AI has two times more ships and two times more resource generation per turn then opponent. At this stage, all research agents and colonisation agents will stop, agents responsible for offensive fleet generation will double their production etc., to ensure quick end of already won match.
+It is a safe bet to say at this point, that this functionality is not crucial for success of the AI itself. It is just very neat feature to have when it comes to usability and flexibility. This proposal has to count with limited schedule, so this is a good feature to select as "expendable" when other features will require more effort than originally planned, and let this one be finished some time else, after GSoC is over, as I plan to stick with this project long after GSoC anyway.
+=Flight Plan=
+'''... a.k.a. "Timeline"'''<BR>
+My schedule will be a bit different than that created by Google, thanks to having to prepare for final exam in order to become Bachelor of computer science:
+*May 22th - This is the deadline for finishing my bachelor thesis. Because of Thousand Parsec AI client being the practical part of it, it is most desirable, that there will be at least working prototype at this point, capable of playing minisec against human. It will have more than month and a half of work included, so it is very possible goal.
+*May 23th - Official start of coding. For me, it is official start of learning period before my finals +- week.
+*June 16th - 19th - My finals. Im back to work.
+*July 13th - Midterm evaluation. At this point I will have over three weeks to implement the rest of game objects and their corresponding agents and at least basic config file interface.
+*August 10th - Suggested pencils down. Almost a month of testing will hopefully make my AI to excel in one ruleset and be able to play some others. A lot of alternative directions of development are possible in this period, depending on situation with other projects and/or unforseen problems with this one.
+*August 17th - A week to summarize and evaluate progress so far, document, pack up and plan after-GSoC future of the project.
+*August 18th - Party with beer and more beer instead of strippers.
+=Pilot=
+'''... known as "Skiffcz"'''<BR>
+Hello, my name is Pavel Mynar and I am 24 years old IT nerd (computer enthusiast
+in politically correct language). I will hopefully finish bachelors degree in   
+computer science this spring, and will hop on the follow-up two years long      
+masters degree. All this in Czech Republic, Brno University of Technology.      
+I have participated in many lesser school projects across the computing universe
+from individual (writing simple snippets in lisp, prolog, hardware definition or
+scripting languages) to bigger team projects (including building our own basic  
+compiler, minimum SMTP server or client/server based checkers). Despite heavy   
+drift towards c/c++ family, we were tought to extend our reading skill to other 
+languages, to understand different paradigms and exploit their essence.         
+<BR><BR>
+I can speak English, C and C++ on quite sustainable and usable level (at least I
+like to think that). I am able to read and make minor modifications (for testing
+purposes) to programmes written in some other languages, including (but not     
+limited to) lisp, prolog, python, java, sh, vhdl, etc. I can use SVN or other   
+version management systems, I am familiar with basic project management and     
+software lifecycle. I am by no means expert in any of these areas, but my entire
+study so far consisted of learning completely new approach, and then applying it
+in completely insufficient time period, so I am quite good in that.
+=Starfleet Command=
+'''... commenting on my mission"'''<BR>
+Looking forward to your input!
