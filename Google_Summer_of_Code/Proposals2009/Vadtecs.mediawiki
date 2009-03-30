@@ -30,38 +30,42 @@ To implement unit testing for the Thousand Parsec C++ client protocol module to 
 :*In addition, the unit testing will implement testing of network code and provide benchmarking wherever possible.
 :*Benchmarking will be achieved initially using timing of calls to code. If possible within the allowed time frame, a method similar to cachegrind from the Valgrind suit will be employeed to provide more accurate method of benchmarking of code pathways.
 
+=== Classes to be unit tested ===
+
+:*Buffer
+
 === Expected Project Milestones ===
 
-::#General
-::#*Maintain documentation of unit testing
-::#**Using the wiki to document each unit test as it is completed, or in a situation where unit testing isn't feasible or possible documenting as to why
-::#*Subversion/Git repository tracking
-::#**Use Subversion or Git to track all code changes
-::#**Insure that any given revision will compile and run as expected
-::#*Provide feedback to the core development team and mentors regarding any possible improvements or changes that could be made to the protocol code
-::#'''April 20 - May 22'''
-::#*Research unit testing methodologies and techniques
-::#*Create simple examples of unit testing
-::#*Become familiar with the Thousand Parsec protocol and gain a fundamental understanding of its workings
-::#'''May 23 - July 5'''
-::#*Begin extending the existing unit testing for the current C++ protocol module.
-::#**Benchmark any possible code pathways
-::#*Document each unit test as it is completed
-::#'''July 6'''
-::#*The unit testing will have implemented at least 75% of all non-network related unit testing and any possible benchmarking of the tested code pathways
-::#'''July 6 - August 9'''
-::#*Continue implementing non-network related unit testing and any possible benchmarking of the tested code pathways
-::#*Continue documenting each unit test as it is completed
-::#*Once the non-network related unit testing is completed, begin implementing network related unit testing and any possible benchmarking of the tested code pathways
-::#'''August 10'''
-::#*The testing will have implemented 100% of all non-network related unit testing and any possible benchmarking of the tested code pathways
-::#*The testing will have implemented as much network related unit testing as possible with any possible benchmarking of the tested code pathways
-::#'''August 10 - August 16'''
-::#*All implemented unit testing will be finalized and documented
-::#*Any unit testing which is incomplete will be excluded from normal unit testing to prevent false reporting or errors
-::#*Code clean up
-::#'''August 17'''
-::#*Final check in of all unit testing code and documentation
+#General
+#*Maintain documentation of unit testing
+#**Using the wiki to document each unit test as it is completed, or in a situation where unit testing isn't feasible or possible documenting as to why
+#*git repository tracking
+#**Use git to track all code changes
+#**Insure that any given revision will compile and run as expected
+#*Provide feedback to the core development team and mentors regarding any possible improvements or changes that could be made to the protocol code
+#'''April 20 - May 22'''
+#*Research unit testing methodologies and techniques
+#*Create simple examples of unit testing
+#*Become familiar with the Thousand Parsec protocol and gain a fundamental understanding of its workings
+#'''May 23 - July 5'''
+#*Begin extending the existing unit testing for the current C++ protocol module.
+#**Benchmark any possible code pathways
+#*Document each unit test as it is completed
+#'''July 6'''
+#*The unit testing will have implemented unit testing of at least the following classes: Buffer
+#'''July 6 - August 9'''
+#*Continue implementing non-network related unit testing and any possible benchmarking of the tested code pathways
+#*Continue documenting each unit test as it is completed
+#*Once the non-network related unit testing is completed, begin implementing network related unit testing and any possible benchmarking of the tested code pathways
+#'''August 10'''
+#*The testing will have implemented 100% of all non-network related unit testing and any possible benchmarking of the tested code pathways
+#*The testing will have implemented as much network related unit testing as possible with any possible benchmarking of the tested code pathways
+#'''August 10 - August 16'''
+#*All implemented unit testing will be finalized and documented
+#*Any unit testing which is incomplete will be excluded from normal unit testing to prevent false reporting or errors
+#*Code clean up
+#'''August 17'''
+#*Final check in of all unit testing code and documentation
 
 In the event the entire Thousand Parsec protocol module has been unit tested and conforms to the requirements of the protocol, I will begin an in-depth look at the code to find any possible improvements that may have been missed or passed over during unit testing.
 
