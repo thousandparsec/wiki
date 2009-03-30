@@ -298,6 +298,9 @@ This is one of the games that if executed well always has room for improvement. 
 
 Looks very nice in general. Some things to add are more info about yourself (which timezone, education, motivation, past experiences, hours a day you would use to work on this, possible abscence/holidays...). Other thing I would like to see if you could add TP protocol structures you would use for each part of the ruleset and how you would use them. if protocol doesn't have the structure yet also mention this so you can quickly see what would be needed there. But as you say you will still have to take a deeper look at the server*protocol to see what's needed. Also I have a feeling that the ruleset itself would be more enough work and you will couldn't afford to also work on improving the client and doing so much work on the graphic stuff. The ruleset would have to have the highest priority and all other things are probably just bonus if there is time left. - [[User:JLP|JLP]]
 
+:About bio/education/personal stuff, I'd rather keep that private for the closed application :). Doing graphic stuff is a hobby of mine, as for the client, it'd be cool if someone would help me in that regard. 
+
+:[[User:Epyon|Epyon]]
 
 ----
 
@@ -317,22 +320,47 @@ I think these steps should be done before the GSoC application period closes as 
 * picking a primary client 
 
 Adding a new ruleset, extending the protocol and updating the clients is just too much and too invasive.
-
 - [[User:mithro|mithro]]
 
----
+:Suggested turn length is around 5 minutes. Single player support would be something that could give the game a second life ( I wrote about it in the proposal ). However in that case, a end-turn-on-demand option (or even better, auto-end-turn) should be possible. Scenarios would be really cool with pre-prepared mission plots ( like in Frontier: First Encounters ). 
+
+:Market and mission interfaces are a problem, a client would need to be updated for that, but I doubt that these would need serious changes in the protocol. Even if they did however, TP would really benefit from those changes. 
+
+:As for picking a primary client, I fully agree, but I'd really count on your suggestions in this regard. I'm much more content with working with C++ code than Python, but if someone would be able to assist me I can choose a Python one.
+
+:[[User:Epyon|Epyon]]
+
+----
 
 [[User:nash|Nash's]] Comments:
 
 Okay... seems to be a _Very_ slow game?  Does running multiple games at one make sense or something?  
 
+:The ruleset is more designed to play like a browser game -- eg. it's not taking full focus, but as something to be played in the background (what I really like, and I think there's a big audience for that). If several extensions were to be added however, it'd get more and more time-consuming. Still, the 5 minute turn length still allows for some dynamics.
+:[[User:Epyon|Epyon]]
+
 Combat worries me... it's very random and out of my control as a player.  Elite was famous for it's full on combat which was a game of skill... good players could survive with a pulse laser... Bad players even an iron cobra wouldn't help.  How do you propose to capture some of that?  Also tricks like avoiding the planet-to-bouy route won't help?
+:Some decisions had to be made to fit a playable version within the time frame. Extended combat would be something nice to add in the future, however the quick and dirty system here isn't at all that bad. The damage calculations would be designed that way that if there's not an absurd difference between ships ( a fully loaded Imperial Courier vs and Eagle ) combat will take more than a couple of turns -- this is where tactics and skills could come in. The ability to always escape would also be removed, based on different factors -- tactics, skills and equipment. 
+:[[User:Epyon|Epyon]]
 
 Regarding mithro's comments: I'm not too concerned about _small_ extensions to protocol and client additions, but you need to say what needs to be added now.  This is an area that also requires intergration with others.
+:That could definitively be done once I find some time.
+:[[User:Epyon|Epyon]]
 
 Other random questions:
 Is there a better economic model then the original elite?  
+:The model I planned is far superior. The basic flaw of elite economy was that it was completely inaffected by player actions -- once you found a good trade route ( Sol vs Barnard's Star with Robotics from FFE comes to mind ) you could make money ad infinitum. EliteSecs model is self-updating, based on simple laws of economy -- the more you sell something at a given place, the more it's price falls.
+:[[User:Epyon|Epyon]]
+
+
 How are planets and descriptions generated?  
+:Procedurally, based on sets of words. However, the process will be less chaotic than one can imagine. First we determinate the planet type, temperature, humidity, then all further randomization rolls are dependent on previous factors.
+:[[User:Epyon|Epyon]]
+
 What can we expect to see done before we say 'yah' or 'nah' (or rank anyway) for SoC?
+:Unfortunately this is a gamble for you, because I need to say "not much". I'm currently still working full-time at a corporation at the moment *and* running a lecture on Game Programming at the university. My amount of free time will be able to rise only once I'm sure that I will have my survival granted for the summer, and will be able to quit my regular job.
+:[[User:Epyon|Epyon]]
 
 Generally my biggest concern would be: Why is this fun?  It's fairly slow game now.  The main excitment (combat) has gone out the window and replaced with a random 'you die now' mechanic.
+:Mainly because of the life of the universe. Things happen around you, even if there are no players. Also, due to the slow paced gameplay, this design has the same merits as space browser games. A player wants to see his avatar grow in time. Also, form my experience in playing Elite, and from the experience of people I know, I noted, that it wasn't combat that driven them. It was the ability to explore and live in an open ended galaxy. This is the feeling I want to achieve, also adding the element of the galaxy being alive ( which I really lacked in the Elite series ). Please note however, that in the basic settings there is no 'you die now' anyway -- your ship is just heavily damaged, looses cargo and makes planetfall. 
+:[[User:Epyon|Epyon]]
