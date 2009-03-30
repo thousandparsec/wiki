@@ -34,6 +34,8 @@ To implement unit testing for the Thousand Parsec C++ client protocol module to 
 
 :*Buffer
 
+In addition, all frames will be unit tested to make sure they serialize/de-serialize properly. This inherently will unit test them. The classes listed above will be unit tested directly.
+
 === Expected Project Milestones ===
 
 #General
