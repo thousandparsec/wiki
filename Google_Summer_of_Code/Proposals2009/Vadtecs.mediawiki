@@ -33,6 +33,8 @@ To implement unit testing for the Thousand Parsec C++ client protocol module to 
 === Classes to be unit tested ===
 
 :*Buffer
+:*Frame
+:*FailFrame
 
 In addition, all frames will be unit tested to make sure they serialize/de-serialize properly. This inherently will unit test them. The classes listed above will be unit tested directly.
 
@@ -54,14 +56,16 @@ In addition, all frames will be unit tested to make sure they serialize/de-seria
 #**Benchmark any possible code pathways
 #*Document each unit test as it is completed
 #'''July 6'''
-#*The unit testing will have implemented unit testing of at least the following classes: Buffer
+#*The unit testing will have implemented unit testing of at least the following classes:
+#**Buffer
+#**Frame
+#**FailFrame
 #'''July 6 - August 9'''
 #*Continue implementing non-network related unit testing and any possible benchmarking of the tested code pathways
 #*Continue documenting each unit test as it is completed
 #*Once the non-network related unit testing is completed, begin implementing network related unit testing and any possible benchmarking of the tested code pathways
 #'''August 10'''
-#*The testing will have implemented 100% of all non-network related unit testing and any possible benchmarking of the tested code pathways
-#*The testing will have implemented as much network related unit testing as possible with any possible benchmarking of the tested code pathways
+#*The unit testing will have implemented testing of at least 75% of frames for proper serialization/de-serialization.
 #'''August 10 - August 16'''
 #*All implemented unit testing will be finalized and documented
 #*Any unit testing which is incomplete will be excluded from normal unit testing to prevent false reporting or errors
