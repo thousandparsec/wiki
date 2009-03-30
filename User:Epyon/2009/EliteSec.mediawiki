@@ -319,3 +319,20 @@ I think these steps should be done before the GSoC application period closes as 
 Adding a new ruleset, extending the protocol and updating the clients is just too much and too invasive.
 
 - [[User:mithro|mithro]]
+
+---
+
+[[User:nash|Nash's]] Comments:
+
+Okay... seems to be a _Very_ slow game?  Does running multiple games at one make sense or something?  
+
+Combat worries me... it's very random and out of my control as a player.  Elite was famous for it's full on combat which was a game of skill... good players could survive with a pulse laser... Bad players even an iron cobra wouldn't help.  How do you propose to capture some of that?  Also tricks like avoiding the planet-to-bouy route won't help?
+
+Regarding mithro's comments: I'm not too concerned about _small_ extensions to protocol and client additions, but you need to say what needs to be added now.  This is an area that also requires intergration with others.
+
+Other random questions:
+Is there a better economic model then the original elite?  
+How are planets and descriptions generated?  
+What can we expect to see done before we say 'yah' or 'nah' (or rank anyway) for SoC?
+
+Generally my biggest concern would be: Why is this fun?  It's fairly slow game now.  The main excitment (combat) has gone out the window and replaced with a random 'you die now' mechanic.
