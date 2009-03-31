@@ -85,4 +85,11 @@ But in discrete tech tree research there could be a simple way to tell the playe
 
 Is it worth it?
 
+== Progress ==
+How to show progress in researching/learning a particular technology. See [http://www.optisch-edel.de/fo/screenshots/research.jpg].
+
+Might be related to above issue of turn to complete.
+
+I don't think it's a good idea for all the technology descriptions to change every turn, need to localise it to a small number, in just once place (if possible).
+
 [[Category:Proposals]]
