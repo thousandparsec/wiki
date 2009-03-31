@@ -21,66 +21,74 @@ I plan to spend at minimum 4 hours per day and 4-6 hours per weekend working on 
 
 == PROJECT PROPOSAL ==
 
-To implement unit testing for the Thousand Parsec C++ client protocol module to insure proper compliance with all requirements of the established Thousand Parsec protocol.
+To implement unit testing for the Thousand Parsec C++ client protocol module to ensure proper compliance with all requirements of the established Thousand Parsec protocol(s).
 
 '''Testing for correctness'''
-:*The unit testing will test all code pathways to insure that all possible outcomes are within the protocol requirements and specifications.
+:*The unit testing will test at minimum all core protocol frames to ensure that all possible outcomes are within established Thousand Parsec protocol requirements and specifications.
 
 '''Benchmarking'''
-:*Where possible, the unit testing will provide benchmarking of the tested code pathways to help identify potential bottlenecks in the code
-:*In addition, the unit testing will implement testing of network code and provide benchmarking wherever possible.
-:*Benchmarking will be achieved initially using timing of calls to code. If possible within the allowed time frame, a method similar to cachegrind from the Valgrind suit will be employeed to provide more accurate method of benchmarking of code pathways.
 
-=== Classes to be unit tested ===
+:*Where possible, the unit testing will provide benchmarking of the tested protocol frames to help identify potential bottlenecks in the code
 
+:*Benchmarking will be achieved initially using timing of calls to code. If possible within the allowed project time frame, a method similar to cachegrind from the Valgrind suit will be employed to provide more accurate method of benchmarking of code pathways.
+
+
+
+
+
+== EXPECTED PROJECT MILESTONES ==
+
+'''Core protocol frames to be unit tested'''
 :*Buffer
 :*Frame
 :*FailFrame
 :*Cache
 :*CacheMethod
 
-In addition, all frames will be unit tested to make sure they serialize/de-serialize properly. This inherently will unit test them. The classes listed above will be unit tested directly.
+ 
 
-=== Expected Project Milestones ===
+In addition, all non-core protocol frames will be unit tested to make sure they serialize/de-serialize properly. This will inherently unit test the C++ client protocol module.
+
+=== Project Timeline ===
 
 #General
 #*Maintain documentation of unit testing
-#**Using the wiki to document each unit test as it is completed, or in a situation where unit testing isn't feasible or possible documenting as to why
+#**Use the wiki to document each unit test as it is completed, or in a situation where unit testing isn't feasible or possible documenting as to why
 #*git repository tracking
 #**Use git to track all code changes
-#**Insure that any given revision will compile and run as expected
-#*Provide feedback to the core development team and mentors regarding any possible improvements or changes that could be made to the protocol code
+#**Ensure that any given revision will compile and run as expected
+#*Provide feedback to the core development team and mentors regarding any possible improvements or changes that could be made to the C++ client protocol module
 #'''April 20 - May 22'''
 #*Research unit testing methodologies and techniques
 #*Create simple examples of unit testing
-#*Become familiar with the Thousand Parsec protocol and gain a fundamental understanding of its workings
+#*Become familiar with the established Thousand Parsec protocol(s) and gain a fundamental understanding of its workings
 #'''May 23 - July 5'''
-#*Begin extending the existing unit testing for the current C++ protocol module.
-#**Benchmark any possible code pathways
+#*Begin extending the existing unit testing for the current C++ client protocol module.
+#**Benchmark any possible protocol frames
 #*Document each unit test as it is completed
 #'''July 6'''
-#*The unit testing will have implemented unit testing of at least the following classes:
+#*At minimum, the following protocol frames will have been unit tested:
 #**Buffer
 #**Frame
 #**FailFrame
 #'''July 6 - August 9'''
-#*Continue implementing non-network related unit testing and any possible benchmarking of the tested code pathways
+#*Continue implementing protocol frame unit testing and any possible benchmarking of the tested protocol frames
 #*Continue documenting each unit test as it is completed
-#*Once the non-network related unit testing is completed, begin implementing network related unit testing and any possible benchmarking of the tested code pathways
 #'''August 10'''
-#*The unit testing will have implemented testing of at least 75% of frames for proper serialization/de-serialization.
+#*The unit testing will have implemented testing of the core protocol frames
+#*The unit testing will have implemented testing of at least 75% of all protocol frames
 #'''August 10 - August 16'''
 #*All implemented unit testing will be finalized and documented
 #*Any unit testing which is incomplete will be excluded from normal unit testing to prevent false reporting or errors
 #*Code clean up
 #'''August 17'''
-#*Final check in of all unit testing code and documentation
+#*Final check in of all unit testing code and documentation 
 
-In the event the entire Thousand Parsec protocol module has been unit tested and conforms to the requirements of the protocol, I will begin an in-depth look at the code to find any possible improvements that may have been missed or passed over during unit testing.
+In the event the entire Thousand Parsec C++ client protocol module has been unit tested and conforms to the requirements of the protocol, I will begin looking into implementing a cachegrind style of benchmarking of tested protocol frames. 
 
-'''Disaster Plan'''
+=== Disaster Plan === 
 
-Life sometimes throws a rock in the road ahead of us. While I try to avoid them not everything can be avoided. In the event a situation arises that I must deal with, I will do the best I can to handle it and continue working on the project. In the event I am forced to leave the project unfinished, I am confident another coder will be able to finish it in my place due to a constant log being kept of what has and has not been finished, as well as a log of what my intentions are for the project.
+Life sometimes throws a rock in the road ahead of us; while I try to avoid them, not everything can be avoided. In the event a situation arises that I must deal with, I will do the best I can to handle it and continue working on the project. In the event I am forced to leave the project unfinished, I am confident another coder will be able to finish it in my place due to a constant log being kept of what has and has not been finished, as well as a log of what my intentions are for the project.
 
 == IMPORTANCE OF UNIT TESTING ==
 
