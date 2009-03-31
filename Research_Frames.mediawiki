@@ -7,6 +7,15 @@ This model should be able to support all methods used for research by controllin
 
 Per-player, technologies can be known or not know (IE, the player knows the technology exists), and can be learnt or not learnt (IE, the player has researched it, or was given it).
 
+= Examples =
+In a pure discrete tech tree where only one technology at a time can be researched (like Civilisation), there is only one point to distribute.
+
+In a continuous-area percentage given research system 10 or 100 points can be given. Each area is a long string of dependent technologies, or just one technology using visibility to control what the player has.
+
+Research as a resource rulesets can have a point for each research centre.
+
+The ruleset can set however long it wants for a technology to be researched for. It does not directly depend on the points allocated (though the ruleset can use the points allocated to determine how long it should take).
+
 = Frames =
 
 == Technology Description ==
@@ -33,14 +42,47 @@ Research frames are a pair of Get and Set, both returning a Research frame. A Re
 ** assignedPoints - uint32
 ** turns - uint32 (RO)
 
+== Examples ==
+
+This is an example flow of frames to set the research.
+
+<pre>
+Client                       Server
+GetTechnologyTypes ->
+                         <- TechnologyTypes
+GetTechnologyDesc ->
+                         <- Sequence
+                         <- TechnologyDesc
+                         <- TechnologyDesc...
+
+     (somehow get learnt tech ids)
+GetResearch ->
+                         <- Research
+   (choose technology to research)
+SetResearch ->
+                         <- Research
+</pre>
+
 = Open issues =
-* How to find what tech the player has learnt
-* How to find what tech other players have learnt
+== How to find what tech the player has learnt ==
+(and also "How to find what tech other players have learnt")
 
 Possible solutions:
 * provide a similar getIdList/IdList pair for asking for a player's learnt tech
+** how do yo get other players? Break getIdList/IdList?
 * id list in Player Frame
-* flag in technology frame for player's own, no way to get other player's
+** visibility control of Player (later separation of race/fraction/government/etc?)
+* flag in technology frame for player's own
+** no way to get other player's
 * list of players the player knows have learnt this technology in the technology description
+** Double depth visibility (see tech/see who has tech)
+
+== How to tell player how many turns to research a technology will take ==
+
+In continuous tech trees or percentage driven research there is no sane way (at all) to tell the use how long the research will take until the player settles on values (ie, chooses).
+
+But in discrete tech tree research there could be a simple way to tell the player before they choose.
+
+Is it worth it?
 
 [[Category:Proposals]]
