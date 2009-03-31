@@ -1,56 +1,63 @@
-Web Based Client
+====Web Based Client====
 
-Summary
+===Summary===
 
 Taking the Python Client as an example I am to reproduce most if not all the functionality of the Python client in a web based form, using the relevant API.
-Primarily I am a PHP coder, so this will be coded in PHP using a relevant JavaScript platform to provide AJAX functionality.
 
-Proposal
+Primarily, in terms of server language, I am a PHP coder, so this will be coded in PHP using a relevant JavaScript platform to provide AJAX functionality.
+
+===Proposal===
 
 A few years ago I used to play the web based Game Ferion, which is similar in fashion to thousand parsec, given that it is a Space Based game, the aim being to conquer the opponents.
-I aim to implement all four of the initail ideas listed, in such a way so to allow the Client to be used for any ruleset as defined by their controlling files.
 
-TimeLine
+I aim to implement all four of the initial ideas listed, in such a way so to allow the Client to be used for any ruleset as defined by their controlling files.
 
-Initial Needs:
-Generate Cron based data updater, I need to determine caching requirements, would it be quicker to store data in a mysql server, as apposed to querying the server a lot,
+It is anticipated that extensions to the libtpproto-php client library will need to be performed. Having had a fiddle with the php client library and thru reading relevant documentation I envisage most of the time going on the client/server communication part of the web client.
+
+===Elements===
+
+The PHP library will need extensive improvements and code in order to bring it up to usable standards, in line with the python library. This will take up the bulk of the time.
+
+Server communication is the next step. Ensuring that any client can communicate with the server appropriately.
+
+===Things To Consider===
+
+Caching
+
 User Authentication to the server,
-The Star Map I initially see as a Key Part to the Client, this will need to be key to  the Web Based Client
 
-XML-RPC transfer seems the most appropriate method for Object data transfer, loaded asynchronously from the server
+The Star Map – This is primarily going to be described using XML and generated on the fly from a pool on image, there is also the possibility of animation, for turn cycles.
+
+XML-RPC transfer seems the most appropriate method for Object data transfer, loaded asynchronously from the server, this is also easy to export for saving and other client use.
 
 Issuing Orders should be relatively straight forward, keeping things logical will be the harder part.
 
-Design Creation and management will take the longest bulk of the time
-
 Regardless of TimeLine, I will endeavour to be further involved with TP, both as a player and as the web client developer.
 
-Important
+===TimeLine===
 
-Tools/Technologies
-PHP for main website coding
+
+===Tools/Technologies===
+
+PHP for main website coding, and client protocol.
+
 xHTML 1.1 for the HTML
+
 Jquery seems the likely JavaScript platform to be used, as this time I have  never used a JavaScript platform other than Scriptaculous, which is a JavaScript Effects Library
+
 CSS for styling
+
 XML-RPC, for object description, from a central data server.
 
-Mock Up
-Will be drawing one up this weekend, as well as looking at the PHP interface library. For some code samples
+===Mock Up===
+to be done
 
-Myself
+===Myself===
 
 GSoC is an interesting platform, however it can be difficult to find a project, that fits my skill set, I'm not a programming in the sense that one builds a programme to run continuously, such as the Thousand Parsec server, but more of a coder who builds websites. So the Web Based Client for Thousand Parsec instantly stood out as an interesting project.
-
 I have also been friends with (IRC Name) Landon since Last Years GSoC and he said he was going with Thousand Parsec this year, so thought I would check out this years project list.
 I was the recent winner of the Gary Frisch Bursary for Software in radio, for my Open Source Content Management System, which currently runs the LSRfm.com (Leeds Student Radio) website, (http://LSRfm.com/). This CMS (Carlyon CMS) I will use to form the basis of the web based Client.
-
 I used to be able to program perl, but of late have not had the change to practice it so my perl is rusty, I am currently learning Ruby on Rails and Coldfusion as well.
-
 My aim in life is to continue working in the MultiPlatform Radio Environment in the UK, which is pretty much what I do at the moment as a Volunteer at LSRfm.com where I am Head of Web Development.
 
 Last year I was involved with the Now Aborted, One Bug Tracker to Rule them all Project over at PHP.
-
-
-== Comments ==
-
-First, do use wiki formating for this so that it is easier to read. Next, timeline should be much more expanded and detailed and equiped with dates, it would be good to know what you have to do each week and how you will do this. Also say how in which timezone are you, how you will keep the mentor, peoject memebers and other people updated on your progres (blogs for example). Write doen if you plan any abscence during the time of coding, and how you will bring in the lost time. how many hours a week do you plan to work on this is also nice to know. Well that's it for now. Take a look at other proposals in the wiki and also read comments for them and check out what they have and it is missing here. - [[User:JLP|JLP]]
