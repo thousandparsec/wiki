@@ -34,20 +34,22 @@ To implement unit testing for the Thousand Parsec C++ client protocol module to 
 
 == IMPORTANCE OF UNIT TESTING ==
 
-Unit testing of the Thousand Parsec client protocol module is paramount to releasing an outstanding product for people to play and enjoy. Unit testing will free both the client developers and server developers from having to deal with issues as much from the opposite side of the game. Over all, unit testing will improve both the clients and the server.
+Unit testing of the Thousand Parsec C++ client protocol module is paramount to releasing an outstanding product for people to play and enjoy. Unit testing will free both the client and server developers from having to handle issues that are unrelated to their respective areas of coding. Over all, unit testing will improve both the game clients and servers.
 
 === Benefits to the community ===
-:#Insure that all clients implementing the Thousand Parsec protocol will function as expected
-:#Enforce conformance to the Thousand Parsec protocol in all clients
-:#Improve the quality of released clients
 
-By unit testing the client protocol modules for conformance to the established Thousand Parsec protocol, the game developers can focus more on implementing features of the game. They will be able to rely on the fact that the client protocol library works as they expect it to. This will increase the rate at which the game developers can release new features for the framework. It will also help decrease the potential for serious bugs to be found and exploited if possible.
+#Ensure that all clients implementing the established Thousand Parsec protocol(s) will function as expected
+#Enforce conformance to the established Thousand Parsec protocol(s) in all clients
+#Improve the quality of released clients
+
+By unit testing the C++ client protocol module for conformance to the established Thousand Parsec protocol(s), the game developers can focus more on implementing features of the game. They will be able to rely on the fact that the C++ client protocol module works as expected. This will increase the rate at which the game developers can release new features for the game. It will also help decrease the potential for serious bugs to be found and potentially exploited.
 
 === Benefits to Thousand Parsec ===
-:#Insure that all clients adhere to the Thousand Parsec protocol
-:#Better implementation of the Thousand Parsec protocol by clients
 
-By unit testing the client protocol module, the server developers can rely on the fact that the client is going to behave in a predefined manner. This will eliminate the need for the server developers to debug client related errors that are causing them issues.
+#Ensure that all clients using the C++ client protocol module adhere to the established Thousand Parsec protocol
+#Better implementation of the established Thousand Parsec C++ client protocol module by clients
+
+By unit testing the C++ client protocol module, the server developers can rely on the fact that the client is going to behave in a predefined manner. This will eliminate the need for the server developers to debug client related errors that are causing them issues.
 
 == EXPECTED PROJECT MILESTONES ==
 
