@@ -1,6 +1,6 @@
 == ABSTRACT ==
 
-It is my intention to implement unit testing for the Thousand Parsec C++ client protocol module. The unit testing will validate the protocol module against the published Thousand Parsec protocol(s). Unit testing will be achieved by using available testing tools such as CppUnit and custom code to test for adherence to the protocol. The unit testing will provide benchmarking of protocol library code as much as possible.
+It is my intention to implement unit testing for the Thousand Parsec C++ client protocol module. The unit testing will validate the C++ client protocol module against the established Thousand Parsec protocol(s). Unit testing will be achieved by using available testing tools such as CppUnit and custom code to test for adherence to the established Thousand Parsec protocol(s). The unit testing will provide benchmarking of the C++ client protocol module as much as possible.
 
 == CONTACT INFO & AVAILABILITY ==
 
