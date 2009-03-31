@@ -1,0 +1,65 @@
+Google summer of code 2009 – krl83’s Proposal
+
+Name: [[user:krl83|krl83]] 
+
+Project Title: Advanced War in Space
+
+The goal of this project is to create a ruleset for Advanced War using TP. The game itself has already been ported to various platforms and most of the time the feedback has been good. So I believe it will be a good addition to the TP framework.
+
+==Game Mechanics==
+
+Each player:
+* Start in a different area of the map 
+* Control one or a few production stars(like factories) and a home star. Most of the stars are not controlled by anyone initially and one cannot control terfs.
+* Start with some credit to be able to build ships or research upgrades
+* Can capture planets and mining stars by sending Colonize ship
+
+General Setting
+* In the beginning of the game, a random (or selected) map will be chosen to be the battlefield. There will be two to four players playing. (assume 2 for now)
+* The whole map is a grid. This will be modeled using a connected graph with each vertex a term.
+* There will be hyperspeed routes to enable fast transportation. But the origin and destination are fixed and should not be too convinent. Most of the transport should be done by moving from one terf to another. The hyperspeed routes are like highways in the normal Advanced War.
+* Various battleship designs can be gained through research.
+* Different terfs have different defensive index, so if a ship is in the asteroid field, it will take much less damage compare to parking in the open space
+* The colonize ship need to stay on top of the planet for 2-5 turns before the colonizing the planet.(depends on the health of the colonize ship)
+* Ship does not stack in this game
+* Each ship has a health bar, it can recover by parking on a factory planet or next to a repair ship
+* Each ship and its own strength and weakness(speed, effectiveness against certain ship…etc)
+
+In each turn:
+* Player can move each ship he own once
+* Player can let the factory starting to produce ship(takes 1-5 turns depends on the type of ship wanted)
+* If an enemy ship is in the attack range of his ship, he can choose to attack
+
+Winning Condition: 
+* If the home star of a player has been captured
+
+==Deliverables==
+* A functional game of Advanced War in Space
+
+==Timeline==
+Week#	Date	Detail
+* 1	4/20/2009	Start Reading API for the TP framework,  communicate with existing devs
+* 2	4/27/2009	
+* 3	5/4/2009	
+* 4	5/11/2009	Design the prototype(choosing data representation for all objects). Confirm on the feasibility
+* 5	5/18/2009	writing code for the program
+* 6	5/25/2009	writing code for the program
+* 7	6/1/2009	A working game board(empty)
+* 8	6/8/2009	A working game board with planets and different terfs.
+* 9	6/15/2009	A working science tree
+* 10	6/22/2009	Fixing any bugs that showed up, do system test with the science tree and game board
+* 11	6/29/2009	Coding individual units(one "unit" object is good enough, but need to instantiate it to many different types)
+* 12	7/6/2009	Start coding the move mechanic(mostly just checking validity of the move and calculate the terf penalty)
+* 13	7/13/2009	Incorporate route find algo into the move mechanic, so that it will always take the shortest path
+* 14	7/20/2009	Finish the move mechanic(this might take longer to finish, but shouldn't be too bad)
+* 15	7/27/2009	Put everything together and start testing the system
+* 16	8/3/2009	System testing, fixing bugs and balancing the units. Need testers to help
+* 17	8/10/2009	User interface design
+* 18	8/17/2009	
+* 19	8/24/2009	Finalize the product
+* 20	8/31/2009	Public testing and pay close attention to the issue that came up
+		
+==Bio==
+
+     I am currently a junior Computer Science major at Carnegie Mellon University. I have always been interested in game development, but I have never got the chance to do it seriously. One of the main reasons for me to choose this project for GSOC is because Advanced Wars is my favorite game in both GBA and DS. Since I also enjoy playing the Gundam series a lot, I have always dreamed to combine the two together: Advanced Wars in Space. 
+     Academically, I have finished most of the undergraduate level computer science class and I’m in the process of applying to graduate schools. My areas of expertise are algorithm design and efficiency optimization. I have done research with the university in data fitting algorithms and Human Computer Interaction. As for experience with programming language, I have worked with C/C++ and Java for more than 4 years. Moreover, I have participated in another open source project a few months ago. My experience definitely will help me when doing this project.
