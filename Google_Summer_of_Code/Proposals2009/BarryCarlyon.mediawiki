@@ -37,6 +37,37 @@ Regardless of TimeLine, I will endeavour to be further involved with TP, both as
 ===TimeLine===
 
 
+Summer of Code is about 13 weeks long
+
+====Week 1 - 3====
+Begin work on frame generator, converting 1 to \x00\x00\x00\x01 using PHP (I havn't figured this out yet) as per the existing frame work, and begin exchanging Communications with a TP server. In good order and so both the client and server understand each other, this will include basic authentication and account creation.
+
+====Week 2 – 4====
+Initial work on StarMap to Image, using server output, this will include decoding of server responses, for the PHP library to understand.
+
+====Week 4 ====
+Begin work on Data Caching, if determine to be needed, for common elements, common ship designs and elements of a ship design. And the CRON data updater
+
+====Week 5====
+Work begins on the front end, to allow users to login and get the starmap loaded up as well as server messages
+
+====Week 7 – 8 ====
+Work on Design management, user creation on the front end.
+And preliminary order creation and management.
+
+====Week 9====
+CSS – Cascading Stylesheet, design, build, cross browser test.
+
+====Week 10 – 11====
+Begin switching things to AJAX protocol, if it doesn't work without the protocol, why start with the protocol?
+
+====Week 12====
+Prettification, scriptaculous effects and the like
+
+====Week 13====
+Make sure everything is where it should be, deploy to run on both demo servers
+
+
 ===Tools/Technologies===
 
 PHP for main website coding, and client protocol.
