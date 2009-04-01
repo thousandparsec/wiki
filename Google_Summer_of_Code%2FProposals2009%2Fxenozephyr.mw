@@ -1,0 +1,153 @@
+== Abstract: A Web Based Client for Thousand Parsec ==
+
+The proposed project is a client that can be accessed via a web browser to allow players to connect and play from the web. 
+
+It will break up into two parts:
+
+=== Pylons WebService Backend ===
+This will consist of a python based web service written with Pylons that provides a thin wrapper of the libtpproto-py library allowing a variety of web technologies to connect and communicate as a client using HTTP GET/POST methods and XML responses.
+
+=== Flash/Flex Frontend ===	
+This is the visual frontend the users will download in their browsers. It will be developed with Adobe Flex 3, and compiled as a Flash .swf which can be embedded into a web page. It will communicate with the WebService Backend to connect to servers and play games.
+
+== Benefits ==
+The main benefit of this project to the Thousand Parsec community is the ability to provide access to the game via the web. This opens many doors for users who do not feel comfortable downloading and installing clients or for users who want to play a game from remote locations (school, work, etc). This will bring a larger audience to Thousand Parsec and give it a stronger presence on the web.
+
+In addition, there are many benefits to future developers of the project:
+
+:A key benefit is in the separation of the Frontend/Backend into two smaller projects giving room to add additional types of web client frontends to the existing backend. (i.e. XHTML/AJAX based, or Mobile Devices with internet.)
+
+:The use of the libtpproto-py library also allows updates to the existing protocol and client library without heavily modifying the backend/frontend components.  (However a heavy change in the protocol specification will require things to be updated.) 
+
+:The use of Flash/Flex can allow artistic individuals to implement a 2D game client on the frontend's existing code.
+
+== Deliverables ==
+
+* A functioning WebService that allows multiple frontends to connect to a game server.
+** Provides a Pylon Controller for making GET/POST requests and sending replies in XML.
+** the requests will wrap the functions of the Connection class in libtpproto-py and provide a session for the web connection and corresponding ClientConnection class instance.
+** Provide a list of multiple servers to connect to. (this can possibly extend to using the metaserver)
+** Provide hosting for additional media access (.jpg, .gif, any other web assets)
+* A Flash object to embed into a web page that will communicate with the backend bridge and do most of the client work.
+** Server Listing 
+** Create Account on a server
+** Connecting to a Server
+** Game Listing? I did not see a method of Creating/Joining a game in the API docs for the Connection class..
+** Creating/Joining Games? See comment above
+** Message Boards
+** Display Star Map and Object Data
+** Entering Orders (Displaying Order History/Queue/Turn Information?)
+** Player Listing
+** Resource Information
+** (Optional, Time Permitting) : Categories, Properties, Components, Designs
+
+
+== Architecture and Details ==
+
+TODO: Provide link to a graphical image of framework
+	
+=== WebService Backend ===
+The WebService will be developed using Pylons. Pylons is a rapid web development framework for Python. The framework works by automatically generating an Application, this includes folders for all sorts of tools that can be used with Pylons. (Overview HERE: http://workaround.org/pylons/pylons-cheatsheet.html#directory-structure)
+
+The Application will start by auto generating a basic controller, the XMLController. It will be configured to route from a URL (i.e. "http://HOSTURL:HOSTPORT/TPWebBridge") and it will capture HTTP GET/POST requests. These will be what the frontend will use to communicate.
+
+:GET - GET Requests are request made via a URL by appending variables as text. Since kids love to try to hack these, the only parts which will use GETs are Connect/Login or Connect/CreateAccount, as well as requests for static media (images, text, etc), however those will be automatically handled by Pylons. To prevent abuse the frequency of login/create account will be monitored and enforced.
+
+:POST - POST Requests are requests that are "hidden" inside the HTTP protocol (not easily seen by users). All requests will be made though posts, and will use a session key + session object assigned to the user at login to ensure only that user's requests are handled.
+
+::The POST methods will take a session key and action to identify what operation from the ClientConnection Object in the netlib to perform, as well as proper variables to execute the call. Then the result will be marshaled into an XML response that is compliant for AJAX and other web technologies utilizing XML. The frontend will then interpret the data, and do as it needs.
+
+The WebService can then be deployed using Pylons paste utility. Documentation and Tutorials will be created for this.
+
+
+=== Flex/Flash Frontend ===
+The frontend will be developed using Adobe Flex3 SDK, which compiles into an Adobe Flash .swf, which can be embedded into a web page.
+
+Flex3 allows the use of Adobe's object oriented language, ActionScript3, to be used to programmatic-ally work with various methods of interfacing to data, data storage and manipulation, and binding data to the Flex MXML scripts. The Flex MXML scripts define the GUI components as well as function and data bindings into ActionScript code. The desired framework is as follows:
+
+:Data Container Classes containing the responses will be modeled from classes in the Netlib. These include things such as Players,Objects, Boards,Messages,Orders, etc. Additional Interfacing may be added for better storage/access to the data giving a level of abstraction that can be easier to use at the GUI level of the Frontend. 
+
+:A WebClient class will be created that gives an interface to all the requests that can possibly be made to the WebService Backend, and the results will be the properly set data classes mentioned earlier. This class' members will make the proper request, receive the result, parse the XML, and fill in and return the appropriate data structures.
+
+:A ClientController class will be created that provides interfacing for all the GUI components. Every components events and data should bind through members of this class. It is then responsible for interpreting the GUI actions and making the proper set of requests and changes to the state of the client.
+
+:MXML scripts will be used to define the GUI, and bind the appropriate events and data members to the ClientController class. Additionally transitions may be added for "flair" in the GUI.
+	
+	
+
+== Time Line with Milestones ==
+The Time Line is broken down into two week periods giving iterative milestones that are testable. The Mentor should be able to see these by just using a flash capable web browser.
+A Debug output will be provided to display a log of the raw XML transactions, and a summary of the POST requests for backend communication.
+
+Note on the Safety Net Time. Because this project is reasonably large, I am allocating a lot of room for things to take longer. I for the most part think I will need this. However by forcing deadlines earlier I will get more done and this will allow me to successfully finish the requirements of the project even if things go horribly wrong. If by some luck I don't need this, I will have room to implement the optional features.
+
+* 4/20/2009 
+** Community Bonding Period: Continue researching API and adding/modifying Architecture Details.
+* 5/23/2009 
+** Coding Begins
+* 6/1/2009  
+** Testable Backend that returns XML on requests for Server Listing, ConnectAndLogin, ConnectAndCreateAccount.
+** Testable Frontend that displays the parsed XML for Server Listing, and can establish connections and log in or create an account, displaying result codes.
+* 6/15/2009 
+** Testable Backend that returns XML for Object requests.
+** Testable Frontend that requests and displays the parsed XML and a Listing of various objects,types, and their information.
+* 6/29/2009 
+** Testable Backend that returns XML for requests on Orders.
+** Testable Frontend that displays Information on Orders, the Time(Turn), and allows Entering Orders that get sent to the backend.
+* 7/6/2009  
+** Rendering of StarMap in Frontend. You can see this.
+** Testable Backend that returns XML on Board requests, Message requests, Player requests, and Resource requests.
+** Testable Frontend for displaying Message Boards, Messages, Player Lists, and Resources.
+** Begin Midterm Evaluations.
+* 7/13/2009 
+** Refine any code. If some of the tangible milestones needed to be moved. They should be met by now.
+** Produce documentation for Frontend/Backend development, and setup/installation docs of Backend. As well as other docs requested by team.
+** Midterm Evaluations Due.
+* 7/27/2009 
+** Safety Net Time 
+** Either Finish/Fix previous functions, or Work on Optional Functions. They too should be testable by visually seeing them in the client.
+** Optional Features: Categories/Components/Designs/Properties
+** In Addition: The GUI can be styled to look cooler, and have flashy transitions. Very do-able in Flex.
+* 8/10/2009 
+** Suggest Pencils Down Date. 
+** Required Features WILL have been debugged, tested, and working. 
+** More Documentation will be written and cleaned up, along with code.
+** Work more on Optional Features if there is time.
+* 8/17/2009 
+** Turn in Final Project, Documents, and other requirements.
+
+
+== Personal Information ==
+
+=== Contact ===
+* Name : Eric Dyoniziak
+* IRC/Alias : Xenozephyr
+* Email : xenozephyr@gmail.com
+
+=== Background ===
+My name is Eric Dyoniziak and I am currently a Junior studying Computer Science at the University of Illinois at Urbana Champaign (UIUC). I am very interested in game development, in particular computer graphics, distributed systems and networking, and web development. In my previous years I spent a lot of my time as a developer for the Star Wars Galaxies Server Emulator, where I reverse engineered the game protocol and made many tools, as well as contributed to server architecture and framework development for the SWG:A New Hope emulator group. This gave me exposure to what real world games are made of, and I enjoyed the complexity and rigor of it. I grew interest in this project mainly because it involved game development, and I love science fiction/space themed games. Although I have not played many 4X games (Civilization is the only one that comes to mind), I am very interested in Thousand Parsec because it has a developed code base, a good set of active developers, and the games sounds fun. I hope to be able to contribute my knowledge from previous game development, and experience in web development, to allow you guys to bring in a larger community and user base through this web client. I also hope to learn a great deal of things from you guys, so I hope this will be mutually beneficial. 
+
+
+=== Flash/Flex Projects ===
+
+Flex MXML scripts:
+* GUI pages as requested by a client, consisting of:
+* UI components and Actionscript event/data binding
+* Pushing XML data from the client to a Ruby on Rails bridge.
+* Receiving XML data from Ruby on Rails bridge, and updating application.
+* Transitioning UI boxes to look flashy and cool.
+
+ActionScript3:
+* Developed GUI component widgets for displaying bar/pie graphs with custom styling.
+* Used a lot of data structures of the ActionScript3 Library.
+* Used the Drawing library of ActionScript3 to render components.
+	
+	
+Reference:
+I've done a bit of Flash/Flex freelance work for this person, he gave me permission to use him as a reference if you want a second opinion on my skill set and performance. Mentors/Admins ONLY please!
+
+Jonathan DiVincenzo -  jonathan.divincenzo@fox.com - Interactive Producer, Fox Interactive Media
+
+
+== Community Feedback ==
+Feedback from mentors and other community members is greatly appreciated.
