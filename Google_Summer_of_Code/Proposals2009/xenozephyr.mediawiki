@@ -151,3 +151,5 @@ Jonathan DiVincenzo -  jonathan.divincenzo@fox.com - Interactive Producer, Fox I
 
 == Community Feedback ==
 Feedback from mentors and other community members is greatly appreciated.
+
+How are you going to take care of the difference between HTTP requests and the long-running TP protocol connections? Otherwise a good proposal. --[[User:Lee Begg|Lee Begg]] 05:28, 1 April 2009 (EDT)
