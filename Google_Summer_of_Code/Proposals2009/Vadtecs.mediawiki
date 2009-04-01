@@ -125,7 +125,7 @@ When I'm not having fun with my kids or playing computer gaming or bending compu
 
 == CLOSING ==
 
-I am eager to work on this project and help improve Thousand Parsec as much as possible. The 4x genre of gaming is one of my favorites. Anything I can do to bring a new spin on the genre is a good thing to me. I know along the way I will learn a great deal and be contributing back to an open source project that I want to see become better. I also know that along the way I will get to know a great group of people who are passionate about the work they do in open source.
+I am eager to work on this project and help improve Thousand Parsec as much as possible. The 4x genre of gaming is one of my favorites. Anything I can do to bring a new spin on the genre is a good thing. I know along the way I will learn a great deal and contribute to an open source project that I want to see improve. I also know that along the way I will come to know a great group of people who are passionate about the work they do in open source.
 
 I appreciate your considering my application for working with Thousand Parsec during Google Summer of Code 2009 and hope to be working with you soon on this project.
 
