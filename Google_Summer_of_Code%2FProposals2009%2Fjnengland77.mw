@@ -1,4 +1,3 @@
-
 == Summary ==
 
 My ambitions for this project include updating documentation for developing rulesets, creating a ruleset for short game, and replacing Pseduo-Random Number Generator with the boost.Random.
@@ -7,64 +6,65 @@ My ambitions for this project include updating documentation for developing rule
 == Proposal ==
 
 To improve or make change in the following areas:
-Incorporate Boost.Random into tpserver-cpp. This can be used as a stepping stone to understand some of the internals of the server and get involved with other parts of the project.
-	This is how I would implement and replace the current pseudo-random number generator.  
-        Understand how the current PRNG and Boost.Random (I’ve never worked with the Boost libraries before) work.
-	Develop a class interface that matches the old PRNG.
- 	Develop the class.
-	Test and compare it to the old PRNG.
-	Finally rename the class to that of the old.
-Total estimated time: 1 to 2 (maybe 3?) weeks
+Incorporate Boost.Random into tpserver-cpp. This can be used as a stepping stone to understand some of the internals of the server  and get involved with other parts of the project.
+  This is how I would implement and replace the current pseudo-random number generator.  
+  Understand how the current PRNG and Boost.Random (I’ve never worked with the Boost libraries before) work.
+  Develop a class interface that matches the old PRNG.
+  Develop the class.
+  Test and compare it to the old PRNG.
+  Finally rename the class to that of the old.
+  
+  Total estimated time: 1 to 2 (maybe 3?) weeks
 
 To make short game for a novice player, but also for those who want a quick game ( hour to two hours tops ).
-	Content/Story: Currently unknown.  I would come up with a short story and base the game around that. I would probably bounce some ideas off my friends and the TP IRC channel, along with my GSoC mentor. I would also look into Konquest from KDE Games as the wiki suggests and see how it works. I should play game or two of any of the currently included rulesets to gain a better understanding of what the game play is like and what it’s currently capable of.
+   Content/Story: Currently unknown.  I would come up with a short story and base the game around that. I would probably bounce some ideas off my friends and the TP IRC channel, along with my GSoC mentor. I would also look into Konquest from KDE Games as the wiki suggests and see how it works. I should play game or two of any of the currently included rulesets to gain a better understanding of what the game play is like and what it’s currently capable of.
 
 Some of the basic ideas to make the game short would be:
 Timed turns to keep the game play shorter
- 	Limit the amount micromanagement 
-Simple resource and money management
-My idea is to have the planets just give certain resources and amounts.  (e.g. iron, copper, gold, silver and probably other metals ) 	
-	Some basic units: scout, small, medium, large destroyer, gatherer.
-	All of the units will require certain materials on that planet they get built on.
-	Attributes of the units would likely include health, firepower strength, and speed.
-	I’m not sure how battles are going to go at this time.
+  Limit the amount micromanagement 
+  Simple resource and money management
+  My idea is to have the planets just give certain resources and amounts.  (e.g. iron, copper, gold, silver and probably other metals ) 	
+  Some basic units: scout, small, medium, large destroyer, gatherer.
+  All of the units will require certain materials on that planet they get built on.
+  Attributes of the units would likely include health, firepower strength, and speed.
+  I’m not sure how battles are going to go at this time.
 
-(Took a little time to play Konquest maybe I’m making it a bit complicated? Although it should be more interesting than Konquest)
+  (I took a little time to play Konquest maybe I’m making it a bit complicated? Although it should be more interesting than Konquest)
 
-	This would take the rest of the summer and would help contribute work the next idea.
+  This would take the rest of the summer and would help contribute work the next idea.
 
-	Add to and improve the tpserver-cpp ruleset development book.
-	Give additional examples or expand existing ones.
-	Further document features.
-	(Maybe a hint to what isn’t in the ruleset book?)
-	I would attempt to add to this throughout the Summer.
+Add to and improve the tpserver-cpp ruleset development book.
+  Give additional examples or expand existing ones.
+  Further document features.
+  (Maybe a hint to what isn’t in the ruleset book?)
+  I would attempt to add to this throughout the Summer.
  
 == Timeline ==
 
 Goals for Weeks 1-2:
-	Understand the current PRNG and Boost
-	Implement, test, and replace the old PRNG with Boost.Random
-Think about specifications of the short game, along with a [background] story and a name for the game.  
+  Understand the current PRNG and Boost
+  Implement, test, and replace the old PRNG with Boost.Random
+  Think about specifications of the short game, along with a [background] story and a name for the game.  
 
 Goals for Weeks 3-5:
-	Continue to refine specifications for the game
-	Reread ruleset and other documentation
-	Look at how other games work
-	    Update documentation based on what I learned from the games.
+  Continue to refine specifications for the game
+  Reread ruleset and other documentation
+  Look at how other games work
+     Update documentation based on what I learned from the games.
 	Set up basic file structure and framework for the game.
-	Start setting up the universe (planets and how they provide resources).
+  Start setting up the universe (planets and how they provide resources).
 
 Goals for Weeks 6-9:
-        Finish setting up the universe
-	Setup units
-	Setup how battles are going to be conducted.
+  Finish setting up the universe
+  Setup units
+  Setup how battles are going to be conducted.
 	
 Goals for Weeks 10-12:
-	Fix bugs in the game
-	Proof read already written documentation
-	Work on documentation
-	Proof read it.
-	Finish anything else.
+  Fix bugs in the game
+  Proof read already written documentation
+  Work on documentation
+  Proof read it.
+  Finish anything else.
 
 I think these projects are fairly important and could help draw more attention to the project. With the short game it’ll encourage beginners to play, and give them a short game into the world of 4X gaming. It’ll also fulfill the latter for the more advanced player, when they’re short on time.  Having good documentation can attract new developers and create more rulesets ( and thus more games to play ). 
 
