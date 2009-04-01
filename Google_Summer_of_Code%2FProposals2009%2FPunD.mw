@@ -75,6 +75,14 @@ A planet has two modes it can be in. Production and Barricade.
 *In production mode, the planet produces rez, can build ships, and can be captured.
 *In barricade mode, the planet drains rez, cannot build ships, and cannot be captured.
 
+==Beginning a Game==
+*A new game would start with 2 or more players (I'm not sure what the cap should be, if any.)
+*Each player would have a home territory (home planet and 2-5 owned planets nearby)
+*As well as a starting fleet (1-2 battlecruisers and a handful of scouts)
+*Players will begin expanding and scouting from turn 1, and should be trying to capture contested territory quickly.
+
+The full map should be enough that each player can roughly double their starting territory without taking enemy planets.
+
 ==Other==
 *As with any new system, balance is going to be very tough. To account for this, the first set of options are going to be simple: One battlecruiser type, one damage type, one ammunition type, one fuel type. I hope to leave space for (and later develop) more options for these and add customizability to battlecruisers. (Note: I know people interested in playtesting this who will be available over the summer)
 *Flavor text. As strange as it sounds, the most important non-mechanic part of TotV to me is the flavor. I have found that interesting and immersive feedback (even textual) from a game makes it far, far more fun. Example: (A battlecruiser has just taken major damage to its engines during the last turn)
@@ -197,6 +205,19 @@ The _Basic indicates this is the base implementation that is required to be comp
 #Process Battles currently active. (Having this after orders allows the player to react to enemy attacks. However, it is AFTER move, thus there is a first strike advantage for the attacker.)
 #End turn.
 
+=Other Notes=
+==Game Speed==
+Ideally, the game would be designed for larger, long-term games, but able to support a quicker game style for getting used to the design.
+
+I envision the game being played in a somewhat similar style to Diplomacy. By this I mean that the game will have a small enough set of units and planets on the 'board' that one could sit down for 10 minutes every day or so and take their turn. This wouldn't mean that it has to be played this way, simply that the complexity would be in the movements and the planning, not in managing 100s of individual units.
+
+That said, when updating the design, I realized that this could very easily be adapted for single-player 'mission' based games. Simply remove the ability to produce from planets, have a decent sized starting force and it becomes a tactics game. These would clearly be faster paced, as there is no need to wait for the other player or manage production. I am not intending to work on that aspect as part of GSoC.
+
+==Why is this fun?==
+This is going to be the primary driving force behind balance testing. The game needs to be such that the player can see results of their actions, and know that they are making progress. At the same time, my design demands that the ships the player cares about aren't being destroyed often. To address this, planets are exceedingly easy to capture, and watching your ownership of the map expand significantly after a successful battle should be satisfying.
+
+What should make TotV fun is what makes tactics games, chess, and other low-unit count strategy games fun; the ability to quickly and easily understand the state of the entire universe while still making clever play rewarding.
+
 =Student=
 ==Contact==
 *I am consistently available via chat services, email, and VoIP services. (Ask me for any of my contact info specifics)
@@ -212,4 +233,5 @@ Hi, my name is David Kohlbrenner and I am a sophomore at Carnegie Mellon Univers
 *I have experience designing and implementing systems ranging from a small unix-like kernel (C) to card games and sudoku on mobile devices (Java).
 *I have been an avid gamer all of my life, and concentrate mostly on FPSs and RPGs.
 *My fondest 4X memories come from Master of Orion 1 and Spaceward Ho!. Recently I have been playing Stardock's amazing Galactic Civilizations series.
+*I'd be happy to do a daily/biweekly blog entry/forum post as to the current progress, if people are interested in whats going on, I'd happy to talk about it
 *I applied to TP for GSoC last year with TotV and have since updated it for this year.
