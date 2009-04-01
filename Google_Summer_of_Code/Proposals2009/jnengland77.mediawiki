@@ -28,9 +28,7 @@ Timed turns to keep the game play shorter
   All of the units will require certain materials on that planet they get built on.
   Attributes of the units would likely include health, firepower strength, and speed.
   I’m not sure how battles are going to go at this time.
-
   (I took a little time to play Konquest maybe I’m making it a bit complicated? Although it should be more interesting than Konquest)
-
   This would take the rest of the summer and would help contribute work the next idea.
 
 Add to and improve the tpserver-cpp ruleset development book.
@@ -77,5 +75,8 @@ The Thousand Parsec project caught my eye, because over a year ago or so I was i
 == Previous Projects ==
 
 I’ve never contributed or worked on an open source project. Most of my computer science programs included 2 to 4 week projects. You can look at jn.icetex-hosting.net/svn for couple projects I’ve worked on in the past. There is a couple more that I’d didn’t use SVN for. And some I didn’t allow others to see on and didn’t include. 
+
+
+
 
 Notes and Warning: I proofread it while I was tired... I will proofread it again after a little feedback. And if someone would format this a bit better that would be great. I don't have any bbcode skills for wikis.
