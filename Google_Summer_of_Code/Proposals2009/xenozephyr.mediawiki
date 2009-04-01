@@ -5,7 +5,7 @@ The proposed project is a client that can be accessed via a web browser to allow
 It will break up into two parts:
 
 === Pylons WebService Backend ===
-This will consist of a python based web service written with Pylons that provides a thin wrapper of the libtpproto-py library allowing a variety of web technologies to connect and communicate as a client using HTTP GET/POST methods and XML responses.
+This will consist of a python based web service written with Pylons that provides a thin wrapper of the '''libtpproto-py''' library allowing a variety of web technologies to connect and communicate as a client using HTTP GET/POST methods and XML responses. sessions will be used to maintain the individual instances of the ClientConnection from the python netlib.
 
 === Flash/Flex Frontend ===	
 This is the visual frontend the users will download in their browsers. It will be developed with Adobe Flex 3, and compiled as a Flash .swf which can be embedded into a web page. It will communicate with the WebService Backend to connect to servers and play games.
@@ -25,7 +25,7 @@ In addition, there are many benefits to future developers of the project:
 
 * A functioning WebService that allows multiple frontends to connect to a game server.
 ** Provides a Pylon Controller for making GET/POST requests and sending replies in XML.
-** the requests will wrap the functions of the Connection class in libtpproto-py and provide a session for the web connection and corresponding ClientConnection class instance.
+** the requests will wrap the functions of the Connection class in '''libtpproto-py''' and provide a session for the web connection and corresponding ClientConnection class instance.
 ** Provide a list of multiple servers to connect to. (this can possibly extend to using the metaserver)
 ** Provide hosting for additional media access (.jpg, .gif, any other web assets)
 * A Flash object to embed into a web page that will communicate with the backend bridge and do most of the client work.
@@ -57,6 +57,10 @@ The Application will start by auto generating a basic controller, the XMLControl
 
 ::The POST methods will take a session key and action to identify what operation from the ClientConnection Object in the netlib to perform, as well as proper variables to execute the call. Then the result will be marshaled into an XML response that is compliant for AJAX and other web technologies utilizing XML. The frontend will then interpret the data, and do as it needs.
 
+From the HTTP requests connections will be tunneled to the server using an instance of the ClientConnection object from '''libtpproto-py''' library.
+This will be stored in the connections session, with a timeout and cleanup routine (if required). This will allow the TCP connection to persist
+with the user's session.
+
 The WebService can then be deployed using Pylons paste utility. Documentation and Tutorials will be created for this.
 
 
@@ -79,7 +83,7 @@ Flex3 allows the use of Adobe's object oriented language, ActionScript3, to be u
 The Time Line is broken down into two week periods giving iterative milestones that are testable. The Mentor should be able to see these by just using a flash capable web browser.
 A Debug output will be provided to display a log of the raw XML transactions, and a summary of the POST requests for backend communication.
 
-Note on the Safety Net Time. Because this project is reasonably large, I am allocating a lot of room for things to take longer. I for the most part think I will need this. However by forcing deadlines earlier I will get more done and this will allow me to successfully finish the requirements of the project even if things go horribly wrong. If by some luck I don't need this, I will have room to implement the optional features.
+Note on the Safety Net Time. Because this project is reasonably large, I am allocating a lot of room for things to take longer. I for the most part think I will need this. However by forcing deadlines earlier I will get more done and this will allow me to successfully finish the requirements of the project even if things go horribly wrong. If by some luck I don't need this, I will have room to implement the optional features and make the frontend better styled.
 
 * 4/20/2009 
 ** Community Bonding Period: Continue researching API and adding/modifying Architecture Details.
@@ -103,14 +107,15 @@ Note on the Safety Net Time. Because this project is reasonably large, I am allo
 ** Refine any code. If some of the tangible milestones needed to be moved. They should be met by now.
 ** Produce documentation for Frontend/Backend development, and setup/installation docs of Backend. As well as other docs requested by team.
 ** Midterm Evaluations Due.
+** From here on it will be safety net time.
 * 7/27/2009 
 ** Safety Net Time 
-** Either Finish/Fix previous functions, or Work on Optional Functions. They too should be testable by visually seeing them in the client.
+** Continue to finish/fix previous features, or work on optional features . They too should be testable by visually seeing them in the client.
 ** Optional Features: Categories/Components/Designs/Properties
 ** In Addition: The GUI can be styled to look cooler, and have flashy transitions. Very do-able in Flex.
 * 8/10/2009 
 ** Suggest Pencils Down Date. 
-** Required Features WILL have been debugged, tested, and working. 
+** Required features SHOULD have been debugged, tested, and working, and if not, they will be brushed and polished for the due date. 
 ** More Documentation will be written and cleaned up, along with code.
 ** Work more on Optional Features if there is time.
 * 8/17/2009 
@@ -132,7 +137,7 @@ My name is Eric Dyoniziak and I am currently a Junior studying Computer Science 
 
 Flex MXML scripts:
 * GUI pages as requested by a client, consisting of:
-* UI components and Actionscript event/data binding
+* UI components and ActionScript event/data binding
 * Pushing XML data from the client to a Ruby on Rails bridge.
 * Receiving XML data from Ruby on Rails bridge, and updating application.
 * Transitioning UI boxes to look flashy and cool.
@@ -153,3 +158,7 @@ Jonathan DiVincenzo -  jonathan.divincenzo@fox.com - Interactive Producer, Fox I
 Feedback from mentors and other community members is greatly appreciated.
 
 How are you going to take care of the difference between a large number of individual HTTP requests and a single long-running TP protocol connection? I'm also a little concerned at the use of Flex/flash, but I do like that it would be possible to write other front ends. Otherwise a good proposal. --[[User:Lee Begg|Lee Begg]] 05:28, 1 April 2009 (EDT)
+
+Lee, I added more information on this, but how it will work is a ClientConnection object will be instantiated per connect request and this will be saved throughout the session of the user. This will persist throughout their connection and maintain the TCP connection. Although it may feel like an odd choice, it makes less work for me for the backend, and it requires a lot less code to be maintained so the benefits outweighs the cost. All this will require on the webserver is a socket and potentially a thread to be created per connection. The resources would end up being used anyway if I had written my own netlib or had to use an underdeveloped netlib such as PHP to maintain a connection.
+
+Also, do you have a more specific reason as to why you don't like Flex or Flash? It wouldn't really be any different from using say, wxWidgets to make a GUI...just this one can appear in a browser. If you do please comment and I'll gladly address them.
