@@ -1,0 +1,81 @@
+
+== Summary ==
+
+My ambitions for this project include updating documentation for developing rulesets, creating a ruleset for short game, and replacing Pseduo-Random Number Generator with the boost.Random.
+
+
+== Proposal ==
+
+To improve or make change in the following areas:
+Incorporate Boost.Random into tpserver-cpp. This can be used as a stepping stone to understand some of the internals of the server and get involved with other parts of the project.
+	This is how I would implement and replace the current pseudo-random number generator.  
+        Understand how the current PRNG and Boost.Random (I’ve never worked with the Boost libraries before) work.
+	Develop a class interface that matches the old PRNG.
+ 	Develop the class.
+	Test and compare it to the old PRNG.
+	Finally rename the class to that of the old.
+Total estimated time: 1 to 2 (maybe 3?) weeks
+
+To make short game for a novice player, but also for those who want a quick game ( hour to two hours tops ).
+	Content/Story: Currently unknown.  I would come up with a short story and base the game around that. I would probably bounce some ideas off my friends and the TP IRC channel, along with my GSoC mentor. I would also look into Konquest from KDE Games as the wiki suggests and see how it works. I should play game or two of any of the currently included rulesets to gain a better understanding of what the game play is like and what it’s currently capable of.
+
+Some of the basic ideas to make the game short would be:
+Timed turns to keep the game play shorter
+ 	Limit the amount micromanagement 
+Simple resource and money management
+My idea is to have the planets just give certain resources and amounts.  (e.g. iron, copper, gold, silver and probably other metals ) 	
+	Some basic units: scout, small, medium, large destroyer, gatherer.
+	All of the units will require certain materials on that planet they get built on.
+	Attributes of the units would likely include health, firepower strength, and speed.
+	I’m not sure how battles are going to go at this time.
+
+(Took a little time to play Konquest maybe I’m making it a bit complicated? Although it should be more interesting than Konquest)
+
+	This would take the rest of the summer and would help contribute work the next idea.
+
+	Add to and improve the tpserver-cpp ruleset development book.
+	Give additional examples or expand existing ones.
+	Further document features.
+	(Maybe a hint to what isn’t in the ruleset book?)
+	I would attempt to add to this throughout the Summer.
+ 
+== Timeline ==
+
+Goals for Weeks 1-2:
+	Understand the current PRNG and Boost
+	Implement, test, and replace the old PRNG with Boost.Random
+Think about specifications of the short game, along with a [background] story and a name for the game.  
+
+Goals for Weeks 3-5:
+	Continue to refine specifications for the game
+	Reread ruleset and other documentation
+	Look at how other games work
+	    Update documentation based on what I learned from the games.
+	Set up basic file structure and framework for the game.
+	Start setting up the universe (planets and how they provide resources).
+
+Goals for Weeks 6-9:
+        Finish setting up the universe
+	Setup units
+	Setup how battles are going to be conducted.
+	
+Goals for Weeks 10-12:
+	Fix bugs in the game
+	Proof read already written documentation
+	Work on documentation
+	Proof read it.
+	Finish anything else.
+
+I think these projects are fairly important and could help draw more attention to the project. With the short game it’ll encourage beginners to play, and give them a short game into the world of 4X gaming. It’ll also fulfill the latter for the more advanced player, when they’re short on time.  Having good documentation can attract new developers and create more rulesets ( and thus more games to play ). 
+
+== About myself ==
+
+My name is Jordan Neumeyer. I’m attending South Dakota School of Mines and Technology (SDSM&T) for a bachelors degree in Computer Science. SDSM&T is located in Rapid City, SD, USA. I’m currently a sophomore, but will reach junior status after this semester. Most of my courses use of C++ (some C), and was also taught assembly (Intel x86). Higher level courses will teach me other languages (A.I./Machine Learning: Scheme; Programming Language: scheme, Perl, and Java). I have also taught myself some of the basics in other languages from books or online tutorials, such as Python, BASH, and PHP. After taking course work I feel like I could relearn most of the stuff very quickly and gain a better understand of the language. I also help maintain server, which hosts C&C mods and fan sites.  There are four fairly large communities on the server (revora.net is probably the largest).
+
+The Thousand Parsec project caught my eye, because over a year ago or so I was introduced 4X gaming with Dominions 3.  4X stood out and reminded me of Dominions 3 (and its 300 page manual) and I really enjoyed playing that game. I think creating a similar game would be fun. And overall The GSoC provides a great opportunity to gain experience, and some additional funding for schooling.
+
+== Previous Projects ==
+
+I’ve never contributed or worked on an open source project. Most of my computer science programs included 2 to 4 week projects. You can look at jn.icetex-hosting.net/svn for couple projects I’ve worked on in the past. There is a couple more that I’d didn’t use SVN for. And some I didn’t allow others to see on and didn’t include. 
+
+Notes and Warning: I proofread it while I was tired... I will proofread it again after a little feedback. And if someone would format this a bit better that would be great. I don't have any bbcode skills for wikis.
