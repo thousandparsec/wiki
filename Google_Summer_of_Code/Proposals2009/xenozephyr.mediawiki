@@ -152,4 +152,4 @@ Jonathan DiVincenzo -  jonathan.divincenzo@fox.com - Interactive Producer, Fox I
 == Community Feedback ==
 Feedback from mentors and other community members is greatly appreciated.
 
-How are you going to take care of the difference between HTTP requests and the long-running TP protocol connections? Otherwise a good proposal. --[[User:Lee Begg|Lee Begg]] 05:28, 1 April 2009 (EDT)
+How are you going to take care of the difference between a large number of individual HTTP requests and a single long-running TP protocol connection? I'm also a little concerned at the use of Flex/flash, but I do like that it would be possible to write other front ends. Otherwise a good proposal. --[[User:Lee Begg|Lee Begg]] 05:28, 1 April 2009 (EDT)
