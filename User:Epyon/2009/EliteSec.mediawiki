@@ -374,7 +374,7 @@ Epyon said:
 Well lets see... 
 * Start game with 100 credits
 * Spend 87 credits to buy first load of cargo
-* Make first jump... wait 4 turns for ship to arrive at [[http://wiki.alioth.net/index.php/Lave|Lave]]
+* Make first jump... wait 4 turns for ship to arrive at [http://wiki.alioth.net/index.php/Lave Lave]
 * Get attacked by pirates
 * Login into game... discover 800credits of damage, no cargo, no fuel and 13 credits in the bank.
 So at this point my game is screwed.  I can't even afford to buy enough fuel to leave the system.
@@ -387,11 +387,11 @@ This needs to be fixed.
 
 In the original Elite and Oolite when you start you occasionally get the crap blown out of you, but you weren't waiting a week for this to happen, and you could reload straight away and continue from the last station.  Here we have a game where you wait 5 turns to find out your are dead.  
 
-And stopping the inevetiable Rogue comparison, it's not the same.  With the exception of a few [[http://rephial.org/wiki/AngbandCode#s2_33|Silly]] monsters death/getting royally screwed is really your own fault (or at least some connection too) or could have been avoided with the right preperation.
+And stopping the inevetiable Rogue comparison, it's not the same.  With the exception of a few [http://rephial.org/wiki/AngbandCode#s2_33 Silly] monsters death/getting royally screwed is really your own fault (or at least some connection too) or could have been avoided with the right preperation.
 
 Now you compare this to online browser games where you play a little then come back later to continue.
 The immediate comparisons I draw are to 'Legend of the Green Dragon', 'Trukz' or 'Nationstates (1 or 2)'.  In all of these games it takes special effort to screw oneself over, the 
-[[http://groups.google.com/group/rec.games.roguelike.nethack/browse_thread/thread/f439f644a32e99e6?pli=1|RNG]]
+[http://groups.google.com/group/rec.games.roguelike.nethack/browse_thread/thread/f439f644a32e99e6?pli=1 RNG]
 makes the game interesting, but rarely unplayable. 
 (For what it's worth, I enjoy this style of game, and think it makes sense, but it's not quite what you propose).
 
