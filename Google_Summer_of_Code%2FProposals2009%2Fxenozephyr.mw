@@ -48,7 +48,7 @@ TODO: Provide link to a graphical image of framework
 === WebService Backend ===
 The WebService will be developed using Pylons. Pylons is a rapid web development framework for Python. The framework works by automatically generating an Application, this includes folders for all sorts of tools that can be used with Pylons. (Overview HERE: http://workaround.org/pylons/pylons-cheatsheet.html#directory-structure)
 
-The Application will start by auto generating a basic controller, the XMLController. It will be configured to route from a URL (i.e. "http://HOSTURL:HOSTPORT/TPWebBridge") and it will capture HTTP GET/POST requests. These will be what the frontend will use to communicate.
+The Application will start by auto generating a basic controller, the XMLController. It will be configured to route from a URL (i.e. !http://HOSTURL:HOSTPORT/TPWebBridge) and it will capture HTTP GET/POST requests. These will be what the frontend will use to communicate.
 
 :GET - GET Requests are request made via a URL by appending variables as text. Since kids love to try to hack these, any GET request for the controller URL will be ignored and return an error. Other requests for static media (images, text, etc) will be accepted, however those will be automatically handled by Pylons.
 
@@ -60,7 +60,6 @@ From the HTTP requests connections will be tunneled to the server using an insta
 This will be stored in the connections session, with a timeout and cleanup routine (if required). This will allow the TCP connection to persist with the user's session.
 
 The WebService can then be deployed using Pylons paste utility. Documentation and Tutorials will be created for this.
-
 
 === Flex/Flash Frontend ===
 The frontend will be developed using Adobe Flex3 SDK, which compiles into an Adobe Flash .swf, which can be embedded into a web page. It will consist of a simple GUI with standard components to interface with a game, similar to '''tpclient-pywx'''. In addition a star map component will be made that can render a visual of the starmap. A later project can expand on this frontend to make it a very artistic 2D client with better art, animations, sounds, etc.
