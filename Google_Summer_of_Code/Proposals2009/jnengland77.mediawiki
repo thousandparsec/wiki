@@ -1,20 +1,26 @@
 == Summary ==
 
+
 The primary goal is to make a short game for those who are new to 4X gaming or just want a short game. I have two secondary goals. One is to replace the current pseudo-random number generator with the Boost implementation. This will allow me to understand how the server works and help other parts of the project. Another goal is to help the developers by improving the ruleset development book for tpserver-cpp.
+
 
 == Proposal ==
 
+
 '''The Universe in an Hour'''
+
 The primary goal is to produce a new ruleset that provides a short game. This will allow novice players to experience 4X gaming, while not being too in depth, confusing and long. On the other hand it will allow the more advanced players to have a quick game when they're short on time. Developing the game will also help one of the secondary goal -- improving the ruleset development book.
 
 '''Content and Story'''
+
 Currently unknown. I would come up with a short story and base the game around that. I would probably bounce some ideas off my friends and the TP IRC channel, along with my GSoC mentor. I would also look into Konquest from KDE Games as the wiki suggests and see how it works (played once). I should play game or two of any of the currently included rulesets to gain a better understanding of what the game play is like and what it’s currently capable of.
 
 '''Implementation of the short game'''
+
 * Timed turns to keep the game play shorter
 * Limit the amount micromanagement 
 * Simple resource and money management
-   * My idea is to have the planets just give certain resources and amounts. 
+* My idea is to have the planets just give certain resources and amounts. 
      (e.g. iron, copper, gold, silver and probably other metals )
 * Some basic units: scout, small, medium, large destroyer, gatherer.
 * All of the units will require certain materials on that planet they get built on.
@@ -25,9 +31,11 @@ Currently unknown. I would come up with a short story and base the game around t
 I recently played play conquest some of my original idea may be too complex for this simple games. If time permits I may include a tech tree to give upgrades or more options. I haven't had much time to thing about it yet. This game should still be more fun than Konquest.
 
 '''Boost.Random'''
+
 I intend on replacing the old pseudo-random number generator with the Boost implementation, Boost.Random. This will be used as a stepping stone to understand some of the internals of tpserver-cpp and get involved with other parts of the project. This part of the project should not take very long -- a max of three weeks.
 
 '''Implementation'''
+
 * This is how I would implement and replace the current pseudo-random number generator.  
 * Understand how the current PRNG and Boost.Random (I’ve never worked with the Boost libraries before) work.
 * Develop a class interface that matches the old PRNG.
@@ -48,6 +56,7 @@ I would attempt to add to this throughout the Summer.
 == Timeline ==
 
 '''Goals for Weeks 1-2'''
+
 * Understand the current PRNG and Boost
 * Implement, test, and replace the old PRNG with Boost.Random
 * Think about specifications of the short game, along with a [background] story and a name for the game.  
@@ -84,21 +93,26 @@ For the 1st month I'm not exactly sure how many hours I will be able to put in, 
 I will provide a weekly progress report on the mailing list to inform my mentor and the rest of the community. I'll state what I've accomplished for the week. Any doubts and questions I may have. 
 
 '''Importance'''
+
 I think these projects are fairly important and could help draw more attention to the project. With the short game it’ll encourage beginners to play, and give them a short game into the world of 4X gaming. It’ll also fulfill the latter for the more advanced player, when they’re short on time.  Having good documentation can attract new developers and create more rulesets ( and thus more games to play ).
 
 
 == About myself ==
 
+
 My name is Jordan Neumeyer. I’m attending South Dakota School of Mines and Technology (SDSM&T) for a bachelors degree in Computer Science. SDSM&T is located in Rapid City, SD, USA. I’m currently a sophomore, but will reach junior status after this semester. Most of my courses use C++ (and some C), and was also taught assembly (Intel x86). Higher level courses will, of course, teach me other languages (A.I./Machine Learning: Scheme; Programming Language: scheme, Perl, and Java). I have also taught myself some of the basics in other languages from books and online resources, such as Python, BASH, and PHP. After taking course work I feel like I could relearn most of the stuff very quickly and gain a better understanding of that language. I also help maintain a server, which hosts C&C mods and fan sites.  There are four fairly large communities on the server (revora.net is probably the largest).
 
 The Thousand Parsec project caught my eye, because over a year ago or so I was introduced 4X gaming with Dominions 3.  4X stood out and reminded me of Dominions 3 (and its 300 page manual) and I really enjoyed playing that game. I think creating a similar game would be fun. And overall The GSoC interested me as it provides a great opportunity to gain experience, and some additional funding for my schooling.
 
+
 == Previous Projects ==
+
 
 I’ve never contributed or worked on an open source project. Most of my computer science programs included 2 to 4 week projects. You can look at [http://jn.icetex-hosting.net/svn my site] for couple projects I’ve worked on in the past. There is a couple more that I’d didn’t use SVN for. And some I didn’t allow others to see on and didn’t include.
 
 
 Notes and Warning: I proofread it while I was tired... I will proofread it again after a little feedback. And if someone would format this a bit better that would be great. I don't have any bbcode skills for wikis.
+
 
 == Comments ==
 Improving the formating will help. You could make your proposal clearer by focusing on the big things (the ruleset), and mention the other smaller bits (the prng) as introductory tasks. Also, how will you keep your mentor and the rest of the community informed of your progress? How much time will you spend a week? --[[User:Lee Begg|Lee Begg]] 05:51, 1 April 2009 (EDT)
