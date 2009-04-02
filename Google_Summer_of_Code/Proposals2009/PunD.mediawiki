@@ -218,6 +218,9 @@ This is going to be the primary driving force behind balance testing. The game n
 
 What should make TotV fun is what makes tactics games, chess, and other low-unit count strategy games fun; the ability to quickly and easily understand the state of the entire universe while still making clever play rewarding.
 
+==Game Script==
+A short experimental game script can be found [http://www.contrib.andrew.cmu.edu/~dkohlbre/TPDemo.pdf here]. (pdf)
+
 =Student=
 ==Contact==
 *I am consistently available via chat services, email, and VoIP services. (Ask me for any of my contact info specifics)
