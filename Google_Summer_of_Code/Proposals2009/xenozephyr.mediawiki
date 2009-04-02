@@ -32,15 +32,14 @@ In addition, there are many benefits to future developers of the project:
 ** Server Listing 
 ** Create Account on a server
 ** Connecting to a Server
-** Game Listing? I did not see a method of Creating/Joining a game in the API docs for the Connection class..
-** Creating/Joining Games? See comment above
+** Game Listing ! I did not see a method of Creating/Joining a game in the API docs for the Connection class..
+** Creating/Joining Games ! See comment above
 ** Message Boards
 ** Display Star Map and Object Data
 ** Entering Orders (Displaying Order History/Queue/Turn Information?)
 ** Player Listing
 ** Resource Information
 ** (Optional, Time Permitting) : Categories, Properties, Components, Designs
-
 
 == Architecture and Details ==
 
