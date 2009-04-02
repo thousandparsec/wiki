@@ -43,7 +43,7 @@ In addition, there are many benefits to future developers of the project:
 
 == Architecture and Details ==
 
-TODO: Provide link to a graphical image of framework
+[http://img21.imageshack.us/img21/9445/tpwebarch.png Architecture Diagram]
 	
 === WebService Backend ===
 The WebService will be developed using Pylons. Pylons is a rapid web development framework for Python. The framework works by automatically generating an Application, this includes folders for all sorts of tools that can be used with Pylons. (Overview HERE: http://workaround.org/pylons/pylons-cheatsheet.html#directory-structure)
@@ -73,8 +73,6 @@ Flex3 allows the use of Adobe's object oriented language, ActionScript3, to be u
 :A ClientController class will be created that provides interfacing for all the GUI components. Every components events and data should bind through members of this class. It is then responsible for interpreting the GUI actions and making the proper set of requests and changes to the state of the client.
 
 :MXML scripts will be used to define the GUI with its components, and bind the appropriate events and data members to the ClientController class. Additionally transitions may be added for "flair" in the GUI.
-	
-	
 
 == Time Line with Milestones ==
 The Time Line is broken down into two week periods giving iterative milestones that are testable. The Mentor should be able to see these by just using a flash capable web browser.
