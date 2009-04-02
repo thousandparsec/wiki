@@ -1,0 +1,187 @@
+ Name: Fintan Nagle
+IRC handle: fusionlove
+Email:
+fusionlove@gmail.com
+
+Project Title: A new ruleset for Thousand Parsec
+
+Note: I realise that I am submitting this proposal very late but I have been without an internet connection almost since the beginning of the submission window due to staying with my family for a week and a half. I'm back now, though.
+
+Introduction
+
+Most of the existing Thousand Parsec rulesets are based on empire-building. You sit back and watch the universe unfold in front of you on your screen; you dispatch fleets, burn planets, harvest resources and look on from afar as your battles play out as dots of light, parsecs away.
+
+But what if you were actually out there? What if you weren't some impersonal imperator, watching the universe from above- but sitting in the cockpit of your own ship as you watch the next planet draw near off your bows? What if you were not a ruler but a soldier, a trader, a pirate; and what you were risking was not you armies and yourwealth, but your own ship and your own life?
+
+I want to bring the close, personal gameplay of games like the classic Escape Velocity on the Mac (and of course Elite) to Thousand Parsec. I would also like to work on creating a believable, interesting, deep universe as well as writing good code.
+
+
+A similar proposal, EliteSec, was attempted last year by epyon . The difference here is that I wish to emphasis narrative and universe quality (and above all originality and player interest) as well as code quality. I wish more to create my own framework rather than cloning or emulating Elite or other games.
+
+Benefits
+
+I have always found Elite-style games more fun to play than Reach for the Stars- or strategy-style games. As your character is directly interacting with the universe and other players, rather than via orders and fleets, you feel more immersed and there is more emotional investment with the game. When under attack, it is your character who is in danger rather than Battle Group XII; when you pull off a good trade deal, you can buy yourself a new ship rather than upgrading the shields on a space station light years away.
+
+Moreover, I have found that many people are intimidated by RTS-style space games; they view them as massive endeavours with complex rules rather than something they can dive straight into. They also tend to be longer. I feel that an adventuring game (I shall use this term to distinguish the Elite style from the Reach for the Stars style) would helpTP to be more accessible and attractive to new players.
+
+Deliverables
+
+The project will work around creating a Ruleset class for the C++ server, tpserver-cpp (I am quite experienced in C++ and not very much in Python), as described in Lee Begg's book on creating rulesets.
+
+Another main deliverable will be documentation. I found tpclient-pywx slightly confusing on first run and it would be very useful to have documentation on how to use my ruleset specifically. Also, I intend to write a scene-setting document providing back story for the scenario. I have found that games which present a bit of history and background first are always more fun to play as the player enters the universe with preconceptions, expectations and questions.
+
+Documentation for future developers should also be produced so that there is scope for expanding on my project, perhaps in future Summers of Code.
+
+Project details
+
+The universe will focus on the traditional 4 X's, but in a more personal manner than strategy-style universe games.
+
+eXploration:
+The player explores the universe by means of movement in-system and hyperjumps between systems. Exact mechanics of hyperjumps have yet to be worked out; how many turns they take and how much energy they consume, for example.
+The universe, unlike the TP demo server's, will be very large; this ensures maximum playability and a sense that the universe is huge and unknown. There is a possibility for dynamic universe creation, like in the original Elite, but this will depend on time.
+
+eXploitation:
+The player can exploit both planetary resources and other players. The classic trading missions (transporting goods from planet to planet to take advantage of price differences) will be included, as well as more creative missions such as delivering objects of value or transporting refugees. Other players can be exploited mainly by piracy, but also by buying goods from them or taking over their missions.
+
+eXpansion:
+The main difference between my project's ruleset and, for example, Reach for the Stars is that instead of expanding an empire, a player expands her own personal resources. When new wealth is acquired, such things as
+
+    * -Ship upgrades
+    * -New ships
+    * -Information about the galaxy
+    * -Chase ships or escorts
+    * -Weapon upgrades
+
+
+can be purchased.
+
+eXtermination:
+Combat will be a major part of the game, as this is one of the most exciting parts of any sci fi scenario. It can take place either player-to-player or player-to-AI, if there is enough time to implement a simple AI system. Combat between ships and planets (space-to-ground missiles, surface-based orbital artillery) is alsoenvisageable.
+
+To support the 4 X's, the scenario will have the following major components:
+
+   1. -Star systems. These will be many and diverse, and as detailed above, possibly randomly generated. An interesting detail of the Mac game Escape Velocity was that unexplored systems were unknown to the player unless he or she purchased a star map in advance; this lent a feeling that the galaxy was vast and mysterious. This could be implemented if there is support in the various clients (or if such support could be easily added).
+   2. -Ships. These can be either the players', AI ships controlled by the server, or ships controlled by AI clients. At present, of course, no AI client exists for the newruleset, and creating one may not be within the scope of the project ; but a simple rule-based system might be implementable within the time frame. Ships have various statistics controlling movement and combat such as speed and armour information.
+   3. -Missions. Completing these is (apart from combat) the meat of the game. Their main point will be diversity, as missions in other games can begin to feel samey: endless trading runs or repetitive bounty hunting missions. Here, again, random generation could be possible, along the lines of [verb] [object] in [system]: "Transport ambassador to System X," "Collect asteroid dust in System Y."
+
+
+One of the major challenges is that adventure-style SF games usually follow a real-time format rather than a turn-based one. As TP has historically been turn-based, either a way will be found for the ruleset to work in turns or fast, frequent turns will be pushed to ensure information updates smoothly. I have yet to study the TP protocol in enough detail to work out exactly what the options are, though.
+
+Background
+
+Any good game needs a back story, a canvas against which the action can unfold. There are two options here: creating a new universe, or taking an existing one and setting theruleset there. Using an existing universe, like the Star Trek canon (only an example!) would definitely be more popular, and easier to create to boot. The universe of the Culture from the novels of Iain M Banks is particularly attractive to me because of its originality.
+
+However, there are issues with copyright which would need to be worked out, so creating my own backstory is probably the best option. This also allows for more narrative creativity, which is attractive to me as well as to potential players. Theruleset should not be just an exercise in coding but something which people are actually keen to play!
+
+The main philosophy of my back story is originality. Every SF game has multiple races of stereotypical aliens and the standard Frigate-Cruiser-Battleship arrangement of ships. I want to try for something new and believable, with all the dirt and rough edges that a society and culture actually has. Economic recession in a galactic civilisation? An incompetent Confederation Navy which can't keep track of its antimatter warheads? A mission where you are a detective and must solve a murder? And definitely no small green aliens.
+
+Example scenarios
+
+#1: The beginner
+
+You've inherited a ship from your grandfather. It's an ancient crate that can barely get through a stratosphere without bits of red-hot metal falling off the wingfarings . But what the hell. You've been stuck on the same planet for years. You head up into orbit and see if you can find anyone to contract you do do anything fun.
+
+You talk to a few promising-looking ships in the local system. Eventually you find someone who's offering fifty thousand pieces of silicon carbide to take his daughter to the other end of the galaxy. It'll take you weeks, but you accept, and her stasis coffin is loaded aboard. Just as you're about to jump to hyperspace, one of your wing mirrors falls off.
+
+When you reach your destination, you open the stasis coffin, and the girl immediately offers you another fifty thousand pieces ofSiC to take her home again. You know that this will seriously annoy her father, but you like her more than you did him, so you do. When you get back, you buy yourself a slightly faster ship and head off into space before he hears about it and hunts you down.
+
+This scenario illustrates missions and how your reputation (or news of acts you have performed) travels at non-instant speed. It also illustrates a system I would like to implement for random component failure. A ship is made up of different systems like weapons, propulsion, life support, etc; the each have a random (small) chance of failure each turn. This would allow for interesting scenarios like being stranded in a remote system and having to call for help. Also, more expensive components have a much smaller chance of failure; this would make cheap, older ships feel more realistic. Individual components could also be damaged during combat, which is more realistic than having a single integer variable for ship health.
+
+#2: The warlord
+
+You've been doing this for years. You remember the days when you were cruising around in a beat-up, hundred-tonne vessel with a light railgun bolted to the bows, harassing miners; but now you are sitting in the captain's chair of a 50 thousand tonne orbital strafe gunship with a fleet of light armoured escorts, and your game is jumping into a system and pouring hot metal down from orbit until the planets give you money. It's fun.
+
+But it's risky as well. It's empty out here on the frontier, but the long arm of the law still reaches out into the Western Spiral Arm of the galaxy. You have to stay one step ahead of the police fleets, paid by central government to take down scourges of society like you; and there are always the police drones, stupid andnonsentient but small and fast and annoying.
+
+This scenario illustrates how ships can be upgraded from tiny to gargantuan, and how escort ships can be bought (or other human players paid to escort you around). It also shows how different factions (here, pirates and police) would come into conflict, and how the game could pay human players to police the galaxy, as well as doing so by means of AI-controlled drones.
+
+#3: The trader
+
+You're a nice, law-abiding citizen, you are. You spend your time analysing the vagaries of galactic cashflow and profiting from it, sending contracted ships on long voyages to the far reaches of the galaxy and shipping exotic spices and bulk cargoes of unrefined ore across the parsecs. Of course, you have to pay a significant amount to protect your fleets from the scum of the universe; but it's all profit in the long run. The ingots of silicon carbide are building up in your stock rooms. One day you might even be able to buy your own planet...
+
+This scenario illustrates an example of trading. Rather than using exclusively game author-generated missions, players will be able to contract each other out to accomplish tasks such as delivering items or destroying another player's property. Exactly how this will be implemented using theTP protocol has not yet been decided, but the protocol seems complex and powerful enough to support such a system. Also seen here is how theruleset blends into strategy-style SF games when players start getting rich enough to own planets and control multi-system empires; this will be made very difficult and therefore kept to a minimum, though, to emphasize the adventuring aspect. The economy could also be dynamic instead of static: prices could react to such variables as local wars and availability of goods.
+
+Algorithms
+
+AI
+A potential, simple learning AI could be implemented (either for server-controlled drones or client bots) using a rule-based system using rules like
+Health less than 50% -> stop attacking
+Range greater than 1000km -> use torpedoes instead of microwave lasers
+
+Time allowing, a learning AI could be implemented using dynamic learning functions such as a coefficiented variable weight fitness function from actions to integer fitness (evaluating the value of each action). The basic idea here is that the effectiveness of an action is fed back into the coefficients deciding its weight next time.
+
+I am at present taking a course in AI for games and have some experience building rule based systems in Prolog.
+
+Dynamic economy
+
+A dynamic economy could be modelled on the assumption that there is a constant amount of money and resources in the galaxy and than price is dependent on resource availability: what is rarer is more expensive. What is hard to obtain- for example, goods produced on the other side of a war zone- is also more expensive. Prices could be updated every turn or every several hours, to allow players to spot patterns and exploit them.
+
+
+
+Schedule
+
+As I have been without an Internet connection for the past week and a half I have not been able to download and build tpserver-cpp. I knew I wanted to help TP's development as part of GSoC, however, and have been working on my proposal and planning ideas.
+
+There are a few periods before August when I will be unable to work full-time on the project: I have final exams in mid-June and will be away for a few days near the end of June. During July and August, however, I am completely free and will be able to work uninterruptedly on TP.
+
+April 3 - April 20:
+-Development of more preliminary ideas for the project. Nothing too definite will be committed to, however, as it won't be known whether I'll be able to work on the project as part of Summer of Code until the 20th.
+-Test build of tpserver-cpp, bug fixing. I will try and fix some bugs anyway even if I'm not accepted :)
+
+
+April 20 - May 23 (Community bonding period):
+- Discussion of ideas with the mentors and the TP community.
+- Detailed study of the TP framework and tpserver-cpp.
+- Test plays of all the existing rulesets to see what has been done and what is possible.
+- Detailed study of the TP protocol to see exactly what is possible within the framework.
+
+May 23: coding begins.
+
+End of June: Milestone. Have a working version of the ruleset that can communicate with the client.
+
+July 13: Mid-term evaluations. Have the major objects- ships, planets and missions- in position.
+
+End of July: Milestone. Have all the major features finished. Have a server which is actually playable and open to the public.
+
+August 10: Pencils down date.
+
+-Final testing and debugging
+-Finalisation of background story and documentation
+
+August 17: Firm pencils down date
+
+Code maintenance
+
+If the project is unfinished:
+Of course, I fully expect to be able to finish this project. I have designed and implemented a system that took four months, start-to-finish, before; this project also required learning other people's code (see experience). However, we must always plan for the worst case. If for some reason I cannot finish the project or become stuck, I will try and tidy up existing code into as clear and complete a form as possible. I will also be sure to document development problems and how the code has been written so far, in case future developers wish to take it over. I usually comment code as I write and think clarity is more important than speed (differences in code length are usually evened out by the optimizer anyway).
+
+In 12 months:
+SF and space gaming is a subject about which I am quite passionate (SF is my favourite literary genre and I probably have more experience in SF gaming than in any other genre) so I am quite likely to continue working on this project, if not as intensively, afterGSoC . If not, however, I will take care to leave the code in a well-documented state; I will maintain a development blog documenting algorithms, bugs and solved problems. This will ensure that the code can be worked on by other people- and more easily by me when I return to it.
+
+Bio
+
+I'm a third year Computer Science student at the University of York in England. I grew up in the UK and was home educated until I was 15, which gave me the opportunity to focus on learning about what really interested me (not just computers, I promise). My main areas of interest were science and fiction. My attraction to SF is therefore natural.
+
+When I was 15 my parents moved to France and I went to college there, choosing the scientific path. I returned to the UK for university.
+
+So far my university course grades average 68%. A First degree (the highest of three classes in the UK) is obtained at 70%.
+
+Experience - CS
+
+Languages- I know quite a lot of C++ and have got past most of the major milestones including templating, template metaprogramming, object factories, function pointers, multiple inheritance, references and handling pointers to compile-time-unknown types using typeid. I have taken a semi-advanced course in Haskell including recursion, Haskell's higher-level functions like map and automated program transformation. I am also fairly competent in Scheme and Ada and know a little Prolog. I am fairlly advanced in static web design using HTML + CSS and have built three websites using these.
+
+Projects- my largest project was a neural network system frontend which I implemented as a third year uni project. I wrote several thousand lines of C++ code and had to learn the theory and application behind a complex library developed by the University of York's Advanced Computer Architectures Group. The library concerned a neural network system based on matrix memories called AURA. I am presently applying for a PhD research position in the neural computing / bio inspired computation area at the University of Edinburgh. This project made me comfortable with deciphering other people's code and learning non-standard libraries.
+
+My second largest project was a C++ and OpenGL 3D ballistics game where the player was in control of a turret and had to target and hit various objects. This gave me experience in graphics programming including fractal terrain generation and multiple camera angles in OpenGL.
+
+In terms of team interaction I completed a two-week team design project where we did preliminary and object-oriented design for a presentation program targeted at elderly users. We had daily meetings and collaborated over the Internet in the evenings and I feel very comfortable with working as part of a team.
+
+Experience- Story
+
+I feel that when writing a ruleset, competence in programming is not the only important thing. If successful in this project I will be implementing an actual game that users will be playing, and quality code alone will not be enough- the game must be playable, captivating, and interesting. It must have, if not a storyline, a wide and variable universe against which users can play out games.
+
+Although the point of Google Summer of Code is code, not fiction or plot development, I feel that a good canvas and back story in Thousand Parsec is at least as important as good documentation and usability in a more standard project.
+
+I nearly did English at university and am widely read in the field of science fiction; not just the standard Star Trek clones but more classic works such as Arthur C Clarke, Heinlein and Asimov. I have written several SF short stories and am working on a longer story, and I like writing as much as programming. I find writing a program similar to writing a story; you have the beginning (the main function, declaration of variables) the middle (the algorithm) and the end (tidying up the output, presenting it to the user). When programming you have to plan ahead, revise, cut out and change designs just as much as you do when writing a story. And when writing a story you have to be nearly as precise as when programming; although a story can't cause a compiler error, a plot hole or typo can make it just as useless as a major or minor bug can in a program.
+
+I love science fiction- why restrict yourself to one planet and one time when you could have a whole universe to play with- and coming up with ideas for Thousand Parsec would be just as interesting a challenge as the coding itself.
