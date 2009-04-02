@@ -7,7 +7,9 @@ Project Title: A new ruleset for Thousand Parsec
 
 Note: I realise that I am submitting this proposal very late but I have been without an internet connection almost since the beginning of the submission window due to staying with my family for a week and a half. I'm back now, though.
 
-Introduction
+
+== Introduction ==
+
 
 Most of the existing Thousand Parsec rulesets are based on empire-building. You sit back and watch the universe unfold in front of you on your screen; you dispatch fleets, burn planets, harvest resources and look on from afar as your battles play out as dots of light, parsecs away.
 
@@ -18,13 +20,17 @@ I want to bring the close, personal gameplay of games like the classic Escape Ve
 
 A similar proposal, EliteSec, was attempted last year by epyon . The difference here is that I wish to emphasis narrative and universe quality (and above all originality and player interest) as well as code quality. I wish more to create my own framework rather than cloning or emulating Elite or other games.
 
-Benefits
+
+== Benefits ==
+
 
 I have always found Elite-style games more fun to play than Reach for the Stars- or strategy-style games. As your character is directly interacting with the universe and other players, rather than via orders and fleets, you feel more immersed and there is more emotional investment with the game. When under attack, it is your character who is in danger rather than Battle Group XII; when you pull off a good trade deal, you can buy yourself a new ship rather than upgrading the shields on a space station light years away.
 
 Moreover, I have found that many people are intimidated by RTS-style space games; they view them as massive endeavours with complex rules rather than something they can dive straight into. They also tend to be longer. I feel that an adventuring game (I shall use this term to distinguish the Elite style from the Reach for the Stars style) would helpTP to be more accessible and attractive to new players.
 
-Deliverables
+
+== Deliverables ==
+
 
 The project will work around creating a Ruleset class for the C++ server, tpserver-cpp (I am quite experienced in C++ and not very much in Python), as described in Lee Begg's book on creating rulesets.
 
@@ -32,7 +38,9 @@ Another main deliverable will be documentation. I found tpclient-pywx slightly c
 
 Documentation for future developers should also be produced so that there is scope for expanding on my project, perhaps in future Summers of Code.
 
-Project details
+
+== Project details ==
+
 
 The universe will focus on the traditional 4 X's, but in a more personal manner than strategy-style universe games.
 
@@ -67,7 +75,9 @@ To support the 4 X's, the scenario will have the following major components:
 
 One of the major challenges is that adventure-style SF games usually follow a real-time format rather than a turn-based one. As TP has historically been turn-based, either a way will be found for the ruleset to work in turns or fast, frequent turns will be pushed to ensure information updates smoothly. I have yet to study the TP protocol in enough detail to work out exactly what the options are, though.
 
-Background
+== 
+Background ==
+
 
 Any good game needs a back story, a canvas against which the action can unfold. There are two options here: creating a new universe, or taking an existing one and setting theruleset there. Using an existing universe, like the Star Trek canon (only an example!) would definitely be more popular, and easier to create to boot. The universe of the Culture from the novels of Iain M Banks is particularly attractive to me because of its originality.
 
@@ -75,7 +85,9 @@ However, there are issues with copyright which would need to be worked out, so c
 
 The main philosophy of my back story is originality. Every SF game has multiple races of stereotypical aliens and the standard Frigate-Cruiser-Battleship arrangement of ships. I want to try for something new and believable, with all the dirt and rough edges that a society and culture actually has. Economic recession in a galactic civilisation? An incompetent Confederation Navy which can't keep track of its antimatter warheads? A mission where you are a detective and must solve a murder? And definitely no small green aliens.
 
-Example scenarios
+
+== Example scenarios ==
+
 
 #1: The beginner
 
@@ -101,7 +113,9 @@ You're a nice, law-abiding citizen, you are. You spend your time analysing the v
 
 This scenario illustrates an example of trading. Rather than using exclusively game author-generated missions, players will be able to contract each other out to accomplish tasks such as delivering items or destroying another player's property. Exactly how this will be implemented using theTP protocol has not yet been decided, but the protocol seems complex and powerful enough to support such a system. Also seen here is how theruleset blends into strategy-style SF games when players start getting rich enough to own planets and control multi-system empires; this will be made very difficult and therefore kept to a minimum, though, to emphasize the adventuring aspect. The economy could also be dynamic instead of static: prices could react to such variables as local wars and availability of goods.
 
-Algorithms
+== 
+Algorithms ==
+
 
 AI
 A potential, simple learning AI could be implemented (either for server-controlled drones or client bots) using a rule-based system using rules like
@@ -118,7 +132,9 @@ A dynamic economy could be modelled on the assumption that there is a constant a
 
 
 
-Schedule
+
+== Schedule ==
+
 
 As I have been without an Internet connection for the past week and a half I have not been able to download and build tpserver-cpp. I knew I wanted to help TP's development as part of GSoC, however, and have been working on my proposal and planning ideas.
 
@@ -150,7 +166,9 @@ August 10: Pencils down date.
 
 August 17: Firm pencils down date
 
-Code maintenance
+== 
+Code maintenance ==
+
 
 If the project is unfinished:
 Of course, I fully expect to be able to finish this project. I have designed and implemented a system that took four months, start-to-finish, before; this project also required learning other people's code (see experience). However, we must always plan for the worst case. If for some reason I cannot finish the project or become stuck, I will try and tidy up existing code into as clear and complete a form as possible. I will also be sure to document development problems and how the code has been written so far, in case future developers wish to take it over. I usually comment code as I write and think clarity is more important than speed (differences in code length are usually evened out by the optimizer anyway).
@@ -158,15 +176,18 @@ Of course, I fully expect to be able to finish this project. I have designed and
 In 12 months:
 SF and space gaming is a subject about which I am quite passionate (SF is my favourite literary genre and I probably have more experience in SF gaming than in any other genre) so I am quite likely to continue working on this project, if not as intensively, afterGSoC . If not, however, I will take care to leave the code in a well-documented state; I will maintain a development blog documenting algorithms, bugs and solved problems. This will ensure that the code can be worked on by other people- and more easily by me when I return to it.
 
-Bio
+
+== Bio ==
+
 
 I'm a third year Computer Science student at the University of York in England. I grew up in the UK and was home educated until I was 15, which gave me the opportunity to focus on learning about what really interested me (not just computers, I promise). My main areas of interest were science and fiction. My attraction to SF is therefore natural.
 
 When I was 15 my parents moved to France and I went to college there, choosing the scientific path. I returned to the UK for university.
 
-So far my university course grades average 68%. A First degree (the highest of three classes in the UK) is obtained at 70%.
 
-Experience - CS
+
+== Experience - CS ==
+
 
 Languages- I know quite a lot of C++ and have got past most of the major milestones including templating, template metaprogramming, object factories, function pointers, multiple inheritance, references and handling pointers to compile-time-unknown types using typeid. I have taken a semi-advanced course in Haskell including recursion, Haskell's higher-level functions like map and automated program transformation. I am also fairly competent in Scheme and Ada and know a little Prolog. I am fairlly advanced in static web design using HTML + CSS and have built three websites using these.
 
@@ -176,7 +197,9 @@ My second largest project was a C++ and OpenGL 3D ballistics game where the play
 
 In terms of team interaction I completed a two-week team design project where we did preliminary and object-oriented design for a presentation program targeted at elderly users. We had daily meetings and collaborated over the Internet in the evenings and I feel very comfortable with working as part of a team.
 
-Experience- Story
+
+== Experience- Story ==
+
 
 I feel that when writing a ruleset, competence in programming is not the only important thing. If successful in this project I will be implementing an actual game that users will be playing, and quality code alone will not be enough- the game must be playable, captivating, and interesting. It must have, if not a storyline, a wide and variable universe against which users can play out games.
 
