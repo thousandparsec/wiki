@@ -48,7 +48,7 @@ TODO: Provide link to a graphical image of framework
 === WebService Backend ===
 The WebService will be developed using Pylons. Pylons is a rapid web development framework for Python. The framework works by automatically generating an Application, this includes folders for all sorts of tools that can be used with Pylons. (Overview HERE: http://workaround.org/pylons/pylons-cheatsheet.html#directory-structure)
 
-The Application will start by auto generating a basic controller, the XMLController. It will be configured to route from a URL (i.e. !http://HOSTURL:HOSTPORT/TPWebBridge) and it will capture HTTP GET/POST requests. These will be what the frontend will use to communicate.
+The Application will start by auto generating a basic controller, the XMLController. It will be configured to route from a URL (i.e. http:// HOSTURL:HOSTPORT /TPWebBridge) and it will capture HTTP GET/POST requests. These will be what the frontend will use to communicate.
 
 :GET - GET Requests are request made via a URL by appending variables as text. Since kids love to try to hack these, any GET request for the controller URL will be ignored and return an error. Other requests for static media (images, text, etc) will be accepted, however those will be automatically handled by Pylons.
 
