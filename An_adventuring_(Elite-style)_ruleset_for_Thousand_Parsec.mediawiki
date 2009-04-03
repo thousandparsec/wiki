@@ -72,8 +72,7 @@ To support the 4 X's, the scenario will have the following major components:
 
 
 
-== 
-Background ==
+== Background==
 
 
 Any good game needs a back story, a canvas against which the action can unfold. There are two options here: creating a new universe, or taking an existing one and setting theruleset there. Using an existing universe, like the Star Trek canon (only an example!) would definitely be more popular, and easier to create to boot. The universe of the Culture from the novels of Iain M Banks is particularly attractive to me because of its originality.
@@ -82,9 +81,7 @@ However, there are issues with copyright which would need to be worked out, so c
 
 The main philosophy of my back story is originality. Every SF game has multiple races of stereotypical aliens and the standard Frigate-Cruiser-Battleship arrangement of ships. I want to try for something new and believable, with all the dirt and rough edges that a society and culture actually has. Economic recession in a galactic civilisation? An incompetent Confederation Navy which can't keep track of its antimatter warheads? A mission where you are a detective and must solve a murder? 
 
-== 
-
-The Problem of Turns ==
+== The Problem of Turns ==
 
 
 TP's framework is fundamentally turn-based. Elite, Escape Velocity and Eve Online are fundamentally real-time and non-turn-based. This dichotomy and its possible solutions are discussed here.
