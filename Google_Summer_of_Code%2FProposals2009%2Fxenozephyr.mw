@@ -15,11 +15,11 @@ The main benefit of this project to the Thousand Parsec community is the ability
 
 In addition, there are many benefits to future developers of the project:
 
-:A key benefit is in the separation of the Frontend/Backend into two smaller projects giving room to add additional types of web client frontends to the existing backend. (i.e. XHTML/AJAX based, or Mobile Devices with internet.)
+:A key benefit is in the separation of the Frontend/Backend into two smaller projects giving room to add additional types of web client frontends to the existing backend. (i.e. XHTML/AJAX based, or Mobile Devices with internet.) 
 
-:The use of the libtpproto-py library also allows updates to the existing protocol and client library without heavily modifying the backend/frontend components.  (However a heavy change in the protocol specification will require things to be updated.) 
+:The use of the libtpproto-py library also allows updates/bugfixes to the existing protocol and client library without heavily modifying the backend/frontend components. (However a heavy change in the protocol specification will require things to be updated.) 
 
-:The use of Flash/Flex can allow artistic individuals to implement a 2D game client on the frontend's existing code.
+:The use of Flash/Flex can allow artistic individuals to implement an advanced 2D game client on the frontend's existing code, replacing the simplistic application style GUI.
 
 == Deliverables ==
 
