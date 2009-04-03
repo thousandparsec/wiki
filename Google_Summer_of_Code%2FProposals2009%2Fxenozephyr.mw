@@ -25,15 +25,16 @@ In addition, there are many benefits to future developers of the project:
 
 * A functioning WebService that allows multiple frontends to connect to a game server.
 ** Provides a Pylon Controller for making GET/POST requests and sending replies in XML.
-** the requests will wrap the functions of the Connection class in '''libtpproto-py''' and provide a session for the web connection and corresponding ClientConnection class instance.
+** the requests will wrap the functions of the Connection class in libtpproto-py and provide a session for the web connection and corresponding ClientConnection class instance.
 ** Provide a list of multiple servers to connect to. (this can possibly extend to using the metaserver)
 ** Provide hosting for additional media access (.jpg, .gif, any other web assets)
+** (Optional, Time Permitting, Priority) : Additional formats for returned data. (JSON,I'll research others).
 * A Flash object to embed into a web page that will communicate with the backend bridge and do most of the client work.
-** Server Listing 
+** Server Listing
 ** Create Account on a server
 ** Connecting to a Server
-** Game Listing     NOTE: I did not see a method of Creating/Joining a game in the API docs for the Connection class..
-** Creating/Joining Games      NOTE: See comment above
+** Game Listing NOTE: I did not see a method of Creating/Joining a game in the API docs for the Connection class..
+** Creating/Joining Games NOTE: See comment above
 ** Message Boards
 ** Display Star Map and Object Data
 ** Entering Orders (Displaying Order History/Queue/Turn Information?)
