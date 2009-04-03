@@ -247,3 +247,84 @@ Although the point of Google Summer of Code is code, not fiction or plot develop
 I nearly did English at university and am widely read in the field of science fiction; not just the standard Star Trek clones but more classic works such as Arthur C Clarke, Heinlein and Asimov. I have written several SF short stories and am working on a longer story, and I like writing as much as programming. I find writing a program similar to writing a story; you have the beginning (the main function, declaration of variables) the middle (the algorithm) and the end (tidying up the output, presenting it to the user). When programming you have to plan ahead, revise, cut out and change designs just as much as you do when writing a story. And when writing a story you have to be nearly as precise as when programming; although a story can't cause a compiler error, a plot hole or typo can make it just as useless as a major or minor bug can in a program.
 
 I love science fiction- why restrict yourself to one planet and one time when you could have a whole universe to play with- and coming up with ideas for Thousand Parsec would be just as interesting a challenge as the coding itself.
+
+Responses to questions
+
+
+What makes YOUR game fun?  What makes it unique?
+
+My main points are:
+
+    * Non-repetition. The player needs to have a new experience every time, and most adventuring-style SF games like Escape Velocity are heavily scripted: missions and economy are set out once by the developers. I want to ensure a new experience every time by means of dymanic mission creation, mission creation by players (contracting), random events such as ship component failure or natural disasters which figure heavily in the gameplay, and dynamic economy.
+    * Story. Most existing adventuring-style games are also very similar: they either seem to be based mainly on trading or combat, and trading (or combat) feels similar in all of them. They also tend to have universe backstories which are not very believable or passionate; for example, many contain unoriginal, stereotypical alien races. There are three in Escape Velocity: Override called the Azdgari, the Zidagar, and the Igadzra. I would like to create a game with a story which is actually captivating and does not follow the standard [ships-aliens-various levels of shielding and blasters] recipe: I would like to address questions such as whether the player should morally be doing an offered mission and include interesting elements such as sentient AI, poverty, and the fringes of society like fraud and trickery that we do not often see in 4X games.
+
+Overall, I do not want my ruleset to make players feel like they are playing Elite, EV, or any other space adventuring game. I will conduct a review of what has been done before in the area, including plays of major previous games (that I have not player already) to ensure my ruleset is not too close to anything existing.
+
+
+Alternatively consider that I can play Stars! now, with lots of people on pretty much any platform (it runs perfectly under wine)...So why would I play this game? (It's an evil question)
+
+
+You can't really compare Stars! to my prospective ruleset. While they are both SF 4X games, in Stars you are an emperor controlling fleets of ships; in my ruleset you would be an individual controlling one or a few. So let's rephrase the question:
+
+
+Why would I play my ruleset instead of Eve Online?
+
+   1. TP is open source and free. Eve Online is closed source and expensive. There are two advantages here: the obvious financial one, and the ability to talk to the developer community and possibly work on the game yourself. Eve Online has a massive, hierarchical community in which it takes years to accomplish anything significant, as all the action takes place on one server; TP has a small, open community into which new players and developers can integrate easily. Multiple instances of my ruleset could be run on servers, ranging from hour-long games to persistent, month-long scenarios.
+   2. Eve Onlne is very time-consuming. You cann't do anything else while playing it, as the action is fluid and takes up the whole screen. Consider the difference between chess and speed chess; the former is fairly calm and relaxed, the latter is intense and stressful. My ruleset would be less energy-intensive and less for the obsessed, hardcore gamer.
+
+If you want to play a strategy game, why not play Reach for the Stars instead of the TP RFTS clone? Why not play Risk instead of the TP Risk ruleset? Why develop Thousand Parsec at all?
+
+The answer is that innovation and creativity are good. We see problems with other frameworks and we want to improve on them, so we create our own. Even if new rulesets draw on ideas set up by old ones, they still create new universes and explore the boundaries of what can be done with the framework.
+
+
+Is there more details about the game system and the like?  How long does the game take?  How long does the turn take?  How many players?
+
+
+    * The game length will be server-configurable: it is impossible to tell at this stage in design how long a good game should be, and it would be good to have the opportunity to play either short games or long, epic, persistent ones. Perhaps smaller games could be player on subsets of the full universe.
+    * The turn length is also as of now impossible to set exactly, but it would definitely be shorter than the present MiniSec or RT turns, as the player would have less to do. Perhaps a minute to a couple of minutes (with the client modified to refresh automatically to avoid the player having to do this).
+    * Players could range from one (if the AI and bots can be made sufficiently clever in time) to hundreds (if I can ever attract that many to a server at once!). A universe large enough to take time to explore would definitely be able to fit a hundred players, and if less people were connected, the number could be made up with AI players. Remember that here each player is essentially a travelling ship, not an empire, so more players are possible.
+
+Do you have more on the ruleset somewhere?
+
+
+This is all I have so far except ideas :)
+
+
+I would like to see a script which describes how a player would interact with the game through the current client. Which windows would he use to see what information? Which orders would he expect to see in the orders panel, what would the starmap show.
+
+This example involves tpclient-pywx as I only have access to a Mac for the next few days. Most of the windows would be used fairly traditionally.
+
+    * Orders: show the orders generated by the player. These are listed just below.
+    * Picture: show a picture of the currently selected object. A description would also be included to enhance narrative quality (included as part of the image file). Something actually descriptive and evocative for each object. Graphics could be sourced from clip art, with care taken to ensure they went together; but the verbal description would be the most important part.
+    * Map: fairly similar to the standard star map. Would show the currently visible (explored) portion of the universe and the ships in the current system. Whether to show ships in other systems is an interesting design decision; if we assume that information does not travel instantly, the question of "Where is this ship I am hunting?" becomes possible, as well as interesting enhancements like tracker bugs that you can plant on ships you are following which home and let you know where they are.
+    * System: shows, traditionally, the star systems of the universe and (if known) what objects are present. Will be extended to show the different components of one's own ship, i.e. the different subsystems.
+    * Messages: various messages from the server. This will be a major part of the game's narrative.
+    * Information: Information about the currently selected object.
+
+I can envisage the following types of orders:
+
+
+    * Move: to another star system or another place in the current system.
+    * Talk: to another ship. This would allow player-created missions (contracts) to be assigned or messages to be exchanged.
+    * Attack: another ship or a planet.
+    * Deliver object: for completing various missions. Other misison-specific orders could also be defined.
+    * Pick up object: analogue. These two orders are also used for trading.
+    * Upgrade ship: when talking to a planet or a ship, allows new components to be bought.
+
+More orders will be elicited as the design progresses, for support of such things as repairing your ship after random breakdowns or taking evasive action during combat.
+
+Example script
+
+*Asterisks* indicate orders. Each paragraph is a turn; the orders given during that turn give results during the next one.
+
+You log in. The map window tells you what else is in the system; you see a large freighter and *talk* to it to see if there are any contracts going.
+
+There's a mission available to transport some antique computer hardware to New California, so you *take it aboard* and *jump* towards galactic North.
+
+Then you realise you haven't been to New California yet and aren't exactly sure where it is, so you *land* on a planet in the next system and *buy* a local star map. Then you *jump* on again.
+
+You arrive in the New California system, and come under attack by a fleet of tax-collecting pirates! You knew this was going to happen. You *message* a ship you recognise in the system for help, and *open fire*, choosing your weapons carefully to take into account range and opposing ship design.
+
+Luckily you come out on top, so you *land* on the planet and *deliver* your cargo. You are paid by the reciever.
+
+You *buy* a heavier chain gun for your ship and then *jump* back out again.
