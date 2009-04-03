@@ -33,6 +33,17 @@ In each turn:
 Winning Condition: 
 * If the home star of a player has been captured
 
+Types of ships:
+
+Although the names for them have not been decided, (or instead of ships, we can use Gundam, which is cooler) their functionality should be as following
+
+* Colonize ships that can only attack ships right next to it. Its the only unit that can capture plannets
+* Attack ships: attack range 1, but much stronger than Colonize ships
+* Heavy Attack ships: attack range 1, the strongest attack/defence combination
+* medium range attack ship: can only attack ships 4-5 terfs away
+* long range attack ship: Strongest attack, attack ships 6-7 terfs away
+* Repair station: can't attack, but can heal nearby friendly units
+
 ==Deliverables==
 * A functional game of Advanced War in Space
 
