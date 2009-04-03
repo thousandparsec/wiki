@@ -36,28 +36,36 @@ Winning Condition:
 ==Deliverables==
 * A functional game of Advanced War in Space
 
+==Implementation==
+
+* Each player is a Player object, For each player, there is a IGObject that keeps track of how much money he have.
+
+* Each ship can also IGObject, with data keeping track of health. Since it can't stack with other fleet, this is not very complicated. Also, they can each perform a few actions. Like move, attack, heal and capture(with capture being automatic)
+
+* The build function is the same, except it cost money. Also, it should depend on the science tree. My idea is after a level of science research is done, it adds the action of building certain ships to the factory stars.
+
+* The terf and plannets are hard to decide. The easiest way would be to make them all of the same type, with the factory stars has the action to produce, the ore stars has auto function to increse the player's money. The universe is just a connected graph.
+
 ==Timeline==
-Week#	Date	Detail
-* 1	4/20/2009	Start Reading API for the TP framework,  communicate with existing devs
-* 2	4/27/2009	
-* 3	5/4/2009	
-* 4	5/11/2009	Design the prototype(choosing data representation for all objects). Confirm on the feasibility
-* 5	5/18/2009	writing code for the program
-* 6	5/25/2009	writing code for the program
-* 7	6/1/2009	A working game board(empty)
-* 8	6/8/2009	A working game board with planets and different terfs.
-* 9	6/15/2009	A working science tree
-* 10	6/22/2009	Fixing any bugs that showed up, do system test with the science tree and game board
-* 11	6/29/2009	Coding individual units(one "unit" object is good enough, but need to instantiate it to many different types)
-* 12	7/6/2009	Start coding the move mechanic(mostly just checking validity of the move and calculate the terf penalty)
-* 13	7/13/2009	Incorporate route find algo into the move mechanic, so that it will always take the shortest path
-* 14	7/20/2009	Finish the move mechanic(this might take longer to finish, but shouldn't be too bad)
-* 15	7/27/2009	Put everything together and start testing the system
-* 16	8/3/2009	System testing, fixing bugs and balancing the units. Need testers to help
-* 17	8/10/2009	User interface design
-* 18	8/17/2009	
-* 19	8/24/2009	Finalize the product
-* 20	8/31/2009	Public testing and pay close attention to the issue that came up
+* 4/20/2009 Start Reading API for the TP framework, communicate with existing devs
+* 4/27/2009
+* 4/4/2009
+* 5/11/2009 Start working on creating the universe.(coding a few plannets and terfs first)
+* 5/18/2009 A working game board(empty)
+* 6/1/2009 A working game board with planets and different terfs.
+* 6/10/2009 A working science tree
+* 6/15/2009 Fixing any bugs that showed up, do system test with the science tree and game board(be able to produce units)
+* 6/20/2009 Coding individual units
+* 7/1/2009 Start coding the move mechanic(mostly just checking validity of the move and calculate the terf penalty)
+* 7/10/2009 Incorporate route find algo into the move mechanic, so that it will always take the shortest path
+* 7/20/2009 Finish all the actions can be done by ships(this might take longer to finish, but shouldn't be too bad)
+* 7/27/2009 Put everything together and start testing the system
+* 8/3/2009 System testing, fixing bugs and balancing the units. Need testers to help
+* 8/10/2009 User interface design(picking how each ship/plannet looks like)
+* 8/17/2009 Fixing bugs that came up
+* 8/24/2009 Finalize the product
+* 8/31/2009 Public testing and pay close attention to the issue that came up
+
 		
 ==Bio==
 I am currently a junior Computer Science major at Carnegie Mellon University. I have always been interested in game development, but I have never got the chance to do it seriously. One of the main reasons for me to choose this project for GSOC is because Advanced Wars is my favorite game in both GBA and DS. Since I also enjoy playing the Gundam series a lot, I have always dreamed to combine the two together: Advanced Wars in Space. 
