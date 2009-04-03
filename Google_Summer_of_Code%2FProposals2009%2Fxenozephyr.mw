@@ -79,10 +79,13 @@ Flex3 allows the use of Adobe's object oriented language, ActionScript3, to be u
 :MXML scripts will be used to define the GUI with its components, and bind the appropriate events and data members to the ClientController class. Additionally transitions may be added for "flair" in the GUI.
 
 == Time Line with Milestones ==
-The Time Line is broken down into two week periods giving iterative milestones that are testable. The Mentor should be able to see these by just using a flash capable web browser.
-A Debug output will be provided to display a log of the raw XML transactions, and a summary of the POST requests for backend communication.
+The Time Line is broken down into two week periods giving iterative milestones that are testable. The Mentor should be able to see these by just using a flash capable web browser. A Debug output will be provided to display a log of the raw XML transactions, and a summary of the POST requests for backend communication.
 
-Note on the Safety Net Time. Because this project is reasonably large, I am allocating a lot of room for things to take longer. I for the most part think I will need this. However by forcing deadlines earlier I will get more done and this will allow me to successfully finish the requirements of the project even if things go horribly wrong. If by some luck I don't need this, I will have room to implement the optional features and make the frontend better styled.
+Approximately 20-25 hours a week will be spent on this project. I have no additional time obligations planned for the summer, so more time can easily be dedicated to meet these deadlines.
+
+These features will be testable at all times by mentors and community members as a prototype server will be running with public access to the current iteration of builds. Members may then test and submit bugs. Updates to the project will be posted on the forums and mentioned in IRC for members to follow.
+
+Note on the Safety Net Time: Because this project is reasonably large, I am allocating a lot of room for things to take longer. I for the most part think I will need this. However by forcing deadlines earlier I will get more done and this will allow me to successfully finish the requirements of the project even if things go horribly wrong. If by some luck I don't need this, I will have room to implement the optional features and make the frontend better styled.
 
 * 4/20/2009 
 ** Community Bonding Period: Continue researching API and adding/modifying Architecture Details.
@@ -103,10 +106,10 @@ Note on the Safety Net Time. Because this project is reasonably large, I am allo
 ** Testable Frontend for displaying Message Boards, Messages, Player Lists, and Resources.
 ** Begin Midterm Evaluations.
 * 7/13/2009 
-** Refine any code. If some of the tangible milestones needed to be moved. They should be met by now.
-** Produce documentation for Frontend/Backend development, and setup/installation docs of Backend. As well as other docs requested by team.
-** Midterm Evaluations Due.
-** From here on it will be safety net time.
+**Refine any code. If some of the tangible milestones needed to be moved. They should be met by now.
+**Produce documentation for Frontend/Backend development, and setup/installation docs of Backend. As well as other docs requested by team.
+**Midterm Evaluations Due.
+**Safety Net Time Starts.
 * 7/27/2009 
 ** Safety Net Time 
 ** Continue to finish/fix previous features, or work on optional features . They too should be testable by visually seeing them in the client.
@@ -119,7 +122,6 @@ Note on the Safety Net Time. Because this project is reasonably large, I am allo
 ** Work more on Optional Features if there is time.
 * 8/17/2009 
 ** Turn in Final Project, Documents, and other requirements.
-
 
 == Personal Information ==
 
