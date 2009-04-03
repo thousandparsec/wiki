@@ -111,8 +111,7 @@ Designing with turns
 The main design point here is that not as much needs to be done each turn, as the player has less under his control- one ship or fleet of ships as opposed to an entire empire. Turns could therefore be made shorter; but content could also be made more immersive to take advantage of the extra time. Actual narrative and dialogue could take place which the player would actually have time to read, and the player would have more time to look at variables such as his finances or the prices of goods in different star systems.
 
 
-== New and refreshing content
- ==
+== New and refreshing content==
 
 
 It is obvious that the game must include some kind of dynamically generated content in order for gameplay not to be identical every time. The universe, however, cannot be completely dynamically generated for each instance of a server, as with Elite; if the galaxy is to have a back story that the player can come to know (for instance, regions and civilisations with different behaviours and reputations) we cannot start completely anew every time.
@@ -155,8 +154,7 @@ You're a nice, law-abiding citizen, you are. You spend your time analysing the v
 
 This scenario illustrates an example of trading. Rather than using exclusively game author-generated missions, players will be able to contract each other out to accomplish tasks such as delivering items or destroying another player's property. Exactly how this will be implemented using theTP protocol has not yet been decided, but the protocol seems complex and powerful enough to support such a system. Also seen here is how theruleset blends into strategy-style SF games when players start getting rich enough to own planets and control multi-system empires; this will be made very difficult and therefore kept to a minimum, though, to emphasize the adventuring aspect. The economy could also be dynamic instead of static: prices could react to such variables as local wars and availability of goods.
 
-== 
-Algorithms ==
+== Algorithms ==
 
 
 AI
@@ -208,8 +206,7 @@ August 10: Pencils down date.
 
 August 17: Firm pencils down date
 
-== 
-Code maintenance ==
+== Code maintenance ==
 
 
 If the project is unfinished:
