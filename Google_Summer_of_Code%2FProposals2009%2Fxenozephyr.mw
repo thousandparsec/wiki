@@ -47,31 +47,34 @@ In addition, there are many benefits to future developers of the project:
 [http://img21.imageshack.us/img21/9445/tpwebarch.png Architecture Diagram]
 	
 === WebService Backend ===
-The WebService will be developed using Pylons. Pylons is a rapid web development framework for Python. The framework works by automatically generating an Application, this includes folders for all sorts of tools that can be used with Pylons. (Overview HERE: http://workaround.org/pylons/pylons-cheatsheet.html#directory-structure)
 
-The Application will start by auto generating a basic controller, the XMLController. It will be configured to route from a URL (i.e. http:// HOSTURL:HOSTPORT /TPWebBridge) and it will capture HTTP GET/POST requests. These will be what the frontend will use to communicate.
+The WebService will be developed using Pylons. Pylons is a rapid web development framework for Python. The framework works by automatically generating a Web Application, this includes folders for all sorts of tools that can be used with Pylons. (Overview HERE: http://workaround.org/pylons/pylons-cheatsheet.html#directory-structure)
 
-:GET - GET Requests are request made via a URL by appending variables as text. Since kids love to try to hack these, any GET request for the controller URL will be ignored and return an error. Other requests for static media (images, text, etc) will be accepted, however those will be automatically handled by Pylons.
+Secondly, Pylons will auto generate a basic controller, named the XMLController. It will be configured to route from a URL (i.e. http:// HOSTURL:HOSTPORT /TPWebBridge) and it will capture HTTP GET/POST requests. These will be programmed in and will be what the frontend will use to communicate.
 
-:POST - POST Requests are requests that are "hidden" inside the HTTP protocol (not easily seen by users). All requests will be made though posts, and will use the session object assigned to the user at login to ensure only that user's requests are handled.  To prevent abuse the frequency of login/create account will be monitored and enforced as well.
+:GET - GET Requests are request made via a URL by appending variables as text. Since kids love to try to hack these, any GET request for the controller URL will be ignored and return an error. Other requests for static media (images, text, etc) will be accepted, however those will be automatically handled by Pylons. 
 
-::The POST methods will take a command variable to identify what method from the ClientConnection Object in the netlib to perform, as well as proper variables to execute the call. Then the result will be marshaled into an XML response that is compliant for AJAX and XML-RPC interfaces and any other web technologies utilizing XML. The frontend will then interpret the data, and do as it needs. Documentation will be supplied for the XML structure of data as well as available commands.
+:POST - POST Requests are requests that are "hidden" inside the HTTP protocol (not easily seen by users). All requests will be made though posts, and will use the session object assigned to the user at login to ensure only that user's requests are handled. To prevent abuse the frequency of login/create account will be monitored and enforced as well. 
 
-From the HTTP requests connections will be tunneled to the server using an instance of the ClientConnection object from '''libtpproto-py''' library.
-This will be stored in the connections session, with a timeout and cleanup routine (if required). This will allow the TCP connection to persist with the user's session.
+:The POST methods will take a command variable to identify what method from the ClientConnection Object in the netlib to perform, as well as proper variables to execute the call. Then the result will be marshaled into an XML response that is compliant for AJAX and other XML-RPC interfaces and any other web technologies utilizing XML. The frontend will then interpret the data, and do as it needs. Documentation will be supplied for the XML structure of data as well as available commands. 
+
+The HTTP request's connections will be tunneled to the server using an instance of the ClientConnection object from libtpproto-py library. This will be stored in the connections session, with a timeout and cleanup routine (if required). This will allow the TCP connection to persist with the user's HTTP session.
 
 The WebService can then be deployed using Pylons paste utility. Documentation and Tutorials will be created for this.
 
+XML provides a fairly standard and compatible way for various web technologies to communicate with the backend service. In addition to XML the response data can also be formatted into other specifications of protocols (for example JSON) to give a variety of options to frontend developers. Adding these additional formattings will be an Optional Feature if time is permitting. They will recieve priority when allocating that time.
+
 === Flex/Flash Frontend ===
-The frontend will be developed using Adobe Flex3 SDK, which compiles into an Adobe Flash .swf, which can be embedded into a web page. It will consist of a simple GUI with standard components to interface with a game, similar to '''tpclient-pywx'''. In addition a star map component will be made that can render a visual of the starmap. A later project can expand on this frontend to make it a very artistic 2D client with better art, animations, sounds, etc.
+
+The frontend will be developed using Adobe Flex3 SDK, which compiles into an Adobe Flash .swf, which can be embedded into a web page. It will consist of a simple GUI with standard components to interface with a game, similar to tpclient-pywx. In addition a star map component will be made that can render a visual of the starmap. A later project can expand on this frontend to make it a very artistic 2D client with better art, animations, sounds, etc.
 
 Flex3 allows the use of Adobe's object oriented language, ActionScript3, to be used to programmatic-ally work with various methods of interfacing to data, data storage and manipulation, and binding data to the Flex MXML scripts. The Flex MXML scripts define the GUI components as well as function and data bindings into ActionScript code. The desired framework is as follows:
 
-:Data Container Classes containing the responses will be modeled from classes in the Netlib. These include things such as Players,Objects, Boards,Messages,Orders, etc. Additional Interfacing may be added for better storage/access to the data giving a level of abstraction that can be easier to use at the GUI level of the Frontend. 
+:Data Container Classes containing the responses will be modeled from classes in libtpproto-py. These include things such as Players,Objects, Boards,Messages,Orders, etc. Additional Interfacing may be added for better storage/access to the data giving a level of abstraction that can be easier to use at the GUI level of the Frontend. 
 
-:A WebClient class will be created that gives an interface to all the requests that can possibly be made to the WebService Backend, and the results will be the properly set data classes mentioned earlier. This class' members will make the proper request, receive the result, parse the XML, and fill in and return the appropriate data structures.
+:A WebClient class will be created that gives an interface to all the requests that can possibly be made to the WebService Backend, and the results will be the properly set data classes mentioned earlier. This class' members will make the proper request, receive the result, parse the XML, and fill in and return the appropriate data structures. 
 
-:A ClientController class will be created that provides interfacing for all the GUI components. Every components events and data should bind through members of this class. It is then responsible for interpreting the GUI actions and making the proper set of requests and changes to the state of the client.
+:A ClientController class will be created that provides interfacing for all the GUI components. Every components events and data should bind through members of this class. It is then responsible for interpreting the GUI actions and making the proper set of requests and changes to the state of the client. 
 
 :MXML scripts will be used to define the GUI with its components, and bind the appropriate events and data members to the ClientController class. Additionally transitions may be added for "flair" in the GUI.
 
