@@ -61,13 +61,14 @@ GetTechnologyDesc ->
                          <- TechnologyDesc
                          <- TechnologyDesc...
 
-     (somehow get learnt tech ids)
 GetResearch ->
                          <- Research
    (choose technology to research)
 SetResearch ->
                          <- Research
 </pre>
+
+Note, a client might do GetResearch first then do GetTechnologyDesc for the available techIds that could be researched.
 
 = Open issues =
 == How to find what tech the player has learnt ==
