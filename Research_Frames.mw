@@ -37,10 +37,16 @@ A pair of getIdList and IdList frames will be used to get known technologies.
 Research frames are a pair of Get and Set, both returning a Research frame. A ResearchSet frame has the same content as a Research frame.
 
 * pointsAvailable - uint32 (RO)
+* researchableList - List (RO)
+** techId - uint32 (RO)
+** totalPoints - uint32 (RO)
+** remainingPoints - uint32 (RO)
 * researchList - List
 ** techId - uint32
 ** assignedPoints - uint32
 ** turns - uint32 (RO)
+
+Only technologies where the player has all the dependencies (and none of the conflicts) will appear in the researchableList. The player can only choose technology ids from fthe researchableList. Approximate turns remaining (before sending ResearchSet) can be found from remainingPoints / pointsAvailable (or assignedPoints).
 
 == Examples ==
 
