@@ -1,0 +1,151 @@
+= IRC Nickname: didi =
+
+=Title=
+
+Building a libtpproto-c and an AI.
+
+
+=Abstract=
+
+Libraries using C are a known way to root another language's libraries and usually make a nice point of conformity. With such a library an AI will be built using an AI paradigm (neural network) that will learn during and possibly after a game. These will be build based in the "galaxie" project.
+
+
+=Proposal=
+Thousand Parsec has a variety of protocol libraries but not a C one. C is a very common language which many other languages have close relations with. With that in mind, building a C library of the protocol could lead to a more easy way to extend the game because another libraries could be built wrapping the proposed one, concentrating most of the effort in just one point.
+
+After browsing through the Thousand Parsec Projects and talking with the developers at IRC I found the project called "galaxie". It has some parts of it implemented but not separated and organized as a library. I will work on it to take the parts already developed and create a separated libtpproto-c.
+
+With a libtpproto-c ready, the AI part of the project starts. My proposal at this part of the project is to create a AI able to learn and improve itself during a game and after it. For such, a log should be appreciated but not necessary. The actions could be analyzed real time but, with such a tool, the AI could learn from strong players after their matches.
+
+An AI like this could be used in different rulesets without much changes because the mechanism is somewhat the same.
+
+
+==The AI==
+
+The idea here is to make a MLP (multi-layer perceptron) ANN.
+
+The AI could be divided roughly in 2 parts: The network and the decision algorithm.
+
+
+===The network===
+
+    
+The network will be the so called MLP. It will feed the decision algorithm with the data. For the input of the MLP the following data is expected, for each player:
+    
+* Number of ships
+* Number of owned planets
+* Density of planets owned
+* Number of ships at a determined area
+* Number of ships at a certain type
+
+For the output, the following is expected:
+
+* A good planet (a) to conquest
+* Probability of conquering (a)
+* Planet (b) to defend
+* Necessity P to defend planet (b)
+* Strongest enemy
+* Weakest enemy
+
+Unfortunately, AI algorithms are not easy to predict so these inputs and outputs will, almost certainly, evolve, but they are a good starting point.
+
+To create the network's inside (like nodes and layers) there are a numerous of techniques such as using GA (genetic algorithms) to choose parameters as number of layers and nodes. I will use a software called Weka [http://www.cs.waikato.ac.nz/ml/weka/] to choose what are the best parameters. The big issue here is to choose the pairs inputs/outputs. For these I will play the game myself and talk to other, more experienced, players. I study at a big university so, getting around some players to play the game should not be a big issue.
+
+===The decision algorithm===
+
+With the data in place the decision algorithm starts. I plan to use a simple strategy here: just a if-then-else approach with reinforcement.
+
+The decision algorithm will choose which action should be made and then the reinforcement will give it a grade. With more better grades, more likely the same action will be taken for the same input.
+
+===Converging and rulesets===
+
+Although AI algorithms are known to not always converge quickly (or sometimes, even converge) I am confident that some interesting results will come along. The MLP gives interesting data to look at and it even give us a chance to understand better the game.
+    
+For the input I will choose the more abstract (but real) data. This way the MLP could be used in more rulesets. For the project I will aim the MiniSec ruleset, which is a pretty straight forward ruleset with simple rules.
+
+
+===Fetching data===
+    
+As all the inputs can be read from a client, there is no need to break any rules (as stated by the wiki).
+
+At each turn the AI will grab the data and update the network.
+
+At this time I cannot see any reason why the data would be put together by the server but, if that comes along in the project, a solution would be tweaking the network during a game, by the server, and then, after it, the AI could benefit from it. Doing so no rules would be broken as the AI is always one network update behind. It will not learn real-time, but it will still learn.
+
+
+===The "why"===
+
+
+====if-them-else vs rest====
+  
+Although many games (in fact, the vast majority) do not use any indeterministic AI, many systems does. In fact, technologies like image recognition are driven by them.
+  
+The fact that games usually use if-them-else AIs could be explained that many of them are time bounded (as time-to-market bounded) and AIs aren't a sure game. With a if-them-else AI you always know how an AI will behave and you can be sure that it will not frustrate the player (by being too easy or too hard). But, it is also a flaw as it can only be as good as the designer. A more advanced AI (such as ANN) can make some impressive decisions based on situations that no one has predicted. That could be good or bad, but assisted, the AI should be pretty challenging.
+  
+  
+====Speed====
+  
+Speed can be a problem to an indeterministic algorithm and the ANN is not a exception. It could be affected by many variables, like the number of nodes, layers, inputs, type of connections, backpropagation and etc. But, without the AI implemented, nothing can be said about it. Some actions could be done, like limiting some features (like updating the network), the number of inputs or even turning off real-time improving. But these are just guesses. Without the proper AI and its profiling, nothing can be said.
+  
+  
+====Cold start====
+  
+My proposal is not to have a empty AI to learn how to play the game. It will already know it. It will have an MLP to chew the data and a if-then-else algorithm to take the actions. The objective of the AI is to get better.
+  
+
+=Timeline=
+
+As much of the work necessary for building a C library is already done by the "galaxie" project this should not take too long. Including understanding the code base this should take about 3 weeks. One week to understand the code base and another two to make the actual library.
+
+
+==AI Timeline==
+
+To build the whole structure, with the initial guesses, I will need 4 weeks.
+
+* 2 weeks to build the MLP
+* 2 weeks to build the decision algorithm
+** 1 week for the if-then-else
+** 1 week for the reinforcement
+       
+The next weeks will be used to tweak the network and the decision algorithm.
+
+I will use 1 to 2 weeks to see how the AI is responding to the stimulus and analyze its data. After that, for each week (or less) I will make new adjustments and see what happen. Depending on how many people will play the game and how bad/good the results come off the AI I will make adjustments more often.
+
+At the end of the project I am confident that we will have a competitive AI.
+
+
+=Maintenance=
+
+
+==C library==
+  
+The library will need to be update every time the protocol change. As C been a popular language, I think there will be no problem with that.
+
+
+==AI==
+
+The AI code will be more tricky than the C library. I will make it generic but it will probably always need some general understanding of how an AI works to play with it
+
+
+==Me and maintenance==
+
+I've worked with a group that had a great rotation of people. I kinda knows how important maintenance is.
+
+For myself, I've never worked at a global open source project so it's pretty exciting for me. I always had that feeling that I should give something back and this could be it.
+
+I plan to continue my work with Thousand Parsec for the reason stated before and the reasons which I describe in my "Bio" section.
+
+
+=Bio=
+
+Although I've never been good at the game Civilization I always loved it. I've played versions 2, 3 and 4 by many, many hours.
+
+The first time I heard about Thousand Parsec was through a Google Talk entitled "Gaming For Freedom" and that somehow excited me. All the talk about games being the last frontier and etc.
+
+So, I started digging around some Open Source games like Wesnoth and BZFlag and just started getting more excited. Then, after the announcement of the Google Summer Of Code I decided to give it a try at the game that started it all for me.
+
+Second, I have always be amazed by AIs. I have worked with some of it (all robot control related) but never with games. So, what such a fun project could it be? I was in.
+
+I've worked for 5 years at group called GEAR which is involved in robot stuff like robot soccer.
+
+One of the projects that is opensource is GEARMEDULA [http://code.google.com/p/gearmedula/]
