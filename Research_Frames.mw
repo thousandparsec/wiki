@@ -41,12 +41,14 @@ Research frames are a pair of Get and Set, both returning a Research frame. A Re
 ** techId - uint32 (RO)
 ** totalPoints - uint32 (RO)
 ** remainingPoints - uint32 (RO)
-* researchList - List
+* toResearchList - List
 ** techId - uint32
 ** assignedPoints - uint32
 ** turns - uint32 (RO)
 
-Only technologies where the player has all the dependencies (and none of the conflicts) will appear in the researchableList. The player can only choose technology ids from fthe researchableList. Approximate turns remaining (before sending ResearchSet) can be found from remainingPoints / pointsAvailable (or assignedPoints).
+Only technologies where the player has all the dependencies (and none of the conflicts) will appear in the researchableList. The player can only choose technology ids from the researchableList. Approximate turns remaining (before sending ResearchSet) can be found from remainingPoints / pointsAvailable (or assignedPoints).
+
+remainingPoints could be -1 for unknown. In that case, totalPoints is the total points researched so far.
 
 == Examples ==
 
