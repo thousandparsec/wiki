@@ -1,10 +1,12 @@
 This page documents some ways of getting [[tpserver-cpp]] built.
 
+'''Note''': libtprl is no longer used by tpserver-cpp, the instructions below should be updated. 
+
 ==mithro's setup==
 
 Make sure you have the following dependencies installed before building
 <pre>
-apt-get install autoconf automake libtool build-essential g++ cogito libncurses5-dev guile-1.8-dev boost-build libboost-dev
+apt-get install autoconf automake libtool build-essential g++ git-core libncurses5-dev guile-1.8-dev boost-build libboost-dev
 </pre>
 
 The follow is how mithro sets up his server, YMMV.
