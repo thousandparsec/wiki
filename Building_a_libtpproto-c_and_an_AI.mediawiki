@@ -188,6 +188,6 @@ So, I started digging around some Open Source games like Wesnoth and BZFlag and 
 
 Second, I have always be amazed by AIs. I have worked with some of it (all robot control related) but never with games. So, what such a fun project could it be? I was in.
 
-I've worked for 5 years at group called GEAR which is involved in robot stuff like robot soccer.
+I've worked for 5 years at group called [http://www.sel.eesc.usp.br/gear GEAR] which is involved in robot stuff like robot soccer.
 
-One of the projects that is opensource is GEARMEDULA [http://code.google.com/p/gearmedula/]
+One of the projects that is opensource is [http://code.google.com/p/gearmedula/ GEARMedula].
