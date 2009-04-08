@@ -51,6 +51,10 @@ Unfortunately, AI algorithms are not easy to predict so these inputs and outputs
 
 To create the network's inside (like nodes and layers) there are a numerous of techniques such as using GA (genetic algorithms) to choose parameters as number of layers and nodes. I will use a software called Weka [http://www.cs.waikato.ac.nz/ml/weka/] to choose what are the best parameters. The big issue here is to choose the pairs inputs/outputs. For these I will play the game myself and talk to other, more experienced, players. I study at a big university so, getting around some players to play the game should not be a big issue.
 
+===The Input===
+
+Some concern have ben raised about the number of the input data and how it would affect the algorithm at a point that it could become unusual because the time to process all the data.
+
 ===The decision algorithm===
 
 With the data in place the decision algorithm starts. I plan to use a simple strategy here: just a if-then-else approach with reinforcement.
