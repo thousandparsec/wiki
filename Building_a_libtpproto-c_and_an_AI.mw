@@ -1,4 +1,3 @@
-
 = IRC Nickname: didi =
 
 =Title=
@@ -58,6 +57,42 @@ Some concern have been raised about the number of the input data and
 how it would affect the algorithm at a point that it could become
 useless because the time to process all the data.
 
+
+First, lets start the analysis using the proposal stated in the [[#The
+network]] section. There are going to be the following inputs:
+
+* Number of ships
+* Number of owned planets
+* Density of planets owned
+* Number of ships at a determined area
+* Number of ships at a certain type
+
+Lets assume that there will be 5 adversaries in the game. Each
+adversary have 100 ships, with the possibility of 3 different kinds of
+ship, and 20 planets. I divided the map in 4 areas. What is the number
+of data input?
+{| style = border="1"
+! Type of input || Number of input
+|-
+| Number of ships || 1
+|-
+| Number of owned planets || 1
+|-
+| Density of planets owned || 1 
+|-
+| Number of ships at a determined area || 4 areas * 1 total ships = 4 
+|-
+| Number of ships at a certain type || 3 types of ships = 3
+|-
+| Total per Player || '''10'''
+|-
+| Number of players || 5
+|-
+| Total of inputs || '''50'''
+|}
+
+Fifty inputs are not such a problem. For [[#The decision algorithm]],
+things are even better. It only have the output to care about, which is in the number of 6.
 
 
 ===The decision algorithm===
