@@ -57,9 +57,7 @@ Some concern have been raised about the number of the input data and
 how it would affect the algorithm at a point that it could become
 useless because the time to process all the data.
 
-
-First, lets start the analysis using the proposal stated in the [[#The
-network]] section. There are going to be the following inputs:
+First, lets start the analysis using the proposal stated in the [[#The network]] section. There are going to be the following inputs:
 
 * Number of ships
 * Number of owned planets
