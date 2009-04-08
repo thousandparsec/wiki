@@ -56,7 +56,9 @@ To create the network's inside (like nodes and layers) there are a numerous of t
 
 Some concern have been raised about the number of the input data and
 how it would affect the algorithm at a point that it could become
-unusual because the time to process all the data.
+useless because the time to process all the data.
+
+
 
 ===The decision algorithm===
 
