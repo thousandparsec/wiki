@@ -220,6 +220,9 @@ What should make TotV fun is what makes tactics games, chess, and other low-unit
 
 ==Game Script==
 A short experimental game script can be found [http://www.contrib.andrew.cmu.edu/~dkohlbre/TPDemo.pdf here]. (pdf)
+Writing this has changed my opinion on several mechanics. Biggest among them is the elimination of any sort of 'bank' for resources. This too heavily encourages defensive and over-extending play. The other element that needs to be modified is barricading, which will likely be changed to take more than one turn to do.
+
+Two edited screenshots (minisec) explaining basic elements of the client interface can be found [http://www.contrib.andrew.cmu.edu/~dkohlbre/demo1.jpeg here] and [http://www.contrib.andrew.cmu.edu/~dkohlbre/demo2.jpeg here]
 
 =Student=
 ==Contact==
