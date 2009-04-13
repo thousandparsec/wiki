@@ -4,7 +4,6 @@ The primary goal is to make a short game for those who are new to 4X gaming or j
 
 == Proposal ==
 
-
 '''The Universe in an Hour'''
 
 The primary goal is to produce a new ruleset that provides a short game. This will allow novice players to experience 4X gaming, while not being too in depth, confusing and long. However, it will allow the more experienced players to have a quick game when they're short on time. Developing the game will also aid one of the secondary goal -- improving the ruleset development book.
@@ -15,14 +14,14 @@ I would come up with a short story and base the game around that. I would probab
 
 '''Keeping the game short'''
 
-    * Turns
-          o Timed turns
-          o limit total gameplay time
-    * Limit the amount micromanagement
-    * Simple resource and money management
-    * Victory
-          o simple conquest
-          o resource management
+* Turns
+** Timed turns
+** limit total gameplay time
+* Limit the amount micromanagement
+* Simple resource and money management
+* Victory
+** simple conquest
+** resource management
 
 '''Game Details'''
 
@@ -48,50 +47,50 @@ I intend on replacing the old pseudo-random number generator with the Boost impl
 
 Implementation
 
-    * Understand how the current PRNG and Boost.Random (I’ve never worked with the Boost libraries before) work
-    * Develop a class interface that matches the current PRNG
-    * Develop the class
-    * Test and compare it to the currently used PRNG
-    * Finally rename the class to that of the old
+* Understand how the current PRNG and Boost.Random (I’ve never worked with the Boost libraries before) work
+* Develop a class interface that matches the current PRNG
+* Develop the class
+* Test and compare it to the currently used PRNG
+* Finally rename the class to that of the old
 
 
 Improving Ruleset Development Book
 
-    * Add to and improve the tpserver-cpp ruleset development book
-    * Give additional examples and expand existing ones
-    * Further document features
-    * I would attempt to add to this throughout the Summer
+* Add to and improve the tpserver-cpp ruleset development book
+* Give additional examples and expand existing ones
+* Further document features
+* I would attempt to add to this throughout the Summer
 
-Timeline
+'''Timeline'''
 
-   Goals for Weeks 1-2
+Goals for Weeks 1-2
 
-    * Understand the current PRNG and Boost
-    * Implement, test, and replace the old PRNG with Boost.Random
-    * Think about specifications of the short game, along with a [background] story and a name for the game
+* Understand the current PRNG and Boost
+* Implement, test, and replace the old PRNG with Boost.Random
+* Think about specifications of the short game, along with a [background] story and a name for the game
 
-   Goals for Weeks 3-5
+Goals for Weeks 3-5
 
-    * Continue to refine specifications for the game
-    * Reread ruleset and other documentation
-    * Look at how other games work
-    * Update documentation based on what I learned from the games
-    * Set up basic file structure and framework for the game
-    * Start setting up the universe (planets and how they provide resources)
+* Continue to refine specifications for the game
+* Reread ruleset and other documentation
+* Look at how other games work
+* Update documentation based on what I learned from the games
+* Set up basic file structure and framework for the game
+* Start setting up the universe (planets and how they provide resources)
 
-   Goals for Weeks 6-9
+Goals for Weeks 6-9
 
-    * Finish setting up the universe
-    * Setup units
-    * Setup how battles are going to be conducted
+* Finish setting up the universe
+* Setup units
+* Setup how battles are going to be conducted
 
-   Goals for Weeks 10-12
+Goals for Weeks 10-12
 
-    * Fix bugs in the game
-    * Proof read already written documentation
-    * Work on documentation
-    * Proof read it
-    * Finish and polish code
+* Fix bugs in the game
+* Proof read already written documentation
+* Work on documentation
+* Proof read it
+* Finish and polish code
 
 
 Because I will be taking Summer courses I will not be able to put in as many hours for the first three-to-four weeks; however, I will put in 15-20 hours a week. Thereafter, I will invest 30 hours a week, and more if I feel like I'm behind schedule.
@@ -107,12 +106,15 @@ They could help draw more attention to the project. With the short game it’ll 
 After GSoC is over I will try to make sure the game works as the tp server is updated and fix bugs I or others find.  If the game is not finished after GSoC there is still three weeks of Summer before school starts again (at least for me); so I will continue working on it, and hopefully finish the game.
 
 == About myself ==
+
 My name is Jordan Neumeyer. I’m attending South Dakota School of Mines and Technology (SDSM&T) for a bachelors degree in Computer Science. SDSM&T is located in Rapid City, SD, USA. I’m currently a sophomore, but will reach junior status after this semester. Most of my courses use C++ (and some C), and was taught assembly (Intel x86). Higher level courses will, of course, teach me other languages (A.I./Machine Learning: Scheme; Programming Language: scheme, Perl, and Java). I have also taught myself some of the basics in other languages from books and online resources, such as Python, BASH, and PHP. After taking course work I feel like I could relearn most of the those languages very quickly, and gain a better understanding of how that language works. I also help maintain a server, which hosts C&C mods and fan sites. There are four fairly large communities on the server (revora.net is probably the largest).
 
 The Thousand Parsec project caught my eye, because over a year ago or so I was introduced 4X gaming with Dominions 3.  4X stood out and reminded me of Dominions 3 (and its 300 page manual) and I really enjoyed playing that game. I think creating a similar game would be fun. And overall The GSoC interested me as it provides a great opportunity to gain experience, and some additional funding for my schooling.
 
 == Previous Projects ==
+
 I have not contributed to an open source project before. Most of my computer science programs included two to four week projects. I have examples of previous projects you can look at http://jn.icetex-hosting.net/svn. There are many more that I’d didn’t use SVN for, but are available if you're interested in them.
 
 == Comments ==
+
 Improving the formating will help. You could make your proposal clearer by focusing on the big things (the ruleset), and mention the other smaller bits (the prng) as introductory tasks. Also, how will you keep your mentor and the rest of the community informed of your progress? How much time will you spend a week? --[[User:Lee Begg|Lee Begg]] 05:51, 1 April 2009 (EDT)
