@@ -10,7 +10,7 @@ The primary goal is to produce a new ruleset that provides a short game. This wi
 
 '''Content and Story'''
 
-I would come up with a short story and base the game around that. I would probably bounce some ideas off my friends and the TP IRC channel, along with my GSoC mentor. I would also look into Konquest from KDE Games as the TP wiki suggested and see how it works (played once). I should also play game or two of any of the currently included rulesets to gain a better understanding of what the game play is like and what it’s currently capable of.
+I would come up with a short story and base the game around that. I would probably bounce some ideas off my friends and the TP IRC channel, along with my GSoC mentor. I also looked into Konquest from KDE Games as the TP wiki suggested and see how it works, but have only played it once. I should also play a game or two of any of the currently included rulesets to gain a better understanding of what the game play is like and what it’s currently capable of.
 
 '''Keeping the game short'''
 
@@ -27,23 +27,23 @@ I would come up with a short story and base the game around that. I would probab
 
 The universe will be a finite number of planets. Each planet will have its own unique properties (type, resources, size, location within the universe ). The type can vary from primarily wasteland to more inhabitable planets. Which will determine the resources available. Resources will also be influenced by the size of the planet. The larger the planet the more resources are likely to be available.
 
-The planets resources will be automatically mined after the player has taken control by defeating that planets defense (ships and planetary) or if the planet is unpopulated. The player can build gatherers to help mine more resources on that planet  (or possibly transport materials to other planets).  Unlike MTSec the player does not need to spend all of their resources every turn, and may let them build up.
+The planets resources will be automatically mined after the player has taken control by defeating that planets defense (ships and planetary) or if the planet is unpopulated. The player can build gatherers to help mine more resources on that planet (or possibly transport materials to other planets). Unlike MTSec the player does not need to spend all of their resources every turn, and may let them build up.
 
-Scouts and gatherers may see other planets resources if they near enough, and will become visible to that player ( possibly, for only for a few turns ). Scouts and gatherers are highly vulnerable and are the weakest armored of units. Scouts will be fast, but gatherers will be slow.
+Ships will require certain resources to be built. Some planets may not be able to build all ships. So you will need a ship to transport those resources. A gatherer can be built and will transport the materials; that way the planet will have enough resources to build those ships.
 
-Ships will require certain resources to be built.  Some planets may not be able to build all ships. So you will need a ship to transport those resources. A gatherer can be built and will transport the materials; that way the planet will be able to build that ship.
+There will be five ships (so far). Three of which will be battle ships. One will be a scout/spy. And the gatherer will help mine or transport the materials. All units will have health, firepower, armor, and speed. Some may have special attributes such as the gatherer who would need a capacity to carry materials.
 
-There will be five ships (so far). Three of which will be battle ships. One will be a scout/spy. And the gather will help mine or transport the materials. All units will have health, firepower, armor, and speed. Some may have special attributes such as the gatherer who would need a capacity to carry materials.
+Scouts and gatherers may see other planets resources and ships (scout only) if they near enough, and will become visible to that player ( possibly, for only for a few turns creating a fog of war ). Scouts and gatherers are highly vulnerable and are the weakest armored of units. Scouts will be fast, but gatherers will be slow.
 
-Combat will likely be similar to MTSec, but simpler. A ship will have a certain amount of firepower, and the armor will take some of the damage till it's gone, and the ship will be destroyed. There could also be the option of who gathers the most materials within a certain amount of time, of course, you may still attack one another.
+Combat will be similar to MTSec, but simpler. A ship will have a certain amount of firepower, and the armor will take some of the damage till it's gone, and the ship will be destroyed after it has ran out of health.
 
-Since this is a short game in order to win you must either destroy all of the opponents planets or just their home planet.
+Since this is a short game in order to win you must either destroy all of the opponents planets or just their home planet. Another way to win could be a resource victory, this would call for a new turntimer (gametimer?) that limits the length of the game, or a set limit on resources (e.g. whoever reaches this limit first wins). 
 
 If time permits I may include a tech tree to give upgrades or more options to the player. I have not had much time to think about this yet, but a tech tree might be too much.
 
 '''Boost.Random'''
 
-I intend on replacing the old pseudo-random number generator with the Boost implementation, Boost.Random. This will be used as a stepping stone to understand some of the internals of tpserver-cpp and get involved with other parts of the project. This part of the project should not take very long -- a max of three weeks.
+I intend on replacing the old pseudo-random number generator with the Boost implementation, Boost.Random. This will be used as a stepping stone to understand some of the internals of tpserver-cpp and get involved with other parts of the project. This part of the project should not take very long -- a max of two weeks.
 
 Implementation
 
@@ -99,7 +99,7 @@ I will provide a weekly progress report on the mailing list to inform my mentor 
 
 '''Importance'''
 
-They could help draw more attention to the project. With the short game it’ll encourage beginners to play, and give them a short game into the world of 4X gaming. It’ll also fulfill the latter for the more advanced player, when they’re short on time.  Having good documentation can attract new developers and create more rulesets ( and thus more games to play ).
+They could help draw more attention to the project. With the short game it’ll encourage beginners to play, and give them a short game into the world of 4X gaming. It’ll also fulfill the latter for the more advanced player, when they’re short on time. Having good documentation can attract new developers and make it easier to create more rulesets (and thus more games to play).
 
 '''Aftermath'''
 
@@ -107,13 +107,13 @@ After GSoC is over I will try to make sure the game works as the tp server is up
 
 == About myself ==
 
-My name is Jordan Neumeyer. I’m attending South Dakota School of Mines and Technology (SDSM&T) for a bachelors degree in Computer Science. SDSM&T is located in Rapid City, SD, USA. I’m currently a sophomore, but will reach junior status after this semester. Most of my courses use C++ (and some C), and was taught assembly (Intel x86). Higher level courses will, of course, teach me other languages (A.I./Machine Learning: Scheme; Programming Language: scheme, Perl, and Java). I have also taught myself some of the basics in other languages from books and online resources, such as Python, BASH, and PHP. After taking course work I feel like I could relearn most of the those languages very quickly, and gain a better understanding of how that language works. I also help maintain a server, which hosts C&C mods and fan sites. There are four fairly large communities on the server (revora.net is probably the largest).
+My name is Jordan Neumeyer. I’m attending South Dakota School of Mines and Technology (SDSM&T) for a bachelors degree in Computer Science. SDSM&T is located in Rapid City, SD, USA. I’m currently a sophomore, but will reach junior status after the summer session. Most of my courses use C++ (and some C), and was taught assembly (Intel x86). Higher level courses will, of course, teach me other languages (A.I./Machine Learning: Scheme; Programming Language: scheme, Perl, and Java). I have also taught myself some of the basics in other languages from books and online resources, such as Python, BASH, and PHP. After taking course work I feel like I could relearn most of the those languages very quickly, and gain a better understanding of how that language works. I also help maintain a server, which hosts C&C mods and fan sites. There are four fairly large communities on the server (revora.net is probably the largest).
 
-The Thousand Parsec project caught my eye, because over a year ago or so I was introduced 4X gaming with Dominions 3.  4X stood out and reminded me of Dominions 3 (and its 300 page manual) and I really enjoyed playing that game. I think creating a similar game would be fun. And overall The GSoC interested me as it provides a great opportunity to gain experience, and some additional funding for my schooling.
+The Thousand Parsec project caught my eye, because over a year ago or so I was introduced 4X gaming with Dominions 3.  4X stood out and reminded me of Dominions 3 (and its 300 page manual) and I really enjoyed playing that game. I think creating a game with similar philosophies would be fun. And overall The GSoC interested me as it provides a great opportunity to gain experience, and gain some additional funding for my schooling.
 
 == Previous Projects ==
 
-I have not contributed to an open source project before. Most of my computer science programs included two to four week projects. I have examples of previous projects you can look at http://jn.icetex-hosting.net/svn. There are many more that I’d didn’t use SVN for, but are available if you're interested in them.
+I have not contributed to an open source project before. Most of my computer science programs included two to four week projects. I have examples of previous projects you can look at http://jn.icetex-hosting.net/svn. There are many more that I’d didn’t use SVN for, but are available if you're interested in them. Some of the projects include zipf's law (counting and ranking words in a document and how they relate), paint program (made using glut), morse code (used trees for learning), recursive and iterative find program for Windows (similar to ls), twin prime number generator (purpose: write your own linked list class), and image manipulation ( emboss, and blur; program corrected old .raw image to be converted to .jpg).
 
 == Comments ==
 
