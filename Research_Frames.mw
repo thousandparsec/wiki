@@ -74,8 +74,6 @@ Note, a client might do GetResearch first then do GetTechnologyDesc for the avai
 
 == Game Examples ==
 
-Lee: Can you describe how a server would implement the following Research ideas, and how a client would represent this to client:
-
 === RFTS ===
 
 4 Fields to research:
@@ -84,9 +82,15 @@ Lee: Can you describe how a server would implement the following Research ideas,
 * Ship: Can build higher mark ships
 * Something else I can't Remember
 
+There would be a technology for each mark of these areas.
+
+Need a description of rfts research to comment further.
+
 === Stars! ===
 
-Technology controlled through 6 fields.  Technologies are unlocked if you have appropriate race flags and the approprite level in each field.
+Technology controlled through 6 fields.  Technologies are unlocked if you have appropriate race flags and the appropriate level in each field.
+
+Each technology areas has 26 levels (see [http://wiki.gible.net/index.php/Guts_of_research_costs]), the cost would be there and the dependence between higher and lower levels (including across technology areas). Visibility control can be used to hide what new components, etc will be available to the player. Available points could be based on resources available, or fixed at 100 (as in percent)
 
 = Open issues =
 == How to find what tech the player has learnt ==
