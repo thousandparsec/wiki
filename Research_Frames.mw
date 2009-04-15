@@ -72,6 +72,24 @@ SetResearch ->
 
 Note, a client might do GetResearch first then do GetTechnologyDesc for the available techIds that could be researched.
 
+== Stars! Example ==
+
+Lee: Can you describe how a server would implement the following Research ideas, and how a client would represent this to client:
+
+=== RFTS ===
+
+4 Fields to research:
+* Industry: Reaching certain levels gives bonus RP (production points)
+* Navigation: Can travel further (So max range from 4,5,6 or 8 hexes).
+* Ship: Can build higher mark ships
+* Something else I can't Remember
+
+=== Stars! ===
+
+Technology controlled through 6 fields.  Technologies are unlocked if you have appropriate race flags and the approprite level in each field. 
+
+
+
 = Open issues =
 == How to find what tech the player has learnt ==
 (and also "How to find what tech other players have learnt")
