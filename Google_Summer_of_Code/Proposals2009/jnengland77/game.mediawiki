@@ -1,0 +1,75 @@
+== Origins and Background ==
+
+A lot of the ideas are inspired by [http://en.wikipedia.org/wiki/H._P._Lovecraft link H.P. Lovecraft's] short story "[http://en.wikipedia.org/wiki/The_Shadow_Out_of_Time link The Shadow out of Time]."
+
+The idea behind the story is to use the [http://en.wikipedia.org/wiki/Great_Race_of_Yith link Great Race the Yith] from Lovecraft's novella.  
+
+The Yithians are an alien race that are masters of mind transfers and time travel. They seek knowledge about anything and every race from anywhere in time. In "The Shadow out of Time" they know they will be become extinct from seeing into the future, and jumped (by mind transfer) into the future to save themselves.
+
+They seek knowledge and that is (or appears to be) their primary main goal. They are generally peaceful. During the mind transfer, the host and hostee minds will swap. While the host is in his new body they research specifics of that time period. While the hostee will slowly gain privileges and eventually will write in the Yithian archives its own piece of history.
+
+I don't think I can incorporate time travel into the game. It could cause not only cheating, but would make the game extremely complex (to code and play) and convoluted.
+
+Mind transfers will be incorporated the game.
+
+== Story ==
+
+A dispute amongst the highest ranking Yithian Masters has caused a splinter among the ranks and divisions across the worlds. Many have taken sides and many of the new fractions seek more violent action(s).
+
+== Game Details ==
+
+'''Planets'''
+*Generated randomly
+** Max number of planets, or
+** max number of players + 20% of max number of players
+
+Attributes:
+* Size (int)
+** Scale from 1 to 4
+* In-habitability scale (int)
+** Scale from 1 to 5
+* Population density (%)
+
+I'll probably use the simple equation size times in-habitability times population to determine resources available. So using the current numbers it would generate a max of 20 resources per turn. I will also need to set a minimum just in case.
+
+'''Resources'''
+In this game the resources is simply knowledge. The planets will provide the people who have the knowledge.
+
+Certain units will be able to stall (espionage) resources and as well as see resources temporally.
+
+'''Units'''
+
+Attributes:
+* HP (hit points)
+** Does not regenerate
+* XP(experience)/Accuracy
+* [mind] attack
+* armor (e.g. mind shield)
+* [mind] speed (units won't physically be traveling)
+** Max of 10 (maybe lower).
+
+Battle units:
+
+Yith minion - no armor, decent XP, slows down mind speed, powerful attack. Cheap (keep in mind it slows mind speed, which will make it harder to travel to other planets). 
+
+Yith knight - armor, lowish XP, well armored. Good attack. Decent speed.
+
+Yith Lord - most XP, powerful attack, decent speed. Expensive.
+
+Other Units:
+Yith Scout - Will be able to determine what is on a planet for a few turns (creating a fog of war). weak attack, fast mind speed. 
+Yith Spy - Will stall some of the resources (5-15% would probably work fine). Weak attack, fast mind speed.
+Detection: I haven't gotten this far. Maybe use XP?
+Knowledge seeker - Transfer knowledge from one friendly planet to another. Or try to improve the amount of knowledge on the current planet.  
+
+Limbo unit:
+Enslaved Polyps - Low HP. This unit has a very confusing mind, and the Yithians hate them. This would be a distraction unit. However, I would have to introduce physical melee and might become complex.
+
+'''Combat'''
+Very similar to MTSec.
+
+== Notes and Concerns ==
+
+This is very incomplete. However, feel free to comment on it.
+
+As for the game details I'm still trying to stick with my original ideas from my proposal just adapting to this story and ideas.
