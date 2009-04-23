@@ -156,6 +156,8 @@ The finished module should store and retrieve all the game information without e
 
 It has been mooted to move the Persistence interface an asynchronous model where, if the database supported it, it could process save, update, remove and retrieve without blocking the rest of the server. New modules should document if this is possible, and what would need to be changed.
 
+To make it clear, any Summer of Code proposals for this require detail about how you will approach adding the new persistence method(s), and should probably cover more than one new method, unless there is a good reason not to.
+
 ==== Required Skills ====
 * SQL (preferably MySQL and the target database) experience
 
@@ -189,7 +191,7 @@ There are some smaller projects which could be a good introduction to tpserver-c
 === Calendar Timer ===
 tpserver-cpp supports plug-able methods for triggering the end of turn processing. The current TurnTimer supports threshold finished changing of the timer, which is set in seconds.
 
-A new timer, called CalendarTimer (subclassing TurnTimer) could be developed that starts the EOT processing at the same calendar time (IE, everyday at 12:03am or similar). [http://www.boost.org/doc/html/date_time.html Boost.Date_Time] might be a good starting point
+A new timer, called CalendarTimer (subclassing TurnTimer) could be developed that starts the EOT processing at the same calendar time (IE, everyday at 12:03am or similar). [http://www.boost.org/doc/html/date_time.html Boost.Date_Time] might be a good starting point. Also see [[Tpserver-cpp/Turn Timers]].
 
 === Rework Module System ===
 tpserver-cpp module system works ok, but could be better. It could be just a matter of adding a layer of indirection in.
