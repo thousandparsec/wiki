@@ -1,5 +1,7 @@
 Thousand Parsec uses [http://git.or.cz/ Git] to manage its source code. Git is a distributed version control system that was at first created for Linux kernel development and has since then become popular with other open source projects.
 
+
+= User guide =
 Here are some instructions to help you get started with Git.
 
 == Cogito ==
@@ -58,12 +60,25 @@ If you don't have write access to the repo, you can format your patches and atta
 git:
  git-format-patch ''origin''
 
+== See Also ==
+* [http://www.gitcasts.com/ GitCasts: Video Tutorials for Using Git]
+* [http://ktown.kde.org/~zrusin/git/git-cheat-sheet.svg Zack Rusin's Git Cheat Sheet in SVG format]
+
+
+= Admin guide =
+Because we can't remember everything, we document it here.
+
 == Applying patches that arrived by email ==
 If you are not sure about the patch, create a new branch and apply it there to review, if needed.
 
 git:
  git-am ''filename''
 
-== See Also ==
-* [http://www.gitcasts.com/ GitCasts: Video Tutorials for Using Git]
-* [http://ktown.kde.org/~zrusin/git/git-cheat-sheet.svg Zack Rusin's Git Cheat Sheet in SVG format]
+== Create new remote branch ==
+This is how you create a remote branch, taken from [http://www.zorched.net/2008/04/14/start-a-new-branch-on-your-remote-git-repository/].
+
+git:
+ git push origin origin:refs/heads/''branch_name''
+ git fetch origin
+ git checkout --track -b ''branch_name'' origin/''branch_name''
+ git pull
