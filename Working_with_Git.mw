@@ -82,3 +82,9 @@ git:
  git fetch origin
  git checkout --track -b ''branch_name'' origin/''branch_name''
  git pull
+
+== Remove remote branch ==
+Remove a remote branch that is not needed anymore.
+
+git:
+ git push origin :heads/''branch_name''
