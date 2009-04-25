@@ -1,0 +1,35 @@
+This page has the diagrams that at 2009-04-26 show the classes and relationships in [[tpserver-cpp]].
+
+
+== High level core ==
+These are the top level objects in tpserver-cpp. The main ones are Game, Network, Logger and Settings. The classes that Game is responsable for are also shown. Network and Logger are shown in more detail later.
+
+[[images/Tpserver-cpp class diagram 200904 - Game.png|600px]]
+
+== Objects ==
+This diagram shows how the ObjectManager and ObjectTypeManager are related to the IGObject and ObjectDescription classes. 
+
+[[images/Tpserver-cpp class diagram 200904 - Object.png|600px]]
+
+== Orders ==
+Similar diagram for Orders, except that the descriptions are part of the Order class. OrderManager uses a prototype pattern for describing and creating Orders.
+
+[[images/Tpserver-cpp class diagram 200904 - Order.png|600px]]
+
+== Turn Timers ==
+This diagram shows the various [[Tpserver-cpp/Turn Timers|turn timers]] and how they are subclassed from the TurnTimer baseclass.
+
+[[images/Tpserver-cpp class diagram 200904 - Timer.png|600px]]
+
+== Logging ==
+Shows the Logger and the LogSinks.
+
+[[images/Tpserver-cpp class diagram 200904 - Logging.png|600px]]
+
+== Network ==
+The network area shows how the Connection class is subclassed to represent all the different network connections. It also shows the relationship with Advertiser and Publisher classes.
+
+[[images/Tpserver-cpp class diagram 200904 - Network.png|600px]]
+
+
+[[Category:Tpserver-cpp]]
