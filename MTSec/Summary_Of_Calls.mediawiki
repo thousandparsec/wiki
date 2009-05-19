@@ -1,4 +1,3 @@
-
 == Class MTSec ==
 
 
@@ -111,9 +110,7 @@ Creates a Scout Ship
 '''Design* MTSec::createBattleScoutDesign( Player* owner)'''
 Creates a Battle Scout Ship
 
-'''IGObject* MTSec::createEmptyFleet( Player*     owner,
-                                   IGObject*   star,
-                                   std::string fleetName)'''
+'''IGObject* MTSec::createEmptyFleet( Player*     owner, IGObject*   star, std::string fleetName)'''
 Creates an empty fleet, places it in orbit around the given IGObject *star.  Returns the fleet.
 
 '''void MTSec::makeNewPlayerFleet( Player* player, IGObject* star)'''
@@ -142,8 +139,6 @@ Creates the player's home planet, orbiting around the given *star.
 '''void MTSec::onPlayerAdded(Player* player)'''
 // New players start with their own star systems, and an
 // initial fleet consisting of two scout ships.
-
-
 
 == Class MTSecTurn ==
 
