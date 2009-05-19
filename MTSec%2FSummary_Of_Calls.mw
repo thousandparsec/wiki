@@ -1,0 +1,369 @@
+
+== Class MTSec ==
+
+
+'''std::string MTSec::getName()'''
+Returns the name of the Ruleset
+
+'''std::string MTSec::getVersion()'''
+Returns Version # (major.minor)
+
+'''void MTSec::initGame()'''
+Initializes the game:
+Creates an instance of Game.
+Creates a turn from class MTSecTurn
+Sets the game's turn process to MTSecTurn
+Creates Galaxy & Star System ObjectTypes and adds them to the game's Object Type Manager.
+Sets the PlanetType & FleetType to the integers returned from MTSecTurn::addNewObjectType()
+Creates Order Types for: Nop, Move, Build, Colonise, SplitFleet & MergeFleet
+Sets the integer valued compMax to 13.
+
+'''void MTSec::create(.*)Prop()'''
+Creates various properties.  Each property consists of a Category ID, Rank, Name, DisplayName, Description.  It also uses scheme in tcpl to do the calculations based on the property type.  I will definitely need to learn some basic scheme to further comprehend what is going on here.
+Type of Props so far:
+Speed
+AmmoCost
+AmmoExplosiveness
+AmmoSize
+Firepower
+MissileCost
+MissileFirepower
+MissileSize
+HitPoints
+HP
+BuildTime
+Armor
+Colonise
+NumAmmo
+NumBayTypes
+NumHulls
+
+'''void MTSec::create.*Comp()'''
+Similar to the create.*Prop methods, but these create a Map (std::map<uint32_t, std::string>) of associated properties for each Component.  Components included are:
+ScoutHull
+BattleScoutHull
+CeriumAmmo
+Cerium3Ammo
+Cerium6Ammo
+Cerium12Ammo
+UraniumAmmo
+AntiparticleAmmo
+AntimatterAmmo
+ThoriumAmmo
+AlphaMissileBay
+BetaMissileBay
+GammaMissileBay
+DeltaMissileBay
+
+'''void MTSec::createProperties()'''
+Calls each create.*Prop()
+
+'''void MTSec::createComponents()'''
+Calls each create.*Comp()
+
+'''void MTSec::createTechTree()'''
+Calls createProperties() & createComponents().
+
+'''IGObject* MTSec::createAlphaCentauriSystem( IGObject* mw_galaxy)'''
+Creates the Alpha Centauri Star System.
+
+'''IGObject* MTSec::createSiriusSystem( IGObject* mw_galaxy)'''
+Creates the Sirius star system
+
+'''static uint32_t myRandom( uint32_t  max)'''
+Generates a random number between 1 and 'max'.
+
+'''IGObject* MTSec::createStarSystem( IGObject* mw_galaxy)'''
+Creates a random start system
+
+'''IGObject* MTSec::createSolSystem( IGObject *mw_galaxy)'''
+Creates the Sol star system
+
+'''void MTSec::createResources()'''
+Creates the various resources:
+Ship Part
+Home Planet
+Uranium
+Thorium
+Cerium
+Enriched Uranium
+Massivium
+Antiparticle
+Antimatter
+
+'''void MTSec::createGame()'''
+Creates a Universe
+Adds contained objects (Galaxy)
+Creates some Initial star systems (Sol, Alpha Centauri, Sirius, 45 randoms)
+
+'''void MTSec::startGame()'''
+Checks if turn_length_over_threshold is empty, if so sets some default values:
+turn_length_over_threshold to 600
+turn_player_threshold to 0
+turn_length_under_threshold to 600
+
+'''bool MTSec::onAddPlayer(Player* player)'''
+Just returns true?
+
+'''Design* MTSec::createScoutDesign( Player* owner)'''
+Creates a Scout Ship
+
+'''Design* MTSec::createBattleScoutDesign( Player* owner)'''
+Creates a Battle Scout Ship
+
+'''IGObject* MTSec::createEmptyFleet( Player*     owner,
+                                   IGObject*   star,
+                                   std::string fleetName)'''
+Creates an empty fleet, places it in orbit around the given IGObject *star.  Returns the fleet.
+
+'''void MTSec::makeNewPlayerFleet( Player* player, IGObject* star)'''
+From comments:
+// A new player's initial fleet always consists of two battle scouts.
+//
+// The designs for the scouts are one-offs, as far as the player
+// is concerned.  S/he is unable to produce any more ships like
+// them, although they could create another design that functions
+// similarly.
+Seems to create a new fleet by calling createEmptyFleet(), with 2 battle scout ships.
+
+'''IGObject* MTSec::makePlayerHomePlanet( Player* player, IGObject* star)'''
+Creates the player's home planet, orbiting around the given *star.
+
+'''IGObject* MTSec::makeNewPlayerStarSystem( Player* player)'''
+// Create a 'home star system' for a new player
+// These 'home systems' always consist of exactly one planet.
+
+'''void MTSec::setNewPlayerTech( Player* player)'''
+// This routine sets a new player's initial tech level.
+// New players can make any hull, see all stars.  This
+// doesn't leave anything for them to research.
+
+
+'''void MTSec::onPlayerAdded(Player* player)'''
+// New players start with their own star systems, and an
+// initial fleet consisting of two scout ships.
+
+
+
+== Class MTSecTurn ==
+
+
+'''void MTSecTurn::doTurn()'''
+Goes through the various processes that happen throughout a turn:
+1)Iterates through all ObjectManager Ids
+1.If the type of object is playettype or fleettype, it adds this object as a possible combatant.
+1.Creates orders if necessary.
+2)Executes the Move
+3)Does the necessary Combat for the move
+4)Does other Orders (nop, buildfleet, colonise)
+5)Does the once-a-turn moves for each object.
+6)Finds the objects that are visible for each player
+
+'''void MTSecTurn::setPlanetType(uint32_t pt)'''
+Sets the planettype to pt
+
+'''void MTSecTurn::setFleetType(uint32_t ft)'''
+Sets the fleettype to ft
+
+'''std::set<uint32_t> MTSecTurn::getContainerIds() const'''
+Returns the set of container Ids.
+
+
+
+== Class Build ==
+
+
+'''Build::Build() : Order()'''
+Constructor, Adds an order for fleetlist and fleetname.
+
+'''void Build::createFrame(Frame *f, int pos)'''
+Sets the current resource, sets turns.
+Calls Order::createFrame().
+
+'''std::map<uint32_t, std::pair<std::string, uint32_t> > Build::generateListOptions()'''
+Creates a map of options based on designs that are CategoryId 1.
+
+'''Result Build::inputFrame(Frame *f, uint32_t playerid)'''
+Iterates through fleettypes, if fleettype is a usable design and the number to build exceeds 0 then we add number to UnderConstruction.
+
+'''bool Build::doOrder(IGObject *ob)'''
+Creates a fleet
+Adds the fleet to the container
+Sets the ship type
+Adds fleet to the universe
+
+'''Order* Build::clone() const'''
+Returns a clone of the Order based on type.
+
+
+
+== Class Colonise ==
+
+
+'''bool Colonise::doOrder(IGObject * ob)'''
+If the planet is not already colonised, it is close enough and there is a frigate available, the planet is colonised.
+
+
+
+
+== Class Fleet ==
+
+
+'''ObjectBehaviour* FleetType::createObjectBehaviour() const'''
+Returns an object of Fleet
+
+'''Fleet::Fleet():OwnedObject()'''
+Currently does nothing.
+
+'''void Fleet::setDefaultOrderTypes()'''
+Sets the default order types (No Operation, Move, Split Fleet & Merge Fleet)
+
+'''void Fleet::addShips(uint32_t type, uint32_t number)'''
+Adds number ships to fleet of type.
+
+'''bool Fleet::removeShips(uint32_t type, uint32_t number)'''
+Removes number ships from fleet of type
+
+'''uint32_t Fleet::numShips(uint32_t type)'''
+Returns the number of ships in fleet “type”.
+
+'''std::map<uint32_t, uint32_t> Fleet::getShips() const{'''
+Returns a map of Ships in the Fleet
+
+'''uint32_t Fleet::totalShips() const'''
+Returns the number of ships in the Fleet
+
+'''uint32_t Fleet::getDamage() const'''
+Returns the damage of the Fleet
+
+'''void Fleet::setDamage(uint32_t nd)'''
+Sets the damage of the Fleet
+
+'''void Fleet::doOnceATurn()'''
+Iterates through Planets owned by the Player, If damage isn't 0 it becomes 0.
+If the orders contain an instruction to Move, we set the vector.
+
+'''int Fleet::getContainerType()'''
+Simply returns 0?
+
+'''void Fleet::setupObject()'''
+Calls   OwnedObject::setupObject();
+Executes setSize(2).
+Some work may need to be done here.
+
+
+
+
+== Class MergeFleet ==
+
+
+'''bool MergeFleet::doOrder(IGObject * ob)'''
+Merges two fleets together.  Removes the merged fleet from the universe.
+
+'''Order* MergeFleet::clone() const'''
+Clone operation for MergeFleet class, returns a MergeFleet with type set to the current type.
+
+
+
+== Class Move ==
+
+
+'''void Move::setDest(const Vector3d & ndest)'''
+Sets the position to the ndest.
+
+'''int Move::getETA(IGObject *ob) const'''
+Returns the travel time to object ob
+
+'''void Move::createFrame(Frame * f, int pos)'''
+Sets turns to the amount of time to get to position pos.
+
+'''bool Move::doOrder(IGObject * ob)'''
+Processes a move order for the fleet pointed to by ob.
+
+
+
+== Class Nop – No Operation ==
+
+
+'''void Nop::createFrame(Frame * f, int pos)'''
+Sets turns to the timeparam's getTime() result.  Passes information to Order::createFrame()
+
+'''Result Nop::inputFrame(Frame * f, uint32_t playerid)'''
+Sets turns to the timeparam's getTime() result.  Returns the result that is given by passing f & playerid to Order::inputFrame()
+
+'''bool Nop::doOrder(IGObject * ob)'''
+If timeparam->getTime is greater than 1 then we decrement turns and timeparam's time.  If not, then we post a message of “The object has finished it's delay and is now continuing”.
+
+
+
+
+== Class Planet ==
+
+
+'''ObjectBehaviour* PlanetType::createObjectBehaviour() const'''
+Returns a new Planet instance.
+
+'''void Planet::setDefaultOrderTypes()'''
+Sets the Default Order Types to “Build Fleet” and “No Operation”
+
+'''void Planet::doOnceATurn()'''
+Currently does nothing
+
+'''int Planet::getContainerType()'''
+Returns “2”
+
+'''std::map<uint32_t, std::pair<uint32_t, uint32_t> > Planet::getResources()'''
+Returns a map of the associated resources.
+
+'''uint32_t Planet::getResource(uint32_t restype) const'''
+Returns the TYPE of resource pointed to by restype.
+
+'''void Planet::setResources(std::map<uint32_t, std::pair<uint32_t, uint32_t> > ress)'''
+Sets resource of Planet to that of ress.
+
+'''void Planet::addResource(uint32_t restype, uint32_t amount)'''
+Sets up a map of the current resources, adds amount to the restype and sets the resource.
+
+'''bool Planet::removeResource(uint32_t restype, uint32_t amount)'''
+Sets up a map of the current resources, removes amount from the restype and sets the resource.
+
+
+
+== Class SpaceObject ==
+
+
+'''Vector3d SpaceObject::getPosition() const'''
+Returns position of space object.
+
+'''Vector3d SpaceObject::getVelocity() const'''
+Returns velocity of space object.
+uint64_t SpaceObject::getSize() const
+Returns size of space object
+
+'''void SpaceObject::setPosition(const Vector3d & np)'''
+Sets position of space object.
+
+'''void SpaceObject::setVelocity(const Vector3d & nv)'''
+Sets velocity of the space object.
+
+'''void SpaceObject::setSize(uint64_t ns)'''
+Sets the size of the space object.
+
+
+
+== Class SplitFleet ==
+
+
+'''std::map<uint32_t, std::pair<std::string, uint32_t> > SplitFleet::generateListOptions()'''
+Gets a list of ships in the fleet, gets their options and returns a map of their options.
+
+'''bool SplitFleet::doOrder(IGObject * ob)'''
+Splits a fleet of ships into two fleets.
+
+
+
+== Class Universe ==
+
+
+'''void Universe::doOnceATurn()'''
+Executes the once-a-turn requirements for the Universe.  Currently, this implements a simple incrementation and time update.
