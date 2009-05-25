@@ -68,9 +68,9 @@ Class names are written in CamelCase and their name represents their functionali
 === Functions ===
 
 * use an "a" prefix for parameter names (tbd)
- * parameter names must be mentioned in both declaration and definition. If some parameter is not referenced inside the function, its name must be commented out in the definition, to avoid compilation warnings.
- * use a const attribute where appropriate to indicate that a function does not change the state of an object or a parameter which is read-only.
- * each variable declaration should be in a separate line.
+* parameter names must be mentioned in both declaration and definition. If some parameter is not referenced inside the function, its name must be commented out in the definition, to avoid compilation warnings.
+* use a const attribute where appropriate to indicate that a function does not change the state of an object or a parameter which is read-only.
+* each variable declaration should be in a separate line.
 
 === Member data ===
 
@@ -141,8 +141,6 @@ Class names are written in CamelCase and their name represents their functionali
 * there must be no space between a function or macro name and its parenthesized argument(s).
 * there must be a single space between a keyword (for, if, etc.) and its parenthesized argument(s).
 * parentheses should always be used where there is potential ambiguity.
-
-----
 
 == Commenting conventions ==
 
