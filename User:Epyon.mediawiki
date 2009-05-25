@@ -7,8 +7,11 @@
 ; GTalk/E-mail
 : name.surname@gmail.com
 
-== GSoC Proposals ==
+== GSoC Proposals 2008 ==
 
 * [[User:Epyon/2008/EliteSec]]
 * [[User:Epyon/2008/3dClient]]
+
+== GSoC Proposals 2009 ==
 * [[User:Epyon/2009/EliteSec]]
+* [[User:Epyon/2009/TpServerCppRefactor]]
