@@ -1,0 +1,127 @@
+== Comment layouts ==
+
+* boxed comments have the following layout:
+
+ /**
+  * Boxed comment example.
+  */
+
+'''Note:''' /** and */ are always in separate lines.
+
+* class and function header file comments have the following layout 
+
+ /**
+  * @brief Short class description goes here ending with dot.
+  *
+  * Second sentence is here.
+  * Third sentence is here.
+  */
+ class MyClass : public Base
+ {
+ public:
+    /**
+     * @brief Brief description
+     *
+     * Function header documentation goes here.
+     *
+     * @param aParameter Parameter description.
+     * @return Description of the returned value
+     */
+    int myFunction( int aParameter );
+    ...
+ }
+
+* these comments are recognized by the Doxygen tool, which can generate HTML documentation for classes. For this Reason, the comment has to start with /** instead of /*. Keep the /** and */ in a separate line. 
+
+== Header documentation ==
+
+'''Example''':
+
+ // Copyright (C) 2007-2009 Thousand Parsec Project
+ // This file is part of tpserver-cpp
+ //
+ // This program is free software; you can redistribute it and/or modify
+ // it under the terms of the GNU General Public License as published by
+ // the Free Software Foundation; either version 2 of the License, or
+ // (at your option) any later version.
+ //
+ // This program is distributed in the hope that it will be useful,
+ // but WITHOUT ANY WARRANTY; without even the implied warranty of
+ // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ // GNU General Public License for more details.
+ //
+ // You should have received a copy of the GNU General Public License
+ // along with this program; if not, write to the Free Software
+ // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ 
+ /**
+  * @author Name Surname name.surname(at)mailadress.com
+  * @brief Brief description
+  */
+ 
+ #ifndef __TP_FILENAME_H__
+ #define __TP_FILENAME_H__
+ 
+ #include <system_header>
+ #include <system_header2>
+ 
+ #include "core/..."
+ #include "core/..."
+ 
+ namespace tpserver
+ {
+ 
+ // Code goes here...
+ 
+ } // namespace tpserver
+ 
+ #endif // __TP_FILENAME_H__
+
+'''Notes:'''
+* author is the person mainly responsible for the class, or the one that wrote the most code of it
+* copyright date should match current year
+* use "@" for doxytags, not "\"
+* file description can be a single brief line if the file constitutes of a single class and the class is well documented
+
+== Class documentation ==
+
+'''Example''':
+
+ /**
+  * @brief An interesting Class  
+  * 
+  * A more elaborate multiline class description, 
+  * 
+  * @see AnotherClass
+  */
+ class Class
+ {
+    // members go here
+ }; // Class
+
+'''Notes''':
+* description should be as elaborate as possible
+* include any see also information
+* include any revelant note, todo, warning and pre/post conditions if applicable to the whole class
+* if class throws exceptions, write about which ones
+
+== Method/function documentation ==
+
+'''Example''':
+
+ /**
+  * @brief A brief description
+  *
+  * A normal function taking two arguments and returning an integer value.
+  *
+  * @param aParam an integer argument.
+  * @param aAnother a constant character pointer.
+  * @return A funny value.
+  *
+  * @throws FunnyException on error
+  */
+ uint32 funnyFunction( int aParam, const char* aAnother );
+
+'''Notes''':
+* param, return and throw are all mandatory descriptions
+* any warnings, pre and post conditions, etc. are welcome
