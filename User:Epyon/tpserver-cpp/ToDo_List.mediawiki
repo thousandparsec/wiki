@@ -1,0 +1,16 @@
+== Phase 1 ToDo ==
+
+* [[User:Epyon/tpserver-cpp/Code Conventions]] and their application
+* [[User:Epyon/tpserver-cpp/Doxygen Conventions]] and their application
+* filenames renaming
+* directory structure
+* Singleton template implementation
+* NonCopyable implementation
+
+== Phase 2 ToDo ==
+
+== Phase 3 ToDo ==
+
+== Phase 4 ToDo ==
+
+== Other ToDo ==
