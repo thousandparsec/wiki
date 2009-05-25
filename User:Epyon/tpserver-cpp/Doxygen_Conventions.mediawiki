@@ -11,7 +11,7 @@
 * class and function header file comments have the following layout 
 
  /**
-  * @brief Short class description goes here ending with dot.
+  * Short class description goes here ending with a dot (parsed via autobrief).
   *
   * Second sentence is here.
   * Third sentence is here.
@@ -20,7 +20,7 @@
  {
  public:
     /**
-     * @brief Brief description
+     * Brief description (parsed via autobrief).
      *
      * Function header documentation goes here.
      *
@@ -56,7 +56,7 @@
  
  /**
   * @author Name Surname name.surname(at)mailadress.com
-  * @brief Brief description
+  * Brief description
   */
  
  #ifndef __TP_FILENAME_H__
@@ -88,7 +88,7 @@
 '''Example''':
 
  /**
-  * @brief An interesting Class  
+  * An interesting Class  
   * 
   * A more elaborate multiline class description, 
   * 
@@ -110,7 +110,7 @@
 '''Example''':
 
  /**
-  * @brief A brief description
+  * A brief description
   *
   * A normal function taking two arguments and returning an integer value.
   *
