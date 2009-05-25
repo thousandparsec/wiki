@@ -15,3 +15,8 @@
 == GSoC Proposals 2009 ==
 * [[User:Epyon/2009/EliteSec]]
 * [[User:Epyon/2009/TpServerCppRefactor]]
+
+== tpserver-cpp refactor project ==
+* [[User:Epyon/tpserver-cpp/Code Conventions]]
+* [[User:Epyon/tpserver-cpp/Doxygen Conventions]]
+* [[User:Epyon/tpserver-cpp/ToDo List]]
