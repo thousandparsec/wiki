@@ -1,0 +1,86 @@
+== Abstract ==
+
+The TP server tpserver-cpp isn't in bad shape. However, there are 
+many places for improvement, especially if allowed to use the full 
+power of the Boost libraries. This project aims at a serious review 
+of tpserver-cpp doing both high-level refactoring as well as fixing or 
+addressing the smaller issues.
+
+== Design goals ==
+
+* '''Modern C++''' - usage of templates, STL and Boost where applicable
+
+* '''Code reusage''' - usage of STL and Boost where possible
+
+* '''Portable''' - reducing dependency on system and architecture, moving all system-dependent stuff to a single module
+
+* '''Modularization''' - splitting the existing and new classes and files into as autonomic as possible single modules, independantly compiled and in separate directories
+
+* '''Clarity''' - unified and readable coding conventions, simplicity and obviousness of usage
+
+* '''Memory management''' - shared pointers, clear ownage of classes
+
+* '''Source documentation''' - full doxygen commenting
+
+* '''Architecture documentation''' - UML diagrams for both the architecture as well as the classes
+
+* '''Developer documentation''' - documents for developers, both for internal developers as well as for module developers
+
+== Project goals ==
+
+=== Primary goals ===
+
+* modularization and organization of the server structure into a clean collection of separate modules in directories (maybe using namespaces also)
+* refactor the internal architecture to use boost::asio, refactor the networking code under it
+* research the server, and see if a better organization (proactor pattern) is possible. If not, modularize, rename and document it, so that the existing reactor pattern is clearly visible
+* replace usage of pointers with safer Boost shared pointers, track memory management
+* track thread safety, prepare the server to use Boost.Thread
+* remove code duplication wherever seen
+* base classing for safety (NonCopyable, Singleton and other pattern based base-classes)
+* doxyfication of the whole server code
+
+=== Secondary goals ===
+
+* make use of Boost.Format to format messages, logs and strings (solves Issue 51)
+* typedefing ID's, but in a safe manner -- using sizeof and static size assertions where applicable (Issue 52)
+* architecture documentation -- UML diagrams for both the architecture as well as the classes
+* developer documentation -- documents for developers, both for internal developers as well as for module developers
+
+=== Bonus goals ===
+
+* replace the Mersenne Twister implementation with Boost.Random
+* solving the Calendar Timer todo with Boost.DateTime
+* possibly reworking the module system into something along the lines of Boost.Extension
+* threading (rather out of the timeframe, but preparation will be done)
+
+== Project schedule ==
+
+I plan to do at least weekly progress reports with emphasised design decisions (however well designed in the first phase, reality will probably change the design afterwards at least a little). Due to the invasive nature of the project, I suggest that progress reports will be directed to the mailing-list. This will be my only job once summer starts, and will be treated as such during program coding timeline ( full-time schedule ) -- a week may fall out for a short vacation.
+
+=== Preplanning (April 20 - May 23) ===
+
+Creating a better roadplan for the project. Getting to know the way the server works internally, doing a detailed list of things to do, and discussing it and getting permission from the devs.
+
+=== Phase 1 (Reorganization and doxygen) - (May 24 - June 14) ===
+
+'''Actions :''' Going through the entire source code, documenting it while in the process of learning it's functions. At the same time devising a logical modularization structure of the code. Division into directories and "modules". Simple refactoring of duplicated code, typedefing, base-classing and STL/Boost-ification.
+
+'''Goal :''' clean, documented and organized codebase ready for refactoring
+
+=== Phase 2 (Asio) - (June 14 - July 5)===
+
+'''Actions :''' rewriting the network code in boost::asio without breaking the API, devising an eventual refactoring of the network pattern. Organizing the structure to be ready for threading. Separation of system-specific code into a separate module.
+
+'''Goal :''' backward compatible tpserver-cpp running on Boost.ASIO, probably possibility to compile under other compilers/systems.
+
+=== Phase 3 (Memory and Strings) - (July 6 - July 26) ===
+
+'''Actions :''' rewriting pointers to shared pointers, tracking memory allocation. Rewriting message and string handling to make use of Boost.Format. Probably keeping the old methods marked as deprecated for backwards compatibility. Implementing Boost.Random in place of the existing randomization code.
+
+'''Goal :''' clean and refactored tpserver-cpp that is still backwards compatible
+
+=== Phase 4 (Documentation, bonuses and finalization) - (July 27 - August 10+) ===
+
+'''Actions :''' writing the architecture documentation and developer documentation, possibly a suggestion (with a preliminary implementation) of a compatibility breaking redesign. Calendar Timer, and possibly module system rewrite. All changes that might break the API will go into this phase. Bugfixing if applicable, stress testing. Buffer time.
+
+'''Goal :''' project completion, stable and clean tpserver-cpp
