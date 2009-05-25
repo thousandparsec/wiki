@@ -1,0 +1,220 @@
+== General Principles ==
+
+Code must be written in C++. All code must compile under -Wall -Wextra compiler flags without warnings. 
+
+== Definitions ==
+
+* member functions are functions that are associated with classes.
+* data members are variables that are part of classes. 
+
+== Source Files ==
+
+=== General Conventions ===
+
+* never use any white spaces or non-ASCII characters in filenames. Also, the following characters are not allowed: & ^ + - @ $ % * ( ) | \ / [ ] { } < > ? ; : , " 
+* for source code files, every filename should reflect the name of the class defined or implemented in it
+* source file names containing a class, should have the name of the contained class. Non-class source files should be all lowercase.
+* if a code standard rule is broken it has to be explicitly documented.
+* the files must not contain source code that is not in usable ( use sandbox for that )
+* code must never be copy/pasted (literally doubled). If two functionalities have the common parts, they must reuse single code portion.
+* pointers should be avoided, especially as return values from functions, use shared pointers instead. Use a typedef Ptr in the scope of a class to have a shortcut for the shared pointer. Weak pointers are typedef'ed to WeakPtr
+* do not duplicate what was done. If some functionality is already implemented, it must be used. Creating alternatives is prohibited. If the interface or the implementation of the functionality does not satisfy a developer he should talk about the enhancements, and must not create yet another version.
+* creating own versions of algorithms already present in STL or Boost is only allowed if a serious reason exists.
+* header files use .h extension, source files use .cpp
+
+=== Header files ===
+ 
+* write comments! Header file comments are written for the user of the module. They are adequate if the test cases for the module can be drawn up on the basis of them. Class and function comments (including parameters and return values) always go in the header file. This means all comments that are meant to be handled by the automatic class documentation generator program Doxygen.
+* add #ifndef __MODULE_CLASSNAME_H__  header guard statements in the beginning of a header to protect it against multiple includes from other files. CLASSNAME should be a capitalized classname, and NOT include "_" sign.
+* write the implementation of a single class in a single file.
+* use the same names for function parameters as you have used in the header file.
+
+=== Source files ===
+
+* Write comments! Implementation file comments are written for the maintainer of the module. They are adequate if they meet the following requirements:
+** They describe class level implementation and clarify all the non-trivial issues.
+** Member function comments cover explanations for all the non-trivial implementation code. Other functions must also contain parameter and return value comments.
+* Write the implementation of one class in one file.
+* Use the same names for function parameters as you have used in the header file.
+
+== Directory structure ==
+
+Each component must be placed in separate directory. TBD.
+
+== Language ==
+
+=== General conventions ===
+
+* use namespaces
+* don't use global variables
+* use constants instead of defines where applicable
+* pass function parameters as constant references where possible
+* never use the underscore (_). The only exception is its use as a delimiter in pre-processor macro names. In variable, function and class names useCamelCase instead.
+* abbreviations should be used only for team-obvious situations (protocol abbr. or things like XML), should be all-uppercase ( SSL, not Ssl ).
+
+=== Naming prefixes (to be discussed) ===
+
+* function parameters names begin with the letter "a"
+* private variables begin with the letter "m"
+* local variables begin with the letter "i"
+* static variables begin with the letter "s"
+
+Getter and setter methods should start with "get" and "set", the only exception being Boolean getters which can be prefixed with "is". Conversion functions can start with "as".
+
+=== Class names ===
+
+Class names are written in CamelCase and their name represents their functionality.
+
+=== Functions ===
+
+* use an "a" prefix for parameter names (tbd)
+ * parameter names must be mentioned in both declaration and definition. If some parameter is not referenced inside the function, its name must be commented out in the definition, to avoid compilation warnings.
+ * use a const attribute where appropriate to indicate that a function does not change the state of an object or a parameter which is read-only.
+ * each variable declaration should be in a separate line.
+
+=== Member data ===
+
+* use an "m" prefix for instance variable names (tbd)
+* member data should be at least protected if not private. Provide accessors for data that needs to be public instead of making it public ( this is the only header inlined code that is acceptable as long as it consists of a single line ).
+
+=== Pointer and references ===
+ 
+* when declaring or defining pointers or references, place a specifier (* or &) next to typename, not next to the variable. 
+
+=== Macros and other #defines ===
+
+* avoid macros in release code. Exception: Debug and test code often requires precompiler macros. Debug flags must be analyzed and kept only if they are useful and well commented.
+* capitalize all the letters of macros.
+* use an underscore ("_") to separate words. Do not start a macro name with an underscore.
+* avoid #defines. Use real constants instead.
+
+=== Constants ===
+
+* constant names should be upper-case.
+* constants should be defined in source files.
+* each number ( except trivial ones like 0 and 1 ) should be a constant.
+
+=== Enumerated types ===
+
+* enums should be scoped within the relevant class.
+* enums and their members must have relevant, meaningful and unambiguous names.
+* enumerations names should be upper-case and white spaces should be replaced by underscores.
+
+=== Global variables ===
+
+... are not.
+
+=== Control structures ===
+ 
+* every switch statement must have a default: clause, at least for detecting unexpected switch expressions. Use logging code or some other handler to catch unexpected switch expressions. Case branches without a break statement should be avoided. If one has to be used, the flow through must be explicitly indicated by a comment.
+* always use compound statement braces ({}) in all the control flow statements — if() - else, while(), do/while() and for() — even if there were only a single statement or an empty block.
+
+'''Example:'''
+ if ( myVariable ) 
+ {
+     doSomething();
+ }
+
+* control flow statement goto must not be used
+
+=== Spacing ===
+
+* all C++ statements within a block of code should be indented exactly four spaces deeper than the enclosing block.
+* spaces are used instead of tabs.
+* primary operators should be written with no spaces around them.
+* unary operators should be written with no spaces between them and their operands. Exceptions: new and delete.
+* all other operators should be written with one space on each side of the operator.
+
+'''Example:'''
+
+ if ( iPointer->function() > KOurMaxValue )
+ {
+     iCounter++;
+     iVariable = iTable[a] + iOffset;
+ }
+
+=== Placement of braces and parentheses ===
+
+* the placement of the "{" and "}" braces must be at the same level of indentation as the control statement. A "{" or "}" is the only character in a given line. Note, that some editor tools can be configured to indent the code according to this rule.
+* prefer a maximum of 78 characters per line. Longer lines are hard to read and some editors cannot even handle them properly. 
+* parentheses should always have a space on the inside.
+* there must be no space between a function or macro name and its parenthesized argument(s).
+* there must be a single space between a keyword (for, if, etc.) and its parenthesized argument(s).
+* parentheses should always be used where there is potential ambiguity.
+
+----
+
+== Commenting conventions ==
+
+=== General commenting conventions ===
+ 
+* Doxygen guidelines can be read on the [[User:Epyon/tpserver-cpp/Doxygen Conventions]] page.
+* comments are to be written in English.
+* comments must be kept up to date.
+* comments must be inserted into the code as it is being developed. They must appear with the relevant code.
+* avoid commenting a matter in many places.
+* avoid repeating code in comments.
+* in general, comments should explain why something has been done rather than telling what has been done. However, non-obvious control and data structures should be explained, as well as the programmer's assumptions of the program's state at a certain point, if it's non-obvious.
+* use C++ style comments (// Comment)  for internal documentation and use C style block comments (/* Comment */) for doxygen documentation. 
+
+=== Special comments ===
+
+All special comments need to have a description of what they relate to. The proper format is //<space>KEYWORD<colon><space><description>. The following are widely recognized:
+
+* '''// TODO:''' there is work to be done following this part. Describe what needs to be done.
+* '''// REFACTOR:''' following code needs refactoring. Describe what needs refactoring, and optimally a possible solution.
+* '''// HACK:''' following code was hacked up quickly, needs refactoring. Describe why a more elegant solution wasn’t used.
+* '''// TRICKY:'''  following code is not obvious, or depends on some non-obvious assumptions, do not touch under death penalty. Possibly try to provide an explanation.
+* '''// DONOTREMOVE:''' this code may not be used but should not be removed. Description of why it should not be removed is optional.
+* '''// WARNING:''' following code makes some non-obvious assumptions. Document them.
+
+== Identifier Names ==
+
+* all variable and constant identifiers begin with a lowercase letter.
+* macros are always uppercase.
+* global variables don't exist.
+* both member and non-member functions begin with a lowercase letter (for example, textStyle)
+* CamelCase everywhere. In case of abbrevations all letters are capital (XMLNode, not XmlNode)
+* long identifier names almost always ( FloatDataVectorIterator instead of FloatDataVectIter )
+* when parameter name would conflict with class data member, prepend parameter with _
+* get/set for accessors, no data members should be public
+* is/has is acceptable for boolean observers
+
+== Control Structures ==
+
+The control structure indenting is as follows:
+
+ if ( expression ) 
+ {
+   statements;
+ } 
+ else 
+ {
+   statements;
+ }
+
+ for ( expression; expression; expression ) 
+ {
+   statements;
+ }
+
+ do 
+ {
+   statements;
+ } 
+ while ( expression );
+
+ while ( expression ) 
+ {
+   statements;
+ }
+
+ switch ( expression ) 
+ {
+   case constant:
+     statements;
+     break;
+   default:
+     statements;
+     break;
+ }
