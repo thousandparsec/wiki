@@ -6,7 +6,12 @@
 
 To setup run git-cl config
 
-
+ # git-cl config
+ Rietveld server (host[:port]) [codereview.appspot.com]: codereview.mithis.com
+ CC list: 
+ Tree status URL: 
+ ViewVC URL: 
+ #
 
 == Using == 
 
