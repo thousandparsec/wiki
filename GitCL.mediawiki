@@ -13,28 +13,28 @@ To setup run git-cl config
 The best way to use git-cl is with "feature branches", this is where you create a new localbranch every time you want to add a new distinct feature.
 
 '''
-# Create the new branch
-git checkout -b my-new-feature
+ # Create the new branch
+ git checkout -b my-new-feature
 
-# Hack, Hack 
-git add
-git commit
+ # Hack, Hack 
+ git add
+ git commit
 
-# Upload to code review
-git cl upload
+ # Upload to code review
+ git cl upload
 
-# Fix from the code review
-git add
-git commit
+ # Fix from the code review
+ git add
+ git commit
 
-# Upload the new change
-git cl upload
+ # Upload the new change
+ git cl upload
 
-# Now we need to merge back into the main branch
-git checkout master 
-git merge --squash my-new-feature
-git commit # Add a comment about what this change does
+ # Now we need to merge back into the main branch
+ git checkout master 
+ git merge --squash my-new-feature
+ git commit # Add a comment about what this change does
 
-# Now push the change
-git push
+ # Now push the change
+ git push
 '''
