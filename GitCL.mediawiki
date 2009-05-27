@@ -1,0 +1,2 @@
+
+[http://neugierig.org/software/git/?r=git-cl Git-CL] is a way of using Rietveld with git for "pre-push" code reviews. This page explains best practices for using Git-CL with Thousand Parsec.
