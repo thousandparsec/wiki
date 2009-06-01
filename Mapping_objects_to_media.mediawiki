@@ -22,4 +22,7 @@ Having the media describe itself (in a file for example) is limiting as it would
 
 Any of these methods could be used. Is there a better one? Is one significantly better than any other?
 
-For tpserver-cpp [[User:Lee Begg|Lee]] was thinking of using the first obvious suggestion. Different servers could use different approaches.
+For [[tpserver-cpp]] [[User:Lee Begg|Lee]] was thinking of using the first obvious suggestion. Different servers could use different approaches.
+
+== Implementation ==
+Lee added media to Minisec, and basically chooses a random media (of the right type). In a way this is the first obvious suggestion. It seems to be the best way to go.
