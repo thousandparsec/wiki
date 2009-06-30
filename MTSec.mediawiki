@@ -1,0 +1,273 @@
+'''Story'''
+
+Prophets have long predicted that your race would reach the stars, however what you found there was a shock even to them. A huge war, like had never been see before, was being waged throughout the whole galaxy by god like alien races.
+
+Before you could even begin to comprehend what was happening it all ended. Something happened, you'll never be sure what, that caused both sides to disappear in a matter of years leaving advanced technologies, huge ships and powerful weapons just lying about.
+
+However you aren't the only fledgling race to exist, others too are now racing to lay claim to the galaxy. In fact you will have to continue the war that had just ended to ensure your own race's survival!
+Winning
+
+Like in MiniSec, the game is won by destroying all other players. The definition of players being destroyed is server (or even game) dependent. Some possible definitions are as follows:
+
+    * All your planets are destroyed.
+    * Your home world is destroyed.
+    * All your planets are destroyed and you have no ship carrying the colonisation module.
+    * All your planets and fleets are destroyed.
+
+You lose if you get destroyed :).
+
+'''Economy'''
+
+Unlike in MiniSec, planets in MTSec are not all equal. The two major changes are the longer you control a planet the more production capability it has. As well, not all planets have the same resources. Some planets are rich in certain resources, others are poor in every resource.
+
+== Production Capability ==
+
+
+Production points are used to both mine resources and to convert resources into ships and weapons. Production points are first used to try and satisfy Orders in the queue, any left over points are then used to mine sources. All production points must be used every turn.
+
+For an example how this works you can see the example at the end of the Economy section.
+
+For each turn you control a planet it gains one point of production capability, each planet can have a maximum of 100 points of production capability. Each turn a planet will produce productions points equal to it's production capability.
+
+== Enhance Order ==
+
+
+The enhance order uses production points to quickly increase the production capability. For every xx production points spent the enhance order increases the production capability by one.
+
+== Send Production Points ==
+
+
+Production points can also be sent to other planets. However there is a significant cost in sending points. The cost of sending points is proportional to the distance between the source and destination. Only whole production points can be sent and the number will always be round down.
+
+== Build Weapons ==
+
+
+Each weapon takes one production point to produce. Plus it also consumes the resources to produce the weapon.
+
+== Build Ships ==
+
+
+Each ship takes one production point for every 10 units of size. For example, a scout takes 6 production points to produce, while an Argonaut will take 100 production points to produce.
+
+'''Resources'''
+
+There following resources exist in MTSec. Resources are used to make all types of explosives.
+Name 	Size per kt 	Rarity 	Explosiveness per kt 	Description
+Uranium 	4 	Common 	        1 	Most basic nuclear explosive
+Thorium 	4.5 	Very Common 	0.5 	A more abundant but less explosive nuclear explosive
+Cerium 	        3 	Rare 	4 	
+Enriched Uranium2 	Uncommon 	4 	An enhanced version of uranium which is more explosive
+Massivium 	12 	Common 	2 	A huge but extremely explosive sub-nuclear particle
+Antiparticle 	0.8 	Very Rare 	60 	An very rare but hugely explosive anti-particle explosive
+Antimatter 	0.5 	Extreme Rare 	100 	An extremely rare but insanely explosive antimatter-matter explosive
+
+Resources are mined from a planet by "spending" production capability. The amount of resources produced on mining is dictated by the amount of mineable resources found on the planet.
+
+For each 1 unit of mineable resources on the planet, 1 production point produces 1kt of that resource.
+
+Each planet has a virtually unlimited supply of each resource (so you don't need to worry about running out) but the accessibility of the resource is key.
+
+For example:
+
+    * A planet has mineable
+          o 10 units of Uranium
+          o 100 units of Thorium
+          o 0.1 units of Antiparticle
+    * Spending one unit of production will produce
+          o 10kt of Uranium
+          o 100kt of Thorium
+          o 0.1kt of Antiparticle
+
+'''Examples'''
+
+== Example: No Orders - 1 resource ==
+
+
+    * A planet is producing 33 production points each turn.
+    * 5 units of the Uranium are mineable.
+
+    * xx production points are used to mine. Producing xx kt of Uranium.
+
+NOp orders can also be used to force all production points for that turn to go towards mining.
+
+== Example: No Orders - Many resources ==
+
+
+    * A planet is producing 1 production points each turn.
+    * 10 units of Uranium
+    * 100 units of Thorium
+    * 0.1 units of Antiparticle
+
+    * xx production points are used to mine. Producing:
+    * 10kt of Uranium
+    * 100kt of Thorium
+    * 0.1kt of Antiparticle
+
+
+== Example: A Build Fleet Order ==
+
+
+    * A planet is producing 33 production points each turn.
+    * A Build Fleet order exists which requires 15kt of Uranium.
+    * 10kt of Uranium is available, 5 units of the Uranium are mineable.
+
+    * xx production points are used to build the fleet using 15kt of Uranium.
+    * xx production points are used to mine. Producing 5kt of Uranium.
+    * xx production points are used to build the fleet using 5kt of Uranium.
+    * xx production points are used to mine. Producing xx kt of Uranium.
+
+'''Ships'''
+
+Ships are how you fight your wars.
+
+== Ship Stats ==
+
+
+All ships have 3 stats used in combat:
+
+    * Hit Points (HP), The amount of damage a ship can take
+    * Armour, A defensive quality (which reduces damage from incoming weapons)
+    * Weapons, The type of missile/torpedo a ship has
+
+The other important ship stats are:
+
+    * Size, How physically big a ship is - Dictates the amount of weapons you can carry.
+    * Speed, How fast a ship is - Also dictates how good you are at dodging torpedoes.
+
+
+== Ship Types ==
+
+
+There are 10 ship types. Most of the lighter ships have a normal and battle variety. The battle variety generally has more armor but is slower.
+
+The types are listed below in order of size:
+
+    * Scout: Scouts are a light reconnaissance ships. Often used to search out new worlds. Nothing beats a scout for speed.
+    * Battle Scout: Battle Scouts are light reconnaissance ships which are more heavily armed. Often used in more dangerous reconnaissance missions into enemy territory and to guard unimportant outposts.
+    * Advanced Battle Scout: The advanced battle scout uses advanced technology to pack a bigger punch into a smaller and faster package. Their speed makes them deadly against torpedo based ships but are still relatively weak against missile technologies.
+    * Frigate: What a frigate doesn't have in its stats is made up by the cheapness it can be produced at. Numbers of frigates can easily destroy larger ships. They're also advantageous against torpedoes as only one ship can be destroyed per torpedo.
+    * Battle Frigate: Slightly more powerful version of the frigate. Nothing beats a battle frigate for speed to firepower ratio.
+    * Destroyer: Destroyers are the main offensive weapon in any fleet. More expensive then frigates they have much larger armor and can withstand a battering.
+    * Battle Destroyer: Battle Destroyers are a poor man's battleship. Smaller groups of battle destroyers can easily devastate larger groups of destroyers (have more firepower and armor) and can hold their own against similar number of battleships. Their biggest drawback is their speed, this is because the smaller engines (compared to battleships) strain to provide similar speed.
+    * Battleship: Battleships are hugely armored and armed. Able to dispatch huge numbers of missiles or torpedoes in a very short period. Even a single battleship can quickly turn the tide in a battle. These ships are also surprisingly fast due to the huge engines. However, without support battleships can easily fall prey to torpedoes.
+    * Dreadnought: Dreadnoughts are the largest movable ships available. They are so large that equipping with engines is a huge problem. This means that they are extremely slow. No other ship can boast about so much firepower in one package.
+    * Argonaut: These ships, commonly called "death stars", are so big that they can't break orbit of the planet they are constructed on. Normally considered a space station instead of a ship they hail doom on any ship trying to attack the planet they orbit. They however are unable to avoid even the slowest moving torpedo's.
+
+
+    Name 	                  Speed 	Size
+    Scout 	                    100 	60
+    Battle Scout 	             75 	88
+    Advanced Battle Scout 	     86 	133
+    Frigate 	                     56 	200
+    Battle Frigate                   45 	200
+    Destroyer 	                     35 	300
+    Battle Destroyer 	             26 	300
+    Battleship 	                     36 	375
+    Dreadnought 	             24 	500
+    Argonaut 	                      8 	1000
+
+'''Weapons'''
+
+There are five types of missiles and six types of torpedoes. Each different weapon can carry a different amount of explosives. Missiles can only carry a single type of explosive material, torpedoes can carry a mixture of explosive materials.
+
+The resources needed for the super structure of the weapon is insignificant compared to the resources for the explosives. This means that the amount of explosives determines what is actually required to build the weapon.
+
+Explosives can only be carried in whole amounts. The formula to calculate the amount of explosive material that can fit in a weapon
+
+    Amount of explosive material = Floor( Missile Size / Explosive Size ) 
+
+
+== Missiles ==
+
+
+Missiles are fast, light devices which seek and destroy the enemy. They are impossible to avoid because even the fastest ship is slow compared to a missile.
+
+Each missile can only destroy one ship at a time.
+
+    Name	Size
+    Alpha 	3
+    Beta 	6
+    Gamma 	8
+    Delta 	12
+    Epsilon	24
+
+== Torpedoes ==
+
+Torpedoes are large slow devices with massive amounts of explosives. The larger torpedoes can be as big as small ships. As they are so slow torpedoes can be dodged.
+
+Like missile each torpedo can only destroy one ship at a time.
+
+    Name	Size
+    Omega 	40
+    Upsilon	60
+    Tau 	80
+    Sigma 	110
+    Rho 	150
+    Xi  	200
+
+
+== Components ==
+
+
+A ship is made up of components. The main component is the hull which determines the ship's type and number of other components which can be place in the ship.
+
+Each hull has a "size", this property dictates how much space is available for components to be put in. Each component will take up a certain amount of space equal to it's size. Any combination of components which fits within a ship is allowed (fractional amounts are not allowed).
+
+The following components exist:
+    Component Name	Component Size	Abilities
+    Launch Tube 	Same size as the missile/torpedo it will contain. (IE A tube to launch "Alpha Missiles" is size 3) 	Allows ship to launch one missile each round in combat. Allows ship to store one torpedo/missile.
+    Missile Rack 	Same size as the missile it will contain. 	Allows ship to store 2 missiles.
+    Torpedo Rack 	Same size as the torpedo it will contain. 	Allows ship to store 4 torpedoes.
+    Armor 	10 units 	Reduces the damage taken by 0.1%.
+    Colonisation Module 	100 units 	Allows ship to colonise a planet. Each extra colonisation module on the ship means the planet produces 1 extra production point from the round it was colonised.
+
+'''Combat'''
+
+== When does it occur? ==
+
+
+Combat occurs when two enemies are at the same location. Combat can occur between any number of parties at the same time.
+The process
+
+Like in MiniSec, if two fleets owned by the same player are at the same location when combat occurs, they will be merged for the period of combat.
+
+Each ship fires its weapons. All weapons are fired simultaneously, and damage is then resolved simultaneously too. This means that both a ship and it's destroyer can be destroyed in one turn.
+
+
+== Resolving Damage ==
+
+
+Resolving damage is quite complicated. Each amount of damage is considered a whole block. Damage is resolved from the largest block downwards. The damage is then applied to the ship with the most hit points.
+
+For example: Damage to be applied
+
+    * 8HP of Damage
+    * 5HP of Damage
+    * 3HP of Damage
+
+Ships to apply damage to.
+
+    * Battleship - 11 HP
+    * Damaged Battleship - 6HP left
+    * Scout - 2HP
+
+The damage is applied the following way,
+
+    * 8HP is applied to the Battleship - reducing it's HP to 3HP
+    * 5HP is applied to the Damaged Battleship (as it now has the most HP) - reducing it to 1HP
+    * 3HP is applied to the Battleship (as it now has the most HP) - reducing it to 0HP and destroying it.
+
+'''Armour'''
+
+Amour directly reduces a percentage of the damage which would be applied to a ship from torpedoes. Missile damage goes straight through the armour.
+
+For example, a ship has 30% Armour which would reduce damage by 30% rounded up. IE 8HPs of damage would be reduced to 5HP (8-ceil(8*0.3)).
+Dodge
+
+Dodge prevents damage from taking effect. Only damage from torpedoes can be dodged. The chance of dodging a torpedo is determined by the following formula:
+
+    Chance to dodge = Minimum(Torpedo Size / (Ship Size/Ship Speed), 100) % 
+
+'''Capacity'''
+
+A ship only has a limited supply of missiles or torpedoes. Each time a ship fires a weapon, one is subtracted from its stores. A weapon can then be restocked at friendly planets.
