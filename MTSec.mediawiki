@@ -52,14 +52,14 @@ Each ship takes one production point for every 10 units of size. For example, a 
 '''Resources'''
 
 There following resources exist in MTSec. Resources are used to make all types of explosives.
-Name 	Size per kt 	Rarity 	Explosiveness per kt 	Description
-Uranium 	4 	Common 	        1 	Most basic nuclear explosive
-Thorium 	4.5 	Very Common 	0.5 	A more abundant but less explosive nuclear explosive
-Cerium 	        3 	Rare 	4 	
-Enriched Uranium2 	Uncommon 	4 	An enhanced version of uranium which is more explosive
-Massivium 	12 	Common 	2 	A huge but extremely explosive sub-nuclear particle
-Antiparticle 	0.8 	Very Rare 	60 	An very rare but hugely explosive anti-particle explosive
-Antimatter 	0.5 	Extreme Rare 	100 	An extremely rare but insanely explosive antimatter-matter explosive
+    Name 	    Size per kt 	Rarity 	        Explosiveness per kt 	Description
+    Uranium 	      4 	        Common 	        1 	Most basic nuclear explosive
+    Thorium 	      4.5 	        Very Common 	0.5 	A more abundant but less explosive nuclear explosive
+    Cerium            3 	        Rare 	        4 	
+    Enriched Uranium  2 	        Uncommon 	4 	An enhanced version of uranium which is more explosive
+    Massivium 	      12 	        Common 	        2 	A huge but extremely explosive sub-nuclear particle
+    Antiparticle      0.8       	Very Rare 	60 	An very rare but hugely explosive anti-particle explosive
+    Antimatter 	      0.5 	        Extreme Rare 	100 	An extremely rare but insanely explosive antimatter-matter explosive
 
 Resources are mined from a planet by "spending" production capability. The amount of resources produced on mining is dictated by the amount of mineable resources found on the planet.
 
