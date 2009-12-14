@@ -1,0 +1,36 @@
+= LCA2010 Meeting =
+
+Meetings at LCA 2010 in Wellington, New Zealand (and online). 18 - 23 Jan 2010
+
+This page is about the topics of the meeting(s) held there and online. Feel free to add things we should discuss. It is likely that not everything will be discussed.
+
+== Please don't discuss things on this page ==
+All discussion should go on the mailing lists. This page is for documenting things which need discussion and their results.
+
+== Vision, Goals, Games and AI ==
+Vision and goals are fairly straight forward. Just need to be articulated. 
+
+The protocol and tpserver-cpp (and others) now supports a lot more features than Minisec or MTSec will use. Are we doing the right thing? 
+
+Writing a good AI is hard. The processing power needed is not trivial, and log files are huge. Do we need more AI development/framework/etc, or do we need to "eat our own dogfood" and play the games more? 
+
+== Org ==
+Establishing Org to support Thousand Parsec.
+
+This may require electing officers, approving constitution, approving payments, etc.
+
+== TP04 ==
+
+=== Research Frames ===
+No progress since last year. [[Research Frames|Proposal]] still current.
+
+=== Mod Time/Serial update ===
+No changes have been made yet
+
+=== BattleXML ===
+Have mostly ok format, but no way to get it from the server.
+
+== Website re-org and change to wiki ==
+Are we going to change it? When? Who?
+
+Also update to metaserver-lite-rewrite?
