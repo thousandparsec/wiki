@@ -14,27 +14,47 @@ The protocol and tpserver-cpp (and others) now supports a lot more features than
 
 Writing a good AI is hard. The processing power needed is not trivial, and log files are huge. Do we need more AI development/framework/etc, or do we need to "eat our own dogfood" and play the games more? 
 
+'''Result:''' Communicate better, finish TP v1.0, get more players
+
 == Org ==
 Establishing Org to support Thousand Parsec.
 
 This may require electing officers, approving constitution, approving payments, etc.
 
-== Development Sprint ==
+'''Result:''' Not a priority, no money after meetup.
+
+== Development Sprint/Meetup ==
 
 Where, when? Etc.
 
+'''Result:''' Most likely SF/Mountain View between GSoC mid term and final evaluations. More details coming soon.
+
 == TP04 ==
+
+'''Result:''' Finish getting TP protocol to v1 this year.
 
 === Research Frames ===
 No progress since last year. [[Research Frames|Proposal]] still current.
 
+'''Result:''' JFDI
+
 === Mod Time/Serial update ===
 No changes have been made yet
 
+'''Result:''' JFFI
+
 === BattleXML ===
 Have mostly ok format, but no way to get it from the server.
+
+'''Result:''' Accepted Mithro's proposal, needs to be documented.
 
 == Website re-org and change to wiki ==
 Are we going to change it? When? Who?
 
 Also update to metaserver-lite-rewrite?
+
+'''Result:''' Have plan for reorg, but no time to develop it. 
+
+== Getting Players ==
+
+'''Result:''' Develop "one-click" server start for website, perhaps run player competition later in the year.
