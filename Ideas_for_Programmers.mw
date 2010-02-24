@@ -21,18 +21,6 @@ Rulesets can be one of the most rewarding parts to work on (as you are actually 
 
 Developing rulesets can be assisted by using the [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpruledev.git;a=summary Ruleset Development Environment] (another [[Google Summer of Code]] project) but will still require good C++ (if developing for the C++ Server) or Python (if developing for the Python Server) skills. Scheme skills are not required but would be a strong advantage.
 
-== MTSec ==
-
-MTSec (short for Missile and Torpedo Wars) is a simple game designed to flex the ship and weapon design capabilities of Thousand Parsec. It is the first ruleset to have a simple economy and should be more interesting then the first prototype game MiniSec. A start has been made to the C++ implementation, but needs a lot of work.
-
-=== More Information ===
-
-* [http://www.thousandparsec.net/tp/dev/documents/mtsec.php MTSec Documentation]
-* [https://sourceforge.net/tracker/index.php?func=detail&aid=1678819&group_id=132078&atid=829724 SF Todo Tracker Item]
-
-=== Required Skills ===
-* C++ skills or Python skill.
-
 == [[Clone_Ruleset|Clone an Existing Game]] ==
 Thousand Parsec is the ideal framework to clone your favourite 4X game!
 
