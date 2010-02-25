@@ -150,6 +150,18 @@ To make it clear, any Summer of Code proposals for this require detail about how
 * SQL (preferably MySQL and the target database) experience
 
 
+== Asynchronous IO with ASIO ==
+
+[http://www.boost.org/doc/libs/1_42_0/doc/html/boost_asio.html Boost.Asio] is a library for doing asynchronous IO. Change the low level networking code from the non-blocking select and connections to ASIO and event handler. Also, need to update the timers as these are other events that need to be triggered.
+
+
+==== Required Skills ====
+* Understanding of event-driven programming
+* Boost.asio experience a plus
+
+
+
+
 == Asynchronous Managers and Persistence ==
 
 This project is very invasive in tpserver-cpp and probably too large for SoC.
@@ -170,7 +182,7 @@ Since user access to the objects in the database is through the Manager classes,
 
 
 == BattleXML support ==
-BattleXML is an xml format for describing battles that take place in Thousand Parsec, and the files can be viewed by the stand-alone battleviewer. The task is to design a suitable API for creating the xml files from combat being performed in the Rulesets, then using it in combat processing in the rulesets. Sample xml files and the dtd are available in the documents git repo. Also suggestions should be put forward how the xml files should be delivered to clients and how to associate them with particular battles.
+BattleXML is an xml format for describing battles that take place in Thousand Parsec, and the files can be viewed by the stand-alone battleviewer. The task is to add calls to the BattleXML API to document the battles in MTSec, RFTS, Risk, and TaE rulesets. 
 
 == Shorter projects ==
 
