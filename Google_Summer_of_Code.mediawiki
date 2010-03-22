@@ -141,7 +141,7 @@ Please see the [http://socghop.appspot.com/document/show/gsoc_program/google/gso
 = External Links =
 
 * [http://code.google.com/soc Google Summer of Code (SoC)]
-* [http://socghop.appspot.com/document/show/program/google/gsoc2009/faqs Google SoC FAQ]
+* [http://socghop.appspot.com/document/show/gsoc_program/google/gsoc2010/faqs Google SoC FAQ]
 
 = Thanks =
 
