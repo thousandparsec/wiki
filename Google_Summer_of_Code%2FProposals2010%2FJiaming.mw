@@ -21,7 +21,7 @@ For a better understanding, please look at the following sample class diagram fo
 
 [[File:Class.jpg]]
 
-== Extension of rule set ==
+== Extension of existing rule set ==
 
 To extend the rule set, we need to expend the existing technology tree, i.e. add in required technologies for each component, so that certain component can only be available if the required technology is available.
 
