@@ -28,3 +28,15 @@ To extend the rule set, we need to expend the existing technology tree, i.e. add
 To make the game more playable, we add some constraints for creating a new battleship to prevent that  the all the user just create the battleship using the components with the ultimate technology at the end. In a nutshell, each component has some advantages over others, and also some drawbacks. 
 
 For example, in the sample class diagram above, we can see that the missile launcher can impose an higher damage than that of a machine gun, but it consumes more power; it also has more mass, which means a greater HP (proportional to the mass) but a slower speed(inversely proportional to the mass). In this way, we hope that the player can play with more stuffs in the game and found it more interesting.
+
+
+----
+== Comments ==
+
+The battleship designer sounds a lot like the "Design" capability we already have but with a 3d model view, see the screenshot halfway down [http://greywhind.wordpress.com/2009/08/19/gsoc-2009-final-report/ Greywhind's final GSoC 09 report] for the current (tpclient-pywx) version. The components are describe on the server and sent to the client. Have a read of the [http://www.thousandparsec.net/tp/dev/documents/protocol3.php protocol documentation].
+
+It's good to extend a ruleset, but we don't want to extend it past what it was originally design for [[TP RFTS]] is based on Reach for the Stars, and can't be modified too much. Others (such as [[MTSec]], etc) can be extended (or maybe forked).
+
+Try focusing on something we are going to do, but haven't done yet.
+
+--[[User:Lee Begg|Lee Begg]] 23:24, 22 March 2010 (UTC)
