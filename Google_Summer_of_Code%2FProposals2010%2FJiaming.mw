@@ -29,6 +29,8 @@ To make the game more playable, we add some constraints for creating a new battl
 
 For example, in the sample class diagram above, we can see that the missile launcher can impose an higher damage than that of a machine gun, but it consumes more power; it also has more mass, which means a greater HP (proportional to the mass) but a slower speed(inversely proportional to the mass). In this way, we hope that the player can play with more stuffs in the game and found it more interesting.
 
+== About me ==
+I am a Computer Science student studying at National University of Singapore [http://www.nus.edu.sg]. I am now in my third year. I have strong basic programing skills which enable me to learn a new language very fast.
 
 ----
 == Comments ==
