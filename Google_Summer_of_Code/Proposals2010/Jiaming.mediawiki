@@ -1,4 +1,3 @@
-
 == Brief description ==
 
 First, build a stand-along “battleship creator” (possibly with python-ogre). Then this battleship creator can be integrated in to the existing 2D and 3D client. After this, I plan to modify the server and client application, and extend the existing rule set (such as the TP RFTS ) to make it to support this battleship creator and allow the users to create their many different kinds of battleships. These created battleships don't only differ in the appearance, but also in their functionalities and attributes like damage, speed, armor and so on. It world make the game much more interesting and playable.
@@ -22,8 +21,7 @@ For a better understanding, please look at the following sample class diagram fo
 
 
 
-== 
-Extension of rule set ==
+== Extension of rule set ==
 
 To extend the rule set, we need to expend the existing technology tree, i.e. add in required technologies for each component, so that certain component can only be available if the required technology is available.
 
