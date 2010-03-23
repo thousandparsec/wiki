@@ -1,0 +1,39 @@
+== Abstract ==
+
+boost::asio is the current cutting edge of C++ server development. Not only is it capable of running high performance servers on absurd load, it is also a very readable, portable and easily extendable framework for server development, and a candidate for inclusion in the standard library for the next C++ standard. 
+
+Moving tpserver-cpp to boost::asio would have several advantages: 
+
+* First of all an asynchronous model of operation would emerge, allowing to make the whole server act completely asynchronously in the future, allowing to take full advantage of modern hardware (multithreading, multicore) -- what would definitively increase the servers scalability, responsiveness and ability to handle multiple clients effectively.
+* Secondly, that would allow for a much cleaner (and tested!) implementation of the network layer. 
+* Finally tpserver-cpp network layer would become platform independent, using asio would remove the dependency on quite a few platform specific libraries.
+
+== Project goals ==
+
+=== Primary goal ===
+
+* substitute tpserver-cpp network layer and connection classes with boost::asio code, on a single thread and single proactor instance
+
+=== Secondary goals ===
+
+* start work on thread support, by moving in locking a mutex as deep into tpserver-cpp as possible
+* implement multi-thread support to the level achieved by the above
+* refactor the code on the go with threading in mind
+
+=== Bonus goals ===
+
+* allow for complete thread safety by only mutexing the singleton entities (mainly the persistence module, the ruleset and global data)
+* asses the possibility of full thread support also in the modules mentioned above
+* try a cut down (without some additional features) compilation on Windows
+
+== Implementation details ==
+
+== Project schedule ==
+
+=== May 10 - May 23 (pre-planning) ===
+
+=== May 24 - July 12 (phase 1) ===
+
+=== July 13 - August 9 (phase 2) ===
+
+=== August 9 - August 16 (cleanup) ===
