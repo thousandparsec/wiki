@@ -3,18 +3,21 @@
 ; Occupation 	
 : Madman for hire
 ; Website 
-: http://chaosforge.org
+: http://chaosforge.org - ChaosForge Website
+: http://blog.chaosforge.org - Developer Blog
 ; GTalk/E-mail
 : name.surname@gmail.com
 
 == GSoC Proposals 2008 ==
-
 * [[User:Epyon/2008/EliteSec]]
 * [[User:Epyon/2008/3dClient]]
 
 == GSoC Proposals 2009 ==
 * [[User:Epyon/2009/EliteSec]]
 * [[User:Epyon/2009/TpServerCppRefactor]]
+
+== GSoC Proposals 2010 ==
+* [[User:Epyon/2010/TpServerCppAsio]]
 
 == tpserver-cpp refactor project ==
 * [[User:Epyon/tpserver-cpp/Code Conventions]]
