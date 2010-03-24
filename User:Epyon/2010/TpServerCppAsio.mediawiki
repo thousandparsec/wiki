@@ -48,10 +48,26 @@ Once at least a heavily mutexed threading model is up and working, time will com
 
 == Project schedule ==
 
+I'll be available probably 4/5 time during the coding period (I need some time for my PhD). Also 10-12 days will probably be spent on a short vacation, although I might still be able to do some work then. 
+
 === May 10 - May 23 (pre-planning) ===
+
+Getting up to date with the server, and investigating the internals with ASIO in mind -- so coding can start immediately at May 10. Furthermore, fixing a few leftovers from last year that may prove a problem for ASIO (no pointers may be left in code). 
 
 === May 24 - July 12 (phase 1) ===
 
+* implementing the single-thread proactor of ASIO as the network layer
+* rewriting the connection classes and network class to handle that
+* reimplementing all the timer events as proactor events
+* fixing smaller threading issues on the go
+
 === July 13 - August 9 (phase 2) ===
 
-=== August 9 - August 16 (cleanup) ===
+* mutexing all the singletons that are too hard to quickly parallelize
+* reworking the logger system to work on a single thread and safely accept messages from other threads
+* moving the mutex level as deep as possible without major changes
+* any bonus goals if time left
+
+=== August 9 - August 16 (buffer) ===
+
+This week is purposefully left out as buffer time.
