@@ -28,6 +28,24 @@ Moving tpserver-cpp to boost::asio would have several advantages:
 
 == Implementation details ==
 
+Doing last years [[User:Epyon/2009/TpServerCppRefactor|project]] i definitively underestimated the amount of work for a transition to boost::asio, also I didn't have much experience with ASIO itself. Now I know both ASIO better, as well as tpsever-cpp's internal structure. The amount of changes needed, especially if we want to support threading, is enormous. 
+
+=== Porting to ASIO's networking model ===
+
+The major goal is to take advantage of ASIO's network layer -- without thinking about threading in the beginning. This will need a rework of the Connection classes and of course mainly the Net class. The change wont be as smooth though, because several other features depend on the current network model. Timers will need to be implemented using ASIO's proactor as events (what in itself is a good thing indeed), also the metaserver connection and handling will need an overhaul. SSL handling on the other hand will be a lot simplified (although ASIO internally uses OpenSSL, it does a great job of hiding OpenSSL's ugly API). I've still no idea what to do with Avahi though.
+
+=== Threading ===
+
+Once that is done and tested as working the harder part will begin -- thread safety. It's no secret that tpserver-cpp is completely unsafe from threading point of view. Things that will need to be taken into account:
+
+* persistence is a major blocker here -- probably will need to be mutexed on any operation, unless I'll find time to learn a little about mySQL and thread safety. 
+* game and ruleset and other singletons -- they'll need to be mutexed at least on write operations. There's a big question here, whether we could make data stored per thread, what would simplify matters a lot, but would increase the load on persistence by the amount of threads -- design decision to be made with the rest of the team
+* logging needs to be done in a single thread, hence there's a need to do thread-safe log calls
+
+=== Further issues ===
+
+Once at least a heavily mutexed threading model is up and working, time will come to take a look at the design and decide where we can push the concurrency line further. What data can be per-thread, what must be shared. Also probably here would be a good time to reinvestigate the persistence implementation.
+
 == Project schedule ==
 
 === May 10 - May 23 (pre-planning) ===
