@@ -1,5 +1,14 @@
-== Abstract ==
+== Introduction==
 
 It is common that a single player game with AI clients or a multiple players game can last for hours. So sometimes the player may not be able to finish a game and want to save it somehow and load and continue to play the game later.
 
 In addition, some player may find that it is boring and monotonic to always player the single game with AI clients in the same setup. They want something more interesting and challenging. For example, they start the game in a very disadvantageous position and then try to reverse the tide and defeat others in the end.
+
+So it would be very nice to have the scenario support. By having this scenario support, we enable players to:
+
+* Save a game into an external file
+* Load a saved game and continue to play
+* Load a pre-defined scenario, or, play campaigns
+
+
+== Goal setting ==
