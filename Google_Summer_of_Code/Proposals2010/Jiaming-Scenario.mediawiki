@@ -1,0 +1,4 @@
+
+== Abstract ==
+
+It is common that a single player game with AI clients or a multiple players game can last for hours. So sometimes the player may not be able to finish a game and want to save it somehow and load and continue to play the game later.
