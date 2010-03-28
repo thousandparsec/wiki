@@ -12,7 +12,10 @@ In addition, some player may find that it is boring and monotonic to always play
 
 So it would be very nice to have the scenario support. 
 
+
 == Task Specification==
+
+==== Primary goals====
 By adding this scenario support, we should enable players to:
 
 * Save a game into an external file. It would support both single-player game and multi-player game.
@@ -23,11 +26,25 @@ By adding this scenario support, we should enable players to:
 
 * Play campaigns, which is a series of related scenarios.
 
+
 Following is some other requirement as mentioned in the Ideas for Programmers wiki page [http://www.thousandparsec.net/wiki/Ideas_for_Programmers#Scenarios].
 
 * This feature should be designed in such a way that other clients and client libraries can use it in the future.
 
 * It should first make sure that the player has the necessary server, ruleset, and AI client(s) installed to play the scenario, and providing the easiest way possible to install them (download links, instructions, etc.) if they don't. 
 
+==== Bonus goals====
+
+* Build Scenario Designer, which allows the user to design their own scenario in a intuitive way.
+
+==== Pre-assumptions====
+In addition, their are some assuptions for above task.
+
+* The server and AI clients provide some way to store their state.
+
+
 == Implementation==
-Detailed implementation has not been finally decided yet. However, the possible implementation would be as follows.
+
+1. Since the assumptions mentioned in the task specification are not valid, we need to first modify the AI client and the server to enable them to store their current state.
+
+2.
