@@ -1,5 +1,3 @@
-# Still under construction
-
 == Introduction==
 
 ==== Abstract====
@@ -44,11 +42,19 @@ In addition, their are some assuptions for above task.
 
 
 == Implementation==
+I would do my task as the following sequence. (More detailed description is comming soon)
 
-# Design a protocal for the server and client to support this scenario and save-load.
+1. Design a protocal for the server and client to support this scenario and save-load.
 
-# Design a format for efficient store of the current server state.
+2. Design a format for efficient store of the current server state.
 
-# Since the assumptions mentioned in the task specification are not valid, we need to first modify the AI client and the server to implement the protocal.
+3. Since the assumptions mentioned in the task specification are not valid, we need to first modify the AI client and the server to implement the protocal.
 
-#
+4. Add the new support to the client and single player.
+
+
+== Project Schedule==
+Comming soon.
+
+
+== Comments==
