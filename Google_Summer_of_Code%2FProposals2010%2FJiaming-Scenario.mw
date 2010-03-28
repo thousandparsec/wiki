@@ -1,3 +1,5 @@
+# Still under construction
+
 == Introduction==
 
 ==== Abstract====
@@ -15,6 +17,17 @@ By adding this scenario support, we should enable players to:
 
 * Save a game into an external file. It would support both single-player game and multi-player game.
 
-* Load a saved game and continue to play it. If the game is previously played with an AI client, it should enable the player to continues to play this saved game with the same AI client, i.e. the AI client has the same parameter and load the current status of the game.
+* Load a saved game and continue to play it. If the game is previously played with an AI client, it should enable the player to continue to play this saved game with the same AI client, i.e. the AI client has the same parameter and load the current states of the game.
 
-* Load a pre-defined scenario, or, play campaigns
+* Load a pre-defined scenario. In a scenario, the player would have some pre-defined amount of resources and fleets. The player needs to accomplish the defined goal in order to win.
+
+* Play campaigns, which is a series of related scenarios.
+
+Following is some other requirement as mentioned in the Ideas for Programmers wiki page [http://www.thousandparsec.net/wiki/Ideas_for_Programmers#Scenarios].
+
+* This feature should be designed in such a way that other clients and client libraries can use it in the future.
+
+* It should first make sure that the player has the necessary server, ruleset, and AI client(s) installed to play the scenario, and providing the easiest way possible to install them (download links, instructions, etc.) if they don't. 
+
+== Implementation==
+Detailed implementation has not been finally decided yet. However, the possible implementation would be as follows.
