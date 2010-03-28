@@ -45,6 +45,10 @@ In addition, their are some assuptions for above task.
 
 == Implementation==
 
-1. Since the assumptions mentioned in the task specification are not valid, we need to first modify the AI client and the server to enable them to store their current state.
+# Design a protocal for the server and client to support this scenario and save-load.
 
-2.
+# Design a format for efficient store of the current server state.
+
+# Since the assumptions mentioned in the task specification are not valid, we need to first modify the AI client and the server to implement the protocal.
+
+#
