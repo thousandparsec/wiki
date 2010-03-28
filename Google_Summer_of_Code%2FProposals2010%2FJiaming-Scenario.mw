@@ -8,11 +8,13 @@ It is common that a single player game with AI clients or a multiple players gam
 
 In addition, some player may find that it is boring and monotonic to always player the single game with AI clients in the same setup. They want something more interesting and challenging. For example, they start the game in a very disadvantageous position and then try to reverse the tide and defeat others in the end.
 
-So it would be very nice to have the scenario support. By having this scenario support, we enable players to:
+So it would be very nice to have the scenario support. 
 
-* Save a game into an external file
-* Load a saved game and continue to play
+== Task Specification==
+By adding this scenario support, we should enable players to:
+
+* Save a game into an external file. It would support both single-player game and multi-player game.
+
+* Load a saved game and continue to play it. If the game is previously played with an AI client, it should enable the player to continues to play this saved game with the same AI client, i.e. the AI client has the same parameter and load the current status of the game.
+
 * Load a pre-defined scenario, or, play campaigns
-
-
-== Goal setting ==
