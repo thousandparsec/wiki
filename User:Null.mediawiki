@@ -1,4 +1,5 @@
-Damjan 'Null' Košir, 23, from Slovenia, final year faculty of computer and information science, specialistion in software.
+Damjan 'Null' Košir, 23, from Slovenia, final (5th) year faculty of computer and information science, specialistion in software.
+
 highly interested in anything AI (obviously)
 
 == AI related experience ==
