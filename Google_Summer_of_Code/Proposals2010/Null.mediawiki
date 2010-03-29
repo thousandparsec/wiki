@@ -39,3 +39,12 @@ IRC nick on #TP: null_000
 email: damjan.kosir at sign gmail.com
 
 == Comments ==
+
+Hi Null, This proposal is an okay start but needs significantly more details. Questions I have for you:
+
+  * Why is CHR syntax hard to understand? Please give examples of how it would be easier to do the same thing in Python. 
+  * Are you going to tackle Minisec of MTSec first? Isn't Minisec trivial?
+  * How are you going to tackle performance problems, have you run daneel-ai under a profiler to see where the speed problems are?
+  * We need a better timeline on how things are going to work. It should be a week-by-week with goals at the end of every week. 3 months goes really fast and we need something to keep you on track.
+
+ -- Mithro
