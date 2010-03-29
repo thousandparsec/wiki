@@ -8,3 +8,4 @@ Add your link below.
 * [[Google_Summer_of_Code/Proposals2010/Jiaming-Scenario|Jiaming's proposal-Scenario Support]]
 * [[User:Epyon/2010/TpServerCppAsio|Epyon's proposal]] - tpserver-cpp boost::asio implementation
 * [[Google Summer of Code/Proposals2010/Null|Null's proposal]] - MiniSec and MTSec support for daneel-ai and simplification of writing AI for new rulesets
+* [[Google Summer of Code/Proposals2010/glew|glew's Scenario/Campaign Proposal]]
