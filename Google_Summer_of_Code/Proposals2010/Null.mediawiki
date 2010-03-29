@@ -19,8 +19,25 @@ I have already started with work on AI for MiniSec and have noticed the document
 I have also written code for automatic discovery of all possible orders (and their arguments) on a given ruleset. More functions like this one would be added for simplifying writing of AI for new rulesets.
 
 
-As it is now 4 AM I should get some sleep before I continue...
+== Main goals ==
+All of this is expected to get done.
 
+* add support for Minisec
+** this will get done before the start of GSoc
+* add support for MTSec
+* simplify AI writing as much as possible
+** helper functions and detailed documentation and tutorials
+* add support for coding AI in python
+** including a simple way of giving orders and getting facts about the current status of the universe
+
+== Bonus goals ==
+Some of this is expected to get done (as much as time permits)
+
+* add support for TAE
+* add a collection of common AI methods
+* speed up code
+* add learning capabilities
+** if I discover any that could prove useful
 
 == Timeline ==
 
