@@ -18,6 +18,7 @@ With this Daneel-ai would become the main AI client and first choice for future 
 I have already started with work on AI for MiniSec and have noticed the documentation and tutorials are not complete. As a part of my work I would complete the documentation and write a step by step tutorial on creating AI for new rulesets.
 I have also written code for automatic discovery of all possible orders (and their arguments) on a given ruleset. More functions like this one would be added for simplifying writing of AI for new rulesets.
 
+Adding python support for AI coding in daneel-al would mean it can be used even for non rule-based AI.
 
 == Main goals ==
 All of this is expected to get done.
