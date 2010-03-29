@@ -8,7 +8,7 @@ mostly with robot [http://ec.europa.eu/information_society/events/cf/fet09/pictu
 
 and building/programming legoNXT robot prototypes
 
-competed in faculty robot building and AI competitions with legoNXT (link) robots.
+competed in faculty robot building and AI competitions with [http://mindstorms.lego.com/en-us/default.aspx legoNXT] robots.
 
 == AI unrelated experience ==
 have experience working in a team (worked for 3 years as a student in company that did mostly .net web applications for ministry of education)
