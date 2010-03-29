@@ -1,0 +1,51 @@
+Damjan 'Null' Košir, 23, from Slovenia, final year faculty of computer and information science, specialistion in software.
+highly interested in anything AI (obviously)
+
+== AI related experience ==
+worked in the AI lab of our faculty as a student:
+mostly with robot [http://ec.europa.eu/information_society/events/cf/fet09/picture.cfm?id=5269 Nao], I was part of a wining exibition in FET (linki in slikice)
+and building/programming legoNXT robot prototypes
+
+competed in faculty robot building and AI competitions with legoNXT (link) robots.
+
+== AI unrelated experience ==
+have experience working in a team (worked for 3 years as a student in company that did mostly .net web applications for ministry of education)
+did a lot of work testing software and writing software for automated testing (you may have noticed I've already submitted 2 bugs for TP ^_^)
+
+== programing language knowledge ==
+main guns:
+* java
+* python
+* prolog
+* c#
+* VB.net
+
+backup weapons:
+* VB
+* C
+* php
+* sql
+* asp (not .net, the old one)
+
+== other knowedge ==
+also html and some css (designed and written a few web pages for small companies)
+
+know how to use svn (but learning git should be a piece of cake)
+
+know my way around linux and windows
+
+== other info ==
+
+my irc nick is Null or null_000
+
+my language of choise is java (python close behind)
+
+my primary os is linux (ubuntu)
+
+my primary IDE is eclipse
+
+used to be a hardcore gamer
+
+played a lot of RTS and some turn based (mostly heroes of might and magic 3)
+
+timezone: UTC+1
