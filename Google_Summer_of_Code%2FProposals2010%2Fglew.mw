@@ -1,0 +1,94 @@
+note: work in progress
+
+==Project Description==
+Now that Single Player has been implemented in Thousand Parsec, the next natural step would be to create an engaging experience to go along with it. A Scenario/Campaign feature would complement the new addition.
+
+Many aspects drive great games. Games can be fun because their gameplay is interactive. Games are played for the challenge of winning. Games are also played for intriguing plots and storyline.
+
+Enter Scenario and Campaign Creation:
+With the introduction of Scenarios, players will be placed in challenging conditions. The odds could be unbalanced at the start of the game.  There might be certain conditions to winning (possibly ruleset pending). Scenarios allow for players to be challenged in ways current single player cannot.
+
+Campaigns will drive story.  Stringing scenarios together by tying them through a common storyline or progression (maybe of increasing difficulty) will lead to a more rewarding single player experience.
+
+==Goals==
+====Primary Goal====
+
+To extend the python client (libtpclient-py) to allow for loading specific saved states, scenarios.
+
+In doing this, it will be necessary to have some way of creating and saving these saved states.
+As suggested, scenarios should be output in a self-contained file and should be easy to share with the community.
+
+It will also be necessary to work the save and load capabilities into the tpclient-pywx gui for user level access. 
+
+====Secondary Goals====
+The development of campaigns would be a good extension upon completing a single scenario.
+
+This feature should be fully attainable after implementing the saved state loader.
+
+====Bonus Goals====
+With the implementation of campaigns it would be awesome to have some kind of story telling feature incorporated into playing through the campaign.
+
+==Implementation==
+====Saving State====
+Before being able to load a file, a file must be saved. In this task, I'll need to design the methods to convert specific in-game variables and parameters into an organized file architecture. I realize now that this could possibly include saving the state of the AI opponent.
+
+One solution to this would be to use an XML format and try to serialize all important in-game information in a logical and organized fashion.  Python has some support for this in the form of marshalling data types and objects into XML. There is also the option of implementing a fresh module of serializing the data into a file format such as XML.  It is likely that I will research what the best means of converting in-game data to a file format is.
+
+It will also be necessary to "dump" this save state while in a game to produce a save file. This will involve working in the feature into the tpclient-pywx gui.
+====Loading State====
+Once it is possible to save a game, it should be fairly straight forward loading it into the game.  This would involve reading through the saved state file, properly loading it into the game. From my initial research, Python is also able to support parsing XML back into data.  If not, this would have to be implemented by defining how the module should deserialize the stored information.
+
+Once again, the loader will have to be added to the tpclient-pywx gui.
+====Building a Scenario====
+Initially a scenario can just be a basic saved state. But eventually, it should be extended to a designable and customizable saved state.
+It would definitely be best to have a scenario editor. However, direct editing of the XML file or saved state file could grant access, albeit cumbersome and non-user-friendly, to creating scenarios.
+====Campaigns====
+Campaigns would essentially be a sequential order of scenarios. So scenarios would either be passed along as a group or they could be linked together.
+
+The bonus feature of story telling would need to somehow be worked in here as well.  If possible if could simply be a series of messages that come up at the start of the scenario.
+
+===General Requirements===
+As specified in the Project Idea:
+* The file should be self-contained and easily shared between users
+* There should be some check to make sure the user has the necessary components (server, ai, ruleset, etc) to play the scenario. This would likely involve some kind of wizard (similar to the one when loading a single player game) that would check and prompt for the required components.
+
+== Project schedule ==
+
+I'll be available for the majority of the Google Summer of Code period.  I will be on vacation from May 22nd to June 5th.  To make up for this early absence, I would be fully willing and committed to starting my research and work early such as May 3rd to the 21st.
+
+=== May 3 - May 21 (Research and Planning) ===
+
+This stage will be used to familiarize myself with the client and all applicable objects and components that the server has.  This will allow me fully understand each variable and parameter that will have to be serialized for saving an in-game state.  This will also be the time where I research the best means of serializing the data in the client. This functionality might have to be extended into the server, I am unsure at this point.
+
+=== June 6 - July 16 (Stage 1) ===
+
+* Serialization methods will be implemented to convert objects into the desired file format (XML)
+* Capabilities will be extend the "saver" to dump information from the server and the ai
+* Saving functionality will be added to the gui
+* Deserializing (load) module to load the saved state will be written, this can probably be done in parallel while writing the serialization methods
+
+=== July 17 - August 9 (Stage 2) ===
+
+* Loader will be present and functioning properly (Should be early in this stage)
+* Implement a means of scenario creation
+* A basic campaign will be available (Most likely more towards the end of this period)
+* Time Permitting: Research and Implementation of some story telling features to campaign mode
+
+=== August 9 - August 16 (buffer) ===
+
+This week is purposefully left out as buffer time. Hopefully this will be time for documentation and cleanup.
+
+==About Me==
+My name is Greg Lew, I am an undergraduate at McGill University currently pursuing an Electrical Engineering degree with a Software Engineering minor.
+
+I am confident in java, but I have a good amount of experience with python. I have worked with c, and I am willing to learn more if necessary.
+
+Major projects I have worked on:
+* A web-based Restaurant Recommendation system where users could make profiles, rate and review restaurants, comment on restaurants, and get recommendations based on their ratings of restaurants. (using jsp, java, apache server, tomcat, mySQL database) 
+* A short summer internship Prototyping small python applications on Symbian Nokia Phones, one of the main goals was to synchronize music playing across multiple phones for increased volume.
+* A soccer robot programmed in java (with an extended library) that has to function autonomously in a 12'x12' course.  It must be able to localize, avoid cinderblocks, detect and collect balls, and shoot them into a specified goal location.
+
+Let me know if you want Contact information
+
+==Comments==
+Feedback is greatly appreciated, Thanks
