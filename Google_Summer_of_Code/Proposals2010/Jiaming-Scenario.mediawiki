@@ -57,3 +57,10 @@ Comming soon.
 
 
 == Comments==
+
+Hi Jaiming, This proposal is an okay start but needs significantly more details. Questions I have for you:
+
+* I'm afraid your assumption is incorrect, neither the server nor the AI provide a way to save in-game state.
+* We need a better timeline on how things are going to work. It should be a week-by-week with goals at the end of every week. 3 months goes really fast and we need something to keep you on track.
+
+-- Mithro
