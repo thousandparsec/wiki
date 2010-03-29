@@ -12,6 +12,7 @@ competed in faculty robot building and AI competitions with legoNXT (link) robot
 
 == AI unrelated experience ==
 have experience working in a team (worked for 3 years as a student in company that did mostly .net web applications for ministry of education)
+
 did a lot of work testing software and writing software for automated testing (you may have noticed I've already submitted 2 bugs for TP ^_^)
 
 == programing language knowledge ==
