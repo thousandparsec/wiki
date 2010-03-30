@@ -32,7 +32,7 @@ All of this is expected to get done.
 * add support for coding AI in python
 ** including a simple way of giving orders and getting facts about the current status of the universe
 
-as a bonus I will report all the bugs I find
+As a bonus I will report all the bugs I find and comment the code a lot so I won't be the only one that knows what it does.
 
 === Bonus goals ===
 Some of this is expected to get done (as much as time permits)
