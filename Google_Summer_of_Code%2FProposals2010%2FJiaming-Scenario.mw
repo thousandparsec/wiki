@@ -22,7 +22,7 @@ By adding this scenario support, we should enable players to:
 
 * Load a saved game and continue to play it. If the game is previously played with an AI client, it should enable the player to continue to play this saved game with the same AI client, i.e. the AI client has the same parameter and load the current states of the game.
 
-* Load a pre-defined scenario. A scenario is bascially just like a saved state of a game. In a scenario, the player would have some pre-defined amount of resources and fleets. The player needs to accomplish the defined goal in order to win.
+* Load a pre-defined scenario. A scenario is basically just like a saved state of a game. In a scenario, the player would have some pre-defined amount of resources and fleets. The player needs to accomplish the defined goal in order to win.
 
 * Play campaigns, which is a series of related scenarios.
 
@@ -38,23 +38,23 @@ Following is some other requirement as specified in the Ideas for Programmers wi
 * Build Scenario Designer, which allows the user to design their own scenario in a intuitive way.
 
 ==== Pre-assumptions====
-In addition, their are some assuptions for above task.
+In addition, their are some assumptions for above task.
 
 * The server and AI clients provide some way to store their state.
 
 
 == Implementation==
-This project will be tackled as in the folllowing workflow.
+This project will be tackled as in the following work flow.
 
 [[File:Workflow.JPG]]
 
-* In the first stage,I will implement serialization methods in the server side (tpserver-cpp). These serialization methods can be used to export the internal state of a game on the server to an persistent file (this file should be human readable), and also to import a file containing the states of a game into the server. In addition, I will also implement the serialization methods in currently existing AI clients(gencon and daneel-ai).
+* In the first stage,I will implement serialization methods in the server side (tpserver-cpp). These serialization methods can be used to export the internal state of a game on the server to an persistent file (this file should be human readable), and also to import a file containing the states of a game into the server. In addition, I will also implement the serialization methods in currently existing AI clients(gencon and daneel-ai). Apart from these serialization methods, the existing protocol will be extended to support the transfer of data frames that related to save-load operations.
 
 * In the second stage, 
 
 
 == Detailed Project Schedule==
-Comming soon.
+Coming soon.
 
 
 == Comments==
