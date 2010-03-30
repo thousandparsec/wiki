@@ -42,17 +42,13 @@ In addition, their are some assuptions for above task.
 
 
 == Implementation==
-The task will be accomplished in the following sequence. (More detailed description is comming soon)
+This project will be tackled in folllowing workflow.
+[[File:Workflow.JPG]]
 
-1. Design a protocal for the server and client to support this scenario and save-load.
+* In the first stage,I will implement serialization methods in the server side (tpserver-cpp). These serialization methods can be used to export the internal state of a game on the server to an persistent file (this file should be human readable), and also to import a file containing the states of a game into the server.
 
-2. Design a format for efficient store of the current server state.
 
-3. Since the assumptions mentioned in the task specification are not valid, we need to first modify the AI client and the server to implement the protocal.
-
-4. Add the new support to the client and single player.
-
-== Project Schedule==
+== Detailed Project Schedule==
 Comming soon.
 
 
