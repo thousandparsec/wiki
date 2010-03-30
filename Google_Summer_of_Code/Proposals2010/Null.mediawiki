@@ -3,29 +3,30 @@ Warning this is a public BETA version and can change at any time (and will depen
 
 == Short short version ==
 
-Extend Daneel-ai to support MiniSec and MTSec rulesets. Make coding AI for new rulesets as easy as possible. Add support for coding AI in python.
+Extend Daneel-ai to support MiniSec, MTSec and TAE rulesets. Make coding AI for new rulesets as easy as possible. Add support for coding AI in pure python.
 
 == Short version ==
 
-Since human players are not that easy to find every ruleset should have an AI opponent one can play against. MiniSec and MTSec rulesets are stable and don't have AI opponents (not sure if tpsai counts) so extending Daneel-ai to support them would make it the main AI client. While working on the AI for these rulesets I would try to simplify the creation of AI for new rulesets as much as possible (through extended functionality and tutorials/documentation). Currently AI logic is meant to be written in CHR syntax, I would like to add a simple way of coding AI in python only so future developers could write pure python AI if they choose (and some things are just easier that way). Any time left would be spent on speed improvements and adding common AI algorithms for easier future use.
+Since human players are not that easy to find every ruleset should have an AI opponent one can play against. MiniSec, MTSec and TAE rulesets are stable and don't have AI opponents (not sure if tpsai counts) so extending Daneel-ai to support all stable rulesets would make it the main client. While working on the AI for these rulesets I would try to simplify the creation of AI for new rulesets as much as possible (through extended functionality and tutorials/documentation). Currently AI logic is meant to be written in CHR syntax, I would like to add a simple way of coding AI in python only so future developers could write pure python AI if they choose (and some things are just easier that way). Any time left would be spent on speed improvements and adding common AI algorithms for easier future use.
 
 == Long version ==
 
 I believe that it is essential for a game to have a moderately challenging AI especially if it doesn't have a large user base.
-Adding support for MiniSec and MTSec in Daneel-ai would mean it covers most of the stable rulesets.
+Adding support for MiniSec, MTSec and TAE in Daneel-ai would mean it covers all stable rulesets.
 With this Daneel-ai would become the main AI client and first choice for future AI coding. This would mean less code to maintain.
 
 I have already started with work on AI for MiniSec and have noticed the documentation and tutorials are not complete. As a part of my work I would complete the documentation and write a step by step tutorial on creating AI for new rulesets.
 I have also written code for automatic discovery of all possible orders (and their arguments) on a given ruleset. More functions like this one would be added for simplifying writing of AI for new rulesets.
 
-Adding python support for AI coding in daneel-al would mean it can be used even for non rule-based AI.
+Adding python support for AI coding in daneel-al would mean it can be used even for non rule-based AI like AIs that learn or predict opponents moves.
 
 === Main goals ===
 All of this is expected to get done.
 
 * add support for Minisec
-** this will get done before the start of GSoc
+** this will get done before the start of GSoc 
 * add support for MTSec
+* add support for TAE
 * simplify AI writing as much as possible
 ** helper functions and detailed documentation and tutorials
 * add support for coding AI in python
@@ -34,9 +35,11 @@ All of this is expected to get done.
 === Bonus goals ===
 Some of this is expected to get done (as much as time permits)
 
-* add support for TAE
 * add a collection of common AI methods
+** A*, negamax with alpha-beta pruning (improved minimax) and such
 * speed up code
+** parallel execution if possible (so we can put dual and quad cores to good use)
+** if possible reuse some of the code from last years gsoc project
 * add learning capabilities
 ** if I discover any that could prove useful
 
