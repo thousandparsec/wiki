@@ -81,7 +81,7 @@ Hi Null, This proposal is an okay start but needs significantly more details. Qu
 * Why is CHR syntax hard to understand? Please give examples of how it would be easier to do the same thing in Python. 
 ** A: CHR is not hard to understand but requires a different approach to programming. It is great for rule-based AI, but something that is not rule based may be done easier the imperative way (one example is an AI that tries to predict opponents moves for a few turns ahead using minimax[http://en.wikipedia.org/wiki/Minimax] or something similar) -- Null
 * Are you going to tackle Minisec of MTSec first? Isn't Minisec trivial?
-** A: I've already started working on Minisec to get familiar with the code and expect to finish it this week. I have an exam on 9th so I can't spare too much time now (otherwise it would have been finished by now). -- Null
+** A: I've already started working on Minisec to get familiar with the code and expect to finish it this week. I have an exam on 8th so I can't spare too much time now (otherwise it would have been finished by now). -- Null
 * How are you going to tackle performance problems, have you run daneel-ai under a profiler to see where the speed problems are?
 * We need a better timeline on how things are going to work. It should be a week-by-week with goals at the end of every week. 3 months goes really fast and we need something to keep you on track.
 
