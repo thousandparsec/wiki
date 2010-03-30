@@ -11,14 +11,14 @@ You can find information about applying for the [http://code.google.com/soc Goog
 
 For Google Summer of Code 2010, the following types of projects are regarded, in general, as '''high priority''':
 
-  * Improvements to existing rulesets, such as [[MTSec]].
-  * Additions or improvements to the [[daneel-ai]] AI client.
-  * Improvements to the [[single player]] framework.
+* Improvements to existing rulesets, such as [[MTSec]].
+* Additions or improvements to the [[daneel-ai]] AI client.
+* Improvements to the [[single player]] framework.
 
 As well, we are considering the following types of projects '''low priority''':
 
-  * New rulesets.
-  * New persistence modules for [[tpserver-cpp]].
+* New rulesets.
+* New persistence modules for [[tpserver-cpp]].
 
 __TOC__
 
