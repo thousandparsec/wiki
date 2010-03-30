@@ -31,7 +31,7 @@ backup weapons:
 * sql
 * asp (not .net, the old one)
 
-== other knowedge ==
+== other knowledge ==
 also html and some css (designed and written a few web pages for small companies)
 
 know how to use svn (but learning git should be a piece of cake)
