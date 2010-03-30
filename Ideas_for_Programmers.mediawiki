@@ -9,6 +9,17 @@ You will notice that in some ideas "a 3 month timeframe" is mentioned. This is o
 
 You can find information about applying for the [http://code.google.com/soc Google Summer of Code] [[Google Summer of Code|on this page]].
 
+For Google Summer of Code 2010, the following types of projects are regarded, in general, as '''high priority''':
+
+  * Improvements to existing rulesets, such as [[MTSec]].
+  * Additions or improvements to the [[daneel-ai]] AI client.
+  * Improvements to the [[single player]] framework.
+
+As well, we are considering the following types of projects '''low priority''':
+
+  * New rulesets.
+  * New persistence modules for [[tpserver-cpp]].
+
 __TOC__
 
 = Ruleset Ideas =
@@ -50,28 +61,11 @@ These tasks are a reasonable amount of work, depending on which language you cho
 
 == Web based client ==
 
-A web based client enables players to join Thousand Parsec games easily from any computer with a web browser and internet connection. This makes web based client the fastest and easiest way to start playing the game.
-
-Any language could be used for the client. Some suggestions are PHP, Python or Ruby. It might be a good idea to use AJAX or something similar.
-
-It is expected that the client has the following functionality:
-
-* Support for displaying the Starmap
-* Support for displaying all information about objects
-* Support for issuing orders
-* Support for creating designs
-
-=== More Information ===
-* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-py.git;a=summary libtpproto-py] - Python Protocol Library, [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto2-py.git;a=summary libtpproto2-py] - Second Generation Python Protocol Library, [http://pylonshq.com/ Pylons] - Python Rapid Web Development, [http://wiki.python.org/moin/Django Django] - High Level Web Development, [http://www.turbogears.org/ TurboGears] - Another RAD Web Toolkit
-* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-php.git;a=summary libtpproto-php] - PHP Protocol Library
-* [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=libtpproto-rb.git;a=summary libtpproto-rb] - Ruby Protocol Library, [http://www.rubyonrails.org/ Ruby on Rails] - Web development which does not hurt
-
-=== Required Skills ===
-Strong Web development skill.
+A web based client was developed in GSoC 2009.
 
 == 3D Client ==
 
-A 3D client was developed in GSOC 2008, right now it is in need of the following features:
+A 3D client was developed in GSoC 2008, right now it is in need of the following features:
 
 * Support for creating designs
 ** Allow users to create and edit ship designs (for reference check out [http://en.wikipedia.org/wiki/Spore_(game)#Editors Spore])
