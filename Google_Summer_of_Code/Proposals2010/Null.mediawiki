@@ -31,10 +31,8 @@ All of this is expected to get done.
 ** helper functions and detailed documentation and tutorials
 * add support for coding AI in python
 ** including a simple way of giving orders and getting facts about the current status of the universe
-* lots of comments
-** will try to comment everything so I won't be the only one who understands what the code does
-* lots of bug reports
-** will reort anything I find that needs fixing
+
+as a bonus I will report all the bugs I find
 
 === Bonus goals ===
 Some of this is expected to get done (as much as time permits)
