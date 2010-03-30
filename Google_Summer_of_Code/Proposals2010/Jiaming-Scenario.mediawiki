@@ -20,7 +20,7 @@ By adding this scenario support, we should enable players to:
 
 * Load a saved game and continue to play it. If the game is previously played with an AI client, it should enable the player to continue to play this saved game with the same AI client, i.e. the AI client has the same parameter and load the current states of the game.
 
-* Load a pre-defined scenario. In a scenario, the player would have some pre-defined amount of resources and fleets. The player needs to accomplish the defined goal in order to win.
+* Load a pre-defined scenario. A scenario is bascially just like a saved state of a game. In a scenario, the player would have some pre-defined amount of resources and fleets. The player needs to accomplish the defined goal in order to win.
 
 * Play campaigns, which is a series of related scenarios.
 
