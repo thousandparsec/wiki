@@ -1,0 +1,32 @@
+tpclient-pyogre is a thousand parsec [[Clients|client]] which uses a 3D interface based on the [http://www.ogre3d.org Ogre3d] library.
+
+The purpose of this page is to expand on 3d client ideas without cluttering the [[Ideas_for_Programmers]] page too much.
+
+=Summary of project ideas=
+
+* Support for creating designs
+** Allow users to create and edit ship designs (for reference check out Spore)
+* Media.gz support
+** Client should download models and other media off the media server. The tpclient-pywx project can be used as a reference as it already has this capability
+* Single player mode
+** Players can play a game locally against AI competition (similar work has been done on the wxWidgets client already, for more info see Single Player)
+* Game lobby system
+** Ability to communicate with other players and host games, perhaps by launching tpserver-cpp or tpserver-py in the background
+* Procedural planet generation
+** Generate planet and stars according to their attributes
+* Addition of more special effects and eye candy
+** Locate areas in the client which could be improved for a better player experience
+* Remove dependency on python-ogre
+** Port ogre-based portions of the 3d client from python to cpp
+
+==Removing dependency on Python-Ogre==
+Currently, the 3d client is based on [http://python-ogre.org Python-Ogre], a python language binding for the Ogre library (which is written in cpp). The Python-Ogre library is fantastic for developer productivity, without which the 3d client would not have been possible, however past experience has shown that getting up and running with Python-Ogre on non Windows-based systems is not a trivial task due to a couple of reasons:
+* The lack of Linux/OSX binaries, although deb packages are available for some versions of Ubuntu
+* Dependency on custom-patched versions of support libraries such as boost, Scons and Ogre means that these have to be compiled from scratch as well
+* The lengthy and complex build process makes it prone to breakage upon new OS releases
+This idea would involve porting the ogre-based portions of the client from python to cpp to make use of Ogre directly, as Ogre is already well supported on Windows, OSX and most linux distros. To avoid rewriting the client from scratch, only parts of the code which uses Python-Ogre should be ported. The cpp and python parts of the client can then perform inter-process communication through various [http://en.wikipedia.org/wiki/Inter-process_communication means]. The possibility of using an embedded python interpreter has not yet been evaluated.
+
+'''Skills needed:'''
+* Ability to compile Python-Ogre, if using Linux or OSX for development
+* Knowledge of python and cpp
+* Ability to test the client on both Windows and Linux at least
