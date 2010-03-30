@@ -1,3 +1,5 @@
+I am still working on it.
+
 == Introduction==
 
 ==== Abstract====
@@ -25,7 +27,7 @@ By adding this scenario support, we should enable players to:
 * Play campaigns, which is a series of related scenarios.
 
 
-Following is some other requirement as mentioned in the Ideas for Programmers wiki page [http://www.thousandparsec.net/wiki/Ideas_for_Programmers#Scenarios].
+Following is some other requirement as specified in the Ideas for Programmers wiki page [http://www.thousandparsec.net/wiki/Ideas_for_Programmers#Scenarios].
 
 * This feature should be designed in such a way that other clients and client libraries can use it in the future.
 
@@ -42,10 +44,13 @@ In addition, their are some assuptions for above task.
 
 
 == Implementation==
-This project will be tackled in folllowing workflow.
+This project will be tackled as in the folllowing workflow.
+
 [[images/Workflow.JPG]]
 
-* In the first stage,I will implement serialization methods in the server side (tpserver-cpp). These serialization methods can be used to export the internal state of a game on the server to an persistent file (this file should be human readable), and also to import a file containing the states of a game into the server.
+* In the first stage,I will implement serialization methods in the server side (tpserver-cpp). These serialization methods can be used to export the internal state of a game on the server to an persistent file (this file should be human readable), and also to import a file containing the states of a game into the server. In addition, I will also implement the serialization methods in currently existing AI clients(gencon and daneel-ai).
+
+* In the second stage, 
 
 
 == Detailed Project Schedule==
