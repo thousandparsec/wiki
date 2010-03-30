@@ -3,7 +3,7 @@ Damjan 'Null' Košir, 23, from Slovenia, final (5th) year [http://www.fri.uni-lj
 highly interested in anything AI (obviously)
 
 == AI related experience ==
-worked in the AI lab of our faculty as a student:
+worked in the [http://ailab.si/ AI lab] of our faculty as a student:
 
 mostly with robot [http://ec.europa.eu/information_society/events/cf/fet09/picture.cfm?id=5269 Nao], I was part of a [http://ec.europa.eu/information_society/events/cf/fet09/picture.cfm?id=5389 wining exibition] at [http://ec.europa.eu/information_society/events/fet/2009/index_en.htm FET conference] (I'm the one holding the award paper thing)
 
