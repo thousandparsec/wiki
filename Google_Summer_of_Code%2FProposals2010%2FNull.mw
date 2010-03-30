@@ -55,34 +55,34 @@ Some of this is expected to get done (as much as time permits)
 
 ==== Coding period ====
 
-Focus on python
+===== Focus on python and simplification process =====
 * May 24 - 30:
-** planing and start of coding
+** planing and start of coding and possible redesign
 * May 31 - June 6:
 ** coding
 * June 6 - 13:
 ** coding and testing
 * June 14 - 20:
-** testing and documentation
+** testing, fine tuning and documentation
 
-Focus on MTSec
+===== Focus on MTSec =====
 * June 21 - 27:
 ** planing and start of coding
 * June 28 - July 4:
 ** coding
 * July 5 - 11:
-** testing and documentation
+** testing, fine tuning  and documentation
 
-Focus on TAE
+===== Focus on TAE =====
 * July 12 - 18:
 ** mid-term evaluations
 ** planing and start of coding
 * July 19 - 25:
 ** coding
 * July 26 - August 1:
-** testing and documentation
+** testing, fine tuning and documentation
 
-Focus on finishing
+===== Focus on finishing =====
 * August 2 - 8:
 ** safety reserve for unpredictable things
 ** writing documentation and guides on AI writing
