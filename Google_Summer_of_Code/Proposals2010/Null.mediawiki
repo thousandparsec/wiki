@@ -20,6 +20,9 @@ I have also written code for automatic discovery of all possible orders (and the
 
 Adding python support for AI coding in daneel-al would mean it can be used even for non rule-based AI like AIs that learn or predict opponents moves.
 
+
+I have no vacation planed and will work 40 hours/week. I do however have 2 exams and will work about 30 hours the week before each exam (exam dates not known yet).
+
 === Main goals ===
 All of this is expected to get done.
 
