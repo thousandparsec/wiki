@@ -1,15 +1,15 @@
 Warning this is a public BETA version and can change at any time (and will depending on comments).
 
 
-=== Short short version ===
+== Short short version ==
 
 Extend Daneel-ai to support MiniSec and MTSec rulesets. Make coding AI for new rulesets as easy as possible. Add support for coding AI in python.
 
-=== Short version ===
+== Short version ==
 
 Since human players are not that easy to find every ruleset should have an AI opponent one can play against. MiniSec and MTSec rulesets are stable and don't have AI opponents (not sure if tpsai counts) so extending Daneel-ai to support them would make it the main AI client. While working on the AI for these rulesets I would try to simplify the creation of AI for new rulesets as much as possible (through extended functionality and tutorials/documentation). Currently AI logic is meant to be written in CHR syntax, I would like to add a simple way of coding AI in python only so future developers could write pure python AI if they choose (and some things are just easier that way). Any time left would be spent on speed improvements and adding common AI algorithms for easier future use.
 
-=== Long version ===
+== Long version ==
 
 I believe that it is essential for a game to have a moderately challenging AI especially if it doesn't have a large user base.
 Adding support for MiniSec and MTSec in Daneel-ai would mean it covers most of the stable rulesets.
@@ -20,7 +20,7 @@ I have also written code for automatic discovery of all possible orders (and the
 
 Adding python support for AI coding in daneel-al would mean it can be used even for non rule-based AI.
 
-== Main goals ==
+=== Main goals ===
 All of this is expected to get done.
 
 * add support for Minisec
@@ -31,7 +31,7 @@ All of this is expected to get done.
 * add support for coding AI in python
 ** including a simple way of giving orders and getting facts about the current status of the universe
 
-== Bonus goals ==
+=== Bonus goals ===
 Some of this is expected to get done (as much as time permits)
 
 * add support for TAE
@@ -40,7 +40,7 @@ Some of this is expected to get done (as much as time permits)
 * add learning capabilities
 ** if I discover any that could prove useful
 
-== Timeline ==
+=== Timeline ===
 
 Coming soon...
 
