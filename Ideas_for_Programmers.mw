@@ -65,18 +65,18 @@ A web based client was developed in GSoC 2009.
 
 == 3D Client ==
 
+More info on the 3d client and project ideas can be found on [[Tpclient-pyogre]].
+
 A 3D client was developed in GSoC 2008, right now it is in need of the following features:
 
 * Support for creating designs
 ** Allow users to create and edit ship designs (for reference check out [http://en.wikipedia.org/wiki/Spore_(game)#Editors Spore])
-* [[TP04]] support
-** Support for the new features contained in the tp04 protocol
-* BattleXML support
-** A standalone battle viewer which is integrated into the main client as well
 * [[Media.gz]] support
 ** Client should download models and other media off the media server
 * Single player mode
 ** Players can play a game locally against AI competition (similar [http://git.thousandparsec.net/gitweb/gitweb.cgi?p=tpclient-pywx.git;a=summary work] has been done on the wxWidgets client already, for more info see [[Single Player]])
+* Remove python-ogre dependency
+** Port ogre-based portions of the 3d client from python to cpp
 
 In order to work on the client, you will need an understanding of Python. Familiarity with [http://www.ogre3d.org Ogre], [http://www.cegui.org.uk/ CEGUI] and [http://www.pythonogre.com Python-Ogre] would be preferable as well.
 
