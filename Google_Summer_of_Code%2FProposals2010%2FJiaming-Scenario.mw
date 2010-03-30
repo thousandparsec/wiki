@@ -48,9 +48,11 @@ This project will be tackled as in the following work flow.
 
 [[File:Workflow.JPG]]
 
-* In the first stage,I will implement serialization methods in the server side (tpserver-cpp). These serialization methods can be used to export the internal state of a game on the server to an persistent file (this file should be human readable), and also to import a file containing the states of a game into the server. In addition, I will also implement the serialization methods in currently existing AI clients(gencon and daneel-ai). Apart from these serialization methods, the existing protocol will be extended to support the transfer of data frames that related to save-load operations.
+* In the first step,I will implement serialization methods in the server side (tpserver-cpp). These serialization methods can be used to export the internal state of a game on the server to an persistent file (this file should be human readable), and also to import a file containing the states of a game into the server. In addition, I will also implement the serialization methods in currently existing AI clients(gencon and daneel-ai). Apart from these serialization methods, the existing protocol will be extended to support the transfer of data frames that related to save-load operations.
 
-* In the second stage, 
+* In the second step, I will add support for the extended protocol to the client library (libtpproto-py) and add necessary utility methods.
+
+* In the third step, I will modify existing or creating new UI in the client application (tpclient-pywx) and the single player wizard to 
 
 
 == Detailed Project Schedule==
