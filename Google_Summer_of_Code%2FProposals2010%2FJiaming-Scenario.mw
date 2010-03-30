@@ -52,13 +52,19 @@ This project will be tackled as in the following work flow.
 
 * In the second step, I will add support for the extended protocol to the client library (libtpproto-py) and add necessary utility methods.
 
-* In the third step, I will modify existing or creating new UI in the client application (tpclient-pywx) and the single player wizard to 
+* In the third step, I will add new methods to the client application (tpclient-pywx, as well as the single player wizard), and modify existing or create new UI components to allow user to access these new functionalities.
 
 
 == Detailed Project Schedule==
-Coming soon.
 
+==== Pre-stage: from now to May 24====
+In the past week, I have set up the development environment, taken a close look at the source code and read through the documentations and wiki pages on the website. Now I've got a clear picture of how the whole game works and I'm quite familiar with the client part applications such as tpclient-pywx,gencon-ai, single player wizard. (and I've submitted a patch that fixes a bug I found when I play around with the game)
 
+In following weeks till May 24, I will do the following:
+
+* Continue to learn the project (especially the server side application).
+* Research on effective and efficient serialization methods.
+* Enhance my python programming skills.
 == Comments==
 
 Hi Jaiming, This proposal is an okay start but needs significantly more details. Questions I have for you:
