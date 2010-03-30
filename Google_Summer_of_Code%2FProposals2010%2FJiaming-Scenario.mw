@@ -48,7 +48,7 @@ This project will be tackled as in the following work flow.
 
 [[File:Workflow.JPG]]
 
-* In the first step,I will implement serialization methods in the server side (tpserver-cpp). These serialization methods can be used to export the internal state of a game on the server to an persistent file (this file should be human readable), and also to import a file containing the states of a game into the server. In addition, I will also implement the serialization methods in currently existing AI clients(gencon and daneel-ai). Apart from these serialization methods, the existing protocol will be extended to support the transfer of data frames that related to save-load operations.
+* In the first step,I will implement serialization methods in the server side (tpserver-cpp). These serialization methods can be used to export the internal state of a game on the server to an persistent file (this file should be human readable), and also to import a file containing the states of a game into the server. In addition, I will also implement the serialization methods in currently existing AI clients(gencon and daneel-ai). Apart from these serialization methods, the existing protocol will be extended to support the transfer of data frames that containing save-load operations.
 
 * In the second step, I will add support for the extended protocol to the client library (libtpproto-py) and add necessary utility methods.
 
@@ -60,11 +60,44 @@ This project will be tackled as in the following work flow.
 ==== Pre-stage: from now to May 24====
 In the past week, I have set up the development environment, taken a close look at the source code and read through the documentations and wiki pages on the website. Now I've got a clear picture of how the whole game works and I'm quite familiar with the client part applications such as tpclient-pywx,gencon-ai, single player wizard. (and I've submitted a patch that fixes a bug I found when I play around with the game)
 
-In following weeks till May 24, I will do the following:
+
+In following weeks till May 24, I will do the following to boost my speed when I begin doing the project:
 
 * Continue to learn the project (especially the server side application).
+
 * Research on effective and efficient serialization methods.
+
 * Enhance my python programming skills.
+
+
+==== Stage 1: from May 24 to July 11====
+
+* '''First week (ends at May 30)''': Design a file format for saving states of a game running on the server. Add serialization support to the server (tpserver-cpp).
+
+* '''Second week (ends at June 6)''': Continue and finish last week's task. Start to design and implement serialization methods in AI clients (gencon-AI and daneel-AI).
+
+* '''Third week (ends at June 13)''': Finish the implementation of serialization methods in AI clients.
+
+* '''Fourth week (ends at June 20)''': Design the protocol to support the transfer of data frames that containing save-load operations. Implement this protocol on the server (tpserver-cpp) and implement utility methods that support this protocol.
+
+* '''Fifth week (ends at June 27)''': Add support to the new protocol in client side libraries, so that it can be used later by other applications.
+
+* '''Sixth week (ends at June 4)'''
+
+* '''Seventh week (ends at June 11)'''
+
+
+==== Stage 2: from July 12 to Aug 8====
+
+* '''First week (ends at July 18):''' De
+
+* '''Second week (ends at July 25):''' 
+
+* '''Third week (ends at Aug 1):''' 
+
+* '''Fourth week (ends at Aug 8):''' 
+
+
 == Comments==
 
 Hi Jaiming, This proposal is an okay start but needs significantly more details. Questions I have for you:
