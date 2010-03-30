@@ -82,20 +82,24 @@ In following weeks till May 24, I will do the following to boost my speed when I
 
 * '''Fifth week (ends at June 27)''': Add support to the new protocol in client side libraries, so that it can be used later by other applications.
 
-* '''Sixth week (ends at June 4)'''
+* '''Sixth week (ends at June 4)''': Add utility and UI support in client application (tpclient-pywx).
 
-* '''Seventh week (ends at June 11)'''
+* '''Seventh week (ends at June 11)''': Continue and complete last week's task. At the end of this week, players should be able to save a game on the server, and load it later to continue playing with it.
 
 
 ==== Stage 2: from July 12 to Aug 8====
 
-* '''First week (ends at July 18):''' De
+* '''First week (ends at July 18):''' Add utility and UI support in the single player wizard application.
 
-* '''Second week (ends at July 25):''' 
+* '''Second week (ends at July 25):''' Add campaign support to the single player mode application.
 
-* '''Third week (ends at Aug 1):''' 
+* '''Third week (ends at Aug 1):''' Polish, test and document the whole project (Design and build the Scenario Designer if time permits.)
 
-* '''Fourth week (ends at Aug 8):''' 
+* '''Fourth week (ends at Aug 8):''' Polish, test and document the whole project (Design and build the Scenario Designer if time permits.)
+
+==== Post stage from Aug 9 to Aug 16====
+
+* If possible, finish the Scenario Designer.
 
 
 == Comments==
