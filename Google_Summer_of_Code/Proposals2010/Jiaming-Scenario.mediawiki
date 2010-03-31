@@ -122,3 +122,9 @@ Hi Jaiming, This proposal is an okay start but needs significantly more details.
 - I have write down my detailed schedule. (It is based on my current understanding of the project. It might be subject to some future changes)
 
 -- Mithro
+
+You should have a look at the various components and how you could use or extend existing features to help you do this. Also think exactly what is actually needed to support this, perhaps start with what information is required in the file.
+
+I also note that other than the user interface, your first stage has already been implemented. The server saves it's data into a database (in tpserver-cpp, a Persistence backend) as it runs. If the server shuts down, and restarted, the game continues. A user interface could use the Admin protocol to shut down the server.
+
+-- Lee 'llnz' Begg
