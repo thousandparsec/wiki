@@ -107,8 +107,9 @@ In following weeks till May 24, I will do the following to boost my speed when I
 
 * I am confident in Java programming language. Java is taught in my home university as a basic tool, and I have done a lot of projects using Java for my courses  in many areas, such as database, software engineering, artificial intelligence.
 
-* I am also good at C++. I was worked as an undergraduate researcher during my second year of study. I was in charge of developing the underlying utility libraries, which is responsible of doing some complex mathematical calculations, in C++ for a better performance. 
+* I am also good at C++. I was worked as an undergraduate researcher during my second year of study. I was in charge of developing the underlying utility libraries, which is responsible of doing some complex mathematical calculations, in C++ for a better performance.
 
+* I am also interested in another idea mentioned in the Ideas for Programmers wiki, which is to develop a cool 3D starmap to replace the current starmap. It will make this game much cooler and more interesting. If I still have time, I would like to do this project as well.
 
 == Comments==
 
