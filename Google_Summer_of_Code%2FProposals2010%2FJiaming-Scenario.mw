@@ -37,11 +37,6 @@ Following is some other requirement as specified in the Ideas for Programmers wi
 
 * Build Scenario Designer, which allows the user to design their own scenario in a intuitive way.
 
-==== Pre-assumptions====
-In addition, their are some assumptions for above task.
-
-* The server and AI clients provide some way to store their state.
-
 
 == Implementation==
 This project will be tackled as in the following work flow.
@@ -103,11 +98,23 @@ In following weeks till May 24, I will do the following to boost my speed when I
 * If possible, finish the Scenario Designer.
 
 
+== About me ==
+* My full name is Wang Jiaming (just call me Jiaming:))I am a Computer Science student studying at National University of Singapore [http://www.nus.edu.sg]. I am now in my third year. I also have strong basic programing skills which enable me to learn a new language very fast.
+
+* I am a outgoing person and can communicate with others quite well. I am very comfortable to work within a team. I like to experience and learn new things and I am very energetic.
+
+* I am confident in Java programming language. Java is taught in my home university as a basic tool, and I have done a lot of projects using Java for my courses  in many areas, such as database, software engineering, artificial intelligence.
+
+* I am also good at C++. I was worked as an undergraduate researcher during my second year of study. I was in charge of developing the underlying utility libraries, which is responsible of doing some complex mathematical calculations, in C++ for a better performance. 
+
+
 == Comments==
 
 Hi Jaiming, This proposal is an okay start but needs significantly more details. Questions I have for you:
 
 * I'm afraid your assumption is incorrect, neither the server nor the AI provide a way to save in-game state.
+- Yes, it's not valid. What I mean here is that I should first make the assumptions valid. Since it's misleading, I have change this part.
 * We need a better timeline on how things are going to work. It should be a week-by-week with goals at the end of every week. 3 months goes really fast and we need something to keep you on track.
+- I have write down my detailed schedule. (It is based on my current understanding of the project. It might be subject to some future changes)
 
 -- Mithro
