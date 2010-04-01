@@ -16,7 +16,7 @@ Currently AI logic is meant to be written in CHR syntax, I would like to add a s
 
 == Long version ==
 
-
+There is still text to be written here about why do I think this will help TP and why do I think pyhton support is needed.
 
 
 
@@ -107,6 +107,12 @@ This timeline needs to be changed but it will probably look something like this:
 3 weeks - phase three and above: heuristics and parameters and optimisation (oh my!)
 
 4 weeks - buffer time. if something goes wrong it shouldn't set me back more than this (or so I hope). if nothing goes wrong this will be the time for some more optimisations and work on phases above three.
+
+and after Gsoc:
+
+I will finish any work I have started (probably automatic optimisation) and continue to maintain the code and fix bugs if any are found.
+
+If I get lucky I might also write my graduation theses about it, this would probably mean more work on the AI and that can only be good for TP and MTSec AI.
 
 
 OBSOLETE!!!
