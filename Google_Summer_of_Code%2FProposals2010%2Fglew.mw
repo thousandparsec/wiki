@@ -1,5 +1,3 @@
-note: work in progress
-
 ==Project Description==
 Now that Single Player has been implemented in Thousand Parsec, the next natural step would be to create an engaging experience to go along with it. A Scenario/Campaign feature would complement the new addition.
 
@@ -42,6 +40,7 @@ Once again, the loader will have to be added to the tpclient-pywx gui.
 ====Building a Scenario====
 Initially a scenario can just be a basic saved state. But eventually, it should be extended to a designable and customizable saved state.
 It would definitely be best to have a scenario editor. However, direct editing of the XML file or saved state file could grant access, albeit cumbersome and non-user-friendly, to creating scenarios.
+So time permitting, a gui based scenario editor would be implemented to allow for easy user creation and customization of scenarios.
 ====Campaigns====
 Campaigns would essentially be a sequential order of scenarios. So scenarios would either be passed along as a group or they could be linked together.
 
@@ -62,32 +61,42 @@ This stage will be used to familiarize myself with the client and all applicable
 
 === June 6 - July 16 (Stage 1) ===
 
-* Serialization methods will be implemented to convert objects into the desired file format (XML)
-* Capabilities will be extend the "saver" to dump information from the server and the ai
-* Saving functionality will be added to the gui
-* Deserializing (load) module to load the saved state will be written, this can probably be done in parallel while writing the serialization methods
+* Week 1 + 2: Serialization methods will be implemented to convert objects into the desired file format (XML). Perhaps a DTD (Document Type Definition) should be provided for the breakdown and organization of objects.
+* Week 3: Capabilities will be extend for the "saver" to dump information from the server and the ai
+* Week 4: The client will be able to save to a file (i.e. Saving functionality will be added to the gui).
+* Week 5: Deserializing (load) module to load the saved state will be written, this can probably be done in parallel while writing the serialization methods.
 
 === July 17 - August 9 (Stage 2) ===
 
-* Loader will be present and functioning properly (Should be early in this stage)
-* Implement a means of scenario creation
-* A basic campaign will be available (Most likely more towards the end of this period)
+* Week 7: Loader will be present and functioning properly (Should be early in this stage)
+* Week 8: A scenario creator will be made. Hopefully in the form of a small stand alone app to edit features such as planets, fleet locations, etc...
+* Week 9: A basic campaign consisting of several consecutive scenarios will be playable.
 * Time Permitting: Research and Implementation of some story telling features to campaign mode
 
-=== August 9 - August 16 (buffer) ===
+=== August 9 - August 16 (Finishing Touches) ===
 
-This week is purposefully left out as buffer time. Hopefully this will be time for documentation and cleanup.
+This week will be time for documentation and cleanup.
+If a remaining task is still unfinished and reasonable to finish in this time, it should be.
 
 ==About Me==
-My name is Greg Lew, I am an undergraduate at McGill University currently pursuing an Electrical Engineering degree with a Software Engineering minor.
-
+My name is Greg Lew, I am an undergraduate at McGill University currently pursuing an Electrical Engineering degree with a Software Engineering minor.  While not attending university, I live in Boston, Massachusetts.
+====Languages and Knowledge====
 I am confident in java, but I have a good amount of experience with python. I have worked with c, and I am willing to learn more if necessary.
 
-Major projects I have worked on:
-* A web-based Restaurant Recommendation system where users could make profiles, rate and review restaurants, comment on restaurants, and get recommendations based on their ratings of restaurants. (using jsp, java, apache server, tomcat, mySQL database) 
-* A short summer internship Prototyping small python applications on Symbian Nokia Phones, one of the main goals was to synchronize music playing across multiple phones for increased volume.
+I have familiarized myself with XML and am in the process of learning the proper python modules that will allow me to parse data into XML.
+
+====Major projects I have worked on====
+* A web-based Restaurant Recommendation system where users could make profiles, rate and review restaurants, comment on restaurants, and get recommendations based on their ratings of restaurants. My contribution was mainly focused on the database organization and how objects were input and output from it. (Project used jsp, java, apache server, tomcat, mySQL database) 
+* A short summer internship prototyping small python applications on Symbian Nokia Phones, one of the main goals was to synchronize music playing across multiple phones for increased volume.
 * A soccer robot programmed in java (with an extended library) that has to function autonomously in a 12'x12' course.  It must be able to localize, avoid cinderblocks, detect and collect balls, and shoot them into a specified goal location.
 
+The summer internship I mentioned was conducted on the following basis:
+* I would go in to work for the full afternoon at an MIT building.
+* I would meet my "mentor" for a brief meeting to discuss what I had accomplished that day, what problems I ran into, and what I planned to do next.
+
+The experience was gratifying and rewarding, while still providing me with challenges.I found I was able to be self motivating and productive. From this experience, I believe that I can become fully committed to a large project.  I can be openly available for regular contact and can express my concerns and accomplishments.
+
+====Contact Info====
 Let me know if you want Contact information
 
 ==Comments==
