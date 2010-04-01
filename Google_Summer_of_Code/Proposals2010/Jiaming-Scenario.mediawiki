@@ -117,14 +117,25 @@ In following weeks till May 24, I will do the following to boost my speed when I
 Hi Jaiming, This proposal is an okay start but needs significantly more details. Questions I have for you:
 
 * I'm afraid your assumption is incorrect, neither the server nor the AI provide a way to save in-game state.
-- Yes, it's not valid. What I mean here is that I should first make the assumptions valid. Since it's misleading, I have change this part.
+- Thanks for your comments. Yes, it's not fully valid. What I mean here is that I should first make the assumptions valid. Since it's misleading, I have change this part.
 * We need a better timeline on how things are going to work. It should be a week-by-week with goals at the end of every week. 3 months goes really fast and we need something to keep you on track.
 - I have write down my detailed schedule. (It is based on my current understanding of the project. It might be subject to some future changes)
 
 -- Mithro
 
+
+
 You should have a look at the various components and how you could use or extend existing features to help you do this. Also think exactly what is actually needed to support this, perhaps start with what information is required in the file.
 
 I also note that other than the user interface, your first stage has already been implemented. The server saves it's data into a database (in tpserver-cpp, a Persistence backend) as it runs. If the server shuts down, and restarted, the game continues. A user interface could use the Admin protocol to shut down the server.
+
+- Thanks for you comments. I skimed the codes of Persistence module from the server. It saves the states of a current game into a MySQL server and can be used to support the save-load functionality I proposed. However, it has two major problems to be used to support the senario part:
+
+1. Currently this Persistence module doesn't support to write user defined data into the MySQL server - it can only save the states of a current game.
+2. The save data file itself is not human readable, which may introduce some trouble to create a Scenario.
+
+So now I have two alternatives: ether to extend the current Persistence module or to create a new light weighted module to support the scenario functionality.
+
+I think I will take your recommendation to think about deeply what information is required in the file and what the existing modules can help me. Then I will make a better plan for it.
 
 -- Lee 'llnz' Begg
