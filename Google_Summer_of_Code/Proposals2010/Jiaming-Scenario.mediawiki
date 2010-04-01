@@ -116,10 +116,10 @@ In following weeks till May 24, I will do the following to boost my speed when I
 
 Hi Jaiming, This proposal is an okay start but needs significantly more details. Questions I have for you:
 
- I'm afraid your assumption is incorrect, neither the server nor the AI provide a way to save in-game state.
+I'm afraid your assumption is incorrect, neither the server nor the AI provide a way to save in-game state.
 * Thanks for your comments. Yes, it's not fully valid. What I mean here is that I should first make the assumptions valid. Since it's misleading, I have change this part.
 
- We need a better timeline on how things are going to work. It should be a week-by-week with goals at the end of every week. 3 months goes really fast and we need something to keep you on track.
+We need a better timeline on how things are going to work. It should be a week-by-week with goals at the end of every week. 3 months goes really fast and we need something to keep you on track.
 * I have write down my detailed schedule. (It is based on my current understanding of the project. It might be subject to some future changes)
 
 -- Mithro
