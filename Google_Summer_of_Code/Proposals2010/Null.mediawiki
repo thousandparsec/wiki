@@ -24,7 +24,7 @@ Currently AI logic is meant to be written in CHR syntax, I would like to add a s
 
 This how I plan to create my MTSec AI. It starts simple and gains complexity step by step. Progress is measurable. Will be coded in python.
 
-==== Faze one (Stupid faze) ====
+==== Phase one (Stupid phase) ====
 
 I plan to build a few simple and stupid AI that each represent one type of behaviour. Their will serve as a basic for my smart AI and will be used to measure the progress by battling my smart AI against them (there will be more than one stupid AI and they will all be set to harm only the smart AI in a primitive co-op manner).
 
@@ -39,13 +39,13 @@ List of current AIs:
 
 When they are build they will be battled against one another to see if one tactics prevails.
 
-==== Faze two (Hard-coded faze) ====
+==== Phase two (Hard-coded phase) ====
 
 I plan to build a smart AI that combines the basic behaviours (already coded for stupid AIs). Balancing between behaviours (when to attack, when to expand, when to defend) will be done by hard-coding simple rules. Ship plans will also be hard-coded.
 
 At this stage the smart AI should be able to beat all of the stupid AIs (hopefully even in very unfair battles). 
  
-==== Faze three (Heuristics faze) ====
+==== Phase three (Heuristics phase) ====
 
 In this faze I plan to replace the simple rules that drive the smart AI with more complex heuristics (battle prediction, evaluate how endangered each planet is). I also plan to build a more advanced ship planer that takes into account available resources, ships already build and known enemy ships.
 
@@ -53,11 +53,11 @@ At this faze I can change the behaviour of the AI by setting numeric parameters 
 
 All the parameters and heuristics will be tuned so the heuristics driven smart AI beats the hard-coded smart AI with high certainty. It should also be able to beat stupid AIs in very unfair battles.
 
-==== Faze three and a half (Optimisation faze) ====
+==== Phase three and a half (Optimisation phase) ====
 
 In the remaining time I will further fine tune the heuristics and parameters manually and if time permits automatically (optimisation techniques that could be used include hill-climbing, genetic algorithms). I will probably be using hill-climbing as it is one of the easiest to code. Number of turns before wining and number of stupid AIs that it can beat would be the main indicators of progress.
 
-==== Faze three and two thirds (Humanification faze) ====
+==== Phase three and two thirds (Humanification phase) ====
 
 If there is still time left I will try to make a few sets of parameters that will make the AI play in specific ways, that would create more or less challenging AIs (easy, medium, hard) and some that have "personalities" (camper, zerg rush imitator, chicken, kamikaze).
 
