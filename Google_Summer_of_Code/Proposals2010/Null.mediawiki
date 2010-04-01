@@ -1,4 +1,6 @@
-Warning this is an almost final version, so please leave comments.
+WARNING this is BETA
+
+Since I had a chat with Mithro I realised I had to turn my proposal upside down... so the basic idea stays, but most of the text will change (probably today).
 
 
 == Short short version ==
