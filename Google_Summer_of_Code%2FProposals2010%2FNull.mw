@@ -96,7 +96,21 @@ I have no vacation planed and will work 40 hours/week. I do however have 2 exams
 
 ==== Coding period ====
 
-===== Focus on python and simplification process =====
+This timeline needs to be changed but it will probably look something like this:
+
+1 week - get basic python AI support into daneel-ai (simplification and helper functions will come later while coding AI)
+
+2 weeks - phase one: write all stupid AIs and to some testing on them (AI battles)
+
+2 weeks - phase two: glue stupid AIs together with some simple rules
+
+3 weeks - phase three and above: heuristics and parameters and optimisation (oh my!)
+
+4 weeks - buffer time. if something goes wrong it shouldn't set me back more than this (or so I hope). if nothing goes wrong this will be the time for some more optimisations and work on phases above three.
+
+
+OBSOLETE!!!
+
 * May 24 - 30:
 ** planing and start of coding and possible redesign
 * May 31 - June 6:
@@ -106,7 +120,6 @@ I have no vacation planed and will work 40 hours/week. I do however have 2 exams
 * June 14 - 20:
 ** testing, fine tuning and documentation
 
-===== Focus on MTSec =====
 * June 21 - 27:
 ** planing and start of coding
 * June 28 - July 4:
@@ -114,7 +127,6 @@ I have no vacation planed and will work 40 hours/week. I do however have 2 exams
 * July 5 - 11:
 ** testing, fine tuning  and documentation
 
-===== Focus on TAE =====
 * July 12 - 18:
 ** mid-term evaluations
 ** planing and start of coding
@@ -123,7 +135,6 @@ I have no vacation planed and will work 40 hours/week. I do however have 2 exams
 * July 26 - August 1:
 ** testing, fine tuning and documentation
 
-===== Focus on finishing =====
 * August 2 - 8:
 ** safety reserve for unpredictable things
 ** writing documentation and guides on AI writing
