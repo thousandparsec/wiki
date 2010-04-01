@@ -2,55 +2,88 @@ WARNING this is BETA
 
 Since I had a chat with Mithro I realised I had to turn my proposal upside down... so the basic idea stays, but most of the text will change (probably today).
 
-
 == Short short version ==
 
-Extend Daneel-ai to support MiniSec, MTSec and TAE rulesets. Make coding AI for new rulesets as easy as possible. Add support for coding AI in pure python.
+Add support for writing AI code in pure python to Daneel-ai. Write AI code for MiniSec and MTSec rulesets. Simplify the process of writing AI for new rulesets as much as possible.
 
 == Short version ==
 
-Since human players are not that easy to find every ruleset should have an AI opponent one can play against. MiniSec, MTSec and TAE rulesets are stable and don't have AI opponents (not sure if tpsai counts) so extending Daneel-ai to support all stable rulesets would make it the main client. While working on the AI for these rulesets I would try to simplify the creation of AI for new rulesets as much as possible (through extended functionality and tutorials/documentation). Currently AI logic is meant to be written in CHR syntax, I would like to add a simple way of coding AI in python only so future developers could write pure python AI if they choose (and some things are just easier that way). Any time left would be spent on speed improvements and adding common AI algorithms for easier future use.
+Since human players are not that easy to find every ruleset should have an AI opponent one can play against. MiniSec and MTSec rulesets are stable and don't have AI opponents (not sure if tpsai counts) so extending Daneel-ai to support these rulesets would make it the main client.
+
+While working on the AI for these rulesets I would try to simplify the creation of AI for new rulesets as much as possible (through extended functionality and tutorials/documentation).
+
+Currently AI logic is meant to be written in CHR syntax, I would like to add a simple way of coding AI in python only so future developers could write pure python AI if they choose (and some things are just easier that way).
 
 == Long version ==
 
-I believe that it is essential for a game to have a moderately challenging AI especially if it doesn't have a large user base.
-Adding support for MiniSec, MTSec and TAE in Daneel-ai would mean it covers all stable rulesets.
-With this Daneel-ai would become the main AI client and first choice for future AI coding. This would mean less code to maintain.
-
-I have already started with work on AI for MiniSec and have noticed the documentation and tutorials are not complete. As a part of my work I would complete the documentation and write a step by step tutorial on creating AI for new rulesets.
-I have also written code for automatic discovery of all possible orders (and their arguments) on a given ruleset. More functions like this one would be added for simplifying writing of AI for new rulesets.
-
-Adding python support for AI coding in daneel-al would mean it can be used even for non rule-based AI like AIs that learn or predict opponents moves.
 
 
-I have no vacation planed and will work 40 hours/week. I do however have 2 exams and will work about 30 hours the week before each exam (exam dates not known yet). I will be on IRC almost all the time and will probably work in the evenings too so I can stay in contact with developers from Australia and New Zealand (been there btw).
+
+
+=== MTSec AI creation process outline ===
+
+This how I plan to create my MTSec AI. It starts simple and gains complexity step by step. Progress is measurable. Will be coded in python.
+
+==== Faze one (Stupid faze) ====
+
+I plan to build a few simple and stupid AI that each represent one type of behaviour. Their will serve as a basic for my smart AI and will be used to measure the progress by battling my smart AI against them (there will be more than one stupid AI and they will all be set to harm only the smart AI in a primitive co-op manner).
+
+List of current AIs:
+* waiting AI (does nothing)
+* random AI (randomly chooses actions)
+* rush AI (attacks with lots of cheap units)
+* commando AI (attacks with a few strong units)
+* bunker AI (doesn't attack but builds strong defences)
+* greedy AI (doesn't attack but tries to take over as many planets as possible)
+* multiple personality AI (changes behaviour to one of the other stupid AI every couple of turns)
+
+When they are build they will be battled against one another to see if one tactics prevails.
+
+==== Faze two (Hard-coded faze) ====
+
+I plan to build a smart AI that combines the basic behaviours (already coded for stupid AIs). Balancing between behaviours (when to attack, when to expand, when to defend) will be done by hard-coding simple rules. Ship plans will also be hard-coded.
+
+At this stage the smart AI should be able to beat all of the stupid AIs (hopefully even in very unfair battles). 
+ 
+==== Faze three (Heuristics faze) ====
+
+In this faze I plan to replace the simple rules that drive the smart AI with more complex heuristics (battle prediction, evaluate how endangered each planet is). I also plan to build a more advanced ship planer that takes into account available resources, ships already build and known enemy ships.
+
+At this faze I can change the behaviour of the AI by setting numeric parameters such as aggression, tenancy to build large (or small) ships, defensive requirements before expanding further.
+
+All the parameters and heuristics will be tuned so the heuristics driven smart AI beats the hard-coded smart AI with high certainty. It should also be able to beat stupid AIs in very unfair battles.
+
+==== Faze three and a half (Optimisation faze) ====
+
+In the remaining time I will further fine tune the heuristics and parameters manually and if time permits automatically (optimisation techniques that could be used include hill-climbing, genetic algorithms). I will probably be using hill-climbing as it is one of the easiest to code. Number of turns before wining and number of stupid AIs that it can beat would be the main indicators of progress.
+
+==== Faze three and two thirds (Humanification faze) ====
+
+If there is still time left I will try to make a few sets of parameters that will make the AI play in specific ways, that would create more or less challenging AIs (easy, medium, hard) and some that have "personalities" (camper, zerg rush imitator, chicken, kamikaze).
 
 === Main goals ===
-All of this is expected to get done.
+This will get accomplished.
 
-* add support for Minisec
-** this will get done before the start of GSoc 
-* add support for MTSec
-* add support for TAE
-* simplify AI writing as much as possible
-** helper functions and detailed documentation and tutorials
-* add support for coding AI in python
-** including a simple way of giving orders and getting facts about the current status of the universe
-
-As a bonus I will report all the bugs I find and comment the code a lot so I won't be the only one that knows what it does.
+* you will be able to code AI in pure python using daneel-ai
+** all or most of the client code will be hidden by simple functions to give orders and get facts about the universe
+** a working MTSec AI will serve as a proof that this was completed
+* working MTSec AI
+** should be some fun to play with for a moderately skilled player
+** should give newbies some beating
+** completed faze three (at least) of the development will serve as proof that a relative complex AI was achieved
 
 === Bonus goals ===
-Some of this is expected to get done (as much as time permits)
+This are some of the good side products of my work. I won't focus on this but it will happen.
 
-* add a collection of common AI methods
-** A*, negamax with alpha-beta pruning (improved minimax) and such
-* speed up code
-** parallel execution if possible (so we can put dual and quad cores to good use)
-** if possible reuse some of the code from last years gsoc project
-* add learning capabilities
-** if I discover any that could prove useful
+* AIs (stupid and the smart ones) can serve as a way to test tpserver-cpp (or any other server if it implements MTSec)
+** this could come handy for stress tests as there should be no problems in running dozens of stupid AI at the same time
+* bug reports, lots of bug reports
+** I plan on reporting everything that I find wrong with the client and especially the server
+** in case I have to have something fixed yesterday I will attempt to fix it myself
 
 === Timeline ===
+
+I have no vacation planed and will work 40 hours/week. I do however have 2 exams and will work about 30 hours the week before each exam (exam dates not known yet). I will be on IRC almost all the time and will probably work in the evenings too so I can stay in contact with developers from Australia and New Zealand (been there btw).
 
 ==== Pre coding ====
 
