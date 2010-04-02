@@ -4,7 +4,7 @@ Since I had a chat with Mithro I realised I had to turn my proposal upside down.
 
 == Short short version ==
 
-Add support for writing AI code in pure python to Daneel-ai. Write AI code for MiniSec and MTSec rulesets. Simplify the process of writing AI for new rulesets as much as possible.
+Add support for writing AI code in pure python to Daneel-ai. Write AI code for MTSec rulesets. Simplify the process of writing AI for new rulesets as much as possible.
 
 == Short version ==
 
