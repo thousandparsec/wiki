@@ -95,59 +95,49 @@ I have no vacation planed and will work 40 hours/week. I do however have 2 exams
 ** although this time is meant for community bonding I'm sure won't be able to keep my hand off the code and will try to get a head start
 
 ==== Coding period ====
-
-This timeline needs to be changed but it will probably look something like this:
-
-1 week - get basic python AI support into daneel-ai (simplification and helper functions will come later while coding AI)
-
-2 weeks - phase one: write all stupid AIs and to some testing on them (AI battles)
-
-2 weeks - phase two: glue stupid AIs together with some simple rules
-
-3 weeks - phase three and above: heuristics and parameters and optimisation (oh my!)
-
-4 weeks - buffer time. if something goes wrong it shouldn't set me back more than this (or so I hope). if nothing goes wrong this will be the time for some more optimisations and work on phases above three.
-
-and after Gsoc:
-
-I will finish any work I have started (probably automatic optimisation) and continue to maintain the code and fix bugs if any are found.
-
-If I get lucky I might also write my graduation theses about it, this would probably mean more work on the AI and that can only be good for TP and MTSec AI.
-
-
-OBSOLETE!!!
-
+'''Phase zero'''
 * May 24 - 30:
-** planing and start of coding and possible redesign
+** get basic python AI support into daneel-ai (simplification and helper functions will come later while coding AI)
+
+'''Phase one'''
 * May 31 - June 6:
-** coding
+** coding stupid AIs
 * June 6 - 13:
-** coding and testing
+** coding stupid AIs and testing them
+** first AI battles
+
+'''Phase two'''
 * June 14 - 20:
-** testing, fine tuning and documentation
-
+** code smart AI base
 * June 21 - 27:
-** planing and start of coding
-* June 28 - July 4:
-** coding
-* July 5 - 11:
-** testing, fine tuning  and documentation
+** code rules for smart AI
+** AI battles (at this point smart AI should beat all stupid AIs)
 
+'''Phase three (and above)'''
+* June 28 - July 4:
+** coding heuristics into smart AI
+* July 5 - 11:
+** optimise heuristics and behaviour parameters for smart AI
+** AI battles (at this point the new smart AI should beat the old smart AI)
 * July 12 - 18:
 ** mid-term evaluations
-** planing and start of coding
-* July 19 - 25:
-** coding
-* July 26 - August 1:
-** testing, fine tuning and documentation
+** automatic optimisation of heuristics and behaviour parameters for smart AI
+** AI battles to see the results of the optimisation
 
+'''Buffer time'''
+If something goes wrong it shouldn't set me back more than this (or so I hope). If nothing goes wrong this will be the time for some more optimisations and work on phases above three and writing guides and documentation.
+* July 19 - 25:
+* July 26 - August 1:
 * August 2 - 8:
-** safety reserve for unpredictable things
-** writing documentation and guides on AI writing
 * August 9 - 15:
 ** pencil down
 ** finishing documentation and guides
-** add more comments if needed
+** add more comments to the code if needed
+
+'''After GSoC'''
+I will finish any work I have started (probably automatic optimisation) and continue to maintain the code and fix bugs if any are found.
+
+If I get lucky I might also get to write my graduation theses about it, this would probably mean more work on the AI and that can only be good for TP.
 
 == About me ==
 
