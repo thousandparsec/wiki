@@ -8,9 +8,9 @@ Add support for writing AI code in pure python to Daneel-ai. Write AI code for M
 
 == Short version ==
 
-Since human players are not that easy to find every ruleset should have an AI opponent one can play against. MiniSec and MTSec rulesets are stable and don't have AI opponents (not sure if tpsai counts) so extending Daneel-ai to support these rulesets would make it the main client.
+Since human players are not that easy to find every ruleset should have an AI opponent one can play against. MTSec is a ruleset that is stable and doesn't have an AI opponent so extending Daneel-ai to support it would make it the dominant AI client.
 
-While working on the AI for these rulesets I would try to simplify the creation of AI for new rulesets as much as possible (through extended functionality and tutorials/documentation).
+While working on the AI for MTSec I would try to simplify the process of creation of AI for new rulesets as much as possible (through extended functionality and tutorials/documentation).
 
 Currently AI logic is meant to be written in CHR syntax, I would like to add a simple way of coding AI in python only so future developers could write pure python AI if they choose (and some things are just easier that way).
 
