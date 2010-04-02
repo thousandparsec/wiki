@@ -125,6 +125,7 @@ I have no vacation planed and will work 40 hours/week. I do however have 2 exams
 ** AI battles to see the results of the optimisation
 
 '''Buffer time'''
+
 If something goes wrong it shouldn't set me back more than this (or so I hope). If nothing goes wrong this will be the time for some more optimisations and work on phases above three and writing guides and documentation.
 * July 19 - 25:
 * July 26 - August 1:
@@ -135,6 +136,7 @@ If something goes wrong it shouldn't set me back more than this (or so I hope). 
 ** add more comments to the code if needed
 
 '''After GSoC'''
+
 I will finish any work I have started (probably automatic optimisation) and continue to maintain the code and fix bugs if any are found.
 
 If I get lucky I might also get to write my graduation theses about it, this would probably mean more work on the AI and that can only be good for TP.
