@@ -16,9 +16,13 @@ Currently AI logic is meant to be written in CHR syntax, I would like to add a s
 
 == Long version ==
 
-There is still text to be written here about why do I think this will help TP and why do I think pyhton support is needed.
+To gain players single player mode is a must and for that AI to play against is a must.
 
+For future AI coding (for new rulesets and for scenario mode if/when it's implemented) daneel-ai is a great framework but needs to be extended beyond rule-based AI and made more friendly. With this there will be more possible ways to code an AI and reduced development time as protocol and client libraries will be hidden as much as possible so developers can focus more on the AI itself.
 
+My MTSec AI will provide fun gameplay for beginners and more experienced players. It's behaviour will be highly customisable and could be changed to provide a challenge for every player. There will also be a number of simpler AIs that could be used as a base for specialised AI players (perhaps for scenarios or something similar).
+
+As an added bonus, my development and AI battles should give the server a good workout and will result in a great number of bug-reports.
 
 === MTSec AI creation process outline ===
 
