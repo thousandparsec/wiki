@@ -82,7 +82,7 @@ This will get accomplished.
 * working MTSec AI
 ** should be some fun to play with for a moderately skilled player
 ** should give newbies some beating
-** completed faze three (at least) of the development will serve as proof that a relative complex AI was achieved
+** completed faze three (at least) of the development will serve as proof that a relatively complex AI was achieved
 
 === Bonus goals ===
 This are some of the good side products of my work. I won't focus on this but it will happen.
