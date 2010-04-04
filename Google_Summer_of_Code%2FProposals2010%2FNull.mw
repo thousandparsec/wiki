@@ -59,7 +59,7 @@ At this stage the smart AI should be able to beat all of the stupid AIs (hopeful
  
 ==== Phase three (Heuristics phase) ====
 
-In this faze I plan to replace the simple rules that drive the smart AI with more complex heuristics (battle prediction, evaluate how endangered each planet is). I also plan to build a more advanced ship planer that takes into account available resources, ships already build and known enemy ships.
+In this faze I plan to replace the simple rules that drive the smart AI with more complex heuristics (battle prediction, evaluate how endangered each planet is). I also plan to build a more advanced ship planer that takes into account available resources, ships already built and known enemy ships.
 
 At this faze I can change the behaviour of the AI by setting numeric parameters such as aggression, tenancy to build large (or small) ships, defensive requirements before expanding further.
 
