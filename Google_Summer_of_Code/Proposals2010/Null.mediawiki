@@ -34,7 +34,7 @@ Also there will be many helper functions for writing code for new rulesets such 
 
 === MTSec AI creation process outline ===
 
-This how I plan to create my MTSec AI. It starts simple and gains complexity step by step. Progress is measurable. Will be coded in python.
+This is how I plan to create my MTSec AI. It starts simple and gains complexity step by step. Progress is measurable. Will be coded in python.
 
 ==== Phase one (Stupid phase) ====
 
