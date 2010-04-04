@@ -71,7 +71,7 @@ In the remaining time I will further fine tune the heuristics and parameters man
 
 ==== Phase three and two thirds (Humanification phase) ====
 
-If there is still time left I will try to make a few sets of parameters that will make the AI play in specific ways, that would create more or less challenging AIs (easy, medium, hard) and some that have "personalities" (camper, zerg rush imitator, chicken, kamikaze).
+If there is still time left I will try to make a few sets of parameters that will make the AI play in specific ways, which would create more or less challenging AIs (easy, medium, hard) and some that have "personalities" (camper, zerg rush imitator, chicken, kamikaze).
 
 === Main goals ===
 This will get accomplished.
