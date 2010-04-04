@@ -38,7 +38,7 @@ This is how I plan to create my MTSec AI. It starts simple and gains complexity 
 
 ==== Phase one (Stupid phase) ====
 
-I plan to build a few simple and stupid AI that each represent one type of behaviour. Their will serve as a basic for my smart AI and will be used to measure the progress by battling my smart AI against them (there will be more than one stupid AI and they will all be set to harm only the smart AI in a primitive co-op manner).
+I plan to build a few simple and stupid AI that each represent one type of behaviour. They will serve as a basic for my smart AI and will be used to measure the progress by battling my smart AI against them (there will be more than one stupid AI and they will all be set to harm only the smart AI in a primitive co-op manner).
 
 List of current AIs:
 * waiting AI (does nothing)
