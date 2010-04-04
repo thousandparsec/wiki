@@ -28,7 +28,7 @@ As an added bonus, my development and AI battles should give the server a good w
 
 I plan to expand daneel-ai to support coding AI in pure python. Support for CHR will stay untouched. There will also be a possiblity to combine CHR and python AI.
 
-The process of writing AI code will also be simplified. Many helper functions will be added so the AI writer won't have to worry about calls to the client library as all the functionality for giving orders and getting facts about the state of the universe will be kept in this simple and well documented functions.
+The process of writing AI code will also be simplified. Many helper functions will be added so the AI writer won't have to worry about calls to the client library as all the functionality for giving orders and getting facts about the state of the universe will be kept in these simple and well documented functions.
 
 Also there will be many helper functions for writing code for new rulesets such as order discovery.
 
