@@ -91,7 +91,7 @@ This are some of the good side products of my work. I won't focus on this but it
 ** this could come handy for stress tests and [http://en.wikipedia.org/wiki/Fuzz_testing fuzz testing] as there should be no problems in running dozens of stupid AI at the same time
 * bug reports, lots of bug reports
 ** I plan on reporting everything that I find wrong with the client and especially the server
-** in case I have to have something fixed yesterday I will attempt to fix it myself
+** in case I would have to have something fixed yesterday I will attempt to fix it myself
 
 === Timeline ===
 
