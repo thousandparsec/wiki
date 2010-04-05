@@ -1,7 +1,3 @@
-WARNING this is BETA
-
-Since I had a chat with Mithro I realised I had to turn my proposal upside down... and this has happened. It still needs a bit more text though.
-
 == Short short version ==
 
 Add support for writing AI code in pure python to Daneel-ai. Write AI code for MTSec ruleset. Simplify the process of writing AI for new rulesets as much as possible.
