@@ -1,0 +1,75 @@
+The following document is a short description of the work I'd like to develop on the 3D client for Thousand Parsec as part of the Google Summer of Code 2010 program. The main goals of this proposal are the addition of a procedural spaceship and planet generator, support for playing Single Player games in the 3D client, the possibility of downloading and using the Media.gz file and the completion of the support for the new TP04 protocol.
+
+== The goals and schedule ==
+
+The scope of this proposal is quite broad, since it involves the addition of several missing features to the 3D client which are mostly unrelated amongst themselves, namely:
+
+* '''Adding single player support''' Give tpclient-pyogre a clean interface to play games versus a local AI client.
+* '''Completing the TP04 protocol''' Finishing the remaining issues that the 3D client has with the TP04 protocol implementation.
+* '''Procedural content generation''' Increase the client's graphical richness by giving players the option to generate custom spaceships and planets for their games.
+* '''Using the Media.gz file''' Adding support for the 3D client to download and interpret a server's Media.gz file.
+
+Since the tasks keep very little relation between themselves, they can be scheduled for the duration of the three months in a quite straightforward manner. Out of the four, I believe that the procedural content generation will take the longest time, whilst adding support for the Media.gz file will be rather trivial. That is why I would propose splitting the tasks during the 2 periods of the Summer of Code as follows:
+
+* '''May 24th - June 24th (1st period):''' Single player support (4 weeks)
+** Design and implement GUI dialogs (2 weeks)
+** Integration code for Single Player (2 week)
+* '''June 24th - July 12th (1st period):''' Completing the TP04 protocol (3 weeks)
+* '''July 12th - August 3rd (2nd period):''' Procedural content generation (4 weeks)
+** Procedural spaceship generation (2 weeks)
+** Spaceship editor (1 week)
+** Procedural planet generation (1 week)
+* '''August 9rd - August 16th (2nd period):''' Media.gz file support (1 week)
+
+Originally, I also proposed the possibility of implementing a battle viewer for BattleXML files, as suggested on the wiki, but it seems that the battle viewer is mostly completed on the git repository for tpclient-ogre. If time allows, and all the other main tasks are completed before schedule, more work could be spent on improving the Battle Viewer or improving the overal graphics of the client before the Summer of Code is over.
+
+Let's now discuss some of the specifics of each task.
+
+== Single player support == 
+
+Since all the back-end functionality for Single Player games is already exposed and available through libptclient-py, implementing the Single Player interface for tpclient-pyogre will just mean designing the user interface dialogs for game creation using CEGUI, involving:
+
+* Ruleset selection dialog
+* Server selection dialog
+* Ruleset options selection dialog
+* Server options selection dialog
+* Oponents setup dialog
+
+When the Single Player dialogs are properly integrated in the game (using the same design guidelines as the other GUI dialogs), we'd just need to plug in the simple interaction set-up code as detailed in http://www.thousandparsec.net/wiki/Single_Player .
+
+== Procedural content generation ==
+
+Although the Proposals Wiki suggests the possibility of creating, on the one hand, an editor to manually design spaceships, and on the other hand, a procedural generator for planets, I believe that the actual creation of spaceships for Thousand Parsec games can be better accomplished using a hybrid procedural approach (i.e. one where the ship is not manually designed, but generated from a series of design parameters and a seed). Parametrized procedural generation (as seen in Mass Effect 2, for instance) gives nice looking, highly customizable results with a minimal footprint to both storage and real-time generation of the content.
+It is worth noting that although this approach might seem overly com- plicated, it is in fact quite the opposite since spaceships and planets are possibly the easiest type of procedural content to generate.
+
+=== Spaceships ===
+The generation of procedural spaceships is a topic which hasn’t been exten- sively developed by many developers in the past, but spaceships have several properties which allow them to be easily generated procedurally:
+To start off, they are mobile objects but without animations. They don’t require a skeleton, only the location of certain fixed attachment points for graphical effects (smoke sprites, etc), and, most importantly, classically, spaceships have a very clear Z-axis symmetry which greatly simplifies the process of generating any given model.
+Keeping this in mind, the process of spaceship generation would be man- aged by a simple GUI which would allow to specify the key parameters of the ship’s design (shape, propellers, wings, etc.) coupled with a random seed to generate different permutations of the same global design. Obviously, the visual representation of the ship would be updated on real time as the design is tweaked, and the final result (which would be sourced solely of the parameters and a seed) could be easily exported to a simple ASCII string which could be saved anywhere, shared in forums, etc (once again, taking the same approach as the character generation process in the Mass Effect games).
+
+=== Planets ===
+The generation of a procedural planet is limited to the generation of its texture (since all planets are round) and the possible addition of external rings to it. The surface of a planet can be easily and realistically created using fractal algorithms with simple parametrization for main surface colors, amount of superficial noise (e.g. craters, mountains) and amount of land versus water on the planet.
+
+== The TP04 protocol ==
+Although the final specification of the TP04 protocol hasn't been completed yet, tpclient-pyogre already supports part of the new features of this new protocol. As far as my understanding goes, the work-in-progress specification of the TP04 protocol is already implemented in the libtpproto2-py library (which already supports the parsing of protocol data from its XML definition), and the 3D client does already have partial support for using the new version of the library. There are however, several features of the new protocol which haven't been completely implemented yet, namely:
+
+* Support for filters
+* Support for dynamic objects
+* Support for research options
+* EOT support
+
+Studying exactly how much work on these features has been previously done will be done during the preparation phase of the project; completing all of these before the first evaluation will hopefully be a small undertaking that can be completed before the first evaluation.
+
+== About me ==
+
+I am a 20 years old Computer Science student and amateur game developer, currently living in Spain and attending the Universitat Politecnica de Valencia, on the third year of my degree; I'll be moving shortly to Helsinki, Finland, as part of a one-year scholarship at Aalto University (the former Teknillinen Korkeakoulu).
+
+This is my third year in a row participating on the Summer of Code; every year I try to find a gaming-related project to work on during the Summer, in order to improve my game development skills, and so far it has worked out great.
+
+In the 2008 edition, I worked as a student developer for ScummVM, mentored by Johannes Schickel. My job consisted on implementing a cross-platform, high performance Graphical User Interface engine in C++ (with small pieces of assembly for different platforms): this included a generic vectorial renderer, a widget layout engine and the real-time parsing and generation of GUI themes stored in a custom XML format. 
+
+In the 2009 edition, I worked as a student developer for PyGame and mentored by Marcus von Appen. My job consisted on implementing a high-level text rendering library in C, with bindings for Python, using FreeType2 as a raster engine in order to draw all kinds of font formats on arbitrary bitmap surfaces.
+
+I consider both projects a personal success; they were both integrated back into their own trunks and are being used on release versions of ScummVM and pgreloaded (the experimental branch of PyGame), respectively. I'm also really happy about the personal interaction with my two previous mentors and the communities of both projects, and I do believe that both mentors were also happy about my performance and achieved goals.
+
+I personally believe I'm a great candidate to undertake this specific project, since apart from an amateur game developer, I am also a die-hard (and quite experienced) Pythonista, and I have extensive knowledge of OpenGL, Direct 3D, C, C++, and obviously Python. I have worked with PyGame (the backend on which the PyOgre engine is based) both in personal projects and as part of the Summer of Code, and I have plenty of experience on procedural content generation (as part of my Computer Science Degree) and with using XML for data specification on games (I designed the current XML theme format which ScummVM uses). My past experience with Ogre3D is limited to an old project using its original C++ API, but I believe I could get very much up to speed by studying its Python API during the preparation phase of the project.
