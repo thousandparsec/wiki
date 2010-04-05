@@ -471,6 +471,22 @@ If the above basic tasks are easy enough for you to do in less then three months
 * Qt 4
 * KDE 4
 
+= Galaxie Client =
+
+Finish the galaxie GUI to use Elementary.  Ideally this design should be useful to run on devices with a smaller screen or touchscreens.  There are a number of devices currently available which can use elementary UI.  Additionally completion of the order interface would be desirable.
+
+This will involve ripping out the curren EWL/ETK widgets, and use elementary instead.
+
+Additionally the galaxie client should be updated to work happily with the current tp04 status in the servers (galaxie supports some tp04, and is entirely asynchronous inside already).
+
+=== More Information ===
+* [http://www.enlightenment.org/] Enlightenment homepage (for EFL & Elementary
+
+=== Required Skills ===
+
+* C
+* Elementary / EFL (or just learn it)
+
 = Web page related work =
 
 Convert the existing wiki+website into something like [http://ikiwiki.info/ ikiwiki]
