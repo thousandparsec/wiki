@@ -1,0 +1,23 @@
+== Abstract ==
+
+This project aims to use a combinational AI technique into the world of 4X games by making use of some clever tricks and gluing them together with genetic programming and neural networks while creating an AI capable of playing any 4X game with any user in a way that will not seem too weak for an experienced user nor too strong for a beginner. Thus, the AI will need to have a very good ability to adapt to the environment.
+
+== Content ==
+
+My project will start expanding the Daneel AI integrating into it the theory of Proof Number Search in a way that will allow for multiple goals with multiple weights and scores, each one of them being constantly tweaked by the user input.
+
+For example, suppose that at some point in the game the user is expected to do move A but he does a move B. If this move was considered weaker by the AI and it proved to be so then the AI will start thinking that it is playing with a novice and will adjust itself to be more like a mentor that a true enemy. However, if that move proves to be stronger than expected or the player is on a streak of doing the best moves then the AI will know that it plays with a master and will become more unforgiving hunting every player mistake and trying to force him into making one.
+
+This constant adaptation will be more visibile at the start of the game than at the end, thus it will be implemented via simulated annealing. To gather input from user, a network of neural nets working on fuzzy logic will be used, weights and connections being established real-time during the game with a genetic programming submodule.
+
+All of the above will simply create a mechanism to provide a list of objectives to the AI and to obtain an importance score for each of them. Then, using PNS and variants, the AI would deduce a sequence of moves and will stick to it for several rounds while still adapting and pondering about next steps. Changing from one sequence of moves to the next one will be done continuously via a sigmoid interpolation, in order to ensure the appearance of a constant adaptation.
+
+As for a timeline, I think that I can do the PNS part ignoring the adaptation by the beginning of July and focus on the adaptation to the user on the second half of the summer, until the mid of August when GSoC would be over. By constantly offering a playable bot, I guess that I can always attract feedback from the comunity and steer the project to the greatest AI that can exist.
+
+== About me ==
+
+I have played 4X games for many years now, I was (and am) a fan of Wesnoth and other strategy games. As for programming skills, I knwo Python very well and I am pretty sure that I can develop this bot that i've marketed above.
+
+As for programming languages, I am fluent in C, Java, Python and Haskell and I know several others. I am able to quickly translate one project from one language to another if in need. If someone is interested in coding speed, Python leads by far (nearly 300 lines of code per day raising to 500 if near an important deadline).
+
+If you want to know more about me, please see my homepage [0] and the links stemming from it. I can provide code snippets from various projects on demand. If you want to question me, please send an email to mihai.maruseac@rosedu.org and I will answer in at most 24 hours.
