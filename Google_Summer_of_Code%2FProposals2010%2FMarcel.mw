@@ -4,31 +4,103 @@
 
 Improve thousand parsec's KDE4 client Parsek to the point that it is possible to play a game with it.
 The improvement includes a user friendlier user interface which looks more like a game client than a chat client.
-Add missing client parts like star-map, order-manager, proper account-manager.
+Add missing client parts like star-map, proper account-manager, settings.
 
 == Long version ==
 
+KDE4 as a project has only mini games, a 4X game would improve the KDE gaming sector.
+
 === User interface improvements ===
 Graphics/art:
+Removing the standard gray/white background of the widgets, adding some contrast and colors
+to change the client to something a commercial game client would look like.
 
 Login/start window:
-First GUI element the user will see. It provides a basic account manager and server selection.
+First GUI the user will see. It provides a basic account manager and server selection.
+Account informations will be saved over kwallet.
+A way to setup a single-player game could be implemented later there, too.
 
 Game window:
+The game window contains all game related widgets such as a star-map, chat, resource overview.
+The star map takes most of the game window's space and is located in the center.
+A resource overview will be provided at the top with a "resource-bar".
+Chat widget is on the bottom. Most of the widgets can be moved around to customize the client to the needs of the user.
+
+Star map:
+Visual representation of the universe includes eg. planets, ships and orders.
+Orders can be given by right clicking on an object and selecting sub-objects or an order such as a build command.
 
 Settings:
+Account, graphic and network settings.
 
-=== Missing widgets/client parts === 
+KDE4 integration:
+Saving account related data in kwallet.
+Native notifications for chat messages or other events.
 
-Star-map:
-
-Order-manager:
-
-account-manager:
+Resource-bar:
+To see the state of the current economy a resource-"bar" is needed similar to other strategy games.
 
 == Timeline ==
 
-TODO
+=== Pre coding ===
+
+* April 27 - May 23: Community Bonding Period
+** Get all the software which is required and set it up, eg. a server with some rule-sets.
+** Dive deep into Parsek source code and libtpproto-cpp
+** Learn more about the rule-sets to know what is possible atm. and what should work in Parsek
+** Get a quick overview the possible required KDE widgets and APIs
+
+=== Coding ===
+
+* May 24 - 30:
+** Improve the login window
+** Add kdwallet support
+
+* May 31 - June 6:
+** Implement chat widget
+** Add native KDE notifications for chat
+
+* June 6 - 13:
+** Implement a settings window
+
+* June 14 - 20:
+** Start implementing the star-map
+*** Planets
+*** Ships
+
+* June 21 - 27:
+** Continue on the star-map
+*** Orders
+
+* June 28 - July 4:
+** Add a resource-bar on top of the star-map
+
+* July 5 - 15:
+** Pre mid-term evaluation buffer time
+** Write mid-term evaluation
+
+* July 12 - 16 Mid-term evaluations:
+** Finish and submit mid-term evaluation
+
+* July 17 - 23:
+** Implement statistic widget
+
+* July 24 - August 1:
+** Create graphics for widgets
+** Polish the look of the client
+
+* Agust 2 - 8:
+** Buffer time before final evaluation
+
+* August 9 "pencils down time":
+** Improve documentation
+** Clean up code
+** Optimize code
+** Create tarballs and packages
+** Start working on the final evaluation
+
+* August 16 - 20:
+** Finish and submit final evaluation to Google
 
 = Personal Information =
 
