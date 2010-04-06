@@ -118,6 +118,11 @@ Optional a native KDE4 notification can be triggered, this would be a option in 
 
 Marcel 'Agon' Hauf, 20, from Germany, second semester, Karlsruhe University of Applied Sciences, specialization in computer science.
 
+"Systemassistent" (system assistant)- degree
+- Includes learning of the Adobe Suite (mainly Photoshop) and Gimp
+- Basic web developing (HTML and JavaScript)
+- General design of print and web media
+
 IRC nick on #TP: marcel_ or agon
 
 Email: marcel.hauf (at) googlemail.com
