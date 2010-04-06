@@ -1,0 +1,65 @@
+= GSoc  2010 : Improvising Risk Game in Thousand Parsec =
+IRC nick: cool_coder
+
+My Proposal 
+
+=In Short=
+I would like to work on the existing Risk game of Thousand Parsec and improve upon it, by including features which make the existing game more exciting and fun to play. I have mainly suggested additions to the existing rulesets.
+
+=In Detail=
+The following are the major changes I would like to implement:
+1.	Introduce the concept of “power”. Each player has an asset power, based on which he can obtain armies to attack other players. Based on the planets a player owns, his power increases after each turn.
+
+2.	Provide additional reinforcements on top of the existing ones if the player owns an entire star cluster. 
+
+3.	Introduce the concept of fortification, through which a player can protect his territory. A player should have a minimum number of armies in the planet to say that it is “fortified”. A fortified planet is more difficult to attack. The attacker should move a minimum number of armies to a fortified place, to attack it.
+
+4.	Improve upon the existing GUI, especially the part where the user makes moves and receives messages.
+
+Bonus Goals:
+Implement an additional feature where the players can negotiate and merge their armies against another player. This would introduce a new dimension to risk, and make it different from the traditional one.
+
+=Milestones and Timeline=
+
+I would like to work in an iterative manner, producing a working prototype with the specified feature at the end of each milestone. The various iterations in my project would be:
+
+From now till May 23rd:
+Study the existing code in greater detail and draw concrete plans and high level specifications for the project. Get in touch with the mentors to know them better and for guidance.
+
+
+
+ Iteration 1:  (May 24th to June 14th)
+Implement the game with the feature “power”, which determines his ability to attack others.  Increase his power at the end of each turn, based on the planets he has conquered.
+
+Iteration2: (June 15th to June 24th)
+Implement the second idea,that is to provide reinforcements if the player own an entire star cluster.
+
+Iteration3:  (June 25th to July 5th)
+Implement the concept of fortification, to enable the player to protect his territory.
+
+Iteration4:  (June 5th to July 15th)
+Work on the existing GUI and improvise it.
+
+Iteration5:  (July 15th to July 25th)
+Testing phase- Make sure that the existing functions work perfectly in all scenarios.
+
+Iteration6:  (July 25th to August 10th)
+Implement the bonus goal above or any other suggestions/improvements and deliver the final product.
+
+August 10th to August 16th
+Cushion time.
+
+
+=About Me:=
+I am a third year student in electrical engineering from National University of Singapore pursuing a minor in Computer Science. 
+I am proficient in C and C++. I have also picked up C# and Visual Basic which were need for my projects.
+I have developed games, for university projects, mainly on MS Visual Studio, which comes with a Team Foundation Server.
+I would be relatively free after my exams which end on May, and hence I don’t need to wait till the official date (24th) to get started.
+I do not have any plans during the holidays , hence will be able to devote most of my time to the project. A minimum of  8*5 hrs per week is guaranteed.
+Projects I have worked on:
+1.	I have implemented an online ordering system, where one can order books and simulated the entire process from ordering to delivery using hardware + software. I used C programming for this.
+
+2.	I have implemented the monopoly game in Assembly language. I made it slightly different from the traditional monopoly, to make it more interesting. Working in ASM was challenging.
+
+3.	I am currently working on implementing a game in Visual C#. It is a game where the user gets emergencies he has to attend to, and he gains points based on the number of lives he has saved. He can use his points to buy more resources to save people.
+This is the first draft of my proposal. Feedback of any kind is appreciated.
