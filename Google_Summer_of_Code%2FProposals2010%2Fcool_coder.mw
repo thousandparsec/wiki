@@ -61,6 +61,7 @@ I have developed games, for university projects, mainly on MS Visual Studio, whi
 I would be relatively free after my exams which end on May, and hence I don’t need to wait till the official date (24th) to get started.
 I do not have any plans during the holidays , hence will be able to devote most of my time to the project. A minimum of  8*5 hrs per week is guaranteed.
 Projects I have worked on:
+
 1.	I have implemented an online ordering system, where one can order books and simulated the entire process from ordering to delivery using hardware + software. I used C programming for this.
 
 2.	I have implemented the monopoly game in Assembly language. I made it slightly different from the traditional monopoly, to make it more interesting. Working in ASM was challenging.
@@ -68,4 +69,5 @@ Projects I have worked on:
 3.	I am currently working on implementing a game in Visual C#. It is a game where the user gets emergencies he has to attend to, and he gains points based on the number of lives he has saved. He can use his points to buy more resources to save people.
 
 This is the first draft of my proposal. Feedback of any kind is appreciated.
+
 =Comments=
