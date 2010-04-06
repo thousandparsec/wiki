@@ -8,6 +8,7 @@ I would like to work on the existing Risk game of Thousand Parsec and improve up
 
 =In Detail=
 The following are the major changes I would like to implement:
+
 1.	Introduce the concept of “power”. Each player has an asset power, based on which he can obtain armies to attack other players. Based on the planets a player owns, his power increases after each turn.
 
 2.	Provide additional reinforcements on top of the existing ones if the player owns an entire star cluster. 
