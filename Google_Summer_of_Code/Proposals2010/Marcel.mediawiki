@@ -9,36 +9,46 @@ Add missing client parts like star-map, proper account-manager, settings.
 == Long version ==
 
 KDE4 as a project has only mini games, a 4X game would improve the KDE gaming sector.
+Tpclient-pywx doesn't fully fit into a KDE Desktop and tpclient-pyogre which is a 3D client
+requires a suited graphic card. Parsek fills out the hole and the developing should be continued until it
+is a decent 4X game client for KDE4.
 
 === User interface improvements ===
-Graphics/art:
-Removing the standard gray/white background of the widgets, adding some contrast and colors
-to change the client to something a commercial game client would look like.
+==== Graphics/art ====
+A game client should contain proper, nice looking graphics.
+Games with gray/white areas and buttons are not modern games.
+By removing the standard gray/white background of the widgets, adding some contrast and colors, Parsek could look like a commercial game client.
 
-Login/start window:
-First GUI the user will see. It provides a basic account manager and server selection.
+==== Login/start window ====
+The first GUI the user will see. It provides a basic account manager and server selection.
 Account informations will be saved over kwallet.
 A way to setup a single-player game could be implemented later there, too.
 
-Game window:
+==== Game window ====
 The game window contains all game related widgets such as a star-map, chat, resource overview.
-The star map takes most of the game window's space and is located in the center.
-A resource overview will be provided at the top with a "resource-bar".
-Chat widget is on the bottom. Most of the widgets can be moved around to customize the client to the needs of the user.
+Most of the widgets can be moved around to customize the client to the needs of the user.
 
-Star map:
+==== Star map ====
 Visual representation of the universe includes eg. planets, ships and orders.
 Orders can be given by right clicking on an object and selecting sub-objects or an order such as a build command.
+The star map takes most of the game window's space and is located in the center.
 
-Settings:
+==== Settings ====
 Account, graphic and network settings.
 
-KDE4 integration:
+==== KDE4 integration ====
 Saving account related data in kwallet.
 Native notifications for chat messages or other events.
 
-Resource-bar:
-To see the state of the current economy a resource-"bar" is needed similar to other strategy games.
+==== Resource-bar ====
+To see the state of the current economy a resource-"bar" is needed, it should look similar to other strategy games.
+Possible integration into the star map.
+
+==== Chat ====
+The chat widget has a chat history which could be embedded into the star map.
+New chat messages would "pop-up" in the star map and fade away after a few seconds.
+A new chat message can be written by eg. pressing enter, typing the message and pressing enter again.
+Optional a native KDE4 notification can be triggered, this would be a option in settable in the settings widget.
 
 == Timeline ==
 
