@@ -1,7 +1,7 @@
 = GSoc  2010 : Improvising Risk Game in Thousand Parsec =
 IRC nick: cool_coder
 
-My Proposal 
+=My Proposal=
 
 =In Short=
 I would like to work on the existing Risk game of Thousand Parsec and improve upon it, by including features which make the existing game more exciting and fun to play. I have mainly suggested additions to the existing rulesets.
