@@ -4,11 +4,27 @@
 
 Improve thousand parsec's KDE4 client Parsek to the point that it is possible to play a game with it.
 The improvement includes a user friendlier user interface which looks more like a game client than a chat client.
-Add missing client parts like a star-map, order-manager, proper account-manager.
+Add missing client parts like star-map, order-manager, proper account-manager.
 
 == Long version ==
 
-TODO
+=== User interface improvements ===
+Graphics/art:
+
+Login/start window:
+First GUI element the user will see. It provides a basic account manager and server selection.
+
+Game window:
+
+Settings:
+
+=== Missing widgets/client parts === 
+
+Star-map:
+
+Order-manager:
+
+account-manager:
 
 == Timeline ==
 
