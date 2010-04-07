@@ -5,7 +5,8 @@ This page holds links to Proposals for the 2010 [[Google Summer of Code]].
 Add your link below.
 
 * [[Google_Summer_of_Code/Proposals2010/Jiaming-Scenario|Jiaming's proposal-Scenario Support]]
-* [[User:Epyon/2010/TpServerCppAsio|Epyon's proposal]] - tpserver-cpp boost::asio implementation
+* [[User:Epyon/2010/TpServerCppAsio|Epyon's proposal 1]] - tpserver-cpp boost::asio integration and asynchronous architecture
+* [[User:Epyon/2010/TpServerCppLuaRulesets|Epyon's proposal 2]] - tpserver-cpp ruleset API upgrade and Lua rulesets
 * [[Google Summer of Code/Proposals2010/Null|Null's proposal]] - MTSec support for daneel-ai, support for writing AI in pure python and simplification of writing AI for new rulesets
 * [[Google Summer of Code/Proposals2010/glew|Glew's Scenario/Campaign Proposal]]
 * [[Google Summer of Code/Proposals2010/Improving_the_3D_client|Improving the 3D client (Tanoku's proposal)]]
