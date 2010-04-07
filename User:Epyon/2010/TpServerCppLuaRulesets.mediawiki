@@ -35,14 +35,6 @@ Once that would be done, we would devise a domain specific language that would d
 
 * implement the beginnings of EliteSec in Lua ;>
 
-== Implementation details ==
-
-=== Ruleset interface ===
-
-
-=== Lua interface ===
-
-
 == Project schedule ==
 
 I'll be available probably 4/5 time during the coding period (I need some time for my PhD). Also 10-12 days will probably be spent on a short vacation, although I might still be able to do some work then. 
