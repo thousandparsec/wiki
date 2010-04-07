@@ -87,7 +87,7 @@ Select Target
 According to the code, the searching on the System Component panel requires some optimization. The specific function this refers to is the onSearch function.
 
 =Timeline=
-'''May'''
+'''May - Primary Objective'''
 *May 31: The client will be capable of updating object data without redownloading everything.
 
 '''June'''
@@ -96,7 +96,7 @@ According to the code, the searching on the System Component panel requires some
 *June 21: The client will be capable of displaying multiple orders.
 *June 28: The client will be capable of submitting multiple orders.
 
-'''July'''
+'''July - Secondary Objective'''
 *July 5: Messages will be displayed in a battle log format.
 *July 12: The object information panel will display next to the object as a rollover panel. 
 
