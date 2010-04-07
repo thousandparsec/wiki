@@ -1,5 +1,9 @@
 == Abstract ==
 
+The following project has two major goals -- the primary goal is moving tpserver-cpp network layer into the Boost.ASIO framework, and preparing the rest of the server for taking advantage of the Proactor architecture that is weaved into ASIO. The secondary goal is to take advantage of the new architecture to rewrite the tpserver-cpp systems to be asynchronous, basing on ASIO's framework.
+
+== Extended abstract ==
+
 boost::asio is the current cutting edge of C++ server development. Not only is it capable of running high performance servers on absurd load, it is also a very readable, portable and easily extendable framework for server development, and a candidate for inclusion in the standard library for the next C++ standard. 
 
 Moving tpserver-cpp to boost::asio would have several advantages: 
@@ -12,19 +16,17 @@ Moving tpserver-cpp to boost::asio would have several advantages:
 
 === Primary goal ===
 
-* substitute tpserver-cpp network layer and connection classes with boost::asio code, on a single thread and single proactor instance
+* substitute tpserver-cpp network layer and connection classes with boost::asio code, on a single thread and single Proactor instance
 
 === Secondary goals ===
 
-* start work on thread support, by moving in locking a mutex as deep into tpserver-cpp as possible
-* implement multi-thread support to the level achieved by the above
-* refactor the code on the go with threading in mind
+* enforcing the player/server data distinction as discussed below
+* refactor the code on the go with threading in mind (logging, etc)
 
 === Bonus goals ===
 
-* allow for complete thread safety by only mutexing the singleton entities (mainly the persistence module, the ruleset and global data)
-* asses the possibility of full thread support also in the modules mentioned above
-* try a cut down (without some additional features) compilation on Windows
+* full multi-threaded architecture of the system, based on boost::strands
+* try a cut down (without some additional features) compilation on native Windows
 
 == Implementation details ==
 
@@ -36,15 +38,13 @@ The major goal is to take advantage of ASIO's network layer -- without thinking 
 
 === Threading ===
 
-Once that is done and tested as working the harder part will begin -- thread safety. It's no secret that tpserver-cpp is completely unsafe from threading point of view. Things that will need to be taken into account:
+Once that is done and tested as working the harder part will begin -- thread safety. It's no secret that tpserver-cpp is completely unsafe from threading point of view. However, deeper research revealed that with a proper design, there's no need for mutexing altogether -- to provide full thread support we just need to provide the following:
 
-* persistence is a major blocker here -- probably will need to be mutexed on any operation, unless I'll find time to learn a little about mySQL and thread safety. 
-* game and ruleset and other singletons -- they'll need to be mutexed at least on write operations. There's a big question here, whether we could make data stored per thread, what would simplify matters a lot, but would increase the load on persistence by the amount of threads -- design decision to be made with the rest of the team
-* logging needs to be done in a single thread, hence there's a need to do thread-safe log calls
+* ruleset and game data is read only during the turn duration (persistence will be called only once for every requested item)
+* players modify only their own dataset (their order queue, which doesn't modify the ruleset/game state)
+* once turn end comes, the server locks against player requests and performs a synchronous update of the game state
 
-=== Further issues ===
-
-Once at least a heavily mutexed threading model is up and working, time will come to take a look at the design and decide where we can push the concurrency line further. What data can be per-thread, what must be shared. Also probably here would be a good time to reinvestigate the persistence implementation.
+As we see, in this "ideal" example, we will only have asynchronous reads, not writes, and we can set up a guarantee that the read data will not change. Hence the second part of the project will be about setting up and enforcing those guarantees where possible -- some problems will still occur however, like the logging system that needs to be done in a single thread.
 
 == Project schedule ==
 
@@ -57,15 +57,16 @@ Getting up to date with the server, and investigating the internals with ASIO in
 === May 24 - July 12 (phase 1) ===
 
 * implementing the single-thread proactor of ASIO as the network layer
-* rewriting the connection classes and network class to handle that
+* rewriting the connection classes and network class to handle that (using strands)
 * reimplementing all the timer events as proactor events
 * fixing smaller threading issues on the go
 
 === July 13 - August 9 (phase 2) ===
 
-* mutexing all the singletons that are too hard to quickly parallelize
-* reworking the logger system to work on a single thread and safely accept messages from other threads
-* moving the mutex level as deep as possible without major changes
+* rewriting code for the full server and player data separation
+* preparing the end of turn modification lock
+* rewriting the thread unsafe systems in a thread-safe manner (logging, etc)
+* rewrite of the persistence module to keep up with our guarantees (also checking on the threading of the SQL connection)
 * any bonus goals if time left
 
 === August 9 - August 16 (buffer) ===
