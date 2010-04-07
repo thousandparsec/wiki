@@ -64,8 +64,8 @@ The object information panel will be completely removed and the information tran
 ====Trajectory display of moving objects====
 When a move command is issued, a line will be drawn between the object and its destination. A function will have to be added to the ObjectComponentClass that is called whenever the battlefield gets redrawn. It will search through the array of orders, pull out any ids that have a move command issued to them and commence drawing the line from the object to its destination. 
 
-====Condense Menu Items====
-This will be a simple edit made to the menu-bar div id that will convert it into a dropdown menu that will hide menu items such as “Download the Universe” and “Settings” so that there’s more room for the actual game board. 
+====Condensed Menu Items====
+This will be a simple edit made to the menu-bar div id that will convert it into a dropdown menu that will hide menu items such as “Download the Universe” and “Settings” so that there’s more room for the actual game board.
 
 ====Convert order’s panel to intuitive right-clickable menu====
 This will further modify the OrderComponent function in the frontend javascript code so that order issuing is more intuitive and slightly less cumbersome. All orders will be accessible from a right-click menu of the object. When a command is selected that requires a target, the user will then click on the target and the trajectory line will show. On commands that do not require a target, the issue will simply be issued. However, on those orders that require additional information such as when a player is building things, a dialog will pop up to allow the player to create the necessary units they require before the order is issued. 
