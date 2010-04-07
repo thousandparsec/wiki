@@ -49,9 +49,11 @@ Logic groupings that require change
 The secondary objective is to implement changes to the GUI elements of the client so that game play is more intuitive and efficient.  
 
 ====Messages to Battle Log style====
-Because it becomes cumbersome to flick through individual messages to gather what has happened during a turn, it seems more efficient to display all that information in one place. See the attached image on how the information display will be changed. 
+Because it becomes cumbersome to flick through individual messages to gather what has happened during a turn, it seems more efficient to display all that information in one place. The battle log style will list all messages under the turn that they happened. 
 
-Both the javascript and the css for the message display will need to be changed and possibly rewritten. The specific javascript function in question is the MessageComponent function. 
+Both the javascript and the css for the message display will need to be changed and possibly rewritten. The specific javascript function in question is the MessageComponent function.
+
+[[File:MessageBattleLog.png]]
 
 ====Object information panel to rollover item====
 The object information panel will be completely removed and the information transferred to a rollover panel that shows up next to an object on rollover. This will make surveying pertinent information more efficient. Again, this affects the javascript ObjectComponentClass which will require a rollover function instead of a clicking one. This will also mean that the info-component container will need to be changed into a panel that can be hidden.
