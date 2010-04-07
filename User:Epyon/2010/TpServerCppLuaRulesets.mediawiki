@@ -49,11 +49,22 @@ I'll be available probably 4/5 time during the coding period (I need some time f
 
 === May 10 - May 23 (pre-planning) ===
 
+Do a research on the content of the existing rulesets, do a research on the needs of ruleset designers, and take a look at the way it is done in tpserver-py too. Plan out the exact details of the schedule.
 
 === May 24 - July 12 (phase 1) ===
 
+* upgrade and rewrite the C++ API
+* port the rulesets to the enhanced API on the go
+* create a support library and make use of it to remove common code
+* implement Lua support base in tpserver-cpp
+* design the Lua API
 
 === July 13 - August 9 (phase 2) ===
+
+* port the C++ API directly to Lua, preparing proper metaobjects
+* refine the Lua API to the designed API, port MiniSec
+* prepare a component library for Lua
+* port MTSec, adding things if needed, then if time is left port another ruleset
 
 === August 9 - August 16 (buffer) ===
 
