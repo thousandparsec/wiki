@@ -84,7 +84,7 @@ Rightclick object and select order
 Select Target
 
 ====Optimize Searching====
-According to the code, the searching on the System Component panels requires some optimization. The specific function this refers to is the onSearch function.
+According to the code, the searching on the System Component panel requires some optimization. The specific function this refers to is the onSearch function.
 
 =Timeline=
 '''May'''
