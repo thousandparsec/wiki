@@ -1,5 +1,5 @@
 =Abstract=
-The focus of this project is to improve upon the tpclient-pyweb version of the Thousand Parsec game. In order to accomplish this goal, there will be two main objectives to complete. Under each objective, there are several “to-do” items that must be completed in order to accomplish the objective. A quick breakdown of the tasks in each objective, which are expounded on underneath, is as follows:
+The focus of this project is to improve upon the tpclient-pyweb version of the Thousand Parsec game. In order to accomplish this goal, there will be two main objectives to complete. Under each objective, there are several “todo” items that must be completed in order to accomplish each objective. A quick breakdown of the tasks in each objective, which are expounded on underneath, is as follows:
 
 
 '''Primary Objective – TP04 Support'''
@@ -12,9 +12,8 @@ The focus of this project is to improve upon the tpclient-pyweb version of the T
 # Object information panel to rollover item
 # Trajectory display of moving objects
 # Condensed menu items
-# Convert order’s panel to intuitive right-clickable menu
+# Order’s panel to intuitive right-clickable menu
 # Optimize Searching
-
 
 =Details=
 ===Primary Objective===
