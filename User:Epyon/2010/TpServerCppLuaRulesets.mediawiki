@@ -1,0 +1,60 @@
+== Abstract ==
+
+The way that rulesets are implemented in tpserver-cpp is by no means optimal. This project aims at taking care of this in two ways -- first by simplifying the API for ruleset creation and moving all common tasks into the server so they don't need to be repeated for every ruleset -- secondly by providing an even cleaner Lua API over the ruleset creation, as an addition to the possibility of coding them in C++.
+
+== Rationale ==
+
+Doing last years [[User:Epyon/2009/TpServerCppRefactor|project]] I've made several changes to the internals of tpserver-cpp, by need I also made changes to the API available to Rulesets. What struck me then was the absurd amount of copy-pasted code between the rulesets -- I'd even risk a bold statement that most of the rulesets share around 70% code. Copy paste has never been a good coding practice, and we'd like to avoid that as much as possible. 
+
+Also during that project several ideas came up to me how to simplify that interface. Apart from changes in the API, a toolset (library) of common ruleset code would be much a benefit, and cut down the existing implementations to their core -- to the rules that drive the game.
+
+Once that would be done, we would devise a domain specific language that would define rulesets in a most natural way -- then implement that DSL by using the flexibility of Lua. I can imagine that MiniSec would become 2 or 3 simple files after that -- no more than it would take a person to describe the ruleset in a natural language.
+
+== Project immutables ==
+
+* during the whole course of the project, full ruleset compatibility will be maintained -- ergo, once I do a change to the API, I'll take care to update all the projects
+* once part 1 will be completed, and the Lua interface will be prepared, I'll be porting MiniSec during the implementation of part 2 to Lua, after the Lua API is fully supporting MiniSec, I'll port MTSec, and maybe another ruleset to Lua
+* at projects end, the ruleset creator will be able to choose in which language to implement his ruleset -- the C++ API will still be threre and fully working
+* the design of the Lua overlay will be such, that it will take trivial changes to implement any additions to the C++ API
+
+== Project goals ==
+
+=== Primary goals ===
+
+* rewrite the C++ ruleset API to be much more ruleset design friendly, while maintaining compatibility with all existing rulesets
+* create a Lua overlay that further simplifies the creation of rulesets up to the verbosity of a natural language definition
+* port MiniSec to Lua, port all rulesets to take advantage of the new C++ API
+
+=== Secondary goals ===
+
+* create a support library for ruleset development that includes common code for C++ rulesets
+* create a component library for Lua that allows immediate ruleset implementation
+* port MTSec and maybe another ruleset to Lua
+
+=== Bonus goals ===
+
+* implement the beginnings of EliteSec in Lua ;>
+
+== Implementation details ==
+
+=== Ruleset interface ===
+
+
+=== Lua interface ===
+
+
+== Project schedule ==
+
+I'll be available probably 4/5 time during the coding period (I need some time for my PhD). Also 10-12 days will probably be spent on a short vacation, although I might still be able to do some work then. 
+
+=== May 10 - May 23 (pre-planning) ===
+
+
+=== May 24 - July 12 (phase 1) ===
+
+
+=== July 13 - August 9 (phase 2) ===
+
+=== August 9 - August 16 (buffer) ===
+
+This week is purposefully left out as buffer time.
