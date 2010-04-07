@@ -18,6 +18,7 @@
 
 == GSoC Proposals 2010 ==
 * [[User:Epyon/2010/TpServerCppAsio]]
+* [[User:Epyon/2010/TpServerCppLuaRulesets]]
 
 == tpserver-cpp refactor project ==
 * [[User:Epyon/tpserver-cpp/Code Conventions]]
