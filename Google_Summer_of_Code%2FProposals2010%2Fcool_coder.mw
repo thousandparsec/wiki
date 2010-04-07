@@ -27,19 +27,19 @@ I would like to work in an iterative manner, producing a working prototype with 
 From now till May 23rd:
 Study the existing code in greater detail and draw concrete plans and high level specifications for the project. Get in touch with the mentors to know them better and for guidance.
 
-Iteration 1:  (May 24th to June 14th)
+=Iteration 1:  (May 24th to June 14th=
 
 Implement the game with the feature “power”, which determines his ability to attack others.  Increase his power at the end of each turn, based on the planets he has conquered.
 
-Iteration2: (June 15th to June 24th)
+=Iteration2: (June 15th to June 24th)=
 
 Implement the second idea,that is to provide reinforcements if the player own an entire star cluster.
 
-Iteration3:  (June 25th to July 5th)
+=Iteration3:  (June 25th to July 5th=
 
 Implement the concept of fortification, to enable the player to protect his territory.
 
-Iteration4:  (June 5th to July 15th)
+=Iteration4:  (June 5th to July 15th=
 
 Work on the existing GUI and improvise it.
 
@@ -52,7 +52,6 @@ Implement the bonus goal above or any other suggestions/improvements and deliver
 
 August 10th to August 16th
 Cushion time.
-
 
 =About Me:=
 I am a third year student in electrical engineering from National University of Singapore pursuing a minor in Computer Science. 
