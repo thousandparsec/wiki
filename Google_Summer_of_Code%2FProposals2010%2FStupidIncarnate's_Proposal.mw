@@ -68,7 +68,18 @@ This will be a simple edit made to the menu-bar div id that will convert it into
 ====Convert order’s panel to intuitive right-clickable menu====
 This will further modify the OrderComponent function in the frontend javascript code so that order issuing is more intuitive and slightly less cumbersome. All orders will be accessible from a right-click menu of the object. When a command is selected that requires a target, the user will then click on the target and the trajectory line will show. On commands that do not require a target, the issue will simply be issued. However, on those orders that require additional information such as when a player is building things, a dialog will pop up to allow the player to create the necessary units they require before the order is issued. 
 
-All orders associated with an object will be appended to the rollover information panel that has already been implemented at this point. These orders will be draggable so that the player can reposition their position in relation to one another and there will also be a delete button next to each order so that they can be deleted.
+All orders associated with an object will be appended to the rollover information panel that will be implemented by this point. These orders will be draggable so that the player can reposition order's position and there will also be a delete button next to each order so that they can be deleted.
+
+''Moving toward an object''
+
+[[File:DrawTargetPath1.png]]
+Rollover
+
+[[File:DrawTargetPath2.png]]
+Rightclick and click order
+
+[[File:DrawTargetPath3.png]]
+Select Target
 
 ====Optimize Searching====
 According to the code, the searching on the System Component panels requires some optimization. The specific function this refers to is the onSearch function.
