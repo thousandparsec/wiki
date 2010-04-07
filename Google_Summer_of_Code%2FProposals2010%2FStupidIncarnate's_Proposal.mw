@@ -69,3 +69,27 @@ All orders associated with an object will be appended to the rollover informatio
 
 ====Optimize Searching====
 According to the code, the searching on the System Component panels requires some optimization. The specific function this refers to is the onSearch function.
+
+=Timeline=
+'''May'''
+*May 31: The client will be capable of updating object data without redownloading everything.
+
+'''June'''
+*June 7: The ObjectComponentClass will call the proper css object icon without relying on hard-coded object types within the javascript.
+*June 14: The client will use generated css code to call a specific icon image for an object. 
+*June 21: The client will be capable of displaying multiple orders.
+*June 28: The client will be capable of submitting multiple orders.
+
+'''July'''
+*July 5: Messages will be displayed in a battle log format.
+*July 12: The object information panel will display next to the object as a rollover panel. 
+
+'''Mid-Term:''' The First Objective will be met by the time of the mid-term period.
+
+*July 19: The client will be capable of displaying the trajectory of each object that is directed at a target. 
+*July 26: Orders will be displayed in the rollover information panel. The orders will also be deleteable and their order position will be changeable.
+
+'''August'''
+*August 2: Orders that require a target will be issuable from the right-click order’s menu.
+*August 9: Orders that require build information will be issuable from the right-click order’s menu.
+*August 16: This week will be left for bug-hunting and optimization of the search function.
