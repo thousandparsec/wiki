@@ -39,15 +39,15 @@ Implement the second idea,that is to provide reinforcements if the player own an
 
 Implement the concept of fortification, to enable the player to protect his territory.
 
-=Iteration4:  (June 5th to July 15th=
+=Iteration4:  (June 5th to July 15th)=
 
 Work on the existing GUI and improvise it.
 
-Iteration5:  (July 15th to July 25th)
+=Iteration5:  (July 15th to July 25th)=
 
 Testing phase- Make sure that the existing functions work perfectly in all scenarios.
 
-Iteration6:  (July 25th to August 10th)
+=Iteration6:  (July 25th to August 10th)=
 Implement the bonus goal above or any other suggestions/improvements and deliver the final product.
 
 August 10th to August 16th
