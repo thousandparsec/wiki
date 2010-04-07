@@ -1,0 +1,71 @@
+=Abstract=
+The focus of this project is to improve upon the tpclient-pyweb version of the Thousand Parsec game. In order to accomplish this goal, there will be two main objectives to complete. Under each objective, there are several “to-do” items that must be completed in order to accomplish the objective. A quick breakdown of the tasks in each objective, which are expounded on underneath, is as follows:
+
+
+'''Primary Objective – TP04 Support'''
+# Difference Support
+# Dynamic Object Type
+# Multiple Order Queues 
+
+'''Secondary Objective – GUI Improvements'''
+# Messages to battle log style
+# Object information panel to rollover item
+# Trajectory display of moving objects
+# Condensed menu items
+# Convert order’s panel to intuitive right-clickable menu
+# Optimize Searching
+
+
+=Details=
+===Primary Objective===
+The primary objective is to modify the web client so that it adheres more closely to the TP04 standard. This includes implementation of functionality that has been added to the standard since the creation of the web client last year, as well as modifications to existing functionality that have changed in the standard. 
+	
+====Difference Support====
+In order to support the retrieval of changes to an object’s information without downloading every single object after each turn, the backend python code will need to be changed so that it downloads this “changed list” rather than downloading everything. The frontend javascript code will then need to be expanded on so that it replaces only certain objects in the its object array rather than replacing the entire object array itself. Most likely, it will need to cycle through the entire array of objects and replace them one by one based on the ids from the incoming data array of changed objects. 
+
+Logic groupings that require change
+*Python: get_objects, FriendlyObjects
+*Javascript: ObjectComponentClass.setup
+	
+====Dynamic Object Type====
+To facilitate dynamic object types, one small change will need to be made to the backend python code, while the rest of it is modifying the frontend javascript code. Mainly, the ObjectComponent function will need to be stripped of its defined types and the coding changed so that it can handle any sort of object type . 
+
+On the main index page, some of the css elements will need to be generated at runtime so that it can apply the proper icon image to an object. 
+
+Logic groupings that require change
+*Python: FriendlyObject
+*Javascript: ObjectComponent
+*Index page
+
+====Multiple Order Queues====
+The transition from single order queues to multiple ones will be the most intensive change, since the order functions in the backend python code will need tweaking at the very least and the frontend javascript codes functions that deal with orders will probably have be rewritten. 
+
+Logic groupings that require change
+*Python: removeOrders, updateOrders, sendOrders
+*Javascript: OrderComponent
+ 
+
+===Secondary Objective===
+The secondary objective is to implement changes to the GUI elements of the client so that game play is more intuitive and efficient.  
+
+====Messages to Battle Log style====
+Because it becomes cumbersome to flick through individual messages to gather what has happened during a turn, it seems more efficient to display all that information in one place. See the attached image on how the information display will be changed. 
+
+Both the javascript and the css for the message display will need to be changed and possibly rewritten. The specific javascript function in question is the MessageComponent function. 
+
+====Object information panel to rollover item====
+The object information panel will be completely removed and the information transferred to a rollover panel that shows up next to an object on rollover. This will make surveying pertinent information more efficient. Again, this affects the javascript ObjectComponentClass which will require a rollover function instead of a clicking one. This will also mean that the info-component container will need to be changed into a panel that can be hidden. 
+
+====Trajectory display of moving objects====
+When a move command is issued, a line will be drawn between the object and its destination. A function will have to be added to the ObjectComponentClass that is called whenever the battlefield gets redrawn. It will search through the array of orders, pull out any ids that have a move command issued to them and commence drawing the line from the object to its destination. 
+
+====Condense Menu Items====
+This will be a simple edit made to the menu-bar div id that will convert it into a dropdown menu that will hide menu items such as “Download the Universe” and “Settings” so that there’s more room for the actual game board. 
+
+====Convert order’s panel to intuitive right-clickable menu====
+This will further modify the OrderComponent function in the frontend javascript code so that order issuing is more intuitive and slightly less cumbersome. All orders will be accessible from a right-click menu of the object. When a command is selected that requires a target, the user will then click on the target and the trajectory line will show. On commands that do not require a target, the issue will simply be issued. However, on those orders that require additional information such as when a player is building things, a dialog will pop up to allow the player to create the necessary units they require before the order is issued. 
+
+All orders associated with an object will be appended to the rollover information panel that has already been implemented at this point. These orders will be draggable so that the player can reposition their position in relation to one another and there will also be a delete button next to each order so that they can be deleted.
+
+====Optimize Searching====
+According to the code, the searching on the System Component panels requires some optimization. The specific function this refers to is the onSearch function.
