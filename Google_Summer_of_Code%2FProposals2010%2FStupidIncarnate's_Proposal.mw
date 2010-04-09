@@ -51,7 +51,7 @@ Because it becomes cumbersome to flick through individual messages in order to g
 
 Both the javascript and the css for the message display panel will need to be changed and possibly rewritten. The specific javascript function in question that requires modification is the MessageComponent function. 
 
-Example of message data arranged into a Battle Log Style format.
+Example of message data arranged into a Battle Log Style format:
 [[File:MessageBattleLog.png]]
 
 ====Object information panel to rollover item====
