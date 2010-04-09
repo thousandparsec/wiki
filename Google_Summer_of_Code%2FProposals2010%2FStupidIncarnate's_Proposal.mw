@@ -67,11 +67,11 @@ When a move command is issued, a line will be drawn between the object and its d
 This will be a simple edit made to the menu-bar div id in the css code that will convert it into a dropdown menu that will hide menu items such as “Download the Universe” and “Settings” so that there’s more room for the actual game board. 
 
 ====Convert order’s panel to intuitive right-clickable menu====
-This will further modify the OrderComponent function in the frontend javascript code so that order issuing is more intuitive and slightly less cumbersome. All orders will be accessible from a right-click menu of the object. When a command that requires a target is selected, the user will then click on the target and a trajectory line will show up. On commands that do not require a target, the order will simply be issued. However, on those orders that require additional information such as when a player is building things, a dialog will pop up to allow the player to create the necessary units they require before the order is issued. 
+This will further modify the OrderComponent function in the frontend javascript code so that order issuing is more intuitive and slightly less cumbersome. All orders will be accessible from a right-click menu of the object. When a command is issued that requires a target, the user will then click on the target and a trajectory line will be drawn. On commands that do not require a target, the order will simply be issued. However, on those orders that require additional information such as when a player is building things, a dialog will pop up to allow the player to create the necessary units they require before the order is issued. 
 
-All orders associated with an object will be appended to the rollover information panel that will be implemented by this point. These orders will be draggable so that the player can reposition them and there will also be a delete icon next to each order so that orders can be deleted.
+All orders associated with an object will be appended to the rollover information panel that will be implemented by this point. The orders will be draggable so that the player can reposition them and there will also be a delete icon next to each order so that they can be deleted.
 
-I may also have the orders always displayed instead of requiring a rollover, if it does not overload the board with information.
+I may also have the orders always displayed next to the object instead of requiring a rollover, if it does not overload the board with information.
 
 ''Moving toward an object''
 
