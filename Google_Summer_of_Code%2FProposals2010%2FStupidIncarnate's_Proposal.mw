@@ -16,7 +16,7 @@ The focus of this project is to improve upon the tpclient-pyweb version of the T
 # Optimize Searching
 
 =Pyweb Coding Structure=
-The current browser client consists of two coding sets. The first is a python backend which uses the Thousand Parsec libraries to communicate with a game server. It then sends formatted information sets to a javascript frontend which constructs the game for use in the browser.
+The current browser client consists of two coding sets. The first is a python backend which uses the Thousand Parsec libraries to communicate with a game server. It then sends formatted information sets to a javascript frontend which constructs the game for use in the browser. Whenever mention is made of editing the backend python code in this proposal, this refers to the python code that was written to act as a mediator between the javascript and the server. There will be no edits made to the libraries or any other code that does not fall directly within the pyweb code base.
 
 =Details=
 ===Primary Objective===
