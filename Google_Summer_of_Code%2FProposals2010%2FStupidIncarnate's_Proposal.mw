@@ -20,12 +20,12 @@ The focus of this project is to improve upon the tpclient-pyweb version of the T
 The primary objective is to modify the browser client so that it adheres more closely to the TP04 standard. This includes implementation of functionality that has been specified by the standard since the creation of the web client last year, as well as modifications to existing functionality. 
 	
 ====Difference Support====
-In order to support the retrieval of changes to an object’s information without downloading every single object after each turn, the backend python code will need to be changed so that it downloads this “changed list” rather than downloading everything. The frontend javascript code will then need to be expanded on so that it replaces only certain objects in the its object array rather than replacing the entire object array itself. Most likely, it will need to cycle through the entire array of objects and replace them one by one based on the ids from the incoming data array of changed objects. 
+In order to support the retrieval of changes to an object’s information without downloading every single object after each turn, the backend python code will need to be changed so that it downloads this “changed list” rather than downloading everything. The frontend javascript code will then need to be expanded on so that it replaces only certain objects in its object array rather than replacing the entire object array itself. Most likely, it will need to cycle through the entire array of objects and replace them one by one based on the ids from the incoming data array of changed objects. 
 
 Logic groupings that require change
 *Python: get_objects, FriendlyObjects
 *Javascript: ObjectComponentClass.setup
-	
+
 ====Dynamic Object Type====
 To facilitate dynamic object types, one small change will need to be made to the backend python code, while the rest of it is modifying the frontend javascript code. Mainly, the ObjectComponent function will need to be stripped of its defined types and the coding changed so that it can handle any sort of object type . 
 
