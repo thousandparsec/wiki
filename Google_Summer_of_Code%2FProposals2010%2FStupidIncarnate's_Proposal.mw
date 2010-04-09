@@ -15,6 +15,9 @@ The focus of this project is to improve upon the tpclient-pyweb version of the T
 # Order’s panel to intuitive right-clickable menu
 # Optimize Searching
 
+=Pyweb Coding Structure=
+The current browser client consists of two coding sets. The first is a python backend which uses the Thousand Parsec libraries to communicate with a game server. It then sends formatted information sets to a javascript frontend which constructs the game for use in the browser.
+
 =Details=
 ===Primary Objective===
 The primary objective is to modify the browser client so that it adheres more closely to the TP04 standard. This includes implementation of functionality that has been specified by the standard since the creation of the web client last year, as well as modifications to existing functionality. 
