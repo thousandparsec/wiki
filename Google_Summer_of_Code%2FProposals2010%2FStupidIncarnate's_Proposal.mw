@@ -17,7 +17,7 @@ The focus of this project is to improve upon the tpclient-pyweb version of the T
 
 =Details=
 ===Primary Objective===
-The primary objective is to modify the web client so that it adheres more closely to the TP04 standard. This includes implementation of functionality that has been added to the standard since the creation of the web client last year, as well as modifications to existing functionality. 
+The primary objective is to modify the browser client so that it adheres more closely to the TP04 standard. This includes implementation of functionality that has been specified by the standard since the creation of the web client last year, as well as modifications to existing functionality. 
 	
 ====Difference Support====
 In order to support the retrieval of changes to an object’s information without downloading every single object after each turn, the backend python code will need to be changed so that it downloads this “changed list” rather than downloading everything. The frontend javascript code will then need to be expanded on so that it replaces only certain objects in the its object array rather than replacing the entire object array itself. Most likely, it will need to cycle through the entire array of objects and replace them one by one based on the ids from the incoming data array of changed objects. 
@@ -42,7 +42,6 @@ The transition from single order queues to multiple ones will be the most intens
 Logic groupings that require change
 *Python: removeOrders, updateOrders, sendOrders
 *Javascript: OrderComponent
- 
 
 ===Secondary Objective===
 The secondary objective is to implement changes to the GUI elements of the client so that game play is more intuitive and efficient.  
