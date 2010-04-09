@@ -47,9 +47,9 @@ Logic groupings that require change
 The secondary objective is to implement changes to the GUI elements of the client so that game play is more intuitive and efficient.  
 
 ====Messages to Battle Log style====
-Because it becomes cumbersome to flick through individual messages to gather what has happened during a turn, it seems more efficient to display all that information in one place. Each message will instead be listed out, under the turn header that the message occurred in. 
+Because it becomes cumbersome to flick through individual messages in order to gather what has happened during a turn, it seems more efficient to display all that information in one place. Each message will instead be listed out, under the turn header that the message occurred in. 
 
-Both the javascript and the css for the message display panel will need to be changed and possibly rewritten. The specific javascript function in question is the MessageComponent function. 
+Both the javascript and the css for the message display panel will need to be changed and possibly rewritten. The specific javascript function in question that requires modification is the MessageComponent function. 
 
 [[File:MessageBattleLog.png]]
 
