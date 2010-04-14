@@ -1,9 +1,8 @@
 ==Project Description==
 Now that Single Player has been implemented in Thousand Parsec, the next natural step would be to create an engaging experience to go along with it. A Scenario/Campaign feature would complement the new addition.
 
-Many aspects drive great games. Games can be fun because their gameplay is interactive. Games are played for the challenge of winning. Games are also played for intriguing plots and storyline.
+Many aspects drive great games. Games can be fun because their interactive gameplay, the challenge of winning, and intriguing plots and storyline.
 
-Enter Scenario and Campaign Creation:
 With the introduction of Scenarios, players will be placed in challenging conditions. The odds could be unbalanced at the start of the game.  There might be certain conditions to winning (possibly ruleset pending). Scenarios allow for players to be challenged in ways current single player cannot.
 
 Campaigns will drive story.  Stringing scenarios together by tying them through a common storyline or progression (maybe of increasing difficulty) will lead to a more rewarding single player experience.
@@ -11,45 +10,41 @@ Campaigns will drive story.  Stringing scenarios together by tying them through 
 ==Goals==
 ====Primary Goal====
 
-To extend the python client (libtpclient-py) to allow for loading specific saved states, scenarios.
-
-In doing this, it will be necessary to have some way of creating and saving these saved states.
-As suggested, scenarios should be output in a self-contained file and should be easy to share with the community.
-
-It will also be necessary to work the save and load capabilities into the tpclient-pywx gui for user level access. 
+The main goal of this project is to create and implement a functioning scenario mode. This will involve creating additional modules for persistence or save states of single player games. With properly formated state files, these files can be edited to create specifically created scenarios and campaigns.
+It will be necessary to add the save and load capabilities to the client gui.
 
 ====Secondary Goals====
-The development of campaigns would be a good extension upon completing a single scenario.
-
-This feature should be fully attainable after implementing the saved state loader.
+The secondary but attainable goal will be to create either a stand alone editor something similar to allow for user created scenarios. This customization process will give players a new spin on enjoying Thousand Parsec and challenging other players with "tantalizing" situations. Scenarios could then be packaged and or linked with other scenarios to form campaigns.
 
 ====Bonus Goals====
-With the implementation of campaigns it would be awesome to have some kind of story telling feature incorporated into playing through the campaign.
+With the implementation of campaigns it would be awesome to have some kind of story telling feature incorporated into the sequential nature of the scenarios.
 
 ==Implementation==
 ====Saving State====
-Before being able to load a file, a file must be saved. In this task, I'll need to design the methods to convert specific in-game variables and parameters into an organized file architecture. I realize now that this could possibly include saving the state of the AI opponent.
+At the suggestion of Lee Begg (llnz), SQLite offers a "client-server"-less way of writing to a database. The current tpserver-cpp has a persistence module written for mySQL, which is capable of storing the state of the universe. The simplest solution to having players save is to use SQLite to write to a self-contained database file (save file). As the module for mySQL has already been written, a module for SQLite would involve reinterpreting the module to fit the commands of SQLite, or the sqlite3 library. This would grant database files that could be shared and loaded as if they were complete databases of games.
+To my Understanding, the current persistence module (mySQL modules) is used in the event that the server is shut down, it can be restarted and then load game information from the mySQL database to restore and continue the game. This is almost perfect for creating save states but requires a mySQL servers, which is why SQLite simplifies this part. So a new module should be created using SQLite to write to a database file, effectively storing the state. Doing this will require a good understanding of the current mySQL persistence module and being able to convert it into a complementing SQLite module. There is also the possibility to add more information to this databases to allow for requirement checking and AI loading/restoring.
 
-One solution to this would be to use an XML format and try to serialize all important in-game information in a logical and organized fashion.  Python has some support for this in the form of marshalling data types and objects into XML. There is also the option of implementing a fresh module of serializing the data into a file format such as XML.  It is likely that I will research what the best means of converting in-game data to a file format is.
+Writing the persistence module for the AI will be a task of its own. It will involve understanding the specific AI and how to logically organize this "knowledge" in a database for it to be restored upon loading.
 
-It will also be necessary to "dump" this save state while in a game to produce a save file. This will involve working in the feature into the tpclient-pywx gui.
-====Loading State====
-Once it is possible to save a game, it should be fairly straight forward loading it into the game.  This would involve reading through the saved state file, properly loading it into the game. From my initial research, Python is also able to support parsing XML back into data.  If not, this would have to be implemented by defining how the module should deserialize the stored information.
+This phase of the project will likely be the most time consuming as debuggin and testing will have to be extensive.
 
-Once again, the loader will have to be added to the tpclient-pywx gui.
 ====Building a Scenario====
 Initially a scenario can just be a basic saved state. But eventually, it should be extended to a designable and customizable saved state.
-It would definitely be best to have a scenario editor. However, direct editing of the XML file or saved state file could grant access, albeit cumbersome and non-user-friendly, to creating scenarios.
-So time permitting, a gui based scenario editor would be implemented to allow for easy user creation and customization of scenarios.
-====Campaigns====
-Campaigns would essentially be a sequential order of scenarios. So scenarios would either be passed along as a group or they could be linked together.
+It would definitely be best to have a scenario editor. Direct access to the database file generated by the SQLite dump is not likely to be human-readable.  So a GUI based scenario editor would be implemented to allow for easy user creation and customization of scenarios.
 
-The bonus feature of story telling would need to somehow be worked in here as well.  If possible if could simply be a series of messages that come up at the start of the scenario.
+====Campaigns====
+Campaigns would be a sequential order of scenarios. So scenarios would either be passed along as a group or they could be linked together.
+
+The bonus feature of story telling would need to somehow be worked in here as well.  If possible if could simply be a series of messages that come up at the start or end of the scenario.
 
 ===General Requirements===
 As specified in the Project Idea:
 * The file should be self-contained and easily shared between users
 * There should be some check to make sure the user has the necessary components (server, ai, ruleset, etc) to play the scenario. This would likely involve some kind of wizard (similar to the one when loading a single player game) that would check and prompt for the required components.
+
+SQLite creates an entire database in a single cross-platform file allowing for it to be easily shared and is self-contained unlike a whole mySQL database.
+
+The Check would have to be implemented with a wizard as described. It might be a good idea to create a table of required elements in the save file (database) in order to determine the "requirements" of the scenarios.  These requirements might include rulesets, AI's, maps, or a number of other components.
 
 == Project schedule ==
 
@@ -57,20 +52,21 @@ I'll be available for the majority of the Google Summer of Code period.  I will 
 
 === May 3 - May 21 (Research and Planning) ===
 
-This stage will be used to familiarize myself with the client and all applicable objects and components that the server has.  This will allow me fully understand each variable and parameter that will have to be serialized for saving an in-game state.  This will also be the time where I research the best means of serializing the data in the client. This functionality might have to be extended into the server, I am unsure at this point.
+This stage will be used to familiarize myself with the server, persistence module, and all applicable objects and components that the server has. This will allow me fully understand each variable and parameter that will have to be stored for saving an in-game state. This will also be the time where I research SQLite and its functionality in C++. This functionality might have to be extended into the AI involved, it depends on the scope of the project.
 
 === June 6 - July 16 (Stage 1) ===
 
-* Week 1 + 2: Serialization methods will be implemented to convert objects into the desired file format (XML). Perhaps a DTD (Document Type Definition) should be provided for the breakdown and organization of objects.
-* Week 3: Capabilities will be extend for the "saver" to dump information from the server and the ai
-* Week 4: The client will be able to save to a file (i.e. Saving functionality will be added to the gui).
-* Week 5: Deserializing (load) module to load the saved state will be written, this can probably be done in parallel while writing the serialization methods.
+* Week 1: Plans finalized for organization of the database. Meaning a strong understanding of the persistence module and clarifying any remaining issues with a Mentor.
+* Week 2-3: An SQLite module will be written, being able to write the universe to a database file in an organized way. Will likely have to be debugged to ensure everything is stored properly.
+* Week 4: Outputting to a file should be testable at this point, meaning it is ensured that the game state was stored as expected into the database file.
+* Week 5: The client will be able to save to a file (i.e. Saving functionality will be added to the GUI).
+* Week 6: Reading from a specified database file will be written, this can probably be done in parallel while writing the persistence methods. They should accurately recreate the state of the game.
 
 === July 17 - August 9 (Stage 2) ===
 
-* Week 7: Loader will be present and functioning properly (Should be early in this stage)
+* Week 7: Reader will be present and functioning properly (should be early in this stage).
 * Week 8: A scenario creator will be made. Hopefully in the form of a small stand alone app to edit features such as planets, fleet locations, etc...
-* Week 9: A basic campaign consisting of several consecutive scenarios will be playable.
+* Week 9: A basic campaign consisting of several consecutive scenarios will be playable. See Appended section for Campaign Ideas.
 * Time Permitting: Research and Implementation of some story telling features to campaign mode
 
 === August 9 - August 16 (Finishing Touches) ===
@@ -81,9 +77,9 @@ If a remaining task is still unfinished and reasonable to finish in this time, i
 ==About Me==
 My name is Greg Lew, I am an undergraduate at McGill University currently pursuing an Electrical Engineering degree with a Software Engineering minor.  While not attending university, I live in Boston, Massachusetts.
 ====Languages and Knowledge====
-I am confident in java, but I have a good amount of experience with python. I have worked with c, and I am willing to learn more if necessary.
+I am confident in java, but I have a good amount of experience with python. I have worked with c/c++, and I am willing to learn more if necessary, which seems likely.
 
-I have familiarized myself with XML and am in the process of learning the proper python modules that will allow me to parse data into XML.
+I have worked with databases and mySQL before and am comfortable working with this and expanding my understandings.
 
 ====Major projects I have worked on====
 * A web-based Restaurant Recommendation system where users could make profiles, rate and review restaurants, comment on restaurants, and get recommendations based on their ratings of restaurants. My contribution was mainly focused on the database organization and how objects were input and output from it. (Project used jsp, java, apache server, tomcat, mySQL database) 
@@ -94,10 +90,38 @@ The summer internship I mentioned was conducted on the following basis:
 * I would go in to work for the full afternoon at an MIT building.
 * I would meet my "mentor" for a brief meeting to discuss what I had accomplished that day, what problems I ran into, and what I planned to do next.
 
-The experience was gratifying and rewarding, while still providing me with challenges.I found I was able to be self motivating and productive. From this experience, I believe that I can become fully committed to a large project.  I can be openly available for regular contact and can express my concerns and accomplishments.
+The experience was gratifying and rewarding, while still providing me with challenges.I found I was able to be self motivating and productive. From this experience, I believe that I can become fully committed to a large project.  I can be openly available for regular contact and can express my concerns and accomplishments. Learning my way around SQLite and C++ shouldn't be too steep a learning curve for me.
+
+I look forward to expanding my programming skills while being productive this summer; but most importantly, I look forward to enjoying the summer wile doing something that interests me.
 
 ====Contact Info====
-Let me know if you want Contact information
+See GSOC Application for Info.
 
-==Comments==
-Feedback is greatly appreciated, Thanks
+==Appended Information==
+===Scenario and Campaign Ideas:===
+My initial thoughts on possible ideas for scenarios were theme based.  Firefly came to mind as an interesting universe to try to set a story in. (If you aren't familiar with Firefly, I'll do my best to describe what I was thinking of implementing)
+
+Background Story:  You are leading a group of setters to a region of space known as the Outer Rim.  Your initial intent was to start human colonies.
+
+Initial Scenarios would be simple, colonizing several planets, maintaining them, etc (almost like a tutorial).
+
+But eventually The Alliance would start to intervene in your plans for colonies on the Outer Rim.  They want to keep the system unified and under their order.
+
+As a past Browncoat (rebel/ Independent Faction) leader, you take all means necessary to resist Alliance rule.  Initially the battles are simple, as the alliance sends only a few diplomatic ships to your region.  But as time progresses, the region which you control will expand and The Alliance will further oppose your expansion of territory.
+
+Not only are the Alliance halting your expansion and exploration, but Reavers will relentlessly attack your colonies.
+
+Soon, managing a large part of the system map will be difficult.  The ultimate goal might be to overthrow the Alliance's reign over the core planets.
+
+All of this said, I am open to altering my ideas as this was only inspiration for a theme based Campaign.  I understand it is possible to make maps for the Risk Ruleset, allowing for a custom map of the "Firefly Universe."  But i'm not sure how feasible certain ai or other features will work certain Rulesets.
+
+In terms of originality, I've also thought of just general ideas that will make for interesting stories. Maybe incorporating story cliches like Rebels versus Federation.  Space Pirates who are more independent functioning, focusing more on exploiting.  Savages who focus on exterminating.
+
+Most of this is speculation, as I know there are limitations to what is available in terms of AI and game mechanics.
+
+Other than that, I am really open to ideas.  There's the option of other theme based ideas. I've even tried asking friends for suggestions on what would make interesting Campaigns.
+
+===Further Note:===
+I plan on further familiarizing myself with other TP rulesets and hopefully other AI's. This will allow me to better understand certain limitations and possibly spark more ideas.
+
+Look for further updates.
