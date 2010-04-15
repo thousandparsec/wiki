@@ -29,6 +29,7 @@ Logic groupings that require change
 *Python: get_objects, FriendlyObjects
 *Javascript: ObjectComponentClass.setup
 
+
 '''The necessity of this change'''
 Once a user has logged into the web client, the javascript requests from the application.py all the object data that exists in the current game. This comes into the javascript as a giant array and once the javascript has received this data, it plugs it into the variable called "object" within the MapCreator class function. Then it calls the MapCreator.draw function and this goes through that variable "object" and draws all that data onto the screen. However, when the user clicks to "Download the Universe", the javascript expects the application.py to send it another giant array of all the object data, whether specific objects have changed or not. Because it assumes any subsequent array it receives from the python backend will be an array of all objects, it simply overwrites all the data in the MapCreator variable "object". So if an array comes in that possesses only the data of objects that have changed in the last turn, the current javascript code will still overwrite that variable "object", and then when the map gets drawn, only the changed objects will actually get drawn onto the map and the rest of the unchanged objects will disappear because their data got overwritten.
 
