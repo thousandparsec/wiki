@@ -30,9 +30,21 @@ List of current python AI support functions:
 * getOwner(id) - gets the owners id of the given object (-1 for no owner)
 * whoami() - gets the player id of our player
 * turnNumber() - gets the number of the current turn
+* allPlayers() - gets ids of all the players
+* playerName(id) - gets the name of the player with the given id
+* enemies() - gets the ids of all enemy players
+* orderMove(id, destination) - give an order to the fleet with the given id to move to the given position. (MiniSec specific)
+* orderColonise(fleetID) - give an order to colonise to the fleet with the given id
+* allPlanetsOfAStar(starid) - gets all the ids of the planes in a star system
+* printAboutMe() - prints some information about the AI player (player id, player name, list of enemies, list of owned fleets, list of owned planets
 
 ==== Comming soon... ====
+I will implement these in the near future:
 * allPlanetsOwnedBy() - gets ids of all the planets owned by any of the given players (-1 for neutral)
+* getShipsInFleet() - gets the ids of all the ships in a fleet
+* getTypeOfShip() - gets the type of ship (MiniSec specific)
+* functions for other orders
+* ...
 
 
 == Where can I get the code? ==
