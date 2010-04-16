@@ -1,3 +1,5 @@
+As the deadline for proposal submission has passed I won't change the proposal. But I have already begun to work on some things addressed by the proposal. The progress can be seen [[Google Summer of Code/Proposals2010/Null/progress|here]].
+
 == Short short version ==
 
 Add support for writing AI code in pure python to Daneel-ai. Write AI code for MTSec ruleset. Simplify the process of writing AI for new rulesets as much as possible.
