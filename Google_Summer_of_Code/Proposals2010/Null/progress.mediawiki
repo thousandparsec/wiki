@@ -2,6 +2,8 @@ This page should reflect what work has already been done on daneel-ai, what need
 
 It is written by [[User:Null|Damjan "Null" Košir]] and it will change as the work progresses.
 
+I would appreciate any comments/suggestions/tips at the bottom of the page. Thanks.
+
 == The big picture (what I am trying to do) ==
 
 To get to know the code of daneel-ai I am trying to code an AI for MiniSec in python. For that I need to write ruleset specific code fro MiniSec and support functions for coding AI in python (in a way that it coexists with the CHR). For more information on why I think this is good check out my [[Google Summer of Code/Proposals2010/Null|Google Summer of Code proposal]].
@@ -96,3 +98,6 @@ Some of the obstacles I've encountered:
 * could not get tpsai to work
 * could not get tpadmin-cpp to work (error when doing make)
 * daneel-ai tutorial is not finised
+
+== Comments, suggestions, tips ==
+Write anything (helpful) you want here.
