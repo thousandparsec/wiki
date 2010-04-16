@@ -93,6 +93,7 @@ Some of the obstacles I've encountered:
 
 * daneel-ai code does not contain enough comments
 * function signatures do not tell you anything about the argument types (pythons fault)
+* I know the protocol specifications well enough
 * usually when I colonise a planet (even when using only 2 clients and no AI) daneel-ai and tpclient-pywx freeze the next turn when getting data from the server (but it worked ok in a windows VM with the older versions of client and server even when there was AI envolved)
 * same problem with battles
 * could not get tpsai to work
