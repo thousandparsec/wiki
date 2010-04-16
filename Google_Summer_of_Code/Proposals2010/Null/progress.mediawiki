@@ -87,3 +87,12 @@ You can have a look at [http://github.com/Null000/daneel-ai|git hub]. This is my
 I will try to keep the code up to date and in a runnable state (the AI will try to do something, but nothing intelligent yet).
 
 == Obstacles ==
+Some of the obstacles I've encountered:
+
+* daneel-ai code does not contain enough comments
+* function signatures do not tell you anything about the argument types (pythons fault)
+* usually when I colonise a planet (even when using only 2 clients and no AI) daneel-ai and tpclient-pywx freeze the next turn when getting data from the server (but it worked ok in a windows VM with the older versions of client and server even when there was AI envolved)
+* same problem with battles
+* could not get tpsai to work
+* could not get tpadmin-cpp to work (error when doing make)
+* daneel-ai tutorial is not finised
