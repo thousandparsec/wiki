@@ -46,7 +46,13 @@ I will implement these in the near future:
 * functions for other orders
 * ...
 
+=== Order code generation ===
+I can already print a list of possible orders with descriptions and arguments (and their types and descriptions). I can generate CHR order descritions and python function signatures. The main problem right now is that I don't know enough about how to represent all of the argument types (like the list) when sending the orders to the server. All of the current orders I have working (move and colonise for MiniSec) are copied from other rulesets supported by daneel-ai and modified a little. I don't know how many arguments I must give (and in what format) I must pass to the cache.apply function. (If this was Java I wouldn't have this problem, that's why I still like it better ^_^)
 
 == Where can I get the code? ==
+
+You can have a look at [http://github.com/Null000/daneel-ai|git hub]. This is my first time using git (I've used svn before).
+
+I will try to keep the code up to date and in a runnable state (the AI will try to do something, but nothing intelligent yet).
 
 == Obstacles ==
