@@ -1,2 +1,40 @@
 This page should reflect what work has already been done on daneel-ai, what needs to be done, what I plan on doing and what obstacles I have encountered.
-It is written by Damjan "Null" Košir.
+
+It is written by [[User:Null|Damjan "Null" Košir]] and it will change as the work progresses.
+
+== The big picture (what I am trying to do) ==
+
+To get to know the code of daneel-ai I am trying to code an AI for MiniSec in python. For that I need to write ruleset specific code fro MiniSec and support functions for coding AI in python (in a way that it coexists with the CHR). For more information on why I think this is good check out my [[Google Summer of Code/Proposals2010/Null|Google Summer of Code proposal]].
+
+== My plans for now ==
+
+There should be a "hook" to start python AI code. There should be support functions for every common action you will need when coding AI.
+
+I think there is a way to generate all ruleset specific code for giving orders. The available order information should be retrieved from the server and all code for giving orders from python and CHR should be generated.
+
+== What is already done ==
+
+=== Python AI code support ===
+I have found a way to run python AI code without breaking CHR support. Python code is executed after CHR code so you can use CHR to pre process some of the data about the universe (such as classifying objects). In case you want to code AI just in CHR you can just leave the python function empty and it doesn't do anything.
+
+I'm writing support functions for common tasks needed to code AI. Some of them can be MiniSec specific as I will separate them form the general ones later.
+
+List of current python AI support functions:
+* findNearestNeutralPlanet(fleetPosition) - gets the id of the nearest planet not owned by any player
+* findNearestPlanetOwnedBy(fleetPosition,owners) - get the id of the nearest planet owned by any of the given players (-1 for neutral)
+* allMyFleetIDs() - gets the ids of all fleets owned by the player
+* allStarIDs() - gets the ids of all the stars in the univers
+* allContainsIDs(id) - gets ids of all the objects the object with the given id contains (for instance all planets of the given star system)
+* getPosition(id) - gets the position of the object with the given id
+* getName(id) - gets the name of the object with the given id (fleet name, planet name, star name,...)
+* getOwner(id) - gets the owners id of the given object (-1 for no owner)
+* whoami() - gets the player id of our player
+* turnNumber() - gets the number of the current turn
+
+==== Comming soon... ====
+* allPlanetsOwnedBy() - gets ids of all the planets owned by any of the given players (-1 for neutral)
+
+
+== Where can I get the code? ==
+
+== Obstacles ==
