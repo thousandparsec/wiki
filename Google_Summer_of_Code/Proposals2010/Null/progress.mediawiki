@@ -99,6 +99,8 @@ Some of the obstacles I've encountered:
 * could not get tpsai to work
 * could not get tpadmin-cpp to work (error when doing make)
 * daneel-ai tutorial is not finised
+* sometimes the server gives wrong data for object owners (planet daneel-ai owned by player Null)
+* sometimes the server makes the game persistent even if it's not supposed to be
 
 == Comments, suggestions, tips ==
 Write anything (helpful) you want here.
