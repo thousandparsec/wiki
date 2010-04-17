@@ -84,7 +84,7 @@ orderMove(pos):
 
 == Where can I get the code? ==
 
-You can have a look at [http://github.com/Null000/daneel-ai|git hub]. This is my first time using git (I've used svn before).
+You can have a look at [http://github.com/Null000/daneel-ai github]. This is my first time using git (I've used svn before).
 
 I will try to keep the code up to date and in a runnable state (the AI will try to do something, but nothing intelligent yet). I'm sure there will be bugs and things done the hard way or inefficiently or plain wrong but it's a work in progress and made public so some progress can be seen.
 
