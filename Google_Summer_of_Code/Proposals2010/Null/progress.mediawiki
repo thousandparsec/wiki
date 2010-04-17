@@ -39,10 +39,12 @@ List of current python AI support functions:
 * orderColonise(fleetID) - give an order to colonise to the fleet with the given id
 * allPlanetsOfAStar(starid) - gets all the ids of the planes in a star system
 * printAboutMe() - prints some information about the AI player (player id, player name, list of enemies, list of owned fleets, list of owned planets
+* allPlanetsOwnedBy(owners) - gets ids of all the planets owned by any of the given players (-1 for neutral)
+
+Some of this do not always work, but I'm not sure if some of it is not caused by server returning weird/wrong data.
 
 ==== Comming soon... ====
 I will implement these in the near future:
-* allPlanetsOwnedBy() - gets ids of all the planets owned by any of the given players (-1 for neutral)
 * getShipsInFleet() - gets the ids of all the ships in a fleet
 * getTypeOfShip() - gets the type of ship (MiniSec specific)
 * functions for other orders
@@ -80,7 +82,6 @@ orderMove(pos):
 
 	Arg name: pos	Arg type: ARG_ABS_COORD (code:0)	Arg desc: The position in space to move to
 	'''</code>
-
 
 == Where can I get the code? ==
 
