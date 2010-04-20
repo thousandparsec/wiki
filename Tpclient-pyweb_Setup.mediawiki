@@ -54,7 +54,7 @@ Then you'll make the virtual host file for the tpweb client. Name it tpweb.conf 
 		allow from all
 	</Directory>
 </VirtualHost></pre>
-Now, be sure to change any instance that says /home/manny/workspace/tpclient-pyweb/ with the path that points to your tpclient-pyweb folder. Also, change user and group to your username on the WSGIDaemonProcess line. If you've kept the internal structure as is, that should be all you need to change. Be sure also that WSGIScriptAlias begins with "WSGIScriptAlias /json ". 
+Now, be sure to change any instance that says /home/manny/workspace/tpclient-pyweb/ to the path that points to your tpclient-pyweb folder. Also, change user and group to your username on the WSGIDaemonProcess line. If you've kept the internal structure as is, that should be all you need to change. Be sure also that WSGIScriptAlias begins with "WSGIScriptAlias /json ". 
 
 Another note of interest is that this also creates an error log in /var/log/apache2/. Whenever you have trouble, refer to this, as this will tell you if you're missing any packages or if something is wrong.
 
