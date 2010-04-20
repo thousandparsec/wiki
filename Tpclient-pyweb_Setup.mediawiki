@@ -1,40 +1,35 @@
 Here is one way to get Tpclient-pyweb working for linux. It requires an array of technologies installed, but hopefully I've covered them all. 
 
-1. First and foremost, install Apache & and Wsgi:
 
-sudo aptitude install apache2 apache2.2-common apache2-mpm-prefork apache2-utils libapache2-mod-wsgi libexpat1 ssl-cert python-beaker
-
-1.5. Sometimes an annoying error comes with apache, which reads:
-
-apache2: Could not reliably determine the server's fully qualified domain name,
-
+'''1.''' First and foremost, install Apache & and Wsgi:
+<pre>sudo aptitude install apache2 apache2.2-common apache2-mpm-prefork apache2-utils libapache2-mod-wsgi libexpat1 ssl-cert python-beaker</pre>
+Sometimes an annoying error comes with apache, which reads:
+<pre>apache2: Could not reliably determine the server's fully qualified domain name,</pre>
 To get rid of this, edit the apache config file:
-sudo gedit /etc/apache2/apache2.conf
-
+<pre>sudo gedit /etc/apache2/apache2.conf</pre>
 And add this to the very bottom of the file.
-
-ServerName awesome
-
+<pre>ServerName awesome</pre>
 Also, check to make sure that this line is in there as well and that it does not have a # before it. It was at the bottom of my config file.
 
-# Include the virtual host configurations:
-Include /etc/apache2/sites-enabled/
+<pre>#Include the virtual host configurations:
+Include /etc/apache2/sites-enabled/</pre>
 
-2. Enable Wsgi.
 
-sudo a2enmod mod-wsgi
 
-3. It should be mentioned that if you don't already, you should install python as well. 
+'''2.''' Enable Wsgi.
+<pre>sudo a2enmod mod-wsgi</pre>
 
-sudo aptituted install python-dev libpython
 
-4. Now to create the virtual host. Navigate to this directory. 
 
-cd /etc/apache2/sites-available/
+'''3.''' It should be mentioned that if you don't already, you should install python as well. 
+<pre>sudo aptituted install python-dev libpython</pre>
 
+
+
+'''4.''' Now to create the virtual host. Navigate to this directory. 
+<pre>cd /etc/apache2/sites-available/</pre>
 Then you'll make the virtual host file for the tpweb client. Name it tpweb.conf and add the following text to it:
-
-<VirtualHost *:80>
+<pre><VirtualHost *:80>
     ServerName tpweb.tp
     ServerAlias tpweb.tp
     DocumentRoot /home/manny/workspace/tpclient-pyweb/frontend
@@ -58,33 +53,32 @@ Then you'll make the virtual host file for the tpweb client. Name it tpweb.conf 
 		Order allow,deny
 		allow from all
 	</Directory>
-</VirtualHost>
-
+</VirtualHost></pre>
 Now, be sure to change any instance that says /home/manny/workspace/tpclient-pyweb/ with the path that points to your tpclient-pyweb folder. Also, change user and group to your username on the WSGIDaemonProcess line. If you've kept the internal structure as is, that should be all you need to change. Be sure also that WSGIScriptAlias begins with "WSGIScriptAlias /json ". 
 
 Another note of interest is that this also creates an error log in /var/log/apache2/. Whenever you have trouble, refer to this, as this will tell you if you're missing any packages or if something is wrong.
 
-5. Now you must create a link to this file in the sites-enabled folder. Run one of these commands:
 
-sudo a2ensite tpweb.conf
+
+'''5.''' Now you must create a link to this file in the sites-enabled folder. Run one of these commands:
+<pre>sudo a2ensite tpweb.conf
 	or
-sudo ln -s /etc/apache2/sites-available/tpweb.conf /etc/apache2/sites-enabled/tpweb.conf
+sudo ln -s /etc/apache2/sites-available/tpweb.conf /etc/apache2/sites-enabled/tpweb.conf</pre>
 
-6. Next, edit your hosts file.
 
-gedit /etc/hosts
 
+'''6.''' Next, edit your hosts file.
+<pre>gedit /etc/hosts</pre>
 After the lines that begin with 127.0.1.1, insert the following line. 
-
-127.0.0.1 localhost.localdomain localhost tpweb.tp www.tpweb.tp
-
+<pre>127.0.0.1 localhost.localdomain localhost tpweb.tp www.tpweb.tp</pre>
 This will allow you to browse to the client from your web browser by calling "www.tpweb.tp".
 
-7. One last thing to check. If you downloaded the tpclient-pyweb source from git, it will be missing the source files for the two libs it needs to run. You can get the sources from the git repository which is located at "http://git.thousandparsec.net/". You'll want both the libtpclient-py and libtpproto-py sources. Once you have those, unzip their folders in place of the dummy folders in the tpclient-pyweb folder and you should be good.
 
 
-8. After all that change, restart apache.
+'''7.''' One last thing to check. If you downloaded the tpclient-pyweb source from git, it will be missing the source files for the two libs it needs to run. You can get the sources from the git repository which is located at "http://git.thousandparsec.net/". You'll want both the libtpclient-py and libtpproto-py sources. Once you have those, unzip their folders in place of the dummy folders in the tpclient-pyweb folder and you should be good.
 
-sudo /etc/init.d/apache2 restart
 
+
+'''8.''' After all that change, restart apache.
+<pre>sudo /etc/init.d/apache2 restart</pre>
 Test to make sure everything's working by going to "www.tpweb.tp". You should be able to enter a host and login and join a game at this point.
