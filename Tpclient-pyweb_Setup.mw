@@ -75,10 +75,14 @@ This will allow you to browse to the client from your web browser by calling "ww
 
 
 
-'''7.''' One last thing to check. If you downloaded the tpclient-pyweb source from git, it will be missing the source files for the two libs it needs to run. You can get the sources from the git repository which are located at "http://git.thousandparsec.net/". You'll want both the libtpclient-py and libtpproto-py sources. Once you have those, unzip their folders in place of the dummy folders in the tpclient-pyweb folder and you should be good.
+'''7.''' Create a folder in /tmp/ called tpclient-pyweb. Inside that, create a folder called cache. Be sure to set the proper chmod permissions once you do. 
 
 
 
-'''8.''' After all that change, restart apache.
+'''8.''' One last thing to check. If you downloaded the tpclient-pyweb source from git, it will be missing the source files for the two libs it needs to run. You can get the sources from the git repository which are located at "http://git.thousandparsec.net/". You'll want both the libtpclient-py and libtpproto-py sources. Once you have those, unzip their folders in place of the dummy folders in the tpclient-pyweb folder and you should be good.
+
+
+
+'''9.''' After all that change, restart apache.
 <pre>sudo /etc/init.d/apache2 restart</pre>
 Test to make sure everything's working by going to "www.tpweb.tp". You should be able to enter a host/user/pass and login and join a game at this point.
