@@ -22,7 +22,7 @@ Include /etc/apache2/sites-enabled/</pre>
 
 
 '''3.''' It should be mentioned that if you don't already, you should install python as well. 
-<pre>sudo aptituted install python-dev libpython</pre>
+<pre>sudo aptitute install python-dev libpython</pre>
 
 
 
