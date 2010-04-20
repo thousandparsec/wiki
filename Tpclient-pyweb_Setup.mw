@@ -81,4 +81,4 @@ This will allow you to browse to the client from your web browser by calling "ww
 
 '''8.''' After all that change, restart apache.
 <pre>sudo /etc/init.d/apache2 restart</pre>
-Test to make sure everything's working by going to "www.tpweb.tp". You should be able to enter a host and login and join a game at this point.
+Test to make sure everything's working by going to "www.tpweb.tp". You should be able to enter a host/user/pass and login and join a game at this point.
