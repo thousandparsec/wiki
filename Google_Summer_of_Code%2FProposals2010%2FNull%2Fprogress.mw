@@ -14,6 +14,8 @@ There should be a "hook" to start python AI code. There should be support functi
 
 I think there is a way to generate all ruleset specific code for giving orders. The available order information should be retrieved from the server and all code for giving orders from python and CHR should be generated.
 
+Since I had some problems with the TP03 version of the client and TP04 is going to be used for future rulesets anyway I will try to make daneel-ai work with TP04 version of the libraries.
+
 == What is already done ==
 
 === Python AI code support ===
