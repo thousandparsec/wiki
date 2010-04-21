@@ -104,8 +104,10 @@ now solved (sort of):
 
 * usually when I colonise a planet (even when using only 2 clients and no AI) daneel-ai and tpclient-pywx freeze the next turn when getting data from the server (but it worked ok in a windows VM with the older versions of client and server even when there was AI envolved)
 ** this is found to be a known bug (issue 88)
+** since this problem is not present in TP04 version of the library I will try to make daneel-ai work with it
 * same problem with battles
 ** this is found to be a known bug (issue 88)
+** since this problem is not present in TP04 version of the library I will try to make daneel-ai work with it
 * could not get tpadmin-cpp to work (error when doing make)
 ** it works now (thanks llnz)
 * function signatures do not tell you anything about the argument types (pythons fault)
