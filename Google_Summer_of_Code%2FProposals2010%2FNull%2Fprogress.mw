@@ -95,7 +95,6 @@ I will try to keep the code up to date and in a runnable state (the AI will try 
 Some of the obstacles I've encountered:
 
 * daneel-ai code does not contain enough comments
-* I don't know the protocol specifications well enough
 * could not get tpsai to work
 * daneel-ai tutorial is not finised
 * sometimes the server gives wrong data for object owners (planet daneel-ai owned by player Null)
@@ -113,6 +112,8 @@ now solved (sort of):
 ** it works now (thanks llnz)
 * function signatures do not tell you anything about the argument types (pythons fault)
 ** talked to verhoevenv (daneel-ai creator) about the critical parts and I guess I've been doing it the right way. His advice was "curse and start experimenting" ^_^
+* I don't know the protocol specifications well enough
+** I found out how to get the correct format for orders from the client
 
 == Comments, suggestions, tips ==
 Write anything (helpful) you want here.
