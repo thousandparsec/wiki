@@ -17,6 +17,7 @@ I think there is a way to generate all ruleset specific code for giving orders. 
 Since I had some problems with the TP03 version of the client and TP04 is going to be used for future rulesets anyway I will try to make daneel-ai work with TP04 version of the libraries.
 
 == What is already done ==
+Daneel-ai was moved to TP04 (development) version of libtpclient and libtpproto. Getting information about the universe using the new libs works.
 
 === Python AI code support ===
 I have found a way to run python AI code without breaking CHR support. Python code is executed after CHR code so you can use CHR to pre process some of the data about the universe (such as classifying objects). In case you want to code AI just in CHR you can just leave the python function empty and it doesn't do anything.
@@ -47,6 +48,7 @@ Some of this do not always work, but I'm not sure if some of it is not caused by
 
 ==== Comming soon... ====
 I will implement these in the near future:
+* giving orders using TP04 libs
 * getShipsInFleet() - gets the ids of all the ships in a fleet
 * getTypeOfShip() - gets the type of ship (MiniSec specific)
 * functions for other orders
