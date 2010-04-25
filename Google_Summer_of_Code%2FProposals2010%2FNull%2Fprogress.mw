@@ -113,6 +113,7 @@ now solved (sort of):
 ** it works now (thanks llnz)
 * function signatures do not tell you anything about the argument types (pythons fault)
 ** talked to verhoevenv (daneel-ai creator) about the critical parts and I guess I've been doing it the right way. His advice was "curse and start experimenting" ^_^
+*** I think I have all the information I need
 * I don't know the protocol specifications well enough
 ** I found out how to get the correct format for orders from the client
 
