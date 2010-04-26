@@ -1,0 +1,185 @@
+'''Abstract'''
+
+This is a project of development of Thousand Parsec python-wxWidgets client. The main focus of it is improving GUI and, consequently, internals. The current visual appearance of this client can be named "in very active development" -- it's full of information, more suitable for programmer than a gamer, it's not customizable, etc. I'm going to make it more usable and add several new features (like tech browser).
+
+'''My name and contact'''
+
+My name is Ivan Ruchkin; I am from Moscow, Russia, GMT +4.
+ 
+Contacts: email ruchkin.ivan@gmail.com; skype bisc1100; xmpp bisc@lvk.cs.msu.su; irc bisc; icq 229606304.
+
+'''Project title'''
+
+Development and Improvement of Thousand Parsec python-wxWidgets client
+
+'''Project detailed plan'''
+ 
+
+Here follow my detailed ideas on GUI improvement. Of course, that's not a final version and will be updated.I don't know the exact names of docking child windows (they aren't labeled in client and I haven't yet looked for them in code) - so I refer to them intuitively and based on information they contain.
+
+ 
+Whole client GUI
+ 
+
+        * add dock views name and other significant details (should be discussed) in bold so that user doesn't get lost in "all-these-child-windows".
+        * fix the usability flaw: some buttons have their labels cut and not shown completely by default. any method will do: manual adjusting fonts, or automatic calculation of needed space.
+        * decrease the preview timer interval: windows in GUI show the preview of object that is pointed by mouse cursor, but the delay is too long.
+
+        * add a toolbar with frequently used functions (the "end turn" is an apparent example; we can add the list of additional windows, like Downloads and Design).
+        * mark the information changes with color after each turn and fade the color out in a couple of seconds.
+        * checkboxes in some views (for example in "Messages") can only be turned on/off by hitting the white box. This behavior should be corrected, and checkbox should change state even after its label was clicked.
+
+Search window
+
+ 
+
+        * implement the substring search, not "strict coincidence". E.g. the user can find all fleets by typing "fleet".
+
+ 
+Messages window
+
+
+        * improve filtering mechanism (add button  controls there to add/remove filter, like).
+        * add the search bar (or search dialog).
+        * add the controls (or dialog) to send your own messages.
+        * visually separate subject from body (draw a line or panel).
+        * make the general info about game, server and ruleset available in any case; not letting user delete this message will do. Another way is to add new message at every start or create a new child window. or a dialog, accessible from the main menu.
+
+Status bar
+
+        * Add some information on game process to status bar: who am I, what is this game (can substtute the last goal in the previous section), where is server, etc..
+
+Adding a tech browser
+
+
+        * it will go to "Windows" menu
+        * a list of all available techs on the left side of screen; a search bar.
+        * an interactive graph with tech names. will have to do customized drawing here.
+        * a panel with desription of technology on the right, with effects and prerequisites.
+
+
+Add a "Distance To" window
+
+          This window goes to "Windows" menu, show in a separate window.
+        * It is a list (possibly tree) with distance numbers, like in "object browser", that shows distance from selected object to any other.
+        * We may possibly want this window to be one of docks, so that it's inside main window perspective
+        * Through this window user can set up the target for "Move" order
+
+Client customization by end user
+
+        * add a list of dockviews to the main menu, let user switch them on/off from the main menu.
+        * implement saving/loading the perspective of client window.
+
+ 
+Evaluation of my work
+
+        * need some kind of usability testing. possibly the discussion with involved developers and just random people.
+        * apply criticism and redo some of above-mentioned GUI elements.
+
+ 
+Some other options
+
+(if I have time after implementing everything above -- or instead)
+
+        * have a look at other Thousand Parsec clients (haven't got time yet) - they should have valuable things to be added above.
+        * implement undo/redo framework (will possibly require considerable coding and changes in existing code, so under discussion).
+        * help with translation of client into Russian language.
+        * any other related feasible ideas, proposed by community.
+
+ 
+'''About me'''
+
+
+I'm a 4th year Ph. D. student (5 years total) of the Lomonosov Moscow State University, Faculty of Computational Mathematics and Cybernetics. My university specialization is mathematics and computer science. I've been fairly interested in software development for more than 7 years already, exploring new things and horizons. My current interests are focused on GUI development and assessment, usability engineering and testing.My considerable long-term occupations, relevant to this project, include:
+
+ 
+
+   1. Development of "lightweight" GUI for KDevelop (IDE for KDE) as a part of my scientific work in the university. That's my first experience of FOSS development, it gave a huge boost to my understanding of how open source works and how to interact with it. The development is done in C++ with use of Qt and KDE frameworks. Also, I've had experience with some literature on usability to provide some reasoning to my term papers.
+   2. My employment in the Computer Systems Lab. That's where I had experience of programming in C and WinApi as well as GUI development by means of high-level Ruby with Qt.
+
+ 
+
+Here I just list my skills, related to software development:
+
+ 
+
+    * C/C++ (advanced), STL, WinAPI, MFC.
+    * UML: analysis and design of software.
+    * RDBMS: postgreSQL (design, writing queries).
+    * XML, XSD, XSLT.
+    * Java (basic) programming.
+    * Python (basic) programming.
+    * Ruby (intermediate) programming.
+    * Graphical User Interface development and programming with Qt4(advanced), wxWidgets(basic).
+    * Advanced user of Windows and Linux systems.
+    * Experience of team collaboration software (svn, git, trac).
+    * Writing technical documentation for software.
+
+ 
+'''Why me?'''
+
+ 
+
+You can notice that my experience with exactly Python and wxWidgets isn't very high. But I, first of all, have encountered them in my studying tasks (not real-big-projects, but better than nothing). Second, python is similar to Ruby in many ways so that taking it up quickly won't be difficult for me. And third, not knowing something serves a very good motivation for me; and the less I'm aware of, for example, wxWidgets, the more interest I have in developing with it.
+
+ 
+
+I'm good for that project because there's a lot to do here (the best reason to start acting), it's a pleasure for to me to develop a game and GUI at the same time. Some creative approach can be applied here, that's what I like. As a decent gamer, I have intuitive understanding of what computer game should and should no be.
+
+ 
+'''My summer occupation'''
+
+ 
+
+I have the last exam in the university somewhen near the 10th of June. There are no plans of serious occupation or work in this summer, so I'll be able to devote 30 hours per week to GSoC. I'd also like to have a vacation for 1.5 - 2 weeks in the end of July or the beginning of August, during which I'll be doing 10 - 15 hours for GSoC. I'll make decision concerning vacation based on my GSoC progress.
+
+ 
+'''What has been done towards the goals'''
+
+ 
+
+   * I've downloaded sources of tpserver-py, tpserver-cpp and tpclient-pywx (master and tp04 branches), successfully started several games and tried it for some time.
+   * Observed code for a while, got closer to python and wxwidgets. Started fixing client bugs.
+
+ 
+'''Roadmap'''
+
+ 
+Before summer
+
+ 
+
+    * compensate some white space in my python and wx knowledge.
+    * post ideas to TPWiki, get some feedback on features that people need.
+    * communicate with mentor, detailing the ideas
+    * observe code of client, get familiar with its internals.
+
+June
+ 
+
+    * The implementation of comparingly easy things: GUI small improvements.
+    * In first two weeks, I have exams, so that's 20 hours per week for GSoC. After that I have 30-40 hours for it.
+    * In the end of first two weeks I expect to be familiar with code and fixed small issues with interface
+    * For the last two weeks of June I'd like to work on search and messages windows (see above).
+
+ 
+July
+
+
+    * first two weeks of July are for Tech browser: create the window, program the behavior and integrate with client. In the middle of July I should have the tech browser showing a sample tree of techs.
+    * last two weeks of July are for client customization and "distance to" window. They should be working in the end of July.
+
+ 
+August
+
+
+    * first two weeks of August can be spent differently. If everything before is fine, then I can get to developing undo framework or any other idea. otherwise, I'll have to finish my goals.
+    * in the final part of summer I will observe what I did and improve it, write documentation for code and a wiki page about my changes.
+
+ 
+
+'''Deliverables'''
+
+ 
+
+  That's, obviously, the new version of code for tpclient-pywx. I'll try to make it clean, reusable and well-documented.
