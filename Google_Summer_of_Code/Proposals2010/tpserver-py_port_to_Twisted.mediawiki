@@ -54,5 +54,9 @@ He has been a Python developer for more than 5 years. He's used to work using Ag
 
 = Contact =
 
- e-mail / JID: krystian.baclawski [at google mail].
- IRC: cahir / cahirwpz
+:'''Name''': Krystian Bacławski
+:'''Timezone''': GMT+2
+:'''e-mail''': krystian.baclawski [at google mail]
+:'''JID''': as above
+:'''IRC nickname''': cahirwpz
+:'''Blog URL''': http://cahirwpz.wordpress.com
