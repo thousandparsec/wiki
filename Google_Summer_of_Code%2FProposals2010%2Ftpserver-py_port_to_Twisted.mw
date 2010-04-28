@@ -1,11 +1,9 @@
-Porting Thousand Parsec Python Server to Twisted Framework
-
-== Abstract ==
+= Abstract =
 
 The main goal of this project is to rewrite TP python server to use Twisted Network Framework. Twisted is a full featured event-driven platform suited at writing network application. Reimplementing TP python server with Twisted will bring many benefits including: increased performance and responsibility, ease of adding new features to TP protocol and server, better code maintainability. This project might be crucial for convenience of TP gamers using current python server implementation.
 Content: 	
 
-== Project goals ==
+= Project goals =
 
 Primary goal is to reimplement TP python server using Twisted which involves a few steps:
 - Some of the TP protocol classes and the database layer need to be rewritten to fully support asynchronous requests.
@@ -20,7 +18,7 @@ Secondary goals:
 
 Alternatively a server control UI might be implemented using Django on Twisted if suitable.
 
-== Project schedule ==
+= Project schedule =
 
 The applicant plans to be available for 2-3 days in a week before the end of the semester (21st of June) and 3-4 days in a week after that. He also plans a short vacations for no longer than a week.
 
@@ -48,13 +46,13 @@ The applicant plans to be available for 2-3 days in a week before the end of the
 === August 9 - August 16 (Optional) ===
 This period is meant to be a buffer. Unfinished task must be closed during this period.
 
-== About me ==
+= About me =
 
 Twisted Network Framework is known to the applicant in large degree. He implemented multiple protocols using Twisted - including binary protocols based on ASN.1 encoding, and textual protocols based on HTML and XML. He wrote fully featured testing framework which was used to inspect corectness of commercially developed server used in telecommunication market. He also implemented centrally controlled distributed client using command protocol over SSH. The applicant has also experience in extending Python with C++ classes (boost.python and SWIG) and a basic knowledge of Django Framework.
 
 He has been a Python developer for more than 5 years. He's used to work using Agile methodology - namely Scrum.
 
-== Contact ==
+= Contact =
 
  e-mail / JID: krystian.baclawski [at google mail].
  IRC: cahir / cahirwpz
