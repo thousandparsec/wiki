@@ -6,15 +6,15 @@ Content:
 = Project goals =
 
 Primary goal is to reimplement TP python server using Twisted which involves a few steps:
-- Some of the TP protocol classes and the database layer need to be rewritten to fully support asynchronous requests.
-- New classes should be added to allow the server to accept multiple connection with SSL or without it.
-- TP server must be modified to run as a daemon by default.
-- All messages need to be gathered using flexible logger mechanism implemented in twisted.python.log module - in order to provide logging levels and possibility to redirect log messages to different sinks (syslog, file, stderr, etc.)
+* Some of the TP protocol classes and the database layer need to be rewritten to fully support asynchronous requests.
+* New classes should be added to allow the server to accept multiple connection with SSL or without it.
+* TP server must be modified to run as a daemon by default.
+* All messages need to be gathered using flexible logger mechanism implemented in twisted.python.log module - in order to provide logging levels and possibility to redirect log messages to different sinks (syslog, file, stderr, etc.)
 
 Secondary goals:
-- Extend the server to provide users with game data. This could be accomplished using twisted.web2 module.
-- Add to the server remote console by using SSH protocol implemented in twisted.conch.
-- Implement Zeroconf using Twisted to allow clients to discover local TP server without hassle.
+* Extend the server to provide users with game data. This could be accomplished using twisted.web2 module.
+* Add to the server remote console by using SSH protocol implemented in twisted.conch.
+* Implement Zeroconf using Twisted to allow clients to discover local TP server without hassle.
 
 Alternatively a server control UI might be implemented using Django on Twisted if suitable.
 
