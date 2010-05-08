@@ -1,1 +1,29 @@
-A page for usage and development information on tpclient-pywx
+Tpclient-pywx is a thousand parsec [[Clients|client]] which provides a 2D interface using [http://www.wxpython.org wxPython].
+
+This page is for development information on tpclient-pywx.
+
+== Code == 
+
+Git repository of tpclient-pywx is located at git://git.thousandparsec.net/git/tpclient-pywx
+The master branch of it contains tp03 version. The version of client for communication through TP04 protocol is placed on 'tp04' branch.
+
+== Requirements ==
+
+* python - an interpreter and language libraries.
+* wxPython - GUI platform.
+* libtpclient-py - a library, providing high-level client services to tpclient-pywx.
+* libtpproto-py - a library for talking with TP server on tp04 protocol.
+
+== Development tools==
+
+Tpclient-pywx uses [http://wiki.wxwidgets.org/Resource_Files wx resource files] for GUI building. A customized xrced (the 'xrced' executable script in tpclient-pywx) is used to view and edit them. 
+
+= Architecture = 
+
+To be filled.
+ 
+== Authors ==
+
+The main author and maintainer of this client is [mailto:mithro@mithis.com Tim 'mithro' Ansell].
+
+This client has been in development during [http://greywhind.wordpress.com/2009/08/19/gsoc-2009-final-report/ GSOC'09] by Greywhind and during [[Google Summer of Code/Proposals2010/bisc proposal | GSOC'10]] by [mailto:ruchkin.ivan@gmail.com bisc]
