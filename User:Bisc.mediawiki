@@ -1,0 +1,7 @@
+Name: Ivan Ruchkin
+
+IRC nickname: bisc
+
+EMail: [mailto:ruchkin.ivan@gmail.com ruchkin.ivan@gmail.com]
+
+Working on [[tpclient-pywx|tpclient-pywx]] in scope of [[Google Summer of Code/Proposals2010/bisc proposal | GSOC'10]].
