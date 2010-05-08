@@ -5,6 +5,7 @@ This page is for development information on tpclient-pywx.
 == Code == 
 
 Git repository of tpclient-pywx is located at git://git.thousandparsec.net/git/tpclient-pywx
+
 The master branch of it contains tp03 version. The version of client for communication through TP04 protocol is placed on 'tp04' branch.
 
 == Requirements ==
