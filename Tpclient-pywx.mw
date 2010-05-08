@@ -11,14 +11,20 @@ The master branch of it contains tp03 version. The version of client for communi
 
 * python - an interpreter and language libraries.
 * wxPython - GUI platform.
-* libtpclient-py - a library, providing high-level client services to tpclient-pywx.
+* [[Libtpclient Help|libtpclient-py]] - a library, providing high-level client services to tpclient-pywx.
 * libtpproto-py - a library for talking with TP server on tp04 protocol.
 
 == Development tools==
 
 Tpclient-pywx uses [http://wiki.wxwidgets.org/Resource_Files wx resource files] for GUI building. A customized xrced (the 'xrced' executable script in tpclient-pywx) is used to view and edit them. 
 
-= Architecture = 
+== Setting client-pywx up ==
+
+* [[Ubuntu Setup|Setting up on Ubuntu]]
+* [[Win Setup|Setting up on Windows]]
+* [[Mac Setup|Setting up on Mac]]
+
+== Architecture ==
 
 To be filled.
  
