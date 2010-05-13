@@ -12,7 +12,7 @@ The master branch of it contains tp03 version. The version of client for communi
 
 * python - an interpreter and language libraries.
 * wxPython - GUI platform.
-* [[Libtpclient Help|libtpclient-py]] - a library, providing high-level client services to tpclient-pywx.
+* [[Libtpclient Help|libtpclient-py]] - a library, providing high-level client services to tpclient-pywx. Is not wx-specific.
 * libtpproto-py - a library for talking with TP server on tp04 protocol.
 
 == Development tools==
@@ -27,7 +27,19 @@ Tpclient-pywx uses [http://wiki.wxwidgets.org/Resource_Files wx resource files] 
 
 == Architecture ==
 
-To be filled.
+The startup script file ./tpclient-pywx defines application (a descendant of libtpclient's Application) as a container of several threads: gui, network, media, finder, cache. 
+
+'''TODO''': ''describe threads' classes and general functions.''
+
+=== GUI architecture ===
+
+GUI thread is implemented by class 'GUI' (a child of wx.App) which is responsible for GUI display and event handling. GUI class instantiates main windows ('win-' prefix for class name): the splash window (winSplash.py), the connection window (winConnect.py), the server lookup window(winServerBrowser) and, among others, the game main window. All  windows except game window are created on startup and shown/hidden when needed. 
+
+Game window consists of a number of panels (see classes with 'panel-' prefix).
+
+'''TODO''': ''describe all main windows and all panels.''
+
+Both win- and panel- GUIs are marked up using XRCs in ./windows/xrc and in the same dir there is auto-generated python class for each of them. The window classes themselves are placed in ./windows and panel classes - in ./windows/main. Thus, for any X = <main window name>: winX has an xrc file in ./windows/xrc/winX.xrc, automatically generated class winX in ./windows/xrc/winX.py, and hand-written implementation class winX (descendant of xrc.winX) in ./windows/winX.py.
  
 == Authors ==
 
