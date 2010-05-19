@@ -41,6 +41,11 @@ Game window consists of a number of panels (see classes with 'panel-' prefix).
 
 Both win- and panel- GUIs are marked up using XRCs in ./windows/xrc and in the same dir there is auto-generated python class for each of them. The window classes themselves are placed in ./windows and panel classes - in ./windows/main. Thus, for any X = <main window name>: winX has an xrc file in ./windows/xrc/winX.xrc, automatically generated class winX in ./windows/xrc/winX.py, and hand-written implementation class winX (descendant of xrc.winX) in ./windows/winX.py.
  
+== Usage ==
+
+* Place a NOSPLASHMOVIE file into tpclient-pywx top level to disable splash movie.
+* You can set default connection settings with command line arguments: 	./tpclient-pywx tp://<username>:<password>@<server>/<game>
+
 == Authors ==
 
 The main author and maintainer of this client is [mailto:mithro@mithis.com Tim 'mithro' Ansell].
