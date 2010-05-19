@@ -46,6 +46,10 @@ Both win- and panel- GUIs are marked up using XRCs in ./windows/xrc and in the s
 * Place a NOSPLASHMOVIE file into tpclient-pywx top level to disable splash movie.
 * You can set default connection settings with command line arguments: 	./tpclient-pywx tp://<username>:<password>@<server>/<game>
 
+== Languages ==
+
+This client is i18nalized using [http://en.wikipedia.org/wiki/GNU_gettext GNU Gettext] library. Currently it is translated into Slovenian (see ./locale/sl).
+
 == Authors ==
 
 The main author and maintainer of this client is [mailto:mithro@mithis.com Tim 'mithro' Ansell].
