@@ -142,16 +142,16 @@ There are 10 ship types. Most of the lighter ships have a normal and battle vari
 
 The types are listed below in order of size:
 
-    * Scout: Scouts are a light reconnaissance ships. Often used to search out new worlds. Nothing beats a scout for speed.
-    * Battle Scout: Battle Scouts are light reconnaissance ships which are more heavily armed. Often used in more dangerous reconnaissance missions into enemy territory and to guard unimportant outposts.
-    * Advanced Battle Scout: The advanced battle scout uses advanced technology to pack a bigger punch into a smaller and faster package. Their speed makes them deadly against torpedo based ships but are still relatively weak against missile technologies.
-    * Frigate: What a frigate doesn't have in its stats is made up by the cheapness it can be produced at. Numbers of frigates can easily destroy larger ships. They're also advantageous against torpedoes as only one ship can be destroyed per torpedo.
-    * Battle Frigate: Slightly more powerful version of the frigate. Nothing beats a battle frigate for speed to firepower ratio.
-    * Destroyer: Destroyers are the main offensive weapon in any fleet. More expensive then frigates they have much larger armor and can withstand a battering.
-    * Battle Destroyer: Battle Destroyers are a poor man's battleship. Smaller groups of battle destroyers can easily devastate larger groups of destroyers (have more firepower and armor) and can hold their own against similar number of battleships. Their biggest drawback is their speed, this is because the smaller engines (compared to battleships) strain to provide similar speed.
-    * Battleship: Battleships are hugely armored and armed. Able to dispatch huge numbers of missiles or torpedoes in a very short period. Even a single battleship can quickly turn the tide in a battle. These ships are also surprisingly fast due to the huge engines. However, without support battleships can easily fall prey to torpedoes.
-    * Dreadnought: Dreadnoughts are the largest movable ships available. They are so large that equipping with engines is a huge problem. This means that they are extremely slow. No other ship can boast about so much firepower in one package.
-    * Argonaut: These ships, commonly called "death stars", are so big that they can't break orbit of the planet they are constructed on. Normally considered a space station instead of a ship they hail doom on any ship trying to attack the planet they orbit. They however are unable to avoid even the slowest moving torpedo's.
+* '''Scout''': Scouts are a light reconnaissance ships. Often used to search out new worlds. Nothing beats a scout for speed.
+* '''Battle Scout''': Battle Scouts are light reconnaissance ships which are more heavily armed. Often used in more dangerous reconnaissance missions into enemy territory and to guard unimportant outposts.
+* '''Advanced Battle Scout''': The advanced battle scout uses advanced technology to pack a bigger punch into a smaller and faster package. Their speed makes them deadly against torpedo based ships but are still relatively weak against missile technologies.
+* '''Frigate''': What a frigate doesn't have in its stats is made up by the cheapness it can be produced at. Numbers of frigates can easily destroy larger ships. They're also advantageous against torpedoes as only one ship can be destroyed per torpedo.
+* '''Battle Frigate''': Slightly more powerful version of the frigate. Nothing beats a battle frigate for speed to firepower ratio.
+* '''Destroyer''': Destroyers are the main offensive weapon in any fleet. More expensive then frigates they have much larger armor and can withstand a battering.
+* '''Battle Destroyer''': Battle Destroyers are a poor man's battleship. Smaller groups of battle destroyers can easily devastate larger groups of destroyers (have more firepower and armor) and can hold their own against similar number of battleships. Their biggest drawback is their speed, this is because the smaller engines (compared to battleships) strain to provide similar speed.
+* '''Battleship''': Battleships are hugely armored and armed. Able to dispatch huge numbers of missiles or torpedoes in a very short period. Even a single battleship can quickly turn the tide in a battle. These ships are also surprisingly fast due to the huge engines. However, without support battleships can easily fall prey to torpedoes.
+* '''Dreadnought''': Dreadnoughts are the largest movable ships available. They are so large that equipping with engines is a huge problem. This means that they are extremely slow. No other ship can boast about so much firepower in one package.
+* '''Argonaut''': These ships, commonly called "death stars", are so big that they can't break orbit of the planet they are constructed on. Normally considered a space station instead of a ship they hail doom on any ship trying to attack the planet they orbit. They however are unable to avoid even the slowest moving torpedo's.
 
 
     Name 	                  Speed 	Size
@@ -174,8 +174,7 @@ The resources needed for the super structure of the weapon is insignificant comp
 
 Explosives can only be carried in whole amounts. The formula to calculate the amount of explosive material that can fit in a weapon
 
-    Amount of explosive material = Floor( Missile Size / Explosive Size ) 
-
+    Amount of explosive material = Floor( Missile Size / Explosive Size )
 
 == Missiles ==
 
