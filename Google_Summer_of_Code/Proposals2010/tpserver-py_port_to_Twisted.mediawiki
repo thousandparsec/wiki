@@ -59,4 +59,4 @@ He has been a Python developer for more than 5 years. He's used to work using Ag
 :'''e-mail''': krystian.baclawski [at google mail]
 :'''JID''': as above
 :'''IRC nickname''': cahirwpz
-:'''Blog URL''': http://cahirwpz.wordpress.com
+:'''Blog URL''': http://cahir.eisp.pl/doku.php?id=en:gsoc2010
