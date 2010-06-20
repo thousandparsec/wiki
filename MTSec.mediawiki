@@ -261,7 +261,8 @@ The damage is applied the following way,
 Amour directly reduces a percentage of the damage which would be applied to a ship from torpedoes. Missile damage goes straight through the armour.
 
 For example, a ship has 30% Armour which would reduce damage by 30% rounded up. IE 8HPs of damage would be reduced to 5HP (8-ceil(8*0.3)).
-Dodge
+
+'''Dodge'''
 
 Dodge prevents damage from taking effect. Only damage from torpedoes can be dodged. The chance of dodging a torpedo is determined by the following formula:
 
