@@ -155,17 +155,17 @@ The types are listed below in order of size:
 * '''Argonaut''': These ships, commonly called "death stars", are so big that they can't break orbit of the planet they are constructed on. Normally considered a space station instead of a ship they hail doom on any ship trying to attack the planet they orbit. They however are unable to avoid even the slowest moving torpedo's.
 
 
-    Name 	                  Speed 	Size
-    Scout 	                    100 	60
-    Battle Scout 	             75 	88
-    Advanced Battle Scout 	     86 	133
-    Frigate 	                     56 	200
-    Battle Frigate                   45 	200
-    Destroyer 	                     35 	300
-    Battle Destroyer 	             26 	300
-    Battleship 	                     36 	375
-    Dreadnought 	             24 	500
-    Argonaut 	                      8 	1000
+    Name 	                  Speed 	Size 	HP     Armor
+    Scout 	                    100 	60      75     2
+    Battle Scout 	             75 	88      100    5
+    Advanced Battle Scout 	     86 	133     125    8
+    Frigate 	                     56 	200     150    12
+    Battle Frigate                   45 	200     150    18
+    Destroyer 	                     35 	300     200    45
+    Battle Destroyer 	             26 	300     250    68
+    Battleship 	                     36 	375     300    170
+    Dreadnought 	             24 	500     400    220
+    Argonaut 	                      8 	1000    500    300
 
 '''Weapons'''
 
