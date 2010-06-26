@@ -227,12 +227,14 @@ The following components exist:
 
 
 Combat occurs when two enemies are at the same location. Combat can occur between any number of parties at the same time.
-The process
+If a planet is involved in combat it represented by two simulated scouts.
+
+
+==The process==
 
 Like in MiniSec, if two fleets owned by the same player are at the same location when combat occurs, they will be merged for the period of combat.
 
 Each ship fires its weapons. All weapons are fired simultaneously, and damage is then resolved simultaneously too. This means that both a ship and it's destroyer can be destroyed in one turn.
-
 
 == Resolving Damage ==
 
