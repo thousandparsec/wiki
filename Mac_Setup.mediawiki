@@ -22,42 +22,9 @@ You need the following binaries which can be found at [http://pythonmac.org/pack
 
 = Getting the code =
 
-You will then need to install "cogito" ([http://www.dpompa.com/git-1.5.2.2.dmg here]) and run the following
-
-== Downloading and setting up the code ==
-
-If you have cogito installed (recommended),
-
-<pre>
-cg-clone git://git.thousandparsec.net/git/scratchpad.git
-cg-clone git://git.thousandparsec.net/git/libtpproto-py.git
-cg-clone git://git.thousandparsec.net/git/libtpclient-py.git
-cg-clone git://git.thousandparsec.net/git/tpclient-pywx.git
-
-# Setup various links
-cd scratchpad
-./setup.sh
-cd ..
-
-# Check all the requirements are satisified
-cd tpclient-pywx
-pythonw requirements.py
-
-# Now run the client!
-pythonw tpclient-pywx
-</pre>
-
 If you only have git installed, try
 <pre>
-git-clone git://git.thousandparsec.net/git/scratchpad.git
-git-clone git://git.thousandparsec.net/git/libtpproto-py.git
-git-clone git://git.thousandparsec.net/git/libtpclient-py.git
-git-clone git://git.thousandparsec.net/git/tpclient-pywx.git
-
-# Setup various links
-cd scratchpad
-./setup.sh
-cd ..
+git clone git://git.thousandparsec.net/git/tpclient-pywx.git
 
 # Check all the requirements are satisified
 cd tpclient-pywx
