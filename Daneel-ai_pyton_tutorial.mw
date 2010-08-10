@@ -1,0 +1,35 @@
+This tutorial will show you how to make a simple AI for MTSec using python and Daneel-ai.
+
+
+== Step 0: requirements ==
+
+TP stuff:
+
+* daneel-ai from the repository (get it at http://www.thousandparsec.net/tp/download-instructions.php?product=daneel-ai&platform=developer )
+* tpserver-cpp (get it at http://www.thousandparsec.net/tp/downloads.php?category=server )
+* tpclient-pywx recommended(get it at http://www.thousandparsec.net/tp/downloads.php?category=client )
+
+Other stuff:
+
+* text editor or IDE (I used eclipse with pydev plugin)
+
+http://pydev.org/
+
+== Step 1: ruleset files ==
+
+Create ruleset files
+
+== Step 2: generate code ==
+
+== Step 3: write AI code ==
+
+helper functions in helper
+
+=== Step 3.1: adding a new design ===
+
+listing designs
+listing components
+
+=== Step 3.2: resource information ===
+
+=== Step 3.1: giving orders ===
