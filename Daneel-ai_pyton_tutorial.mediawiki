@@ -20,6 +20,23 @@ Create ruleset files
 
 == Step 2: generate code ==
 
+Now we will generate all the code to get you started.
+
+
+* create a new file in the daneel folder of daneel-ai (we will call it mtsec-simple.py in this tutorial).
+
+* Start the tpserver-cpp with the desired ruleset (MTSec in this tutorial).
+
+ tpserver-cpp -v -C quickstart-mtsec.conf
+
+* Run daneel-ai with the ruleset set to codeGenerator
+
+ daneel-ai.py -f codeGenerator -u dummy:dummy@localhost/tp
+
+Output of daneel-ai between "LIST OF POSSIBLE ORDERS" and "END OF LIST OF POSSIBLE ORDERS" is a list of all possible orders for this ruleset with their descriptions and is there to help you understand orders.
+
+Now copy all the output of daneel-ai between "LIST OF POSSIBLE ORDERS CODE" and "END OF LIST OF POSSIBLE ORDERS CODE" into mtsec-simple.py we created.
+
 == Step 3: write AI code ==
 
 helper functions in helper
