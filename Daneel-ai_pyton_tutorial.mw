@@ -16,7 +16,22 @@ Other stuff:
 
 == Step 1: ruleset files ==
 
-Create ruleset files
+First we will create some ruleset files.
+
+* create a new file in the rules folder of daneel-ai for your ruleset (we will call it mtsec-simple in this tutorial)
+* copy this into the newly created file
+ [Modules]
+ basic
+ mod-mtsec-simple
+ 
+ [Constraints]
+ 
+ [Rules]
+ 
+ [Functions]
+ 
+
+* create a new file in the daneel folder of daneel-ai (we will name it mod-mtsec-simple.py in this tutorial)
 
 == Step 2: generate code ==
 
