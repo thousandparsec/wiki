@@ -94,6 +94,18 @@ The only thing different for weapons is the category.
  #print information about our new design
  helper.printDesign("First weapon")
 
-=== Step 3.2: resource information ===
+=== Step 3.2: giving orders ===
 
-=== Step 3.1: giving orders ===
+Orders can be given by calling the generated functions. Hopefully order descriptions and argument descriptions will give you enough information so you can use them (even I don't understand some argument types).
+Be prepared for a lot of trial and error at this step. If there are any other working AIs for this ruleset try to get some information from there. Another way to gain some information is to watch the console output of the python client when giving orders.
+
+And because code samples are always useful:
+ #order all fleets to move to their nearest neutral planets
+ for fleet in helper.myFleets():
+     nearestNeutralPlanetID = helper.nearestNeutralPlanet(fleet)
+     nearestNeutralPlanetPosition = helper.position(nearestNeutralPlanetID)
+     orderMove(fleet, nearestNeutralPlanetPosition)
+ #order all planets to produce ships with First ship design
+ for planet in helper.myPlanets():
+     designID = helper.designByName("First ship")
+     orderBuildFleet(planet, [(designID,1)], "My fleet")
