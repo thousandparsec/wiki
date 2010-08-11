@@ -47,7 +47,7 @@ Now we will generate all the code to get you started and put it in the file we c
 
 Output of daneel-ai between "LIST OF POSSIBLE ORDERS" and "END OF LIST OF POSSIBLE ORDERS" is a list of all possible orders for this ruleset with their descriptions and is there to help you understand orders.
 
-Now copy all the output of daneel-ai between "LIST OF POSSIBLE ORDERS CODE" and "END OF LIST OF POSSIBLE ORDERS CODE" into mtsec-simple.py we created.
+Now copy all the output of daneel-ai between "LIST OF POSSIBLE ORDERS CODE" and "END OF LIST OF POSSIBLE ORDERS CODE" into mod-mtsec-simple.py we created in the previous step.
 
 == Step 3: write AI code ==
 
