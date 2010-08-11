@@ -71,9 +71,28 @@ A lot of functions are there to give you some information about the universe, de
 In MTSec you will have to make your own ship and weapon designs if you want to do anything useful.
 The best way to get information about designs and components is to use the python client.
 
-This is an example of a ship design that can be used for fighting and colonisation.
+This is an example of a ship design that can be used for fighting and colonisation:
+ #make a list of ship components
+ components = []
+ components.append([helper.componentByName("advanced battle scout hull"), 1])
+ components.append([helper.componentByName("colonisation module"), 1])
+ components.append([helper.componentByName("alpha missile tube"), 1])
+ components.append([helper.componentByName("alpha missile rack"), 1])
+ #add the design
+ helper.addDesign("First ship", "its a ship", helper.categoryByName("ships"), components)
+ #print information about our new design
+ helper.printDesign("First ship")
 
+The only thing different for weapons is the category.
 
+ #make a list of weapon components
+ weaponComponents = []
+ weaponComponents.append([helper.componentByName("alpha missile hull"), 1])
+ weaponComponents.append([helper.componentByName("antimatter explosives"), 2])
+ #add the design
+ helper.addDesign("First weapon", "its a weapon", helper.categoryByName("weapons"), weaponComponents)
+ #print information about our new design
+ helper.printDesign("First weapon")
 
 === Step 3.2: resource information ===
 
