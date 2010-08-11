@@ -20,9 +20,7 @@ Create ruleset files
 
 == Step 2: generate code ==
 
-Now we will generate all the code to get you started.
-
-* create a new file in the daneel folder of daneel-ai (we will call it mtsec-simple.py in this tutorial).
+Now we will generate all the code to get you started and put it in the file we created in the previous step.
 
 * Start the tpserver-cpp with the desired ruleset (MTSec in this tutorial).
 
