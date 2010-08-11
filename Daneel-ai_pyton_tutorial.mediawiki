@@ -1,5 +1,6 @@
-This tutorial will show you how to make a simple AI for MTSec using python and Daneel-ai.
+This tutorial will show you how to make a simple AI for MTSec using python and Daneel-ai. It is not meant to give you information about everything that is available to use or explain how daneel-ai works.
 
+This is a quick start guide so you can start playing around as soon as possible.
 
 == Step 0: requirements ==
 
