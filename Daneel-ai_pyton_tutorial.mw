@@ -51,12 +51,29 @@ Output of daneel-ai between "LIST OF POSSIBLE ORDERS" and "END OF LIST OF POSSIB
 
 == Step 3: write AI code ==
 
-helper functions in helper
+Your AI should go into the AICode() function in the file mod-mtsec-simple.py
+
+ def AICode():
+     #TODO your AI code comes here
+     return
+
+To make your life easier there are a lot of helper functions in helper.py (in daneel folder of daneel-ai). Code generator already imported this file for you so you can start using it. Be sure to check it out.
+
+Usage example:
+ #this will print some information about your fleets
+ for fleet in helper.myFleets():
+     print "My fleet with ID", fleet, "is named", helper.name(fleet)
+
+A lot of functions are there to give you some information about the universe, designs or the ruleset.
 
 === Step 3.1: adding a new design ===
 
-listing designs
-listing components
+In MTSec you will have to make your own ship and weapon designs if you want to do anything useful.
+The best way to get information about designs and components is to use the python client.
+
+This is an example of a ship design that can be used for fighting and colonisation.
+
+
 
 === Step 3.2: resource information ===
 
