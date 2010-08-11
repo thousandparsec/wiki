@@ -12,6 +12,7 @@ TP stuff:
 Other stuff:
 
 * text editor or IDE (I used [http://www.eclipse.org/ eclipse] with [http://pydev.org/ pydev plugin])
+* python
 
 == Step 1: ruleset files ==
 
