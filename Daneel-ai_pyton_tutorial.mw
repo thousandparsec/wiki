@@ -17,7 +17,9 @@ Other stuff:
 
 == Step 1: ruleset files ==
 
-First we will create some ruleset files.
+First we will create some ruleset files. This will also dictate how you start your AI.
+For filenames in this tutorial the run command would be:
+ daneel-ai.py -f mtsec-simple -u user:pass@localhost/tp
 
 * create a new file in the rules folder of daneel-ai for your ruleset (we will call it mtsec-simple in this tutorial)
 * copy this into the newly created file
