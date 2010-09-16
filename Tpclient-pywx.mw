@@ -69,7 +69,13 @@ User interface files (.xrc format) are placed in ./windows/xrc folder. They're u
 
 == Languages ==
 
-This client is i18nalized using [http://en.wikipedia.org/wiki/GNU_gettext GNU Gettext] library. Currently it is translated into Slovenian (see ./locale/sl).
+This client is i18nalized using [http://en.wikipedia.org/wiki/GNU_gettext GNU Gettext] library. 
+To update the strings file ./locale/tpclient-pywx.pot use ./locale/generate.sh.
+To add a new locale create a subdir in ./locale/, add a translated strings .po file there, then compile it to .mo.
+  
+To debug your translation, set your locale via PATH environment variable.
+
+Currently it is translated into Slovenian (see ./locale/sl).
 
 == Authors ==
 
