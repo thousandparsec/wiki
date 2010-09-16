@@ -17,30 +17,51 @@ The master branch of it contains tp03 version. The version of client for communi
 
 == Development tools==
 
-Tpclient-pywx uses [http://wiki.wxwidgets.org/Resource_Files wx resource files] for GUI building. A customized xrced (the 'xrced' executable script in tpclient-pywx) is used to view and edit them. 
+Tpclient-pywx uses [http://wiki.wxwidgets.org/Resource_Files wx resource files] for GUI building. A customized [http://xrced.sourceforge.net/ xrced] (the 'xrced' executable script in tpclient-pywx) is used to view and edit them. 
 
-== Setting client-pywx up ==
+== Setting tpclient-pywx up ==
 
 * [[Ubuntu Setup|Setting up on Ubuntu]]
 * [[Win Setup|Setting up on Windows]]
 * [[Mac Setup|Setting up on Mac]]
 
-== Architecture ==
+== Generic Architecture ==
 
-The startup script file ./tpclient-pywx defines application (a descendant of libtpclient's Application) as a container of several threads: gui, network, media, finder, cache. 
+The startup script file ./tpclient-pywx defines application (a descendant of libtpclient's Application) as a container of several threads: GUI, network, media, local and remote browsers, finder, download. Threads communicate via sending function calls (provided by CallThread class) and events to other threads.
 
-'''TODO''': ''describe threads' classes and general functions.''
+* GUI (class GUI) thread handles drawing windows and user's interaction with them.
+* Network thread (NetworkThread class) is responsible for communication with server.
+* Media thread (MediaThread class) downloads media images for GUI.
+* Local (LocalBrowser) and Remote (RemoteBrowser)  browsers set daemon to browse games.
+* Finder thread looks for TP games. Uses [http://www.zeroconf.org/ Zeroconf] or TP metasever to find games.
 
-=== GUI architecture ===
+== GUI architecture ==
 
-GUI thread is implemented by class 'GUI' (a child of wx.App) which is responsible for GUI display and event handling. GUI class instantiates main windows ('win-' prefix for class name): the splash window (winSplash.py), the connection window (winConnect.py), the server lookup window(winServerBrowser) and, among others, the game main window. All  windows except game window are created on startup and shown/hidden when needed. 
+GUI thread is implemented by class 'GUI' (a child of wx.App) which is responsible for GUI display and event handling. GUI class instantiates primary windows (files in ./windows/): the splash window (winSplash.py), the connection window (winConnect.py), the server lookup window (winServerBrowser.py) and, among others, the game main window (winMain.py). All windows except main game window are created on startup and shown/hidden when needed. 
 
-Game window consists of a number of panels (see classes with 'panel-' prefix).
+Main game window consists of a number of panels and secondary windows (see files in ./windows/main/). 
+Main game window uses [http://xoomer.virgilio.it/infinity77/main/freeware.html pyAUI] to show a number of panels inside self: 
+* Starmap panel is placed on screen centre by default and shows game objects like systems and ships.
+* Information panel shows info on currently selected object.
+* Messages panel gives users and ability to browse, filter and delete messages.
+* Orders panel is used for editing selected object's orders.
+* System panel shows a tree of objects, present in current game.
 
-'''TODO''': ''describe all main windows and all panels.''
+Secondary windows: 
+* Design window is used for viewing and editing designs.
+* Download Manager window shows a list of downloads.
+* Help window gives access to tpclient's help files.
+* Game Info window shows a list of game properties like server URL, number of players, etc.
+* Idle Finder window is used to find free objects, which could be assinged orders.
+* Waiting window contains information about other players' status and is shown at the end of turn.
 
-Both win- and panel- GUIs are marked up using XRCs in ./windows/xrc and in the same dir there is auto-generated python class for each of them. The window classes themselves are placed in ./windows and panel classes - in ./windows/main. Thus, for any X = <main window name>: winX has an xrc file in ./windows/xrc/winX.xrc, automatically generated class winX in ./windows/xrc/winX.py, and hand-written implementation class winX (descendant of xrc.winX) in ./windows/winX.py.
- 
+'''TODO''': ''describe other primary windows.''
+
+User interface files (.xrc format) are placed in ./windows/xrc folder. They're used in following way:
+1. You create an xrc file for your wxWindow in ./windows/xrc.
+2. Script ./windows/xrc/generate.sh generates .py files in ./windows/xrc with classes which directly use XRCs.
+3. You create a class inheriting auto-generated class (mixing in other classes like winBaseXRC if needed) and use it.
+
 == Usage ==
 
 * Place a NOSPLASHMOVIE file into tpclient-pywx top level to disable splash movie.
