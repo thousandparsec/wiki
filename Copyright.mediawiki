@@ -1,0 +1,7 @@
+All content in this Wiki is released under the GNU GPL.
+
+You can get a full text of the license [http://www.gnu.org/copyleft/gpl.html here].
+
+By contributing to the Wiki you agree to license your contribution under the GPL. 
+
+Any non-GPL content must be clearly marked (and it will be probably removed).
